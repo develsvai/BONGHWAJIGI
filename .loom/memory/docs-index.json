@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-30T11:46:44+00:00",
+  "docs_paths": [
+    "docs"
+  ],
+  "documents": [
+    {
+      "id": ".loom/memory/README.md",
+      "title": "Loom Memory",
+      "path": ".loom/memory/README.md",
+      "source": "memory",
+      "document_type": "memory",
+      "updated_at": "2026-10-30T20:37:03+09:00",
+      "size_bytes": 202
+    },
+    {
+      "id": ".loom/memory/categories.json",
+      "title": "{",
+      "path": ".loom/memory/categories.json",
+      "source": "memory",
+      "document_type": "memory",
+      "updated_at": "2026-10-30T20:37:03+09:00",
+      "size_bytes": 1484
+    },
+    {
+      "id": ".loom/memory/principles.md",
+      "title": "Principles",
+      "path": ".loom/memory/principles.md",
+      "source": "memory",
+      "document_type": "principles",
+      "updated_at": "2026-10-30T20:37:03+09:00",
+      "size_bytes": 82
+    },
+    {
+      "id": "docs/README.md",
+      "title": "봉화지기 설계 문서 안내",
+      "path": "docs/README.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-30T20:42:35+09:00",
+      "size_bytes": 3148
+    },
+    {
+      "id": "docs/ai-and-infrastructure.md",
+      "title": "AI 역할과 서버 구성",
+      "path": "docs/ai-and-infrastructure.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-30T20:45:47+09:00",
+      "size_bytes": 8939
+    },
+    {
+      "id": "docs/architecture-and-data-flow.md",
+      "title": "데이터 수집과 대응 흐름",
+      "path": "docs/architecture-and-data-flow.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-30T20:42:35+09:00",
+      "size_bytes": 9460
+    },
+    {
+      "id": "docs/decisions-and-meeting-review.md",
+      "title": "결정 사항과 회의 대조",
+      "path": "docs/decisions-and-meeting-review.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-30T20:45:47+09:00",
+      "size_bytes": 6461
+    },
+    {
+      "id": "docs/product-and-scenarios.md",
+      "title": "서비스 목표와 사용자 시나리오",
+      "path": "docs/product-and-scenarios.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-30T20:42:35+09:00",
+      "size_bytes": 6493
+    },
+    {
+      "id": "docs/ui-ux-handoff.md",
+      "title": "UI UX 인계와 확인 항목",
+      "path": "docs/ui-ux-handoff.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-30T20:45:47+09:00",
+      "size_bytes": 6575
+    }
+  ],
+  "path": "/Users/hongyongjae/Desktop/helloworld/BONGHWAJIGI/.loom/memory/docs-index.json"
+}

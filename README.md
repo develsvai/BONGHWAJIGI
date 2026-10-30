@@ -1,0 +1,24 @@
+# BONGHWAJIGI 봉화지기
+
+여러 출처의 재난 정보를 모아 현재 위치와의 관련성을 평가하고, 사용자 상황에 맞는 행동과 대피 안내를 제공하는 공공 목적의 모바일 서비스입니다.
+
+현재 단계는 **설계 정리 및 UI/UX 수령 대기**입니다. 팀원이 준비하는 UI/UX를 확인한 뒤 화면 흐름, 데이터 계약, 구현 범위를 맞춥니다. 이 저장소의 초기 산출물은 설계 문서이며, 모델 배포나 서비스 구현 완료를 의미하지 않습니다.
+
+- [설계 문서 안내](docs/README.md)
+- [서비스 목표와 사용자 시나리오](docs/product-and-scenarios.md)
+- [데이터 수집과 대응 흐름](docs/architecture-and-data-flow.md)
+- [AI 역할과 서버 구성](docs/ai-and-infrastructure.md)
+- [결정 사항과 회의 대조](docs/decisions-and-meeting-review.md)
+- [UI/UX 인계와 확인 항목](docs/ui-ux-handoff.md)
+
+## 작업 기록
+
+Loom workspace를 한국어로 초기화했습니다. 에이전트 작업 규칙은 [AGENTS.md](AGENTS.md)를 따릅니다. 현재 초기 작업 브랜치는 Loom 기본 정책에 맞춘 `develop`입니다.
+
+```sh
+loom status --json
+loom resume --json
+loom validate --strict
+```
+
+인증정보, 개인 위치 이력, 모델 가중치, 회의 녹음과 전체 전사는 저장소에 포함하지 않습니다.

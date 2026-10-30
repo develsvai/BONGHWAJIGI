@@ -1,0 +1,26 @@
+# Local workstation files
+.DS_Store
+Thumbs.db
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials/
+secrets/
+
+# Local data and downloaded model weights
+data/raw/
+models/
+checkpoints/
+.cache/
+
+# Local runtimes
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+
+# Loom workflow records are intentionally tracked.

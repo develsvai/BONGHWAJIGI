@@ -1,0 +1,33 @@
+{
+  "id": "task-def-20261030-113814-ui-ux-ff52b37a",
+  "job_definition_id": "job-20261030-113757-bonghwajigi-4841f0bc",
+  "title": "초기 설계와 회의 대조 및 UI UX 인계 문서 작성",
+  "description": "사용자가 현재 에이전트에게 요청한 loom init과 docs 정리를 수행한다. 재난 대응 서비스 요구사항, 다중 출처 수집, 주변 영향 평가, 개인별 대응, AI 역할 제한, GPU 모델 후보와 회의 미결정을 구분해 기록한다.",
+  "created_at": "2026-10-30T11:38:14+00:00",
+  "updated_at": "2026-10-30T11:38:50+00:00",
+  "order_index": 1,
+  "legacy_task_id": "task-20261030-113814-ui-ux-fb31d765",
+  "depends_on": [],
+  "expected_output": "프로젝트 README, docs 문서 6개, 로컬 파일 제외 규칙, 검증된 Loom 작업 기록",
+  "done_condition": "docs에서 서비스 흐름과 확정 및 제안 및 미결 항목을 확인할 수 있고 내부 링크와 비밀정보 제외 및 Loom strict 검증을 통과하며 변경과 완료 기록이 커밋되어 있다.",
+  "in_scope": "Loom 초기화 기록; README.md; .gitignore; docs 아래 설계와 인계 문서; 문서 검증; 로컬 커밋",
+  "out_of_scope": "기능 구현; 서버 접속; 모델 설치 및 학습; 배포; 원격 push; UI UX 확정; 회의 원문 또는 인증정보 저장",
+  "validation_hint": "내부 Markdown 링크와 문서 내용 및 민감정보 검토, git diff --check, loom validate --strict",
+  "required_docs": [],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/README.md",
+    "docs/product-and-scenarios.md",
+    "docs/architecture-and-data-flow.md",
+    "docs/ai-and-infrastructure.md",
+    "docs/decisions-and-meeting-review.md",
+    "docs/ui-ux-handoff.md"
+  ],
+  "document_output_exceptions": [],
+  "default_agent": "",
+  "context_policy_id": "",
+  "executor_policy_id": "",
+  "review_policy": "",
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

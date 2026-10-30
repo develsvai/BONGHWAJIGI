@@ -1,0 +1,17 @@
+{
+  "before": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [],
+    "untracked_files": [
+      ".loom/",
+      "AGENTS.md",
+      "CLAUDE.md"
+    ],
+    "captured_at": "2026-10-30T11:38:50+00:00"
+  },
+  "after": null
+}
