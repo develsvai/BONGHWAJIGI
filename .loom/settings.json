@@ -18,7 +18,7 @@
       "reasoning_effort": "high"
     },
     "git": {
-      "required_branch": "develop",
+      "required_branch": "HeoNey",
       "block_dirty_branch_switch": true,
       "commit_policy": "manual",
       "include_loom_metadata": true
