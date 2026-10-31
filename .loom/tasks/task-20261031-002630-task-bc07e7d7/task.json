@@ -1,0 +1,42 @@
+{
+  "id": "task-20261031-002630-task-bc07e7d7",
+  "job_id": "job-20261031-002626-job-97436430",
+  "title": "사건 위치 프로필 변경을 반영한 안내 갱신 연결",
+  "description": "자료 위치 사용자 상태 변경 시 필요한 단계만 재평가해 모델 또는 예측 불가 상태와 정책 알림을 연결한다. 오래된 평가가 최신 상태를 덮어쓰지 않게 버전과 유효시간을 적용한다. 설계 기준은 docs/V2이며 HeoNey는 참고다. 앱 구현은 제외하고 앱팀에 API 명세를 제공한다. 이 등록은 작업 계약 고정이며 후속 구현 Task를 지금 실행하거나 Queue에 넣지 않는다.",
+  "status": "PENDING",
+  "created_at": "2026-10-31T00:26:30+00:00",
+  "updated_at": "2026-10-31T00:26:30+00:00",
+  "order_index": 5,
+  "assigned_agent": "unassigned",
+  "depends_on": [
+    "task-20261031-002628-task-79e4938c",
+    "task-20261031-002629-task-80e56e11",
+    "task-20261031-002629-qwen-617b8d58",
+    "task-20261031-002630-task-91ec9d3f",
+    "task-20261031-002629-cpu-0d28f70c"
+  ],
+  "expected_output": "docs/V2/delivery/decision-orchestration.md 및 작업 범위의 재현 가능한 구현 또는 검증 산출물",
+  "done_condition": "새 입력으로 안내가 갱신되고 공식 지침이 낮은 모델 값 때문에 억제되지 않는다.",
+  "in_scope": "자료 위치 사용자 상태 변경 시 필요한 단계만 재평가해 모델 또는 예측 불가 상태와 정책 알림을 연결한다. 오래된 평가가 최신 상태를 덮어쓰지 않게 버전과 유효시간을 적용한다.",
+  "out_of_scope": "모바일 앱 화면 권한 및 3D 렌더러 구현; HeoNey UX의 자동 편입; 비밀정보 커밋; 작업 범위 외 운영 변경",
+  "validation_hint": "사건 위치 프로필 순서 역전 및 해제 동시성 통합 시험",
+  "required_docs": [
+    "docs/V2/01_서비스_핵심_정리.md",
+    "docs/V2/02_실시간_서버_배치도.md",
+    "docs/V2/03_학습_검증_흐름도.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/decision-orchestration.md"
+  ],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [],
+  "branch_name": "",
+  "git_dirty": false,
+  "git_snapshot_captured_at": "",
+  "artifacts": [],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

@@ -1,0 +1,18 @@
+{
+  "id": "job-20261031-002626-job-c9f9ff0d",
+  "title": "영향 확률 데이터셋과 모델",
+  "goal": "실제 관측 정답 기반 데이터셋과 검증 보정된 XGBoost 영향 확률 모델 및 운영 교체 절차를 확보한다. 설계 기준은 docs/V2이며 HeoNey는 참고다. 앱 구현은 제외하고 앱팀에 API 명세를 제공한다. 이 등록은 작업 계약 고정이며 후속 구현 Task를 지금 실행하거나 Queue에 넣지 않는다.",
+  "status": "PENDING",
+  "created_at": "2026-10-31T00:26:26+00:00",
+  "updated_at": "2026-10-31T00:26:29+00:00",
+  "context_refs": [],
+  "task_ids": [
+    "task-20261031-002627-task-cc78619e",
+    "task-20261031-002628-task-71b2ed3b",
+    "task-20261031-002629-xgboost-c44c6d79",
+    "task-20261031-002629-task-2b63fdb8",
+    "task-20261031-002629-cpu-0d28f70c"
+  ],
+  "branch_name": "HeoNey",
+  "checkpoint_ids": []
+}

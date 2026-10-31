@@ -1,0 +1,39 @@
+{
+  "id": "task-20261031-002629-cpu-0d28f70c",
+  "job_id": "job-20261031-002626-job-c9f9ff0d",
+  "title": "검증 모델의 CPU 추론과 버전 교체 및 복구 구현",
+  "description": "채택 모델의 CPU 추론 입력 검사를 구현하고 결측 노후 범위 밖 입력을 예측 불가로 처리한다. 모델 로그 재학습 조건 버전 교체와 복구를 정의한다. 보류 시 비활성 상태와 공식 정보 대체 동작을 검증한다. 설계 기준은 docs/V2이며 HeoNey는 참고다. 앱 구현은 제외하고 앱팀에 API 명세를 제공한다. 이 등록은 작업 계약 고정이며 후속 구현 Task를 지금 실행하거나 Queue에 넣지 않는다.",
+  "status": "PENDING",
+  "created_at": "2026-10-31T00:26:29+00:00",
+  "updated_at": "2026-10-31T00:26:29+00:00",
+  "order_index": 5,
+  "assigned_agent": "unassigned",
+  "depends_on": [
+    "task-20261031-002629-task-2b63fdb8",
+    "task-20261031-002627-k8s-4bf877bd"
+  ],
+  "expected_output": "docs/V2/delivery/model-serving.md 및 작업 범위의 재현 가능한 구현 또는 검증 산출물",
+  "done_condition": "채택 시 서빙과 복구가 검증되고 보류 시 예측 불가 계약과 대체 경로가 검증된다.",
+  "in_scope": "채택 모델의 CPU 추론 입력 검사를 구현하고 결측 노후 범위 밖 입력을 예측 불가로 처리한다. 모델 로그 재학습 조건 버전 교체와 복구를 정의한다. 보류 시 비활성 상태와 공식 정보 대체 동작을 검증한다.",
+  "out_of_scope": "모바일 앱 화면 권한 및 3D 렌더러 구현; HeoNey UX의 자동 편입; 비밀정보 커밋; 작업 범위 외 운영 변경",
+  "validation_hint": "CPU 추론 지연 입력 누락 범위 검사 버전 교체 및 이전 모델 복구",
+  "required_docs": [
+    "docs/V2/01_서비스_핵심_정리.md",
+    "docs/V2/02_실시간_서버_배치도.md",
+    "docs/V2/03_학습_검증_흐름도.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/model-serving.md"
+  ],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [],
+  "branch_name": "",
+  "git_dirty": false,
+  "git_snapshot_captured_at": "",
+  "artifacts": [],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

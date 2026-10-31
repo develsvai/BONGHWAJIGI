@@ -5,11 +5,11 @@
 현재 단계는 **설계 정리 및 UI/UX 수령 대기**입니다. 팀원이 준비하는 UI/UX를 확인한 뒤 화면 흐름, 데이터 계약, 구현 범위를 맞춥니다. 이 저장소의 초기 산출물은 설계 문서이며, 모델 배포나 서비스 구현 완료를 의미하지 않습니다.
 
 - [설계 문서 안내](docs/README.md)
-- [서비스 목표와 사용자 시나리오](docs/product-and-scenarios.md)
-- [데이터 수집과 대응 흐름](docs/architecture-and-data-flow.md)
-- [AI 역할과 서버 구성](docs/ai-and-infrastructure.md)
-- [결정 사항과 회의 대조](docs/decisions-and-meeting-review.md)
-- [UI/UX 인계와 확인 항목](docs/ui-ux-handoff.md)
+- [서비스 목표와 사용자 시나리오](docs/V1/product-and-scenarios.md)
+- [데이터 수집과 대응 흐름](docs/V1/architecture-and-data-flow.md)
+- [AI 역할과 서버 구성](docs/V1/ai-and-infrastructure.md)
+- [결정 사항과 회의 대조](docs/V1/decisions-and-meeting-review.md)
+- [UI/UX 인계와 확인 항목](docs/V1/ui-ux-handoff.md)
 
 ## 작업 기록
 

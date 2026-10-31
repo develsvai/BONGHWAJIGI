@@ -1,0 +1,39 @@
+{
+  "id": "task-20261031-002627-task-cc78619e",
+  "job_id": "job-20261031-002626-job-c9f9ff0d",
+  "title": "영향 확률의 목표 라벨과 피처 및 평가 기준 정의",
+  "description": "위치 및 시간 범위별 관측 가능한 영향을 정하고 입력 당시 이용 가능 시점과 이후 실제 정답 연결을 정의한다. 수위 초과 확률을 가구 침수 확률로 바꾸지 않는다. 단순 기준선과 위험 누락 오경보 보정 합격 기준을 사전에 정한다. 설계 기준은 docs/V2이며 HeoNey는 참고다. 앱 구현은 제외하고 앱팀에 API 명세를 제공한다. 이 등록은 작업 계약 고정이며 후속 구현 Task를 지금 실행하거나 Queue에 넣지 않는다.",
+  "status": "PENDING",
+  "created_at": "2026-10-31T00:26:27+00:00",
+  "updated_at": "2026-10-31T00:26:27+00:00",
+  "order_index": 1,
+  "assigned_agent": "unassigned",
+  "depends_on": [
+    "task-20261031-002627-mvp-e821b0f7",
+    "task-20261031-002627-task-35e0acc7"
+  ],
+  "expected_output": "docs/V2/delivery/prediction-target.md 및 작업 범위의 재현 가능한 구현 또는 검증 산출물",
+  "done_condition": "정답 출처 양성 음성 결측 기준 데이터 분할과 모델 채택 기준이 확정된다.",
+  "in_scope": "위치 및 시간 범위별 관측 가능한 영향을 정하고 입력 당시 이용 가능 시점과 이후 실제 정답 연결을 정의한다. 수위 초과 확률을 가구 침수 확률로 바꾸지 않는다. 단순 기준선과 위험 누락 오경보 보정 합격 기준을 사전에 정한다.",
+  "out_of_scope": "모바일 앱 화면 권한 및 3D 렌더러 구현; HeoNey UX의 자동 편입; 비밀정보 커밋; 작업 범위 외 운영 변경",
+  "validation_hint": "예시 사건에서 입력 및 미래 결과 시점 감사",
+  "required_docs": [
+    "docs/V2/01_서비스_핵심_정리.md",
+    "docs/V2/02_실시간_서버_배치도.md",
+    "docs/V2/03_학습_검증_흐름도.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/prediction-target.md"
+  ],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [],
+  "branch_name": "",
+  "git_dirty": false,
+  "git_snapshot_captured_at": "",
+  "artifacts": [],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}
