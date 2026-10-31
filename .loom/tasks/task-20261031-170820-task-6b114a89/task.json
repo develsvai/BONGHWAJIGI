@@ -3,9 +3,9 @@
   "job_id": "job-20261031-002017-v2-fe3bfad0",
   "title": "검증된 앱 커밋을 서브모듈로 고정하고 배포 소스 확인 절차 동기화",
   "description": "사용자가 요청한 앱 저장소 서브모듈 배포에 따라 완료된 앱 원격 커밋을 apps/mobile에 고정한다. 앱 담당 작업의 최종 commit/push를 기다려 해당 SHA가 원격에 존재함을 검증한 후 gitlink와 운영 문서를 커밋하고 정상 원격 동기화를 수행한다.",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-10-31T17:08:20+00:00",
-  "updated_at": "2026-10-31T17:08:26+00:00",
+  "updated_at": "2026-10-31T17:54:53+00:00",
   "order_index": 22,
   "assigned_agent": "foreground",
   "depends_on": [
@@ -27,12 +27,25 @@
   "run_attempts": 0,
   "last_error": "",
   "commit_refs": [
-    "b3f1748c16f25ae9f69b454e538d443015c1e1dd"
+    "b3f1748c16f25ae9f69b454e538d443015c1e1dd",
+    "7611a37af3bf56bf0daab9fe1c9ee9445e403ee8"
   ],
   "branch_name": "develop",
   "git_dirty": true,
-  "git_snapshot_captured_at": "2026-10-31T17:08:26+00:00",
-  "artifacts": [],
+  "git_snapshot_captured_at": "2026-10-31T17:54:53+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-170820-task-6b114a89/agent-events.jsonl",
+    ".loom/tasks/task-20261031-170820-task-6b114a89/artifacts.json",
+    ".loom/tasks/task-20261031-170820-task-6b114a89/context.md",
+    ".loom/tasks/task-20261031-170820-task-6b114a89/decision.md",
+    ".loom/tasks/task-20261031-170820-task-6b114a89/git-snapshot.json",
+    ".loom/tasks/task-20261031-170820-task-6b114a89/logs.txt",
+    ".loom/tasks/task-20261031-170820-task-6b114a89/previous-results.md",
+    ".loom/tasks/task-20261031-170820-task-6b114a89/prompt.md",
+    ".loom/tasks/task-20261031-170820-task-6b114a89/result.md",
+    ".loom/tasks/task-20261031-170820-task-6b114a89/troubleshooting.md",
+    "docs/V2/delivery/mobile-submodule-deployment.md"
+  ],
   "source_proposal_id": "",
   "source_prompt": ""
 }
