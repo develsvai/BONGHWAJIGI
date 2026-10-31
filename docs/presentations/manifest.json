@@ -5,16 +5,16 @@
   "template_pptx_count": 1,
   "files": [
     {
-      "path": "docs/presentations/archive/봉화지기_AI추천서비스_표지.pptx",
-      "category": "archive",
+      "path": "docs/presentations/slides/봉화지기_AI추천서비스_표지.pptx",
+      "category": "slides",
       "bytes": 23689,
       "slides": 1,
       "sha256": "f1e8c9965e24da886e4d15a325166000ba1d90033efaa63605c6d072f201c2ca",
       "git_blob_sha": "5a0022b5575edb1f33a767c03d0e354fe521163b"
     },
     {
-      "path": "docs/presentations/archive/봉화지기_구룡마을_지도_표지.pptx",
-      "category": "archive",
+      "path": "docs/presentations/slides/봉화지기_구룡마을_지도_표지.pptx",
+      "category": "slides",
       "bytes": 328226,
       "slides": 1,
       "sha256": "c2a529b2825d84784c9c73a3b18558544d08850a37d9d1198f2af1a8dfbb30de",
