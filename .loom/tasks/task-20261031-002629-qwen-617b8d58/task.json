@@ -1,0 +1,40 @@
+{
+  "id": "task-20261031-002629-qwen-617b8d58",
+  "job_id": "job-20261031-002626-job-97436430",
+  "title": "Qwen 추출 검색 보조와 제한된 설명 및 성능 검증",
+  "description": "Qwen3-4B와 Embedding의 필요 범위를 고정하고 원문 근거 대조 구조화 출력과 불확실 결과 보류를 구현한다. 정형 자료는 모델을 생략하며 선택된 행동만 설명한다. 메모리 한국어 지연 동시성 장애 대체를 측정한다. 설계 기준은 docs/V2이며 HeoNey는 참고다. 앱 구현은 제외하고 앱팀에 API 명세를 제공한다. 이 등록은 작업 계약 고정이며 후속 구현 Task를 지금 실행하거나 Queue에 넣지 않는다.",
+  "status": "PENDING",
+  "created_at": "2026-10-31T00:26:29+00:00",
+  "updated_at": "2026-10-31T00:26:29+00:00",
+  "order_index": 3,
+  "assigned_agent": "unassigned",
+  "depends_on": [
+    "task-20261031-002627-task-93368ddf",
+    "task-20261031-002627-task-a70543d3",
+    "task-20261031-002627-task-5ce3742e"
+  ],
+  "expected_output": "docs/V2/delivery/language-models.md 및 작업 범위의 재현 가능한 구현 또는 검증 산출물",
+  "done_condition": "모델별 측정과 근거 일치 검증 및 실패 시 템플릿 안내가 있다.",
+  "in_scope": "Qwen3-4B와 Embedding의 필요 범위를 고정하고 원문 근거 대조 구조화 출력과 불확실 결과 보류를 구현한다. 정형 자료는 모델을 생략하며 선택된 행동만 설명한다. 메모리 한국어 지연 동시성 장애 대체를 측정한다.",
+  "out_of_scope": "모바일 앱 화면 권한 및 3D 렌더러 구현; HeoNey UX의 자동 편입; 비밀정보 커밋; 작업 범위 외 운영 변경",
+  "validation_hint": "사실 추출 오류 행동 임의 변경 입력 문서의 명령 주입 및 과부하 대체 시험",
+  "required_docs": [
+    "docs/V2/01_서비스_핵심_정리.md",
+    "docs/V2/02_실시간_서버_배치도.md",
+    "docs/V2/03_학습_검증_흐름도.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/language-models.md"
+  ],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [],
+  "branch_name": "",
+  "git_dirty": false,
+  "git_snapshot_captured_at": "",
+  "artifacts": [],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

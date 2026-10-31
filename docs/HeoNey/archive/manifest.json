@@ -1,0 +1,545 @@
+{
+  "source_url": "https://chatgpt.com/share/6ae4872b-c438-83ee-940c-d2385795e0c1",
+  "title": "해커톤 아이디어",
+  "captured_date_kst": "2026-10-30",
+  "visible_messages": [
+    {
+      "sequence": "M001",
+      "message_id": "69a7e8c6-f9f7-42ba-8183-492fb0f40234",
+      "role": "user",
+      "file": "archive/conversation-01.md",
+      "anchor": "m001",
+      "text_sha256": "d5f9119b3d1074ff16044d59aab3cff3bf2af1030c95aa16b6b616faefe779cc",
+      "text_characters": 50
+    },
+    {
+      "sequence": "M002",
+      "message_id": "ea236eb4-c016-4794-9570-3d90a8d545e5",
+      "role": "assistant",
+      "file": "archive/conversation-01.md",
+      "anchor": "m002",
+      "text_sha256": "8755597fd9e15a49fad88e3662862d61016d3f1fac11b8c81cf10c5b77b74b46",
+      "text_characters": 3533
+    },
+    {
+      "sequence": "M003",
+      "message_id": "05599dd2-0460-41e3-9f54-6d7fb118a989",
+      "role": "user",
+      "file": "archive/conversation-01.md",
+      "anchor": "m003",
+      "text_sha256": "cb8eae98e4ef49f7c2f30cf4137f49dd0a450e8675297994bb3eaf202d5e1e55",
+      "text_characters": 15
+    },
+    {
+      "sequence": "M004",
+      "message_id": "986d9462-1bc6-47d0-be18-1a1e13f8bd4d",
+      "role": "assistant",
+      "file": "archive/conversation-01.md",
+      "anchor": "m004",
+      "text_sha256": "046bd59240e4054dd79dca1aa1a736654db8676181261dba5f65f8a57e15162b",
+      "text_characters": 2000
+    },
+    {
+      "sequence": "M005",
+      "message_id": "48133603-9503-437d-8781-c6d428986759",
+      "role": "user",
+      "file": "archive/conversation-01.md",
+      "anchor": "m005",
+      "text_sha256": "21c225834e097620ed6839b3b28f5850db5ded6f21030fb22acd7bc6ceecb697",
+      "text_characters": 37
+    },
+    {
+      "sequence": "M006",
+      "message_id": "e02a3d67-800d-4519-877f-eafcc81dac27",
+      "role": "assistant",
+      "file": "archive/conversation-01.md",
+      "anchor": "m006",
+      "text_sha256": "2a0fd1fe4df5f40b4914bfa5bb5f4575a2f8aa2c3f08e1e9a75ec9936eb76c90",
+      "text_characters": 3209
+    },
+    {
+      "sequence": "M007",
+      "message_id": "a5bcb29b-fd50-4185-8778-a290574554e9",
+      "role": "user",
+      "file": "archive/conversation-01.md",
+      "anchor": "m007",
+      "text_sha256": "34960ed44bf3b71e101d7b9a710dcd9b2a74becd0289aa65666ae10ed38b44ce",
+      "text_characters": 132
+    },
+    {
+      "sequence": "M008",
+      "message_id": "979598fd-cb30-4d0a-9132-78903065729d",
+      "role": "assistant",
+      "file": "archive/conversation-01.md",
+      "anchor": "m008",
+      "text_sha256": "f2e10ba1dc1dbb8802d41d68ebf07a301b0fcccb34e5c7f1ff91e369a5b7e789",
+      "text_characters": 8278
+    },
+    {
+      "sequence": "M009",
+      "message_id": "c02b3c9d-468f-443d-a1f4-71008f79c52d",
+      "role": "user",
+      "file": "archive/conversation-02.md",
+      "anchor": "m009",
+      "text_sha256": "6aeab9ae886a6cdee9ddaa30409b1511806a64f3498375c551565874535fcec4",
+      "text_characters": 49
+    },
+    {
+      "sequence": "M010",
+      "message_id": "6190d00b-9cd8-4898-bdfb-bfc3bc2dd272",
+      "role": "assistant",
+      "file": "archive/conversation-02.md",
+      "anchor": "m010",
+      "text_sha256": "50b4b1abbee1a676b3b7c239ade997677a9f9a0aa8c15705fc1e459e7b894793",
+      "text_characters": 6939
+    },
+    {
+      "sequence": "M011",
+      "message_id": "a2ec7e9c-3a76-4020-b10e-b52cc18d3227",
+      "role": "user",
+      "file": "archive/conversation-02.md",
+      "anchor": "m011",
+      "text_sha256": "95dce0ae313d8553c4db7ce088f8a66c820c7bee0cf97b609add1d6783cc38d3",
+      "text_characters": 25
+    },
+    {
+      "sequence": "M012",
+      "message_id": "f4b9a83d-465c-464b-84ba-45c296280d19",
+      "role": "assistant",
+      "file": "archive/conversation-02.md",
+      "anchor": "m012",
+      "text_sha256": "1734b73c1cadc0c31dcdc8a859c402794caad68f6df39533f29afe8ea6d03bef",
+      "text_characters": 3640
+    },
+    {
+      "sequence": "M013",
+      "message_id": "ce1e5012-2d47-45a5-a5b7-68dab4eeecd2",
+      "role": "user",
+      "file": "archive/conversation-02.md",
+      "anchor": "m013",
+      "text_sha256": "cee0ecc943ecd0bb45a83244f8d2834322959d2286926a06c92f23d3d4cb7721",
+      "text_characters": 59
+    },
+    {
+      "sequence": "M014",
+      "message_id": "9cdac18e-14fb-4e60-9d96-6877bdb86686",
+      "role": "assistant",
+      "file": "archive/conversation-02.md",
+      "anchor": "m014",
+      "text_sha256": "e2e4659829582604c0395ea111bb2a8ab114c2d174e3030139ca7ebd9b782d34",
+      "text_characters": 3086
+    },
+    {
+      "sequence": "M015",
+      "message_id": "52679ef4-68a5-4313-a7ac-a8a603f59312",
+      "role": "user",
+      "file": "archive/conversation-02.md",
+      "anchor": "m015",
+      "text_sha256": "73a255179b02b7cfbf1e9af92bff72cd930284561e56e5554e2e11dff0d4954a",
+      "text_characters": 20
+    },
+    {
+      "sequence": "M016",
+      "message_id": "01c61248-dd0b-4d74-946a-af6b22a3571f",
+      "role": "assistant",
+      "file": "archive/conversation-02.md",
+      "anchor": "m016",
+      "text_sha256": "8b4dec6bdae0d37ec94af5144422a28887549db389507f6a9e0e857cee2628a0",
+      "text_characters": 5489
+    },
+    {
+      "sequence": "M017",
+      "message_id": "0d94609b-e1d4-48b4-8a07-31511b2594fc",
+      "role": "user",
+      "file": "archive/conversation-03.md",
+      "anchor": "m017",
+      "text_sha256": "96a401dec931256230aa7346e44cdeb75cbf0b75dd5f92a893f8bcb1c3b10176",
+      "text_characters": 86
+    },
+    {
+      "sequence": "M018",
+      "message_id": "54d420cb-15bb-4ae2-9130-7e32eeb8a7fe",
+      "role": "assistant",
+      "file": "archive/conversation-03.md",
+      "anchor": "m018",
+      "text_sha256": "1a3e3c5055f74f23333b5cf0898ba7d42931a7bb80bbd85d8c44109943260cfe",
+      "text_characters": 5762
+    },
+    {
+      "sequence": "M019",
+      "message_id": "3b28a443-8a4c-41a1-8606-4fcd626836da",
+      "role": "user",
+      "file": "archive/conversation-03.md",
+      "anchor": "m019",
+      "text_sha256": "0361c4d57f3fd24c10cf31ecafc4ddb49eab5514e0ce9f72e834c80adc117846",
+      "text_characters": 59
+    },
+    {
+      "sequence": "M020",
+      "message_id": "878dcda8-bcc4-4047-a77d-76e363cf06a6",
+      "role": "assistant",
+      "file": "archive/conversation-03.md",
+      "anchor": "m020",
+      "text_sha256": "6999478c3a89054305e18277af6c2c0d19ef19889b7c9b3f09e2613a1d13fb92",
+      "text_characters": 8580
+    },
+    {
+      "sequence": "M021",
+      "message_id": "8ca63cf4-e5d2-42eb-826a-c61dde90c0ea",
+      "role": "user",
+      "file": "archive/conversation-03.md",
+      "anchor": "m021",
+      "text_sha256": "e27966171ef84cfe7b6b2263c1b0bb130567ca421786898e3cc9a70b0aaa9d20",
+      "text_characters": 190
+    },
+    {
+      "sequence": "M022",
+      "message_id": "61137a96-7272-4377-8fe0-b1166721ba2d",
+      "role": "assistant",
+      "file": "archive/conversation-03.md",
+      "anchor": "m022",
+      "text_sha256": "abe0fc041c895c6c09f7a82ce34a2a053a6b0951a409e736f2fa19d66fe72222",
+      "text_characters": 6494
+    },
+    {
+      "sequence": "M023",
+      "message_id": "37e03131-4415-4483-a151-a921a063fd8d",
+      "role": "user",
+      "file": "archive/conversation-03.md",
+      "anchor": "m023",
+      "text_sha256": "a7bbff55c6fa77d943f9d9b186f3e33562c3f58620a54344d6a6dd1870eaec6d",
+      "text_characters": 94
+    },
+    {
+      "sequence": "M024",
+      "message_id": "9282c030-d624-4dc9-ae78-f3c87c6534c4",
+      "role": "assistant",
+      "file": "archive/conversation-03.md",
+      "anchor": "m024",
+      "text_sha256": "aa6d25c60e3ee16149b91c402e97ad9ccc8dbbdf4b8f5c25e769221c9598373d",
+      "text_characters": 5186
+    },
+    {
+      "sequence": "M025",
+      "message_id": "777b6961-2f69-43cf-9ec5-a78b3e8e5f89",
+      "role": "user",
+      "file": "archive/conversation-04.md",
+      "anchor": "m025",
+      "text_sha256": "00fa9c3b69936493fc8f4bcba205d367bb4fabcd3ada09c6781eeb28937172ba",
+      "text_characters": 50
+    },
+    {
+      "sequence": "M026",
+      "message_id": "133acafc-7c4a-46fb-9f07-31a27481c49a",
+      "role": "assistant",
+      "file": "archive/conversation-04.md",
+      "anchor": "m026",
+      "text_sha256": "b37a7a34a7bd6b4c42fed03be08dcf6403372226357e95dd3dbf704005d0b50b",
+      "text_characters": 6349
+    },
+    {
+      "sequence": "M027",
+      "message_id": "31fd9961-8c7e-482b-b16b-1371a69b47f2",
+      "role": "user",
+      "file": "archive/conversation-04.md",
+      "anchor": "m027",
+      "text_sha256": "e6da35f8d6acd3c366998b0791c3c3cfddc00c23b652599cde236d2a1865034c",
+      "text_characters": 146
+    },
+    {
+      "sequence": "M028",
+      "message_id": "08bb5705-507f-4f06-8e3a-89a2cc324946",
+      "role": "assistant",
+      "file": "archive/conversation-04.md",
+      "anchor": "m028",
+      "text_sha256": "f373c6769369762324a7b49b2dc4f28e77330d1ba09737f27813b770bba9b1be",
+      "text_characters": 5755
+    },
+    {
+      "sequence": "M029",
+      "message_id": "8a3de922-1e04-4766-bba7-c5974d5f15b5",
+      "role": "user",
+      "file": "archive/conversation-04.md",
+      "anchor": "m029",
+      "text_sha256": "940c3c0ce8c38ed84332e37aa7657a659565c5853b3edd4216d139b75bcea3ed",
+      "text_characters": 100
+    },
+    {
+      "sequence": "M030",
+      "message_id": "bda7abfa-d50a-46eb-8fa5-71176e071b3e",
+      "role": "assistant",
+      "file": "archive/conversation-04.md",
+      "anchor": "m030",
+      "text_sha256": "1e1813504a8a705cab56c6170e41c247bb3c47923eed266fffb088cbab4c5935",
+      "text_characters": 5452
+    },
+    {
+      "sequence": "M031",
+      "message_id": "b92cd267-ca17-408e-91a7-71d1a3692e37",
+      "role": "user",
+      "file": "archive/conversation-04.md",
+      "anchor": "m031",
+      "text_sha256": "8d0d7efee722803297a8051f47356eda6bf99dd065c882812a14b1b67f87fe94",
+      "text_characters": 81
+    },
+    {
+      "sequence": "M032",
+      "message_id": "62e21020-bcb2-48dd-9968-7d89dbdb7372",
+      "role": "assistant",
+      "file": "archive/conversation-04.md",
+      "anchor": "m032",
+      "text_sha256": "0ffbe3a061f7b881fe532d1fac36d0ccfdbf9ac300f7317cb0ac3f61fb6f2d42",
+      "text_characters": 5627
+    },
+    {
+      "sequence": "M033",
+      "message_id": "39afedc4-e443-4201-9ee3-3c855a439bbe",
+      "role": "user",
+      "file": "archive/conversation-05.md",
+      "anchor": "m033",
+      "text_sha256": "3df589927aa867c23c44ea8652840d02b86ee2fabbdf038354bb24baf7b03875",
+      "text_characters": 29
+    },
+    {
+      "sequence": "M034",
+      "message_id": "3d97afae-aca8-4efb-a1c1-5db56617096a",
+      "role": "assistant",
+      "file": "archive/conversation-05.md",
+      "anchor": "m034",
+      "text_sha256": "cfcee35f0ca11492a8fae99bc38dd3f59b2eb11b5c4e5faaed2f7f57e38ee01f",
+      "text_characters": 2596
+    },
+    {
+      "sequence": "M035",
+      "message_id": "828fdc81-33e7-4a30-b4e4-4acfdca3acbc",
+      "role": "user",
+      "file": "archive/conversation-05.md",
+      "anchor": "m035",
+      "text_sha256": "6e1e16f2f5c09839e11f6e157f367bfc252a5354a047bec7761e2ff9ffa0a187",
+      "text_characters": 76
+    },
+    {
+      "sequence": "M036",
+      "message_id": "80e5f63f-ed78-4f59-93a6-822da9b99d08",
+      "role": "assistant",
+      "file": "archive/conversation-05.md",
+      "anchor": "m036",
+      "text_sha256": "ed987766f997e0e733240ef3d8ffe41a29fdd3c6c722f48784d3295fa001f119",
+      "text_characters": 6321
+    },
+    {
+      "sequence": "M037",
+      "message_id": "638911cc-4bd7-407d-b4e4-2f98de70265d",
+      "role": "user",
+      "file": "archive/conversation-05.md",
+      "anchor": "m037",
+      "text_sha256": "8c39439f087bc8dec4f9b8b1e1b5bb357a9902042f09e0619a7111eb3534d3e3",
+      "text_characters": 66
+    },
+    {
+      "sequence": "M038",
+      "message_id": "e2a4d382-f85d-4100-94e6-3a79b16c37a1",
+      "role": "assistant",
+      "file": "archive/conversation-05.md",
+      "anchor": "m038",
+      "text_sha256": "403f1aef742992a89e83ea493d57640ac9d809377446e90547dcc691489a1ec4",
+      "text_characters": 6828
+    },
+    {
+      "sequence": "M039",
+      "message_id": "d332c863-850b-4bb8-8ef3-a1444234c55a",
+      "role": "user",
+      "file": "archive/conversation-05.md",
+      "anchor": "m039",
+      "text_sha256": "9dad1213a1f83e298e64972ca308e7f4266c381f59bda94992b35460f4a23f92",
+      "text_characters": 132
+    },
+    {
+      "sequence": "M040",
+      "message_id": "adc63645-2993-41e4-a426-7438cd59fa56",
+      "role": "assistant",
+      "file": "archive/conversation-05.md",
+      "anchor": "m040",
+      "text_sha256": "610313711deaf86ea14896e6462df4f8c3b381bfaaad76c9dc44f917e7bfa8da",
+      "text_characters": 4645
+    },
+    {
+      "sequence": "M041",
+      "message_id": "22f2b7c9-18f7-46cf-922c-c9d3fdbbd94c",
+      "role": "user",
+      "file": "archive/conversation-06.md",
+      "anchor": "m041",
+      "text_sha256": "26b0aff41a465133481a4fc6cee9b46b794d7d32447c92467cc53eca30faa83d",
+      "text_characters": 192
+    },
+    {
+      "sequence": "M042",
+      "message_id": "bdfa342a-8032-4a98-85ad-b324dd77381f",
+      "role": "assistant",
+      "file": "archive/conversation-06.md",
+      "anchor": "m042",
+      "text_sha256": "755f29cb5441ced8bef8ecdc8543e874db8ec68793cbde68d72c2866bab1ea8e",
+      "text_characters": 4394
+    },
+    {
+      "sequence": "M043",
+      "message_id": "7742aee3-73c6-4fc3-82ff-8093964b93f1",
+      "role": "user",
+      "file": "archive/conversation-06.md",
+      "anchor": "m043",
+      "text_sha256": "2f3ea77652fef3ef91f6853c3f9a973d0dd8c8d116e87b247d1c5b8cc4128c77",
+      "text_characters": 67
+    },
+    {
+      "sequence": "M044",
+      "message_id": "65102650-008c-4ffa-bc99-b90757a1ff2c",
+      "role": "assistant",
+      "file": "archive/conversation-06.md",
+      "anchor": "m044",
+      "text_sha256": "5070af046576665476e12fb0eef7074c49335d60fa09d0572bdc76c0147a29cc",
+      "text_characters": 5676
+    },
+    {
+      "sequence": "M045",
+      "message_id": "c04c0f4c-5a3b-4ceb-8893-78a61a21c66c",
+      "role": "user",
+      "file": "archive/conversation-06.md",
+      "anchor": "m045",
+      "text_sha256": "68990e35d90af299a3757007d7f0c9f04c39d8863b082db1dd64d75ed1d0ef30",
+      "text_characters": 282
+    },
+    {
+      "sequence": "M046",
+      "message_id": "acb2eecd-3f8c-4645-af32-2e68f61f3938",
+      "role": "assistant",
+      "file": "archive/conversation-06.md",
+      "anchor": "m046",
+      "text_sha256": "d14e66ff79edfd1ec363732a8c9c5bbe6f15571fd96a2c5dfd895a55543df57a",
+      "text_characters": 5437
+    },
+    {
+      "sequence": "M047",
+      "message_id": "7568a978-b32c-4e83-9867-7057307cbf1c",
+      "role": "user",
+      "file": "archive/conversation-06.md",
+      "anchor": "m047",
+      "text_sha256": "7c4c4df662c2b4c483e8d63abe8353c3c3f61b3e2711b2b5c731d969dc5102c1",
+      "text_characters": 91
+    },
+    {
+      "sequence": "M048",
+      "message_id": "711b2923-2671-4f0e-b78f-ab6caeefab33",
+      "role": "assistant",
+      "file": "archive/conversation-06.md",
+      "anchor": "m048",
+      "text_sha256": "147d232eeaf39341d71658d83e6e3dbfb150f6a12b89a0433032dd3aeb93744d",
+      "text_characters": 7895
+    },
+    {
+      "sequence": "M049",
+      "message_id": "b14cb40a-a471-48e2-9139-66df68431d54",
+      "role": "user",
+      "file": "archive/conversation-07.md",
+      "anchor": "m049",
+      "text_sha256": "ae8d8a2ddca9c24cd4ca28e65470ddbdfb74f992a963c34652de0f9b2e3eabb7",
+      "text_characters": 206
+    },
+    {
+      "sequence": "M050",
+      "message_id": "0ee0bf6d-fea7-49c0-97b0-1c6a7afd6a8e",
+      "role": "assistant",
+      "file": "archive/conversation-07.md",
+      "anchor": "m050",
+      "text_sha256": "17ef0a272c9cfebb8a8c2a997a78526c3abc50c1a56217c6033f89efa9e4e21a",
+      "text_characters": 9142
+    },
+    {
+      "sequence": "M051",
+      "message_id": "f9d16660-aae1-479c-acca-559ae3eaf83f",
+      "role": "user",
+      "file": "archive/conversation-07.md",
+      "anchor": "m051",
+      "text_sha256": "6a67f85f4cdca212891bda250dd3d8a0aa176cc8b4eb42135b14ee86b138ff53",
+      "text_characters": 582
+    },
+    {
+      "sequence": "M052",
+      "message_id": "ddd4982d-26a9-41e0-9b63-d6ccc209dcc9",
+      "role": "assistant",
+      "file": "archive/conversation-07.md",
+      "anchor": "m052",
+      "text_sha256": "50a827712d51659a1f13425012d2755da584ed31c638bfd2a2f35323ea28ba7d",
+      "text_characters": 14367
+    },
+    {
+      "sequence": "M053",
+      "message_id": "0c2899ee-59a1-4cdd-83d0-369007407e57",
+      "role": "user",
+      "file": "archive/conversation-07.md",
+      "anchor": "m053",
+      "text_sha256": "4d796b548f2d56a375204566caf91f66828ab18ba58a0f7dde9cc944b1525c12",
+      "text_characters": 860
+    },
+    {
+      "sequence": "M054",
+      "message_id": "49a05e0a-02bf-467d-a4df-29745af4670c",
+      "role": "assistant",
+      "file": "archive/conversation-07.md",
+      "anchor": "m054",
+      "text_sha256": "54181bf9baccea177a2d7e269f4cf4df207224845bc753f03752a26727e12533",
+      "text_characters": 8649
+    },
+    {
+      "sequence": "M055",
+      "message_id": "25985c26-a444-4916-b468-138e20c01f70",
+      "role": "user",
+      "file": "archive/conversation-07.md",
+      "anchor": "m055",
+      "text_sha256": "447b1684a82a2db8cd7ccd44d4128f8e66ab59fb69564b68d461aa2364823766",
+      "text_characters": 356
+    },
+    {
+      "sequence": "M056",
+      "message_id": "f408bdf6-dd00-4ee6-bc34-1c0009151156",
+      "role": "assistant",
+      "file": "archive/conversation-07.md",
+      "anchor": "m056",
+      "text_sha256": "c7a6b73a4afb2ccaf34ca12bc2e4e9caa6fbfd3a7852a06fe486be3260dbea37",
+      "text_characters": 8030
+    }
+  ],
+  "progress_message_count": 15,
+  "attachments": [
+    {
+      "message": "M041",
+      "id": "file_000000002c7882118b98f78fb694b998",
+      "name": "image.png",
+      "mime_type": "image/png",
+      "size": 66503,
+      "width": 1282,
+      "height": 922,
+      "status": "이미지 참조 정보만 확보; 이미지 파일 미확보"
+    },
+    {
+      "message": "M053",
+      "id": "file_000000008d1c8209a7e5c03871b8b592",
+      "name": "IMG_2004.jpg",
+      "mime_type": "image/jpeg",
+      "size": 786092,
+      "width": 2048,
+      "height": 1981,
+      "status": "이미지 참조 정보만 확보; 이미지 파일 미확보"
+    },
+    {
+      "message": "M055",
+      "id": "file_00000000c5308211a8633dd6f770c837",
+      "name": "IMG_2005.jpg",
+      "mime_type": "image/jpeg",
+      "size": 735538,
+      "width": 2048,
+      "height": 1989,
+      "status": "이미지 참조 정보만 확보; 이미지 파일 미확보"
+    }
+  ],
+  "original_html_sha256": "d864328a98a379a6438c2e0edbe9151479fc7d47d2fdccbe7b2c46fe0a19abc0"
+}

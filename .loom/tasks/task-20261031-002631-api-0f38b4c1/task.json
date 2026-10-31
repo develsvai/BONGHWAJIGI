@@ -1,0 +1,40 @@
+{
+  "id": "task-20261031-002631-api-0f38b4c1",
+  "job_id": "job-20261031-002626-api-18805e8a",
+  "title": "앱팀 인계용 예제와 API 계약 호환 검증",
+  "description": "샘플 응답과 계약 검증 자료를 제공하고 서버 결과가 명세와 맞는지 확인한다. 모델 및 선택 기능 보류 상태도 테스트한다. 앱팀이 구현하는 화면 권한 렌더링은 제외한다. 설계 기준은 docs/V2이며 HeoNey는 참고다. 앱 구현은 제외하고 앱팀에 API 명세를 제공한다. 이 등록은 작업 계약 고정이며 후속 구현 Task를 지금 실행하거나 Queue에 넣지 않는다.",
+  "status": "PENDING",
+  "created_at": "2026-10-31T00:26:31+00:00",
+  "updated_at": "2026-10-31T00:26:31+00:00",
+  "order_index": 2,
+  "assigned_agent": "unassigned",
+  "depends_on": [
+    "task-20261031-002631-openapi-d96e2bb5",
+    "task-20261031-002630-task-bc07e7d7",
+    "task-20261031-002630-3d-tts-8f1e43b5"
+  ],
+  "expected_output": "docs/V2/delivery/api-handoff.md 및 작업 범위의 재현 가능한 구현 또는 검증 산출물",
+  "done_condition": "앱팀 전달 가능한 명세 예제와 서버 계약 검증 결과가 있으며 앱 코드를 변경하지 않는다.",
+  "in_scope": "샘플 응답과 계약 검증 자료를 제공하고 서버 결과가 명세와 맞는지 확인한다. 모델 및 선택 기능 보류 상태도 테스트한다. 앱팀이 구현하는 화면 권한 렌더링은 제외한다.",
+  "out_of_scope": "모바일 앱 화면 권한 및 3D 렌더러 구현; HeoNey UX의 자동 편입; 비밀정보 커밋; 작업 범위 외 운영 변경",
+  "validation_hint": "정상 불확실 권한 오류 변경 및 해제 상태의 응답 계약 시험",
+  "required_docs": [
+    "docs/V2/01_서비스_핵심_정리.md",
+    "docs/V2/02_실시간_서버_배치도.md",
+    "docs/V2/03_학습_검증_흐름도.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/api-handoff.md"
+  ],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [],
+  "branch_name": "",
+  "git_dirty": false,
+  "git_snapshot_captured_at": "",
+  "artifacts": [],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

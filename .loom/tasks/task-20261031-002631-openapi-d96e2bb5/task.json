@@ -1,0 +1,39 @@
+{
+  "id": "task-20261031-002631-openapi-d96e2bb5",
+  "job_id": "job-20261031-002626-api-18805e8a",
+  "title": "앱 연동 OpenAPI 명세와 상태 및 이벤트 계약 작성",
+  "description": "프로필 위치 설정 사건 근거 영향 평가 대응 단계 행동 알림 확인의 요청 응답 인증 오류 좌표 시각 유효시간 버전을 명세한다. 예측 불가 위치 불명확 경로 미확인과 실시간 갱신 계약을 포함한다. 선택 기능은 D6 결정 후 반영한다. 설계 기준은 docs/V2이며 HeoNey는 참고다. 앱 구현은 제외하고 앱팀에 API 명세를 제공한다. 이 등록은 작업 계약 고정이며 후속 구현 Task를 지금 실행하거나 Queue에 넣지 않는다.",
+  "status": "PENDING",
+  "created_at": "2026-10-31T00:26:31+00:00",
+  "updated_at": "2026-10-31T00:26:31+00:00",
+  "order_index": 1,
+  "assigned_agent": "unassigned",
+  "depends_on": [
+    "task-20261031-002627-task-93368ddf",
+    "task-20261031-002627-task-a70543d3"
+  ],
+  "expected_output": "docs/V2/delivery/app-api-contract.md 및 작업 범위의 재현 가능한 구현 또는 검증 산출물",
+  "done_condition": "OpenAPI와 실제 모델 없이 사용할 정상 및 예외 샘플 응답이 준비된다.",
+  "in_scope": "프로필 위치 설정 사건 근거 영향 평가 대응 단계 행동 알림 확인의 요청 응답 인증 오류 좌표 시각 유효시간 버전을 명세한다. 예측 불가 위치 불명확 경로 미확인과 실시간 갱신 계약을 포함한다. 선택 기능은 D6 결정 후 반영한다.",
+  "out_of_scope": "모바일 앱 화면 권한 및 3D 렌더러 구현; HeoNey UX의 자동 편입; 비밀정보 커밋; 작업 범위 외 운영 변경",
+  "validation_hint": "명세 스키마 검사 필수 필드 오류 상태 버전 및 예제 일치",
+  "required_docs": [
+    "docs/V2/01_서비스_핵심_정리.md",
+    "docs/V2/02_실시간_서버_배치도.md",
+    "docs/V2/03_학습_검증_흐름도.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/app-api-contract.md"
+  ],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [],
+  "branch_name": "",
+  "git_dirty": false,
+  "git_snapshot_captured_at": "",
+  "artifacts": [],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

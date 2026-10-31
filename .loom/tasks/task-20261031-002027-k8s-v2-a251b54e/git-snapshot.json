@@ -1,0 +1,44 @@
+{
+  "before": {
+    "available": true,
+    "branch_name": "HeoNey",
+    "commit_sha": "8823e65fda207d37335741c0b5b8162f35fd1e86",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/events.jsonl",
+      ".loom/job-runs/job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02/job-run.json",
+      ".loom/jobs/job-20261031-002017-v2-fe3bfad0/notes.md",
+      ".loom/task-definitions/task-def-20261031-002027-k8s-v2-e8ee4c90/task-definition.json",
+      "docs/ai-and-infrastructure.md",
+      "docs/architecture-and-data-flow.md",
+      "docs/decisions-and-meeting-review.md",
+      "docs/product-and-scenarios.md",
+      "docs/ui-ux-handoff.md"
+    ],
+    "untracked_files": [
+      "docs/V1/"
+    ],
+    "captured_at": "2026-10-31T00:42:27+00:00"
+  },
+  "after": {
+    "available": true,
+    "branch_name": "HeoNey",
+    "commit_sha": "cb8f40e5cedf7b8726352c53abb58ba0bd6694d9",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/job-runs/job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02/job-run.json",
+      ".loom/task-definitions/task-def-20261031-002027-k8s-v2-e8ee4c90/task-definition.json",
+      "docs/ai-and-infrastructure.md",
+      "docs/architecture-and-data-flow.md",
+      "docs/decisions-and-meeting-review.md",
+      "docs/product-and-scenarios.md",
+      "docs/ui-ux-handoff.md"
+    ],
+    "untracked_files": [
+      "docs/V1/"
+    ],
+    "captured_at": "2026-10-31T00:53:31+00:00"
+  }
+}

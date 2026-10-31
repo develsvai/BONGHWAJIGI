@@ -1,0 +1,13 @@
+[2026-10-31T02:24:42+00:00] agent=foreground task=task-20261031-022438-tailscale-6dc57118 Foreground task session started.
+2026-10-31 KST: develop에서 사용자 지시로 A5 시작. 두 서버 로그인 및 sudo 가능 확인.
+공식 Ubuntu noble 저장소의 Tailscale 1.104.4 설치. tailscaled active/enabled 확인.
+사용자 제공 키는 숨김 표준 입력으로만 전달. 두 서버가 tail2dac17.ts.net에 Running/Online으로 등록됨.
+GPU 100.65.45.63, 일반 서버 100.116.5.9. 최초 PacketFilter=[]와 TCP 22 시간 초과 확인.
+사용자 저장 직전 승인 후 기존 관리자 그룹·마스터·두 서버에서 두 서버 IPv4의 TCP 22만 허용하는 grant 1개 추가. 브라우저 저장 완료와 기존 4개 정책 유지 확인.
+배포된 필터에서 TCP 22 허용 확인. 마스터 → 두 서버 TCP 22 통과. 서버 상호 OpenSSH 배너 수신 성공.
+11:36 KST: Tailnet IPv4로 두 서버 SSH 로그인 성공. 기존 호스트키 대조 및 hostname/ncloud 확인.
+노드/파드 22건 검사: 마스터 2건 성공, 워커 노드 10건 및 일반 파드 10건 실패. 결과를 evidence JSON에 기록.
+클러스터 6대 Ready, Running 파드 84개 모두 준비 상태. 양 서버 기존 기본 경로·외부 DNS·KOSIS TLS 검증 유지. 일반 서버 실패 유닛 없음, GPU 기존 실패 유닛 2개 동일.
+보고서·A2 후속 안내·실행 작업표 및 Task 결과/결정/문제 해결 기록 작성. 일반 파드 egress/API 검증은 A3의 후속 조건으로 고정.
+완료 전 검증: loom validate --strict 및 task validate 통과. git diff --check, 변경 파일 21개 키 패턴·JSON 구문·문서 링크 검사 통과. 모든 진단 SSH 세션 종료.
+[2026-10-31T02:39:37+00:00] agent=foreground task=task-20261031-022438-tailscale-6dc57118 두 서버 Tailscale 등록과 사용자 승인 TCP 22 규칙 적용 완료. Tailnet SSH 실제 로그인, 마스터발 및 서버 상호 연결을 검증했다. 일반 파드 egress와 API 포트 인증은 A3 후속 조건으로 구분했고 검증 문서와 Loom 기록을 develop의 439a9df에 커밋했다.

@@ -1,0 +1,34 @@
+{
+  "id": "task-def-20261031-002628-task-def-ceef7064",
+  "job_definition_id": "job-20261031-002626-job-a46f69a4",
+  "title": "사용자 위치와 주변 지역의 영향 관련성 구현",
+  "description": "위치 정확도 최신성 발령 구역 경로 교차와 선택 재난의 상류 하류 풍향 지형 관계를 적용한다. 관심 지역과 현재 GPS 평가를 분리하고 장소 불확실은 보류한다. 설계 기준은 docs/V2이며 HeoNey는 참고다. 앱 구현은 제외하고 앱팀에 API 명세를 제공한다. 이 등록은 작업 계약 고정이며 후속 구현 Task를 지금 실행하거나 Queue에 넣지 않는다.",
+  "created_at": "2026-10-31T00:26:28+00:00",
+  "updated_at": "2026-10-31T00:26:28+00:00",
+  "order_index": 5,
+  "legacy_task_id": "task-20261031-002628-task-79e4938c",
+  "depends_on": [
+    "task-def-20261031-002628-task-def-3ed83bb9"
+  ],
+  "expected_output": "docs/V2/delivery/spatial-relevance.md 및 작업 범위의 재현 가능한 구현 또는 검증 산출물",
+  "done_condition": "행정구역 밖 사건의 관련 여부와 이유가 나오고 위치 불명확이 안전으로 처리되지 않는다.",
+  "in_scope": "위치 정확도 최신성 발령 구역 경로 교차와 선택 재난의 상류 하류 풍향 지형 관계를 적용한다. 관심 지역과 현재 GPS 평가를 분리하고 장소 불확실은 보류한다.",
+  "out_of_scope": "모바일 앱 화면 권한 및 3D 렌더러 구현; HeoNey UX의 자동 편입; 비밀정보 커밋; 작업 범위 외 운영 변경",
+  "validation_hint": "구역 경계 위치 오차 상류 하류 또는 선정 재난의 전파 관계 시험",
+  "required_docs": [
+    "docs/V2/01_서비스_핵심_정리.md",
+    "docs/V2/02_실시간_서버_배치도.md",
+    "docs/V2/03_학습_검증_흐름도.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/spatial-relevance.md"
+  ],
+  "document_output_exceptions": [],
+  "default_agent": "unassigned",
+  "context_policy_id": "",
+  "executor_policy_id": "",
+  "review_policy": "",
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

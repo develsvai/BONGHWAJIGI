@@ -1,0 +1,35 @@
+{
+  "id": "task-def-20261031-002630-tts-e6579cca",
+  "job_definition_id": "job-20261031-002626-job-97436430",
+  "title": "채택된 경로 또는 TTS 서버 기능과 응답 구현",
+  "description": "조건부 작업이다. D6에서 채택되고 실행 지시가 있는 기능만 경로 계산 또는 TTS로 구현한다. 생성형 모델로 길을 만들지 않고 확인 불가 경로를 표시한다. 앱 3D 렌더러와 STT는 구현하지 않는다. 설계 기준은 docs/V2이며 HeoNey는 참고다. 앱 구현은 제외하고 앱팀에 API 명세를 제공한다. 이 등록은 작업 계약 고정이며 후속 구현 Task를 지금 실행하거나 Queue에 넣지 않는다.",
+  "created_at": "2026-10-31T00:26:30+00:00",
+  "updated_at": "2026-10-31T00:26:30+00:00",
+  "order_index": 7,
+  "legacy_task_id": "task-20261031-002630-tts-bb28f882",
+  "depends_on": [
+    "task-def-20261031-002630-3d-tts-081987ff",
+    "task-def-20261031-002629-task-def-0c9c7d26"
+  ],
+  "expected_output": "docs/V2/delivery/optional-server-features.md 및 작업 범위의 재현 가능한 구현 또는 검증 산출물",
+  "done_condition": "채택된 기능별 검증이 끝나거나 모두 보류하면 변경 없이 조건부 범위를 재조정한다.",
+  "in_scope": "조건부 작업이다. D6에서 채택되고 실행 지시가 있는 기능만 경로 계산 또는 TTS로 구현한다. 생성형 모델로 길을 만들지 않고 확인 불가 경로를 표시한다. 앱 3D 렌더러와 STT는 구현하지 않는다.",
+  "out_of_scope": "모바일 앱 화면 권한 및 3D 렌더러 구현; HeoNey UX의 자동 편입; 비밀정보 커밋; 작업 범위 외 운영 변경",
+  "validation_hint": "통제 계단 접근성 경로 미확인 및 음성 지연 대체 시험",
+  "required_docs": [
+    "docs/V2/01_서비스_핵심_정리.md",
+    "docs/V2/02_실시간_서버_배치도.md",
+    "docs/V2/03_학습_검증_흐름도.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/optional-server-features.md"
+  ],
+  "document_output_exceptions": [],
+  "default_agent": "unassigned",
+  "context_policy_id": "",
+  "executor_policy_id": "",
+  "review_policy": "",
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

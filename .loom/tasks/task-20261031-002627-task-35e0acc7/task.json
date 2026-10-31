@@ -1,0 +1,38 @@
+{
+  "id": "task-20261031-002627-task-35e0acc7",
+  "job_id": "job-20261031-002626-job-a46f69a4",
+  "title": "기관별 수집 경로와 실제 샘플 및 과거 자료 확보",
+  "description": "공식 경보 행동요령 관측 예보 주변 사건 뉴스 해외 보조자료 지도 지형 통제 자료의 엔드포인트 인증 방식 이용 조건 호출 제한 갱신 지연 공간 해상도 과거 자료를 확인하고 허용된 샘플을 확보한다. 키와 자격 증명은 저장하지 않는다. 설계 기준은 docs/V2이며 HeoNey는 참고다. 앱 구현은 제외하고 앱팀에 API 명세를 제공한다. 이 등록은 작업 계약 고정이며 후속 구현 Task를 지금 실행하거나 Queue에 넣지 않는다.",
+  "status": "PENDING",
+  "created_at": "2026-10-31T00:26:27+00:00",
+  "updated_at": "2026-10-31T00:26:27+00:00",
+  "order_index": 1,
+  "assigned_agent": "unassigned",
+  "depends_on": [
+    "task-20261031-002627-mvp-e821b0f7"
+  ],
+  "expected_output": "docs/V2/delivery/source-catalog.md 및 작업 범위의 재현 가능한 구현 또는 검증 산출물",
+  "done_condition": "확인된 제공처별 접속 결과 샘플 스키마 과거 자료와 실제 결과 확보 가능성이 기록된다.",
+  "in_scope": "공식 경보 행동요령 관측 예보 주변 사건 뉴스 해외 보조자료 지도 지형 통제 자료의 엔드포인트 인증 방식 이용 조건 호출 제한 갱신 지연 공간 해상도 과거 자료를 확인하고 허용된 샘플을 확보한다. 키와 자격 증명은 저장하지 않는다.",
+  "out_of_scope": "모바일 앱 화면 권한 및 3D 렌더러 구현; HeoNey UX의 자동 편입; 비밀정보 커밋; 작업 범위 외 운영 변경",
+  "validation_hint": "실제 요청 응답과 목록 대조, 출처 독립성 및 재인용 확인",
+  "required_docs": [
+    "docs/V2/01_서비스_핵심_정리.md",
+    "docs/V2/02_실시간_서버_배치도.md",
+    "docs/V2/03_학습_검증_흐름도.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/source-catalog.md"
+  ],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [],
+  "branch_name": "",
+  "git_dirty": false,
+  "git_snapshot_captured_at": "",
+  "artifacts": [],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

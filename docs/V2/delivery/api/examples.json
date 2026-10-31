@@ -1,0 +1,3394 @@
+{
+  "notice": "모든 자료는 고정 시각의 모의 데이터이며 실제 재난 안내/신고에 사용하지 않는다.",
+  "reference_clock": "2026-10-31T03:00:00Z",
+  "exchanges": [
+    {
+      "id": "getAppConfig",
+      "operation_id": "getAppConfig",
+      "method": "GET",
+      "path": "/v1/app-config",
+      "request": {
+        "parameters": {}
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "contract_version": "0.1.0",
+            "supported_locales": [
+              "ko-KR"
+            ],
+            "default_locale": "ko-KR",
+            "features": {
+              "impact_prediction": {
+                "enabled": false,
+                "reason_code": "NOT_ADOPTED"
+              },
+              "route_3d": {
+                "enabled": false,
+                "reason_code": "NOT_ADOPTED"
+              },
+              "voice_turns": {
+                "enabled": false,
+                "reason_code": "NOT_ADOPTED"
+              },
+              "guidance_tts": {
+                "enabled": false,
+                "reason_code": "NOT_ADOPTED"
+              },
+              "support_draft": {
+                "enabled": true,
+                "reason_code": null
+              }
+            },
+            "location_max_age_seconds": 300,
+            "location_max_accuracy_m": 100,
+            "updates_wait_seconds": 20,
+            "home_history_months": 3,
+            "default_nearby_radius_m": 5000,
+            "policy_status": "draft"
+          }
+        }
+      }
+    },
+    {
+      "id": "getProfile",
+      "operation_id": "getProfile",
+      "method": "GET",
+      "path": "/v1/me/profile",
+      "request": {
+        "parameters": {}
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "revision": 1,
+            "updated_at": "2026-10-31T03:00:00Z",
+            "profile": {
+              "mobility": "independent",
+              "stairs": "difficult",
+              "communication_preference": "text",
+              "sensory_supports": [],
+              "dependents": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "replaceProfile",
+      "operation_id": "replaceProfile",
+      "method": "PUT",
+      "path": "/v1/me/profile",
+      "request": {
+        "parameters": {},
+        "body": {
+          "base_revision": 1,
+          "profile": {
+            "mobility": "independent",
+            "stairs": "difficult",
+            "communication_preference": "text",
+            "sensory_supports": [],
+            "dependents": []
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "revision": 2,
+            "updated_at": "2026-10-31T03:00:00Z",
+            "profile": {
+              "mobility": "independent",
+              "stairs": "difficult",
+              "communication_preference": "text",
+              "sensory_supports": [],
+              "dependents": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "deleteProfile",
+      "operation_id": "deleteProfile",
+      "method": "DELETE",
+      "path": "/v1/me/profile",
+      "request": {
+        "parameters": {
+          "base_revision": 1
+        }
+      },
+      "response": {
+        "status": 204
+      }
+    },
+    {
+      "id": "getPreferences",
+      "operation_id": "getPreferences",
+      "method": "GET",
+      "path": "/v1/me/preferences",
+      "request": {
+        "parameters": {}
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "revision": 1,
+            "updated_at": "2026-10-31T03:00:00Z",
+            "preferences": {
+              "locale": "ko-KR",
+              "notifications_enabled": true,
+              "nearby_radius_m": 5000,
+              "home_area_code": null
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "replacePreferences",
+      "operation_id": "replacePreferences",
+      "method": "PUT",
+      "path": "/v1/me/preferences",
+      "request": {
+        "parameters": {},
+        "body": {
+          "base_revision": 1,
+          "preferences": {
+            "locale": "ko-KR",
+            "notifications_enabled": true,
+            "nearby_radius_m": 5000,
+            "home_area_code": null
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "revision": 2,
+            "updated_at": "2026-10-31T03:00:00Z",
+            "preferences": {
+              "locale": "ko-KR",
+              "notifications_enabled": true,
+              "nearby_radius_m": 5000,
+              "home_area_code": null
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "getLocation",
+      "operation_id": "getLocation",
+      "method": "GET",
+      "path": "/v1/me/location",
+      "request": {
+        "parameters": {}
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "revision": 1,
+            "status": "available",
+            "fix": {
+              "fix_id": "fix_demo_001",
+              "installation_id": "install_demo_001",
+              "latitude": 37.505,
+              "longitude": 127.005,
+              "accuracy_m": 20,
+              "captured_at": "2026-10-31T03:00:00Z"
+            },
+            "valid_until": "2026-10-31T03:05:00Z",
+            "reason_codes": []
+          }
+        }
+      }
+    },
+    {
+      "id": "putLocation",
+      "operation_id": "putLocation",
+      "method": "PUT",
+      "path": "/v1/me/location",
+      "request": {
+        "parameters": {},
+        "body": {
+          "fix_id": "fix_demo_001",
+          "installation_id": "install_demo_001",
+          "latitude": 37.505,
+          "longitude": 127.005,
+          "accuracy_m": 20,
+          "captured_at": "2026-10-31T03:00:00Z"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "revision": 1,
+            "status": "available",
+            "fix": {
+              "fix_id": "fix_demo_001",
+              "installation_id": "install_demo_001",
+              "latitude": 37.505,
+              "longitude": 127.005,
+              "accuracy_m": 20,
+              "captured_at": "2026-10-31T03:00:00Z"
+            },
+            "valid_until": "2026-10-31T03:05:00Z",
+            "reason_codes": []
+          }
+        }
+      }
+    },
+    {
+      "id": "deleteLocation",
+      "operation_id": "deleteLocation",
+      "method": "DELETE",
+      "path": "/v1/me/location",
+      "request": {
+        "parameters": {
+          "base_revision": 1
+        }
+      },
+      "response": {
+        "status": 204
+      }
+    },
+    {
+      "id": "putDevice",
+      "operation_id": "putDevice",
+      "method": "PUT",
+      "path": "/v1/me/devices/{installation_id}",
+      "request": {
+        "parameters": {
+          "installation_id": "install_demo_001"
+        },
+        "body": {
+          "platform": "android",
+          "push_provider": "fcm",
+          "push_token": "MOCK_PUSH_TOKEN_NOT_VALID",
+          "notification_permission": "granted",
+          "app_version": "0.1.0"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "installation_id": "install_demo_001",
+            "registered_at": "2026-10-31T03:00:00Z",
+            "push_status": "registered",
+            "notification_permission": "granted"
+          }
+        }
+      }
+    },
+    {
+      "id": "deleteDevice",
+      "operation_id": "deleteDevice",
+      "method": "DELETE",
+      "path": "/v1/me/devices/{installation_id}",
+      "request": {
+        "parameters": {
+          "installation_id": "install_demo_001"
+        }
+      },
+      "response": {
+        "status": 204
+      }
+    },
+    {
+      "id": "getHome",
+      "operation_id": "getHome",
+      "method": "GET",
+      "path": "/v1/home",
+      "request": {
+        "parameters": {
+          "scope": "current_location",
+          "limit": 20
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "sync_cursor": "cursor_demo_100",
+            "location": {
+              "revision": 1,
+              "status": "available",
+              "fix": {
+                "fix_id": "fix_demo_001",
+                "installation_id": "install_demo_001",
+                "latitude": 37.505,
+                "longitude": 127.005,
+                "accuracy_m": 20,
+                "captured_at": "2026-10-31T03:00:00Z"
+              },
+              "valid_until": "2026-10-31T03:05:00Z",
+              "reason_codes": []
+            },
+            "today_rules": {
+              "for_date": "2026-10-31",
+              "scope": "current_location",
+              "status": "available",
+              "locale": "ko-KR",
+              "locale_fallback": false,
+              "valid_until": "2026-10-31T03:05:00Z",
+              "items": [
+                {
+                  "id": "daily_demo_001",
+                  "title": "[시연] 오늘의 안전 정보",
+                  "text": "[시연] 검토된 오늘의 안전 행동요령 표시 영역입니다.",
+                  "disaster_type": "other",
+                  "source_id": "src_demo_001",
+                  "content_version": "demo-only"
+                }
+              ],
+              "sources": [
+                {
+                  "id": "src_demo_001",
+                  "kind": "simulation",
+                  "agency": "시연용 기관(가상)",
+                  "url": "https://example.invalid/sources/demo-001",
+                  "published_at": "2026-10-31T03:00:00Z",
+                  "observed_at": null,
+                  "collected_at": "2026-10-31T03:00:00Z",
+                  "valid_until": "2026-10-31T03:05:00Z",
+                  "document_revision": "demo-1",
+                  "independent_origin_id": "origin_demo_001"
+                }
+              ]
+            },
+            "feed": {
+              "items": [
+                {
+                  "id": "evt_demo_past",
+                  "disaster_type": "flood",
+                  "status": "past",
+                  "display_title": "[시연] 가상 지역 침수 기록",
+                  "original_title": "[시연] 가상 지역 침수 발생",
+                  "region_label": "가상 지역",
+                  "occurred_at": "2026-10-01T03:00:00Z",
+                  "ended_at": "2026-10-02T03:00:00Z",
+                  "updated_at": "2026-10-31T03:00:00Z",
+                  "summary": "실제 사건이 아닌 화면 연동용 자료입니다.",
+                  "source": {
+                    "id": "src_demo_001",
+                    "kind": "simulation",
+                    "agency": "시연용 기관(가상)",
+                    "url": "https://example.invalid/sources/demo-001",
+                    "published_at": "2026-10-31T03:00:00Z",
+                    "observed_at": null,
+                    "collected_at": "2026-10-31T03:00:00Z",
+                    "valid_until": "2026-10-31T03:05:00Z",
+                    "document_revision": "demo-1",
+                    "independent_origin_id": "origin_demo_001"
+                  },
+                  "detail_navigation": false
+                }
+              ],
+              "next_cursor": null,
+              "scope": "current_location",
+              "area_code": null,
+              "radius_m": 5000,
+              "window_start": "2026-07-31T03:00:00Z",
+              "window_end": "2026-10-31T03:00:00Z",
+              "snapshot_at": "2026-10-31T03:00:00Z",
+              "data_status": "current"
+            },
+            "active_alert_ids": [
+              "alert_demo_001"
+            ],
+            "active_response_ids": [
+              "response_demo_001"
+            ],
+            "capabilities": {
+              "route_3d": {
+                "enabled": false,
+                "reason_code": "NOT_ADOPTED"
+              },
+              "voice_turns": {
+                "enabled": false,
+                "reason_code": "NOT_ADOPTED"
+              },
+              "guidance_tts": {
+                "enabled": false,
+                "reason_code": "NOT_ADOPTED"
+              },
+              "support_draft": {
+                "enabled": true,
+                "reason_code": null
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "listDisasters",
+      "operation_id": "listDisasters",
+      "method": "GET",
+      "path": "/v1/disasters",
+      "request": {
+        "parameters": {
+          "scope": "current_location",
+          "limit": 20
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "items": [
+              {
+                "id": "evt_demo_past",
+                "disaster_type": "flood",
+                "status": "past",
+                "display_title": "[시연] 가상 지역 침수 기록",
+                "original_title": "[시연] 가상 지역 침수 발생",
+                "region_label": "가상 지역",
+                "occurred_at": "2026-10-01T03:00:00Z",
+                "ended_at": "2026-10-02T03:00:00Z",
+                "updated_at": "2026-10-31T03:00:00Z",
+                "summary": "실제 사건이 아닌 화면 연동용 자료입니다.",
+                "source": {
+                  "id": "src_demo_001",
+                  "kind": "simulation",
+                  "agency": "시연용 기관(가상)",
+                  "url": "https://example.invalid/sources/demo-001",
+                  "published_at": "2026-10-31T03:00:00Z",
+                  "observed_at": null,
+                  "collected_at": "2026-10-31T03:00:00Z",
+                  "valid_until": "2026-10-31T03:05:00Z",
+                  "document_revision": "demo-1",
+                  "independent_origin_id": "origin_demo_001"
+                },
+                "detail_navigation": false
+              }
+            ],
+            "next_cursor": null,
+            "scope": "current_location",
+            "area_code": null,
+            "radius_m": 5000,
+            "window_start": "2026-07-31T03:00:00Z",
+            "window_end": "2026-10-31T03:00:00Z",
+            "snapshot_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          }
+        }
+      }
+    },
+    {
+      "id": "listAlerts",
+      "operation_id": "listAlerts",
+      "method": "GET",
+      "path": "/v1/me/alerts",
+      "request": {
+        "parameters": {
+          "limit": 20
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "items": [
+              {
+                "id": "alert_demo_001",
+                "revision": 1,
+                "event_id": "evt_demo_001",
+                "response_id": "response_demo_001",
+                "disaster_type": "flood",
+                "status": "active",
+                "title": "[시연] 가상 지역 공식 경보",
+                "official_severity": {
+                  "code": null,
+                  "label": null,
+                  "scheme": null
+                },
+                "instruction_kind": "information",
+                "original_text": "[시연 자료] 실제 발령된 경보가 아닙니다.",
+                "issued_at": "2026-10-31T03:00:00Z",
+                "received_at": "2026-10-31T03:00:00Z",
+                "valid_until": "2026-10-31T03:05:00Z",
+                "target_area": {
+                  "type": "Polygon",
+                  "coordinates": [
+                    [
+                      [
+                        127.0,
+                        37.5
+                      ],
+                      [
+                        127.01,
+                        37.5
+                      ],
+                      [
+                        127.01,
+                        37.51
+                      ],
+                      [
+                        127.0,
+                        37.51
+                      ],
+                      [
+                        127.0,
+                        37.5
+                      ]
+                    ]
+                  ]
+                },
+                "source": {
+                  "id": "src_demo_001",
+                  "kind": "simulation",
+                  "agency": "시연용 기관(가상)",
+                  "url": "https://example.invalid/sources/demo-001",
+                  "published_at": "2026-10-31T03:00:00Z",
+                  "observed_at": null,
+                  "collected_at": "2026-10-31T03:00:00Z",
+                  "valid_until": "2026-10-31T03:05:00Z",
+                  "document_revision": "demo-1",
+                  "independent_origin_id": "origin_demo_001"
+                }
+              }
+            ],
+            "next_cursor": null
+          }
+        }
+      }
+    },
+    {
+      "id": "getAlert",
+      "operation_id": "getAlert",
+      "method": "GET",
+      "path": "/v1/me/alerts/{alert_id}",
+      "request": {
+        "parameters": {
+          "alert_id": "alert_demo_001"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "id": "alert_demo_001",
+            "revision": 1,
+            "event_id": "evt_demo_001",
+            "response_id": "response_demo_001",
+            "disaster_type": "flood",
+            "status": "active",
+            "title": "[시연] 가상 지역 공식 경보",
+            "official_severity": {
+              "code": null,
+              "label": null,
+              "scheme": null
+            },
+            "instruction_kind": "information",
+            "original_text": "[시연 자료] 실제 발령된 경보가 아닙니다.",
+            "issued_at": "2026-10-31T03:00:00Z",
+            "received_at": "2026-10-31T03:00:00Z",
+            "valid_until": "2026-10-31T03:05:00Z",
+            "target_area": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    127.0,
+                    37.5
+                  ],
+                  [
+                    127.01,
+                    37.5
+                  ],
+                  [
+                    127.01,
+                    37.51
+                  ],
+                  [
+                    127.0,
+                    37.51
+                  ],
+                  [
+                    127.0,
+                    37.5
+                  ]
+                ]
+              ]
+            },
+            "source": {
+              "id": "src_demo_001",
+              "kind": "simulation",
+              "agency": "시연용 기관(가상)",
+              "url": "https://example.invalid/sources/demo-001",
+              "published_at": "2026-10-31T03:00:00Z",
+              "observed_at": null,
+              "collected_at": "2026-10-31T03:00:00Z",
+              "valid_until": "2026-10-31T03:05:00Z",
+              "document_revision": "demo-1",
+              "independent_origin_id": "origin_demo_001"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "postAlertReceipt",
+      "operation_id": "postAlertReceipt",
+      "method": "POST",
+      "path": "/v1/me/alerts/{alert_id}/receipts",
+      "request": {
+        "parameters": {
+          "alert_id": "alert_demo_001",
+          "Idempotency-Key": "demo-request-0001"
+        },
+        "body": {
+          "alert_revision": 1,
+          "installation_id": "install_demo_001",
+          "event": "opened",
+          "occurred_at": "2026-10-31T03:00:00Z"
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "receipt_id": "receipt_demo_001",
+            "recorded_at": "2026-10-31T03:00:00Z",
+            "meaning": "client_reported_only"
+          }
+        }
+      }
+    },
+    {
+      "id": "getResponse",
+      "operation_id": "getResponse",
+      "method": "GET",
+      "path": "/v1/me/responses/{response_id}",
+      "request": {
+        "parameters": {
+          "response_id": "response_demo_001"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "id": "response_demo_001",
+            "revision": 1,
+            "event_id": "evt_demo_001",
+            "disaster_type": "flood",
+            "status": "active",
+            "superseded_by": null,
+            "evaluated_at": "2026-10-31T03:00:00Z",
+            "valid_until": "2026-10-31T03:05:00Z",
+            "input_versions": {
+              "profile": 1,
+              "location": 1,
+              "context": 1
+            },
+            "official_alert": {
+              "id": "alert_demo_001",
+              "revision": 1,
+              "event_id": "evt_demo_001",
+              "response_id": "response_demo_001",
+              "disaster_type": "flood",
+              "status": "active",
+              "title": "[시연] 가상 지역 공식 경보",
+              "official_severity": {
+                "code": null,
+                "label": null,
+                "scheme": null
+              },
+              "instruction_kind": "information",
+              "original_text": "[시연 자료] 실제 발령된 경보가 아닙니다.",
+              "issued_at": "2026-10-31T03:00:00Z",
+              "received_at": "2026-10-31T03:00:00Z",
+              "valid_until": "2026-10-31T03:05:00Z",
+              "target_area": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      127.0,
+                      37.5
+                    ],
+                    [
+                      127.01,
+                      37.5
+                    ],
+                    [
+                      127.01,
+                      37.51
+                    ],
+                    [
+                      127.0,
+                      37.51
+                    ],
+                    [
+                      127.0,
+                      37.5
+                    ]
+                  ]
+                ]
+              },
+              "source": {
+                "id": "src_demo_001",
+                "kind": "simulation",
+                "agency": "시연용 기관(가상)",
+                "url": "https://example.invalid/sources/demo-001",
+                "published_at": "2026-10-31T03:00:00Z",
+                "observed_at": null,
+                "collected_at": "2026-10-31T03:00:00Z",
+                "valid_until": "2026-10-31T03:05:00Z",
+                "document_revision": "demo-1",
+                "independent_origin_id": "origin_demo_001"
+              }
+            },
+            "relevance": {
+              "status": "possible",
+              "relationship": "upstream",
+              "origin_region_label": "가상 상류 지역",
+              "target_region_label": "가상 현재 지역",
+              "summary": "[시연] 주변 상류 사건과 현재 지역의 관련성을 평가 중입니다.",
+              "evidence_source_ids": [
+                "src_demo_001"
+              ]
+            },
+            "impact": {
+              "status": "unavailable",
+              "probability": null,
+              "target": null,
+              "model_version": null,
+              "reason_codes": [
+                "MODEL_NOT_VALIDATED"
+              ]
+            },
+            "personal_response": {
+              "level": "unknown",
+              "label": "판단에 필요한 정보를 확인 중",
+              "policy_version": null,
+              "reason_codes": [
+                "POLICY_NOT_REVIEWED"
+              ]
+            },
+            "location": {
+              "revision": 1,
+              "status": "available",
+              "fix": {
+                "fix_id": "fix_demo_001",
+                "installation_id": "install_demo_001",
+                "latitude": 37.505,
+                "longitude": 127.005,
+                "accuracy_m": 20,
+                "captured_at": "2026-10-31T03:00:00Z"
+              },
+              "valid_until": "2026-10-31T03:05:00Z",
+              "reason_codes": []
+            },
+            "affected_area": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    127.0,
+                    37.5
+                  ],
+                  [
+                    127.01,
+                    37.5
+                  ],
+                  [
+                    127.01,
+                    37.51
+                  ],
+                  [
+                    127.0,
+                    37.51
+                  ],
+                  [
+                    127.0,
+                    37.5
+                  ]
+                ]
+              ]
+            },
+            "area_source_ids": [
+              "src_demo_001"
+            ],
+            "context": {
+              "revision": 1,
+              "expires_at": null,
+              "tags": [
+                {
+                  "code": "stairs_difficult",
+                  "label": "계단 이용 어려움",
+                  "origin": "profile",
+                  "confirmed_at": "2026-10-31T03:00:00Z",
+                  "expires_at": null
+                }
+              ]
+            },
+            "assistant_utterance": {
+              "id": "utter_demo_001",
+              "text": "[시연] 현재 상태를 확인해 주세요.",
+              "origin": "template",
+              "created_at": "2026-10-31T03:00:00Z"
+            },
+            "actions": [
+              {
+                "id": "rule_demo_001",
+                "order": 1,
+                "text": "[시연] 검토된 기관 행동요령이 이 위치에 표시됩니다.",
+                "source_id": "src_demo_001",
+                "rule_version": "demo-only"
+              }
+            ],
+            "route_availability": {
+              "status": "unavailable",
+              "reason_code": "NOT_ADOPTED",
+              "expires_at": null
+            },
+            "sources": [
+              {
+                "id": "src_demo_001",
+                "kind": "simulation",
+                "agency": "시연용 기관(가상)",
+                "url": "https://example.invalid/sources/demo-001",
+                "published_at": "2026-10-31T03:00:00Z",
+                "observed_at": null,
+                "collected_at": "2026-10-31T03:00:00Z",
+                "valid_until": "2026-10-31T03:05:00Z",
+                "document_revision": "demo-1",
+                "independent_origin_id": "origin_demo_001"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "putCurrentContext",
+      "operation_id": "putCurrentContext",
+      "method": "PUT",
+      "path": "/v1/me/responses/{response_id}/context",
+      "request": {
+        "parameters": {
+          "response_id": "response_demo_001"
+        },
+        "body": {
+          "base_revision": 1,
+          "observed_at": "2026-10-31T03:00:00Z",
+          "confirmation": "user_confirmed",
+          "overrides": {
+            "mobility": null,
+            "stairs": "unable",
+            "alone_now": "yes"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "context_revision": 2,
+            "response_id": "response_demo_001",
+            "expires_at": "2026-10-31T04:00:00Z",
+            "reevaluation": "pending"
+          }
+        }
+      }
+    },
+    {
+      "id": "getUpdates",
+      "operation_id": "getUpdates",
+      "method": "GET",
+      "path": "/v1/me/updates",
+      "request": {
+        "parameters": {
+          "after": "cursor_demo_100",
+          "wait_seconds": 20
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "events": [
+              {
+                "event_id": "update_demo_001",
+                "type": "alert.upserted",
+                "resource_id": "alert_demo_001",
+                "resource_revision": 1,
+                "response_id": "response_demo_001",
+                "occurred_at": "2026-10-31T03:00:00Z"
+              }
+            ],
+            "next_cursor": "cursor_demo_101",
+            "has_more": false
+          }
+        }
+      }
+    },
+    {
+      "id": "getSafetyRules",
+      "operation_id": "getSafetyRules",
+      "method": "GET",
+      "path": "/v1/safety-rules/{disaster_type}",
+      "request": {
+        "parameters": {
+          "disaster_type": "flood",
+          "locale": "ko-KR"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "disaster_type": "flood",
+            "locale": "ko-KR",
+            "locale_fallback": false,
+            "status": "available",
+            "content_version": "demo-only",
+            "reviewed_at": null,
+            "items": [
+              {
+                "id": "rule_demo_001",
+                "order": 1,
+                "text": "[시연] 검토된 기관 행동요령이 이 위치에 표시됩니다.",
+                "source_id": "src_demo_001",
+                "rule_version": "demo-only"
+              }
+            ],
+            "sources": [
+              {
+                "id": "src_demo_001",
+                "kind": "simulation",
+                "agency": "시연용 기관(가상)",
+                "url": "https://example.invalid/sources/demo-001",
+                "published_at": "2026-10-31T03:00:00Z",
+                "observed_at": null,
+                "collected_at": "2026-10-31T03:00:00Z",
+                "valid_until": "2026-10-31T03:05:00Z",
+                "document_revision": "demo-1",
+                "independent_origin_id": "origin_demo_001"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "createSupportDraft",
+      "operation_id": "createSupportDraft",
+      "method": "POST",
+      "path": "/v1/me/responses/{response_id}/support-drafts",
+      "request": {
+        "parameters": {
+          "response_id": "response_demo_001",
+          "Idempotency-Key": "demo-request-0001"
+        },
+        "body": {
+          "response_revision": 1,
+          "include_location": true,
+          "include_confirmed_state": true,
+          "user_requested_preview": true
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "draft_id": "draft_demo_001",
+            "response_revision": 1,
+            "preview_text": "[시연 전용·전송 금지] 가상 위치와 사용자가 확인한 상태의 문자 미리보기입니다.",
+            "phone_number": "119",
+            "location_status": "available",
+            "expires_at": "2026-10-31T03:05:00Z",
+            "delivery_status": "not_sent",
+            "requires_user_confirmation": true
+          }
+        }
+      }
+    },
+    {
+      "id": "getRoute",
+      "operation_id": "getRoute",
+      "method": "GET",
+      "path": "/v1/me/responses/{response_id}/route",
+      "request": {
+        "parameters": {
+          "response_id": "response_demo_001",
+          "response_revision": 1
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "status": "unavailable",
+            "response_revision": 1,
+            "reason_code": "NOT_ADOPTED",
+            "route": null,
+            "sources": []
+          }
+        }
+      }
+    },
+    {
+      "id": "createVoiceTurn",
+      "operation_id": "createVoiceTurn",
+      "method": "POST",
+      "path": "/v1/me/responses/{response_id}/voice-turns",
+      "request": {
+        "parameters": {
+          "response_id": "response_demo_001",
+          "Idempotency-Key": "demo-request-0001"
+        },
+        "body": {
+          "client_turn_id": "client_turn_demo_001",
+          "response_revision": 1,
+          "captured_at": "2026-10-31T03:00:00Z",
+          "transcript": "계단을 이용하기 어렵습니다.",
+          "locale": "ko-KR"
+        }
+      },
+      "response": {
+        "status": 202,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "turn_id": "turn_demo_001",
+            "client_turn_id": "client_turn_demo_001",
+            "response_revision": 1,
+            "status": "pending",
+            "utterance": null,
+            "proposed_context": null,
+            "audio_url": null,
+            "audio_expires_at": null,
+            "reason_code": null,
+            "expires_at": "2026-10-31T03:05:00Z"
+          }
+        }
+      }
+    },
+    {
+      "id": "getVoiceTurn",
+      "operation_id": "getVoiceTurn",
+      "method": "GET",
+      "path": "/v1/me/responses/{response_id}/voice-turns/{turn_id}",
+      "request": {
+        "parameters": {
+          "turn_id": "turn_demo_001",
+          "response_id": "response_demo_001"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "turn_id": "turn_demo_001",
+            "client_turn_id": "client_turn_demo_001",
+            "response_revision": 1,
+            "status": "ready",
+            "utterance": {
+              "id": "utter_demo_confirm",
+              "text": "[시연] 현재 계단 이용이 어려운 상태가 맞나요?",
+              "origin": "template",
+              "created_at": "2026-10-31T03:00:00Z"
+            },
+            "proposed_context": {
+              "overrides": {
+                "mobility": null,
+                "stairs": "difficult",
+                "alone_now": "unknown"
+              },
+              "requires_user_confirmation": true
+            },
+            "audio_url": null,
+            "audio_expires_at": null,
+            "reason_code": null,
+            "expires_at": "2026-10-31T03:05:00Z"
+          }
+        }
+      }
+    },
+    {
+      "id": "cancelVoiceTurn",
+      "operation_id": "cancelVoiceTurn",
+      "method": "DELETE",
+      "path": "/v1/me/responses/{response_id}/voice-turns/{turn_id}",
+      "request": {
+        "parameters": {
+          "turn_id": "turn_demo_001",
+          "response_id": "response_demo_001"
+        }
+      },
+      "response": {
+        "status": 204
+      }
+    },
+    {
+      "id": "home_location_unavailable",
+      "operation_id": "getHome",
+      "method": "GET",
+      "path": "/v1/home",
+      "request": {
+        "parameters": {
+          "scope": "current_location",
+          "limit": 20
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "sync_cursor": "cursor_demo_100",
+            "location": {
+              "revision": 2,
+              "status": "unavailable",
+              "fix": null,
+              "valid_until": null,
+              "reason_codes": [
+                "LOCATION_UNAVAILABLE"
+              ]
+            },
+            "today_rules": {
+              "for_date": "2026-10-31",
+              "scope": "general",
+              "status": "available",
+              "locale": "ko-KR",
+              "locale_fallback": false,
+              "valid_until": "2026-10-31T03:05:00Z",
+              "items": [
+                {
+                  "id": "daily_demo_001",
+                  "title": "[시연] 오늘의 안전 정보",
+                  "text": "[시연] 검토된 오늘의 안전 행동요령 표시 영역입니다.",
+                  "disaster_type": "other",
+                  "source_id": "src_demo_001",
+                  "content_version": "demo-only"
+                }
+              ],
+              "sources": [
+                {
+                  "id": "src_demo_001",
+                  "kind": "simulation",
+                  "agency": "시연용 기관(가상)",
+                  "url": "https://example.invalid/sources/demo-001",
+                  "published_at": "2026-10-31T03:00:00Z",
+                  "observed_at": null,
+                  "collected_at": "2026-10-31T03:00:00Z",
+                  "valid_until": "2026-10-31T03:05:00Z",
+                  "document_revision": "demo-1",
+                  "independent_origin_id": "origin_demo_001"
+                }
+              ]
+            },
+            "feed": {
+              "items": [],
+              "next_cursor": null,
+              "scope": "unavailable",
+              "area_code": null,
+              "radius_m": 5000,
+              "window_start": "2026-07-31T03:00:00Z",
+              "window_end": "2026-10-31T03:00:00Z",
+              "snapshot_at": "2026-10-31T03:00:00Z",
+              "data_status": "unavailable"
+            },
+            "active_alert_ids": [],
+            "active_response_ids": [],
+            "capabilities": {
+              "route_3d": {
+                "enabled": false,
+                "reason_code": "NOT_ADOPTED"
+              },
+              "voice_turns": {
+                "enabled": false,
+                "reason_code": "NOT_ADOPTED"
+              },
+              "guidance_tts": {
+                "enabled": false,
+                "reason_code": "NOT_ADOPTED"
+              },
+              "support_draft": {
+                "enabled": true,
+                "reason_code": null
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "rules_unavailable",
+      "operation_id": "getSafetyRules",
+      "method": "GET",
+      "path": "/v1/safety-rules/{disaster_type}",
+      "request": {
+        "parameters": {
+          "disaster_type": "flood",
+          "locale": "ko-KR"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "disaster_type": "flood",
+            "locale": "ko-KR",
+            "locale_fallback": false,
+            "status": "unavailable",
+            "content_version": null,
+            "reviewed_at": null,
+            "items": [],
+            "sources": []
+          }
+        }
+      }
+    },
+    {
+      "id": "updates_empty",
+      "operation_id": "getUpdates",
+      "method": "GET",
+      "path": "/v1/me/updates",
+      "request": {
+        "parameters": {
+          "after": "cursor_demo_100",
+          "wait_seconds": 20
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "events": [],
+            "next_cursor": "cursor_demo_101",
+            "has_more": false
+          }
+        }
+      }
+    },
+    {
+      "id": "updates_cursor_expired",
+      "operation_id": "getUpdates",
+      "method": "GET",
+      "path": "/v1/me/updates",
+      "request": {
+        "parameters": {
+          "after": "cursor_demo_100",
+          "wait_seconds": 20
+        }
+      },
+      "response": {
+        "status": 410,
+        "body": {
+          "type": "about:blank",
+          "title": "CURSOR_EXPIRED",
+          "status": 410,
+          "detail": "시연용 예외입니다. 앱팀 인계 문서의 처리 규칙을 따릅니다.",
+          "instance": "/v1/demo",
+          "code": "CURSOR_EXPIRED",
+          "request_id": "req_demo_error",
+          "retryable": false,
+          "field_errors": []
+        }
+      }
+    },
+    {
+      "id": "profile_conflict",
+      "operation_id": "replaceProfile",
+      "method": "PUT",
+      "path": "/v1/me/profile",
+      "request": {
+        "parameters": {},
+        "body": {
+          "base_revision": 1,
+          "profile": {
+            "mobility": "independent",
+            "stairs": "difficult",
+            "communication_preference": "text",
+            "sensory_supports": [],
+            "dependents": []
+          }
+        }
+      },
+      "response": {
+        "status": 409,
+        "body": {
+          "type": "about:blank",
+          "title": "VERSION_CONFLICT",
+          "status": 409,
+          "detail": "시연용 예외입니다. 앱팀 인계 문서의 처리 규칙을 따릅니다.",
+          "instance": "/v1/demo",
+          "code": "VERSION_CONFLICT",
+          "request_id": "req_demo_error",
+          "retryable": false,
+          "field_errors": []
+        }
+      }
+    },
+    {
+      "id": "location_out_of_order",
+      "operation_id": "putLocation",
+      "method": "PUT",
+      "path": "/v1/me/location",
+      "request": {
+        "parameters": {},
+        "body": {
+          "fix_id": "fix_demo_001",
+          "installation_id": "install_demo_001",
+          "latitude": 37.505,
+          "longitude": 127.005,
+          "accuracy_m": 20,
+          "captured_at": "2026-10-31T03:00:00Z"
+        }
+      },
+      "response": {
+        "status": 409,
+        "body": {
+          "type": "about:blank",
+          "title": "STALE_LOCATION",
+          "status": 409,
+          "detail": "시연용 예외입니다. 앱팀 인계 문서의 처리 규칙을 따릅니다.",
+          "instance": "/v1/demo",
+          "code": "STALE_LOCATION",
+          "request_id": "req_demo_error",
+          "retryable": false,
+          "field_errors": []
+        }
+      }
+    },
+    {
+      "id": "voice_disabled",
+      "operation_id": "createVoiceTurn",
+      "method": "POST",
+      "path": "/v1/me/responses/{response_id}/voice-turns",
+      "request": {
+        "parameters": {
+          "response_id": "response_demo_001",
+          "Idempotency-Key": "demo-request-0001"
+        },
+        "body": {
+          "client_turn_id": "client_turn_demo_001",
+          "response_revision": 1,
+          "captured_at": "2026-10-31T03:00:00Z",
+          "transcript": "계단을 이용하기 어렵습니다.",
+          "locale": "ko-KR"
+        }
+      },
+      "response": {
+        "status": 501,
+        "body": {
+          "type": "about:blank",
+          "title": "FEATURE_UNAVAILABLE",
+          "status": 501,
+          "detail": "시연용 예외입니다. 앱팀 인계 문서의 처리 규칙을 따릅니다.",
+          "instance": "/v1/demo",
+          "code": "FEATURE_UNAVAILABLE",
+          "request_id": "req_demo_error",
+          "retryable": false,
+          "field_errors": []
+        }
+      }
+    },
+    {
+      "id": "unauthenticated",
+      "operation_id": "getProfile",
+      "method": "GET",
+      "path": "/v1/me/profile",
+      "request": {
+        "parameters": {}
+      },
+      "response": {
+        "status": 401,
+        "body": {
+          "type": "about:blank",
+          "title": "UNAUTHENTICATED",
+          "status": 401,
+          "detail": "시연용 예외입니다. 앱팀 인계 문서의 처리 규칙을 따릅니다.",
+          "instance": "/v1/demo",
+          "code": "UNAUTHENTICATED",
+          "request_id": "req_demo_error",
+          "retryable": false,
+          "field_errors": []
+        }
+      }
+    },
+    {
+      "id": "rate_limited",
+      "operation_id": "getHome",
+      "method": "GET",
+      "path": "/v1/home",
+      "request": {
+        "parameters": {
+          "scope": "current_location",
+          "limit": 20
+        }
+      },
+      "response": {
+        "status": 429,
+        "body": {
+          "type": "about:blank",
+          "title": "RATE_LIMITED",
+          "status": 429,
+          "detail": "시연용 예외입니다. 앱팀 인계 문서의 처리 규칙을 따릅니다.",
+          "instance": "/v1/demo",
+          "code": "RATE_LIMITED",
+          "request_id": "req_demo_error",
+          "retryable": true,
+          "field_errors": []
+        }
+      }
+    },
+    {
+      "id": "invalid_location",
+      "operation_id": "putLocation",
+      "method": "PUT",
+      "path": "/v1/me/location",
+      "request": {
+        "parameters": {},
+        "body": {
+          "fix_id": "fix_demo_001",
+          "installation_id": "install_demo_001",
+          "latitude": 37.505,
+          "longitude": 127.005,
+          "accuracy_m": 20,
+          "captured_at": "2026-10-31T03:00:00Z"
+        }
+      },
+      "response": {
+        "status": 422,
+        "body": {
+          "type": "about:blank",
+          "title": "VALIDATION_ERROR",
+          "status": 422,
+          "detail": "시연용 예외입니다. 앱팀 인계 문서의 처리 규칙을 따릅니다.",
+          "instance": "/v1/demo",
+          "code": "VALIDATION_ERROR",
+          "request_id": "req_demo_error",
+          "retryable": false,
+          "field_errors": []
+        }
+      }
+    },
+    {
+      "id": "private_response_not_found",
+      "operation_id": "getResponse",
+      "method": "GET",
+      "path": "/v1/me/responses/{response_id}",
+      "request": {
+        "parameters": {
+          "response_id": "response_demo_001"
+        }
+      },
+      "response": {
+        "status": 404,
+        "body": {
+          "type": "about:blank",
+          "title": "NOT_FOUND",
+          "status": 404,
+          "detail": "시연용 예외입니다. 앱팀 인계 문서의 처리 규칙을 따릅니다.",
+          "instance": "/v1/demo",
+          "code": "NOT_FOUND",
+          "request_id": "req_demo_error",
+          "retryable": false,
+          "field_errors": []
+        }
+      }
+    },
+    {
+      "id": "server_unavailable",
+      "operation_id": "getResponse",
+      "method": "GET",
+      "path": "/v1/me/responses/{response_id}",
+      "request": {
+        "parameters": {
+          "response_id": "response_demo_001"
+        }
+      },
+      "response": {
+        "status": 503,
+        "body": {
+          "type": "about:blank",
+          "title": "SERVICE_UNAVAILABLE",
+          "status": 503,
+          "detail": "시연용 예외입니다. 앱팀 인계 문서의 처리 규칙을 따릅니다.",
+          "instance": "/v1/demo",
+          "code": "SERVICE_UNAVAILABLE",
+          "request_id": "req_demo_error",
+          "retryable": true,
+          "field_errors": []
+        }
+      }
+    },
+    {
+      "id": "alert_cancelled",
+      "operation_id": "getAlert",
+      "method": "GET",
+      "path": "/v1/me/alerts/{alert_id}",
+      "request": {
+        "parameters": {
+          "alert_id": "alert_demo_001"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "id": "alert_demo_001",
+            "revision": 2,
+            "event_id": "evt_demo_001",
+            "response_id": "response_demo_001",
+            "disaster_type": "flood",
+            "status": "cancelled",
+            "title": "[시연] 가상 지역 공식 경보",
+            "official_severity": {
+              "code": null,
+              "label": null,
+              "scheme": null
+            },
+            "instruction_kind": "information",
+            "original_text": "[시연 자료] 실제 발령된 경보가 아닙니다.",
+            "issued_at": "2026-10-31T03:00:00Z",
+            "received_at": "2026-10-31T03:00:00Z",
+            "valid_until": "2026-10-31T03:05:00Z",
+            "target_area": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    127.0,
+                    37.5
+                  ],
+                  [
+                    127.01,
+                    37.5
+                  ],
+                  [
+                    127.01,
+                    37.51
+                  ],
+                  [
+                    127.0,
+                    37.51
+                  ],
+                  [
+                    127.0,
+                    37.5
+                  ]
+                ]
+              ]
+            },
+            "source": {
+              "id": "src_demo_001",
+              "kind": "simulation",
+              "agency": "시연용 기관(가상)",
+              "url": "https://example.invalid/sources/demo-001",
+              "published_at": "2026-10-31T03:00:00Z",
+              "observed_at": null,
+              "collected_at": "2026-10-31T03:00:00Z",
+              "valid_until": "2026-10-31T03:05:00Z",
+              "document_revision": "demo-1",
+              "independent_origin_id": "origin_demo_001"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "response_resolved",
+      "operation_id": "getResponse",
+      "method": "GET",
+      "path": "/v1/me/responses/{response_id}",
+      "request": {
+        "parameters": {
+          "response_id": "response_demo_001"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "id": "response_demo_001",
+            "revision": 2,
+            "event_id": "evt_demo_001",
+            "disaster_type": "flood",
+            "status": "resolved",
+            "superseded_by": null,
+            "evaluated_at": "2026-10-31T03:00:00Z",
+            "valid_until": "2026-10-31T03:05:00Z",
+            "input_versions": {
+              "profile": 1,
+              "location": 1,
+              "context": 1
+            },
+            "official_alert": {
+              "id": "alert_demo_001",
+              "revision": 2,
+              "event_id": "evt_demo_001",
+              "response_id": "response_demo_001",
+              "disaster_type": "flood",
+              "status": "cancelled",
+              "title": "[시연] 가상 지역 공식 경보",
+              "official_severity": {
+                "code": null,
+                "label": null,
+                "scheme": null
+              },
+              "instruction_kind": "information",
+              "original_text": "[시연 자료] 실제 발령된 경보가 아닙니다.",
+              "issued_at": "2026-10-31T03:00:00Z",
+              "received_at": "2026-10-31T03:00:00Z",
+              "valid_until": "2026-10-31T03:05:00Z",
+              "target_area": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      127.0,
+                      37.5
+                    ],
+                    [
+                      127.01,
+                      37.5
+                    ],
+                    [
+                      127.01,
+                      37.51
+                    ],
+                    [
+                      127.0,
+                      37.51
+                    ],
+                    [
+                      127.0,
+                      37.5
+                    ]
+                  ]
+                ]
+              },
+              "source": {
+                "id": "src_demo_001",
+                "kind": "simulation",
+                "agency": "시연용 기관(가상)",
+                "url": "https://example.invalid/sources/demo-001",
+                "published_at": "2026-10-31T03:00:00Z",
+                "observed_at": null,
+                "collected_at": "2026-10-31T03:00:00Z",
+                "valid_until": "2026-10-31T03:05:00Z",
+                "document_revision": "demo-1",
+                "independent_origin_id": "origin_demo_001"
+              }
+            },
+            "relevance": {
+              "status": "possible",
+              "relationship": "upstream",
+              "origin_region_label": "가상 상류 지역",
+              "target_region_label": "가상 현재 지역",
+              "summary": "[시연] 주변 상류 사건과 현재 지역의 관련성을 평가 중입니다.",
+              "evidence_source_ids": [
+                "src_demo_001"
+              ]
+            },
+            "impact": {
+              "status": "unavailable",
+              "probability": null,
+              "target": null,
+              "model_version": null,
+              "reason_codes": [
+                "MODEL_NOT_VALIDATED"
+              ]
+            },
+            "personal_response": {
+              "level": "information",
+              "label": "해당 경보 해제 정보",
+              "policy_version": null,
+              "reason_codes": [
+                "OFFICIAL_CANCELLED"
+              ]
+            },
+            "location": {
+              "revision": 1,
+              "status": "available",
+              "fix": {
+                "fix_id": "fix_demo_001",
+                "installation_id": "install_demo_001",
+                "latitude": 37.505,
+                "longitude": 127.005,
+                "accuracy_m": 20,
+                "captured_at": "2026-10-31T03:00:00Z"
+              },
+              "valid_until": "2026-10-31T03:05:00Z",
+              "reason_codes": []
+            },
+            "affected_area": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    127.0,
+                    37.5
+                  ],
+                  [
+                    127.01,
+                    37.5
+                  ],
+                  [
+                    127.01,
+                    37.51
+                  ],
+                  [
+                    127.0,
+                    37.51
+                  ],
+                  [
+                    127.0,
+                    37.5
+                  ]
+                ]
+              ]
+            },
+            "area_source_ids": [
+              "src_demo_001"
+            ],
+            "context": {
+              "revision": 1,
+              "expires_at": null,
+              "tags": [
+                {
+                  "code": "stairs_difficult",
+                  "label": "계단 이용 어려움",
+                  "origin": "profile",
+                  "confirmed_at": "2026-10-31T03:00:00Z",
+                  "expires_at": null
+                }
+              ]
+            },
+            "assistant_utterance": null,
+            "actions": [],
+            "route_availability": {
+              "status": "unavailable",
+              "reason_code": "NOT_ADOPTED",
+              "expires_at": null
+            },
+            "sources": [
+              {
+                "id": "src_demo_001",
+                "kind": "simulation",
+                "agency": "시연용 기관(가상)",
+                "url": "https://example.invalid/sources/demo-001",
+                "published_at": "2026-10-31T03:00:00Z",
+                "observed_at": null,
+                "collected_at": "2026-10-31T03:00:00Z",
+                "valid_until": "2026-10-31T03:05:00Z",
+                "document_revision": "demo-1",
+                "independent_origin_id": "origin_demo_001"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "response_location_unknown",
+      "operation_id": "getResponse",
+      "method": "GET",
+      "path": "/v1/me/responses/{response_id}",
+      "request": {
+        "parameters": {
+          "response_id": "response_demo_001"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "id": "response_demo_001",
+            "revision": 1,
+            "event_id": "evt_demo_001",
+            "disaster_type": "flood",
+            "status": "active",
+            "superseded_by": null,
+            "evaluated_at": "2026-10-31T03:00:00Z",
+            "valid_until": "2026-10-31T03:05:00Z",
+            "input_versions": {
+              "profile": 1,
+              "location": 2,
+              "context": 1
+            },
+            "official_alert": {
+              "id": "alert_demo_001",
+              "revision": 1,
+              "event_id": "evt_demo_001",
+              "response_id": "response_demo_001",
+              "disaster_type": "flood",
+              "status": "active",
+              "title": "[시연] 가상 지역 공식 경보",
+              "official_severity": {
+                "code": null,
+                "label": null,
+                "scheme": null
+              },
+              "instruction_kind": "information",
+              "original_text": "[시연 자료] 실제 발령된 경보가 아닙니다.",
+              "issued_at": "2026-10-31T03:00:00Z",
+              "received_at": "2026-10-31T03:00:00Z",
+              "valid_until": "2026-10-31T03:05:00Z",
+              "target_area": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      127.0,
+                      37.5
+                    ],
+                    [
+                      127.01,
+                      37.5
+                    ],
+                    [
+                      127.01,
+                      37.51
+                    ],
+                    [
+                      127.0,
+                      37.51
+                    ],
+                    [
+                      127.0,
+                      37.5
+                    ]
+                  ]
+                ]
+              },
+              "source": {
+                "id": "src_demo_001",
+                "kind": "simulation",
+                "agency": "시연용 기관(가상)",
+                "url": "https://example.invalid/sources/demo-001",
+                "published_at": "2026-10-31T03:00:00Z",
+                "observed_at": null,
+                "collected_at": "2026-10-31T03:00:00Z",
+                "valid_until": "2026-10-31T03:05:00Z",
+                "document_revision": "demo-1",
+                "independent_origin_id": "origin_demo_001"
+              }
+            },
+            "relevance": {
+              "status": "unknown",
+              "relationship": "unknown",
+              "origin_region_label": "가상 상류 지역",
+              "target_region_label": "가상 현재 지역",
+              "summary": "현재 위치를 확인할 수 없습니다.",
+              "evidence_source_ids": [
+                "src_demo_001"
+              ]
+            },
+            "impact": {
+              "status": "unavailable",
+              "probability": null,
+              "target": null,
+              "model_version": null,
+              "reason_codes": [
+                "MODEL_NOT_VALIDATED"
+              ]
+            },
+            "personal_response": {
+              "level": "unknown",
+              "label": "판단에 필요한 정보를 확인 중",
+              "policy_version": null,
+              "reason_codes": [
+                "POLICY_NOT_REVIEWED"
+              ]
+            },
+            "location": {
+              "revision": 2,
+              "status": "unavailable",
+              "fix": null,
+              "valid_until": null,
+              "reason_codes": [
+                "LOCATION_UNAVAILABLE"
+              ]
+            },
+            "affected_area": null,
+            "area_source_ids": [],
+            "context": {
+              "revision": 1,
+              "expires_at": null,
+              "tags": [
+                {
+                  "code": "stairs_difficult",
+                  "label": "계단 이용 어려움",
+                  "origin": "profile",
+                  "confirmed_at": "2026-10-31T03:00:00Z",
+                  "expires_at": null
+                }
+              ]
+            },
+            "assistant_utterance": {
+              "id": "utter_demo_001",
+              "text": "[시연] 현재 상태를 확인해 주세요.",
+              "origin": "template",
+              "created_at": "2026-10-31T03:00:00Z"
+            },
+            "actions": [
+              {
+                "id": "rule_demo_001",
+                "order": 1,
+                "text": "[시연] 검토된 기관 행동요령이 이 위치에 표시됩니다.",
+                "source_id": "src_demo_001",
+                "rule_version": "demo-only"
+              }
+            ],
+            "route_availability": {
+              "status": "unavailable",
+              "reason_code": "NOT_ADOPTED",
+              "expires_at": null
+            },
+            "sources": [
+              {
+                "id": "src_demo_001",
+                "kind": "simulation",
+                "agency": "시연용 기관(가상)",
+                "url": "https://example.invalid/sources/demo-001",
+                "published_at": "2026-10-31T03:00:00Z",
+                "observed_at": null,
+                "collected_at": "2026-10-31T03:00:00Z",
+                "valid_until": "2026-10-31T03:05:00Z",
+                "document_revision": "demo-1",
+                "independent_origin_id": "origin_demo_001"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "prediction_simulation",
+      "operation_id": "getResponse",
+      "method": "GET",
+      "path": "/v1/me/responses/{response_id}",
+      "request": {
+        "parameters": {
+          "response_id": "response_demo_001"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "id": "response_demo_001",
+            "revision": 1,
+            "event_id": "evt_demo_001",
+            "disaster_type": "flood",
+            "status": "active",
+            "superseded_by": null,
+            "evaluated_at": "2026-10-31T03:00:00Z",
+            "valid_until": "2026-10-31T03:05:00Z",
+            "input_versions": {
+              "profile": 1,
+              "location": 1,
+              "context": 1
+            },
+            "official_alert": {
+              "id": "alert_demo_001",
+              "revision": 1,
+              "event_id": "evt_demo_001",
+              "response_id": "response_demo_001",
+              "disaster_type": "flood",
+              "status": "active",
+              "title": "[시연] 가상 지역 공식 경보",
+              "official_severity": {
+                "code": null,
+                "label": null,
+                "scheme": null
+              },
+              "instruction_kind": "information",
+              "original_text": "[시연 자료] 실제 발령된 경보가 아닙니다.",
+              "issued_at": "2026-10-31T03:00:00Z",
+              "received_at": "2026-10-31T03:00:00Z",
+              "valid_until": "2026-10-31T03:05:00Z",
+              "target_area": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      127.0,
+                      37.5
+                    ],
+                    [
+                      127.01,
+                      37.5
+                    ],
+                    [
+                      127.01,
+                      37.51
+                    ],
+                    [
+                      127.0,
+                      37.51
+                    ],
+                    [
+                      127.0,
+                      37.5
+                    ]
+                  ]
+                ]
+              },
+              "source": {
+                "id": "src_demo_001",
+                "kind": "simulation",
+                "agency": "시연용 기관(가상)",
+                "url": "https://example.invalid/sources/demo-001",
+                "published_at": "2026-10-31T03:00:00Z",
+                "observed_at": null,
+                "collected_at": "2026-10-31T03:00:00Z",
+                "valid_until": "2026-10-31T03:05:00Z",
+                "document_revision": "demo-1",
+                "independent_origin_id": "origin_demo_001"
+              }
+            },
+            "relevance": {
+              "status": "possible",
+              "relationship": "upstream",
+              "origin_region_label": "가상 상류 지역",
+              "target_region_label": "가상 현재 지역",
+              "summary": "[시연] 주변 상류 사건과 현재 지역의 관련성을 평가 중입니다.",
+              "evidence_source_ids": [
+                "src_demo_001"
+              ]
+            },
+            "impact": {
+              "status": "available",
+              "probability": 0.72,
+              "target": {
+                "label": "[시연] 특정 관측지점 기준 수위 초과",
+                "location_label": "가상 관측지점 A",
+                "horizon_minutes": 30,
+                "window_start": "2026-10-31T03:00:00Z",
+                "window_end": "2026-10-31T03:30:00Z"
+              },
+              "model_version": "simulation-only",
+              "reason_codes": []
+            },
+            "personal_response": {
+              "level": "unknown",
+              "label": "판단에 필요한 정보를 확인 중",
+              "policy_version": null,
+              "reason_codes": [
+                "POLICY_NOT_REVIEWED"
+              ]
+            },
+            "location": {
+              "revision": 1,
+              "status": "available",
+              "fix": {
+                "fix_id": "fix_demo_001",
+                "installation_id": "install_demo_001",
+                "latitude": 37.505,
+                "longitude": 127.005,
+                "accuracy_m": 20,
+                "captured_at": "2026-10-31T03:00:00Z"
+              },
+              "valid_until": "2026-10-31T03:05:00Z",
+              "reason_codes": []
+            },
+            "affected_area": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    127.0,
+                    37.5
+                  ],
+                  [
+                    127.01,
+                    37.5
+                  ],
+                  [
+                    127.01,
+                    37.51
+                  ],
+                  [
+                    127.0,
+                    37.51
+                  ],
+                  [
+                    127.0,
+                    37.5
+                  ]
+                ]
+              ]
+            },
+            "area_source_ids": [
+              "src_demo_001"
+            ],
+            "context": {
+              "revision": 1,
+              "expires_at": null,
+              "tags": [
+                {
+                  "code": "stairs_difficult",
+                  "label": "계단 이용 어려움",
+                  "origin": "profile",
+                  "confirmed_at": "2026-10-31T03:00:00Z",
+                  "expires_at": null
+                }
+              ]
+            },
+            "assistant_utterance": {
+              "id": "utter_demo_001",
+              "text": "[시연] 현재 상태를 확인해 주세요.",
+              "origin": "template",
+              "created_at": "2026-10-31T03:00:00Z"
+            },
+            "actions": [
+              {
+                "id": "rule_demo_001",
+                "order": 1,
+                "text": "[시연] 검토된 기관 행동요령이 이 위치에 표시됩니다.",
+                "source_id": "src_demo_001",
+                "rule_version": "demo-only"
+              }
+            ],
+            "route_availability": {
+              "status": "unavailable",
+              "reason_code": "NOT_ADOPTED",
+              "expires_at": null
+            },
+            "sources": [
+              {
+                "id": "src_demo_001",
+                "kind": "simulation",
+                "agency": "시연용 기관(가상)",
+                "url": "https://example.invalid/sources/demo-001",
+                "published_at": "2026-10-31T03:00:00Z",
+                "observed_at": null,
+                "collected_at": "2026-10-31T03:00:00Z",
+                "valid_until": "2026-10-31T03:05:00Z",
+                "document_revision": "demo-1",
+                "independent_origin_id": "origin_demo_001"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "route_changed",
+      "operation_id": "getRoute",
+      "method": "GET",
+      "path": "/v1/me/responses/{response_id}/route",
+      "request": {
+        "parameters": {
+          "response_id": "response_demo_001",
+          "response_revision": 1
+        }
+      },
+      "response": {
+        "status": 409,
+        "body": {
+          "type": "about:blank",
+          "title": "RESPONSE_REVISION_CHANGED",
+          "status": 409,
+          "detail": "시연용 예외입니다. 앱팀 인계 문서의 처리 규칙을 따릅니다.",
+          "instance": "/v1/demo",
+          "code": "RESPONSE_REVISION_CHANGED",
+          "request_id": "req_demo_error",
+          "retryable": false,
+          "field_errors": []
+        }
+      }
+    },
+    {
+      "id": "route_available_simulation",
+      "operation_id": "getRoute",
+      "method": "GET",
+      "path": "/v1/me/responses/{response_id}/route",
+      "request": {
+        "parameters": {
+          "response_id": "response_demo_001",
+          "response_revision": 1
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "status": "available",
+            "response_revision": 1,
+            "reason_code": null,
+            "route": {
+              "route_id": "route_demo_001",
+              "response_revision": 1,
+              "checked_at": "2026-10-31T03:00:00Z",
+              "valid_until": "2026-10-31T03:05:00Z",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    127.005,
+                    37.505,
+                    30
+                  ],
+                  [
+                    127.006,
+                    37.506,
+                    31
+                  ]
+                ]
+              },
+              "altitude_reference": "WGS84_ellipsoid_m",
+              "accessibility": {
+                "stairs": "none",
+                "step_free_verified": true
+              },
+              "rendering_assets": [],
+              "instructions": [
+                {
+                  "id": "rule_demo_001",
+                  "order": 1,
+                  "text": "[시연] 검토된 기관 행동요령이 이 위치에 표시됩니다.",
+                  "source_id": "src_demo_001",
+                  "rule_version": "demo-only"
+                }
+              ],
+              "source_ids": [
+                "src_demo_001"
+              ]
+            },
+            "sources": [
+              {
+                "id": "src_demo_001",
+                "kind": "simulation",
+                "agency": "시연용 기관(가상)",
+                "url": "https://example.invalid/sources/demo-001",
+                "published_at": "2026-10-31T03:00:00Z",
+                "observed_at": null,
+                "collected_at": "2026-10-31T03:00:00Z",
+                "valid_until": "2026-10-31T03:05:00Z",
+                "document_revision": "demo-1",
+                "independent_origin_id": "origin_demo_001"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "response_route_available_simulation",
+      "operation_id": "getResponse",
+      "method": "GET",
+      "path": "/v1/me/responses/{response_id}",
+      "request": {
+        "parameters": {
+          "response_id": "response_demo_001"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "id": "response_demo_001",
+            "revision": 1,
+            "event_id": "evt_demo_001",
+            "disaster_type": "flood",
+            "status": "active",
+            "superseded_by": null,
+            "evaluated_at": "2026-10-31T03:00:00Z",
+            "valid_until": "2026-10-31T03:05:00Z",
+            "input_versions": {
+              "profile": 1,
+              "location": 1,
+              "context": 1
+            },
+            "official_alert": {
+              "id": "alert_demo_001",
+              "revision": 1,
+              "event_id": "evt_demo_001",
+              "response_id": "response_demo_001",
+              "disaster_type": "flood",
+              "status": "active",
+              "title": "[시연] 가상 지역 공식 경보",
+              "official_severity": {
+                "code": null,
+                "label": null,
+                "scheme": null
+              },
+              "instruction_kind": "information",
+              "original_text": "[시연 자료] 실제 발령된 경보가 아닙니다.",
+              "issued_at": "2026-10-31T03:00:00Z",
+              "received_at": "2026-10-31T03:00:00Z",
+              "valid_until": "2026-10-31T03:05:00Z",
+              "target_area": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      127.0,
+                      37.5
+                    ],
+                    [
+                      127.01,
+                      37.5
+                    ],
+                    [
+                      127.01,
+                      37.51
+                    ],
+                    [
+                      127.0,
+                      37.51
+                    ],
+                    [
+                      127.0,
+                      37.5
+                    ]
+                  ]
+                ]
+              },
+              "source": {
+                "id": "src_demo_001",
+                "kind": "simulation",
+                "agency": "시연용 기관(가상)",
+                "url": "https://example.invalid/sources/demo-001",
+                "published_at": "2026-10-31T03:00:00Z",
+                "observed_at": null,
+                "collected_at": "2026-10-31T03:00:00Z",
+                "valid_until": "2026-10-31T03:05:00Z",
+                "document_revision": "demo-1",
+                "independent_origin_id": "origin_demo_001"
+              }
+            },
+            "relevance": {
+              "status": "possible",
+              "relationship": "upstream",
+              "origin_region_label": "가상 상류 지역",
+              "target_region_label": "가상 현재 지역",
+              "summary": "[시연] 주변 상류 사건과 현재 지역의 관련성을 평가 중입니다.",
+              "evidence_source_ids": [
+                "src_demo_001"
+              ]
+            },
+            "impact": {
+              "status": "unavailable",
+              "probability": null,
+              "target": null,
+              "model_version": null,
+              "reason_codes": [
+                "MODEL_NOT_VALIDATED"
+              ]
+            },
+            "personal_response": {
+              "level": "unknown",
+              "label": "판단에 필요한 정보를 확인 중",
+              "policy_version": null,
+              "reason_codes": [
+                "POLICY_NOT_REVIEWED"
+              ]
+            },
+            "location": {
+              "revision": 1,
+              "status": "available",
+              "fix": {
+                "fix_id": "fix_demo_001",
+                "installation_id": "install_demo_001",
+                "latitude": 37.505,
+                "longitude": 127.005,
+                "accuracy_m": 20,
+                "captured_at": "2026-10-31T03:00:00Z"
+              },
+              "valid_until": "2026-10-31T03:05:00Z",
+              "reason_codes": []
+            },
+            "affected_area": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    127.0,
+                    37.5
+                  ],
+                  [
+                    127.01,
+                    37.5
+                  ],
+                  [
+                    127.01,
+                    37.51
+                  ],
+                  [
+                    127.0,
+                    37.51
+                  ],
+                  [
+                    127.0,
+                    37.5
+                  ]
+                ]
+              ]
+            },
+            "area_source_ids": [
+              "src_demo_001"
+            ],
+            "context": {
+              "revision": 1,
+              "expires_at": null,
+              "tags": [
+                {
+                  "code": "stairs_difficult",
+                  "label": "계단 이용 어려움",
+                  "origin": "profile",
+                  "confirmed_at": "2026-10-31T03:00:00Z",
+                  "expires_at": null
+                }
+              ]
+            },
+            "assistant_utterance": {
+              "id": "utter_demo_001",
+              "text": "[시연] 현재 상태를 확인해 주세요.",
+              "origin": "template",
+              "created_at": "2026-10-31T03:00:00Z"
+            },
+            "actions": [
+              {
+                "id": "rule_demo_001",
+                "order": 1,
+                "text": "[시연] 검토된 기관 행동요령이 이 위치에 표시됩니다.",
+                "source_id": "src_demo_001",
+                "rule_version": "demo-only"
+              }
+            ],
+            "route_availability": {
+              "status": "available",
+              "reason_code": null,
+              "expires_at": "2026-10-31T03:05:00Z"
+            },
+            "sources": [
+              {
+                "id": "src_demo_001",
+                "kind": "simulation",
+                "agency": "시연용 기관(가상)",
+                "url": "https://example.invalid/sources/demo-001",
+                "published_at": "2026-10-31T03:00:00Z",
+                "observed_at": null,
+                "collected_at": "2026-10-31T03:00:00Z",
+                "valid_until": "2026-10-31T03:05:00Z",
+                "document_revision": "demo-1",
+                "independent_origin_id": "origin_demo_001"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "support_location_unknown",
+      "operation_id": "createSupportDraft",
+      "method": "POST",
+      "path": "/v1/me/responses/{response_id}/support-drafts",
+      "request": {
+        "parameters": {
+          "response_id": "response_demo_001",
+          "Idempotency-Key": "demo-request-0001"
+        },
+        "body": {
+          "response_revision": 1,
+          "include_location": true,
+          "include_confirmed_state": true,
+          "user_requested_preview": true
+        }
+      },
+      "response": {
+        "status": 201,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "draft_id": "draft_demo_001",
+            "response_revision": 1,
+            "preview_text": "[시연 전용·전송 금지] 현재 위치를 확인할 수 없음. 확인되지 않은 좌표는 포함하지 않습니다.",
+            "phone_number": "119",
+            "location_status": "unavailable",
+            "expires_at": "2026-10-31T03:05:00Z",
+            "delivery_status": "not_sent",
+            "requires_user_confirmation": true
+          }
+        }
+      }
+    },
+    {
+      "id": "persona_independent",
+      "operation_id": "getResponse",
+      "method": "GET",
+      "path": "/v1/me/responses/{response_id}",
+      "request": {
+        "parameters": {
+          "response_id": "response_demo_001"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "id": "response_demo_001",
+            "revision": 1,
+            "event_id": "evt_demo_001",
+            "disaster_type": "flood",
+            "status": "active",
+            "superseded_by": null,
+            "evaluated_at": "2026-10-31T03:00:00Z",
+            "valid_until": "2026-10-31T03:05:00Z",
+            "input_versions": {
+              "profile": 1,
+              "location": 1,
+              "context": 1
+            },
+            "official_alert": {
+              "id": "alert_demo_001",
+              "revision": 1,
+              "event_id": "evt_demo_001",
+              "response_id": "response_demo_001",
+              "disaster_type": "flood",
+              "status": "active",
+              "title": "[시연] 가상 지역 공식 경보",
+              "official_severity": {
+                "code": null,
+                "label": null,
+                "scheme": null
+              },
+              "instruction_kind": "information",
+              "original_text": "[시연 자료] 실제 발령된 경보가 아닙니다.",
+              "issued_at": "2026-10-31T03:00:00Z",
+              "received_at": "2026-10-31T03:00:00Z",
+              "valid_until": "2026-10-31T03:05:00Z",
+              "target_area": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      127.0,
+                      37.5
+                    ],
+                    [
+                      127.01,
+                      37.5
+                    ],
+                    [
+                      127.01,
+                      37.51
+                    ],
+                    [
+                      127.0,
+                      37.51
+                    ],
+                    [
+                      127.0,
+                      37.5
+                    ]
+                  ]
+                ]
+              },
+              "source": {
+                "id": "src_demo_001",
+                "kind": "simulation",
+                "agency": "시연용 기관(가상)",
+                "url": "https://example.invalid/sources/demo-001",
+                "published_at": "2026-10-31T03:00:00Z",
+                "observed_at": null,
+                "collected_at": "2026-10-31T03:00:00Z",
+                "valid_until": "2026-10-31T03:05:00Z",
+                "document_revision": "demo-1",
+                "independent_origin_id": "origin_demo_001"
+              }
+            },
+            "relevance": {
+              "status": "possible",
+              "relationship": "upstream",
+              "origin_region_label": "가상 상류 지역",
+              "target_region_label": "가상 현재 지역",
+              "summary": "[시연] 주변 상류 사건과 현재 지역의 관련성을 평가 중입니다.",
+              "evidence_source_ids": [
+                "src_demo_001"
+              ]
+            },
+            "impact": {
+              "status": "unavailable",
+              "probability": null,
+              "target": null,
+              "model_version": null,
+              "reason_codes": [
+                "MODEL_NOT_VALIDATED"
+              ]
+            },
+            "personal_response": {
+              "level": "attention",
+              "label": "[시연] 독립 이동 사용자 대응 예시",
+              "policy_version": "simulation-only",
+              "reason_codes": [
+                "DEMO_PERSONA"
+              ]
+            },
+            "location": {
+              "revision": 1,
+              "status": "available",
+              "fix": {
+                "fix_id": "fix_demo_001",
+                "installation_id": "install_demo_001",
+                "latitude": 37.505,
+                "longitude": 127.005,
+                "accuracy_m": 20,
+                "captured_at": "2026-10-31T03:00:00Z"
+              },
+              "valid_until": "2026-10-31T03:05:00Z",
+              "reason_codes": []
+            },
+            "affected_area": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    127.0,
+                    37.5
+                  ],
+                  [
+                    127.01,
+                    37.5
+                  ],
+                  [
+                    127.01,
+                    37.51
+                  ],
+                  [
+                    127.0,
+                    37.51
+                  ],
+                  [
+                    127.0,
+                    37.5
+                  ]
+                ]
+              ]
+            },
+            "area_source_ids": [
+              "src_demo_001"
+            ],
+            "context": {
+              "revision": 1,
+              "expires_at": null,
+              "tags": [
+                {
+                  "code": "independent",
+                  "label": "독립 이동",
+                  "origin": "profile",
+                  "confirmed_at": "2026-10-31T03:00:00Z",
+                  "expires_at": null
+                }
+              ]
+            },
+            "assistant_utterance": {
+              "id": "utter_demo_001",
+              "text": "[시연] 현재 상태를 확인해 주세요.",
+              "origin": "template",
+              "created_at": "2026-10-31T03:00:00Z"
+            },
+            "actions": [
+              {
+                "id": "rule_demo_001",
+                "order": 1,
+                "text": "[시연] 독립 이동 사용자에게 검토된 정책 문구가 표시됩니다. 실제 안내가 아닙니다.",
+                "source_id": "src_demo_001",
+                "rule_version": "demo-only"
+              }
+            ],
+            "route_availability": {
+              "status": "unavailable",
+              "reason_code": "NOT_ADOPTED",
+              "expires_at": null
+            },
+            "sources": [
+              {
+                "id": "src_demo_001",
+                "kind": "simulation",
+                "agency": "시연용 기관(가상)",
+                "url": "https://example.invalid/sources/demo-001",
+                "published_at": "2026-10-31T03:00:00Z",
+                "observed_at": null,
+                "collected_at": "2026-10-31T03:00:00Z",
+                "valid_until": "2026-10-31T03:05:00Z",
+                "document_revision": "demo-1",
+                "independent_origin_id": "origin_demo_001"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "persona_stairs_difficult",
+      "operation_id": "getResponse",
+      "method": "GET",
+      "path": "/v1/me/responses/{response_id}",
+      "request": {
+        "parameters": {
+          "response_id": "response_demo_001"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "id": "response_demo_001",
+            "revision": 1,
+            "event_id": "evt_demo_001",
+            "disaster_type": "flood",
+            "status": "active",
+            "superseded_by": null,
+            "evaluated_at": "2026-10-31T03:00:00Z",
+            "valid_until": "2026-10-31T03:05:00Z",
+            "input_versions": {
+              "profile": 1,
+              "location": 1,
+              "context": 1
+            },
+            "official_alert": {
+              "id": "alert_demo_001",
+              "revision": 1,
+              "event_id": "evt_demo_001",
+              "response_id": "response_demo_001",
+              "disaster_type": "flood",
+              "status": "active",
+              "title": "[시연] 가상 지역 공식 경보",
+              "official_severity": {
+                "code": null,
+                "label": null,
+                "scheme": null
+              },
+              "instruction_kind": "information",
+              "original_text": "[시연 자료] 실제 발령된 경보가 아닙니다.",
+              "issued_at": "2026-10-31T03:00:00Z",
+              "received_at": "2026-10-31T03:00:00Z",
+              "valid_until": "2026-10-31T03:05:00Z",
+              "target_area": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      127.0,
+                      37.5
+                    ],
+                    [
+                      127.01,
+                      37.5
+                    ],
+                    [
+                      127.01,
+                      37.51
+                    ],
+                    [
+                      127.0,
+                      37.51
+                    ],
+                    [
+                      127.0,
+                      37.5
+                    ]
+                  ]
+                ]
+              },
+              "source": {
+                "id": "src_demo_001",
+                "kind": "simulation",
+                "agency": "시연용 기관(가상)",
+                "url": "https://example.invalid/sources/demo-001",
+                "published_at": "2026-10-31T03:00:00Z",
+                "observed_at": null,
+                "collected_at": "2026-10-31T03:00:00Z",
+                "valid_until": "2026-10-31T03:05:00Z",
+                "document_revision": "demo-1",
+                "independent_origin_id": "origin_demo_001"
+              }
+            },
+            "relevance": {
+              "status": "possible",
+              "relationship": "upstream",
+              "origin_region_label": "가상 상류 지역",
+              "target_region_label": "가상 현재 지역",
+              "summary": "[시연] 주변 상류 사건과 현재 지역의 관련성을 평가 중입니다.",
+              "evidence_source_ids": [
+                "src_demo_001"
+              ]
+            },
+            "impact": {
+              "status": "unavailable",
+              "probability": null,
+              "target": null,
+              "model_version": null,
+              "reason_codes": [
+                "MODEL_NOT_VALIDATED"
+              ]
+            },
+            "personal_response": {
+              "level": "prepare",
+              "label": "[시연] 계단 이용 어려움 사용자 대응 예시",
+              "policy_version": "simulation-only",
+              "reason_codes": [
+                "DEMO_PERSONA"
+              ]
+            },
+            "location": {
+              "revision": 1,
+              "status": "available",
+              "fix": {
+                "fix_id": "fix_demo_001",
+                "installation_id": "install_demo_001",
+                "latitude": 37.505,
+                "longitude": 127.005,
+                "accuracy_m": 20,
+                "captured_at": "2026-10-31T03:00:00Z"
+              },
+              "valid_until": "2026-10-31T03:05:00Z",
+              "reason_codes": []
+            },
+            "affected_area": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    127.0,
+                    37.5
+                  ],
+                  [
+                    127.01,
+                    37.5
+                  ],
+                  [
+                    127.01,
+                    37.51
+                  ],
+                  [
+                    127.0,
+                    37.51
+                  ],
+                  [
+                    127.0,
+                    37.5
+                  ]
+                ]
+              ]
+            },
+            "area_source_ids": [
+              "src_demo_001"
+            ],
+            "context": {
+              "revision": 1,
+              "expires_at": null,
+              "tags": [
+                {
+                  "code": "stairs_difficult",
+                  "label": "계단 이용 어려움",
+                  "origin": "profile",
+                  "confirmed_at": "2026-10-31T03:00:00Z",
+                  "expires_at": null
+                }
+              ]
+            },
+            "assistant_utterance": {
+              "id": "utter_demo_001",
+              "text": "[시연] 현재 상태를 확인해 주세요.",
+              "origin": "template",
+              "created_at": "2026-10-31T03:00:00Z"
+            },
+            "actions": [
+              {
+                "id": "rule_demo_001",
+                "order": 1,
+                "text": "[시연] 계단 이용 어려움 사용자에게 검토된 정책 문구가 표시됩니다. 실제 안내가 아닙니다.",
+                "source_id": "src_demo_001",
+                "rule_version": "demo-only"
+              }
+            ],
+            "route_availability": {
+              "status": "unavailable",
+              "reason_code": "NOT_ADOPTED",
+              "expires_at": null
+            },
+            "sources": [
+              {
+                "id": "src_demo_001",
+                "kind": "simulation",
+                "agency": "시연용 기관(가상)",
+                "url": "https://example.invalid/sources/demo-001",
+                "published_at": "2026-10-31T03:00:00Z",
+                "observed_at": null,
+                "collected_at": "2026-10-31T03:00:00Z",
+                "valid_until": "2026-10-31T03:05:00Z",
+                "document_revision": "demo-1",
+                "independent_origin_id": "origin_demo_001"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "persona_assistance_required",
+      "operation_id": "getResponse",
+      "method": "GET",
+      "path": "/v1/me/responses/{response_id}",
+      "request": {
+        "parameters": {
+          "response_id": "response_demo_001"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "meta": {
+            "schema_version": "0.1.0",
+            "mode": "simulation",
+            "request_id": "req_demo_001",
+            "generated_at": "2026-10-31T03:00:00Z",
+            "data_status": "current"
+          },
+          "data": {
+            "id": "response_demo_001",
+            "revision": 1,
+            "event_id": "evt_demo_001",
+            "disaster_type": "flood",
+            "status": "active",
+            "superseded_by": null,
+            "evaluated_at": "2026-10-31T03:00:00Z",
+            "valid_until": "2026-10-31T03:05:00Z",
+            "input_versions": {
+              "profile": 1,
+              "location": 1,
+              "context": 1
+            },
+            "official_alert": {
+              "id": "alert_demo_001",
+              "revision": 1,
+              "event_id": "evt_demo_001",
+              "response_id": "response_demo_001",
+              "disaster_type": "flood",
+              "status": "active",
+              "title": "[시연] 가상 지역 공식 경보",
+              "official_severity": {
+                "code": null,
+                "label": null,
+                "scheme": null
+              },
+              "instruction_kind": "information",
+              "original_text": "[시연 자료] 실제 발령된 경보가 아닙니다.",
+              "issued_at": "2026-10-31T03:00:00Z",
+              "received_at": "2026-10-31T03:00:00Z",
+              "valid_until": "2026-10-31T03:05:00Z",
+              "target_area": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      127.0,
+                      37.5
+                    ],
+                    [
+                      127.01,
+                      37.5
+                    ],
+                    [
+                      127.01,
+                      37.51
+                    ],
+                    [
+                      127.0,
+                      37.51
+                    ],
+                    [
+                      127.0,
+                      37.5
+                    ]
+                  ]
+                ]
+              },
+              "source": {
+                "id": "src_demo_001",
+                "kind": "simulation",
+                "agency": "시연용 기관(가상)",
+                "url": "https://example.invalid/sources/demo-001",
+                "published_at": "2026-10-31T03:00:00Z",
+                "observed_at": null,
+                "collected_at": "2026-10-31T03:00:00Z",
+                "valid_until": "2026-10-31T03:05:00Z",
+                "document_revision": "demo-1",
+                "independent_origin_id": "origin_demo_001"
+              }
+            },
+            "relevance": {
+              "status": "possible",
+              "relationship": "upstream",
+              "origin_region_label": "가상 상류 지역",
+              "target_region_label": "가상 현재 지역",
+              "summary": "[시연] 주변 상류 사건과 현재 지역의 관련성을 평가 중입니다.",
+              "evidence_source_ids": [
+                "src_demo_001"
+              ]
+            },
+            "impact": {
+              "status": "unavailable",
+              "probability": null,
+              "target": null,
+              "model_version": null,
+              "reason_codes": [
+                "MODEL_NOT_VALIDATED"
+              ]
+            },
+            "personal_response": {
+              "level": "request_assistance",
+              "label": "[시연] 자력 이동 지원 필요 사용자 대응 예시",
+              "policy_version": "simulation-only",
+              "reason_codes": [
+                "DEMO_PERSONA"
+              ]
+            },
+            "location": {
+              "revision": 1,
+              "status": "available",
+              "fix": {
+                "fix_id": "fix_demo_001",
+                "installation_id": "install_demo_001",
+                "latitude": 37.505,
+                "longitude": 127.005,
+                "accuracy_m": 20,
+                "captured_at": "2026-10-31T03:00:00Z"
+              },
+              "valid_until": "2026-10-31T03:05:00Z",
+              "reason_codes": []
+            },
+            "affected_area": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    127.0,
+                    37.5
+                  ],
+                  [
+                    127.01,
+                    37.5
+                  ],
+                  [
+                    127.01,
+                    37.51
+                  ],
+                  [
+                    127.0,
+                    37.51
+                  ],
+                  [
+                    127.0,
+                    37.5
+                  ]
+                ]
+              ]
+            },
+            "area_source_ids": [
+              "src_demo_001"
+            ],
+            "context": {
+              "revision": 1,
+              "expires_at": null,
+              "tags": [
+                {
+                  "code": "assistance_required",
+                  "label": "자력 이동 지원 필요",
+                  "origin": "profile",
+                  "confirmed_at": "2026-10-31T03:00:00Z",
+                  "expires_at": null
+                }
+              ]
+            },
+            "assistant_utterance": {
+              "id": "utter_demo_001",
+              "text": "[시연] 현재 상태를 확인해 주세요.",
+              "origin": "template",
+              "created_at": "2026-10-31T03:00:00Z"
+            },
+            "actions": [
+              {
+                "id": "rule_demo_001",
+                "order": 1,
+                "text": "[시연] 자력 이동 지원 필요 사용자에게 검토된 정책 문구가 표시됩니다. 실제 안내가 아닙니다.",
+                "source_id": "src_demo_001",
+                "rule_version": "demo-only"
+              }
+            ],
+            "route_availability": {
+              "status": "unavailable",
+              "reason_code": "NOT_ADOPTED",
+              "expires_at": null
+            },
+            "sources": [
+              {
+                "id": "src_demo_001",
+                "kind": "simulation",
+                "agency": "시연용 기관(가상)",
+                "url": "https://example.invalid/sources/demo-001",
+                "published_at": "2026-10-31T03:00:00Z",
+                "observed_at": null,
+                "collected_at": "2026-10-31T03:00:00Z",
+                "valid_until": "2026-10-31T03:05:00Z",
+                "document_revision": "demo-1",
+                "independent_origin_id": "origin_demo_001"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "push_payload": {
+    "schema_version": "0.1.0",
+    "mode": "simulation",
+    "event_id": "update_demo_001",
+    "type": "alert.upserted",
+    "alert_id": "alert_demo_001",
+    "response_id": "response_demo_001",
+    "resource_revision": 1,
+    "sent_at": "2026-10-31T03:00:00Z",
+    "expires_at": "2026-10-31T03:05:00Z"
+  }
+}
