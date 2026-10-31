@@ -3,9 +3,9 @@
   "job_id": "job-20261031-002017-v2-fe3bfad0",
   "title": "네이버 실지도 검증 앱 버전을 서브모듈에 고정하고 외부 자원 문서 갱신",
   "description": "사용자가 승인한 네이버 지도 앱 연결·APK 검증이 완료되면 최종 앱 원격SHA를 apps/mobile에 고정하고 메인 배포 출처 및 지도 자원·라이선스 범위를 갱신한다. 앱 담당자가최종QA와SHA를제공하기전에는pin을확정하지않는다.",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-10-31T18:15:12+00:00",
-  "updated_at": "2026-10-31T18:15:31+00:00",
+  "updated_at": "2026-10-31T18:28:39+00:00",
   "order_index": 25,
   "assigned_agent": "foreground",
   "depends_on": [
@@ -28,12 +28,26 @@
   "run_attempts": 0,
   "last_error": "",
   "commit_refs": [
-    "14912d0fc286188938a4b40157fe8f9b1d4e6bb3"
+    "14912d0fc286188938a4b40157fe8f9b1d4e6bb3",
+    "a86c83393f46c02b6a4e13660dc997f6e534e3e2"
   ],
   "branch_name": "develop",
   "git_dirty": true,
-  "git_snapshot_captured_at": "2026-10-31T18:15:31+00:00",
-  "artifacts": [],
+  "git_snapshot_captured_at": "2026-10-31T18:28:39+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-181512-task-edacb988/agent-events.jsonl",
+    ".loom/tasks/task-20261031-181512-task-edacb988/artifacts.json",
+    ".loom/tasks/task-20261031-181512-task-edacb988/context.md",
+    ".loom/tasks/task-20261031-181512-task-edacb988/decision.md",
+    ".loom/tasks/task-20261031-181512-task-edacb988/git-snapshot.json",
+    ".loom/tasks/task-20261031-181512-task-edacb988/logs.txt",
+    ".loom/tasks/task-20261031-181512-task-edacb988/previous-results.md",
+    ".loom/tasks/task-20261031-181512-task-edacb988/prompt.md",
+    ".loom/tasks/task-20261031-181512-task-edacb988/result.md",
+    ".loom/tasks/task-20261031-181512-task-edacb988/troubleshooting.md",
+    "docs/V2/delivery/external-resources-and-licenses.md",
+    "docs/V2/delivery/mobile-submodule-deployment.md"
+  ],
   "source_proposal_id": "",
   "source_prompt": ""
 }
