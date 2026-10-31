@@ -1,6 +1,6 @@
 # 봉화지기 외부 자원 활용 내역과 라이선스
 
-기준일: 2026-10-31. 발표 지침의 **구분 · 명칭 · 용도 · 라이선스** 형식으로 작성한 서버·GPU·학습 자원 명세다. 사용자가 요청한 대로 `BONGHAWJIGI_APP`은 조회하지 않았다. 따라서 앱의 지도 SDK, 폰트, 이미지, 단말 SDK 목록은 이 문서의 확인 범위에 포함되지 않는다.
+최종 작성일: **2026-11-01 KST**. 구현·수집·설치 기록 기준: **2026-10-31**. 발표 지침의 **구분 · 명칭 · 용도 · 라이선스** 형식으로 작성한 서버·GPU·학습 자원 명세다. 사용자가 요청한 대로 `BONGHAWJIGI_APP`은 조회하지 않았다. 따라서 앱의 지도 SDK, 폰트, 이미지, 단말 SDK 목록은 이 문서의 확인 범위에 포함되지 않는다.
 
 `BONGHWAJIGI`의 코드·배포 설정·시연 기록·데이터 출처·두 잠금 파일 및 로컬/GPU 가상환경의 배포 메타데이터를 대조했다. 아래에서 **사용**은 실제 호출·설치·실험 근거가 있는 항목, **구성**은 코드/설정만 있는 항목, **조사**는 카탈로그·문서·샘플을 살펴본 항목이다. 설치는 해당 기능의 실제 실행과 다르며, 데이터 다운로드는 학습 사용과 다르다.
 
@@ -10,7 +10,7 @@
 
 | 구분 | 명칭 | 용도 | 라이선스 |
 | --- | --- | --- | --- |
-| 사전 보유 코드 | **해당 없음** | 사용자가 2026-10-31에 “사전 보유·가져온 자료 없음”으로 확인. 해커톤 이전에 보유한 코드·디자인·자료를 가져온 항목 없음 | 해당 없음 |
+| 사전 보유 코드 | **해당 없음** | 사용자가 “사전 보유 코드 없음”으로 확인. 행사 개회식 전에 작성·보유한 코드를 이번 저장소에 가져온 항목 없음. 디자인·자료의 사전 보유 여부까지 확인한 답변은 아님 | 해당 없음 |
 | 기타 | 직접 개발한 봉화지기 서버·학습 코드 | 이벤트 수신·DB 큐·검색 연결·모델 API·정책 규칙·알림 계약·시나리오 재생·학습/평가/출처 추적 | 프로젝트 자체 배포 라이선스는 저장소에 명시되지 않음. 외부 의존성의 MIT/Apache 라이선스가 프로젝트 전체에 자동 적용되는 것은 아님 |
 | 기타 | 팀 제공 설계·화면 자료 | `docs/HeoNey/`의 기획서와 `disaster.png`, `nomal_home.png` 등 현재 작업의 요구사항 자료 | 사용자 제공 자료. 독립적인 외부 이미지·폰트의 권리 내역은 이 서버 감사에서 확인하지 않음; 앱 자원 목록은 별도 범위 |
 
@@ -27,8 +27,8 @@
 | 기타 | 중앙일보·연합뉴스TV·연합뉴스·경향신문·MBC 뉴스 | **실제 검색 결과에 포함** — `qwen-integration/retrieval-handoff.json`과 `personal-policy-loop-evidence.json`에 다섯 매체의 제목/설명/URL이 남음. Google News를 통해 확보 | 언론사별 저작권·이용약관 적용, 콘텐츠별 개방 라이선스 미확인. [중앙일보](https://www.joongang.co.kr/), [연합뉴스TV](https://www.yonhapnewstv.co.kr/), [연합뉴스](https://www.yna.co.kr/), [경향신문](https://www.khan.co.kr/), [MBC 뉴스](https://imnews.imbc.com/). 매체 사이트 링크는 출처이며 재사용 허가 근거가 아님 |
 | 외부 API | Firebase Cloud Messaging HTTP v1 | **구현, 실발신 미사용** — `FcmSender`가 `/v1/projects/{project}/messages:send` 호출. 현재 배포는 simulation이고 실제 프로젝트/자격 파일/기기 토큰 미제공 | [Firebase 서비스별 약관](https://firebase.google.com/terms)에 FCM은 Google APIs Terms 및 Firebase Data Processing and Security Terms 적용. Firebase SDK 오픈소스 라이선스를 서비스 이용권으로 해석하지 않음 |
 | 외부 API | Google OAuth 2.0 token endpoint | **FCM 어댑터 내 구현, 실호출 미확인** — 서비스 계정 JWT를 `https://oauth2.googleapis.com/token`에 교환하는 FCM 인증 경로 | [Google APIs Terms](https://developers.google.com/terms). 앱 사용자 인증은 자체 JWT이며 Firebase Authentication 사용으로 기록하면 안 됨 |
-| 기타 | Qwen3-4B-Instruct-2507, revision `cdbee75f17c01a7cc42f958dc650907174af0554` | **GPU 실제 사용** — 근거 자료 정리·생성. `.venv-gpu`, BF16, Transformers SDPA, localhost 인증 API | [공식 모델 카드](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507): Apache-2.0. 모델 가중치 라이선스와 입력 문서/뉴스 재사용 권리는 별개 |
-| 기타 | Qwen3-Embedding-0.6B, revision `97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3` | **GPU 실제 사용** — 문서·검색 질의를 1024차원 정규화 벡터로 변환 | [공식 모델 카드](https://huggingface.co/Qwen/Qwen3-Embedding-0.6B): Apache-2.0 |
+| 기타 | Qwen3-4B-Instruct-2507, revision `cdbee75f17c01a7cc42f958dc650907174af0554` | **GPU 실제 사용** — 근거 자료 정리·생성. `.venv-gpu`, BF16, Transformers SDPA, localhost 인증 API | [고정 revision의 공식 LICENSE](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507/blob/cdbee75f17c01a7cc42f958dc650907174af0554/LICENSE): Apache-2.0. 모델 가중치 라이선스와 입력 문서/뉴스 재사용 권리는 별개 |
+| 기타 | Qwen3-Embedding-0.6B, revision `97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3` | **GPU 실제 사용** — 문서·검색 질의를 1024차원 정규화 벡터로 변환 | [고정 revision의 공식 모델 카드](https://huggingface.co/Qwen/Qwen3-Embedding-0.6B/blob/97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3/README.md): Apache-2.0 선언. 해당 revision에는 별도 LICENSE 파일이 없으며 카드·공식 metadata를 근거로 기록 |
 | 기타 | Hugging Face Hub | **실제 다운로드** — Qwen 모델을 `/home1/ncloud/bonghwajigi/models/hub`에 고정 revision으로 내려받음. 런타임은 `local_files_only=True` | 모델별 라이선스에 더해 [Hugging Face Hub 이용약관](https://huggingface.co/terms-of-service). Hugging Face 유료 inference endpoint 사용은 확인되지 않음 |
 
 APNs 직접 전송, 카카오/네이버/Google Maps/Mapbox 지도 API, 경로 탐색 서비스, OpenAI API, vLLM, LangChain은 현 서버 실행 코드·의존성에서 사용 확인되지 않는다. CesiumJS·MeloTTS는 초기 설계 검토 항목이며 현재 산불 MVP의 3D/서버 음성 제외 범위다. 실제 사용 목록과 분리해야 한다. `example.invalid` 링크는 합성 자료 자리표시자다.
@@ -82,7 +82,7 @@ APNs 직접 전송, 카카오/네이버/Google Maps/Mapbox 지도 API, 경로 �
 | 오픈소스 | CPython 3.12 (GPU 3.12.3, 로컬 3.12.13), `python:3.12-slim-bookworm` | **실제 실행** — API·워커·학습 실행 | [PSF License 및 포함 구성요소 고지](https://docs.python.org/3.12/license.html) |
 | 기타 | Debian Bookworm | **실제 빌드** — Python/Redis 컨테이너 기반 | [개별 패키지 라이선스](https://www.debian.org/legal/licenses/); OS 전체가 단일 MIT/Apache 라이선스인 것이 아님 |
 | 기타 | Ubuntu 24.04.1 LTS(두 서버), Ubuntu 22.04.5 LTS(K8s) | **기존 확인** — 모델·MVP·기존 클러스터 호스트 | 개별 패키지 라이선스 및 [Canonical IP 정책](https://canonical.com/legal/intellectual-property-policy) |
-| 오픈소스 | Docker Engine/Moby, Docker Compose | **실제 서버 배포** — 일반 서버 서비스·DB·워커 배포 | [Moby Apache-2.0](https://github.com/moby/moby/blob/master/LICENSE), [Compose Apache-2.0](https://github.com/docker/compose/blob/main/LICENSE). 정확 설치 버전은 현재 기록에서 확인하지 못함. Docker Desktop 구독 조건과 별개 |
+| 오픈소스 | Docker Engine/Moby, Docker Compose | **실제 서버 배포** — 일반 서버 서비스·DB·워커 배포 | [Moby Apache-2.0](https://github.com/moby/moby/blob/master/LICENSE), [Compose Apache-2.0](https://github.com/docker/compose/blob/main/LICENSE). GPU/일반 서버별 정확 설치 버전·이미지 내부 패키지는 이 명세에서 모두 확정하지 않음. Docker Desktop 구독 조건과 별개 |
 | 기타 | NVIDIA L4 / driver 580.159.04 / PyTorch CUDA runtime 12.8 | **실제 사용** — Qwen 추론·XGBoost CUDA 연구 | [NVIDIA CUDA EULA·제품별 부속 조건](https://docs.nvidia.com/cuda/eula/index.html). GPU 하드웨어 자체를 OSS 라이선스로 표기하지 않음. cuBLAS/cuDNN 등 동봉 라이브러리는 각 패키지 고지 필요 |
 | 기타 | Tailscale 1.104.4 | **실제 사용** — 두 서버 Tailnet 접근 | CLI/daemon [BSD-3-Clause](https://github.com/tailscale/tailscale/blob/main/LICENSE), 관리 서비스는 [Tailscale 약관](https://tailscale.com/terms). Operator는 설치돼 있지 않음 |
 | 오픈소스 | OpenSSH | **실제 사용** — 서버 로그인·GPU localhost API 터널 | [BSD 계열 및 각 구성요소 허용 라이선스](https://raw.githubusercontent.com/openssh/openssh-portable/master/LICENCE), 정확 package 버전 미확인 |
@@ -172,7 +172,7 @@ APNs 직접 전송, 카카오/네이버/Google Maps/Mapbox 지도 API, 경로 �
 
 | 구분 | 명칭 | 용도 | 라이선스 |
 | --- | --- | --- | --- |
-| 기타 | OpenAI Codex / ChatGPT의 개발 보조 기능 | **사용:** 코드·문서 작성, 코드 검토, 테스트/명령 실행 보조, 공식 자료 조사. 봉화지기 서버가 호출하는 상용 LLM API와 구분 | 계정에 적용되는 OpenAI 서비스 이용조건. 제품 가중치의 오픈소스 라이선스로 기재하지 않음. 실제 계정 플랜·결제 방식·모델별 사용 이력은 이 감사에서 확정하지 않음. [공식 Codex 안내](https://developers.openai.com/learn/codex), [인증 방식 안내](https://learn.chatgpt.com/docs/auth) |
+| 기타 | OpenAI Codex / ChatGPT의 개발 보조 기능 | **사용:** 코드·문서 작성, 코드 검토, 테스트/명령 실행 보조, 공식 자료 조사. 봉화지기 서버가 호출하는 상용 LLM API와 구분 | 계정에 적용되는 OpenAI 서비스 이용조건. 제품 가중치의 오픈소스 라이선스로 기재하지 않음. 실제 계정 플랜·결제 방식·모델별 사용 이력은 이 감사에서 확정하지 않음. [OpenAI 서비스 이용조건](https://openai.com/policies/terms-of-use/). 개발 도구 이용을 봉화지기의 OpenAI API 호출로 계산하지 않음 |
 | 기타 | Loom CLI 0.1.0 | **사용:** 작업 계약·실행 기록·체크포인트 관리. 개발용 도구이며 앱/서버에 재사용한 사전 코드라는 뜻이 아님 | 설치 메타데이터와 도구 프로젝트에서 라이선스 선언/별도 LICENSE를 확인하지 못함. 임의로 MIT나 Apache로 표기하지 않음. 근거: `loom --version`, 설치된 `loom-0.1.0` 메타데이터, 저장소 `AGENTS.md` |
 
 ## 9. Python 의존성 전수 부록
@@ -181,7 +181,7 @@ APNs 직접 전송, 카카오/네이버/Google Maps/Mapbox 지도 API, 경로 �
 
 환경: **LR**=로컬 `.venv`, **LT**=로컬 `training/.venv`, **GR**=GPU `.venv-gpu`, **GT**=GPU `training/.venv`, **GM**=GPU 초기 `.venv-ml`. **R**=루트 프로젝트, **T**=학습 프로젝트. `직접`은 기본 의존성, `선택/…`은 extra, `개발/…`은 dependency group, `간접`은 전이 의존성이다. `lock만`은 이 다섯 환경에서 설치가 확인되지 않은 플랫폼·선택 분기다. 동일 패키지의 다른 버전은 각각 기록했다.
 
-라이선스 판정은 설치된 배포물의 `License-Expression`을 우선하고, 없으면 `License` 필드와 classifier를 구분하여 그대로 기록했다. 미설치 분기는 정확한 버전의 공식 PyPI 메타데이터를 조회했다. `BSD 계열`, `Apache 계열`, `Dual License`, `미표기`를 임의로 특정 SPDX로 바꾸지 않았다. NVIDIA 바이너리의 독점 라이선스는 같은 이름의 공개 소스 저장소 라이선스로 대체하지 않았다. CUDA용 torch wheel은 PyPI 배포물이 아니므로 공식 PyTorch 배포 인덱스로 연결한다.
+라이선스 판정은 설치된 배포물의 `License-Expression`, `License` 필드와 classifier를 구분하여 기록했다. CUDA/NVIDIA 36개 패키지·버전은 같은 고정 버전의 공식 wheel LICENSE도 추가 확인하여 라이선스 칸에 반영했다. metadata와 동봉 LICENSE의 표기가 다르면 둘을 구분하고 동봉 조건을 따로 기재했다. 미설치 분기는 정확한 버전의 공식 PyPI 메타데이터를 조회했다. `BSD 계열`, `Apache 계열`, `Dual License`, `미표기`를 임의로 특정 SPDX로 바꾸지 않았다. NVIDIA 바이너리의 독점 라이선스는 같은 이름의 공개 소스 저장소 라이선스로 대체하지 않았다. CUDA용 torch wheel은 PyPI 배포물이 아니므로 공식 PyTorch 배포 인덱스로 연결한다.
 
 각 배포물의 METADATA SHA-256, 동봉 LICENSE/COPYING/NOTICE 파일 경로·SHA-256·크기, 잠금 파일 artifact hash, 설치 환경과 원문 메타데이터 요약은 [의존성 근거 JSON](external-resources/python-inventory.json)에 보존했다. 장문 라이선스 전문은 복제하지 않았다.
 
@@ -208,11 +208,11 @@ APNs 직접 전송, 카카오/네이버/Google Maps/Mapbox 지도 API, 경로 �
 | 오픈소스 | [cloudpickle 3.1.2](https://pypi.org/project/cloudpickle/3.1.2/) | 상위 패키지 실행·개발 의존성 지원; R:간접, T:간접; 설치: LT, GR, GT, GM | BSD-3-Clause (License 필드) |
 | 오픈소스 | [colorama 0.4.6](https://pypi.org/project/colorama/0.4.6/) | 상위 패키지 실행·개발 의존성 지원; R:간접, T:간접; 설치: lock만 | BSD 계열 (세부 조항 수 미표기) (classifier만 있음) |
 | 오픈소스 | [cryptography 50.0.2](https://pypi.org/project/cryptography/50.0.2/) | 상위 패키지 실행·개발 의존성 지원; R:간접; 설치: LR | Apache-2.0 OR BSD-3-Clause |
-| 오픈소스 | [cuda-bindings 12.9.10](https://pypi.org/project/cuda-bindings/12.9.10/) | CUDA Python 바인딩; R:간접; 설치: GR | Apache-2.0 |
-| 오픈소스 | [cuda-bindings 13.4.4](https://pypi.org/project/cuda-bindings/13.4.4/) | CUDA Python 바인딩; R:간접; 설치: lock만 | Apache-2.0 |
-| 오픈소스 | [cuda-pathfinder 1.8.5](https://pypi.org/project/cuda-pathfinder/1.8.5/) | CUDA 구성 요소 경로 검색; R:간접; 설치: GR | Apache-2.0 |
-| 기타 | [cuda-toolkit 12.8.1](https://pypi.org/project/cuda-toolkit/12.8.1/) | CUDA 구성 요소를 선택하는 메타패키지; R:간접; 설치: GR | 메타패키지 License 미표기; 각 CUDA 구성 요소의 개별 조건 적용 |
-| 기타 | [cuda-toolkit 13.2.2](https://pypi.org/project/cuda-toolkit/13.2.2/) | CUDA 구성 요소를 선택하는 메타패키지; R:간접; 설치: lock만 | 메타패키지 License 미표기; 각 CUDA 구성 요소의 개별 조건 적용 |
+| 오픈소스 | [cuda-bindings 12.9.10](https://pypi.org/project/cuda-bindings/12.9.10/) | CUDA Python 바인딩; R:간접; 설치: GR | Apache-2.0; metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 오픈소스 | [cuda-bindings 13.4.4](https://pypi.org/project/cuda-bindings/13.4.4/) | CUDA Python 바인딩; R:간접; 설치: lock만 | Apache-2.0; metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 오픈소스 | [cuda-pathfinder 1.8.5](https://pypi.org/project/cuda-pathfinder/1.8.5/) | CUDA 구성 요소 경로 검색; R:간접; 설치: GR | Apache-2.0; metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [cuda-toolkit 12.8.1](https://pypi.org/project/cuda-toolkit/12.8.1/) | CUDA 구성 요소를 선택하는 메타패키지; R:간접; 설치: GR | 설치 메타패키지 자체 라이선스 미기재·미확인; 설치 대상은 NVIDIA CUDA 구성별 EULA; metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [cuda-toolkit 13.2.2](https://pypi.org/project/cuda-toolkit/13.2.2/) | CUDA 구성 요소를 선택하는 메타패키지; R:간접; 설치: lock만 | 설치 메타패키지 자체 라이선스 미기재·미확인; 설치 대상은 NVIDIA CUDA 구성별 EULA; metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
 | 오픈소스 | [defusedxml 0.7.1](https://pypi.org/project/defusedxml/0.7.1/) | 외부 XML/RSS 안전 파싱; R:선택/server; 설치: LR | PSFL (License 필드) |
 | 오픈소스 | [fastapi 0.162.0](https://pypi.org/project/fastapi/0.162.0/) | 서버·GPU HTTP API; R:직접; 설치: LR, GR, GM | MIT |
 | 오픈소스 | [filelock 4.2.5](https://pypi.org/project/filelock/4.2.5/) | 상위 패키지 실행·개발 의존성 지원; R:간접; 설치: GR | MIT |
@@ -241,37 +241,37 @@ APNs 직접 전송, 카카오/네이버/Google Maps/Mapbox 지도 API, 경로 �
 | 오픈소스 | [netcdf4 1.7.5.1.post1](https://pypi.org/project/netcdf4/1.7.5.1.post1/) | GK2A/GOES NetCDF 위성 자료 읽기; T:선택/geo; 설치: LT, GT | MIT |
 | 오픈소스 | [networkx 3.7](https://pypi.org/project/networkx/3.7/) | 상위 패키지 실행·개발 의존성 지원; R:간접; 설치: GR | BSD-3-Clause |
 | 오픈소스 | [numpy 2.5.4](https://pypi.org/project/numpy/2.5.4/) | 격자·특징·수치 연산; R:선택/ml, T:직접; 설치: LT, GR, GT, GM | BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0 |
-| 기타 | [nvidia-cublas 13.4.1.3](https://pypi.org/project/nvidia-cublas/13.4.1.3/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | 메타데이터 미표기; 별도 조건 확인 필요 |
-| 기타 | [nvidia-cublas-cu12 12.8.4.1](https://pypi.org/project/nvidia-cublas-cu12/12.8.4.1/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA Proprietary Software (License 필드) |
-| 기타 | [nvidia-cuda-cccl 13.3.4.3.1](https://pypi.org/project/nvidia-cuda-cccl/13.3.4.3.1/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | LicenseRef-NVIDIA-Proprietary |
-| 기타 | [nvidia-cuda-cupti 13.2.86](https://pypi.org/project/nvidia-cuda-cupti/13.2.86/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | 메타데이터 미표기; 별도 조건 확인 필요 |
-| 기타 | [nvidia-cuda-cupti-cu12 12.8.90](https://pypi.org/project/nvidia-cuda-cupti-cu12/12.8.90/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA Proprietary Software (License 필드) |
-| 기타 | [nvidia-cuda-nvrtc 13.2.86](https://pypi.org/project/nvidia-cuda-nvrtc/13.2.86/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | 메타데이터 미표기; 별도 조건 확인 필요 |
-| 기타 | [nvidia-cuda-nvrtc-cu12 12.8.93](https://pypi.org/project/nvidia-cuda-nvrtc-cu12/12.8.93/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA Proprietary Software (License 필드) |
-| 기타 | [nvidia-cuda-runtime 13.2.86](https://pypi.org/project/nvidia-cuda-runtime/13.2.86/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | 메타데이터 미표기; 별도 조건 확인 필요 |
-| 기타 | [nvidia-cuda-runtime-cu12 12.8.90](https://pypi.org/project/nvidia-cuda-runtime-cu12/12.8.90/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA Proprietary Software (License 필드) |
-| 기타 | [nvidia-cudnn-cu12 9.19.0.56](https://pypi.org/project/nvidia-cudnn-cu12/9.19.0.56/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | LicenseRef-NVIDIA-Proprietary |
-| 기타 | [nvidia-cudnn-cu13 9.26.0.51](https://pypi.org/project/nvidia-cudnn-cu13/9.26.0.51/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | 메타데이터 미표기; 별도 조건 확인 필요 |
-| 기타 | [nvidia-cufft 12.2.0.57](https://pypi.org/project/nvidia-cufft/12.2.0.57/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | 메타데이터 미표기; 별도 조건 확인 필요 |
-| 기타 | [nvidia-cufft-cu12 11.3.3.83](https://pypi.org/project/nvidia-cufft-cu12/11.3.3.83/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA Proprietary Software (License 필드) |
-| 기타 | [nvidia-cufile 1.17.1.22](https://pypi.org/project/nvidia-cufile/1.17.1.22/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | 메타데이터 미표기; 별도 조건 확인 필요 |
-| 기타 | [nvidia-cufile-cu12 1.13.1.3](https://pypi.org/project/nvidia-cufile-cu12/1.13.1.3/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA Proprietary Software (License 필드) |
-| 기타 | [nvidia-curand-cu12 10.3.9.90](https://pypi.org/project/nvidia-curand-cu12/10.3.9.90/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA Proprietary Software (License 필드) |
-| 기타 | [nvidia-cusolver 12.2.0.11](https://pypi.org/project/nvidia-cusolver/12.2.0.11/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | 메타데이터 미표기; 별도 조건 확인 필요 |
-| 기타 | [nvidia-cusolver-cu12 11.7.3.90](https://pypi.org/project/nvidia-cusolver-cu12/11.7.3.90/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA Proprietary Software (License 필드) |
-| 기타 | [nvidia-cusparse 12.7.10.12](https://pypi.org/project/nvidia-cusparse/12.7.10.12/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | 메타데이터 미표기; 별도 조건 확인 필요 |
-| 기타 | [nvidia-cusparse-cu12 12.5.8.93](https://pypi.org/project/nvidia-cusparse-cu12/12.5.8.93/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA Proprietary Software (License 필드) |
-| 기타 | [nvidia-cusparselt-cu12 0.7.1](https://pypi.org/project/nvidia-cusparselt-cu12/0.7.1/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA Proprietary Software (License 필드) |
-| 기타 | [nvidia-cusparselt-cu13 0.8.1](https://pypi.org/project/nvidia-cusparselt-cu13/0.8.1/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | NVIDIA Proprietary Software (License 필드) |
-| 기타 | [nvidia-nccl-cu12 2.28.9](https://pypi.org/project/nvidia-nccl-cu12/2.28.9/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | LicenseRef-NVIDIA-Proprietary |
-| 기타 | [nvidia-nccl-cu13 2.30.7](https://pypi.org/project/nvidia-nccl-cu13/2.30.7/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | 메타데이터 미표기; 별도 조건 확인 필요 |
-| 기타 | [nvidia-nccl-cu13 2.32.3](https://pypi.org/project/nvidia-nccl-cu13/2.32.3/) | CUDA 연산·통신 바이너리 지원; R:간접, T:간접; 설치: GT, GM | LicenseRef-NVIDIA-Proprietary |
-| 기타 | [nvidia-nvjitlink 13.4.92](https://pypi.org/project/nvidia-nvjitlink/13.4.92/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | LicenseRef-NVIDIA-Proprietary |
-| 기타 | [nvidia-nvjitlink-cu12 12.8.93](https://pypi.org/project/nvidia-nvjitlink-cu12/12.8.93/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA Proprietary Software (License 필드) |
-| 기타 | [nvidia-nvshmem-cu12 3.4.5](https://pypi.org/project/nvidia-nvshmem-cu12/3.4.5/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | LicenseRef-NVIDIA-Proprietary |
-| 기타 | [nvidia-nvshmem-cu13 3.7.2](https://pypi.org/project/nvidia-nvshmem-cu13/3.7.2/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | 메타데이터 미표기; 별도 조건 확인 필요 |
-| 기타 | [nvidia-nvtx 13.2.86](https://pypi.org/project/nvidia-nvtx/13.2.86/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | 메타데이터 미표기; 별도 조건 확인 필요 |
-| 오픈소스 | [nvidia-nvtx-cu12 12.8.90](https://pypi.org/project/nvidia-nvtx-cu12/12.8.90/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | Apache 2.0 (License 필드) |
+| 기타 | [nvidia-cublas 13.4.1.3](https://pypi.org/project/nvidia-cublas/13.4.1.3/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | NVIDIA CUDA EULA + 포함 코드의 추가 고지 (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-cublas-cu12 12.8.4.1](https://pypi.org/project/nvidia-cublas-cu12/12.8.4.1/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA CUDA EULA + 포함 코드의 추가 고지 (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-cuda-cccl 13.3.4.3.1](https://pypi.org/project/nvidia-cuda-cccl/13.3.4.3.1/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | NVIDIA CUDA EULA + 포함 코드의 추가 고지 (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-cuda-cupti 13.2.86](https://pypi.org/project/nvidia-cuda-cupti/13.2.86/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | NVIDIA CUDA EULA + 포함 코드의 추가 고지 (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-cuda-cupti-cu12 12.8.90](https://pypi.org/project/nvidia-cuda-cupti-cu12/12.8.90/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA CUDA EULA + 포함 코드의 추가 고지 (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-cuda-nvrtc 13.2.86](https://pypi.org/project/nvidia-cuda-nvrtc/13.2.86/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | NVIDIA CUDA EULA + 포함 코드의 추가 고지 (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-cuda-nvrtc-cu12 12.8.93](https://pypi.org/project/nvidia-cuda-nvrtc-cu12/12.8.93/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA CUDA EULA + 포함 코드의 추가 고지 (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-cuda-runtime 13.2.86](https://pypi.org/project/nvidia-cuda-runtime/13.2.86/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | NVIDIA CUDA EULA + 포함 코드의 추가 고지 (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-cuda-runtime-cu12 12.8.90](https://pypi.org/project/nvidia-cuda-runtime-cu12/12.8.90/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA CUDA EULA + 포함 코드의 추가 고지 (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-cudnn-cu12 9.19.0.56](https://pypi.org/project/nvidia-cudnn-cu12/9.19.0.56/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA SDK License Agreement (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-cudnn-cu13 9.26.0.51](https://pypi.org/project/nvidia-cudnn-cu13/9.26.0.51/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | NVIDIA SDK License Agreement (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-cufft 12.2.0.57](https://pypi.org/project/nvidia-cufft/12.2.0.57/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | NVIDIA CUDA EULA + 포함 코드의 추가 고지 (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-cufft-cu12 11.3.3.83](https://pypi.org/project/nvidia-cufft-cu12/11.3.3.83/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA CUDA EULA + 포함 코드의 추가 고지 (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-cufile 1.17.1.22](https://pypi.org/project/nvidia-cufile/1.17.1.22/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | NVIDIA CUDA EULA + 포함 코드의 추가 고지 (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-cufile-cu12 1.13.1.3](https://pypi.org/project/nvidia-cufile-cu12/1.13.1.3/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA CUDA EULA + 포함 코드의 추가 고지 (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-curand-cu12 10.3.9.90](https://pypi.org/project/nvidia-curand-cu12/10.3.9.90/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA CUDA EULA + 포함 코드의 추가 고지 (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-cusolver 12.2.0.11](https://pypi.org/project/nvidia-cusolver/12.2.0.11/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | NVIDIA CUDA EULA + 포함 코드의 추가 고지 (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-cusolver-cu12 11.7.3.90](https://pypi.org/project/nvidia-cusolver-cu12/11.7.3.90/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA CUDA EULA + 포함 코드의 추가 고지 (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-cusparse 12.7.10.12](https://pypi.org/project/nvidia-cusparse/12.7.10.12/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | NVIDIA CUDA EULA + 포함 코드의 추가 고지 (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-cusparse-cu12 12.5.8.93](https://pypi.org/project/nvidia-cusparse-cu12/12.5.8.93/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA CUDA EULA + 포함 코드의 추가 고지 (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-cusparselt-cu12 0.7.1](https://pypi.org/project/nvidia-cusparselt-cu12/0.7.1/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA SDK License Agreement (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-cusparselt-cu13 0.8.1](https://pypi.org/project/nvidia-cusparselt-cu13/0.8.1/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | NVIDIA SDK License Agreement (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-nccl-cu12 2.28.9](https://pypi.org/project/nvidia-nccl-cu12/2.28.9/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | BSD-3-Clause (고정 wheel LICENSE 확인; 최신 main과 구분); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-nccl-cu13 2.30.7](https://pypi.org/project/nvidia-nccl-cu13/2.30.7/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | BSD-3-Clause (고정 wheel LICENSE 확인; 최신 main과 구분); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-nccl-cu13 2.32.3](https://pypi.org/project/nvidia-nccl-cu13/2.32.3/) | CUDA 연산·통신 바이너리 지원; R:간접, T:간접; 설치: GT, GM | BSD-3-Clause (고정 wheel LICENSE 확인; 최신 main과 구분); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-nvjitlink 13.4.92](https://pypi.org/project/nvidia-nvjitlink/13.4.92/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | NVIDIA CUDA EULA + 포함 코드의 추가 고지 (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-nvjitlink-cu12 12.8.93](https://pypi.org/project/nvidia-nvjitlink-cu12/12.8.93/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA CUDA EULA + 포함 코드의 추가 고지 (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-nvshmem-cu12 3.4.5](https://pypi.org/project/nvidia-nvshmem-cu12/3.4.5/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | NVIDIA CUDA EULA + 포함 코드의 추가 고지 (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-nvshmem-cu13 3.7.2](https://pypi.org/project/nvidia-nvshmem-cu13/3.7.2/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | NVIDIA CUDA EULA + 포함 코드의 추가 고지 (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 기타 | [nvidia-nvtx 13.2.86](https://pypi.org/project/nvidia-nvtx/13.2.86/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: lock만 | Apache-2.0 WITH LLVM-exception (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
+| 오픈소스 | [nvidia-nvtx-cu12 12.8.90](https://pypi.org/project/nvidia-nvtx-cu12/12.8.90/) | CUDA 연산·통신 바이너리 지원; R:간접; 설치: GR | Apache-2.0 WITH LLVM-exception (고정 wheel LICENSE 확인); metadata 원문·동봉 고지 해시는 근거 JSON 참조 |
 | 오픈소스 | [openapi-schema-validator 0.6.3](https://pypi.org/project/openapi-schema-validator/0.6.3/) | 상위 패키지 실행·개발 의존성 지원; R:간접; 설치: LR | BSD-3-Clause (License 필드) |
 | 오픈소스 | [openapi-spec-validator 0.7.2](https://pypi.org/project/openapi-spec-validator/0.7.2/) | OpenAPI 계약 검증; R:개발/api-contract; 설치: LR | Apache-2.0 (License 필드) |
 | 오픈소스 | [opentelemetry-api 1.45.2](https://pypi.org/project/opentelemetry-api/1.45.2/) | 상위 패키지 실행·개발 의존성 지원; R:간접; 설치: LR, GR, GM | Apache-2.0 |
@@ -375,7 +375,7 @@ APNs 직접 전송, 카카오/네이버/Google Maps/Mapbox 지도 API, 경로 �
 - SciPy 동봉 고지는 주코드 외 OpenBLAS(`BSD-3-Clause`), LAPACK(`BSD-3-Clause-Open-MPI`), GCC runtime(`GPL-3.0-or-later WITH GCC-exception-3.1`), libquadmath(`LGPL-2.1-or-later`)를 구분한다. 플랫폼마다 포함 여부가 달라질 수 있으므로 실제 wheel의 고지와 파일을 기준으로 확인한다.
 - NumPy, pandas, PyArrow, torch, h5py, rasterio, pyproj, shapely 등은 제3자 코드 또는 네이티브 라이브러리 고지를 동봉한다. 특히 h5py의 HDF5, rasterio의 GDAL, pyproj의 PROJ, shapely의 GEOS 고지 파일을 JSON 증거에 포함했다. 위 표의 상위 패키지 라이선스가 동봉 구성 요소 전체를 하나의 조건으로 대체한다는 뜻은 아니다.
 - `psycopg`/`psycopg-binary`의 `LGPL-3.0-only`, `certifi`의 `MPL-2.0`, `tqdm`의 `MPL-2.0 AND MIT`, NVIDIA 바이너리의 독점 조건을 별도로 유지한다. `redis` 행은 Python 클라이언트이며 서버 이미지 라이선스는 본문 인프라 표에서 따로 확인한다.
-- `cuda-toolkit`은 구성 요소를 묶는 메타패키지다. 메타데이터가 비어 있으므로 이를 MIT/Apache 또는 자유 재배포 가능으로 판정하지 않는다. 표에 미표기로 남은 NVIDIA 패키지는 정확한 바이너리의 NVIDIA 약관·동봉 고지를 추가 확인해야 한다.
+- `cuda-toolkit`은 구성 요소를 묶는 메타패키지다. 메타데이터가 비어 있으므로 이를 MIT/Apache 또는 자유 재배포 가능으로 판정하지 않는다. 36개 고정 버전 wheel의 추가 확인은 아래 부록과 보충 JSON을 따른다. 메타패키지 자체 조건이 미확인인 경우는 그대로 남긴다.
 - 잠금 분기의 torch 2.15.0과 실제 GPU 추론 환경의 torch 2.11.0+cu128을 구분한다. CUDA 13 패키지 중에는 초기 `.venv-ml`의 NCCL 2.32.3처럼 설치된 항목도 있으므로, CUDA 계열 전체를 미설치로 묶지 않고 각 행의 설치 환경을 기준으로 확인한다.
 - 이 부록은 명시된 Python 잠금 파일과 다섯 가상환경의 배포 패키지 전수 목록이다. 운영체제 전체 패키지·컨테이너 내부 모든 파일·임시 빌드 캐시의 완전한 바이너리 SBOM이라고 주장하지 않는다.
 
@@ -394,3 +394,150 @@ APNs 직접 전송, 카카오/네이버/Google Maps/Mapbox 지도 API, 경로 �
 | 기타 | 앱 외부 자원 목록 | 사용자 요청으로 앱을 조회하지 않은 범위 | 앱팀에서 지도·폰트·이미지·SDK 등의 사용 항목을 별도로 작성해야 전체 앱까지 포함한 제출 자료가 됨 |
 
 문서를 갱신할 때는 `pyproject.toml`, `training/pyproject.toml`, `uv.lock`, `training/uv.lock`, `deploy/`, 데이터 다운로드 코드/출처 manifest와 실제 모델 revision을 다시 대조한다. 조사만 한 자료를 실제 사용 표로 옮기는 경우에는 API 응답·다운로드·실행 근거와 해당 판본의 이용조건을 함께 갱신한다. 인증키, 비밀번호, 서비스 계정 비공개 키, 서명된 일회성 다운로드 토큰은 이 문서와 근거 파일에 저장하지 않는다.
+
+## 11. 고정 배포물 라이선스 추가 확인
+
+두 lock의 CUDA/NVIDIA **36개 패키지·버전**에 대해 공식 PyPI의 Linux x86_64 또는 플랫폼 공통 wheel을 열어 LICENSE 경로와 SHA-256을 기록했다. 작은 메타패키지 2개에는 LICENSE 파일이 없었다. 설치된 환경의 원본 METADATA·고지 파일은 기존 의존성 JSON에, 이 추가 검사의 정확한 wheel URL·LICENSE 해시는 [보충 검증 JSON](external-resources/supplemental-verification-20261101.json)에 보존한다. 이 추가 검사는 동일 버전의 모든 Python ABI·운영체제 wheel을 검사했다는 뜻은 아니다. 실제 배포 시에는 선택한 artifact와 동봉 고지를 기준으로 삼는다.
+
+| 구분 | 명칭 | 용도 | 라이선스 |
+| --- | --- | --- | --- |
+| 오픈소스 | cuda-bindings 12.9.10·13.4.4, cuda-pathfinder 1.8.5 | CUDA Python 바인딩·경로 탐색. 설치 여부는 전수 부록의 환경 표기 참고 | 확인한 고정 wheel의 LICENSE: Apache-2.0 |
+| 기타 | cuda-toolkit 12.8.1·13.2.2 | CUDA 구성요소 설치 메타패키지 | 메타패키지 자체 metadata·LICENSE 없음, 자체 라이선스 미확인. 설치 대상 CUDA 구성요소는 각각의 NVIDIA 약관 적용 |
+| 기타 | cuBLAS·CUPTI·NVRTC·CUDA Runtime·cuFFT·cuFile·cuRAND·cuSOLVER·cuSPARSE·nvJitLink | GPU 수치 계산·실행·프로파일링 | 고정 wheel의 NVIDIA CUDA End User License Agreement와 포함 코드별 추가 고지. 전체를 Apache/BSD 오픈소스로 분류하지 않음. [CUDA EULA](https://docs.nvidia.com/cuda/eula/index.html) |
+| 기타 | nvidia-cuda-cccl 13.3.4.3.1 | CUDA C++ 코어 구성 | 배포물의 CUDA EULA 및 CCCL 소스 LICENSE(LLVM 예외를 포함한 Apache 조건), 추가 BSD 고지 등 구성별 조건 |
+| 기타 | cuDNN 9.19.0.56·9.26.0.51, cuSPARSELt 0.7.1·0.8.1 | GPU 신경망·희소 행렬 실행 | 고정 wheel의 NVIDIA SDK License Agreement. 공개 소스 라이선스와 다름. 제품·버전별 부속 조건 유지 |
+| 오픈소스 | NCCL cu12 2.28.9, cu13 2.30.7·2.32.3 | GPU 통신 런타임 의존성 | **고정 wheel은 BSD-3-Clause**. 최신 GitHub main의 다른 표기를 설치한 과거 버전에 소급 적용하지 않음 |
+| 기타 | NVSHMEM cu12 3.4.5, cu13 3.7.2 | GPU 공유 메모리 런타임 의존성 | **이 고정 wheel에는 NVIDIA EULA가 동봉**. 최신 NVSHMEM 소스 저장소의 Apache-2.0 선언으로 배포 바이너리 조건을 대체하지 않음 |
+| 오픈소스 | NVTX cu12 12.8.90, 13.2.86 | GPU 실행 추적·프로파일링 의존성 | 고정 wheel LICENSE: **Apache-2.0 WITH LLVM-exception**. metadata의 단순 Apache 표기만 옮기면 예외 조건이 누락됨 |
+| 기타 | 로컬 Docker Desktop `desktop-linux` 컨텍스트 | 개발 컴퓨터 컨테이너 실행 환경 | [Docker 구독 서비스 계약](https://www.docker.com/legal/docker-subscription-service-agreement/). Docker Engine/Moby 및 Compose의 Apache-2.0과 구분. 설치 조직·규모에 따른 실제 구독 자격은 이 명세에서 판정하지 않음 |
+
+NCCL·NVTX의 조건을 바이너리에서 확인했고, NVSHMEM도 실제 배포 형태를 별도로 확인했다. 이 결과는 9절의 해당 36개 행에도 반영했다. Qwen 두 모델은 위의 고정 revision을 조회했으며, Embedding 모델은 Apache-2.0을 선언한 카드가 근거이고 별도 LICENSE 파일이 존재한다고 기재하지 않았다.
+
+## 12. 직접 구현한 API 전체 목록
+
+다음은 봉화지기에서 직접 개발한 FastAPI HTTP 인터페이스다. 연동된 외부 서비스/모델/라이브러리의 조건은 앞 표를 따른다. [일반 서버 실행 OpenAPI](api/mvp-openapi.json)의 `0.2.0-mvp`에 있는 모든 동작을 열거했고 GPU API는 별도 4개 동작이다. 내부 API는 서비스 토큰, 앱 사용자 API는 사용자 JWT를 쓴다. 상태 확인 등 공개 경로의 정확한 인증 지정은 실행 OpenAPI를 따른다.
+
+| 구분 | 명칭·경로 | 용도 | 구현 상태·라이선스 |
+| --- | --- | --- | --- |
+| 상태 확인 | `GET /health/live` | 프로세스 생존 확인 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 상태 확인 | `GET /health/ready` | 서버 의존성 준비 상태 확인 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 내부용 | `POST /internal/v1/scenario-events` | 시나리오 이벤트 수신·DB/outbox·큐 연결 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 내부용 | `POST /internal/v1/retrieval-documents` | 검색용 문서 등록·임베딩 처리 요청 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 내부용 | `GET /internal/v1/scenarios/{scenario_id}/analysis-jobs/{job_id}` | 분석 작업 상태·검색 결과 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 내부용 | `POST /internal/v1/scenarios/{scenario_id}/analysis-jobs/{job_id}/retry` | 실패한 분석 작업 재시도 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 내부용 | `GET /internal/v1/analysis-health` | 분석 작업 운영 상태 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 내부용 | `PUT /internal/v1/policy/scenarios/{scenario_id}/clock` | 시나리오 기준 시각 갱신 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 내부용 | `PUT /internal/v1/policy/scenarios/{scenario_id}/users/{user_id}/profile` | 시연 사용자 프로필 입력 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 내부용 | `PUT /internal/v1/policy/scenarios/{scenario_id}/users/{user_id}/location` | 시연 사용자 위치 입력 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 내부용 | `PUT /internal/v1/policy/scenarios/{scenario_id}/incidents/{incident_id}` | 사건 정보 등록·변경 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 내부용 | `PUT /internal/v1/policy/scenarios/{scenario_id}/incidents/{incident_id}/prediction` | 모의 예측 입력 수신 계약 | 내부 모의 입력 계약·실제 예측 호출 없음; 팀 작성 API, 공개 라이선스 미지정 |
+| 내부용 | `PUT /internal/v1/policy/scenarios/{scenario_id}/incidents/{incident_id}/alerts/{alert_id}` | 공식 경보 등록·정정·해제 입력 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 내부용 | `GET /internal/v1/policy/scenarios/{scenario_id}/incidents/{incident_id}/alerts` | 사건의 공식 경보 또는 내 경보 목록 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 내부용 | `PUT /internal/v1/policy/scenarios/{scenario_id}/guidance/{guidance_id}` | 검토된 기본 행동지침 등록 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 내부용 | `PUT /internal/v1/policy/scenarios/{scenario_id}/rules` | 개인 정책 규칙 등록·변경 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 내부용 | `POST /internal/v1/policy/scenarios/{scenario_id}/bootstrap-policy` | 3단계 기본 규칙·지침 초기 등록 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 내부용 | `PUT /internal/v1/policy/scenarios/{scenario_id}/incidents/{incident_id}/environment` | 사건 환경 상태 갱신 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 내부용 | `PUT /internal/v1/policy/scenarios/{scenario_id}/incidents/{incident_id}/users/{user_id}/state` | 현재 사용자 상태 입력 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 내부용 | `PUT /internal/v1/policy/scenarios/{scenario_id}/incidents/{incident_id}/users/{user_id}/route` | 경로 상태·제약 입력 또는 조회; 실제 경로 탐색 없음 | 시연 경로 상태 입력; 실제 탐색 미연결. 팀 작성 API, 공개 라이선스 미지정 |
+| 내부용 | `GET /internal/v1/policy/scenarios/{scenario_id}/users/{user_id}/plans/{incident_id}` | 사용자의 현재 개인 대응 정책 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 내부용 | `GET /internal/v1/policy/scenarios/{scenario_id}/users/{user_id}/plans/{incident_id}/history` | 개인 정책 변경 이력 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 내부용 | `GET /internal/v1/policy/scenarios/{scenario_id}/integrations/{job_id}` | Qwen 통합 작업·결과 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 내부용 | `POST /internal/v1/policy/scenarios/{scenario_id}/integrations/{job_id}/retry` | Qwen 통합 실패 재시도 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `GET /v1/app-config` | 앱 기능·단계·갱신 설정 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `GET /v1/me/profile` | 내 프로필 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `PUT /v1/me/profile` | 내 프로필 수정 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `DELETE /v1/me/profile` | 내 프로필 삭제 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `GET /v1/me/preferences` | 내 알림·사용 환경 설정 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `PUT /v1/me/preferences` | 내 설정 수정 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `PUT /v1/me/devices/{installation_id}` | 내 단말·푸시 토큰 등록/갱신 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `DELETE /v1/me/devices/{installation_id}` | 내 단말 등록 해제 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `GET /v1/me/location` | 내 위치 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `PUT /v1/me/location` | 내 현재 위치 갱신 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `DELETE /v1/me/location` | 내 위치 삭제 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `GET /v1/me/alerts` | 사건의 공식 경보 또는 내 경보 목록 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `GET /v1/me/alerts/{alert_id}` | 내 공식 경보 상세 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `POST /v1/me/alerts/{alert_id}/receipts` | 경보 수신·열람·행동 확인 기록 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `GET /v1/me/responses/{response_id}` | 내 개인 대응 안내 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `PUT /v1/me/responses/{response_id}/context` | 내 현재 상태·이동 제약 갱신 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `GET /v1/me/responses/{response_id}/history` | 개인 정책 변경 이력 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `GET /v1/me/updates` | 커서 기준 변경 목록 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `GET /v1/disasters` | 재난·사건 목록 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `GET /v1/safety-rules/{disaster_type}` | 재난별 기본 행동지침 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `GET /v1/home` | 현재 위치·경보·개인 안내 홈 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `GET /v1/me/deliveries` | 내 알림 전달 상태 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `POST /v1/me/logout` | 현재 세션 로그아웃 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `GET /v1/me/responses/{response_id}/route` | 경로 상태·제약 입력 또는 조회; 실제 경로 탐색 없음 | unavailable/null·경로 도형 없음; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `POST /v1/me/responses/{response_id}/support-drafts` | 신고 지원 초안 계약 | 비활성 503·단말 작성 영역; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `POST /v1/me/responses/{response_id}/voice-turns` | 음성 대화 시작 계약 | 비활성 503·서버 음성 제외; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `GET /v1/me/responses/{response_id}/voice-turns/{turn_id}` | 음성 대화 조회 계약 | 비활성 503·서버 음성 제외; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `DELETE /v1/me/responses/{response_id}/voice-turns/{turn_id}` | 음성 대화 삭제 계약 | 비활성 503·서버 음성 제외; 팀 작성 API, 공개 라이선스 미지정 |
+| GPU 내부용 | `GET /health/live` | GPU 프로세스 상태 | 구현; 팀 작성 API + 모델 Apache-2.0 및 라이브러리별 조건 |
+| GPU 내부용 | `GET /health/ready` | 실제 모델 준비 상태 | 구현; 팀 작성 API + 모델 Apache-2.0 및 라이브러리별 조건 |
+| GPU 내부용 | `POST /internal/v1/generate` | 자체 호스팅 Qwen 생성 | 구현; 팀 작성 API + 모델 Apache-2.0 및 라이브러리별 조건 |
+| GPU 내부용 | `POST /internal/v1/embeddings` | 자체 호스팅 Qwen 임베딩 | 구현; 팀 작성 API + 모델 Apache-2.0 및 라이브러리별 조건 |
+
+예측·경로 도형·신고 초안·음성 경로가 목록에 있어도 해당 기능이 완성된 것은 아니다. 실제 예측은 unavailable/null이며, 경로는 unavailable/null, 신고 초안과 서버 음성은 비활성 응답이다. 실제 푸시는 simulation이다. 앱 저장소의 화면 연결은 이 문서의 검증 대상이 아니다.
+
+
+## 13. 원본 코드·설정에서 확인한 출처 URL
+
+아래는 API·학습 자료·사건 선정·기하 검증에 사용하거나 인계 사양으로 기록한 경로다. 동적 URL의 실제 파일명 전체나 인증 파라미터는 넣지 않는다. `example.invalid`·loopback·XML namespace는 실제 외부 자원에서 제외했다. URL이 존재한다는 사실과 자료를 실제 확보·학습에 사용했다는 사실은 다르며, 역할과 이용조건은 본문의 상태 구분을 따른다.
+
+| 구분 | 명칭·원문 URL | 사용·기록 위치 | 라이선스·이용조건 |
+| --- | --- | --- | --- |
+| 기상청 | [원문](https://apihub.kma.go.kr/api/typ05/api/GK2A/LE2/FF/KO/data) | `training/src/bonghwa_training/kma_download.py` | API허브·기관 조건/공공누리 제품별 확인 |
+| 기상청 | [원문](https://apihub.kma.go.kr/api/typ05/api/GK2A/LE2/FF/KO/data?date=202610311240) | `training/reports/kma-audit-20261031/live-metadata/probe-20261031T1240.json` 외 3곳 | API허브·기관 조건/공공누리 제품별 확인 |
+| 기상청 | [원문](https://apihub.kma.go.kr/api/typ05/api/GK2A/LE2/FF/KO/data?date=202610311340) | `training/reports/kma-audit-20261031/live-metadata/probe-20261031T1340.json` 외 1곳 | API허브·기관 조건/공공누리 제품별 확인 |
+| 기상청 | [원문](https://apihub.kma.go.kr/apiList.do?seqApi=2&seqApiSub=239) | `training/sources/source-audit.json` | API허브·기관 조건/공공누리 제품별 확인 |
+| 기상청 | [원문](https://apihub.kma.go.kr/apiList.do?seqApi=6&seqApiSub=271) | `training/sources/source-audit.json` | API허브·기관 조건/공공누리 제품별 확인 |
+| 미국 사건 근거 | [원문](https://fire.ak.blm.gov/content/aicc/team_left/03.%20Alaska%20CIMT%20Incident%20Archive/Alaska%20IMT%20Incident%20Summaries/2021%20Summaries/2021%2007-23%20to%2008-06%20Bootleg.pdf) | `training/configs/goes-hourly-v1.json` 외 4곳 | 정부기관 게시물·첨부자료별 권리, 사건 선정 참고 |
+| NASA | [원문](https://firms.modaps.eosdis.nasa.gov/content/academy/data_api/firms_api_use.html) | `training/sources/source-audit.json` | 제품별 공개 데이터 이용·인용 조건 |
+| NASA | [원문](https://firms.modaps.eosdis.nasa.gov/data/active_fire/SUOMI_VIIRS_C2_Global_7d.csv) | `training/sources/source-audit.json` | 제품별 공개 데이터 이용·인용 조건 |
+| NASA | [원문](https://firms.modaps.eosdis.nasa.gov/data/country) | `training/src/bonghwa_training/korea_download.py` | 제품별 공개 데이터 이용·인용 조건 |
+| 국내 기관·공식 자료 | [원문](https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003737) | `training/configs/korea-gk2a-hourly-v4.json` | 개별 게시물·첨부물의 권리/공공누리 확인 |
+| 국내 기관·공식 자료 | [원문](https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003815) | `training/configs/korea-gk2a-hourly-v4.json` | 개별 게시물·첨부물의 권리/공공누리 확인 |
+| 국내 기관·공식 자료 | [원문](https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91004062) | `training/configs/korea-gk2a-hourly-v4.json` | 개별 게시물·첨부물의 권리/공공누리 확인 |
+| 국내 기관·공식 자료 | [원문](https://forest.go.kr/kfs/images/data/down/sb_3_09.pdf) | `training/configs/korea-gk2a-context-v2.json` 외 22곳 | 개별 게시물·첨부물의 권리/공공누리 확인 |
+| 공개 배포 | [원문](https://github.com/wmgeolab/geoBoundaries/raw/9469f09/) | `training/src/bonghwa_training/korea_download.py` | 대상 자료별 조건, 국가 경계는 위 데이터 표 참고 |
+| 뉴스 | [원문](https://news.google.com/rss/articles/CBMiVkFVX3lxTFBFa2p1clJ1b3RsOFNWRF9QSEVoY003OEppNjJmMXJOSmh1alhJWFJCemt5THFVdnpHeG4xa1VYN1FSaGN2OWhlNTNjaHMxYVh1d1YxRWh3?oc=5) | `docs/V2/delivery/qwen-integration/pre-inference.json` 외 1곳 | Google 약관 및 기사/언론사 저작권 |
+| 뉴스 | [원문](https://news.google.com/rss/articles/CBMiW0FVX3lxTE5HWm9MU0FEQ180WFZvcUMzX3ZpSHoyTy1tWDZtQ2JyVlpqSFgweHlFb0lPajA1Q3hmb21BQUJ6aFpjMVVETWw0SHAxX0dYWGMtNzBqSVNndll1WDjSAWBBVV95cUxOTFp4M3RxSGZidFczX092cHo2X3ltRW8xYW1PZ3dQbVE3NDJCSnU2dlA4NTQtTlQ0dmNxWkFxUldVQnV6azUxY3VBZFFSMFQ0V3hSc0k3R3NiTG9tVklFYlE?oc=5) | `docs/V2/delivery/qwen-integration/pre-inference.json` 외 1곳 | Google 약관 및 기사/언론사 저작권 |
+| 뉴스 | [원문](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5QeWY1WDM4OHVBaVkxM3ljNUVOdU5JcWNhQXVSTlFWV05Oby1sdnFtSHRCd1hrcEg2cUszYkYzX0VGdVhuV2lDMW9BbDdCOUFmNzduV0R3ckJ5MnFxaUkzNDk3UFFuY2M?oc=5) | `docs/V2/delivery/qwen-integration/pre-inference.json` 외 1곳 | Google 약관 및 기사/언론사 저작권 |
+| 뉴스 | [원문](https://news.google.com/rss/search) | `src/bonghwajigi/retrieval/web_search.py` | Google 약관 및 기사/언론사 저작권 |
+| 기상청 | [원문](https://nmsc.kma.go.kr/upload/resource/data/gk2a/gk2a_ami_ko020lc_latlon.nc) | `training/reports/kma-audit-20261031/projection-audit.json` | API허브·기관 조건/공공누리 제품별 확인 |
+| NOAA | [원문](https://noaa-isd-pds.s3.amazonaws.com) | `training/src/bonghwa_training/korea_download.py` | NOAA 공공정보 조건·출처 |
+| FCM 준비 | [원문](https://oauth2.googleapis.com/token) | `src/bonghwajigi/notifications/providers.py` | Google/Firebase 서비스 조건 |
+| 데이터 카탈로그 | [원문](https://planetarycomputer.microsoft.com/api/stac/v1) | `training/src/bonghwa_training/korea_download.py` | 플랫폼 및 원 데이터별 이용조건 |
+| 국내 기관·공식 자료 | [원문](https://www.data.go.kr/data/15057210/openapi.do) | `training/sources/source-audit.json` | 개별 게시물·첨부물의 권리/공공누리 확인 |
+| 국내 기관·공식 자료 | [원문](https://www.data.go.kr/data/15121380/fileData.do) | `training/sources/source-audit.json` | 개별 게시물·첨부물의 권리/공공누리 확인 |
+| 국내 기관·공식 자료 | [원문](https://www.data.go.kr/data/3070842/openapi.do) | `training/sources/source-audit.json` | 개별 게시물·첨부물의 권리/공공누리 확인 |
+| 미국 사건 근거 | [원문](https://www.fire.ca.gov/incidents/2021/7/13/dixie-fire) | `training/configs/goes-hourly-v1.json` 외 4곳 | 정부기관 게시물·첨부자료별 권리, 사건 선정 참고 |
+| 미국 사건 근거 | [원문](https://www.fire.ca.gov/incidents/2021/8/14/caldor-fire) | `training/configs/goes-hourly-v1.json` 외 4곳 | 정부기관 게시물·첨부자료별 권리, 사건 선정 참고 |
+| 미국 사건 근거 | [원문](https://www.fire.ca.gov/incidents/2022/7/22/oak-fire) | `training/configs/goes-hourly-v1.json` 외 4곳 | 정부기관 게시물·첨부자료별 권리, 사건 선정 참고 |
+| 미국 사건 근거 | [원문](https://www.fire.ca.gov/incidents/2022/9/6/mosquito-fire) | `training/configs/goes-hourly-v1.json` 외 4곳 | 정부기관 게시물·첨부자료별 권리, 사건 선정 참고 |
+| 미국 사건 근거 | [원문](https://www.fire.ca.gov/incidents/2023/8/15/smith-river-complex) | `training/configs/goes-hourly-v1.json` 외 4곳 | 정부기관 게시물·첨부자료별 권리, 사건 선정 참고 |
+| 국내 기관·공식 자료 | [원문](https://www.forest.go.kr/kfsweb/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_1009&nttId=3180876) | `training/configs/korea-gk2a-hourly-v4.json` | 개별 게시물·첨부물의 권리/공공누리 확인 |
+| 국내 기관·공식 자료 | [원문](https://www.forest.go.kr/kfsweb/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_1036&nttId=3181783&mn=NKFS_04_02_01) | `training/configs/korea-gk2a-hourly-v4.json` | 개별 게시물·첨부물의 권리/공공누리 확인 |
+| 국내 기관·공식 자료 | [원문](https://www.hccl.go.kr/CLRecords/Files/FileAppendix/a9/A006406.pdf) | `training/configs/korea-gk2a-context-v2.json` 외 18곳 | 개별 게시물·첨부물의 권리/공공누리 확인 |
+| 뉴스 | [원문](https://www.joongang.co.kr/) | `docs/V2/delivery/qwen-integration/pre-inference.json` 외 1곳 | Google 약관 및 기사/언론사 저작권 |
+| Kaggle/NDWS | [원문](https://www.kaggle.com/api/v1/datasets) | `training/src/bonghwa_training/download.py` | 자료 CC BY 4.0, 플랫폼 조건 별도 |
+| Kaggle/NDWS | [원문](https://www.kaggle.com/api/v1/datasets/download/fantineh/next-day-wildfire-spread/next_day_wildfire_spread_eval_00.tfrecord?datasetVersionNumber=2) | `training/reports/dataset-report.json` 외 3곳 | 자료 CC BY 4.0, 플랫폼 조건 별도 |
+| Kaggle/NDWS | [원문](https://www.kaggle.com/api/v1/datasets/download/fantineh/next-day-wildfire-spread/next_day_wildfire_spread_test_00.tfrecord?datasetVersionNumber=2) | `training/reports/dataset-report.json` 외 3곳 | 자료 CC BY 4.0, 플랫폼 조건 별도 |
+| Kaggle/NDWS | [원문](https://www.kaggle.com/api/v1/datasets/download/fantineh/next-day-wildfire-spread/next_day_wildfire_spread_train_00.tfrecord?datasetVersionNumber=2) | `training/reports/dataset-report.json` 외 3곳 | 자료 CC BY 4.0, 플랫폼 조건 별도 |
+| Kaggle/NDWS | [원문](https://www.kaggle.com/datasets/fantineh/next-day-wildfire-spread) | `training/reports/dataset-report.json` 외 4곳 | 자료 CC BY 4.0, 플랫폼 조건 별도 |
+| 국내 기관·공식 자료 | [원문](https://www.korea.kr/) | `data/scenarios/yeongdeok-integration.json` 외 3곳 | 개별 게시물·첨부물의 권리/공공누리 확인 |
+| 국내 기관·공식 자료 | [원문](https://www.korea.kr/briefing/policyBriefingView.do?newsId=156393191) | `training/configs/korea-gk2a-context-v2.json` 외 18곳 | 개별 게시물·첨부물의 권리/공공누리 확인 |
+| 국내 기관·공식 자료 | [원문](https://www.korea.kr/news/policyNewsView.do?newsId=148940993) | `data/scenarios/yeongdeok-integration.json` 외 4곳 | 텍스트 한정 공공누리 제1유형; 이미지·영상 등 별도 권리 |
+| 국내 기관·공식 자료 | [원문](https://www.mois.go.kr/frt/bbs/type010/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000008&nttId=99891) | `training/configs/korea-gk2a-context-v2.json` 외 18곳 | 개별 게시물·첨부물의 권리/공공누리 확인 |
+| 국내 기관·공식 자료 | [원문](https://www.opm.go.kr/opm/news/press-release.do?articleNo=153083&mode=view) | `training/configs/korea-gk2a-context-v2.json` 외 18곳 | 개별 게시물·첨부물의 권리/공공누리 확인 |
+| 국내 기관·공식 자료 | [원문](https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=forestFires&menuSn=4) | `src/bonghwajigi/policy/three_stage.py` | 개별 게시물·첨부물의 권리/공공누리 확인 |
+| 국내 기관·공식 자료 | [원문](https://www.safetv.go.kr/) | `data/scenarios/yeongdeok-integration.json` 외 3곳 | 개별 게시물·첨부물의 권리/공공누리 확인 |
+| 국내 기관·공식 자료 | [원문](https://www.safetv.go.kr/base/video/view?idx=2759&menuLevel=&menuNo=&playlistManagementIdx=8) | `data/scenarios/yeongdeok-integration.json` 외 4곳 | 공공누리 제4유형: 출처표시·상업적이용금지·변경금지 |
+| 국내 기관·공식 자료 | [원문](https://www.safetydata.go.kr/V2/api/DSSP-IF-00247) | `training/sources/source-audit.json` | 개별 게시물·첨부물의 권리/공공누리 확인 |
+| 국내 기관·공식 자료 | [원문](https://www.safetydata.go.kr/disaster-data/view?dataSn=228) | `training/sources/source-audit.json` | 개별 게시물·첨부물의 권리/공공누리 확인 |
+| 뉴스 | [원문](https://www.yna.co.kr/) | `docs/V2/delivery/qwen-integration/pre-inference.json` 외 1곳 | Google 약관 및 기사/언론사 저작권 |
+| 뉴스 | [원문](https://www.yonhapnewstv.co.kr/) | `docs/V2/delivery/qwen-integration/pre-inference.json` 외 1곳 | Google 약관 및 기사/언론사 저작권 |
+| 동적 API·배포 경로 | `https://fcm.googleapis.com/v1/projects/{project}/messages:send` | `src/bonghwajigi/notifications/providers.py` | 본문 API 표의 상태·조건 적용 |
+| 동적 API·배포 경로 | `https://{bucket}.s3.amazonaws.com/{key}` | `training/src/bonghwa_training/goes_download.py` | 본문 API 표의 상태·조건 적용 |
+| 동적 API·배포 경로 | `https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/KOR/ADM0/geoBoundaries-KOR-ADM0.geojson` | `training/src/bonghwa_training/korea_download.py` | 본문 API 표의 상태·조건 적용 |
+
+추가 검사 범위는 원본 URL 51개와 동적 경로 3개, 일반 서버 52개·GPU 4개 HTTP 동작, CUDA/NVIDIA 36개 패키지·버전이다. API의 동작 수는 메서드와 경로 조합으로 세었으며 동일 경로의 GET/PUT/DELETE를 각각 구분했다. [기존 전체 출처 JSON](external-resources/data-and-content-sources.json)과 [보충 검증 JSON](external-resources/supplemental-verification-20261101.json)을 함께 제공한다. 저장소에 새 자료가 들어오면 해당 자료의 출처·실제 사용 여부·조건을 갱신해야 한다.
