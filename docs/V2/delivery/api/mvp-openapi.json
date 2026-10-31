@@ -3053,11 +3053,12 @@
               "enum": [
                 "child",
                 "care_recipient",
-                "pet"
+                "pet",
+                "other"
               ]
             },
             "type": "array",
-            "maxItems": 3,
+            "maxItems": 4,
             "title": "Dependents"
           },
           "helper_registered": {

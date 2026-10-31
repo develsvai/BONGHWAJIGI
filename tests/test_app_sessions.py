@@ -182,6 +182,19 @@ def test_home_has_independent_preparations_and_avoid_guidance(installation):
     assert isinstance(data["alerts"], list)
 
 
+def test_other_dependent_is_saved_and_gets_dependent_preparation(installation):
+    client, _, _, _, tokens = installation
+    saved = client.put(
+        "/v1/me/profile",
+        headers=auth(tokens),
+        json={"base_revision": 1, "profile": {"mobility": "independent", "dependents": ["other"]}},
+    )
+    assert saved.status_code == 200
+    assert saved.json()["data"]["profile"]["dependents"] == ["other"]
+    cards = client.get("/v1/me/preparations", headers=auth(tokens)).json()["data"]
+    assert cards["items"][1]["reason_code"] == "DEPENDENT_PREPARATION"
+
+
 def test_confirmed_stairs_change_updates_level_and_server_authored_text(mobile):
     client, sessions, scenario, _, headers = mobile
     set_environment(sessions, scenario, "H2")

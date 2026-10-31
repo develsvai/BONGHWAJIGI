@@ -1,0 +1,37 @@
+{
+  "id": "task-20261031-163810-api-36540350",
+  "job_id": "job-20261031-002017-v2-fe3bfad0",
+  "title": "앱 설치 API를 일반 서버에 배포하고 단말 사설 연결과 합성 시연 검증",
+  "description": "사용자의 앱 구현·실서버 연결·APK 배포 직접 승인에 따라 새 설치 계정·세션 migration과 API를 일반 서버에 배포한다. 기타 보호 대상 enum과 Compose 설정 전달을 보완하고 기존 데이터·GPU·학습 작업을 유지한다. 합성 mobile-demo 자료를 별도 시나리오에 넣어 실제 단말 연동이 가능하도록 검증한다.",
+  "status": "RUNNING",
+  "created_at": "2026-10-31T16:38:10+00:00",
+  "updated_at": "2026-10-31T16:38:14+00:00",
+  "order_index": 19,
+  "assigned_agent": "foreground",
+  "depends_on": [],
+  "expected_output": "일반 서버 업데이트, 사설 API 연결 경로, 합성 시나리오와 등록·정책·갱신 검증 기록",
+  "done_condition": "새 계정 등록·세션 갱신·프로필·위치·상태 변경과 정책 단계 갱신이 배포 서버에서 동작하고 기존 DB·GPU 서비스가 보존된다. 외부 API 공개나 비밀값 출력 없이 단말 연결 경로와 한계를 문서화한다.",
+  "in_scope": "서버 앱 API 최소 보완; Compose flags; DB migration와 일반 서버 배포; private HTTPS 또는 SSH USB forward; 합성 사건·경보 시드; 회귀·실연동 검증·운영 문서",
+  "out_of_scope": "앱 소스 수정; 학습 코드·GPU 서비스 변경; 실제 예측 연결; 공용 Funnel; Firebase 실제 발신; 실제119연락; 비밀값 커밋",
+  "validation_hint": "pytest 실제 로컬 DB 회귀, Ruff, migration, OpenAPI; 배포 서버 health·registration·refresh·profile·location·policy·updates·auth 격리 확인; Loom strict",
+  "required_docs": [
+    "docs/V2/delivery/mvp-server-runbook.md",
+    "docs/V2/delivery/app-integration-api.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/mobile-server-deployment.md"
+  ],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [
+    "5b6210d7424360a4aabd33efaebe201b8b80c914"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-10-31T16:38:14+00:00",
+  "artifacts": [],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

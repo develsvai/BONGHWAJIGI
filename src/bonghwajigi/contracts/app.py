@@ -23,8 +23,8 @@ class AppProfile(Strict):
     stairs: Literal["able", "difficult", "unable", "unknown"] = "unknown"
     communication_preference: Literal["text", "voice", "both"] = "text"
     sensory_supports: list[Literal["vision", "hearing"]] = Field(default_factory=list, max_length=2)
-    dependents: list[Literal["child", "care_recipient", "pet"]] = Field(
-        default_factory=list, max_length=3
+    dependents: list[Literal["child", "care_recipient", "pet", "other"]] = Field(
+        default_factory=list, max_length=4
     )
     helper_registered: bool | None = None
     vehicle_access: bool | None = None

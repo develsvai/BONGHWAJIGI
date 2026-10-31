@@ -1,0 +1,3 @@
+[2026-10-31T16:38:14+00:00] agent=foreground task=task-20261031-163810-api-36540350 Foreground task session started.
+
+2026-11-01 KST: 로컬 DB alembic upgrade head/check 및 pytest -q 92개 통과. ruff check 통과. 일반 서버 기존 서비스와 GPU 터널 active, env600 확인. SSH loopback18080 연결 준비.
