@@ -28,6 +28,11 @@ def emit_change(
             revision=revision,
         )
     )
+    from bonghwajigi.db.policy_models import PolicyEntity
+
+    preferences = session.get(PolicyEntity, (scenario, "preferences", user))
+    if preferences and not preferences.body["data"].get("notifications_enabled", True):
+        urgency = None
     if urgency is None:
         return
     for device in session.scalars(

@@ -82,7 +82,7 @@ def bootstrap(session, scenario, moment):
 
 def decide(profile, state, environment, route, alerts, previous, related):
     reasons, questions = [], []
-    mobility = profile.get("mobility", "unknown")
+    mobility = state.get("mobility_override") or profile.get("mobility", "unknown")
     if profile.get("mobility_assistance") and mobility == "unknown":
         mobility = "needs_time"
     if state.get("can_move") is False:

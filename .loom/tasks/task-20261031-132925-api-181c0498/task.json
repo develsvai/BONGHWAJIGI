@@ -3,9 +3,9 @@
   "job_id": "job-20261031-002626-api-18805e8a",
   "title": "사용자 인증과 프로필·위치·개인 안내·변경 조회의 앱용 서버 API 구현",
   "description": "실제 예측 모델 연결을 제외한 나머지 구현을 진행하라는 직접 지시에 따라 서비스 토큰과 분리한 사용자 JWT 인증·소유권 검사·프로필/상태/위치·기기 등록·경보/현재 정책/변경 조회·수신 확인 API를 기존 문서와 맞춰 구현한다. 앱 저장소는 변경하지 않는다.",
-  "status": "PENDING",
+  "status": "RUNNING",
   "created_at": "2026-10-31T13:29:25+00:00",
-  "updated_at": "2026-10-31T13:29:25+00:00",
+  "updated_at": "2026-10-31T13:44:02+00:00",
   "order_index": 4,
   "assigned_agent": "foreground",
   "depends_on": [],
@@ -22,10 +22,12 @@
   "document_output_exceptions": [],
   "run_attempts": 0,
   "last_error": "",
-  "commit_refs": [],
-  "branch_name": "",
-  "git_dirty": false,
-  "git_snapshot_captured_at": "",
+  "commit_refs": [
+    "a5eae0dac8cca524f3d01d93d73e06e91a6f6fe9"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-10-31T13:44:02+00:00",
   "artifacts": [],
   "source_proposal_id": "",
   "source_prompt": ""

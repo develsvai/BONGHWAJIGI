@@ -28,10 +28,19 @@ def create_app() -> FastAPI:
             from bonghwajigi.api.policy import attach_policy
 
             attach_policy(app, app.state.settings)
+        if app.state.settings.app_enabled:
+            app.version = "0.2.0-mvp"
+            if not app.state.settings.policy_enabled:
+                raise RuntimeError("앱 API에는 개인별 정책 루프가 필요합니다.")
+            from bonghwajigi.api.mobile import attach_mobile
+
+            attach_mobile(app, app.state.settings)
         return app
 
     if app.state.settings.policy_enabled:
         raise RuntimeError("정책 루프에는 분석 수신 경로를 활성화해야 합니다.")
+    if app.state.settings.app_enabled:
+        raise RuntimeError("앱 API에는 분석·정책 루프가 필요합니다.")
 
     @app.post(
         "/internal/v1/scenario-events",

@@ -154,6 +154,9 @@ class EnvironmentInput(TimedInput):
 
 
 class CurrentStateInput(TimedInput):
+    mobility_override: Literal["unknown", "independent", "needs_time", "requires_help"] | None = (
+        None
+    )
     helper_present: bool | None = None
     can_move: bool | None = None
     injured: bool | None = None

@@ -398,7 +398,9 @@ def evaluate(session, projection, moment):
                 "sources",
             )
         },
-        "state": "outside_scope"
+        "state": "simulation_preview"
+        if personal["level"] in {"prepare", "act", "request_assistance", "information"}
+        else "outside_scope"
         if relation == "outside"
         else (
             "needs_refresh"
