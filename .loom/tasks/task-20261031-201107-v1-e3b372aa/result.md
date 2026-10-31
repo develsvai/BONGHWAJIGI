@@ -7,3 +7,11 @@
 11장·원본 크기, 1~9장 모든 텍스트, 9개 원본 이미지 바이트, 모든 개별 도형 이름과 개수를 대조했다. 전체 렌더링을 확인하고 패키지·폰트·재가져오기 검증을 통과했다. 원본 7장 아이콘 구성의 connector 경고는 시각적으로 확인 후 유지했다. 3장 그룹 일부는 평탄화되며 개별 요소는 보존한다. 네이티브 PowerPoint 실행 검증은 하지 않았다.
 
 최종 파일 SHA256: `460fe57ec29e709a575c7bbcf0c8506b190d7bc7ff21990e04a014c157ef7ef0`.
+
+## Validation
+
+- `node docs/V2/delivery/presentation-v1/source/finalize-v1.mjs /private/tmp/bonghwa-v1-design/edited /private/tmp/bonghwa-v1-design/edited/output/final-v3.pptx`: exit 0. Package integrity pass, 11 slides, font policy pass, native table on slide 10, Artifact Tool import pass.
+- `python3 /private/tmp/validate-v1-preservation.py`: exit 0. Slides 1–9 text runs match, all individual shape names match, all image bytes match, dimensions match.
+- Full-size render review: 11/11 slides. Table overflow warning resolved. Existing slide 7 connector warning visually checked.
+- `loom validate --strict`: OK, 6 jobs / 60 tasks. `git diff --check`: exit 0.
+- Detailed private receipts: `/private/tmp/bonghwa-v1-design/edited/final-v3.pptx.validation.json`, `/private/tmp/bonghwa-v1-design/preservation.json`.
