@@ -2,9 +2,9 @@
   "id": "task-run-20261031-100136-task-def-20261031-100122-xgboost-70ff7bde-87cfb747",
   "job_run_id": "job-run-20261031-100136-job-20261031-002626-job-c9f9ff0d-1370d387",
   "task_definition_id": "task-def-20261031-100122-xgboost-70ff7bde",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-10-31T10:01:36+00:00",
-  "updated_at": "2026-10-31T10:01:36+00:00",
+  "updated_at": "2026-10-31T10:21:32+00:00",
   "legacy_task_id": "task-20261031-100122-xgboost-1f6a6032",
   "attempt": 1,
   "assigned_agent": "foreground",
@@ -13,13 +13,30 @@
   "lease_expires_at": "",
   "queued_at": "",
   "started_at": "2026-10-31T10:01:36+00:00",
-  "completed_at": "",
+  "completed_at": "2026-10-31T10:21:32+00:00",
   "last_error": "",
-  "commit_refs": [],
-  "branch_name": "",
-  "git_dirty": false,
-  "git_snapshot_captured_at": "",
-  "artifacts": [],
-  "checkpoint_ids": [],
+  "commit_refs": [
+    "758013e0d0e1fdfb52f1d91c6e0e3a312ab4d177",
+    "e0a14561db446a09342f5abdbd3a175c62dfde2c"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-10-31T10:21:32+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-100122-xgboost-1f6a6032/agent-events.jsonl",
+    ".loom/tasks/task-20261031-100122-xgboost-1f6a6032/artifacts.json",
+    ".loom/tasks/task-20261031-100122-xgboost-1f6a6032/context.md",
+    ".loom/tasks/task-20261031-100122-xgboost-1f6a6032/decision.md",
+    ".loom/tasks/task-20261031-100122-xgboost-1f6a6032/git-snapshot.json",
+    ".loom/tasks/task-20261031-100122-xgboost-1f6a6032/logs.txt",
+    ".loom/tasks/task-20261031-100122-xgboost-1f6a6032/previous-results.md",
+    ".loom/tasks/task-20261031-100122-xgboost-1f6a6032/prompt.md",
+    ".loom/tasks/task-20261031-100122-xgboost-1f6a6032/result.md",
+    ".loom/tasks/task-20261031-100122-xgboost-1f6a6032/troubleshooting.md",
+    "docs/V2/delivery/xgboost-training-data.md"
+  ],
+  "checkpoint_ids": [
+    "checkpoint-20261031-102132-task-completed-xgboost-481552d5"
+  ],
   "review_required_reason": ""
 }

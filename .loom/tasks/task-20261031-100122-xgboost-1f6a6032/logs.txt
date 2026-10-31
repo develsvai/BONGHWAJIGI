@@ -5,3 +5,4 @@ Validation: training/.venv/bin/python -m pytest training/tests -> 11 passed; Ruf
 Validation: loom validate --strict -> 6 jobs, 35 tasks, 35 task definitions, no metadata issues.
 Products: docs/V2/delivery/xgboost-training-data.md; training/README.md; training/reports/{source-manifest,dataset-report,validation-summary}.json; training/sources/source-audit.json; training/src and tests and standalone uv.lock.
 Limits: first 3 of 19 raw shards; US next-daily satellite fire observation, no domestic personal-impact model, no event/time metadata audit. Concurrent analysis worker files and GPU serving untouched.
+[2026-10-31T10:21:32+00:00] agent=foreground task=task-20261031-100122-xgboost-1f6a6032 공개 NDWS v2 원본 3개와 11,753,527행 학습/검증/평가 자료를 구축했다. 전체 배치·CRC/SHA·중복·unknown/QC·미래 정답 누출 검사, 독립 재생성 해시 일치, 실제 XGBoost DMatrix 로딩과 11개 테스트를 통과했으며 758013e에 문서·보고서·코드·Loom 기록을 커밋했다. 연구용 다음 일별 위성 관측 목표이며 국내 개인 영향 모델 학습은 아직 수행하지 않았다.
