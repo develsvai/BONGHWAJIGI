@@ -124,3 +124,9 @@ A5에서 두 서버 Tailscale 1.104.4 설치와 기존 tailnet 등록 완료. �
 
 - Task: `task-20261031-152411-task-f8241639`
 - Tags: `사용자취소`, `문서유지`
+## 2026-10-31T20:12:09+00:00
+
+공식자료6건+A/B 분리 입력으로 실제 임베딩·검색·긴급경보·Qwen·확인 후 정책을 완주했다. runtime67933ce, 전체141검사. 앱0.4.0 설치와 폰배너·음1회·위급3·아이질문 확인. 예측·학습·GPS·119·원격FCM 변경 없음. 상세 docs/V2/delivery/filming-scenario-pipeline.md.
+
+- Task: `task-20261031-193008-task-ba4da975`
+- Tags: `filming`, `verification`

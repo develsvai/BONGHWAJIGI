@@ -1,0 +1,334 @@
+{
+  "verified_at": "2026-10-31T20:09:09.368733+00:00",
+  "mode": "simulation",
+  "roles": {
+    "A": {
+      "response_before": {
+        "level": "request_assistance",
+        "number": 3,
+        "label": "위급",
+        "reason_codes": [
+          "NO_AVAILABLE_EVACUATION_ROUTE"
+        ],
+        "policy_version": "wildfire-three-stage-v1",
+        "hazard_band": "H3",
+        "questions": [
+          "지금 아이와 함께 계신가요?"
+        ],
+        "support_available": true,
+        "automatic_emergency_call": false
+      },
+      "response_after": {
+        "level": "request_assistance",
+        "number": 3,
+        "label": "위급",
+        "reason_codes": [
+          "NO_AVAILABLE_EVACUATION_ROUTE"
+        ],
+        "policy_version": "wildfire-three-stage-v1",
+        "hazard_band": "H3",
+        "questions": [],
+        "support_available": true,
+        "automatic_emergency_call": false
+      },
+      "initial_question": "지금 아이와 함께 계신가요?",
+      "context_revision_before": 0,
+      "context_revision_after": 1,
+      "confirmed_state": {
+        "mode": "simulation",
+        "revision": 1,
+        "observed_at": "2026-10-31T20:09:05.197048Z",
+        "expires_at": "2026-10-31T20:14:05.197048Z",
+        "child_present": true,
+        "alone_now": "unknown",
+        "mobility_override": null,
+        "helper_present": null,
+        "can_move": null,
+        "injured": null,
+        "observed_hazard": "unknown",
+        "location_type": "unknown",
+        "evacuation_status": "unknown",
+        "deescalation_confirmed": false
+      },
+      "assistant_source": "qwen_grounded",
+      "actions_after": [
+        "119에 연락해 현재 위치와 대피할 수 없는 상황을 알리고 도움을 요청하세요.",
+        "알고 있는 주소나 주변 지형지물, 함께 있는 인원과 이동에 필요한 도움을 알리세요.",
+        "구조기관의 안내를 따르세요. 안내를 받는 동안에도 신고 연결 수단을 사용할 수 있습니다.",
+        "아이와 떨어지지 마세요. 119에 현재 위치와 아이 동반·경로 통제 상황을 알리세요."
+      ],
+      "preparations": [
+        {
+          "id": "mvp-ready-bag",
+          "text": "대피할 때 바로 챙길 수 있도록 비상가방을 미리 준비해 두세요.",
+          "source": {
+            "title": "국민안전24 산불 행동요령 확인본",
+            "url": "https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=forestFires&menuSn=4",
+            "published_at": "2026-10-31T20:08:41.804377Z",
+            "collected_at": "2026-10-31T20:08:41.804377Z",
+            "verified": true,
+            "publisher": null,
+            "publisher_url": null
+          },
+          "revision": 1,
+          "kind": "common",
+          "title": "비상가방 준비",
+          "valid_until": "2026-11-30T20:08:41.804377Z",
+          "reason_code": "BASIC_PREPARATION"
+        },
+        {
+          "id": "mvp-ready-child",
+          "text": "아이에게 필요한 물·간식·여벌 옷을 비상가방에 챙기세요.",
+          "source": {
+            "title": "국민안전24 산불 행동요령 확인본",
+            "url": "https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=forestFires&menuSn=4",
+            "published_at": "2026-10-31T20:08:41.804377Z",
+            "collected_at": "2026-10-31T20:08:41.804377Z",
+            "verified": true,
+            "publisher": null,
+            "publisher_url": null
+          },
+          "revision": 1,
+          "kind": "personal",
+          "title": "어린이 비상용품 준비",
+          "valid_until": "2026-11-30T20:08:41.804377Z",
+          "reason_code": "CHILD_PREPARATION"
+        }
+      ],
+      "today_guidance": {
+        "status": "available",
+        "location_input_revision": 4,
+        "generated_at": "2026-10-31T20:09:06.300324Z",
+        "valid_until": "2026-10-31T20:14:02.308678Z",
+        "reason_codes": [],
+        "items": [
+          {
+            "id": "mvp-regional-dry",
+            "text": "건조한 산림 주변에서는 불씨에 주의하고 입산 통제 정보를 확인하세요.",
+            "source": {
+              "title": "국민안전24 산불 행동요령 확인본",
+              "url": "https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=forestFires&menuSn=4",
+              "published_at": "2026-10-31T20:08:41.804377Z",
+              "collected_at": "2026-10-31T20:08:41.804377Z",
+              "verified": true,
+              "publisher": null,
+              "publisher_url": null
+            },
+            "revision": 1,
+            "title": "건조한 산림 화재 주의",
+            "valid_until": "2026-10-31T20:14:02.308678Z",
+            "evidence": [
+              {
+                "title": "산불경보 '심각' 단계 전국 확대…국가적으로 엄중한 상황",
+                "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148940993",
+                "published_at": "2025-03-26T23:59:59+09:00",
+                "collected_at": "2026-10-31T19:35:02Z",
+                "verified": true,
+                "publisher": "대한민국 정책브리핑",
+                "publisher_url": null
+              },
+              {
+                "title": "산성계곡생태공원 어드벤처 소개",
+                "url": "https://stay.yd.go.kr/adventure/pages/sub.htm?nav_code=adv1591964511",
+                "published_at": "2026-10-31T19:35:02Z",
+                "collected_at": "2026-10-31T19:35:02Z",
+                "verified": true,
+                "publisher": "영덕군",
+                "publisher_url": null
+              },
+              {
+                "title": "A·B 위치와 이동 조건 설정",
+                "url": "https://github.com/develsvai/BONGHWAJIGI/blob/develop/data/filming/yeongdeok-20250325.json",
+                "published_at": "2026-10-31T20:08:41.607660Z",
+                "collected_at": "2026-10-31T20:08:48.795680Z",
+                "verified": true,
+                "publisher": "봉화지기 검증 자료",
+                "publisher_url": null
+              }
+            ],
+            "origin": "synthetic",
+            "original_observed_at": null
+          }
+        ]
+      },
+      "route_status": "unavailable",
+      "route_geometry_returned": false,
+      "official_alert_count": 1,
+      "actual_prediction_connected": false
+    },
+    "B": {
+      "response_before": {
+        "level": "act",
+        "number": 2,
+        "label": "대피",
+        "reason_codes": [
+          "IMMEDIATE_LOCAL_HAZARD"
+        ],
+        "policy_version": "wildfire-three-stage-v1",
+        "hazard_band": "H3",
+        "questions": [
+          "보조기구를 사용해 혼자 이동할 수 있나요?"
+        ],
+        "support_available": true,
+        "automatic_emergency_call": false
+      },
+      "response_after": {
+        "level": "act",
+        "number": 2,
+        "label": "대피",
+        "reason_codes": [
+          "IMMEDIATE_LOCAL_HAZARD"
+        ],
+        "policy_version": "wildfire-three-stage-v1",
+        "hazard_band": "H3",
+        "questions": [],
+        "support_available": true,
+        "automatic_emergency_call": false
+      },
+      "initial_question": "보조기구를 사용해 혼자 이동할 수 있나요?",
+      "context_revision_before": 0,
+      "context_revision_after": 1,
+      "confirmed_state": {
+        "mode": "simulation",
+        "revision": 1,
+        "observed_at": "2026-10-31T20:09:08.728960Z",
+        "expires_at": "2026-10-31T20:14:08.728960Z",
+        "child_present": null,
+        "alone_now": "yes",
+        "mobility_override": null,
+        "helper_present": false,
+        "can_move": true,
+        "injured": null,
+        "observed_hazard": "unknown",
+        "location_type": "unknown",
+        "evacuation_status": "unknown",
+        "deescalation_confirmed": false
+      },
+      "assistant_source": "qwen_grounded",
+      "actions_after": [
+        "관계자의 대피 안내에 따라 안내된 장소로 즉시 이동하세요.",
+        "혼자 이동하기 어렵다면 주변 사람이나 조력자에게 도움을 요청해 함께 이동하세요.",
+        "보조기구를 챙기고 관계자의 대피 안내에 따라 이동하세요."
+      ],
+      "preparations": [
+        {
+          "id": "mvp-ready-bag",
+          "text": "대피할 때 바로 챙길 수 있도록 비상가방을 미리 준비해 두세요.",
+          "source": {
+            "title": "국민안전24 산불 행동요령 확인본",
+            "url": "https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=forestFires&menuSn=4",
+            "published_at": "2026-10-31T20:08:41.804377Z",
+            "collected_at": "2026-10-31T20:08:41.804377Z",
+            "verified": true,
+            "publisher": null,
+            "publisher_url": null
+          },
+          "revision": 1,
+          "kind": "common",
+          "title": "비상가방 준비",
+          "valid_until": "2026-11-30T20:08:41.804377Z",
+          "reason_code": "BASIC_PREPARATION"
+        },
+        {
+          "id": "mvp-ready-aid",
+          "text": "평소 사용하는 보조기구가 바로 사용 가능한지 확인하세요.",
+          "source": {
+            "title": "국민안전24 산불 행동요령 확인본",
+            "url": "https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=forestFires&menuSn=4",
+            "published_at": "2026-10-31T20:08:41.804377Z",
+            "collected_at": "2026-10-31T20:08:41.804377Z",
+            "verified": true,
+            "publisher": null,
+            "publisher_url": null
+          },
+          "revision": 1,
+          "kind": "personal",
+          "title": "이동 보조기구 점검",
+          "valid_until": "2026-11-30T20:08:41.804377Z",
+          "reason_code": "MOBILITY_PREPARATION"
+        }
+      ],
+      "today_guidance": {
+        "status": "available",
+        "location_input_revision": 4,
+        "generated_at": "2026-10-31T20:09:09.314453Z",
+        "valid_until": "2026-10-31T20:14:02.342431Z",
+        "reason_codes": [],
+        "items": [
+          {
+            "id": "mvp-regional-dry",
+            "text": "건조한 산림 주변에서는 불씨에 주의하고 입산 통제 정보를 확인하세요.",
+            "source": {
+              "title": "국민안전24 산불 행동요령 확인본",
+              "url": "https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=forestFires&menuSn=4",
+              "published_at": "2026-10-31T20:08:41.804377Z",
+              "collected_at": "2026-10-31T20:08:41.804377Z",
+              "verified": true,
+              "publisher": null,
+              "publisher_url": null
+            },
+            "revision": 1,
+            "title": "건조한 산림 화재 주의",
+            "valid_until": "2026-10-31T20:14:02.342431Z",
+            "evidence": [
+              {
+                "title": "산불경보 '심각' 단계 전국 확대…국가적으로 엄중한 상황",
+                "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148940993",
+                "published_at": "2025-03-26T23:59:59+09:00",
+                "collected_at": "2026-10-31T19:35:02Z",
+                "verified": true,
+                "publisher": "대한민국 정책브리핑",
+                "publisher_url": null
+              },
+              {
+                "title": "산성계곡생태공원 어드벤처 소개",
+                "url": "https://stay.yd.go.kr/adventure/pages/sub.htm?nav_code=adv1591964511",
+                "published_at": "2026-10-31T19:35:02Z",
+                "collected_at": "2026-10-31T19:35:02Z",
+                "verified": true,
+                "publisher": "영덕군",
+                "publisher_url": null
+              },
+              {
+                "title": "A·B 위치와 이동 조건 설정",
+                "url": "https://github.com/develsvai/BONGHWAJIGI/blob/develop/data/filming/yeongdeok-20250325.json",
+                "published_at": "2026-10-31T20:08:41.607660Z",
+                "collected_at": "2026-10-31T20:08:48.795680Z",
+                "verified": true,
+                "publisher": "봉화지기 검증 자료",
+                "publisher_url": null
+              }
+            ],
+            "origin": "synthetic",
+            "original_observed_at": null
+          }
+        ]
+      },
+      "route_status": "simulation",
+      "route_geometry_returned": true,
+      "official_alert_count": 1,
+      "actual_prediction_connected": false
+    }
+  },
+  "incident_origin": "historical_replay",
+  "personal_locations_and_route_conditions_origin": "synthetic",
+  "urgent_queue_status": "complete",
+  "qwen_integration_status": "complete",
+  "urgent_visible_before_qwen_seconds": {
+    "A": 1.553,
+    "B": 1.564
+  },
+  "actual_gps_used": false,
+  "real_push_sent": false,
+  "actual_119_used": false,
+  "original_times_and_collection_limits": "공식 과거 사건·사후 기후분석과 현재 행동요령을 조합한 촬영 재생 자료이다. 2025년 당시 이용 가능 정보를 재현하는 백테스트가 아니다. 일자만 공개된 자료의 published_at은 그날 23:59:59 KST를 보수적 상한으로 저장했으며 실제 발표 시각이 아니다. 날짜 미공개 자료는 이번 열람 시각을 이용 가능 시각 상한으로 사용한다.",
+  "official_evacuation_sms_available": false,
+  "limitations": [
+    "실제 화선·확산 방향·안전 대피경로·도로 폴리라인·사용자 GPS를 확보하지 않았다.",
+    "개별 대피명령 CBS 원문과 영덕의 정확한 건조특보 발효/해제 시각은 미확보다.",
+    "안개는 관측 근거가 없어 null이며 연기를 안개로 표시하지 않는다.",
+    "현재 행동요령과 4월 사후 기후분석을 3월 당시 공개된 자료로 주장하지 않는다.",
+    "원시 출처 시각은 유지하고 재생의 observed_at/expires_at만 실행기가 별도 설정한다.",
+    "화면에서 시연 표현을 정리해도 내부 mode/origin/operational_use 및 영상 바깥 재생 고지는 보존한다."
+  ]
+}

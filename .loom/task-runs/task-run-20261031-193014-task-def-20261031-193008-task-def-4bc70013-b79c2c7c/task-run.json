@@ -1,0 +1,40 @@
+{
+  "id": "task-run-20261031-193014-task-def-20261031-193008-task-def-4bc70013-b79c2c7c",
+  "job_run_id": "job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02",
+  "task_definition_id": "task-def-20261031-193008-task-def-4bc70013",
+  "status": "DONE",
+  "created_at": "2026-10-31T19:30:14+00:00",
+  "updated_at": "2026-10-31T20:12:09+00:00",
+  "legacy_task_id": "task-20261031-193008-task-ba4da975",
+  "attempt": 1,
+  "assigned_agent": "foreground",
+  "worker_id": "",
+  "heartbeat_at": "",
+  "lease_expires_at": "",
+  "queued_at": "",
+  "started_at": "2026-10-31T19:30:14+00:00",
+  "completed_at": "2026-10-31T20:12:09+00:00",
+  "last_error": "",
+  "commit_refs": [
+    "67933ceebd11790bd02a8543a62fbedc02c00671",
+    "a63b1bed8a0fc63b9ab588042e6c9a62f5159c8d"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-10-31T20:12:09+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-193008-task-ba4da975/agent-events.jsonl",
+    ".loom/tasks/task-20261031-193008-task-ba4da975/artifacts.json",
+    ".loom/tasks/task-20261031-193008-task-ba4da975/context.md",
+    ".loom/tasks/task-20261031-193008-task-ba4da975/decision.md",
+    ".loom/tasks/task-20261031-193008-task-ba4da975/git-snapshot.json",
+    ".loom/tasks/task-20261031-193008-task-ba4da975/logs.txt",
+    ".loom/tasks/task-20261031-193008-task-ba4da975/previous-results.md",
+    ".loom/tasks/task-20261031-193008-task-ba4da975/prompt.md",
+    ".loom/tasks/task-20261031-193008-task-ba4da975/result.md",
+    ".loom/tasks/task-20261031-193008-task-ba4da975/troubleshooting.md",
+    "docs/V2/delivery/filming-scenario-pipeline.md"
+  ],
+  "checkpoint_ids": [],
+  "review_required_reason": ""
+}

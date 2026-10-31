@@ -1,6 +1,6 @@
 # A·B 촬영 시나리오와 지역 안내 파이프라인
 
-2026-11-01 KST. 사용자 제공 `봉화지기 2분 시연 영상 계획`의 같은 산불·서로 다른 사용자 흐름을 구현한다. 이 문서의 검증 결과는 실제 실행 후 갱신한다.
+2026-11-01 KST. 사용자 제공 `봉화지기 2분 시연 영상 계획`의 같은 산불·서로 다른 사용자 흐름을 구현한다. 실제 서버 실행과 휴대폰 확인 결과를 기록했다.
 
 ## 데이터와 판단의 구분
 
@@ -34,15 +34,35 @@
 일반 서버의 기존 API 컨테이너에서 실행한다. 비공개 상태 파일에는 테스트 계정 토큰이 들어가므로 `/accounts` 아래 권한 600으로만 저장하고 Git·채팅에 복사하지 않는다. 기본 실행은 새 시나리오와 A/B 계정을 만들며 기존 사용자 데이터를 지우지 않는다.
 
 ```sh
-python tools/filming_scenario.py prepare --state /accounts/filming-run.json
-python tools/filming_scenario.py trigger --state /accounts/filming-run.json
-python tools/filming_scenario.py verify --state /accounts/filming-run.json
+python tools/filming_scenario.py prepare --state /accounts/filming-run.json --bundle /accounts/filming/yeongdeok-20250325.json
+python tools/filming_scenario.py trigger --state /accounts/filming-run.json --bundle /accounts/filming/yeongdeok-20250325.json
+python tools/filming_scenario.py verify --state /accounts/filming-run.json --bundle /accounts/filming/yeongdeok-20250325.json
 ```
 
 `all`은 위 세 단계를 순서대로 수행한다. `prepare`는 공식 자료 임베딩 저장→분석 큐의 검색→지역 조건 저장과 홈 카드 준비까지 진행한다. `trigger`는 긴급 큐의 공식 기록과 분석 큐의 같은 사건 자료를 넣고 Qwen 사건 통합을 기다린다. `verify`는 A/B 실제 Qwen 텍스트 답변, 확인 전 상태 불변, 확인 후 저장·정책 갱신, A 경로 숨김/B 참고 경로를 확인한다. 결과 요약은 상태 파일과 같은 위치의 `.report.json`에 생성하며 원문 발화·사용자 ID·토큰은 제외한다.
 
 기존 휴대폰에 역할을 준비할 때는 운영자가 대상 계정을 정확히 확인한 뒤 `prepare --scenario mobile-demo --phone-user <확인한 계정> --phone-role A`를 사용한다. 이 명령은 그 계정의 촬영용 프로필과 합성 위치를 바꾼다. 실제 GPS를 수집하지 않는다. A/B 위치는 서로 다르므로 촬영 중 앱의 기본 위치 설정 버튼으로 덮어쓰지 않는다. 위치·현재 상태의 기본 만료는 5분이며 각 실행 단계에서 위치를 새로 입력한다.
 
-## 검증 상태
+## 검증
 
-출처/시간 정밀도·관측하지 않은 안개 미제공·사전 정보와 현재 동반 상태 구분에 대한 자료 계약 검사 3개를 통과했다. 전체 서버 회귀, 일반 서버 배포와 실모델 파이프라인 실행은 진행 중이다. 실제 예측·학습·119 연락·GPS·Firebase 발신은 변경하지 않는다.
+최종 서버 런타임은 `67933ceebd11790bd02a8543a62fbedc02c00671`이며 일반 서버에 배포했다. 전체 PostgreSQL 회귀 141개, Ruff, 변경 공백 검사를 통과했다. [익명화한 파이프라인 결과](filming-pipeline-verification.json)와 [검색·모델 메타데이터](filming-model-metadata.json)를 함께 남긴다.
+
+- 공식 출처 6개를 실제 임베딩 모델로 저장했고, 지역/사건 분석에서 각각 5개 근거를 검색했다.
+- 인터넷 Google News RSS 검색도 실제 호출했다. 이 과거 기간 질의는 결과 0건이어서 저장한 공식 자료만 사용했다. 인터넷 검색 성공으로 추가 근거를 확보했다고 주장하지 않는다.
+- 긴급 큐 입력 후 A 1.553초, B 1.564초에 active/inside 경보 API가 조회됐다. Qwen 통합 시작 전에 확인했다. 이는 휴대폰 종단 알림 지연 측정값은 아니다.
+- Qwen 사건 통합: 실제 모델 `Qwen/Qwen3-4B-Instruct-2507`, 입력1506/출력160토큰, 6.634초, 1회 성공. JSON 및 원문 인용 검사를 통과했다.
+- A 초기 ‘지금 아이와 함께 계신가요?’ → 실제 Qwen 상태 제안 → 확인 전 상태 불변 → 확인 후 아이 동반과 보호 행동 추가. 위급 유지, 통제 경로 좌표 미제공.
+- B 초기 ‘보조기구를 사용해 혼자 이동할 수 있나요?’ → 실제 Qwen 상태 제안 → 확인 후 혼자 있음·이동 가능 반영. 대피 유지, 보조기구 행동과 참고 경로 제공.
+- 앱 0.4.0 / versionCode6, 78개 앱 검사, 웹 번들, Android release 빌드·기존 삼성폰 업데이트 설치를 완료했다.
+- 실제 단말 네이버 지도·A 위치·지역 행동요령·공통/어린이 준비 카드와 신규 경보 배너를 CUA로 확인했다. 사용자는 알림음1회·위급3단계·아이 질문도 모두 확인했다. 새 A/B 전체 음성 발화 촬영은 이 적용 이후 사용자 순서로 진행한다.
+- 기존 synthetic `mobile-demo/mobile-fire`는 feed_visibility=archived로 보관했다. 원문과 정책 이력89개를 보존하고 현행 목록·정책 행동·경로·재발신에서 제외했다. 공식 경보 해제를 조작하지 않았다.
+
+실제 예측 모델 연결·GPU 학습·119 연락·GPS 수집·Firebase 원격 발신은 변경하지 않았다. 실제 단말에서 확인한 새 경보음은 전경 앱이 서버 갱신을 받은 뒤 발생시킨 로컬 알림이다.
+
+## 검증 중 수정
+
+처음 Qwen 통합은 출력이512토큰 한도에 닿아 거절됐다. 요약80자·근거2개·인용8~40자로 요청을 줄였고, 불완전 JSON 거절은 유지했다. B 발화는 질문 enum 빈 값과 이동 가능 누락이 있어 복수 상태 추출과 질문 없음 형식을 명시했다. A/B 실제 모델 재검사와 새 격리 시나리오 전체 재생을 통과했다. 실패 실행 기록은 서버에 그대로 보존한다.
+
+## 다음 휴대폰 진행
+
+기존 휴대폰 A 계정의 비공개 운영 상태는 `/accounts/filming/phone-ready-20261101.json`이며 준비·경보·통합까지 완료했다. 현재 상태 답변은 사용자가 ‘상태 반영’을 눌러 확인한다. 위치는5분 만료되므로 다음 촬영 시작 때 운영자가 해당 역할 위치를 갱신한다. A를 B 기본 안내 위치 버튼으로 덮어쓰지 않는다. 두 역할의 정식 비교는 각각의 계정으로 진행하며, 같은 사용자의 확인 상태를 다른 역할의 답변으로 간주하지 않는다.

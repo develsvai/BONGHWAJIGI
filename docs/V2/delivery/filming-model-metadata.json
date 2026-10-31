@@ -1,0 +1,51 @@
+{
+  "checked_at": "2026-10-31T20:09:32.815702+00:00",
+  "runtime_commit": "67933ceebd11790bd02a8543a62fbedc02c00671",
+  "read_only": true,
+  "web_search_enabled": true,
+  "analyses": [
+    {
+      "phase": "regional_conditions",
+      "status": "ready_for_qwen",
+      "attempts": 1,
+      "web_search": {
+        "status": "no_results",
+        "provider": "google_news_rss",
+        "result_count": 0,
+        "searched_at": "2026-10-31T20:08:49.565890+00:00"
+      },
+      "retrieved_evidence_count": 5,
+      "web_evidence_selected": 0,
+      "warnings": []
+    },
+    {
+      "phase": "incident",
+      "status": "ready_for_qwen",
+      "attempts": 1,
+      "web_search": {
+        "status": "no_results",
+        "provider": "google_news_rss",
+        "result_count": 0,
+        "searched_at": "2026-10-31T20:08:53.598682+00:00"
+      },
+      "retrieved_evidence_count": 5,
+      "web_evidence_selected": 0,
+      "warnings": []
+    }
+  ],
+  "integrations": [
+    {
+      "status": "complete",
+      "attempts": 1,
+      "error_code": null,
+      "generation": {
+        "model": "Qwen/Qwen3-4B-Instruct-2507",
+        "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+        "input_tokens": 1506,
+        "output_tokens": 160,
+        "elapsed_ms": 6634.01
+      },
+      "schema_and_exact_quote_validated": true
+    }
+  ]
+}
