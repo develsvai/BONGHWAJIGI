@@ -272,7 +272,6 @@ def main():
                 "occurred_at": timestamp(),
             },
             user="independent",
-            code=202,
         )
         assert receipt["data"]["meaning"] == "client_reported_only"
         put(
