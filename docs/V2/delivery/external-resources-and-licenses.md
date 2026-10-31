@@ -1,6 +1,6 @@
 # 봉화지기 외부 자원 활용 내역과 라이선스
 
-최종 작성일: **2026-11-01 KST**. 구현·수집·설치 기록 기준: **2026-10-31**. 발표 지침의 **구분 · 명칭 · 용도 · 라이선스** 형식으로 작성한 서버·GPU·학습 자원 명세다. 사용자가 요청한 대로 `BONGHAWJIGI_APP`은 조회하지 않았다. 따라서 앱의 지도 SDK, 폰트, 이미지, 단말 SDK 목록은 이 문서의 확인 범위에 포함되지 않는다.
+최종 작성일: **2026-11-01 KST**. 구현·수집·설치 기록 기준: **2026-10-31**. 발표 지침의 **구분 · 명칭 · 용도 · 라이선스** 형식으로 작성한 서버·GPU·학습 자원 명세다. 최초 서버 조사에서는 앱을 제외했다. 2026-11-01 Android 지도 연결 후속 작업에서 확인한 네이버 지도 자원은 마지막 절에 추가했다. 앱의 나머지 폰트·이미지·단말 SDK 전체를 조사한 목록은 아니다.
 
 `BONGHWAJIGI`의 코드·배포 설정·시연 기록·데이터 출처·두 잠금 파일 및 로컬/GPU 가상환경의 배포 메타데이터를 대조했다. 아래에서 **사용**은 실제 호출·설치·실험 근거가 있는 항목, **구성**은 코드/설정만 있는 항목, **조사**는 카탈로그·문서·샘플을 살펴본 항목이다. 설치는 해당 기능의 실제 실행과 다르며, 데이터 다운로드는 학습 사용과 다르다.
 
@@ -391,7 +391,7 @@ APNs 직접 전송, 카카오/네이버/Google Maps/Mapbox 지도 API, 경로 �
 | 기타 | ESA CCI Land Cover 판본 조건 확인 | 실제 내려받은 2015 자료의 판본/공급 경로에 대응하는 이용조건을 최종 확인할 항목 | STAC의 `other`를 CC0로 치환하지 않음. 공급자·판본 조건 유지 |
 | 기타 | 정부 행동요령과 기사별 권리 확인 | 공개 자료라도 각 페이지의 공공누리 유형과 제3자 저작물 표시가 다름 | 안전한TV 제4유형 및 언론사별 권리를 구분. 기사 전문·이미지·영상의 자유 재배포를 주장하지 않음 |
 | 기타 | 프로젝트 자체 배포 라이선스·Loom 라이선스 | 외부 공개 또는 코드 재배포 시 확정할 항목 | 미표기 상태를 공개 사용 허가로 해석하지 않음 |
-| 기타 | 앱 외부 자원 목록 | 사용자 요청으로 앱을 조회하지 않은 범위 | 앱팀에서 지도·폰트·이미지·SDK 등의 사용 항목을 별도로 작성해야 전체 앱까지 포함한 제출 자료가 됨 |
+| 기타 | 앱 외부 자원 목록 | Android 네이버 지도 자원은 마지막 절에 추가 확인; 나머지 앱 자원은 별도 조사 범위 | 전체 앱 제출 자료에는 폰트·이미지·나머지 SDK의 사용 항목과 배포 고지도 별도로 대조해야 함 |
 
 문서를 갱신할 때는 `pyproject.toml`, `training/pyproject.toml`, `uv.lock`, `training/uv.lock`, `deploy/`, 데이터 다운로드 코드/출처 manifest와 실제 모델 revision을 다시 대조한다. 조사만 한 자료를 실제 사용 표로 옮기는 경우에는 API 응답·다운로드·실행 근거와 해당 판본의 이용조건을 함께 갱신한다. 인증키, 비밀번호, 서비스 계정 비공개 키, 서명된 일회성 다운로드 토큰은 이 문서와 근거 파일에 저장하지 않는다.
 
@@ -541,3 +541,19 @@ NCCL·NVTX의 조건을 바이너리에서 확인했고, NVSHMEM도 실제 배�
 | 동적 API·배포 경로 | `https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/KOR/ADM0/geoBoundaries-KOR-ADM0.geojson` | `training/src/bonghwa_training/korea_download.py` | 본문 API 표의 상태·조건 적용 |
 
 추가 검사 범위는 원본 URL 51개와 동적 경로 3개, 일반 서버 52개·GPU 4개 HTTP 동작, CUDA/NVIDIA 36개 패키지·버전이다. API의 동작 수는 메서드와 경로 조합으로 세었으며 동일 경로의 GET/PUT/DELETE를 각각 구분했다. [기존 전체 출처 JSON](external-resources/data-and-content-sources.json)과 [보충 검증 JSON](external-resources/supplemental-verification-20261101.json)을 함께 제공한다. 저장소에 새 자료가 들어오면 해당 자료의 출처·실제 사용 여부·조건을 갱신해야 한다.
+
+## Android 네이버 지도 연결 자원 — 2026-11-01
+
+사용자가 승인한 Android 실지도 연결의 추가 조사다. 앱의 지도 소스·고정 npm 패키지·Gradle이 받은 AAR를 대조했다. SDK 초기화 콜백은 타일 로딩 또는 인증 성공의 증거로 취급하지 않는다. 최종 단말 확인과 APK 출처는 [지도 연결 검증](../../../apps/mobile/docs/11-naver-map-integration.md)과 [메인 배포 기록](mobile-submodule-deployment.md)에 남긴다.
+
+| 구분 | 명칭 | 용도 | 라이선스 |
+| --- | --- | --- | --- |
+| 오픈소스 | `@mj-studio/react-native-naver-map` 2.9.1 | React Native 화면과 Android 네이버 지도 SDK 연결, 위치 마커·정확도 원·서버 사건 영역 표시 | 설치 패키지 `LICENSE`의 **MIT**, Copyright (c) 2024 MJ Studio. 저작권·허가 고지 유지. [공급자 저장소](https://github.com/mym0404/react-native-naver-map). 이 MIT는 래퍼 코드에 적용되며 네이버 SDK·지도 데이터 이용권과 구분 |
+| 기타 | NAVER Maps Android SDK `com.naver.maps:map-sdk:3.23.2` | Android 네이티브 지도 렌더링과 SDK가 수행하는 지도 요청. 2D 화면에서 사용 | [공식 Maven AAR](https://repository.map.naver.com/archive/maven/com/naver/maps/map-sdk/3.23.2/map-sdk-3.23.2.aar)의 `assets/navermap-sdk/LICENSE`: **NAVER Corp., All rights reserved.** SDK 자체 고지와 동봉 `NOTICE`의 구성요소별 조건을 유지. 데모 저장소의 Apache-2.0 또는 래퍼 MIT를 SDK 전체 라이선스로 표시하지 않음 |
+| 외부 API | NAVER Cloud Platform Maps · Dynamic Map (Android Mobile Dynamic Map) | 등록된 Android 앱의 배경 지도 표시. 앱은 발급된 Key ID를 SDK에 전달하며 서버가 지도 API를 대행하지 않음 | **상용 서비스 이용약관** — [공식 Maps 서비스 이용약관](https://xv-ncloud.pstatic.net/images/provision/%5B%EB%AF%BC%EA%B0%84%5DMaps%EC%84%9C%EB%B9%84%EC%8A%A4%EC%9D%B4%EC%9A%A9%EC%95%BD%EA%B4%80_v0.4_%28CLEAN%29_1742433558704.pdf), [공식 Android 시작 가이드](https://navermaps.github.io/android-map-sdk/guide-ko/1.html). 무료 이용량 여부와 별개로 약관·등록 앱 범위·표시 조건 적용. API 결과의 별도 DB화·재배포 허가를 뜻하지 않음 |
+
+지도 로고와 기본 법적 공지 접근을 유지한다. SDK 내부 `NOTICE`에 포함된 Mapbox/MapLibre·Boost·ICU 등 제3자 고지는 SDK의 소유권 표기와 별개다. 앱이 Maps 결과를 수집해 별도 지도 DB를 구축하거나 타일을 재호스팅하지 않는다. 사건 사각형과 사용자 위치는 앱의 기존 서버 입력이며 네이버가 산불 확산·대피로를 판정한 결과가 아니다. Directions·Geocoding·Reverse Geocoding·Static Map·Web Dynamic Map API는 이번 연결에서 사용하지 않는다.
+
+설치 패키지의 `LICENSE` SHA256은 `52fd4ae7199af5b0b348fc3b870a3e0f7d2070e159923e3baec969677fb539e3`이다. 실제 SDK 3.23.2 AAR SHA256은 `ab7452952c2da1aa111ebf57a8accfe9a4beaa3fa63a3217ada2d606ea2a03f7`, 그 안의 `assets/navermap-sdk/LICENSE`는 `e0cb568489be575b91b39762d071060101609f129c0d4e02a74f019e96839263`, `assets/navermap-sdk/NOTICE`는 `16b6c4e325f85b78eb7f49917c6507fd3627b2b5176bf999b29582889164967a`다. 기존 서버/Python 의존성 전수 검증 JSON은 이 Android 배포물까지 검사한 것으로 해석하지 않는다.
+
+새 Maps의 Key ID는 래퍼 2.9.1 Expo plugin의 `client_id` 옵션으로 주입한다. plugin은 Android `com.naver.maps.map.NCP_KEY_ID`를 설정한다. 실제 값은 문서·Git에 기록하지 않으며 Client Secret은 이 네이티브 지도 연결에 사용하지 않는다. 앱 등록 방법은 [공식 Application 가이드](https://guide.ncloud-docs.com/docs/application-maps-app-vpc)를 따른다.

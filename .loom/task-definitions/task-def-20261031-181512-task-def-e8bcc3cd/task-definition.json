@@ -1,0 +1,33 @@
+{
+  "id": "task-def-20261031-181512-task-def-e8bcc3cd",
+  "job_definition_id": "job-20261031-002017-v2-fe3bfad0",
+  "title": "네이버 실지도 검증 앱 버전을 서브모듈에 고정하고 외부 자원 문서 갱신",
+  "description": "사용자가 승인한 네이버 지도 앱 연결·APK 검증이 완료되면 최종 앱 원격SHA를 apps/mobile에 고정하고 메인 배포 출처 및 지도 자원·라이선스 범위를 갱신한다. 앱 담당자가최종QA와SHA를제공하기전에는pin을확정하지않는다.",
+  "created_at": "2026-10-31T18:15:12+00:00",
+  "updated_at": "2026-10-31T18:15:30+00:00",
+  "order_index": 25,
+  "legacy_task_id": "task-20261031-181512-task-edacb988",
+  "depends_on": [
+    "task-def-20261031-170820-task-def-4d8799e4"
+  ],
+  "expected_output": "검증된 지도 APK 앱 gitlink; 업데이트된 배포 출처와 네이버 지도 자원 문서; 재귀clone/API/manifest 원격 검증 기록",
+  "done_condition": "최종 앱 원격SHA와APK manifest를대조해gitlink를고정하고 새checkout의소스검사와메인정상push가통과한다. 지도상태는실제검증근거대로갱신하고타채팅license/training/presentation변경을보존한다.",
+  "in_scope": "앱소스 읽기검토; main submodule pin; mobile-submodule-deployment.md 및 external-resources-and-licenses.md의네이버지도부분; 해당Loom기록과normalpush",
+  "out_of_scope": "앱코드수정;지도키/Secret수집·출력;실제GPS·서버API·GPU·학습변경;타채팅변경커밋;forcepush",
+  "validation_hint": "원격앱SHA존재;manifest실행SHA와APK해시;실지도QA근거;gitlink160000;freshrecursiveclone및sourcechecker;공식라이선스출처;gitdiffcheck;Loomstrict",
+  "required_docs": [
+    "docs/V2/delivery/mobile-submodule-deployment.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/mobile-submodule-deployment.md",
+    "docs/V2/delivery/external-resources-and-licenses.md"
+  ],
+  "document_output_exceptions": [],
+  "default_agent": "",
+  "context_policy_id": "",
+  "executor_policy_id": "",
+  "review_policy": "",
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

@@ -1,0 +1,6 @@
+[2026-10-31T18:15:31+00:00] agent=foreground task=task-20261031-181512-task-edacb988 Foreground task session started.
+2026-10-31T18:15Z Task create/run, 이전 앱 pin과 배포 근거·외부자원 scope 확인. 지도SDK2.9.1 읽기 검토와 앱 코드리뷰 두 항목 전달/반영 확인. 최종 지도 QA/SHA 대기.
+
+2026-11-01 KST: wrapper MIT·실제 SDK3.23.2 AAR LICENSE/NOTICE·공식 서비스약관 확인. 네이버 지도 자원 문서 초안 추가. 최종 APK QA와 원격 SHA 대기.
+
+2026-10-31 18:23:43 UTC: 기존 단말 위치 revision2·유효기한과 mobile-fire bounds read-only 확인; projection error없음. 앱 담당자 타일/마커/카메라 QA 확인, 상세 사건 영역과 최종SHA 대기.
