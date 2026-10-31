@@ -1,0 +1,44 @@
+{
+  "before": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "4a7b25355c7befd23448fcad7fdae4d227c39cd8",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/events.jsonl",
+      ".loom/job-runs/job-run-20261031-112708-job-20261031-002626-job-97436430-40a6fc29/job-run.json",
+      ".loom/jobs/job-20261031-002017-v2-fe3bfad0/job.json",
+      ".loom/jobs/job-20261031-002626-api-18805e8a/job.json",
+      ".loom/jobs/job-20261031-002626-job-97436430/job.json",
+      ".loom/memory/docs-index.json",
+      ".loom/tasks/task-20261031-111807-task-9a960503/decision.md",
+      ".loom/tasks/task-20261031-111807-task-9a960503/logs.txt",
+      ".loom/tasks/task-20261031-111807-task-9a960503/troubleshooting.md",
+      "training/README.md",
+      "training/src/bonghwa_training/goes_build.py",
+      "training/src/bonghwa_training/goes_train.py",
+      "training/src/bonghwa_training/kma_download.py",
+      "training/tests/test_kma.py",
+      "training/tools/train_hourly_gpu.sh"
+    ],
+    "untracked_files": [
+      ".loom/task-definitions/task-def-20261031-132925-3-969c24bd/",
+      ".loom/task-definitions/task-def-20261031-132925-api-5fee50e9/",
+      ".loom/task-definitions/task-def-20261031-132925-mvp-e0ba031a/",
+      ".loom/task-runs/task-run-20261031-132929-task-def-20261031-132925-3-969c24bd-13aa2f3c/",
+      ".loom/tasks/task-20261031-132925-3-8d055932/",
+      ".loom/tasks/task-20261031-132925-api-181c0498/",
+      ".loom/tasks/task-20261031-132925-mvp-1d561841/",
+      "docs/V2/delivery/korea-wildfire-improvement.md",
+      "training/configs/korea-gk2a-hourly-v1.json",
+      "training/src/bonghwa_training/hourly_context.py",
+      "training/src/bonghwa_training/kma_event.py",
+      "training/src/bonghwa_training/kma_profile.py",
+      "training/tests/test_context.py",
+      "training/tools/run_kma_research.sh"
+    ],
+    "captured_at": "2026-10-31T13:29:29+00:00"
+  },
+  "after": null
+}

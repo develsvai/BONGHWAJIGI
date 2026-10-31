@@ -293,6 +293,60 @@ def evaluate(session, projection, moment):
                     }
                 )
     actions.sort(key=lambda action: (action["priority"], action["action_id"]))
+    personal = {
+        "level": "unknown",
+        "label": "대응 단계 결정 대기",
+        "policy_version": rules["revision"] if rules else None,
+        "reason_codes": sorted(set(reasons)),
+    }
+    if rules and rules["review_state"] == "approved_mvp":
+        from bonghwajigi.policy.three_stage import decide
+
+        state_row = entity("state", incident_id + "/" + user)
+        environment_row, route_row = (
+            entity("environment", incident_id),
+            entity("route", incident_id + "/" + user),
+        )
+        selected.extend([state_row, environment_row, route_row])
+
+        def timed(row):
+            if not row or not fresh(row.body, moment):
+                return {}
+            if row.kind in {"environment", "route"} and not row.body["source"]["verified"]:
+                return {}
+            return row.body
+
+        personal, ids = decide(
+            profile,
+            timed(state_row),
+            timed(environment_row),
+            timed(route_row),
+            alerts,
+            projection.content,
+            related,
+        )
+        actions = []
+        for identifier in ids:
+            guide = entity("guidance", identifier)
+            selected.append(guide)
+            if (
+                guide
+                and guide.body["review_state"] == "approved_mvp"
+                and (guide.body["source"]["verified"] and fresh(guide.body, moment, "valid_from"))
+                and at(guide.body["source"]["published_at"]) <= moment
+            ):
+                actions.append(
+                    {
+                        "action_id": identifier,
+                        "text": guide.body["text"],
+                        "priority": len(actions) + 1,
+                        "guidance_id": identifier,
+                        "guidance_revision": guide.revision,
+                        "source": guide.body["source"],
+                        "approved_policy": True,
+                        "reason_code": "reviewed_three_stage_policy",
+                    }
+                )
     prediction_state = "unavailable"
     probability = None
     if prediction and fresh(prediction, moment):
@@ -352,12 +406,7 @@ def evaluate(session, projection, moment):
             else "simulation_preview"
         ),
         "relevance": {"status": relation, "reason_code": relation_reason},
-        "personal_response": {
-            "level": "unknown",
-            "label": "대응 단계 결정 대기",
-            "policy_version": rules["revision"] if rules else None,
-            "reason_codes": sorted(set(reasons)),
-        },
+        "personal_response": personal,
         "actions": actions,
         "official_alerts": sorted(alerts, key=lambda item: item["alert_id"]),
         "prediction": {
@@ -380,16 +429,31 @@ def evaluate_once(sessions, check_seconds=30, wall_time=None):
     wall_time = wall_time or now()
     changed = 0
     with sessions.begin() as session:
+        due = select(PolicyProjection.scenario_id).where(
+            or_(
+                PolicyProjection.requested > PolicyProjection.applied,
+                PolicyProjection.next_check_at <= wall_time,
+            )
+        )
+        # 입력 쓰기와 같은 순서(scope → projection → change sequence)로 잠근다.
+        scopes = session.scalars(
+            select(PolicyScope)
+            .where(PolicyScope.scenario_id.in_(due))
+            .order_by(PolicyScope.scenario_id)
+            .limit(20)
+            .with_for_update(skip_locked=True)
+        ).all()
         rows = session.scalars(
             select(PolicyProjection)
             .where(
+                PolicyProjection.scenario_id.in_([scope.scenario_id for scope in scopes]),
                 or_(
                     and_(
                         PolicyProjection.requested > PolicyProjection.applied,
                         PolicyProjection.error_code.is_(None),
                     ),
                     PolicyProjection.next_check_at <= wall_time,
-                )
+                ),
             )
             .order_by(PolicyProjection.next_check_at)
             .limit(50)
@@ -402,6 +466,7 @@ def evaluate_once(sessions, check_seconds=30, wall_time=None):
                     content = evaluate(session, row, moment)
                     fingerprint = digest(content)
                     if fingerprint != row.content_hash:
+                        old = row.content
                         row.revision += 1
                         row.content, row.content_hash = content, fingerprint
                         session.add(
@@ -412,6 +477,9 @@ def evaluate_once(sessions, check_seconds=30, wall_time=None):
                                 content=content,
                             )
                         )
+                        from bonghwajigi.notifications.service import plan_changed
+
+                        plan_changed(session, row, old)
                         changed += 1
                     row.applied, row.evaluated_at, row.error_code = row.requested, moment, None
                     row.next_check_at = wall_time + timedelta(seconds=check_seconds)
@@ -427,6 +495,13 @@ def projection_view(session, row):
     expired = bool(content and content["valid_until"] and at(content["valid_until"]) <= moment)
     pending = row.requested > row.applied
     if content and (expired or pending or row.error_code):
+        content["last_known_response"] = copy.deepcopy(content["personal_response"])
+        content["personal_response"] = {
+            "level": "unknown",
+            "number": None,
+            "label": "확인 중",
+            "reason_codes": ["INPUT_REFRESH_REQUIRED"],
+        }
         content["actions"] = []
         content["state"] = "needs_refresh" if expired else "pending_update"
         content["prediction"]["status"], content["prediction"]["probability"] = "unavailable", None

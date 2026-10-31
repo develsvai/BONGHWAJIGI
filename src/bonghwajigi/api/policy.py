@@ -6,12 +6,15 @@ from bonghwajigi.common.security import service_auth
 from bonghwajigi.contracts.policy import (
     AlertInput,
     ClockInput,
+    CurrentStateInput,
+    EnvironmentInput,
     GuidanceInput,
     Identifier,
     IncidentInput,
     LocationInput,
     PredictionInput,
     ProfileInput,
+    RouteInput,
     RuleSetInput,
 )
 from bonghwajigi.db.analysis_models import now
@@ -126,6 +129,55 @@ def attach_policy(app, settings):
     @router.put("/rules", status_code=202)
     def rules(scenario_id: Identifier, body: RuleSetInput):
         return mutate(lambda s: put_entity(s, scenario_id, "rules", "active", body))
+
+    @router.post("/bootstrap-policy", status_code=202)
+    def bootstrap_policy(scenario_id: Identifier):
+        from bonghwajigi.policy.three_stage import bootstrap
+
+        return mutate(lambda s: bootstrap(s, scenario_id, now()))
+
+    @router.put("/incidents/{incident_id}/environment", status_code=202)
+    def environment(scenario_id: Identifier, incident_id: Identifier, body: EnvironmentInput):
+        return mutate(
+            lambda s: put_entity(
+                s, scenario_id, "environment", incident_id, body, incident_id=incident_id
+            )
+        )
+
+    @router.put("/incidents/{incident_id}/users/{user_id}/state", status_code=202)
+    def state(
+        scenario_id: Identifier,
+        incident_id: Identifier,
+        user_id: Identifier,
+        body: CurrentStateInput,
+    ):
+        return mutate(
+            lambda s: put_entity(
+                s,
+                scenario_id,
+                "state",
+                incident_id + "/" + user_id,
+                body,
+                user_id=user_id,
+                incident_id=incident_id,
+            )
+        )
+
+    @router.put("/incidents/{incident_id}/users/{user_id}/route", status_code=202)
+    def route(
+        scenario_id: Identifier, incident_id: Identifier, user_id: Identifier, body: RouteInput
+    ):
+        return mutate(
+            lambda s: put_entity(
+                s,
+                scenario_id,
+                "route",
+                incident_id + "/" + user_id,
+                body,
+                user_id=user_id,
+                incident_id=incident_id,
+            )
+        )
 
     @router.get("/users/{user_id}/plans/{incident_id}")
     def plan(scenario_id: Identifier, user_id: Identifier, incident_id: Identifier):

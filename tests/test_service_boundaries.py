@@ -119,12 +119,16 @@ assert app.conf.worker_concurrency == 1
 assert not any(name == 'torch' or name == 'transformers'
     or name.startswith('bonghwajigi.gpu_api')
     or name.startswith('bonghwajigi.workers.analysis') for name in sys.modules)
-try:
+from unittest.mock import MagicMock, patch
+sessions = MagicMock()
+with patch('bonghwajigi.db.session.session_factory', return_value=sessions), \\
+     patch('bonghwajigi.events.urgent.process_urgent', return_value=False) as handler:
     process.run('fixture-event')
-except NotImplementedError:
-    print(json.dumps({'isolation': 'ok', 'processing': 'not_implemented'}))
-else:
-    raise AssertionError('미구현 작업이 성공으로 처리됨')
+    handler.assert_called_once_with(sessions, 'fixture-event')
+assert not any(name == 'torch' or name == 'transformers'
+    or name.startswith('bonghwajigi.gpu_api')
+    or name.startswith('bonghwajigi.workers.analysis') for name in sys.modules)
+print(json.dumps({'isolation': 'ok', 'processing': 'independent_urgent_handler'}))
 """
     result = subprocess.run(
         [sys.executable, "-c", probe],

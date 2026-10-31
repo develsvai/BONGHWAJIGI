@@ -21,6 +21,10 @@ class ClockInput(Versioned):
 class ProfileInput(Versioned):
     mobility_assistance: bool = False
     children_accompanying: bool = False
+    mobility: Literal["unknown", "independent", "needs_time", "requires_help"] = "unknown"
+    helper_registered: bool | None = None
+    vehicle_access: bool | None = None
+    communication: Literal["text", "audio", "both"] = "text"
 
 
 class LocationInput(Versioned):
@@ -65,6 +69,7 @@ class AlertInput(Versioned):
     raw_text: str = Field(min_length=1, max_length=4000)
     source: Source
     validity_confirmed: bool = False
+    instruction_kind: Literal["evacuate", "prepare", "information", "unknown"] = "unknown"
 
     @model_validator(mode="after")
     def check(self):
@@ -94,7 +99,7 @@ class PredictionInput(Versioned):
 
 
 class GuidanceInput(Versioned):
-    review_state: Literal["draft", "simulation_only"]
+    review_state: Literal["draft", "simulation_only", "approved_mvp"]
     text: str = Field(min_length=1, max_length=1000)
     source: Source
     valid_from: AwareDatetime
@@ -116,11 +121,59 @@ class Rule(BaseModel):
 
 
 class RuleSetInput(Versioned):
-    review_state: Literal["draft", "simulation_only"]
+    review_state: Literal["draft", "simulation_only", "approved_mvp"]
+    policy_version: Literal["wildfire-three-stage-v1"] | None = None
     rules: list[Rule] = Field(max_length=30)
 
     @model_validator(mode="after")
     def check(self):
+        if self.review_state == "approved_mvp" and (
+            self.policy_version != "wildfire-three-stage-v1" or self.rules
+        ):
+            raise ValueError("확정 MVP 정책은 고정된 3단계 실행기를 사용합니다.")
         if len({rule.action_id for rule in self.rules}) != len(self.rules):
             raise ValueError("행동 ID는 중복될 수 없습니다.")
         return self
+
+
+class TimedInput(Versioned):
+    observed_at: AwareDatetime
+    expires_at: AwareDatetime
+
+    @model_validator(mode="after")
+    def check_time(self):
+        if self.expires_at <= self.observed_at:
+            raise ValueError("유효 종료 시각은 관측 시각 이후여야 합니다.")
+        return self
+
+
+class EnvironmentInput(TimedInput):
+    hazard_band: Literal["H1", "H2", "H3", "unknown"]
+    source: Source
+    reason: str = Field(min_length=1, max_length=500)
+
+
+class CurrentStateInput(TimedInput):
+    helper_present: bool | None = None
+    can_move: bool | None = None
+    injured: bool | None = None
+    observed_hazard: Literal["unknown", "none", "smoke", "flames", "fear", "trapped"] = "unknown"
+    location_type: Literal["unknown", "house", "outside", "vehicle"] = "unknown"
+    evacuation_status: Literal["unknown", "not_started", "moving", "arrived"] = "unknown"
+    deescalation_confirmed: bool = False
+
+
+class RouteInput(TimedInput):
+    status: Literal["open", "blocked", "unknown"]
+    source: Source
+    reason: str = Field(min_length=1, max_length=500)
+    # open은 현재 이용 가능한 대피 경로, blocked는 이용 가능한 대체 경로도 없다는 뜻이다.
+    destination: str | None = Field(default=None, max_length=300)
+
+
+class UrgentInput(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    incident_id: Identifier
+    alert_id: Identifier
+    incident: IncidentInput
+    alert: AlertInput

@@ -37,15 +37,20 @@ def attach_analysis(app, settings):
 
     @router.post("/internal/v1/scenario-events", status_code=202, response_model=AcceptedJob)
     def receive_event(body: ScenarioEvent):
-        if body.queue != "analysis":
-            raise HTTPException(503, detail="URGENT_INGESTION_NOT_IMPLEMENTED")
         try:
-            payload = AnalysisInput.model_validate(body.payload)
+            if body.queue == "urgent":
+                if not settings.policy_enabled:
+                    raise HTTPException(503, detail="POLICY_NOT_ENABLED")
+                from bonghwajigi.contracts.policy import UrgentInput
+
+                payload = UrgentInput.model_validate(body.payload)
+            else:
+                payload = AnalysisInput.model_validate(body.payload)
         except ValidationError:
             raise HTTPException(422, detail="INVALID_ANALYSIS_PAYLOAD") from None
         normalized = body.model_dump(mode="json")
         normalized["payload"] = payload.model_dump(mode="json")
-        return accept("analysis", body.scenario_id, body.event_id, normalized)
+        return accept(body.queue, body.scenario_id, body.event_id, normalized)
 
     @router.post("/internal/v1/retrieval-documents", status_code=202, response_model=AcceptedJob)
     def receive_document(body: RetrievalDocument):

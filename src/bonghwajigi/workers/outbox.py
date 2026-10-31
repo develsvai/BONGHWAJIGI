@@ -15,7 +15,7 @@ from bonghwajigi.db.session import session_factory
 def publisher(settings):
     app = Celery("analysis_dispatcher", broker=settings.broker_url.get_secret_value())
     app.conf.update(
-        task_queues=(Queue("analysis"),),
+        task_queues=tuple(Queue(name) for name in ("urgent", "analysis", "delivery")),
         task_default_queue="analysis",
         task_create_missing_queues=False,
         task_serializer="json",
@@ -42,10 +42,12 @@ def dispatch_once(sessions, sender, redelivery_seconds=180):
         ).all()
         for row in rows:
             try:
+                job = session.get(AnalysisJob, row.job_id)
+                queue = "urgent" if job.kind == "urgent" else "analysis"
                 sender.send_task(
-                    "bonghwajigi.analysis.process",
+                    f"bonghwajigi.{queue}.process",
                     args=[row.job_id],
-                    queue="analysis",
+                    queue=queue,
                     task_id=f"{row.id}:{row.dispatch_count}",
                     retry=False,
                 )
@@ -57,6 +59,9 @@ def dispatch_once(sessions, sender, redelivery_seconds=180):
             row.error_code = None
             row.next_dispatch_at = now() + timedelta(seconds=redelivery_seconds)
             count += 1
+        from bonghwajigi.notifications.delivery import dispatch_deliveries
+
+        count += dispatch_deliveries(session, sender, redelivery_seconds)
     return count
 
 

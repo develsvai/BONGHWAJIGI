@@ -4,6 +4,7 @@ from sqlalchemy import create_engine, pool
 from bonghwajigi.common.config import Settings
 from bonghwajigi.db import (
     analysis_models,  # noqa: F401
+    delivery_models,  # noqa: F401
     policy_models,  # noqa: F401
 )
 from bonghwajigi.db.base import Base

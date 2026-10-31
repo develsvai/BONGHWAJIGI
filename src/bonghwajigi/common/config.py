@@ -37,6 +37,15 @@ class Settings(BaseSettings):
     policy_qwen_enabled: bool = False
     policy_poll_seconds: float = Field(default=2, ge=0.2, le=60)
     policy_check_seconds: int = Field(default=30, ge=1, le=3600)
+    notifications_enabled: bool = False
+    push_provider: Literal["disabled", "simulation", "fcm"] = "disabled"
+    fcm_project_id: str | None = None
+    fcm_credentials_file: Path | None = None
+    app_enabled: bool = False
+    jwt_secret: SecretStr | None = None
+    jwt_issuer: str = "bonghwajigi-mvp"
+    jwt_audience: str = "bonghwajigi-app"
+    jwt_lifetime_seconds: int = Field(default=86400, ge=300, le=604800)
 
     @model_validator(mode="after")
     def check_token_budget(self) -> "Settings":
