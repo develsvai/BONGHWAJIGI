@@ -56,5 +56,22 @@
     ],
     "captured_at": "2026-10-31T15:36:52+00:00"
   },
-  "after": null
+  "after": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "562b2bc79cd71688b272879c8510ed20fb1aa307",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/job-runs/job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02/job-run.json",
+      ".loom/task-definitions/task-def-20261031-153648-task-def-1ca2885c/task-definition.json",
+      ".loom/tasks/task-20261031-153648-task-46bd9b43/logs.txt",
+      ".loom/tasks/task-20261031-153648-task-46bd9b43/result.md",
+      ".loom/tasks/task-20261031-153648-task-46bd9b43/verification.json"
+    ],
+    "untracked_files": [
+      "training/src/bonghwa_training/distance_prior_experiment.py"
+    ],
+    "captured_at": "2026-10-31T15:41:26+00:00"
+  }
 }

@@ -12,7 +12,7 @@
   "학습_Ruff": "check/format 통과",
   "API_계약": "25경로·67스키마·48HTTP예제·4오류거부 통과",
   "스테이징_검사": {
-    "staged_file_count": 114,
+    "staged_file_count": 116,
     "credential_findings": [],
     "large_files": [],
     "python_syntax_errors": [],
@@ -259,8 +259,8 @@
       },
       {
         "path": ".loom/tasks/task-20261031-153648-task-46bd9b43/decision.md",
-        "blob": "440e625a45070af662529fb9191eadcd8c1ceb99",
-        "bytes": 899
+        "blob": "4e789b9386b408d091f016602fcc767a0725d8cb",
+        "bytes": 912
       },
       {
         "path": ".loom/tasks/task-20261031-153648-task-46bd9b43/git-snapshot.json",
@@ -269,8 +269,8 @@
       },
       {
         "path": ".loom/tasks/task-20261031-153648-task-46bd9b43/logs.txt",
-        "blob": "f1d5843c011949369dffc12841a3c76b65a3c36b",
-        "bytes": 854
+        "blob": "6c90d58f38bbc7a04f87e81cb1feaaf04591dc61",
+        "bytes": 1117
       },
       {
         "path": ".loom/tasks/task-20261031-153648-task-46bd9b43/previous-results.md",
@@ -284,8 +284,8 @@
       },
       {
         "path": ".loom/tasks/task-20261031-153648-task-46bd9b43/result.md",
-        "blob": "0c310cede0ab7f07d76a998e5a2edb1bd3ba6d95",
-        "bytes": 1815
+        "blob": "4d6bda2f5fe2f0d4d3e842cd149e50097886ad39",
+        "bytes": 1899
       },
       {
         "path": ".loom/tasks/task-20261031-153648-task-46bd9b43/task.json",
@@ -294,13 +294,18 @@
       },
       {
         "path": ".loom/tasks/task-20261031-153648-task-46bd9b43/troubleshooting.md",
-        "blob": "6710da1fe5ae7988a2feee01d36ddd71f3f4a766",
-        "bytes": 683
+        "blob": "e4cabdc366ff90df0df299bbcdb2f4c0ab409f29",
+        "bytes": 727
+      },
+      {
+        "path": ".loom/tasks/task-20261031-153648-task-46bd9b43/verification.json",
+        "blob": "3071eb04cf199dc919ae3a8b16ae9174694476d7",
+        "bytes": 22146
       },
       {
         "path": "docs/V2/delivery/korea-wildfire-improvement.md",
-        "blob": "de73671134c57ce65176faae4936018c4d91780b",
-        "bytes": 35652
+        "blob": "ab2366c489c5960224a12cd0424a0ba6ea4aab8b",
+        "bytes": 39843
       },
       {
         "path": "migrations/versions/f735a2ec901b_mobile_refresh_sessions.py",
@@ -346,6 +351,11 @@
         "path": "src/bonghwajigi/policy/three_stage.py",
         "blob": "e0d3e90d27f399f8b363613eefc57dfb7ae83cdb",
         "bytes": 8318
+      },
+      {
+        "path": "tests/test_app_sessions.py",
+        "blob": "58ac813449137e3580fe346df0719757c89e96ac",
+        "bytes": 7179
       },
       {
         "path": "training/configs/korea-gk2a-context-v4.json",
@@ -589,5 +599,8 @@
       }
     ]
   },
-  "한계": "동시에 작성 중인 기능의 현재 저장 상태이며 DB통합/운영배포 완료가 아님"
+  "한계": "동시에 작성 중인 기능의 현재 저장 상태이며 DB통합/운영배포 완료가 아님",
+  "내용_커밋": "562b2bc79cd71688b272879c8510ed20fb1aa307",
+  "내용_커밋_원격_일치": true,
+  "내용_푸시_후_작업트리": "변경 없음"
 }
