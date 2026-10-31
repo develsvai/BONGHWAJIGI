@@ -1,6 +1,6 @@
 # 봉화지기 외부 자원 활용 내역과 라이선스
 
-최종 작성일: **2026-11-01 KST**. 구현·수집·설치 기록 기준: **2026-10-31**. 발표 지침의 **구분 · 명칭 · 용도 · 라이선스** 형식으로 작성한 서버·GPU·학습 자원 명세다. 최초 서버 조사에서는 앱을 제외했다. 2026-11-01 Android 지도 연결 후속 작업에서 확인한 네이버 지도 자원은 마지막 절에 추가했다. 앱의 나머지 폰트·이미지·단말 SDK 전체를 조사한 목록은 아니다.
+최종 작성일: **2026-11-01 KST**. 구현·수집·설치 기록 기준: **2026-10-31**. 발표 지침의 **구분 · 명칭 · 용도 · 라이선스** 형식으로 작성한 서버·GPU·학습 자원 명세다. 최초 서버 조사에서는 앱을 제외했다. 2026-11-01 Android 지도·음성대화 후속 작업에서 확인한 네이버 지도, 음성 인식, 글꼴 자원은 아래 후속 절에 추가했다. 앱의 모든 이미지·단말 SDK·전이 npm 패키지를 전수 조사한 목록은 아니다.
 
 `BONGHWAJIGI`의 코드·배포 설정·시연 기록·데이터 출처·두 잠금 파일 및 로컬/GPU 가상환경의 배포 메타데이터를 대조했다. 아래에서 **사용**은 실제 호출·설치·실험 근거가 있는 항목, **구성**은 코드/설정만 있는 항목, **조사**는 카탈로그·문서·샘플을 살펴본 항목이다. 설치는 해당 기능의 실제 실행과 다르며, 데이터 다운로드는 학습 사용과 다르다.
 
@@ -27,7 +27,7 @@
 | 기타 | 중앙일보·연합뉴스TV·연합뉴스·경향신문·MBC 뉴스 | **실제 검색 결과에 포함** — `qwen-integration/retrieval-handoff.json`과 `personal-policy-loop-evidence.json`에 다섯 매체의 제목/설명/URL이 남음. Google News를 통해 확보 | 언론사별 저작권·이용약관 적용, 콘텐츠별 개방 라이선스 미확인. [중앙일보](https://www.joongang.co.kr/), [연합뉴스TV](https://www.yonhapnewstv.co.kr/), [연합뉴스](https://www.yna.co.kr/), [경향신문](https://www.khan.co.kr/), [MBC 뉴스](https://imnews.imbc.com/). 매체 사이트 링크는 출처이며 재사용 허가 근거가 아님 |
 | 외부 API | Firebase Cloud Messaging HTTP v1 | **구현, 실발신 미사용** — `FcmSender`가 `/v1/projects/{project}/messages:send` 호출. 현재 배포는 simulation이고 실제 프로젝트/자격 파일/기기 토큰 미제공 | [Firebase 서비스별 약관](https://firebase.google.com/terms)에 FCM은 Google APIs Terms 및 Firebase Data Processing and Security Terms 적용. Firebase SDK 오픈소스 라이선스를 서비스 이용권으로 해석하지 않음 |
 | 외부 API | Google OAuth 2.0 token endpoint | **FCM 어댑터 내 구현, 실호출 미확인** — 서비스 계정 JWT를 `https://oauth2.googleapis.com/token`에 교환하는 FCM 인증 경로 | [Google APIs Terms](https://developers.google.com/terms). 앱 사용자 인증은 자체 JWT이며 Firebase Authentication 사용으로 기록하면 안 됨 |
-| 기타 | Qwen3-4B-Instruct-2507, revision `cdbee75f17c01a7cc42f958dc650907174af0554` | **GPU 실제 사용** — 근거 자료 정리·생성. `.venv-gpu`, BF16, Transformers SDPA, localhost 인증 API | [고정 revision의 공식 LICENSE](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507/blob/cdbee75f17c01a7cc42f958dc650907174af0554/LICENSE): Apache-2.0. 모델 가중치 라이선스와 입력 문서/뉴스 재사용 권리는 별개 |
+| 기타 | Qwen3-4B-Instruct-2507, revision `cdbee75f17c01a7cc42f958dc650907174af0554` | **GPU 실제 사용** — 근거 자료 정리·생성과 검토된 정책 행동 선택·사용자 발화의 상태 제안. 상태는 사용자 확인 후 별도 API로 반영한다. `.venv-gpu`, BF16, Transformers SDPA, localhost 인증 API | [고정 revision의 공식 LICENSE](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507/blob/cdbee75f17c01a7cc42f958dc650907174af0554/LICENSE): Apache-2.0. 모델 가중치 라이선스와 입력 문서/뉴스 재사용 권리는 별개 |
 | 기타 | Qwen3-Embedding-0.6B, revision `97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3` | **GPU 실제 사용** — 문서·검색 질의를 1024차원 정규화 벡터로 변환 | [고정 revision의 공식 모델 카드](https://huggingface.co/Qwen/Qwen3-Embedding-0.6B/blob/97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3/README.md): Apache-2.0 선언. 해당 revision에는 별도 LICENSE 파일이 없으며 카드·공식 metadata를 근거로 기록 |
 | 기타 | Hugging Face Hub | **실제 다운로드** — Qwen 모델을 `/home1/ncloud/bonghwajigi/models/hub`에 고정 revision으로 내려받음. 런타임은 `local_files_only=True` | 모델별 라이선스에 더해 [Hugging Face Hub 이용약관](https://huggingface.co/terms-of-service). Hugging Face 유료 inference endpoint 사용은 확인되지 않음 |
 
@@ -415,7 +415,7 @@ NCCL·NVTX의 조건을 바이너리에서 확인했고, NVSHMEM도 실제 배�
 
 ## 12. 직접 구현한 API 전체 목록
 
-다음은 봉화지기에서 직접 개발한 FastAPI HTTP 인터페이스다. 연동된 외부 서비스/모델/라이브러리의 조건은 앞 표를 따른다. [일반 서버 실행 OpenAPI](api/mvp-openapi.json)의 `0.2.0-mvp`에 있는 모든 동작을 열거했고 GPU API는 별도 4개 동작이다. 내부 API는 서비스 토큰, 앱 사용자 API는 사용자 JWT를 쓴다. 상태 확인 등 공개 경로의 정확한 인증 지정은 실행 OpenAPI를 따른다.
+다음은 봉화지기에서 직접 개발한 FastAPI HTTP 인터페이스다. 연동된 외부 서비스/모델/라이브러리의 조건은 앞 표를 따른다. [일반 서버 실행 OpenAPI](api/mvp-openapi.json)의 `0.2.0-mvp`의 대화 확장을 포함한58개 동작을 열거했고 GPU API는 별도4개 동작이다. 내부 API는 서비스 토큰, 앱 사용자 API는 사용자 JWT를 쓴다. 상태 확인 등 공개 경로의 정확한 인증 지정은 실행 OpenAPI를 따른다.
 
 | 구분 | 명칭·경로 | 용도 | 구현 상태·라이선스 |
 | --- | --- | --- | --- |
@@ -443,6 +443,12 @@ NCCL·NVTX의 조건을 바이너리에서 확인했고, NVSHMEM도 실제 배�
 | 내부용 | `GET /internal/v1/policy/scenarios/{scenario_id}/users/{user_id}/plans/{incident_id}/history` | 개인 정책 변경 이력 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
 | 내부용 | `GET /internal/v1/policy/scenarios/{scenario_id}/integrations/{job_id}` | Qwen 통합 작업·결과 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
 | 내부용 | `POST /internal/v1/policy/scenarios/{scenario_id}/integrations/{job_id}/retry` | Qwen 통합 실패 재시도 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `GET /v1/auth/config` | 설치 계정 등록 가능 여부·동의 버전 안내 | 구현; 공개 설정 조회, 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `POST /v1/auth/installations` | 사설망 simulation 설치 계정과 세션 발급 | 구현; 동의·등록 제한, 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `POST /v1/auth/refresh` | refresh 회전과 access 갱신 | 구현; 재사용 차단, 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `GET /v1/me/preparations` | 사용자별 사전 준비 카드 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `POST /v1/me/responses/{response_id}/text-turns` | 정책 근거 Qwen 대화와 확인 전 상태 제안 | 구현·실모델 검증; 자동 상태 반영 없음, 팀 작성 API 및 기존 Qwen 조건 |
+| 앱용 | `GET /v1/me/responses/{response_id}/text-turns/{turn_id}` | 동일 세션의 유효한 대화 결과 조회 | 구현; 소유권·revision·만료 검사, 팀 작성 API, 공개 라이선스 미지정 |
 | 앱용 | `GET /v1/app-config` | 앱 기능·단계·갱신 설정 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
 | 앱용 | `GET /v1/me/profile` | 내 프로필 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
 | 앱용 | `PUT /v1/me/profile` | 내 프로필 수정 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
@@ -466,7 +472,7 @@ NCCL·NVTX의 조건을 바이너리에서 확인했고, NVSHMEM도 실제 배�
 | 앱용 | `GET /v1/home` | 현재 위치·경보·개인 안내 홈 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
 | 앱용 | `GET /v1/me/deliveries` | 내 알림 전달 상태 조회 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
 | 앱용 | `POST /v1/me/logout` | 현재 세션 로그아웃 | 구현; 팀 작성 API, 공개 라이선스 미지정 |
-| 앱용 | `GET /v1/me/responses/{response_id}/route` | 경로 상태·제약 입력 또는 조회; 실제 경로 탐색 없음 | unavailable/null·경로 도형 없음; 팀 작성 API, 공개 라이선스 미지정 |
+| 앱용 | `GET /v1/me/responses/{response_id}/route` | 서버의 합성 시연 경로·목적지·표시 단계 조회 | simulation의 지정 사건·근접 유효 위치에서만 synthetic LineString; 실제 검증 경로는 unavailable/null. 팀 작성 API, 공개 라이선스 미지정 |
 | 앱용 | `POST /v1/me/responses/{response_id}/support-drafts` | 신고 지원 초안 계약 | 비활성 503·단말 작성 영역; 팀 작성 API, 공개 라이선스 미지정 |
 | 앱용 | `POST /v1/me/responses/{response_id}/voice-turns` | 음성 대화 시작 계약 | 비활성 503·서버 음성 제외; 팀 작성 API, 공개 라이선스 미지정 |
 | 앱용 | `GET /v1/me/responses/{response_id}/voice-turns/{turn_id}` | 음성 대화 조회 계약 | 비활성 503·서버 음성 제외; 팀 작성 API, 공개 라이선스 미지정 |
@@ -476,7 +482,7 @@ NCCL·NVTX의 조건을 바이너리에서 확인했고, NVSHMEM도 실제 배�
 | GPU 내부용 | `POST /internal/v1/generate` | 자체 호스팅 Qwen 생성 | 구현; 팀 작성 API + 모델 Apache-2.0 및 라이브러리별 조건 |
 | GPU 내부용 | `POST /internal/v1/embeddings` | 자체 호스팅 Qwen 임베딩 | 구현; 팀 작성 API + 모델 Apache-2.0 및 라이브러리별 조건 |
 
-예측·경로 도형·신고 초안·음성 경로가 목록에 있어도 해당 기능이 완성된 것은 아니다. 실제 예측은 unavailable/null이며, 경로는 unavailable/null, 신고 초안과 서버 음성은 비활성 응답이다. 실제 푸시는 simulation이다. 앱 저장소의 화면 연결은 이 문서의 검증 대상이 아니다.
+실제 예측과 검증된 실제 경로는 unavailable/null이며 신고 초안과 서버 음성 파일 API는 비활성 응답이다. 합성 경로는 시연 조건을 충족할 때만 제공하고 실제 안전 경로로 표시하지 않는다. 단말 음성 인식 결과인 텍스트는 text-turns로 전달하며 server_audio/voice_turns는 계속 false다. 실제 푸시는 simulation이다. 앱 화면·단말 검증 범위는 [배포 출처](mobile-submodule-deployment.md)를 따른다.
 
 
 ## 13. 원본 코드·설정에서 확인한 출처 URL
@@ -557,3 +563,21 @@ NCCL·NVTX의 조건을 바이너리에서 확인했고, NVSHMEM도 실제 배�
 설치 패키지의 `LICENSE` SHA256은 `52fd4ae7199af5b0b348fc3b870a3e0f7d2070e159923e3baec969677fb539e3`이다. 실제 SDK 3.23.2 AAR SHA256은 `ab7452952c2da1aa111ebf57a8accfe9a4beaa3fa63a3217ada2d606ea2a03f7`, 그 안의 `assets/navermap-sdk/LICENSE`는 `e0cb568489be575b91b39762d071060101609f129c0d4e02a74f019e96839263`, `assets/navermap-sdk/NOTICE`는 `16b6c4e325f85b78eb7f49917c6507fd3627b2b5176bf999b29582889164967a`다. 기존 서버/Python 의존성 전수 검증 JSON은 이 Android 배포물까지 검사한 것으로 해석하지 않는다.
 
 새 Maps의 Key ID는 래퍼 2.9.1 Expo plugin의 `client_id` 옵션으로 주입한다. plugin은 Android `com.naver.maps.map.NCP_KEY_ID`를 설정한다. 실제 값은 문서·Git에 기록하지 않으며 Client Secret은 이 네이티브 지도 연결에 사용하지 않는다. 앱 등록 방법은 [공식 Application 가이드](https://guide.ncloud-docs.com/docs/application-maps-app-vpc)를 따른다.
+
+## Android 음성 입력·로고 서체 추가 자원 — 2026-11-01
+
+앱0.2.1 고정본과0.3.0 구현 소스의 package-lock·실제 설치 패키지·Android 코드를 대조했다. 새 npm 항목은 `expo-speech-recognition`1개이며 `expo-font`는 이전 lock에 있던 간접 의존성을 직접 의존성으로 올렸다. 새 상용 음성 REST API나 별도 서버 음성 모델은 도입하지 않았다. [검증 파일과 해시](external-resources/android-voice-resources-20261101.json), [앱 변경·단말 QA](../../../apps/mobile/docs/12-demo-polish-voice-route.md)를 함께 참조한다.
+
+| 구분 | 명칭 | 용도 | 라이선스 |
+| --- | --- | --- | --- |
+| 오픈소스 | `expo-speech-recognition`58.0.1, jamsch | Android 기본 SpeechRecognizer를 React Native와 연결. 한국어 발화를 텍스트로 변환해 대화 API에 전달 | 설치 `LICENSE`와 [공식 LICENSE](https://github.com/jamsch/expo-speech-recognition/blob/main/LICENSE)의 **MIT**, Copyright(c)2024 jamsch. 고지 유지. 이 조건을 단말 인식 서비스의 데이터 처리·이용약관으로 확대하지 않음 |
+| 오픈소스 | `expo-font`58.0.11, Expo/650 Industries | 기존 ROKG 글꼴을 native 로고 표시 시 로딩 | 설치 `LICENSE` 및 [Expo 공식 LICENSE](https://github.com/expo/expo/blob/main/LICENSE)의 **MIT**, Copyright(c)2015-present650 Industries. [공식 사용 문서](https://docs.expo.dev/versions/latest/sdk/font/). 글꼴 파일 자체는 아래 별도 조건 |
+| 오픈소스 | JUnit Jupiter `6.1.2`·JUnit Platform launcher | STT 패키지 Android 테스트 구성(`testImplementation`/`testRuntimeOnly`); 앱 런타임과 구분, native JUnit 실행은 미확인 | [공식 LICENSE](https://github.com/junit-team/junit-framework/blob/main/LICENSE.md)의 **EPL-2.0**. launcher 버전은 해당 파일에서 별도 지정하지 않음 |
+| 기타 | Android SpeechRecognizer와 단말의 기본 음성인식 서비스 | 마이크 권한 후 한국어 인식. 지원되는 설치형 한국어 모델을 확인하면 온디바이스, 그렇지 않으면 기본 서비스 사용 | [Android 공식 API 문서](https://developer.android.com/reference/android/speech/SpeechRecognizer). 플랫폼/서비스 제공자 조건 적용. 서비스가 음성을 원격 서버에서 처리할 수 있으므로 래퍼 MIT 또는 녹음 저장 해제로 데이터 처리가 사라진다고 표시하지 않음. 특정 유료 Cloud Speech-to-Text API 계약을 사용한 것은 아님 |
+| 기타 | 문화체육관광부 대한민국정부상징체 R, `ROKG_R.ttf` 및 해당 윤곽 기반 로고 | 기존 목업의 글꼴/로고를 native `Brand.tsx`에 연결. 새로운 서체를 제작한 것으로 표시하지 않음 | [문체부 공식 상징(MI) 안내](https://www.mcst.go.kr/site/s_about/intro/symbol.jsp)의 **공공누리 제4유형: 출처표시·상업적 이용금지·변경금지** 및 영리 목적 협의 안내. 앱의 색상/합성굵기/윤곽 사용 허용 범위나 상업 배포 권한을 확보했다고 단정하지 않음 |
+
+앱은 녹음 파일 저장을 끄고 서버에 텍스트만 전송한다. 이는 기본 인식 서비스의 원격 처리 가능성과 구분된다. 서버는 기존 자체 호스팅 Qwen과 검토된 정책을 이용하며 제안된 상태는 사용자 확인 뒤에만 반영한다. 기존 단말 TTS와 새 STT는 별도 기능이다.
+
+서체의 저장소 출처 고지는 `public/prototype/ROKG-SOURCE.txt`이고 글꼴 SHA256은 `849c61ec05c9b468266a6ee3e7020ddc7c1696c9b3b29469b4986cab5e243a50`이다. 출처 고지는 팀이 작성한 기록이며 공식 LICENSE 원문 자체는 아니다. 기록된 최초 입수는 문체부 배포본의 제3자 재공유 경로다. 공식 페이지의 ZIP을 추가 확인했으나 내부는 Windows 설치파일 하나였고 설치하지 않았으므로 앱 TTF와 공식 ZIP 내부 서체의 바이너리 동일성은 미확인이다. 원본 TTF·출처 고지는 기존 앱에 있었고 이번에 새 TTF/OTF를 추가하지 않았다.
+
+서체 출처 고지는 저장소에 존재한다. 실제0.3.0·0.3.1 APK의 `res/wD.ttf`는 위 원본 TTF와 SHA256이 같았다. ROKG 이름의 고지 파일은 APK 목록에 없었고 다른 경로의 고지 동봉/접근 화면과 실제 로고 변형의 허용 범위는 이 증분 감사에서 확정하지 않았으며, 외부 본배포 전에 확인할 항목으로 남긴다. 이번 표는 새 자원에 대한 조사이며 앱의 전체 npm 전이 의존성·이미지·Android SDK를 전수 분석한 SBOM이 아니다. Gradle에 추가된 JUnit6는 테스트 전용이므로 APK 런타임 자원으로 기재하지 않는다.

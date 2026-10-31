@@ -2,9 +2,9 @@
 
 2026-11-01 KST. 앱 저장소를 `apps/mobile`의 Git 서브모듈로 연결한다. 정본 원격은 사용자가 지정한 `https://github.com/duswls98952/BONGHWAJIGI_APP.git`이다. 일반 서버와 앱은 각각의 커밋을 갖고 메인 저장소가 검증된 앱 커밋을 고정한다.
 
-현재 지도 APK는 **0.2.1 / versionCode 3**이다. 실행 소스는 `66c4d734287549d6403c429ca42e6fdb44d38d2b`, APK SHA256은 `5d4b2cb00adead0d2f6e2e1f51c76c32819c6b7b5095189549dd8fc0079aee25`다. 메인 gitlink는 단말 지도 검증 문서가 포함된 `ced24463bb79a6ef5d3b532f6d2a48215ca84a56`에 고정한다. 실행 소스 이후에는 문서·검증 기록만 추가됐다. [지도 연결·APK 검증 정본](../../../apps/mobile/docs/11-naver-map-integration.md)과 [지도 빌드 manifest](../../../apps/mobile/docs/validation/android-map-build.json)를 함께 대조한다.
+현재 APK는 **0.3.1 / versionCode 5**이다. 실행 소스는 `c0b87ea2bab3ba769ebe3bfbbc91e140d0c12f0e`, APK SHA256은 `c30826365bc023074bdfdc86372e47e8ae780a431ed3ac2caadc5856d79312fe`다. 메인 gitlink는 단말 음성·경로 검증 문서가 포함된 `f54cae1c753054de0a8f2eb76166807019db8db4`에 고정한다. 실행 소스 이후에는 문서·검증 기록만 추가됐다. [최신 앱 검증 정본](../../../apps/mobile/docs/12-demo-polish-voice-route.md)과 [APK 빌드 manifest](../../../apps/mobile/docs/validation/android-polish-build.json)를 함께 대조한다.
 
-이전0.2.0 APK의 실행 소스 `0716c49`와 3단계·음성 검증은 [초기 APK 배포 문서](../../../apps/mobile/docs/10-android-delivery.md)에 역사로 보존한다. 새 지도 버전의 배포 출처는 위0.2.1 기록을 따른다.
+이전0.2.0의3단계·TTS는 [초기 APK 문서](../../../apps/mobile/docs/10-android-delivery.md),0.2.1의 네이버 지도는 [지도 연결 문서](../../../apps/mobile/docs/11-naver-map-integration.md)에 역사로 보존한다. 아래의 과거 재귀 clone과 단말 확인은 각각 당시 버전의 근거다.
 
 ## 초기화와 소스 확인
 
@@ -37,11 +37,11 @@ npm ci
 npm run check
 ```
 
-Android SDK·JDK·서명키·공개 API 주소를 준비한 APK 빌드와 단말 검증은 [앱 배포 문서](../../../apps/mobile/docs/10-android-delivery.md)를 따른다. 서버 서비스 토큰·JWT 서명키·GPU 토큰·Firebase 비밀키를 앱 환경에 넣지 않는다. 서명 자격은 Git 밖의 비공개 파일로 관리한다. APK 바이너리와 서명키를 gitlink에 추가하지 않는다.
+Android SDK·JDK·서명키·공개 API 주소를 준비한 공통 APK 빌드 절차는 [초기 배포 문서](../../../apps/mobile/docs/10-android-delivery.md), 최신 기능·단말 검증은 [0.3.1 문서](../../../apps/mobile/docs/12-demo-polish-voice-route.md)를 따른다. 서버 서비스 토큰·JWT 서명키·GPU 토큰·Firebase 비밀키를 앱 환경에 넣지 않는다. 서명 자격은 Git 밖의 비공개 파일로 관리한다. APK 바이너리와 서명키를 gitlink에 추가하지 않는다.
 
 앱 결과물에는 실제 빌드에 사용한 앱 소스 SHA, API 주소, 앱 버전, 서명 인증서 지문, APK SHA256을 함께 남긴다. `check_mobile_source.py` 출력은 소스 일치 근거이며 APK 설치나 단말 기능 검증을 대신하지 않는다.
 
-앱 API는 [일반 서버 배포 문서](mobile-server-deployment.md)의 Tailnet HTTPS를 사용한다. 현재 실행 서버 소스는 `959ab56`이며 [단말 시계 보정 배포](mobile-location-clock-skew.md)를 포함한다. 승인된 단말의 Tailscale 연결이 필요하다. 네이버 Android 지도는0.2.1에서 연결했다. 같은 앱을 다시 빌드할 때는 Git 밖의 지도 Key ID 주입이 필요하다. Firebase 실발신과 실제 예측 연결은 계속 별도 준비 조건이다.
+앱 API는 [일반 서버 배포 문서](mobile-server-deployment.md)의 Tailnet HTTPS를 사용한다. 현재 실행 서버 소스는 `414482274f9252056ac350c69d4687e7a1429d8b`이며 [텍스트 대화·합성 경로 API](mobile-dialogue-and-route.md)와 기존 [단말 시계 보정](mobile-location-clock-skew.md)을 포함한다. 승인된 단말의 Tailscale 연결이 필요하다. 네이버 Android 지도는0.2.1에서 연결했다. 같은 앱을 다시 빌드할 때는 Git 밖의 지도 Key ID 주입이 필요하다. Firebase 실발신과 실제 예측 연결은 계속 별도 준비 조건이다.
 
 ## 실기기 연결 근거 — 초기0.2.0
 
@@ -62,6 +62,16 @@ Android SDK·JDK·서명키·공개 API 주소를 준비한 APK 빌드와 단말
 서버는2026-10-31 18:23:43UTC에 READ ONLY로 대조했다. 위치 revision2가18:22:50.701780UTC에 수신되어18:27:50.701780UTC까지 유효했고 시연 좌표와 일치했다. 합성 사건 mobile-fire revision4의 영역도 유효했으며 정책 계산 오류가 없고 위치 관련성은 inside였다. 홈 지도에는 위치 마커를, 공식 경보·개인 대응 상세에는 해당 사건 범위를 표시한다. 최초 전국 지도에 마커가 없었던 것은 위치 공유 전 상태였다.
 
 사건 사각형은 관련 지역 범위이고 실제 화선·안전 구역·대피 경로가 아니다. 이번 확인은 합성 시연 좌표를 사용했으며 실제 GPS 이동·백그라운드 추적을 검증한 것으로 표시하지 않는다. 서버 API·GPU·학습·5분 위치 유효성 계약은 이 지도 연결 작업에서 변경하지 않았다. 지도 래퍼·SDK·Maps 서비스 조건은 [외부 자원 문서](external-resources-and-licenses.md)의 Android 지도 절을 따른다.
+
+## 음성 대화·상태 확인·시연 경로 단말 검증 — 0.3.1
+
+Samsung SM-G996N에 같은 서명의0.3.1을 업데이트 설치했다. 앱 담당자는 native 로고·홈 카드 대비·연속 모서리와 실제 네이버 지도 경로를 확인했고 사용자는 경로 표시를 직접 확인했다. 초기0.3.0 음성 입력은 이미 허용된 마이크 권한을 매번 다시 요청하면서 인식 시작 전에 취소되는 문제가 있었다.0.3.1은 허용 상태를 먼저 읽어 재요청을 피하고 최초 권한 허용 후 녹음 시작을 분리했다.
+
+최종0.3.1에서 실제 한국어 발화→인식 텍스트→서버 답변→계단 이용 어려움 제안과 상태 반영 화면을 캡처했다. native 로그에서 기존 마이크 권한 허용, 온디바이스 인식, 시작·발화 종료 이벤트를 확인했다. 사용자가 **음성 인식과 상태 반영 모두 정상**이라고 최종 확인했다. 원음 파일을 보관한 검증이 아니다.
+
+[서버 READ ONLY 대조](mobile-voice-device-evidence.json)는 동일 합성 단말의 최근 revision·시각만 기록한다.19:18:31UTC의 Qwen 계단 제안은 context4를 기준으로 생성됐고 확인 후 정책14 경고→15 대피(19:18:49)로 바뀌었다. 이어19:19:20의 상태 제안은 context5를 기준으로 생성됐고 현재 context6(19:19:43), 정책16 대피(19:19:45), requested/applied24/24, 계산 오류없음을 확인했다. 계정ID·토큰·대화 원문은 이 근거에 포함하지 않는다.
+
+앱 타입·62개 테스트·문서 링크·웹 번들 및 release APK 검증을 통과했고 실제 APK 파일과 빌드 manifest의 해시가 일치한다. 서버는121개 PostgreSQL 회귀 검사와 실제 Qwen·확인 전 비변경·확인 후3단계 갱신을 별도로 통과했다. 시연은 합성 위치와 서버 합성 경로를 사용하며 실제 GPS·공식 안전 경로·실제 예측·FCM 실발신 검증으로 확대하지 않는다. 신규 STT·글꼴의 조건은 [외부 자원 문서](external-resources-and-licenses.md)의 Android 음성 입력·로고 서체 절을 따른다.
 
 ## 새 checkout 재현 검증 — 초기0.2.0
 

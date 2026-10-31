@@ -1,0 +1,5 @@
+2026-11-01 KST: 후속 Task create/run, 필수 배포·자원 문서 읽기, 신규 STT/font 설치 라이선스 병렬 읽기 점검, OpenAPI58개 동작 누락표 보완. 최종 앱 QA SHA 대기.
+2026-11-01 KST: 앱0.3.0/code4 소스964d6f1·APK2dd5ef78(66,084,218bytes)·OpenAPI일치 확인. 실제 APK의 ROKG TTF해시일치, 저장소출처고지/공식문체부조건/새MIT패키지 확인. 최종사용자단말QA 대기.
+2026-11-01 KST: 실제0.3.0 지도 경로 확인 전달받음. 음성 준비취소 보완0.3.1/code5·단말재확인으로 최종pin보류. 서버 API 런타임4144822 유지.
+2026-11-01 04:20 KST: 사용자 최종 음성인식·상태반영 정상확인 전달받음. 동일 합성 단말 READ ONLY: 계단 제안context4→확인후정책15대피, 후속상태제안context5→현재6/정책16, requested=applied24/error없음. 원문/ID/토큰없는근거JSON보존. 최종QA SHA 인계대기.
+2026-11-01 KST: 앱 최종f54cae1 원격fetch/detach, 실행소스c0b87ea/API/lock/실제APK해시 대조통과, 앱clean. 신규라이선스·전체58개API표·문서링크확인, 부분stage 준비.

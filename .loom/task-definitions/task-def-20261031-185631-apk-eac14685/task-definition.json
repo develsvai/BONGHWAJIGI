@@ -1,0 +1,34 @@
+{
+  "id": "task-def-20261031-185631-apk-eac14685",
+  "job_definition_id": "job-20261031-002017-v2-fe3bfad0",
+  "title": "음성대화·시연경로 APK 앱 서브모듈 고정과 신규 자원 문서 동기화",
+  "description": "사용자가 요청한 앱 UI·음성대화·상태 확인·시연경로 후속 패치를 실제 검증한 최종 앱 커밋으로 고정한다. 앱 담당자의 최종 단말 QA와 원격 SHA를 받은 뒤 gitlink를 갱신하며 신규 음성인식·글꼴 자원 이용 내역을 실제 패키지 기준으로 기록한다.",
+  "created_at": "2026-10-31T18:56:31+00:00",
+  "updated_at": "2026-10-31T18:56:39+00:00",
+  "order_index": 27,
+  "legacy_task_id": "task-20261031-185631-apk-a4dea90a",
+  "depends_on": [
+    "task-def-20261031-183001-api-131bf356"
+  ],
+  "expected_output": "apps/mobile 검증 앱 gitlink; 최신 APK·서버 출처와 재귀 clone 근거; 신규 외부 자원 라이선스 표",
+  "done_condition": "앱 최종 QA commit이 원격에 있고 gitlink와 checkout이 일치하며 앱 실행 소스/API/lock/APK 해시를 대조한다. 실제 원격 재귀 clone과 소스 검사 통과, 신규 자원 출처·조건과 검증 범위 기록, normal push 완료.",
+  "in_scope": "앱 서브모듈 SHA 고정; 배포 출처·재귀 clone·API 일치 검증; 새 STT/font 및 실제 포함 자원 라이선스; 관련 문서와 Loom",
+  "out_of_scope": "앱 구현 수정; 서버 런타임/GPU/학습 변경; 실제 GPS·외부 길찾기·FCM 실발신; 다른 채팅 training/license 문단 커밋; 비밀 기록; 승인 없는 배포 범위 확대",
+  "validation_hint": "앱 최종 원격 SHA/실행 소스 diff/API/lock/APK 근거; check_mobile_source; 원격 recursive clone clean; 설치 LICENSE 및 공식 출처; 부분 staging; Loom strict",
+  "required_docs": [
+    "docs/V2/delivery/mobile-submodule-deployment.md",
+    "docs/V2/delivery/external-resources-and-licenses.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/mobile-submodule-deployment.md",
+    "docs/V2/delivery/external-resources-and-licenses.md"
+  ],
+  "document_output_exceptions": [],
+  "default_agent": "foreground",
+  "context_policy_id": "",
+  "executor_policy_id": "",
+  "review_policy": "",
+  "source_proposal_id": "",
+  "source_prompt": ""
+}
