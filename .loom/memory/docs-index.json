@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-31T04:10:31+00:00",
+  "generated_at": "2026-10-31T07:56:55+00:00",
   "docs_paths": [
     "docs"
   ],
@@ -317,8 +317,8 @@
       "path": "docs/V2/delivery/api-handoff.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T13:08:08+09:00",
-      "size_bytes": 15673
+      "updated_at": "2026-10-31T13:11:49+09:00",
+      "size_bytes": 16686
     },
     {
       "id": "docs/V2/delivery/api-job-review.md",
@@ -380,7 +380,7 @@
       "path": "docs/V2/delivery/api/validation-report.json",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T13:10:30+09:00",
+      "updated_at": "2026-10-31T13:13:51+09:00",
       "size_bytes": 637
     },
     {
