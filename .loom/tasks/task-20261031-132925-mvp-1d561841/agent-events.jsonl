@@ -1,1 +1,2 @@
 {"id": "event-82906f0adfd5", "type": "foreground_session_started", "message": "Foreground task session started.", "created_at": "2026-10-31T14:01:36+00:00", "agent": "foreground", "task_id": "task-20261031-132925-mvp-1d561841"}
+{"id": "event-7af54b3f2c3d", "type": "foreground_session_done", "message": "일반 서버 상시 배포와 실제 큐·3단계·경보/정정/해제·모의 전달, GPU 미연결 대체, 실제 임베딩/검색/Qwen, 재시작 자료 보존과 사설망 접근을 검증했다. 실제 예측/실제 푸시/도메인/단말은 범위에 맞춰 제외했다.", "created_at": "2026-10-31T14:27:41+00:00", "agent": "foreground", "task_id": "task-20261031-132925-mvp-1d561841"}

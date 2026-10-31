@@ -3,9 +3,9 @@
   "job_id": "job-20261031-002017-v2-fe3bfad0",
   "title": "일반 서버에 산불 MVP를 상시 배포하고 예측 제외 통합 시연 검증",
   "description": "사용자가 실제 예측 모델 연결을 제외한 남은 작업 전부를 직접 실행하도록 지시했다. 일반 서버에 DB·Redis·API·긴급/분석/전달·정책 워커를 상시 구성하고 기존 GPU 서비스에 비침습적으로 연결한다. 설치/실행/장애 복구와 앱용 API 시연을 검증하고 접속·운영 문서를 남긴다.",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-10-31T13:29:25+00:00",
-  "updated_at": "2026-10-31T14:01:36+00:00",
+  "updated_at": "2026-10-31T14:27:41+00:00",
   "order_index": 14,
   "assigned_agent": "foreground",
   "depends_on": [],
@@ -23,12 +23,25 @@
   "run_attempts": 0,
   "last_error": "",
   "commit_refs": [
-    "73567fc80cc384fda1fb0871db63332de9dc3624"
+    "73567fc80cc384fda1fb0871db63332de9dc3624",
+    "8f7b1e305536b4d8bb6f9d03f92180146af766cf"
   ],
   "branch_name": "develop",
   "git_dirty": true,
-  "git_snapshot_captured_at": "2026-10-31T14:01:36+00:00",
-  "artifacts": [],
+  "git_snapshot_captured_at": "2026-10-31T14:27:41+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-132925-mvp-1d561841/agent-events.jsonl",
+    ".loom/tasks/task-20261031-132925-mvp-1d561841/artifacts.json",
+    ".loom/tasks/task-20261031-132925-mvp-1d561841/context.md",
+    ".loom/tasks/task-20261031-132925-mvp-1d561841/decision.md",
+    ".loom/tasks/task-20261031-132925-mvp-1d561841/git-snapshot.json",
+    ".loom/tasks/task-20261031-132925-mvp-1d561841/logs.txt",
+    ".loom/tasks/task-20261031-132925-mvp-1d561841/previous-results.md",
+    ".loom/tasks/task-20261031-132925-mvp-1d561841/prompt.md",
+    ".loom/tasks/task-20261031-132925-mvp-1d561841/result.md",
+    ".loom/tasks/task-20261031-132925-mvp-1d561841/troubleshooting.md",
+    "docs/V2/delivery/mvp-server-runbook.md"
+  ],
   "source_proposal_id": "",
   "source_prompt": ""
 }
