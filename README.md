@@ -61,6 +61,8 @@ uv run --no-sync python tools/validate_app_api.py
 
 최초 설치 그룹·워커·배치 틀은 [스캐폴딩 안내](docs/V2/delivery/project-scaffold.md)에 보존했습니다. 현재 일반 서버 배포는 `deploy/compose/mvp.yaml`과 운영 문서를 따릅니다.
 
+모바일 앱은 `apps/mobile` 서브모듈에 검증된 커밋을 고정합니다. [초기화·배포 소스 확인](docs/V2/delivery/mobile-submodule-deployment.md)과 앱 저장소의 Android 빌드·검증 기록을 따릅니다.
+
 ## 설계 문서
 
 - [현재 구현 스택](docs/V2/delivery/implementation-stack.md)

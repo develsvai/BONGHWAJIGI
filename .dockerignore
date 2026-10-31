@@ -16,3 +16,5 @@ credentials
 *.key
 dist
 build
+# Android/web artifacts are built independently from the server image.
+apps/mobile
