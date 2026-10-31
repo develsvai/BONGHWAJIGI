@@ -48,3 +48,9 @@ NDWS v2 원본 3개(639,939,000바이트) 확보, 중복 46패치 제거와 unkn
 
 - Task: `task-20261031-100122-xgboost-1f6a6032`
 - Tags: `dataset`, `result`, `validation`
+## 2026-10-31T10:36:35+00:00
+
+학습 시작 방법 질문에 맞춰 training 전용 실자료 실행기와 GPU 시작 스크립트를 준비한다. GPU 서빙 잠금을 존중하고 Qwen 중단·전체 CUDA 학습은 자동 실행하지 않는다. CPU 131,072행/분할 사전 학습에서 조기 종료·4개 트리 저장·CPU 재로딩 차이 0을 확인했으며 test 평가는 하지 않았다. 전체 학습 결과로 주장하지 않는다.
+
+- Task: `task-20261031-102643-xgboost-gpu-63a490e2`
+- Tags: `training`, `preflight`, `scope`

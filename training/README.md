@@ -1,5 +1,7 @@
 # 산불 XGBoost 학습 자료
 
+GPU 서버에서 실제 학습을 시작하는 명령과 로그·결과 확인은 [학습 실행 문서](../docs/V2/delivery/xgboost-training-run.md)를 따른다. 실행기는 `python -m bonghwa_training.train`이며 GPU용 서비스 중지/복구 스크립트는 `training/tools/train_gpu.sh`다.
+
 분석 큐 구현과 독립된 Python 3.12/uv 프로젝트다. 현재 산출물은 실제 공개 관측 자료를 변환한 **미국 NDWS v2 일부 데이터**이며, 국내 개인 영향 예측 모델은 아직 학습·검증하지 않았다.
 
 ## 현재 자료

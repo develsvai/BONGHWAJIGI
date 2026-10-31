@@ -1,0 +1,6 @@
+[2026-10-31T10:27:08+00:00] agent=foreground task=task-20261031-102643-xgboost-gpu-63a490e2 Foreground task session started.
+[2026-10-31T10:42:37.420545+00:00] Training runner and manual GPU wrapper prepared; 15 tests, Ruff check/format and bash syntax passed.
+Local and server CPU real-data preflight: 131072 rows per train/validation; CPU reload max difference 0. Models are preflight only, no test evaluation.
+GPU server: standalone training/.venv and raw/processed NDWS prepared. Public raw hashes match. Train/test Parquet match; validation cosine differs in bytes but rounded 6 decimals match; other 19 inputs and target match.
+systemd true unit succeeded; Qwen shared GPU lease blocks training; Linger=yes; active/ready confirmed after preparation. No full CUDA training or Qwen stop performed.
+Temporary transfer archives removed. See docs/V2/delivery/xgboost-training-run.md and training/reports/gpu-training-readiness.json.

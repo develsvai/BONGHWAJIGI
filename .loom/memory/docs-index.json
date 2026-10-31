@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-31T10:20:25+00:00",
+  "generated_at": "2026-10-31T10:43:02+00:00",
   "docs_paths": [
     "docs"
   ],
@@ -499,6 +499,15 @@
       "document_type": "docs",
       "updated_at": "2026-10-31T19:19:10+09:00",
       "size_bytes": 12896
+    },
+    {
+      "id": "docs/V2/delivery/xgboost-training-run.md",
+      "title": "XGBoost 학습 시작 방법",
+      "path": "docs/V2/delivery/xgboost-training-run.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:41:26+09:00",
+      "size_bytes": 6128
     }
   ],
   "path": "/Users/hongyongjae/Desktop/helloworld/BONGHWAJIGI/.loom/memory/docs-index.json"
