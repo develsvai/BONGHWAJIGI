@@ -3,9 +3,9 @@
   "job_id": "job-20261031-002017-v2-fe3bfad0",
   "title": "시나리오 수신에서 분석 큐·임베딩 검색·Qwen 전달 직전까지 연결",
   "description": "사용자의 직접 구현 요청이다. MVP는 실제 K8s 수집 없이 확보 자료의 시나리오 입력을 받는다. 이벤트와 outbox를 DB에 함께 저장하고 분석 전용 큐에서 임베딩 모델로 질의·문서를 벡터화해 추가 근거를 검색한다. 출처·시각·시나리오·모델 버전이 포함된 Qwen 전달 자료를 저장하고 조회할 수 있게 하며 생성 모델 호출 직전에서 멈춘다.",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-10-31T09:51:41+00:00",
-  "updated_at": "2026-10-31T09:51:47+00:00",
+  "updated_at": "2026-10-31T10:25:44+00:00",
   "order_index": 11,
   "assigned_agent": "foreground",
   "depends_on": [
@@ -29,12 +29,25 @@
   "run_attempts": 0,
   "last_error": "",
   "commit_refs": [
-    "e0a14561db446a09342f5abdbd3a175c62dfde2c"
+    "e0a14561db446a09342f5abdbd3a175c62dfde2c",
+    "b64b83cd281723f5cb609443a818823dca0393ad"
   ],
   "branch_name": "develop",
   "git_dirty": true,
-  "git_snapshot_captured_at": "2026-10-31T09:51:47+00:00",
-  "artifacts": [],
+  "git_snapshot_captured_at": "2026-10-31T10:25:44+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-095141-qwen-9e2979ea/agent-events.jsonl",
+    ".loom/tasks/task-20261031-095141-qwen-9e2979ea/artifacts.json",
+    ".loom/tasks/task-20261031-095141-qwen-9e2979ea/context.md",
+    ".loom/tasks/task-20261031-095141-qwen-9e2979ea/decision.md",
+    ".loom/tasks/task-20261031-095141-qwen-9e2979ea/git-snapshot.json",
+    ".loom/tasks/task-20261031-095141-qwen-9e2979ea/logs.txt",
+    ".loom/tasks/task-20261031-095141-qwen-9e2979ea/previous-results.md",
+    ".loom/tasks/task-20261031-095141-qwen-9e2979ea/prompt.md",
+    ".loom/tasks/task-20261031-095141-qwen-9e2979ea/result.md",
+    ".loom/tasks/task-20261031-095141-qwen-9e2979ea/troubleshooting.md",
+    "docs/V2/delivery/analysis-retrieval-flow.md"
+  ],
   "source_proposal_id": "",
   "source_prompt": ""
 }
