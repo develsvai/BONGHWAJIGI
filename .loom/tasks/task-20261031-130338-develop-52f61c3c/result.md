@@ -17,4 +17,12 @@
 - 앱 API 계약: 25 API, 67 스키마, 48 HTTP 예제, 푸시 예제 1개, 오류 거부 4개 통과.
 - 학습 uv lock --check --offline 통과, 71개 패키지 확인. bash 구문, git diff --check, Loom strict(6 Jobs/41 Tasks/41 definitions) 통과.
 
-코드와 현재 Loom 기록을 먼저 커밋한 뒤 원격 develop을 병합·push하고 실제 원격 SHA 일치를 확인한다. 동기화 결과는 다음 절에 추가한다.
+## 동기화 결과
+
+- 체크포인트 00bfa9c: 현재 코드·설정·실험 보고서와 두 작업의 Loom 기록 총 83개 파일을 보존했다. 학습 Task는 계속 RUNNING이다.
+- 병합 0659235: 원격 develop의 세 커밋을 충돌 없이 통합했다. 원격 V3 기획 문서를 원문대로 보존했으며 소스 코드 충돌이나 삭제는 없었다.
+- git push origin HEAD:refs/heads/develop 성공. 원격 develop이 6dc2ddc에서 0659235로 갱신됐고 로컬 추적 참조도 같은 커밋이다. 강제 push는 하지 않았다.
+- 병합 직후 git status는 작업 파일 변경 없이 develop의 기존 로컬 커밋 18개가 원격보다 앞선 상태였다. 정상 push로 해당 이력을 반영했다.
+- 병합 후 Loom strict(6 Jobs/41 Tasks/41 definitions), git diff --check, 원격 이력의 HEAD 포함 관계 확인을 통과했다. 병합은 문서 한 개만 추가하므로 이미 통과한 코드 테스트를 불필요하게 반복하지 않았다.
+
+이 결과와 Task 완료 기록도 커밋·push하고 마지막 원격 SHA와 깨끗한 작업 트리를 다시 확인한다. GPU 서버나 학습 서비스는 이번 작업에서 변경하지 않았다. 이후 병행 학습에서 생기는 변경은 다음 체크포인트 대상이다.
