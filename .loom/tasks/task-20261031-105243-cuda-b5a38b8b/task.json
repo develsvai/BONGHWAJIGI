@@ -3,9 +3,9 @@
   "job_id": "job-20261031-002626-job-c9f9ff0d",
   "title": "사용자가 실행한 CUDA 학습 산출물과 독립 재추론 검증",
   "description": "사용자가 제공한 완료 로그와 GPU 화면을 바탕으로 실제 서버의 고정 모델·보고서·학습 이력·데이터 해시를 확인한다. 모델을 새로 학습하지 않고 CPU 재로딩으로 validation 점수를 재계산하고, 고정한 모델에 대해 첫 holdout test 평가를 기록한다. Qwen 복구 상태를 확인한다.",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-10-31T10:52:43+00:00",
-  "updated_at": "2026-10-31T10:53:00+00:00",
+  "updated_at": "2026-10-31T11:02:40+00:00",
   "order_index": 8,
   "assigned_agent": "foreground",
   "depends_on": [
@@ -28,12 +28,25 @@
   "run_attempts": 0,
   "last_error": "",
   "commit_refs": [
-    "41542ee7d5a58a04419731d868bf9fc8cb460305"
+    "41542ee7d5a58a04419731d868bf9fc8cb460305",
+    "87ef64b8df191adef1a14ccb25bc72a98604519e"
   ],
   "branch_name": "develop",
   "git_dirty": true,
-  "git_snapshot_captured_at": "2026-10-31T10:53:00+00:00",
-  "artifacts": [],
+  "git_snapshot_captured_at": "2026-10-31T11:02:40+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-105243-cuda-b5a38b8b/agent-events.jsonl",
+    ".loom/tasks/task-20261031-105243-cuda-b5a38b8b/artifacts.json",
+    ".loom/tasks/task-20261031-105243-cuda-b5a38b8b/context.md",
+    ".loom/tasks/task-20261031-105243-cuda-b5a38b8b/decision.md",
+    ".loom/tasks/task-20261031-105243-cuda-b5a38b8b/git-snapshot.json",
+    ".loom/tasks/task-20261031-105243-cuda-b5a38b8b/logs.txt",
+    ".loom/tasks/task-20261031-105243-cuda-b5a38b8b/previous-results.md",
+    ".loom/tasks/task-20261031-105243-cuda-b5a38b8b/prompt.md",
+    ".loom/tasks/task-20261031-105243-cuda-b5a38b8b/result.md",
+    ".loom/tasks/task-20261031-105243-cuda-b5a38b8b/troubleshooting.md",
+    "docs/V2/delivery/xgboost-training-verification.md"
+  ],
   "source_proposal_id": "",
   "source_prompt": ""
 }
