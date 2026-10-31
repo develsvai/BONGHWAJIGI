@@ -289,3 +289,76 @@ def test_official_alert_ids_are_user_bound_and_receipts_are_persisted(mobile):
     repeated = client.post(f"/v1/me/alerts/{identifier}/receipts", json=body, headers=headers())
     assert first.status_code == 200 and first.json()["data"] == repeated.json()["data"]
     assert first.json()["data"]["meaning"] == "client_reported_only"
+
+
+def test_alert_push_identifier_resolves_to_same_user_api_resource(mobile):
+    from test_three_stage import AREA, source
+
+    from bonghwajigi.contracts.policy import AlertInput
+    from bonghwajigi.notifications.delivery import send_delivery
+    from bonghwajigi.notifications.service import emit_change
+    from bonghwajigi.policy.service import put_entity
+
+    client, sessions, scenario, settings, headers = mobile
+    with sessions.begin() as s:
+        put_entity(
+            s,
+            scenario,
+            "alert",
+            "fire/push",
+            AlertInput(
+                revision=1,
+                state="issued",
+                authority="합성 기관",
+                severity="합성 등급",
+                instruction_kind="prepare",
+                issued_at=MOMENT,
+                expires_at=MOMENT + timedelta(minutes=5),
+                area=AREA,
+                raw_text="합성 알림 원문",
+                source=source(),
+                validity_confirmed=True,
+            ),
+            incident_id="fire",
+        )
+        for user in ["a", "b"]:
+            emit_change(s, scenario, user, "alert", "fire/push", 1, urgency="high")
+    with sessions() as s:
+        rows = s.scalars(
+            select(Delivery).where(
+                Delivery.scenario_id == scenario,
+                Delivery.resource_type == "alert",
+                Delivery.resource_id == "fire/push",
+            )
+        ).all()
+        identifiers = {row.user_id: row.id for row in rows}
+
+    class CaptureSender:
+        payload = None
+
+        def send(self, token, payload, urgency):
+            self.payload = payload
+            return "simulated", None
+
+    public_ids = []
+    for user, identifier in identifiers.items():
+        sender = CaptureSender()
+        assert send_delivery(
+            sessions,
+            sender,
+            identifier,
+            resource_id_key=settings.jwt_secret.get_secret_value(),
+        )
+        payload = sender.payload
+        assert payload["resource_type"] == "alert" and payload["revision"] == "1"
+        public_id = payload["resource_id"]
+        assert public_id != "fire/push" and "합성 알림 원문" not in str(payload)
+        response = client.get("/v1/me/alerts/" + public_id, headers=headers(user))
+        assert response.status_code == 200
+        assert response.json()["data"]["original_text"] == "합성 알림 원문"
+        other = "b" if user == "a" else "a"
+        assert client.get("/v1/me/alerts/" + public_id, headers=headers(other)).status_code == 404
+        with sessions() as s:
+            assert s.get(Delivery, identifier).resource_id == "fire/push"
+        public_ids.append(public_id)
+    assert len(public_ids) == 2 and len(set(public_ids)) == 2

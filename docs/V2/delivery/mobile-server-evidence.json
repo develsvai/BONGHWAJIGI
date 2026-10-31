@@ -2,7 +2,7 @@
   "verified_at_kst": "2026-11-01T01:47:00+09:00",
   "initial_deployed_commit": "d8dc54a",
   "migration": "f735a2ec901b",
-  "local_tests_passed": 92,
+  "local_tests_passed": 93,
   "local_alembic_check": "No new upgrade operations detected.",
   "existing_non_mobile_accounts_before_after": [
     9,
@@ -61,18 +61,26 @@
     "private_https": "https://inno-server-011.tail2dac17.ts.net",
     "tailscale_serve": "configured_after_explicit_user_approval",
     "server_self_https_tls_validated": 200,
-    "developer_machine_https": "timeout",
+    "developer_machine_https": 200,
     "effective_destination_ports": [
-      22
+      22,
+      443
     ],
-    "https_acl_grant_present": false,
+    "https_acl_grant_present": true,
     "funnel_enabled": false,
-    "acl_modified": false
+    "acl_modified": true,
+    "acl_scope": "승인된 개발 Mac 및 휴대폰 두 출발지에서 일반 서버 TCP443만 허용"
   },
   "limitations": [
     "실제단말검증은앱Task에서이어감",
-    "Tailnet443접근규칙추가필요",
     "FCM/지도자격미준비",
     "실제예측미연결"
-  ]
+  ],
+  "checks_alert_push_ids": {
+    "capture_sender_count": 2,
+    "same_user_api_status": 200,
+    "other_user_api_status": 404,
+    "user_specific_ids_distinct": true,
+    "raw_internal_id_preserved": true
+  }
 }

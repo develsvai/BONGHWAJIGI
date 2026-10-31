@@ -1,7 +1,6 @@
 """사설망 MVP 앱 API. 0.1 초안과 구분되는 0.2.0-mvp 실행 계약."""
 
 import hashlib
-import hmac
 import time
 from datetime import timedelta
 
@@ -12,6 +11,7 @@ from sqlalchemy import delete, select
 from sqlalchemy.exc import IntegrityError, SQLAlchemyError
 
 from bonghwajigi.api.user_auth import user_auth
+from bonghwajigi.common.public_ids import opaque_resource_id
 from bonghwajigi.contracts.app import (
     ContextWrite,
     DeviceWrite,
@@ -82,10 +82,9 @@ def attach_mobile(app, settings):
         return actor["scenario_id"], actor["sub"]
 
     def opaque(actor, kind, identifier):
-        content = ":".join((*key(actor), kind, identifier)).encode()
-        return hmac.new(
-            settings.jwt_secret.get_secret_value().encode(), content, hashlib.sha256
-        ).hexdigest()[:32]
+        return opaque_resource_id(
+            settings.jwt_secret.get_secret_value(), *key(actor), kind, identifier
+        )
 
     def get_entity(session, actor, kind):
         return session.get(PolicyEntity, (actor["scenario_id"], kind, actor["sub"]))

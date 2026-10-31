@@ -4,10 +4,12 @@
 
 ## 검증
 
-격리 로컬 PostgreSQL에서 .venv/bin/alembic upgrade head 및 .venv/bin/alembic check, .venv/bin/pytest -q 전체92개 통과. 변경 파일 ruff check 통과. 배포 서버 python tools/mobile_demo.py의 긴급 큐 완료·원문·3단계·타사용자404·토큰 회전/로그아웃401 검사 통과. /health/ready200와 OpenAPI0.2.0-mvp, 허용CORS/차단CORS 확인.
+격리 로컬 PostgreSQL에서 .venv/bin/alembic upgrade head 및 .venv/bin/alembic check, .venv/bin/pytest -q 전체93개 통과. 변경 파일 ruff check 통과. 배포 서버 python tools/mobile_demo.py의 긴급 큐 완료·원문·3단계·타사용자404·토큰 회전/로그아웃401 검사 통과. /health/ready200와 OpenAPI0.2.0-mvp, 허용CORS/차단CORS 확인.
 
 ## 접속과 한계
 
-SSH localhost18080 터널을 유지하며 휴대폰은 adb reverse로 연결할 수 있다. 승인된 Tailscale Serve HTTPS는 서버 자체 TLS200이나 유효 ACL에443이 없어 다른 단말에서 시간 초과다. ACL은 변경하지 않았다. 실제 단말 검증/APK는 앱Task에서 진행하며 실예측·실FCM·지도자격은 제공 완료로 표기하지 않는다.
+SSH localhost18080 터널을 유지하며 휴대폰은 adb reverse로 연결할 수 있다. 승인된 두 단말→서버443 최소 grant 적용 뒤 개발 Mac에서 Tailscale Serve HTTPS/TLS200을 확인했다. 실제 단말 검증/APK는 앱Task에서 진행하며 실예측·실FCM·지도자격은 제공 완료로 표기하지 않는다.
 
 상세: docs/V2/delivery/mobile-server-deployment.md 및 mobile-server-evidence.json.
+
+공식 경보 발신 payload의 리소스ID를 API 공개ID와 일치시켰고 두 사용자 간 캡처sender→인증조회200/교차조회404 회귀를 추가했다. 실제 FCM 발신은 사용하지 않았다.

@@ -2,6 +2,7 @@ from datetime import timedelta
 
 from sqlalchemy import select
 
+from bonghwajigi.common.public_ids import opaque_resource_id
 from bonghwajigi.db.analysis_models import new_id, now
 from bonghwajigi.db.delivery_models import Delivery, Device
 from bonghwajigi.db.policy_models import PolicyEntity, PolicyProjection
@@ -58,7 +59,7 @@ def stale(session, row):
     return not entity or entity.revision != row.revision
 
 
-def send_delivery(sessions, sender, identifier):
+def send_delivery(sessions, sender, identifier, *, resource_id_key):
     lease, payload, token, urgency = new_id(), None, None, None
     with sessions.begin() as session:
         row = session.scalar(select(Delivery).where(Delivery.id == identifier).with_for_update())
@@ -81,7 +82,12 @@ def send_delivery(sessions, sender, identifier):
         row.status, row.lease_id = "processing", lease
         row.attempts += 1
         row.next_attempt_at = now() + timedelta(seconds=60)
-        payload, token, urgency = row.payload, device.token, row.urgency
+        payload, token, urgency = dict(row.payload), device.token, row.urgency
+        if row.resource_type == "alert":
+            # DB 내부 ID는 만료·취소·중복 판정에 유지하고 전송용 ID만 인증 API와 맞춘다.
+            payload["resource_id"] = opaque_resource_id(
+                resource_id_key, row.scenario_id, row.user_id, "alert", row.resource_id
+            )
     # 외부 네트워크 호출 동안 DB 트랜잭션과 행 잠금을 유지하지 않는다.
     result, provider_id, error = None, None, None
     try:

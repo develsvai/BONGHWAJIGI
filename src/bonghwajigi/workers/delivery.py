@@ -17,6 +17,8 @@ def send(delivery_id: str) -> None:
             sender = configured_sender(settings)
         except Exception:
             sender = DisabledSender()
-        send_delivery(sessions, sender, delivery_id)
+        send_delivery(
+            sessions, sender, delivery_id, resource_id_key=settings.jwt_secret.get_secret_value()
+        )
     finally:
         sessions.kw["bind"].dispose()

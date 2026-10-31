@@ -283,8 +283,12 @@ def test_official_intake_independent_of_models_duplicate_and_cancel(mvp_db):
         ).all()
         assert len(deliveries) == 3
         identifier = deliveries[0].id
-    assert send_delivery(sessions, SimulationSender(), identifier)
-    assert not send_delivery(sessions, SimulationSender(), identifier)
+    assert send_delivery(
+        sessions, SimulationSender(), identifier, resource_id_key="test-public-key"
+    )
+    assert not send_delivery(
+        sessions, SimulationSender(), identifier, resource_id_key="test-public-key"
+    )
     with sessions() as s:
         assert s.get(Delivery, identifier).status == "simulated"
     with sessions.begin() as s:
@@ -325,12 +329,14 @@ def test_delivery_retry_revocation_and_lease(mvp_db):
         def send(self, *args):
             raise PushError("NETWORK_UNCERTAIN", retryable=True)
 
-    assert send_delivery(sessions, Failing(), identifier)
+    assert send_delivery(sessions, Failing(), identifier, resource_id_key="test-public-key")
     with sessions.begin() as s:
         row = s.get(Delivery, identifier)
         assert row.status == "retry" and row.attempts == 1
         row.next_attempt_at = now() - timedelta(seconds=1)
         s.get(Device, device_id).enabled = False
-    assert send_delivery(sessions, SimulationSender(), identifier)
+    assert send_delivery(
+        sessions, SimulationSender(), identifier, resource_id_key="test-public-key"
+    )
     with sessions() as s:
         assert s.get(Delivery, identifier).status == "device_revoked"
