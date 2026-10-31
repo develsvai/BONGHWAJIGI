@@ -1,3 +1,4 @@
 2026-11-01 KST: 새 Task run; 기존계약·모델·DB 확인; 대화/확정제안·시연경로 구현; OpenAPI와합성fixture 인계; PostgreSQL118테스트·migration/check·Ruff 통과; 실제Qwen2.66초 추론확인. 배포 준비.
 2026-11-01 KST: 종료 시 stale turn 상태 확정 보완; 실제 AppSession 교차 접근/생성 중 취소 추가; 전체120개 테스트와 Ruff 통과.
 2026-11-01 KST: c4472fb 일반 서버 배포, env600/DB백업·기존 타시나리오9계정87엔티티 보존·migration/check·OpenAPI 일치 확인. 실모델 question 생략 처리 보완 후 재검증 진행.
+2026-11-01 03:53 KST: 4144822 최종배포와실제HTTPS/Qwen/제안확정/3단계/경로/멱등/만료/OpenAPI일치통과. 확인전DB불변, context0→1→2, 정책revision2→3→4. 일반서버DB백업/보존·migration/check·소스해시확인.

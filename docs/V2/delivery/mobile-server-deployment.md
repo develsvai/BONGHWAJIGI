@@ -29,7 +29,7 @@ Tailscale Serve는 처음 자동 승인 검토에서 지속 노출의 명시 승
 
 [기계 판독 근거](mobile-server-evidence.json)에 실행 결과를 기록했다.
 
-- 최종 실행 소스는 `dcbc62e`(이미지 `bonghwajigi-mvp:dcbc62e`), migration은 `f735a2ec901b`다. PostgreSQL/Redis 볼륨을 유지하고 기존 시나리오 계정9개·입력87개를 전후 확인했다.
+- 초기 실연동 실행 소스는 `dcbc62e`(이미지 `bonghwajigi-mvp:dcbc62e`), migration은 `f735a2ec901b`다. PostgreSQL/Redis 볼륨을 유지하고 기존 시나리오 계정9개·입력87개를 전후 확인했다.
 - 기존 설정과 PostgreSQL dump는 서버 `/home1/ncloud/.config/bonghwajigi/backups/mobile-d8dc54a`에 권한600으로 보관했다. 새 설정도600이고 기존 자격은 바꾸지 않았다. GPU 서버와 학습 프로세스를 변경하거나 중단하지 않았다.
 - API/긴급·분석·전달/정책·통합/outbox 7개 프로세스와 DB/Redis가 실행되고 일반 서버/GPU 터널 systemd가 active다.
 - 합성 설치 계정 두 개로 등록, 기기, 프로필 기타 보호 대상과 준비 카드, 위치, 긴급 큐 원문, 경고→대피→위급, 검토된 정책 텍스트, cursor 갱신, 다른 사용자 자료404, refresh회전, 로그아웃 뒤 access/refresh401을 확인했다.
@@ -45,3 +45,7 @@ Tailscale Serve는 처음 자동 승인 검토에서 지속 노출의 명시 승
 자료가 만료되면 `python tools/mobile_demo.py --seed-only`로 합성 자료의 새 revision을 입력한다. 유효기간24시간은 합성 사건 자료에만 적용되며 사용자 위치·현재 상태의 기존5분 유효기간은 유지한다. APK가 전송한 최신 위치만 사용자 관련성 판단에 쓰며 신규 계정을 임의 테스트 좌표로 자동 이동시키지 않는다.
 
 이 문서의 검증은 배포 API 결과다. 실제 휴대폰 화면·TTS·APK 설치 검증은 앱 작업에서 이어진다. 실제 재난·공식기관 발령·Firebase 단말 수신·실측 지도 경로·실제 예측 결과가 아니다. 사고 종료 근거가 없으므로 자료 최신성을 사건 종료로 해석하지 않는다.
+
+## 텍스트 대화·합성 경로 후속 배포 — 2026-11-01 03:53 KST
+
+현재 일반 서버 실행 소스는 `414482274f9252056ac350c69d4687e7a1429d8b`(이미지 `bonghwajigi-mvp:4144822`), migration은 `7c8e910ba402`다. [대화·경로 계약과 검증](mobile-dialogue-and-route.md), [합성 HTTPS 실행 근거](api/mobile-interaction-live-evidence.json)를 정본으로 참조한다. PostgreSQL 기반 전체121개 테스트와 실제 Qwen의 계단/갇힘 제안→사용자 확인→경고·대피·위급 갱신을 통과했다. 실제 검증 경로·FCM 실발신은 계속 제공하지 않으며 시연 경로에는 synthetic/operational_use=false를 표시한다. 기존 DB·설정은 백업했고 타 시나리오9계정87입력과 GPU 학습은 보존했다.

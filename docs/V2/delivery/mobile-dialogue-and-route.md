@@ -52,4 +52,18 @@ POST 응답을 놓치면 `GET /v1/me/responses/{response_id}/text-turns/{client_
 
 기존 일반 서버→GPU 연결로 합성 계단 어려움 발언을 시험하여 Qwen이2.66초에 `overrides.stairs=difficult`와 정확한 원문 근거를 반환했고 모델·revision이 일치했다. 이 사전 추론 확인은 새 API 배포 검증과 구분한다.
 
-[OpenAPI](api/mvp-openapi.json), [합성 UI fixture](api/mvp-interaction-fixtures.json)를 앱 타입·모의 화면에 인계했다. UI fixture는 로컬 격리 API와 서버 경로 생성 함수에서 캡처했으며 모델의 상태 추출만 고정 테스트 응답이다. 실제 계정·토큰·개인 위치는 포함하지 않는다. 일반 서버 최종 배포와 공개된 사설 HTTPS 검증 결과는 완료 후 이 절에 추가한다.
+[OpenAPI](api/mvp-openapi.json), [합성 UI fixture](api/mvp-interaction-fixtures.json)를 앱 타입·모의 화면에 인계했다. UI fixture는 로컬 격리 API와 서버 경로 생성 함수에서 캡처했으며 모델의 상태 추출만 고정 테스트 응답이다. 실제 계정·토큰·개인 위치는 포함하지 않는다.
+
+### 최종 일반 서버 검증
+
+실행 소스 `414482274f9252056ac350c69d4687e7a1429d8b`, 이미지 `bonghwajigi-mvp:4144822`, migration `7c8e910ba402`를 배포했다. 기존 설정과 PostgreSQL dump는 `/home1/ncloud/.config/bonghwajigi/backups/mobile-4144822`에 보관했으며 설정·dump 권한은600이다. 다른 시나리오 계정9개·입력87개의 전후 개수와 DB/Redis 볼륨을 보존했다. GPU 서버·모델·학습 설정은 변경하지 않았다. API 및6개 worker와 PostgreSQL/Redis가 healthy이고 Alembic check는 추가 변경 없음이다. 배포된 dialogue.py SHA256은 로컬 실행 소스와 일치한다.
+
+2026-11-01 03:53 KST, `https://inno-server-011.tail2dac17.ts.net`에서 TLS 인증서 검증을 유지하고 신규 합성 설치계정으로 전체 흐름을 확인했다. [익명 검증 근거](api/mobile-interaction-live-evidence.json)에 상태·revision·시간만 보존했으며 계정ID·토큰은 포함하지 않는다.
+
+| 실제 요청 | 모델 결과와 적용 | API 검증 |
+| --- | --- | --- |
+| 계단 이용이 어려움 | Qwen2.15초, `overrides.stairs=difficult`; 확인 후 context0→1, 경고→대피 | 확인 전 context불변, 동일turn 재전송·GET 결과동일 |
+| 갇혀 이동할 수 없음 | Qwen3.19초, `state.can_move=false` 포함; 확인 후 context1→2, 대피→위급 | 확인 후 이전turn409, 정책 revision2→3→4 |
+| 시연 좌표36.4,129.35/정확도10m | 합성 LineString·목적지·3단계 표시자료 반환 | `origin=synthetic`, `operational_use=false`; 시연 시작점 밖 위치는 unavailable |
+
+설치 등록→기기→프로필→위치→정책→텍스트turn→사용자 확인→정책 갱신→로그아웃을 검증했다. 배포 OpenAPI JSON 전체가 저장소 원본과 같으며 파일 SHA256은 `e9075d620d9d916d512328b380e35c9073f9e681fd8236a86cc083787a735671`이다. 첫 실모델 시험에서 선택적 question 키 생략을 발견해 none 기본값으로 보완했으며 상태·원문 근거·정책ID 검증은 유지했다. 휴대폰의 음성 인식·화면·APK 검증은 앱 작업에서 별도로 수행한다.
