@@ -3,9 +3,9 @@
   "job_id": "job-20261031-002626-job-97436430",
   "title": "확정한 산불 3단계 정책과 공식 경보·알림 전달 경로 구현",
   "description": "사용자가 확정한 준비·대피이동·긴급지원요청 정책을 기존 개인 계획 루프에 적용하고 공식 경보 우선 처리·발령 대상 확인·정정/해제 및 내구성 있는 알림 전송을 구현한다. 실제 예측 모델 연결은 제외하고 GPU 학습은 보존한다.",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-10-31T13:29:25+00:00",
-  "updated_at": "2026-10-31T13:29:29+00:00",
+  "updated_at": "2026-10-31T13:43:51+00:00",
   "order_index": 9,
   "assigned_agent": "foreground",
   "depends_on": [],
@@ -23,12 +23,25 @@
   "run_attempts": 0,
   "last_error": "",
   "commit_refs": [
-    "4a7b25355c7befd23448fcad7fdae4d227c39cd8"
+    "4a7b25355c7befd23448fcad7fdae4d227c39cd8",
+    "c1890378c7b48dfeb50d21b83cdd36b750bb1c35"
   ],
   "branch_name": "develop",
   "git_dirty": true,
-  "git_snapshot_captured_at": "2026-10-31T13:29:29+00:00",
-  "artifacts": [],
+  "git_snapshot_captured_at": "2026-10-31T13:43:51+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-132925-3-8d055932/agent-events.jsonl",
+    ".loom/tasks/task-20261031-132925-3-8d055932/artifacts.json",
+    ".loom/tasks/task-20261031-132925-3-8d055932/context.md",
+    ".loom/tasks/task-20261031-132925-3-8d055932/decision.md",
+    ".loom/tasks/task-20261031-132925-3-8d055932/git-snapshot.json",
+    ".loom/tasks/task-20261031-132925-3-8d055932/logs.txt",
+    ".loom/tasks/task-20261031-132925-3-8d055932/previous-results.md",
+    ".loom/tasks/task-20261031-132925-3-8d055932/prompt.md",
+    ".loom/tasks/task-20261031-132925-3-8d055932/result.md",
+    ".loom/tasks/task-20261031-132925-3-8d055932/troubleshooting.md",
+    "docs/V2/delivery/response-policy.md"
+  ],
   "source_proposal_id": "",
   "source_prompt": ""
 }

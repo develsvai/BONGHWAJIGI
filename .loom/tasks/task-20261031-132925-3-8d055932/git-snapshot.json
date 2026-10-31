@@ -40,5 +40,37 @@
     ],
     "captured_at": "2026-10-31T13:29:29+00:00"
   },
-  "after": null
+  "after": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "c1890378c7b48dfeb50d21b83cdd36b750bb1c35",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/events.jsonl",
+      ".loom/job-runs/job-run-20261031-112708-job-20261031-002626-job-97436430-40a6fc29/job-run.json",
+      ".loom/memory/docs-index.json",
+      ".loom/task-definitions/task-def-20261031-132925-3-969c24bd/task-definition.json",
+      ".loom/tasks/task-20261031-111807-task-9a960503/decision.md",
+      ".loom/tasks/task-20261031-111807-task-9a960503/logs.txt",
+      ".loom/tasks/task-20261031-111807-task-9a960503/troubleshooting.md",
+      "training/README.md",
+      "training/src/bonghwa_training/goes_build.py",
+      "training/src/bonghwa_training/goes_train.py",
+      "training/src/bonghwa_training/kma_download.py",
+      "training/tests/test_kma.py",
+      "training/tools/train_hourly_gpu.sh"
+    ],
+    "untracked_files": [
+      "docs/V2/delivery/korea-wildfire-improvement.md",
+      "training/configs/korea-gk2a-hourly-v1.json",
+      "training/configs/korea-gk2a-hourly-v2.json",
+      "training/src/bonghwa_training/hourly_context.py",
+      "training/src/bonghwa_training/kma_event.py",
+      "training/src/bonghwa_training/kma_profile.py",
+      "training/tests/test_context.py",
+      "training/tools/run_kma_research.sh"
+    ],
+    "captured_at": "2026-10-31T13:43:51+00:00"
+  }
 }
