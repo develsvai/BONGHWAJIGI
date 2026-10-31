@@ -30,7 +30,8 @@ class ModelChange(Strict):
 class ModelTurn(Strict):
     intent: Literal["status_update", "explain", "clarify", "acknowledge"]
     action_ids: list[str] = Field(max_length=3)
-    question: Literal["can_move", "helper_present", "observed_hazard", "none"]
+    # A missing optional follow-up question means no question; state/evidence remain strict.
+    question: Literal["can_move", "helper_present", "observed_hazard", "none"] = "none"
     changes: list[ModelChange] = Field(max_length=6)
 
 

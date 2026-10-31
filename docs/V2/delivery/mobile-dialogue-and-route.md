@@ -48,7 +48,7 @@ POST 응답을 놓치면 `GET /v1/me/responses/{response_id}/text-turns/{client_
 
 마이그레이션 `7c8e910ba402`는 대화 행과 사용자/시각 인덱스만 추가한다. 기존 DB 자료·GPU 모델·학습·위치 유효성 계약은 유지한다. readiness는 새 대화 테이블 존재도 확인한다.
 
-로컬 PostgreSQL에서 마이그레이션과 Alembic check, 전체120개 서버 테스트를 통과했다. 사용자·실제 세션 간 격리, 세션 취소, revision, 멱등, 생성 중 동시 요청·입력 변경·로그아웃, 제안 비변경/사용자 확인, 내용 변조·만료, 잘못된 모델 출력·timeout fallback, 상태 보존, 대화 상한, 시연 경로 범위를 검증했다. 기존 Starlette/httpx 경고1개가 있다.
+로컬 PostgreSQL에서 마이그레이션과 Alembic check, 전체121개 서버 테스트를 통과했다. 사용자·실제 세션 간 격리, 세션 취소, revision, 멱등, 생성 중 동시 요청·입력 변경·로그아웃, 제안 비변경/사용자 확인, 내용 변조·만료, 잘못된 모델 출력·timeout fallback, 상태 보존, 대화 상한, 시연 경로 범위를 검증했다. 기존 Starlette/httpx 경고1개가 있다.
 
 기존 일반 서버→GPU 연결로 합성 계단 어려움 발언을 시험하여 Qwen이2.66초에 `overrides.stairs=difficult`와 정확한 원문 근거를 반환했고 모델·revision이 일치했다. 이 사전 추론 확인은 새 API 배포 검증과 구분한다.
 

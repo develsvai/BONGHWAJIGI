@@ -231,6 +231,26 @@ def test_invalid_generation_uses_only_reviewed_policy_fallback(mobile, value):
     assert "invented" not in data["assistant"]["text"]
 
 
+def test_model_may_omit_optional_followup_question(mobile):
+    client, _, _, _, headers = mobile
+    identifier, body = setup(
+        mobile,
+        Generator(
+            {
+                "intent": "status_update",
+                "action_ids": [],
+                "changes": [{"field": "state.can_move", "value": False, "quote": "움직일 수 없어"}],
+            }
+        ),
+    )
+    data = client.post(
+        f"/v1/me/responses/{identifier}/text-turns", json=body, headers=headers()
+    ).json()["data"]
+    assert data["assistant"]["source"] == "qwen_grounded"
+    assert data["proposal"]["state"]["can_move"] is False
+    assert "곁에서" not in data["assistant"]["text"]
+
+
 def test_generation_failure_falls_back_and_pending_other_request_is_bounded(mobile):
     client, _, _, _, headers = mobile
     identifier, body = setup(mobile)
