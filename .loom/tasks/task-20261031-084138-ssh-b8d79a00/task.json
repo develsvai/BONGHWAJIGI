@@ -1,0 +1,41 @@
+{
+  "id": "task-20261031-084138-ssh-b8d79a00",
+  "job_id": "job-20261031-002017-v2-fe3bfad0",
+  "title": "두 서버 SSH 별칭 설정과 실제 관리 접속 확인",
+  "description": "사용자의 직접 요청에 따라 기존 로컬 SSH 설정을 보존하고 inno-gpu-011 및 inno-server-011 별칭을 추가한다. 서버 구조 및 Tailscale 문서를 확인한 뒤 기존 호스트 키와 대조하여 ncloud 계정의 실제 SSH 로그인을 검증한다. 제공된 인증 정보는 인증에만 사용하고 설정·문서·로그에 저장하지 않는다.",
+  "status": "RUNNING",
+  "created_at": "2026-10-31T08:41:38+00:00",
+  "updated_at": "2026-10-31T08:41:41+00:00",
+  "order_index": 8,
+  "assigned_agent": "foreground",
+  "depends_on": [
+    "task-20261031-022438-tailscale-6dc57118",
+    "task-20261031-082929-mvp-3188b68a"
+  ],
+  "expected_output": "로컬 SSH 설정과 백업, 두 서버의 실제 로그인 및 역할 확인 결과, 비밀정보를 제외한 접속 운영 문서",
+  "done_condition": "기존 접속 항목을 유지한 설정이 유효하고 두 별칭으로 엄격한 호스트 키 검사를 거친 실제 로그인이 성공한다. 문서와 Loom 산출물 검증 및 커밋을 완료한다.",
+  "in_scope": "로컬 SSH 별칭과 권한 설정, 기존 호스트 키 확인, 읽기 전용 서버 접근·자원 확인, 접속 절차 문서화",
+  "out_of_scope": "앱 저장소, 모델 또는 서비스 설치, 학습과 배포, 원격 인증 및 네트워크 정책 변경, 비밀번호 보관",
+  "validation_hint": "ssh -G로 별칭 해석과 기존 항목 보존을 검증하고 실제 SSH 세션에서 호스트명·계정·OS·주요 자원을 확인한다. git diff --check 및 Loom strict 검증을 수행한다.",
+  "required_docs": [
+    "docs/V2/02_실시간_서버_배치도.md",
+    "docs/V2/delivery/tailnet-connectivity.md",
+    "docs/V2/delivery/implementation-stack.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/ssh-access.md"
+  ],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [
+    "d0f2ed314795e34c118955593c83fa5cf69d59f0"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-10-31T08:41:41+00:00",
+  "artifacts": [],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

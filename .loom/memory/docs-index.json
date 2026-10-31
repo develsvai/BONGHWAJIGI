@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-31T08:33:37+00:00",
+  "generated_at": "2026-10-31T08:44:47+00:00",
   "docs_paths": [
     "docs"
   ],
@@ -418,6 +418,15 @@
       "document_type": "docs",
       "updated_at": "2026-10-31T17:32:39+09:00",
       "size_bytes": 18749
+    },
+    {
+      "id": "docs/V2/delivery/ssh-access.md",
+      "title": "두 서버 SSH 접속 운영 기록",
+      "path": "docs/V2/delivery/ssh-access.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T17:44:39+09:00",
+      "size_bytes": 4323
     },
     {
       "id": "docs/V2/delivery/tailnet-connectivity-evidence.json",
