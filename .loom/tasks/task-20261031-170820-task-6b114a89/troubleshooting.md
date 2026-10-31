@@ -1,3 +1,5 @@
 # 확인과 해결
 
-사용자가준 원격의HWA표기가canonical이며 예전HAW주소는같은저장소로redirect된다. 최종APK·단말검증이완료될때까지pincommit을보류했다. 단말시계오차422는별도Task173529에서보완·배포완료했고 이Task를확장하지않았다. 사용자가음성검증을잠시정정했으므로미확인으로보류했다가 휴대폰무음해제뒤정상청취를최종확인한후만문서에반영했다. 기존training/presentation변경은전부보존했다.
+canonical HWA 원격과 예전 HAW 주소가 같은 저장소임을 확인했다. 최종 APK와 단말 검증이 완료될 때까지 pin 커밋을 기다렸다. 단말 시계 오차422는 별도 Task173529에서 보완·배포했다.
+
+음성은 사용자가 잠시 미확인으로 정정하여 완료 판단을 보류했다. 무음 해제 뒤 정상 청취를 최종 확인한 후 문서에 반영했다. git add 때 embedded repository 안내가 나왔으나 .gitmodules와 gitdir 연결, 160000 gitlink, 실제 원격 recursive clone 성공으로 정상 서브모듈임을 확인했다. 기존 training/presentation 변경은 전부 보존했다.

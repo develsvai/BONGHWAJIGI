@@ -2,3 +2,4 @@
 
 2026-11-01 KST: canonical 앱원격 clone 및8984d37 확인, .gitmodules/apps/mobile는작업트리에만준비. 최종SHA대기. source checker ruff check/py_compile와미고정HEAD거부검증통과.
 2026-10-31T17:50Z 원격ed91b1c fetch/detach·clean·OpenAPI일치·APKmanifest/source코드무차이검증. 실제단말policyhistory2경고/3대피/4위급및사용자음성최종확인.
+2026-10-31T17:53Z 메인eaeef87 정상push. 실제원격fresh recursive clone에서ed91b1c자동초기화, main/appclean, sourcechecker및API/lockfile해시일치 통과. 문서링크/Ruff/check검증.
