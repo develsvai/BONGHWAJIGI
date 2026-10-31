@@ -1,0 +1,250 @@
+{
+  "status": "completed",
+  "folds": {
+    "andong_2020": {
+      "status": "completed",
+      "training_event_shares": {
+        "andong_2021": {
+          "rows": 91892,
+          "row_share": 0.7413335484651689,
+          "weight_sum": 91892.0,
+          "weight_share": 0.7413335484651689
+        },
+        "hapcheon_2022": {
+          "rows": 6657,
+          "row_share": 0.053704973579121455,
+          "weight_sum": 6657.0,
+          "weight_share": 0.053704973579121455
+        },
+        "uljin_2022": {
+          "rows": 25406,
+          "row_share": 0.20496147795570974,
+          "weight_sum": 25406.0,
+          "weight_share": 0.20496147795570974
+        }
+      },
+      "horizons": {
+        "1": {
+          "rows": 6699,
+          "positives": 11,
+          "positive_fraction": 0.0016420361247947454,
+          "missing_score_candidates": 0,
+          "average_precision": 0.2187558319755181,
+          "roc_auc": 0.9452547303175294,
+          "brier": 0.0016201345141092901,
+          "logloss": 0.011460948162359035,
+          "eligible_for_cv_selection": true,
+          "exclusion_reason": null
+        },
+        "3": {
+          "rows": 4027,
+          "positives": 43,
+          "positive_fraction": 0.010677924012912838,
+          "missing_score_candidates": 0,
+          "average_precision": 0.2020376325502495,
+          "roc_auc": 0.9528345941907164,
+          "brier": 0.010042654800284625,
+          "logloss": 0.043473459325048334,
+          "eligible_for_cv_selection": true,
+          "exclusion_reason": null
+        },
+        "6": {
+          "rows": 814,
+          "positives": 49,
+          "positive_fraction": 0.060196560196560195,
+          "missing_score_candidates": 0,
+          "average_precision": 0.4472515685980039,
+          "roc_auc": 0.9525676937441643,
+          "brier": 0.055989369625240475,
+          "logloss": 0.22024277523679897,
+          "eligible_for_cv_selection": true,
+          "exclusion_reason": null
+        }
+      }
+    },
+    "andong_2021": {
+      "status": "completed",
+      "training_event_shares": {
+        "andong_2020": {
+          "rows": 11540,
+          "row_share": 0.2646606884847373,
+          "weight_sum": 11540.0,
+          "weight_share": 0.2646606884847373
+        },
+        "hapcheon_2022": {
+          "rows": 6657,
+          "row_share": 0.15267298121688874,
+          "weight_sum": 6657.0,
+          "weight_share": 0.15267298121688874
+        },
+        "uljin_2022": {
+          "rows": 25406,
+          "row_share": 0.582666330298374,
+          "weight_sum": 25406.0,
+          "weight_share": 0.582666330298374
+        }
+      },
+      "horizons": {
+        "1": {
+          "rows": 32462,
+          "positives": 52,
+          "positive_fraction": 0.0016018729591522395,
+          "missing_score_candidates": 0,
+          "average_precision": 0.03242320980863735,
+          "roc_auc": 0.9729042555716422,
+          "brier": 0.0016108004714925127,
+          "logloss": 0.012619475943677962,
+          "eligible_for_cv_selection": true,
+          "exclusion_reason": null
+        },
+        "3": {
+          "rows": 31334,
+          "positives": 78,
+          "positive_fraction": 0.002489308738111955,
+          "missing_score_candidates": 0,
+          "average_precision": 0.04576582182127632,
+          "roc_auc": 0.9717231727405775,
+          "brier": 0.002600893109215594,
+          "logloss": 0.018688779457773124,
+          "eligible_for_cv_selection": true,
+          "exclusion_reason": null
+        },
+        "6": {
+          "rows": 28096,
+          "positives": 87,
+          "positive_fraction": 0.003096526195899772,
+          "missing_score_candidates": 0,
+          "average_precision": 0.09848442271433834,
+          "roc_auc": 0.9733870434913574,
+          "brier": 0.0033365362687474164,
+          "logloss": 0.026421192944018866,
+          "eligible_for_cv_selection": true,
+          "exclusion_reason": null
+        }
+      }
+    },
+    "hapcheon_2022": {
+      "status": "completed",
+      "training_event_shares": {
+        "andong_2020": {
+          "rows": 11540,
+          "row_share": 0.08956984740526863,
+          "weight_sum": 11540.0,
+          "weight_share": 0.08956984740526863
+        },
+        "andong_2021": {
+          "rows": 91892,
+          "row_share": 0.7132367779692327,
+          "weight_sum": 91892.0,
+          "weight_share": 0.7132367779692327
+        },
+        "uljin_2022": {
+          "rows": 25406,
+          "row_share": 0.19719337462549869,
+          "weight_sum": 25406.0,
+          "weight_share": 0.19719337462549869
+        }
+      },
+      "horizons": {
+        "1": {
+          "rows": 5167,
+          "positives": 4,
+          "positive_fraction": 0.000774143603638475,
+          "missing_score_candidates": 0,
+          "average_precision": 0.7182539682539683,
+          "roc_auc": 0.9995642068564788,
+          "brier": 0.0007081903145700035,
+          "logloss": 0.005052421340192882,
+          "eligible_for_cv_selection": true,
+          "exclusion_reason": null
+        },
+        "3": {
+          "rows": 1451,
+          "positives": 11,
+          "positive_fraction": 0.007580978635423846,
+          "missing_score_candidates": 0,
+          "average_precision": 0.9505590666018473,
+          "roc_auc": 0.9994949494949495,
+          "brier": 0.006506704015852045,
+          "logloss": 0.02264369318460278,
+          "eligible_for_cv_selection": true,
+          "exclusion_reason": null
+        },
+        "6": {
+          "rows": 39,
+          "positives": 11,
+          "positive_fraction": 0.28205128205128205,
+          "missing_score_candidates": 0,
+          "average_precision": 1.0,
+          "roc_auc": 1.0,
+          "brier": 0.23951417417828255,
+          "logloss": 0.7218602661573588,
+          "eligible_for_cv_selection": true,
+          "exclusion_reason": null
+        }
+      }
+    },
+    "uljin_2022": {
+      "status": "completed",
+      "training_event_shares": {
+        "andong_2020": {
+          "rows": 11540,
+          "row_share": 0.10482427853827359,
+          "weight_sum": 11540.0,
+          "weight_share": 0.10482427853827359
+        },
+        "andong_2021": {
+          "rows": 91892,
+          "row_share": 0.8347064647694138,
+          "weight_sum": 91892.0,
+          "weight_share": 0.8347064647694138
+        },
+        "hapcheon_2022": {
+          "rows": 6657,
+          "row_share": 0.06046925669231258,
+          "weight_sum": 6657.0,
+          "weight_share": 0.06046925669231258
+        }
+      },
+      "horizons": {
+        "1": {
+          "rows": 11352,
+          "positives": 63,
+          "positive_fraction": 0.005549682875264271,
+          "missing_score_candidates": 0,
+          "average_precision": 0.1948339019466524,
+          "roc_auc": 0.8179510325404558,
+          "brier": 0.005394819698539574,
+          "logloss": 0.029971254009024298,
+          "eligible_for_cv_selection": true,
+          "exclusion_reason": null
+        },
+        "3": {
+          "rows": 8029,
+          "positives": 215,
+          "positive_fraction": 0.026777930003736454,
+          "missing_score_candidates": 0,
+          "average_precision": 0.24402205646115951,
+          "roc_auc": 0.8439899167266861,
+          "brier": 0.02615815323505275,
+          "logloss": 0.13840765367204422,
+          "eligible_for_cv_selection": true,
+          "exclusion_reason": null
+        },
+        "6": {
+          "rows": 6025,
+          "positives": 377,
+          "positive_fraction": 0.06257261410788381,
+          "missing_score_candidates": 0,
+          "average_precision": 0.2909394142305622,
+          "roc_auc": 0.8106226189313275,
+          "brier": 0.06140934175951711,
+          "logloss": 0.3374787108180333,
+          "eligible_for_cv_selection": true,
+          "exclusion_reason": null
+        }
+      }
+    }
+  },
+  "mean_event_horizon_ap": 0.37027724124685113
+}

@@ -133,6 +133,48 @@ journalctl --user -u bonghwajigi-kma-profile-acquire-v4 -f
 journalctl --user -u bonghwajigi-kma-research-v4 -f
 ```
 
+## 모델 자체의 성능 개선 실험
+
+사용자가 예측 자료의 활용에 앞서 모델 자체의 정확도를 높일 방법을 요청했다. [학습 이력 진단](../../../training/reports/kma-generalization-20261031/diagnosis.json)에서 v3 선택 모델의 저장 회차 평균 AP는 학습 0.596642, 홍성 검증 0.038626이었다. 같은 실험을 마지막 64회까지 진행한 이력은 학습 0.699136/검증 0.034640이다. 별도 depth5 후보는 학습 0.850247/검증 0.033382였다. 과적합과 사건 간 차이가 크며 두 원인의 기여는 아직 분리하지 못했다. 학습을 더 오래 돌리는 것만으로 개선되지 않았다.
+
+학습 행의 67.82%는 안동2021, 양성의 65.43%는 울진2022에서 나온다. 강수 피처는 모든 학습 사건과 홍성에서 100% 결측이다. 입력 이름에 강수가 있다는 사실은 실제로 강수 정보를 학습했다는 뜻이 아니다.
+
+원본 헤더도 추가 비교했다. 안동2020/2021은 `GK2A_FF_v1.6.2.3/operation`, 합천·울진2022는 `GK2A_FF_v1.2022.02.3/reprocess`, 홍성·강릉2023은 `GK2A_FF_v1.2023.01.3/operation`이다. [제품 버전 대조](../../../training/reports/kma-generalization-20261031/source-product-versions.json). 처리 버전 차이는 확인됐지만 이것만으로 성능 하락의 원인을 확정하지 않는다. 모든 과거 자료가 재처리본이라는 뜻도 아니다.
+
+학습 4개 사건에서 하나씩 제외하는 교차검증으로 다음 4개 후보를 비교했다. 각 학습은 seed47·100회 고정, CPU2스레드이며 홍성은 후보 선택 기록을 저장한 다음 읽었다. 총 17회 적합을 14.04초에 실행했다. calibration/test와 2025년 자료는 열지 않았다.
+
+| 후보 | 변화 | 학습 사건 교차검증 평균 AP |
+| --- | --- | ---: |
+| `reference_depth4` — 선택 | 깊이4, 양성 가중1, 규제 lambda20 | 0.400074 |
+| `shallow_depth2` | 깊이2, min_child_weight25, lambda100, gamma1, max_delta_step1 | 0.370277 |
+| `shallow_equal_events` | 위 설정에 사건별 총 학습 가중치 균등 | 0.364062 |
+| `shallow_no_clock_station` | 위 설정에서 시간대·관측소 거리/나이 제거 | 0.331099 |
+
+교차검증 점수는 후보를 고르는 데 사용했으며 독립 최종 성능이 아니다. 이미 이전 실험에서 홍성을 본 사실도 변하지 않는다. 실패 후보를 숨기거나 선택 후 다른 후보를 홍성에 맞춰 재선정하지 않았다. [실험 계획](../../../training/reports/kma-generalization-20261031/plan.json), [선택 기록](../../../training/reports/kma-generalization-20261031/selection.json), [전체 보고서](../../../training/reports/kma-generalization-20261031/report.json).
+
+| 홍성 지표 | 기존 v3 | 교차검증 선택 모델 |
+| --- | ---: | ---: |
+| 1시간 AP | 0.033642 | 0.028347 |
+| 3시간 AP | 0.033436 | 0.026474 |
+| 6시간 AP | 0.048799 | 0.047750 |
+| 기간 평균 Brier, 낮을수록 좋음 | 0.029680 | 0.011363 |
+
+가중치·복잡도·학습 회차가 함께 다른 최종 모델 비교이므로 Brier 변화 전체를 가중치 하나의 효과라고 주장하지 않는다. **확률 오차는 줄었지만 구분 성능 AP는 개선되지 않았다.** 새 모델을 기존 모델보다 우수하다고 채택하지 않는다. v2의 비가중 모델과 상수 기준선보다 좋은 확률 모델이라는 증거도 없다. 모든 모델은 미보정 연구용이다.
+
+이 결과는 “튜닝 여지가 없다”는 결론이 아니라 이번 고정된 소규모 후보가 문제를 해결하지 못했다는 증거다. 다음 우선순위는 v4의 사건별 결과 확인, 처리 버전·계절·지역을 고려한 국내 학습 사례 확장, 실제 기상/예보와 화재 귀속 정답 보강이다. 이후 충분한 사건 수로 사건별 검증과 제한된 설정 탐색을 다시 수행한다. 모델 종류 변경·앙상블도 같은 정답·구획에서 비교해야 하며 성능 향상을 미리 보장하지 않는다.
+
+복잡도/규제로 과적합을 통제하는 근거는 [XGBoost 공식 지침](https://xgboost.readthedocs.io/en/stable/tutorials/param_tuning.html), 같은 사건의 표본을 학습/검증에 섞지 않는 근거는 [scikit-learn 그룹 교차검증](https://scikit-learn.org/stable/modules/cross_validation.html#cross-validation-iterators-for-grouped-data)을 참고했다. 확률 보정은 [별도 보정 자료와 검증](https://scikit-learn.org/stable/modules/calibration.html)이 필요하다.
+
+GPU 원본은 `data/artifacts/xgboost/generalization-v1-20261031/`에 있다. 재현 시 새 output 경로를 사용한다.
+
+```bash
+training/.venv/bin/python -m bonghwa_training.generalization_experiment \
+  --dataset data/processed/korea-gk2a-context-v3 \
+  --config training/configs/korea-gk2a-context-v3.json \
+  --reference-run data/artifacts/xgboost/hourly-20261031T135808Z-549349 \
+  --output data/artifacts/xgboost/generalization-replay
+```
+
 ## 예측 자료를 활용할 경계
 
 우선 **과거 사건 재생, 같은 시점·기간의 격자 우선순위 비교, 추가 자료 확인 대상 선정**에 활용한다. 점수와 함께 관측 화재 거리, 과거 거리 변화, 마지막 관측 시각, 구름·누락, 기상 관측소 거리·나이, 모델·자료 해시를 전달한다. 거리 변화는 화선 속도나 도달 예정 시각으로 이름 붙이지 않는다. 서로 다른 모델·지역·시점의 점수를 공통 위험 등급으로 비교하지 않는다.

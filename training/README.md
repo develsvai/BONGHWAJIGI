@@ -4,6 +4,8 @@
 
 v3의 홍성 튜닝 AP는 1·3·6시간 각각 **0.0336/0.0334/0.0488**로 v2보다 소폭 개선됐지만, 양성 가중 모델의 Brier 점수는 악화됐다. AP는 분류 정확도가 아니며 원점수를 확률로 해석할 수 없다. 독립 보정 검증과 국내 최종 평가는 아직 남아 있다. v4의 학습 14·튜닝 6·보정 1은 요청 지역 창 수이며 독립 사건 수나 유효 표본 수가 아니다.
 
+추가로 깊이·규제·사건별 비중·시각/관측소 피처를 바꾼 4개 후보를 학습 사건 교차검증으로 비교했다. CPU17회 학습은 14.04초였고, 선택 모델의 홍성 평균 AP는 0.03419로 기존0.03863보다 낮았다. Brier 감소만으로 성능 개선 성공을 주장하지 않는다. [실험 보고서](reports/kma-generalization-20261031/report.json)와 `bonghwa_training.generalization_experiment` 실행법은 [모델 개선 기록](../docs/V2/delivery/korea-wildfire-improvement.md#모델-자체의-성능-개선-실험)에 있다.
+
 첫 CUDA 학습 모델·이력·재평가 사본은 `reports/ndws-20261031T104838Z-528483/`에 있으며, [실제 검증 결과](../docs/V2/delivery/xgboost-training-verification.md)에서 연구용 성능과 사용 한계를 확인할 수 있다.
 
 기존 NDWS GPU 학습은 [학습 실행 문서](../docs/V2/delivery/xgboost-training-run.md)를 따른다. 실행기는 `python -m bonghwa_training.train`, GPU용 서비스 중지/복구 스크립트는 `training/tools/train_gpu.sh`다. 국내 시간별 학습은 `bonghwa_training.goes_train`과 `training/tools/train_hourly_gpu.sh`를 사용하며 설정·재현 명령은 위 개선 기록에 있다.

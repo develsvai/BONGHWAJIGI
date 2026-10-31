@@ -13,3 +13,4 @@
 [2026-10-31 KST] KMA 수집의 429를 존중해 3초 간격·Retry-After·최대4회 제한 재시도 도입. 원본 수집 success를 확인한 뒤에만 구축→환경 결합→GPU 학습→Qwen ready를 수행하는 bounded systemd 연구 실행기를 시작했다. 키나 원본은 Git에 저장하지 않는다.
 [2026-10-31T14:27:30.491266+00:00] 국내 v2/v3 실측 보고서·최근화재 피처 동등성·projection/live probe·후보순위 진단을 저장했다. 실제 past-only 재생739후보, 기존2186행 피처일치. v4수집/학습대기 계속, durable completion receipt 기반 utility 후속unit 시작. 최종 운영 사용/국내 일반화 성공은 주장하지 않는다.
 [2026-10-31T14:28:20.517131+00:00] 최종 확인: training pytest60개 통과, Ruff check/format 및 bash syntax/diff check 통과, 문서 링크누락0, 신규연구보고서63파일 credential pattern0, Loom strict 통과. GPU Qwen생성/임베딩 ready. v4-progress.json에 실행중3unit/수집진행 저장. 완료된 연구도구와 결과를 checkpoint commit하며 Task는 RUNNING 유지.
+[2026-10-31T14:38:49.502735+00:00] 모델자체성능개선: generalization-v1 실제CPU17fits×100rounds/14.04초. 후보선택LOEO AP.400074/.370277/.364062/.331099. 선택depth4 홍성AP평균.034190<기존.038626, Brier평균.011363<.029680; 개선모델로승격하지않음. 선택후validation만읽음, 2025/cal/test미열람. pytest71/Ruff통과, 모든실험보고서 및 원본헤더버전대조 저장.
