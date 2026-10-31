@@ -3,9 +3,9 @@
   "job_id": "job-20261031-002017-v2-fe3bfad0",
   "title": "앱 설치 API를 일반 서버에 배포하고 단말 사설 연결과 합성 시연 검증",
   "description": "사용자의 앱 구현·실서버 연결·APK 배포 직접 승인에 따라 새 설치 계정·세션 migration과 API를 일반 서버에 배포한다. 기타 보호 대상 enum과 Compose 설정 전달을 보완하고 기존 데이터·GPU·학습 작업을 유지한다. 합성 mobile-demo 자료를 별도 시나리오에 넣어 실제 단말 연동이 가능하도록 검증한다.",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-10-31T16:38:10+00:00",
-  "updated_at": "2026-10-31T16:38:14+00:00",
+  "updated_at": "2026-10-31T17:01:47+00:00",
   "order_index": 19,
   "assigned_agent": "foreground",
   "depends_on": [],
@@ -26,12 +26,25 @@
   "run_attempts": 0,
   "last_error": "",
   "commit_refs": [
-    "5b6210d7424360a4aabd33efaebe201b8b80c914"
+    "5b6210d7424360a4aabd33efaebe201b8b80c914",
+    "ed82482219aae87ea965b3648aa85eea03679d7e"
   ],
   "branch_name": "develop",
   "git_dirty": true,
-  "git_snapshot_captured_at": "2026-10-31T16:38:14+00:00",
-  "artifacts": [],
+  "git_snapshot_captured_at": "2026-10-31T17:01:47+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-163810-api-36540350/agent-events.jsonl",
+    ".loom/tasks/task-20261031-163810-api-36540350/artifacts.json",
+    ".loom/tasks/task-20261031-163810-api-36540350/context.md",
+    ".loom/tasks/task-20261031-163810-api-36540350/decision.md",
+    ".loom/tasks/task-20261031-163810-api-36540350/git-snapshot.json",
+    ".loom/tasks/task-20261031-163810-api-36540350/logs.txt",
+    ".loom/tasks/task-20261031-163810-api-36540350/previous-results.md",
+    ".loom/tasks/task-20261031-163810-api-36540350/prompt.md",
+    ".loom/tasks/task-20261031-163810-api-36540350/result.md",
+    ".loom/tasks/task-20261031-163810-api-36540350/troubleshooting.md",
+    "docs/V2/delivery/mobile-server-deployment.md"
+  ],
   "source_proposal_id": "",
   "source_prompt": ""
 }
