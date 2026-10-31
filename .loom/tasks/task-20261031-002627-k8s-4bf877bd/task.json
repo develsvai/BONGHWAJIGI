@@ -2,17 +2,18 @@
   "id": "task-20261031-002627-k8s-4bf877bd",
   "job_id": "job-20261031-002017-v2-fe3bfad0",
   "title": "산불 MVP의 수집·DB·긴급 및 분석 큐·모델 API 실행 기반 구성",
-  "description": "2026-10-31 KST 사용자 재고정: 오늘 MVP는 산불 한 종류이며 3D와 서버 STT/TTS·오디오 스트리밍을 제외하고 서버는 텍스트를 제공한다. 공식 경보는 출처·원문·발령 대상을 확인해 개인별 정책 계산과 GPU를 기다리지 않고 우선 전달한다. 일반 분석은 정형 파싱 또는 필요한 Qwen 문서 추출·저장 문서의 임베딩 검색, 사건 통합·위치 관련성·입력 검사, 영향 확률 또는 예측 불가, 검토된 개인별 정책 순서다. 공식 등급·환경 영향 확률·개인 대응 단계를 분리하고 정책은 검토·버전 관리하며 입력 변경 때 재적용한다. 실제 자료·과거 재생·합성 시나리오를 구분하고 실제 정답이 없으면 학습·추론 연결은 simulation으로 검증하며 실제 예측은 unavailable로 둔다. 이 지시는 작업 계약 재고정만 승인하며 구현 실행·Queue 등록·서버 설치·원격 push를 지금 승인한 것으로 취급하지 않는다. 오늘 범위는 이 계약과 Job 재고정 노트를 우선하고 기존 V2 문서는 배경 설계로 참조한다. \n\n개별 작업: K8s 수집기, 일반 서버 API·DB·분리된 긴급/분석 큐·워커와 GPU 모델 실행 환경을 구성한다. A5의 SSH 관리 접속과 실제 서비스 통신을 구분하고 전용 파드 egress, 서비스 포트·인증·테스트 계정·로그·재시작 복구를 연결한다. 모델 본체는 C3/D3에서 준비하므로 여기서는 모델 API의 인터페이스·대역 및 health stub까지 검증한다. 같은 L4의 학습과 Qwen 추론은 순차 사용을 기본으로 하고 실측 전 동시 실행을 가정하지 않는다.",
+  "description": "2026-10-31 KST 사용자 재고정: 오늘 MVP는 산불 한 종류이며 3D와 서버 STT/TTS·오디오 스트리밍을 제외하고 서버는 텍스트를 제공한다. 공식 경보는 출처·원문·발령 대상을 확인해 개인별 정책 계산과 GPU를 기다리지 않고 우선 전달한다. 일반 분석은 정형 파싱 또는 필요한 Qwen 문서 추출·저장 문서의 임베딩 검색, 사건 통합·위치 관련성·입력 검사, 영향 확률 또는 예측 불가, 검토된 개인별 정책 순서다. 공식 등급·환경 영향 확률·개인 대응 단계를 분리하고 정책은 검토·버전 관리하며 입력 변경 때 재적용한다. 실제 자료·과거 재생·합성 시나리오를 구분하고 실제 정답이 없으면 학습·추론 연결은 simulation으로 검증하며 실제 예측은 unavailable로 둔다. 이 지시는 작업 계약 재고정만 승인하며 구현 실행·Queue 등록·서버 설치·원격 push를 지금 승인한 것으로 취급하지 않는다. 오늘 범위는 이 계약과 Job 재고정 노트를 우선하고 기존 V2 문서는 배경 설계로 참조한다. \n\n개별 작업: K8s 수집기, 일반 서버 API·DB·분리된 긴급/분석 큐·워커와 GPU 모델 실행 환경을 구성한다. A5의 SSH 관리 접속과 실제 서비스 통신을 구분하고 전용 파드 egress, 서비스 포트·인증·테스트 계정·로그·재시작 복구를 연결한다. 모델 본체는 C3/D3에서 준비하므로 여기서는 모델 API의 인터페이스·대역 및 health stub까지 검증한다. 같은 L4의 학습과 Qwen 추론은 순차 사용을 기본으로 하고 실측 전 동시 실행을 가정하지 않는다.\n\n기술 스택 정본: docs/V2/delivery/implementation-stack.md. Python 3.12·FastAPI/Pydantic 2·SQLAlchemy 2.x·PostgreSQL 16/PostGIS/pgvector·Celery/Redis, 일반 서버와 GPU의 Docker Compose 및 K8s 수집 배치를 따른다. GPU는 Transformers/Sentence Transformers 기반 단일 API로 준비한다. 패치 잠금과 실제 설치·CUDA·복구·자원 검증은 이 구현 Task에서 수행한다. 스택 결정 문서의 완료가 서비스 설치 완료를 뜻하지 않는다.",
   "status": "PENDING",
   "created_at": "2026-10-31T00:26:27+00:00",
-  "updated_at": "2026-10-31T08:01:45+00:00",
+  "updated_at": "2026-10-31T08:33:37+00:00",
   "order_index": 4,
   "assigned_agent": "unassigned",
   "depends_on": [
     "task-20261031-002627-mvp-e821b0f7",
     "task-20261031-002627-task-5ce3742e",
     "task-20261031-022438-tailscale-6dc57118",
-    "task-20261031-002627-task-93368ddf"
+    "task-20261031-002627-task-93368ddf",
+    "task-20261031-082929-mvp-3188b68a"
   ],
   "expected_output": "docs/V2/delivery/runtime-platform.md; 격리된 산불 MVP 실행 구성, 서비스 주소·인증 주입 방식, 긴급/분석 자원 분리와 연결·복구 기록",
   "done_condition": "실제 수집 파드에서 일반 서버 및 모델 인터페이스에 요청이 도달하고 DB·큐·워커 재시작 복구와 최소 접근 범위가 검증된다.",
@@ -25,7 +26,8 @@
     "docs/V2/03_학습_검증_흐름도.md",
     "docs/V2/delivery/app-api-contract.md",
     "docs/V2/delivery/environment-readiness.md",
-    "docs/V2/delivery/tailnet-connectivity.md"
+    "docs/V2/delivery/tailnet-connectivity.md",
+    "docs/V2/delivery/implementation-stack.md"
   ],
   "memory_refs": [],
   "document_outputs": [

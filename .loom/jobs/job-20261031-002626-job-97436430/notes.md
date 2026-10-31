@@ -40,3 +40,7 @@ GPU 상태 조회에서 NVIDIA L4 1대와 CUDA driver API 초기화 성공을 �
 
 구체적 완료 조건은 각 Task의 재고정 계약을 따른다. 기존 docs/V2/04-execution-backlog.md는 이전 계획이며 실제 계약 정본은 현재 Task와 이 노트다.
 - Tags: `mvp`, `산불`, `2026-10-31`, `계약재고정`
+## 2026-10-31T08:33:37+00:00
+
+2026-10-31 구현 기술 스택 결정: docs/V2/delivery/implementation-stack.md; Task task-20261031-082929-mvp-3188b68a. Python 3.12 + FastAPI/Pydantic 2 + SQLAlchemy 2.x/psycopg 3/Alembic + PostgreSQL 16/PostGIS/pgvector + Celery/Redis + Transformers/Sentence Transformers + XGBoost. 일반 서버 API/정책/CPU 추론, GPU 서버 모델/별도 학습, K8s 수집으로 배치한다. 사용자는 대응 레벨과 레벨별 알림 방식을 회의 중이며 정해지는 대로 제공한다고 밝혔다. D1은 PENDING이고 임계값·단계·알림 정책을 임의 확정하지 않는다. 모델 로딩 준비와 최종 정책 설명 검증을 구분한다. Qwen은 선택된 행동 설명, 정책 선택은 검토된 Python 규칙으로 한다. 이번 실행은 스택 문서와 계약 연결만 수행하며 다른 구현 Task·Queue·서버 설치는 시작하지 않는다.
+- Tags: `기술스택`, `산불`, `MVP`

@@ -1,0 +1,45 @@
+{
+  "id": "task-20261031-082929-mvp-3188b68a",
+  "job_id": "job-20261031-002017-v2-fe3bfad0",
+  "title": "산불 MVP 구현 기술 스택과 서버별 배치 계약 고정",
+  "description": "사용자가 현재 에이전트에게 레포 상태를 확인하고 산불 MVP 기술 스택을 정하도록 직접 지시했다. 현재 레포와 API 초안, 일반 서버 2 vCPU·약 8GiB 및 단일 L4 GPU의 기존 점검 기록과 공식 기술 문서를 대조해 구현 스택과 배치·의존성·검증 기준을 문서로 고정한다. 대응 레벨과 레벨별 알림 방식은 사용자 회의 결과 대기이며 임의로 확정하지 않는다.",
+  "status": "RUNNING",
+  "created_at": "2026-10-31T08:29:29+00:00",
+  "updated_at": "2026-10-31T08:29:33+00:00",
+  "order_index": 7,
+  "assigned_agent": "foreground",
+  "depends_on": [
+    "task-20261031-002027-k8s-v2-a251b54e",
+    "task-20261031-002627-task-5ce3742e",
+    "task-20261031-022438-tailscale-6dc57118"
+  ],
+  "expected_output": "docs/V2/delivery/implementation-stack.md 및 기존 A3 실행 기반 계약의 기술 기준 참조, 관련 Loom 결정·검증 기록",
+  "done_condition": "API·DB·공간·벡터 검색·긴급/분석 큐·수집·모델·배포·검증 스택과 선택 근거 및 서버별 배치가 명시되고 공식 근거 링크와 미검증 항목을 구분하며 문서 및 Loom 검증 후 로컬 커밋된다.",
+  "in_scope": "레포·원격 develop 및 기존 인프라 기록 읽기; 공식 문서 조회; 기술 스택 결정 문서; A3에 기술 기준과 선행 설계 연결; 관련 Job 노트와 Task 결과; 검증 및 로컬 커밋",
+  "out_of_scope": "서버 접속·설치·재시작·배포; 라이브러리 설치 및 앱/서버 코드 구현; 모델 다운로드·학습·성능 검증; 대응 레벨·알림 정책 확정; _APP 조회·수정; 원격 push; 기존 구현 Task 실행 또는 Queue 등록",
+  "validation_hint": "현재 레포와 자원 근거 대조, 공식 문서·내부 링크 검사, A3 선행 관계와 필수 문서 검사, 정책 미확정 및 실제/모의 경계 확인, git diff --check와 Loom strict",
+  "required_docs": [
+    "docs/V2/01_서비스_핵심_정리.md",
+    "docs/V2/02_실시간_서버_배치도.md",
+    "docs/V2/03_학습_검증_흐름도.md",
+    "docs/V2/delivery/app-api-contract.md",
+    "docs/V2/delivery/environment-readiness.md",
+    "docs/V2/delivery/tailnet-connectivity.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/implementation-stack.md"
+  ],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [
+    "bbf623375f09cec11df517f3dde52a79756dd3af"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-10-31T08:29:33+00:00",
+  "artifacts": [],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}
