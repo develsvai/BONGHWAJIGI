@@ -1,0 +1,24 @@
+name: bonghwajigi-gpu
+services:
+  gpu-api:
+    build:
+      context: ../..
+      dockerfile: deploy/docker/Python.Dockerfile
+      args:
+        RUNTIME_EXTRA: gpu
+    command: ["uvicorn", "bonghwajigi.gpu_api.app:create_app", "--factory", "--host", "0.0.0.0", "--port", "8001", "--workers", "1", "--no-access-log"]
+    gpus: all
+    environment:
+      BONGHWA_ENVIRONMENT: local
+      BONGHWA_MODE: simulation
+      BONGHWA_SERVICE_TOKEN: ${BONGHWA_SERVICE_TOKEN:?별도 서비스 토큰을 주입하세요}
+      HF_HOME: /models/huggingface
+    ports: ["127.0.0.1:8001:8001"]
+    volumes: ["model-cache:/models"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8001/health/live')"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+volumes:
+  model-cache:

@@ -1,0 +1,21 @@
+{
+  "before": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "cadabfe4fd5d05a24e88cb271b1999a4b9223df9",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/events.jsonl",
+      ".loom/job-runs/job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02/job-run.json",
+      ".loom/jobs/job-20261031-002017-v2-fe3bfad0/job.json"
+    ],
+    "untracked_files": [
+      ".loom/task-definitions/task-def-20261031-084830-python-409169c7/",
+      ".loom/task-runs/task-run-20261031-084835-task-def-20261031-084830-python-409169c7-d6f17438/",
+      ".loom/tasks/task-20261031-084830-python-03ca0991/"
+    ],
+    "captured_at": "2026-10-31T08:48:35+00:00"
+  },
+  "after": null
+}

@@ -1,0 +1,34 @@
+{
+  "id": "task-def-20261031-084830-python-409169c7",
+  "job_definition_id": "job-20261031-002017-v2-fe3bfad0",
+  "title": "설계에 맞춘 Python 서버·수집기·모델 프로젝트 스캐폴딩 구성",
+  "description": "사용자의 직접 구현 요청에 따라 확정된 산불 MVP 구조와 기술 스택을 실행 가능한 로컬 프로젝트 뼈대로 옮긴다. 공통 계약·도메인, 일반 API, 기관 수집, 사건·공간·정책·검색, 분리된 워커, GPU API와 ML의 모듈 및 실행 환경을 분리한다. 실제 기능이나 정책·모델 준비를 완료한 것처럼 응답하지 않는다.",
+  "created_at": "2026-10-31T08:48:30+00:00",
+  "updated_at": "2026-10-31T08:48:35+00:00",
+  "order_index": 9,
+  "legacy_task_id": "task-20261031-084830-python-03ca0991",
+  "depends_on": [
+    "task-def-20261031-082929-mvp-f93d7e8a"
+  ],
+  "expected_output": "Python 3.12 패키지와 의존성 잠금, API·GPU 상태 확인 진입점, 분리된 Celery 실행 구성, DB 마이그레이션 기반, 로컬 및 서버별 실행 템플릿, 최소 검증과 개발 안내",
+  "done_condition": "GPU 라이브러리 없이 일반 서버와 수집기 기반을 설치하고 두 API 상태·미구현 경계·긴급 및 분석 큐 분리를 검증할 수 있다. 정적 검사와 관련 테스트가 통과하고 문서·Loom 기록을 커밋한다.",
+  "in_scope": "저장소 스캐폴딩, 환경변수 예시와 의존성 그룹, 개발용 Compose와 서버·K8s 배치 템플릿, health·readiness, 명시적인 미준비 모델 인터페이스, 테스트 및 문서",
+  "out_of_scope": "앱 저장소, 실제 수집·정책·예측·푸시 구현, 대응 레벨 결정, 모델 다운로드·학습, 원격 서버 설치·배포, 운영 네트워크·인증 설정 변경",
+  "validation_hint": "잠금 파일 기반 CPU 개발 환경 설치, Ruff와 pytest, API 생존 및 미준비 응답, 긴급 큐의 GPU·분석 import 독립성, 환경별 설정·배치 템플릿 검사, 기존 API 계약 검사와 Loom strict",
+  "required_docs": [
+    "docs/V2/delivery/implementation-stack.md",
+    "docs/V2/delivery/app-api-contract.md",
+    "docs/V2/delivery/ssh-access.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/project-scaffold.md"
+  ],
+  "document_output_exceptions": [],
+  "default_agent": "foreground",
+  "context_policy_id": "",
+  "executor_policy_id": "",
+  "review_policy": "",
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

@@ -1,0 +1,69 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bonghwajigi"
+version = "0.1.0"
+description = "산불 대응 안내 서비스의 서버·수집·모델 실행 기반"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "pydantic-settings>=2.8,<3",
+  "uvicorn>=0.34,<1",
+]
+
+[project.optional-dependencies]
+server = [
+  "sqlalchemy>=2.0,<3",
+  "psycopg[binary]>=3.2,<4",
+  "alembic>=1.15,<2",
+  "geoalchemy2>=0.17,<1",
+  "pgvector>=0.3,<1",
+  "celery[redis]>=5.5,<6",
+  "PyJWT[crypto]>=2.10,<3",
+  "prometheus-client>=0.21,<1",
+]
+collector = ["httpx>=0.28,<1"]
+gpu = [
+  "torch>=2.8,<3",
+  "transformers>=4.52,<5",
+  "sentence-transformers>=5,<6",
+  "accelerate>=1,<2",
+]
+ml = [
+  "xgboost>=3,<4",
+  "scikit-learn>=1.6,<2",
+  "numpy>=2,<3",
+  "pandas>=2.2,<3",
+  "pyarrow>=19,<30",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "ruff>=0.12,<1", "httpx>=0.28,<1", "PyYAML==6.0.2"]
+api-contract = ["openapi-spec-validator==0.7.2", "jsonschema==4.23.0", "PyYAML==6.0.2"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/bonghwajigi"]
+
+# CUDA wheels apply only to the provided Linux x86_64 GPU server.
+# Lock resolution does not verify the remote driver or run CUDA.
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu128", marker = "sys_platform == 'linux' and platform_machine == 'x86_64'" }]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

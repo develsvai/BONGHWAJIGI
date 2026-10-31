@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-31T08:44:47+00:00",
+  "generated_at": "2026-10-31T08:59:06+00:00",
   "docs_paths": [
     "docs"
   ],
@@ -416,8 +416,17 @@
       "path": "docs/V2/delivery/implementation-stack.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T17:32:39+09:00",
-      "size_bytes": 18749
+      "updated_at": "2026-10-31T17:58:03+09:00",
+      "size_bytes": 19243
+    },
+    {
+      "id": "docs/V2/delivery/project-scaffold.md",
+      "title": "서버 프로젝트 스캐폴딩",
+      "path": "docs/V2/delivery/project-scaffold.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T17:57:38+09:00",
+      "size_bytes": 10416
     },
     {
       "id": "docs/V2/delivery/ssh-access.md",
