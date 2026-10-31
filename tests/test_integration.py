@@ -137,7 +137,7 @@ def test_news_only_integration_never_becomes_xgboost_input(inputs):
     assert result["integration"]["summary_review_status"] == "not_reviewed"
 
 
-@pytest.mark.parametrize("failure", ["revision", "truncated", "budget", "http", "type"])
+@pytest.mark.parametrize("failure", [None, "revision", "truncated", "budget", "http", "type"])
 def test_generation_response_requires_fixed_model_and_complete_token_budget(failure):
     body = {
         "model": "qwen-test",
@@ -165,8 +165,12 @@ def test_generation_response_requires_fixed_model_and_complete_token_budget(fail
         "http://test", SecretStr("test-only"), "qwen-test", "fixed", httpx.MockTransport(respond)
     )
     try:
-        with pytest.raises(IntegrationError):
-            client.generate("과거 산불 자료")
+        if failure is None:
+            assert client.generate("과거 산불 자료") == body
+        else:
+            code = "GENERATION_OUTPUT_LIMIT_REACHED" if failure == "truncated" else None
+            with pytest.raises(IntegrationError, match=code):
+                client.generate("과거 산불 자료")
     finally:
         client.close()
     assert paths == ["/internal/v1/generate"]

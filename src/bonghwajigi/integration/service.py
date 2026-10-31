@@ -125,9 +125,10 @@ def make_prompt(sources: list[dict], alerts: list[dict], area: str) -> str:
         "대피해야 한다·대피하세요 같은 권고·명령형은 쓰지 말고 대피 안내가 보도됐다고 쓰세요. "
         "현재 경보나 개인별 대피 지시를 만들지 마세요. 공식 심각 등급을 개인 대응 단계로 "
         "바꾸지 마세요. 좌표·풍속·확률·모델 입력 수치를 만들지 마세요. "
-        "오직 다음 형식의 JSON 하나만 출력하세요. summary는 한국어 150자 이내, "
-        "facts는 최대 3개로 각각 evidence_id와 해당 자료에서 그대로 복사한 "
-        "8~80자 quote만 넣으세요. 공식 경보와 지역 상황을 함께 포함하세요. "
+        "오직 다음 형식의 짧은 JSON 하나만 출력하세요. 들여쓰기나 설명을 덧붙이지 마세요. "
+        "summary는 한국어 80자 이내 한 문장입니다. facts는 최대 2개로 각각 evidence_id와 "
+        "해당 자료에서 그대로 복사한 8~40자 quote만 넣으세요. 같은 사실을 반복하지 마세요. "
+        "공식 경보와 지역 상황을 함께 포함하고 나머지 내용은 생략하세요. "
         '형식: {"summary":"...","facts":[{"evidence_id":"...","quote":"..."}]}\n'
         "<untrusted_evidence_json>\n"
         + json.dumps(data, ensure_ascii=False)
@@ -165,9 +166,10 @@ class GenerationClient:
             raise IntegrationError("GENERATION_MODEL_MISMATCH")
         tokens = [result.get(key) for key in ("input_tokens", "output_tokens")]
         elapsed = result.get("elapsed_ms")
+        if type(tokens[1]) is int and tokens[1] >= 512:
+            raise IntegrationError("GENERATION_OUTPUT_LIMIT_REACHED")
         if (
             any(type(value) is not int or value <= 0 for value in tokens)
-            or tokens[1] >= 512
             or tokens[0] + 512 > 4096
             or not isinstance(result.get("text"), str)
             or not isinstance(elapsed, (int, float))
