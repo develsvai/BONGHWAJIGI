@@ -52,3 +52,9 @@ A2 결과: 클러스터와 제공 서버는 별도 VPN이며 6개 노드 및 5�
 
 - Task: `task-20261031-002627-k8s-4bf877bd`
 - Tags: `verification-result`, `readiness`
+## 2026-10-31T02:38:53+00:00
+
+A5에서 두 서버 Tailscale 1.104.4 설치와 기존 tailnet 등록 완료. 사용자 저장 직전 승인 후 관리자 그룹·마스터·두 서버에서 두 서버 IPv4 TCP 22만 허용하는 grant 1개를 추가했다. Tailnet SSH 실제 로그인, 마스터발 TCP 22 및 서버 상호 배너 수신이 성공했다. 일반 서버 재인증 문제는 해결됐다. 일반 워커와 파드는 경로가 없어 연결 실패하므로 A3에서 프로젝트 전용 egress와 실제 API 포트·인증·TLS를 구성하고 다시 검증한다. 비밀정보는 기록하지 않았다.
+
+- Task: `task-20261031-022438-tailscale-6dc57118`
+- Tags: `tailscale`, `verified`, `follow-up`
