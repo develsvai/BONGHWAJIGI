@@ -195,6 +195,12 @@ def test_turn_ownership_revision_and_idempotency(mobile):
     "value",
     [
         {
+            "intent": "status_update",
+            "action_ids": [],
+            "question": "",
+            "changes": [{"field": "state.can_move", "value": False, "quote": "움직일 수 없어"}],
+        },
+        {
             "intent": "explain",
             "action_ids": ["invented-safe-route"],
             "question": "none",
@@ -227,6 +233,7 @@ def test_invalid_generation_uses_only_reviewed_policy_fallback(mobile, value):
         f"/v1/me/responses/{identifier}/text-turns", json=body, headers=headers()
     ).json()["data"]
     assert data["assistant"]["source"] == "reviewed_policy_fallback"
+    assert data["reason_code"] == "DIALOGUE_MODEL_OUTPUT_INVALID"
     assert data["proposal"] is None
     assert "invented" not in data["assistant"]["text"]
 
@@ -249,6 +256,23 @@ def test_model_may_omit_optional_followup_question(mobile):
     assert data["assistant"]["source"] == "qwen_grounded"
     assert data["proposal"]["state"]["can_move"] is False
     assert "곁에서" not in data["assistant"]["text"]
+
+
+def test_generation_failure_uses_fixed_code_without_exception_contents(mobile):
+    from bonghwajigi.integration.service import IntegrationError
+
+    client, _, _, _, headers = mobile
+
+    def fail():
+        raise IntegrationError("private-diagnostic-content")
+
+    identifier, body = setup(mobile, Generator(callback=fail))
+    data = client.post(
+        f"/v1/me/responses/{identifier}/text-turns", json=body, headers=headers()
+    ).json()["data"]
+    assert data["reason_code"] == "DIALOGUE_GENERATION_FAILED"
+    assert data["proposal"] is None
+    assert "private-diagnostic-content" not in json.dumps(data)
 
 
 def test_generation_failure_falls_back_and_pending_other_request_is_bounded(mobile):
@@ -417,7 +441,11 @@ def test_history_has_no_private_profile_and_is_bounded(mobile):
             ).status_code
             == 200
         )
-    facts = json.loads(generator.prompts[-1].split("\n", 1)[1])
+    facts = json.loads(
+        generator.prompts[-1]
+        .split("<untrusted_dialogue_json>\n", 1)[1]
+        .split("\n</untrusted_dialogue_json>", 1)[0]
+    )
     assert len(facts["previous_turns"]) == 3
     assert "health_notes" not in facts and "display_name" not in facts
     with sessions.begin() as s:

@@ -12,7 +12,7 @@ from bonghwajigi.contracts.policy import Identifier
 from bonghwajigi.db.analysis_models import new_id, now
 from bonghwajigi.db.app_models import AppAccount, AppSession, AppTextTurn
 from bonghwajigi.db.policy_models import PolicyEntity
-from bonghwajigi.integration.service import digest
+from bonghwajigi.integration.service import IntegrationError, digest
 from bonghwajigi.policy.dialogue import (
     DialogueGenerator,
     fallback_dialogue,
@@ -277,6 +277,11 @@ def attach_interaction(app, router, settings, actor_dependency, envelope, owned_
         try:
             generated = app.state.dialogue_generator.generate(prompt)
             result = render_dialogue(generated["text"], body.text, content, state, context_revision)
+        except IntegrationError:
+            result = fallback_dialogue(content, "DIALOGUE_GENERATION_FAILED")
+        except (ValueError, KeyError, TypeError):
+            # Only fixed codes are exposed; model output and user text never enter diagnostics.
+            result = fallback_dialogue(content, "DIALOGUE_MODEL_OUTPUT_INVALID")
         except Exception:
             result = fallback_dialogue(content)
         final_error = None

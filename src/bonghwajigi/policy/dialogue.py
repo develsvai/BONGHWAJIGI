@@ -99,6 +99,7 @@ def make_dialogue_prompt(text, content, current_state, previous):
         "아이 등록 프로필은 현재 동반 사실이 아닙니다. '지금 아이랑 있습니다'는 "
         "state.child_present=true만 확인하며 이동 가능 여부를 추정하지 마세요. "
         "'혼자라 이동할 수 있어요'는 state.alone_now=yes와 state.can_move=true를 확인합니다. "
+        "하나의 발언에 현재 상태가 여러 개 있으면 각각 별도 changes 항목으로 모두 추출하세요. "
         "보조기구 사용 사실을 independent로 바꾸거나 이동 불가로 추정하지 마세요. "
         "changes field는 state.child_present(bool), state.alone_now(yes/no/unknown), "
         "state.helper_present(bool), state.can_move(bool), state.injured(bool), "
@@ -107,10 +108,19 @@ def make_dialogue_prompt(text, content, current_state, previous):
         "state.evacuation_status(unknown/not_started/moving/arrived), "
         "overrides.mobility(independent/walking_aid/wheelchair/assistance_required/unknown), "
         "overrides.stairs(able/difficult/unable/unknown), overrides.alone_now(yes/no/unknown). "
-        "changes는 최대4개입니다. 예: "
+        "changes는 최대4개입니다. 질문이 필요 없으면 question은 반드시 문자열 none이며 "
+        "빈 문자열이나 질문 문장을 넣지 마세요. 여러 상태를 확인한 출력 예: "
+        '{"intent":"status_update","action_ids":[],"question":"none",'
+        '"changes":[{"field":"state.alone_now","value":"yes","quote":"혼자라"},'
+        '{"field":"state.can_move","value":true,"quote":"이동할 수 있어요"}]}. '
+        "다른 예: "
         '{"intent":"status_update","action_ids":[],"question":"helper_present",'
         '"changes":[{"field":"state.can_move","value":false,"quote":"움직일 수 없어"}]}\n'
+        "<untrusted_dialogue_json>\n"
         + json.dumps(facts, ensure_ascii=False)
+        + "\n</untrusted_dialogue_json>\n"
+        "현재 user_text만 분석해 JSON 하나를 출력하세요. 직접 확인된 모든 상태를 빠짐없이 "
+        "changes에 넣고 quote는 현재 발언에서 복사하세요. 질문 없음은 question=none입니다."
     )
 
 
@@ -162,7 +172,7 @@ def render_dialogue(raw, text, content, current_state, context_revision):
     }
 
 
-def fallback_dialogue(content):
+def fallback_dialogue(content, reason_code="DIALOGUE_MODEL_UNAVAILABLE_OR_INVALID"):
     actions = content["actions"][:3]
     text = "대화 분석을 완료하지 못했어요. 현재 확인된 안내를 먼저 전해드릴게요."
     if actions:
@@ -175,5 +185,5 @@ def fallback_dialogue(content):
             "action_ids": [a["action_id"] for a in actions],
         },
         "proposal": None,
-        "reason_code": "DIALOGUE_MODEL_UNAVAILABLE_OR_INVALID",
+        "reason_code": reason_code,
     }
