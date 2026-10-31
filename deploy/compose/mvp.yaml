@@ -1,0 +1,114 @@
+name: bonghwajigi-mvp
+
+x-environment: &environment
+  BONGHWA_ENVIRONMENT: staging
+  BONGHWA_MODE: simulation
+  BONGHWA_DATABASE_URL: postgresql+psycopg://bonghwajigi:${POSTGRES_PASSWORD:?설정 필요}@127.0.0.1:15432/bonghwajigi
+  BONGHWA_BROKER_URL: redis://127.0.0.1:16379/0
+  BONGHWA_SERVICE_TOKEN: ${BONGHWA_SERVICE_TOKEN:?설정 필요}
+  BONGHWA_ANALYSIS_ENABLED: "true"
+  BONGHWA_POLICY_ENABLED: "true"
+  BONGHWA_APP_ENABLED: "true"
+  BONGHWA_JWT_SECRET: ${BONGHWA_JWT_SECRET:?설정 필요}
+  BONGHWA_JWT_ISSUER: bonghwajigi-mvp
+  BONGHWA_JWT_AUDIENCE: bonghwajigi-app
+  BONGHWA_JWT_LIFETIME_SECONDS: "86400"
+  BONGHWA_NOTIFICATIONS_ENABLED: "true"
+  BONGHWA_PUSH_PROVIDER: simulation
+  BONGHWA_GPU_BASE_URL: http://127.0.0.1:18001
+  BONGHWA_EMBEDDING_SERVICE_TOKEN: ${BONGHWA_EMBEDDING_SERVICE_TOKEN:-}
+  BONGHWA_EMBEDDING_REVISION: 97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3
+  BONGHWA_QWEN_REVISION: cdbee75f17c01a7cc42f958dc650907174af0554
+  BONGHWA_POLICY_QWEN_ENABLED: "true"
+  BONGHWA_WEB_SEARCH_ENABLED: "true"
+  BONGHWA_POLICY_POLL_SECONDS: "1"
+  BONGHWA_POLICY_CHECK_SECONDS: "10"
+  BONGHWA_OUTBOX_REDELIVERY_SECONDS: "60"
+
+x-runtime: &runtime
+  image: bonghwajigi-mvp:${BONGHWA_RELEASE:-current}
+  build:
+    context: ../..
+    dockerfile: deploy/docker/Python.Dockerfile
+    args:
+      RUNTIME_EXTRA: server
+  # Linux 일반 서버 전용. API/DB/GPU 터널을 호스트 loopback에 한정한다.
+  network_mode: host
+  environment: *environment
+  restart: unless-stopped
+  stop_grace_period: 20s
+  logging:
+    driver: json-file
+    options:
+      max-size: 10m
+      max-file: "3"
+  depends_on:
+    migrate:
+      condition: service_completed_successfully
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_DB: bonghwajigi
+      POSTGRES_USER: bonghwajigi
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?설정 필요}
+    ports: ["127.0.0.1:15432:5432"]
+    volumes: ["postgres-data:/var/lib/postgresql/data"]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bonghwajigi -d bonghwajigi"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+  redis:
+    image: redis:7.4-bookworm
+    command: ["redis-server", "--appendonly", "yes", "--maxmemory-policy", "noeviction"]
+    ports: ["127.0.0.1:16379:6379"]
+    volumes: ["redis-data:/data"]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+  migrate:
+    <<: *runtime
+    restart: "no"
+    command: ["alembic", "upgrade", "head"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+  api:
+    <<: *runtime
+    command: ["uvicorn", "bonghwajigi.api.app:create_app", "--factory", "--host", "127.0.0.1", "--port", "8000", "--no-access-log", "--limit-concurrency", "100"]
+    volumes: ["${BONGHWA_PRIVATE_DIR:?설정 필요}/accounts:/accounts"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health/ready', timeout=5)"]
+      interval: 5s
+      timeout: 6s
+      retries: 20
+  urgent:
+    <<: *runtime
+    command: ["celery", "-A", "bonghwajigi.workers.urgent:app", "worker", "-Q", "urgent", "--pool=solo", "--concurrency=1", "--loglevel=WARNING", "--hostname=urgent@%h"]
+  analysis:
+    <<: *runtime
+    command: ["celery", "-A", "bonghwajigi.workers.analysis:app", "worker", "-Q", "analysis", "--pool=solo", "--concurrency=1", "--loglevel=WARNING", "--hostname=analysis@%h"]
+  delivery:
+    <<: *runtime
+    command: ["celery", "-A", "bonghwajigi.workers.delivery:app", "worker", "-Q", "delivery", "--pool=solo", "--concurrency=1", "--loglevel=WARNING", "--hostname=delivery@%h"]
+  outbox:
+    <<: *runtime
+    command: ["python", "-m", "bonghwajigi.workers.outbox"]
+  policy:
+    <<: *runtime
+    command: ["python", "-m", "bonghwajigi.workers.policy_loop", "--mode", "plans"]
+  integration:
+    <<: *runtime
+    command: ["python", "-m", "bonghwajigi.workers.policy_loop", "--mode", "integrations"]
+
+volumes:
+  postgres-data:
+  redis-data:

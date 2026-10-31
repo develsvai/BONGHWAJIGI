@@ -19,7 +19,35 @@ def create_app() -> FastAPI:
 
     app = FastAPI(title="봉화지기 일반 서버", version="0.1.0", lifespan=lifespan)
     app.state.settings = Settings()
-    app.include_router(health_router("api", ("database", "broker", "application")))
+
+    def ready_check():
+        from redis import Redis
+        from sqlalchemy import text
+
+        with app.state.sessions() as session:
+            session.execute(text("SELECT 1 FROM app_accounts LIMIT 1"))
+            session.execute(text("SELECT 1 FROM deliveries LIMIT 1"))
+        with Redis.from_url(
+            app.state.settings.broker_url.get_secret_value(),
+            socket_connect_timeout=2,
+            socket_timeout=2,
+        ) as broker:
+            broker.ping()
+        return {
+            "database": "connected",
+            "broker": "connected",
+            "application": "simulation_ready",
+            "prediction": "excluded",
+            "gpu": "optional_not_in_readiness",
+        }
+
+    app.include_router(
+        health_router(
+            "api",
+            ("database", "broker", "application"),
+            ready_check if app.state.settings.app_enabled else None,
+        )
+    )
     if app.state.settings.analysis_enabled:
         from bonghwajigi.api.analysis import attach_analysis
 

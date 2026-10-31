@@ -1,0 +1,14 @@
+[Unit]
+Description=Bonghwajigi private GPU API tunnel
+After=network-online.target tailscaled.service
+Wants=network-online.target
+StartLimitIntervalSec=0
+
+[Service]
+User=ncloud
+ExecStart=/usr/bin/ssh -N -i /home1/ncloud/.ssh/bonghwajigi-gpu-api -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=/home1/ncloud/.ssh/bonghwajigi-gpu-known-hosts -o ExitOnForwardFailure=yes -o ServerAliveInterval=15 -o ServerAliveCountMax=3 -L 127.0.0.1:18001:127.0.0.1:8001 ncloud@100.65.45.63
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -23,8 +23,8 @@ jobs:
           version: "0.11.10"
           python-version: "3.12"
       - run: uv sync --frozen --extra server --extra collector --group api-contract
-      - run: uv run --no-sync ruff check src tests migrations tools/gpu_client.py tools/run_analysis_demo.py tools/run_integration_demo.py tools/run_policy_loop_demo.py tools/serve_analysis.py tools/mvp_accounts.py tools/mvp_contract.py
-      - run: uv run --no-sync ruff format --check src tests migrations tools/gpu_client.py tools/run_analysis_demo.py tools/run_integration_demo.py tools/run_policy_loop_demo.py tools/serve_analysis.py tools/mvp_accounts.py tools/mvp_contract.py
+      - run: uv run --no-sync ruff check src tests migrations tools/gpu_client.py tools/run_analysis_demo.py tools/run_integration_demo.py tools/run_policy_loop_demo.py tools/serve_analysis.py tools/mvp_*.py
+      - run: uv run --no-sync ruff format --check src tests migrations tools/gpu_client.py tools/run_analysis_demo.py tools/run_integration_demo.py tools/run_policy_loop_demo.py tools/serve_analysis.py tools/mvp_*.py
       - run: uv run --no-sync alembic upgrade head
         env:
           BONGHWA_DATABASE_URL: postgresql+psycopg://bonghwajigi:ci-only@127.0.0.1:5432/bonghwajigi_analysis
@@ -33,3 +33,8 @@ jobs:
           BONGHWA_TEST_DATABASE_URL: postgresql+psycopg://bonghwajigi:ci-only@127.0.0.1:5432/bonghwajigi_analysis
       - run: uv run --no-sync python tools/validate_app_api.py
       - run: docker compose --env-file .env.example -f deploy/compose/general.yaml config --quiet
+      - run: docker compose --env-file .env.example -f deploy/compose/mvp.yaml config --quiet
+        env:
+          BONGHWA_SERVICE_TOKEN: ci-only-internal
+          BONGHWA_JWT_SECRET: ci-only-separate-jwt-key-012345678901
+          BONGHWA_PRIVATE_DIR: /tmp/bonghwajigi-private

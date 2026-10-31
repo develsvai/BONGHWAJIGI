@@ -13,6 +13,7 @@ COPY pyproject.toml uv.lock README.md ./
 COPY src ./src
 COPY alembic.ini ./
 COPY migrations ./migrations
+COPY tools ./tools
 RUN uv sync --frozen --no-dev --extra "$RUNTIME_EXTRA" \
     && useradd --create-home --uid 10001 app \
     && mkdir -p /models \

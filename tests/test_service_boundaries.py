@@ -10,6 +10,30 @@ from bonghwajigi.api.app import create_app as create_api
 from bonghwajigi.gpu_api.app import create_app as create_gpu
 
 
+def test_readiness_failure_is_sanitized_and_can_recover():
+    from fastapi import FastAPI
+
+    from bonghwajigi.common.health import health_router
+
+    available = False
+
+    def infrastructure():
+        if not available:
+            raise RuntimeError("postgresql://private-password@private-host")
+        return {"database": "connected", "broker": "connected"}
+
+    app = FastAPI()
+    app.include_router(health_router("api", (), infrastructure))
+    with TestClient(app) as client:
+        failed = client.get("/health/ready")
+        assert failed.status_code == 503
+        assert "private-password" not in failed.text and "private-host" not in failed.text
+        assert client.get("/health/live").status_code == 200
+        available = True
+        assert client.get("/health/ready").status_code == 200
+        assert client.get("/health/ready").json()["checks"]["database"] == "connected"
+
+
 @pytest.mark.parametrize("factory,service", [(create_api, "api"), (create_gpu, "gpu_api")])
 def test_process_alive_does_not_mean_service_ready(factory, service):
     with TestClient(factory()) as client:

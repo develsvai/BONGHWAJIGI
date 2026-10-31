@@ -34,8 +34,18 @@
         "summary": "Ready",
         "operationId": "ready_health_ready_get",
         "responses": {
-          "503": {
+          "200": {
             "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthReport"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "기반 서비스 준비 안 됨",
             "content": {
               "application/json": {
                 "schema": {
