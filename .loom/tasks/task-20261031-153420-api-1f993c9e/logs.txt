@@ -1,3 +1,7 @@
 [2026-10-31T15:34:26+00:00] agent=foreground task=task-20261031-153420-api-1f993c9e Foreground task session started.
 
 2026-11-01: .venv PostgreSQL 전체91개통과, Alembic upgrade/check 일치, 변경파일Ruff통과. 정책3단계 서버응답 캡처 완료. app_sessions.py, mobile.py, user_auth.py, contracts/app.py·mobile_output.py, db/app_models.py, config.py, three_stage.py, migrationf735a2ec901b, test_app_sessions.py, OpenAPI 검토. 학습 미변경.
+[2026-10-31T15:59:56+00:00] agent=foreground task=task-20261031-153420-api-1f993c9e 설치 계정·회전 세션·프로필/동의/삭제·준비카드와 현재 상태/발화 출력 계약 구현. PostgreSQL91개·migration·Ruff 통과. 앱 단말 연결과 서버 배포는 이어서 진행.
+[2026-10-31T16:01:10+00:00] agent=foreground task=task-20261031-153420-api-1f993c9e Foreground task session started.
+
+검증 명령: .venv/bin/pytest -q →91 passed; .venv/bin/alembic check → No new upgrade operations detected; .venv/bin/ruff check →All checks passed; loom validate --strict →OK. 앞 완료 시도는 validation evidence 키워드가 기록에 없어 REVIEW_REQUIRED였다. 실제 검증 명령과 결과를 명시해 보완했다.

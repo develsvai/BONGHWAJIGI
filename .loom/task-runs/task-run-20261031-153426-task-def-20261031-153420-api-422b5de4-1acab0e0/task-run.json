@@ -2,9 +2,9 @@
   "id": "task-run-20261031-153426-task-def-20261031-153420-api-422b5de4-1acab0e0",
   "job_run_id": "job-run-20261031-035204-job-20261031-002626-api-18805e8a-5ed2228f",
   "task_definition_id": "task-def-20261031-153420-api-422b5de4",
-  "status": "RUNNING",
+  "status": "REVIEW_REQUIRED",
   "created_at": "2026-10-31T15:34:26+00:00",
-  "updated_at": "2026-10-31T15:34:26+00:00",
+  "updated_at": "2026-10-31T15:59:56+00:00",
   "legacy_task_id": "task-20261031-153420-api-1f993c9e",
   "attempt": 1,
   "assigned_agent": "foreground",
@@ -13,13 +13,28 @@
   "lease_expires_at": "",
   "queued_at": "",
   "started_at": "2026-10-31T15:34:26+00:00",
-  "completed_at": "",
+  "completed_at": "2026-10-31T15:59:56+00:00",
   "last_error": "",
-  "commit_refs": [],
-  "branch_name": "",
-  "git_dirty": false,
-  "git_snapshot_captured_at": "",
-  "artifacts": [],
+  "commit_refs": [
+    "85337a026e09f2fc034a4813ecec6381090569a2",
+    "a954d985d4c770f681137b302b0ebf20e17e9634"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-10-31T15:59:56+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-153420-api-1f993c9e/agent-events.jsonl",
+    ".loom/tasks/task-20261031-153420-api-1f993c9e/artifacts.json",
+    ".loom/tasks/task-20261031-153420-api-1f993c9e/context.md",
+    ".loom/tasks/task-20261031-153420-api-1f993c9e/decision.md",
+    ".loom/tasks/task-20261031-153420-api-1f993c9e/git-snapshot.json",
+    ".loom/tasks/task-20261031-153420-api-1f993c9e/logs.txt",
+    ".loom/tasks/task-20261031-153420-api-1f993c9e/previous-results.md",
+    ".loom/tasks/task-20261031-153420-api-1f993c9e/prompt.md",
+    ".loom/tasks/task-20261031-153420-api-1f993c9e/result.md",
+    ".loom/tasks/task-20261031-153420-api-1f993c9e/troubleshooting.md",
+    "docs/V2/delivery/app-integration-api.md"
+  ],
   "checkpoint_ids": [],
-  "review_required_reason": ""
+  "review_required_reason": "DONE guardrail requires review: validation evidence. 완료 계약을 증명하는 기록이 부족하거나 미해결 요청이 있어 검토가 필요합니다. result/decision/troubleshooting/log/event/artifact와 검증 근거를 보강하거나 요청을 해결한 뒤 다시 완료 처리하세요."
 }

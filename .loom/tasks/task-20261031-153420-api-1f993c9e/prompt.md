@@ -24,7 +24,7 @@ Keep code identifiers, file paths, shell commands, URLs, commit hashes, and orig
 - Job ID: `job-20261031-002626-api-18805e8a`
 - Title: 앱 연동 API 계약과 인계
 - Goal: 산불 MVP의 공식 경보·개인 대응·영향 또는 예측 불가·텍스트·변경 이벤트를 OpenAPI와 예제로 고정하고 실제 서버 호환을 검증해 앱팀에 인계한다. live/simulation과 미검증 푸시 구간을 구분하고 앱 구현은 제외한다. 이 갱신은 사용자 지시에 따른 계약 재고정이며 구현 실행·Queue 등록은 포함하지 않는다. 기존 완료 이력과 Task ID를 보존한다.
-- Status: `PENDING`
+- Status: `REVIEW_REQUIRED`
 - Required branch: `develop`
 - Task count: `5`
 
@@ -41,7 +41,7 @@ Keep code identifiers, file paths, shell commands, URLs, commit hashes, and orig
 - Document outputs: `docs/V2/delivery/app-integration-api.md`
 - Document output exceptions: -
 - Source proposal: `-`
-- Status: `PENDING`
+- Status: `REVIEW_REQUIRED`
 - Agent: `foreground`
 - Order: `5`
 - Depends on: None
