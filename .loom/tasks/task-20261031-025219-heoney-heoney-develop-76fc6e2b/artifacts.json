@@ -1,10 +1,10 @@
 {
-  "status": "RUNNING",
+  "status": "DONE",
   "agent": "foreground",
   "mode": "foreground",
   "execution_surface": "foreground",
   "task_run_id": "task-run-20261031-025226-task-def-20261031-025219-heoney-heoney-develop-f-d8b2df15",
-  "generated_at": "2026-10-31T02:52:27+00:00",
+  "generated_at": "2026-10-31T02:53:27+00:00",
   "artifacts": [
     ".loom/tasks/task-20261031-025219-heoney-heoney-develop-76fc6e2b/prompt.md",
     ".loom/tasks/task-20261031-025219-heoney-heoney-develop-76fc6e2b/context.md",
@@ -15,14 +15,7 @@
     ".loom/tasks/task-20261031-025219-heoney-heoney-develop-76fc6e2b/troubleshooting.md",
     ".loom/tasks/task-20261031-025219-heoney-heoney-develop-76fc6e2b/logs.txt",
     ".loom/tasks/task-20261031-025219-heoney-heoney-develop-76fc6e2b/agent-events.jsonl",
-    ".loom/tasks/task-20261031-025219-heoney-heoney-develop-76fc6e2b/artifacts.json",
-    "docs/HeoNey/05-voice-ux.md",
-    "docs/HeoNey/06-visuals-and-demo.md",
-    "docs/HeoNey/07-decisions-and-open-questions.md",
-    "docs/HeoNey/disaster.png",
-    "docs/HeoNey/nomal_home.png",
-    "docs/HeoNey/source-and-coverage.md",
-    "docs/HeoNey/봉화지기_모바일_화면_기획서.md"
+    ".loom/tasks/task-20261031-025219-heoney-heoney-develop-76fc6e2b/artifacts.json"
   ],
   "artifact_groups": {
     "user_outputs": [
@@ -41,15 +34,7 @@
       ".loom/tasks/task-20261031-025219-heoney-heoney-develop-76fc6e2b/agent-events.jsonl",
       ".loom/tasks/task-20261031-025219-heoney-heoney-develop-76fc6e2b/artifacts.json"
     ],
-    "work_products": [
-      "docs/HeoNey/05-voice-ux.md",
-      "docs/HeoNey/06-visuals-and-demo.md",
-      "docs/HeoNey/07-decisions-and-open-questions.md",
-      "docs/HeoNey/disaster.png",
-      "docs/HeoNey/nomal_home.png",
-      "docs/HeoNey/source-and-coverage.md",
-      "docs/HeoNey/봉화지기_모바일_화면_기획서.md"
-    ]
+    "work_products": []
   },
   "contract_snapshot": {
     "schema_version": 1,
