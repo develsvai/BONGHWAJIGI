@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-31T15:59:01+00:00",
+  "generated_at": "2026-10-31T17:00:00+00:00",
   "docs_paths": [
     "docs"
   ],
@@ -371,8 +371,8 @@
       "path": "docs/V2/delivery/api/mvp-openapi.json",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-11-01T00:54:55+09:00",
-      "size_bytes": 138753
+      "updated_at": "2026-11-01T01:39:02+09:00",
+      "size_bytes": 138778
     },
     {
       "id": "docs/V2/delivery/api/openapi.yaml",
@@ -535,6 +535,15 @@
       "document_type": "docs",
       "updated_at": "2026-10-31T23:38:06+09:00",
       "size_bytes": 31804
+    },
+    {
+      "id": "docs/V2/delivery/mobile-server-deployment.md",
+      "title": "앱 실연동 서버 배포",
+      "path": "docs/V2/delivery/mobile-server-deployment.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T01:59:49+09:00",
+      "size_bytes": 5089
     },
     {
       "id": "docs/V2/delivery/mvp-app-api.md",

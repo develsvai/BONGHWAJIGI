@@ -29,11 +29,12 @@ Tailscale Serve는 처음 자동 승인 검토에서 지속 노출의 명시 승
 
 [기계 판독 근거](mobile-server-evidence.json)에 실행 결과를 기록했다.
 
-- 최초 배포 소스는 `d8dc54a`, migration은 `f735a2ec901b`다. PostgreSQL/Redis 볼륨을 유지하고 기존 시나리오 계정9개·입력87개를 전후 확인했다.
+- 최종 실행 소스는 `dcbc62e`(이미지 `bonghwajigi-mvp:dcbc62e`), migration은 `f735a2ec901b`다. PostgreSQL/Redis 볼륨을 유지하고 기존 시나리오 계정9개·입력87개를 전후 확인했다.
 - 기존 설정과 PostgreSQL dump는 서버 `/home1/ncloud/.config/bonghwajigi/backups/mobile-d8dc54a`에 권한600으로 보관했다. 새 설정도600이고 기존 자격은 바꾸지 않았다. GPU 서버와 학습 프로세스를 변경하거나 중단하지 않았다.
 - API/긴급·분석·전달/정책·통합/outbox 7개 프로세스와 DB/Redis가 실행되고 일반 서버/GPU 터널 systemd가 active다.
 - 합성 설치 계정 두 개로 등록, 기기, 프로필 기타 보호 대상과 준비 카드, 위치, 긴급 큐 원문, 경고→대피→위급, 검토된 정책 텍스트, cursor 갱신, 다른 사용자 자료404, refresh회전, 로그아웃 뒤 access/refresh401을 확인했다.
 - 무인증 프로필401, OpenAPI0.2.0-mvp, 명시한 localhost8081 CORS 허용과 미등록 원점400을 확인했다.
+- 최종 배포 뒤 개발 Mac의 Tailnet HTTPS에서 새로운 합성 계정으로 등록→기기/프로필/위치→공식 원문→경고/대피/위급→cursor→refresh→로그아웃을 다시 확인했다. TLS 검증을 유지했고 배포 OpenAPI 전체JSON이 앱 타입 생성 원본과 일치했다.
 
 공식 경보 알림의 전송 ID도 인증 API와 일치시켰다. DB 내부 사건/경보 ID는 취소·만료·중복 검사에 보존하고 발신 직전 payload.resource_id를 해당 사용자의 HMAC 공개ID로 바꾼다. 두 사용자의 캡처 발신 결과가 각각 본인 API200·다른 사용자404이며 ID가 서로 다름을 실제 DB에서 확인했다. 실제 Firebase 단말 수신 검증과 구분한다.
 

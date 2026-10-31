@@ -13,3 +13,5 @@ SSH localhost18080 터널을 유지하며 휴대폰은 adb reverse로 연결할 
 상세: docs/V2/delivery/mobile-server-deployment.md 및 mobile-server-evidence.json.
 
 공식 경보 발신 payload의 리소스ID를 API 공개ID와 일치시켰고 두 사용자 간 캡처sender→인증조회200/교차조회404 회귀를 추가했다. 실제 FCM 발신은 사용하지 않았다.
+
+최종 실행 커밋 dcbc62e 배포 후 Mac→Tailnet HTTPS에서도 새 계정 등록·3단계 갱신·refresh·로그아웃을 통과했다. 배포 OpenAPI 전체JSON과 앱 생성 원본이 일치한다. 최종 네트워크 차단은 해결됐고 실제 휴대폰 UI/APK 검증은 앱 담당 작업에서 진행한다.

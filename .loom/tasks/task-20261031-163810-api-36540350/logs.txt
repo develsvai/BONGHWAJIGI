@@ -5,3 +5,5 @@
 2026-11-01 KST: d8dc54a 이미지 배포, f735a2ec901b migration, 기존 계정9/입력87 보존. python tools/mobile_demo.py 로 긴급 큐·경고→대피→위급·세션 회전·로그아웃 검증 통과. HTTPS 자체200, 유효 ACL목적지22만 확인.
 
 2026-11-01 KST: 푸시 공개ID 보완 후 .venv/bin/pytest -q 전체93개 통과. ruff check 통과. 사용자 승인 최소443 grant 뒤 Mac→서버 HTTPS readiness200 확인.
+
+2026-11-01 02:00 KST: 최종 dcbc62e 이미지9서비스 running, migration f735a2ec901b, 기존계정9/입력87 보존. Mac .venv/bin/python /private/tmp/bonghwa-public-mobile-check.py 를 TLS검증상태로 실행해 신규등록→공식원문→경고/대피/위급→cursor→refresh→로그아웃 통과. HTTPS OpenAPI 전체JSON 대조 일치, 무인증401.
