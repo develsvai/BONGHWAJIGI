@@ -1,0 +1,27 @@
+{
+  "version": "0.1-proposed",
+  "status": "모델팀 합의 전 제안",
+  "required": [
+    "record_id",
+    "source_id",
+    "data_kind",
+    "collected_at_utc",
+    "raw_ref"
+  ],
+  "properties": {
+    "record_id": "string; source 내 중복제거키와 처리버전 반영",
+    "event_id": "string|null; 사건 연결 확인 전 null",
+    "source_id": "string",
+    "data_kind": "observation|forecast|warning|administrative|media|model_estimate",
+    "observed_at_utc": "ISO8601 UTC string|null",
+    "issued_at_utc": "ISO8601 UTC string|null",
+    "valid_at_utc": "ISO8601 UTC string|null",
+    "collected_at_utc": "ISO8601 UTC string",
+    "geometry": "GeoJSON geometry|null; EPSG:4326 lon,lat",
+    "measurement": "object; 변수별 value,unit,quality_flag",
+    "raw_ref": "string; 원본 상대경로/URI",
+    "source_record_id": "string|null",
+    "quality_flags": "array of string",
+    "license_ref": "string|null"
+  }
+}
