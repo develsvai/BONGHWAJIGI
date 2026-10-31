@@ -12,6 +12,7 @@ from sqlalchemy import func, select
 
 from bonghwajigi.api.user_auth import issue_token
 from bonghwajigi.contracts.app import AppProfile, StoredInput, Strict
+from bonghwajigi.contracts.mobile_output import Envelope
 from bonghwajigi.contracts.policy import Identifier, ProfileInput
 from bonghwajigi.db.analysis_models import new_id, now
 from bonghwajigi.db.app_models import AppAccount, AppSession
@@ -84,7 +85,7 @@ def attach_app_sessions(app, settings, envelope):
             }
         )
 
-    @router.post("/installations", status_code=201)
+    @router.post("/installations", status_code=201, response_model=Envelope[SessionTokens])
     def register(body: InstallationRegistration, request: Request):
         if not settings.app_registration_enabled or settings.mode != "simulation":
             raise HTTPException(404, detail="INSTALLATION_REGISTRATION_DISABLED")
@@ -144,7 +145,7 @@ def attach_app_sessions(app, settings, envelope):
             result = token_pair(row, secret)
         return envelope(result)
 
-    @router.post("/refresh")
+    @router.post("/refresh", response_model=Envelope[SessionTokens])
     def refresh(body: RefreshRequest):
         try:
             identifier, supplied = body.refresh_token.split(".", 1)

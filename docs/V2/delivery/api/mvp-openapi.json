@@ -1440,6 +1440,107 @@
         }
       }
     },
+    "/v1/auth/config": {
+      "get": {
+        "tags": [
+          "mobile-session"
+        ],
+        "summary": "Registration Config",
+        "operationId": "registration_config_v1_auth_config_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/auth/installations": {
+      "post": {
+        "tags": [
+          "mobile-session"
+        ],
+        "summary": "Register",
+        "operationId": "register_v1_auth_installations_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InstallationRegistration"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_SessionTokens_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/auth/refresh": {
+      "post": {
+        "tags": [
+          "mobile-session"
+        ],
+        "summary": "Refresh",
+        "operationId": "refresh_v1_auth_refresh_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_SessionTokens_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/app-config": {
       "get": {
         "tags": [
@@ -1481,7 +1582,9 @@
             "description": "Successful Response",
             "content": {
               "application/json": {
-                "schema": {}
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_ProfileData_"
+                }
               }
             }
           }
@@ -1754,7 +1857,9 @@
             "description": "Successful Response",
             "content": {
               "application/json": {
-                "schema": {}
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_LocationData_"
+                }
               }
             }
           }
@@ -1885,7 +1990,9 @@
             "description": "Successful Response",
             "content": {
               "application/json": {
-                "schema": {}
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_AlertData_"
+                }
               }
             }
           },
@@ -1991,7 +2098,9 @@
             "description": "Successful Response",
             "content": {
               "application/json": {
-                "schema": {}
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_SnapshotData_"
+                }
               }
             }
           },
@@ -2242,7 +2351,9 @@
             "description": "Successful Response",
             "content": {
               "application/json": {
-                "schema": {}
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_RulesData_"
+                }
               }
             }
           },
@@ -2259,6 +2370,32 @@
         }
       }
     },
+    "/v1/me/preparations": {
+      "get": {
+        "tags": [
+          "mobile-mvp"
+        ],
+        "summary": "Preparations",
+        "operationId": "preparations_v1_me_preparations_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_PreparationsData_"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "UserJWT": []
+          }
+        ]
+      }
+    },
     "/v1/home": {
       "get": {
         "tags": [
@@ -2271,7 +2408,9 @@
             "description": "Successful Response",
             "content": {
               "application/json": {
-                "schema": {}
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_HomeData_"
+                }
               }
             }
           }
@@ -2630,6 +2769,97 @@
         ],
         "title": "AcceptedJob"
       },
+      "AlertData": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "revision": {
+            "type": "integer",
+            "title": "Revision"
+          },
+          "response_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Id"
+          },
+          "incident_id": {
+            "type": "string",
+            "title": "Incident Id"
+          },
+          "original_text": {
+            "type": "string",
+            "title": "Original Text"
+          },
+          "official_severity": {
+            "type": "string",
+            "title": "Official Severity"
+          },
+          "authority": {
+            "type": "string",
+            "title": "Authority"
+          },
+          "issued_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Issued At"
+          },
+          "valid_until": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Valid Until"
+          },
+          "instruction_kind": {
+            "type": "string",
+            "title": "Instruction Kind"
+          },
+          "source": {
+            "$ref": "#/components/schemas/Source"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "active",
+              "cancelled",
+              "unconfirmed_or_expired"
+            ],
+            "title": "Status"
+          },
+          "relevance": {
+            "$ref": "#/components/schemas/Relevance"
+          },
+          "requires_qwen": {
+            "type": "boolean",
+            "const": false,
+            "title": "Requires Qwen"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "revision",
+          "response_id",
+          "incident_id",
+          "original_text",
+          "official_severity",
+          "authority",
+          "issued_at",
+          "valid_until",
+          "instruction_kind",
+          "source",
+          "status",
+          "relevance",
+          "requires_qwen"
+        ],
+        "title": "AlertData"
+      },
       "AlertInput": {
         "properties": {
           "mode": {
@@ -2725,6 +2955,53 @@
       },
       "AppProfile": {
         "properties": {
+          "display_name": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "Display Name",
+            "default": ""
+          },
+          "age_band": {
+            "type": "string",
+            "enum": [
+              "under_20",
+              "20_39",
+              "40_59",
+              "60_plus",
+              "unknown"
+            ],
+            "title": "Age Band",
+            "default": "unknown"
+          },
+          "emergency_contact": {
+            "type": "string",
+            "maxLength": 120,
+            "title": "Emergency Contact",
+            "default": ""
+          },
+          "usual_place": {
+            "type": "string",
+            "maxLength": 200,
+            "title": "Usual Place",
+            "default": ""
+          },
+          "building_floor": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "Building Floor",
+            "default": ""
+          },
+          "health_consent": {
+            "type": "boolean",
+            "title": "Health Consent",
+            "default": false
+          },
+          "health_notes": {
+            "type": "string",
+            "maxLength": 500,
+            "title": "Health Notes",
+            "default": ""
+          },
           "mobility": {
             "type": "string",
             "enum": [
@@ -2809,6 +3086,39 @@
         "additionalProperties": false,
         "type": "object",
         "title": "AppProfile"
+      },
+      "AvoidItem": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "source": {
+            "$ref": "#/components/schemas/Source"
+          },
+          "revision": {
+            "type": "integer",
+            "title": "Revision"
+          },
+          "valid_until": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Valid Until"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "text",
+          "source",
+          "revision",
+          "valid_until"
+        ],
+        "title": "AvoidItem"
       },
       "Box": {
         "properties": {
@@ -3088,6 +3398,39 @@
         ],
         "title": "CurrentStateInput"
       },
+      "DemoConsent": {
+        "properties": {
+          "version": {
+            "type": "string",
+            "const": "internal-demo-v1",
+            "title": "Version"
+          },
+          "service": {
+            "type": "boolean",
+            "const": true,
+            "title": "Service"
+          },
+          "privacy": {
+            "type": "boolean",
+            "const": true,
+            "title": "Privacy"
+          },
+          "location": {
+            "type": "boolean",
+            "const": true,
+            "title": "Location"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "version",
+          "service",
+          "privacy",
+          "location"
+        ],
+        "title": "DemoConsent"
+      },
       "DeviceWrite": {
         "properties": {
           "platform": {
@@ -3142,6 +3485,194 @@
           "app_version"
         ],
         "title": "DeviceWrite"
+      },
+      "DisasterData": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "origin": {
+            "type": "string",
+            "title": "Origin"
+          },
+          "observed_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Observed At"
+          },
+          "relevance": {
+            "type": "string",
+            "title": "Relevance"
+          },
+          "reason": {
+            "type": "string",
+            "title": "Reason"
+          },
+          "response_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Id"
+          },
+          "data_status": {
+            "type": "string",
+            "enum": [
+              "current",
+              "stale"
+            ],
+            "title": "Data Status"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "origin",
+          "observed_at",
+          "relevance",
+          "reason",
+          "response_id",
+          "data_status"
+        ],
+        "title": "DisasterData"
+      },
+      "Envelope_AlertData_": {
+        "properties": {
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "data": {
+            "$ref": "#/components/schemas/AlertData"
+          }
+        },
+        "type": "object",
+        "required": [
+          "meta",
+          "data"
+        ],
+        "title": "Envelope[AlertData]"
+      },
+      "Envelope_HomeData_": {
+        "properties": {
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "data": {
+            "$ref": "#/components/schemas/HomeData"
+          }
+        },
+        "type": "object",
+        "required": [
+          "meta",
+          "data"
+        ],
+        "title": "Envelope[HomeData]"
+      },
+      "Envelope_LocationData_": {
+        "properties": {
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "data": {
+            "$ref": "#/components/schemas/LocationData"
+          }
+        },
+        "type": "object",
+        "required": [
+          "meta",
+          "data"
+        ],
+        "title": "Envelope[LocationData]"
+      },
+      "Envelope_PreparationsData_": {
+        "properties": {
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PreparationsData"
+          }
+        },
+        "type": "object",
+        "required": [
+          "meta",
+          "data"
+        ],
+        "title": "Envelope[PreparationsData]"
+      },
+      "Envelope_ProfileData_": {
+        "properties": {
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "data": {
+            "$ref": "#/components/schemas/ProfileData"
+          }
+        },
+        "type": "object",
+        "required": [
+          "meta",
+          "data"
+        ],
+        "title": "Envelope[ProfileData]"
+      },
+      "Envelope_RulesData_": {
+        "properties": {
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "data": {
+            "$ref": "#/components/schemas/RulesData"
+          }
+        },
+        "type": "object",
+        "required": [
+          "meta",
+          "data"
+        ],
+        "title": "Envelope[RulesData]"
+      },
+      "Envelope_SessionTokens_": {
+        "properties": {
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "data": {
+            "$ref": "#/components/schemas/SessionTokens"
+          }
+        },
+        "type": "object",
+        "required": [
+          "meta",
+          "data"
+        ],
+        "title": "Envelope[SessionTokens]"
+      },
+      "Envelope_SnapshotData_": {
+        "properties": {
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "data": {
+            "$ref": "#/components/schemas/SnapshotData"
+          }
+        },
+        "type": "object",
+        "required": [
+          "meta",
+          "data"
+        ],
+        "title": "Envelope[SnapshotData]"
       },
       "EnvironmentInput": {
         "properties": {
@@ -3252,6 +3783,33 @@
         ],
         "title": "GuidanceInput"
       },
+      "GuidanceItem": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "source": {
+            "$ref": "#/components/schemas/Source"
+          },
+          "revision": {
+            "type": "integer",
+            "title": "Revision"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "text",
+          "source",
+          "revision"
+        ],
+        "title": "GuidanceItem"
+      },
       "HTTPValidationError": {
         "properties": {
           "detail": {
@@ -3295,6 +3853,57 @@
           "checks"
         ],
         "title": "HealthReport"
+      },
+      "HomeData": {
+        "properties": {
+          "nearby_disasters": {
+            "items": {
+              "$ref": "#/components/schemas/DisasterData"
+            },
+            "type": "array",
+            "title": "Nearby Disasters"
+          },
+          "basic_rules": {
+            "$ref": "#/components/schemas/RulesData"
+          },
+          "location": {
+            "$ref": "#/components/schemas/LocationData"
+          },
+          "features": {
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "type": "object",
+            "title": "Features"
+          },
+          "preparations": {
+            "$ref": "#/components/schemas/PreparationsData"
+          },
+          "alerts": {
+            "items": {
+              "$ref": "#/components/schemas/AlertData"
+            },
+            "type": "array",
+            "title": "Alerts"
+          }
+        },
+        "type": "object",
+        "required": [
+          "nearby_disasters",
+          "basic_rules",
+          "location",
+          "features",
+          "preparations",
+          "alerts"
+        ],
+        "title": "HomeData"
       },
       "IncidentInput": {
         "properties": {
@@ -3372,7 +3981,83 @@
         ],
         "title": "IncidentInput"
       },
+      "InstallationRegistration": {
+        "properties": {
+          "installation_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_.:-]+$",
+            "title": "Installation Id"
+          },
+          "consent": {
+            "$ref": "#/components/schemas/DemoConsent"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "installation_id",
+          "consent"
+        ],
+        "title": "InstallationRegistration"
+      },
       "JsonValue": {},
+      "LocationData": {
+        "properties": {
+          "revision": {
+            "type": "integer",
+            "title": "Revision"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "available",
+              "stale",
+              "unavailable"
+            ],
+            "title": "Status"
+          },
+          "fix": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/LocationWrite"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "valid_until": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Valid Until"
+          },
+          "reason_codes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Reason Codes"
+          }
+        },
+        "type": "object",
+        "required": [
+          "revision",
+          "status",
+          "fix",
+          "valid_until",
+          "reason_codes"
+        ],
+        "title": "LocationData"
+      },
       "LocationInput": {
         "properties": {
           "mode": {
@@ -3478,6 +4163,223 @@
           "captured_at"
         ],
         "title": "LocationWrite"
+      },
+      "Meta": {
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "const": "0.2.0-mvp",
+            "title": "Schema Version"
+          },
+          "mode": {
+            "type": "string",
+            "const": "simulation",
+            "title": "Mode"
+          },
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          },
+          "generated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Generated At"
+          },
+          "data_status": {
+            "type": "string",
+            "enum": [
+              "current",
+              "partial",
+              "stale",
+              "unavailable"
+            ],
+            "title": "Data Status"
+          }
+        },
+        "type": "object",
+        "required": [
+          "schema_version",
+          "mode",
+          "request_id",
+          "generated_at",
+          "data_status"
+        ],
+        "title": "Meta"
+      },
+      "PersonalResponse": {
+        "properties": {
+          "level": {
+            "type": "string",
+            "enum": [
+              "prepare",
+              "act",
+              "request_assistance",
+              "information",
+              "unknown"
+            ],
+            "title": "Level"
+          },
+          "number": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Number"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "reason_codes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Reason Codes"
+          }
+        },
+        "additionalProperties": true,
+        "type": "object",
+        "required": [
+          "level",
+          "number",
+          "label",
+          "reason_codes"
+        ],
+        "title": "PersonalResponse"
+      },
+      "PolicyAction": {
+        "properties": {
+          "action_id": {
+            "type": "string",
+            "title": "Action Id"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "priority": {
+            "type": "integer",
+            "title": "Priority"
+          },
+          "source": {
+            "$ref": "#/components/schemas/Source"
+          }
+        },
+        "additionalProperties": true,
+        "type": "object",
+        "required": [
+          "action_id",
+          "text",
+          "priority",
+          "source"
+        ],
+        "title": "PolicyAction"
+      },
+      "PolicyContent": {
+        "properties": {
+          "mode": {
+            "type": "string",
+            "const": "simulation",
+            "title": "Mode"
+          },
+          "operational_use": {
+            "type": "boolean",
+            "const": false,
+            "title": "Operational Use"
+          },
+          "disaster_type": {
+            "type": "string",
+            "const": "wildfire",
+            "title": "Disaster Type"
+          },
+          "incident_id": {
+            "type": "string",
+            "title": "Incident Id"
+          },
+          "incident": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Incident"
+          },
+          "state": {
+            "type": "string",
+            "title": "State"
+          },
+          "relevance": {
+            "$ref": "#/components/schemas/Relevance"
+          },
+          "personal_response": {
+            "$ref": "#/components/schemas/PersonalResponse"
+          },
+          "actions": {
+            "items": {
+              "$ref": "#/components/schemas/PolicyAction"
+            },
+            "type": "array",
+            "title": "Actions"
+          },
+          "official_alerts": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Official Alerts"
+          },
+          "prediction": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Prediction"
+          },
+          "context": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Context"
+          },
+          "input_versions": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "type": "object",
+            "title": "Input Versions"
+          },
+          "valid_until": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Valid Until"
+          }
+        },
+        "additionalProperties": true,
+        "type": "object",
+        "required": [
+          "mode",
+          "operational_use",
+          "disaster_type",
+          "incident_id",
+          "incident",
+          "state",
+          "relevance",
+          "personal_response",
+          "actions",
+          "official_alerts",
+          "prediction",
+          "context",
+          "input_versions",
+          "valid_until"
+        ],
+        "title": "PolicyContent"
       },
       "PredictionInput": {
         "properties": {
@@ -3630,6 +4532,102 @@
         ],
         "title": "PreferencesWrite"
       },
+      "PreparationsData": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "available",
+              "unavailable"
+            ],
+            "title": "Status"
+          },
+          "policy_version": {
+            "type": "string",
+            "title": "Policy Version"
+          },
+          "profile_revision": {
+            "type": "integer",
+            "title": "Profile Revision"
+          },
+          "generated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Generated At"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/PreparedItem"
+            },
+            "type": "array",
+            "title": "Items"
+          }
+        },
+        "type": "object",
+        "required": [
+          "status",
+          "policy_version",
+          "profile_revision",
+          "generated_at",
+          "items"
+        ],
+        "title": "PreparationsData"
+      },
+      "PreparedItem": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "source": {
+            "$ref": "#/components/schemas/Source"
+          },
+          "revision": {
+            "type": "integer",
+            "title": "Revision"
+          },
+          "valid_until": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Valid Until"
+          },
+          "reason_code": {
+            "type": "string",
+            "title": "Reason Code"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "text",
+          "source",
+          "revision",
+          "valid_until",
+          "reason_code"
+        ],
+        "title": "PreparedItem"
+      },
+      "ProfileData": {
+        "properties": {
+          "revision": {
+            "type": "integer",
+            "title": "Revision"
+          },
+          "profile": {
+            "$ref": "#/components/schemas/AppProfile"
+          }
+        },
+        "type": "object",
+        "required": [
+          "revision",
+          "profile"
+        ],
+        "title": "ProfileData"
+      },
       "ProfileInput": {
         "properties": {
           "mode": {
@@ -3761,6 +4759,40 @@
           "occurred_at"
         ],
         "title": "ReceiptWrite"
+      },
+      "RefreshRequest": {
+        "properties": {
+          "refresh_token": {
+            "type": "string",
+            "maxLength": 256,
+            "minLength": 70,
+            "title": "Refresh Token"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "refresh_token"
+        ],
+        "title": "RefreshRequest"
+      },
+      "Relevance": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "reason_code": {
+            "type": "string",
+            "title": "Reason Code"
+          }
+        },
+        "type": "object",
+        "required": [
+          "status",
+          "reason_code"
+        ],
+        "title": "Relevance"
       },
       "RetrievalDocument": {
         "properties": {
@@ -4011,6 +5043,50 @@
         ],
         "title": "RuleSetInput"
       },
+      "RulesData": {
+        "properties": {
+          "disaster_type": {
+            "type": "string",
+            "const": "wildfire",
+            "title": "Disaster Type"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "available",
+              "unavailable"
+            ],
+            "title": "Status"
+          },
+          "policy_version": {
+            "type": "string",
+            "title": "Policy Version"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/GuidanceItem"
+            },
+            "type": "array",
+            "title": "Items"
+          },
+          "avoid": {
+            "items": {
+              "$ref": "#/components/schemas/AvoidItem"
+            },
+            "type": "array",
+            "title": "Avoid"
+          }
+        },
+        "type": "object",
+        "required": [
+          "disaster_type",
+          "status",
+          "policy_version",
+          "items",
+          "avoid"
+        ],
+        "title": "RulesData"
+      },
       "ScenarioEvent": {
         "properties": {
           "mode": {
@@ -4067,6 +5143,120 @@
         ],
         "title": "ScenarioEvent",
         "description": "MVP 시나리오 입력 초안. 실제 수집 표준 계약은 B2에서 별도로 확정한다."
+      },
+      "SessionTokens": {
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "title": "User Id"
+          },
+          "scenario_id": {
+            "type": "string",
+            "title": "Scenario Id"
+          },
+          "session_id": {
+            "type": "string",
+            "title": "Session Id"
+          },
+          "access_token": {
+            "type": "string",
+            "title": "Access Token"
+          },
+          "refresh_token": {
+            "type": "string",
+            "title": "Refresh Token"
+          },
+          "token_type": {
+            "type": "string",
+            "const": "Bearer",
+            "title": "Token Type",
+            "default": "Bearer"
+          },
+          "expires_in": {
+            "type": "integer",
+            "title": "Expires In"
+          },
+          "refresh_expires_at": {
+            "type": "string",
+            "title": "Refresh Expires At"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "user_id",
+          "scenario_id",
+          "session_id",
+          "access_token",
+          "refresh_token",
+          "expires_in",
+          "refresh_expires_at"
+        ],
+        "title": "SessionTokens"
+      },
+      "SnapshotData": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "scenario_id": {
+            "type": "string",
+            "title": "Scenario Id"
+          },
+          "revision": {
+            "type": "integer",
+            "title": "Revision"
+          },
+          "evaluated_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Evaluated At"
+          },
+          "pending_update": {
+            "type": "boolean",
+            "title": "Pending Update"
+          },
+          "error_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error Code"
+          },
+          "content": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PolicyContent"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "scenario_id",
+          "revision",
+          "evaluated_at",
+          "pending_update",
+          "error_code",
+          "content"
+        ],
+        "title": "SnapshotData"
       },
       "Source": {
         "properties": {

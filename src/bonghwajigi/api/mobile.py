@@ -22,6 +22,16 @@ from bonghwajigi.contracts.app import (
     ReceiptWrite,
     StoredInput,
 )
+from bonghwajigi.contracts.mobile_output import (
+    AlertData,
+    Envelope,
+    HomeData,
+    LocationData,
+    PreparationsData,
+    ProfileData,
+    RulesData,
+    SnapshotData,
+)
 from bonghwajigi.contracts.policy import CurrentStateInput, Identifier, LocationInput, ProfileInput
 from bonghwajigi.db.analysis_models import new_id, now
 from bonghwajigi.db.app_models import AppAccount, AppMutation
@@ -296,7 +306,9 @@ def attach_mobile(app, settings):
             }
         )
 
-    @router.get("/me/profile")
+    @router.get(
+        "/me/profile", response_model=Envelope[ProfileData], response_model_exclude_unset=True
+    )
     def get_profile(actor=actor_dependency):
         with sessions() as s:
             row = get_entity(s, actor, "app_profile")
@@ -464,7 +476,7 @@ def attach_mobile(app, settings):
                 row.revision += 1
             return envelope({"installation_id": installation_id, "push_status": "disabled"})
 
-    @router.get("/me/location")
+    @router.get("/me/location", response_model=Envelope[LocationData])
     def get_location(actor=actor_dependency):
         with sessions.begin() as s:
             moment = evaluation_time(scope_lock(s, actor["scenario_id"]))
@@ -563,7 +575,7 @@ def attach_mobile(app, settings):
         with sessions.begin() as s:
             return envelope({"items": [data for _, data in alert_rows(s, actor)]})
 
-    @router.get("/me/alerts/{alert_id}")
+    @router.get("/me/alerts/{alert_id}", response_model=Envelope[AlertData])
     def alert(alert_id: Identifier, actor=actor_dependency):
         with sessions.begin() as s:
             rows = alert_rows(s, actor, alert_id)
@@ -622,7 +634,7 @@ def attach_mobile(app, settings):
                 )
             )
 
-    @router.get("/me/responses/{response_id}")
+    @router.get("/me/responses/{response_id}", response_model=Envelope[SnapshotData])
     def response(response_id: Identifier, actor=actor_dependency):
         with sessions.begin() as s:
             scope_lock(s, actor["scenario_id"])
@@ -840,7 +852,7 @@ def attach_mobile(app, settings):
             items.sort(key=lambda i: i["observed_at"], reverse=True)
             return envelope({"items": items})
 
-    @router.get("/safety-rules/{disaster_type}")
+    @router.get("/safety-rules/{disaster_type}", response_model=Envelope[RulesData])
     def safety_rules(disaster_type: str, actor=actor_dependency):
         if disaster_type != "wildfire":
             raise HTTPException(404, detail="UNSUPPORTED_DISASTER")
@@ -900,7 +912,7 @@ def attach_mobile(app, settings):
                 )
         return items
 
-    @router.get("/me/preparations")
+    @router.get("/me/preparations", response_model=Envelope[PreparationsData])
     def preparations(actor=actor_dependency):
         with sessions.begin() as s:
             moment = evaluation_time(scope_lock(s, actor["scenario_id"]))
@@ -930,7 +942,7 @@ def attach_mobile(app, settings):
                 "current" if items else "unavailable",
             )
 
-    @router.get("/home")
+    @router.get("/home", response_model=Envelope[HomeData])
     def home(actor=actor_dependency):
         return envelope(
             {
