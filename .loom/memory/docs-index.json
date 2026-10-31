@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-31T01:35:11+00:00",
+  "generated_at": "2026-10-31T04:10:31+00:00",
   "docs_paths": [
     "docs"
   ],
@@ -67,6 +67,33 @@
       "document_type": "docs",
       "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 6394
+    },
+    {
+      "id": "docs/HeoNey/05-voice-ux.md",
+      "title": "05. 공유 대화의 음성 대피 화면",
+      "path": "docs/HeoNey/05-voice-ux.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T11:52:37+09:00",
+      "size_bytes": 3610
+    },
+    {
+      "id": "docs/HeoNey/06-visuals-and-demo.md",
+      "title": "06. 발표 색상과 MVP 시연",
+      "path": "docs/HeoNey/06-visuals-and-demo.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T11:52:37+09:00",
+      "size_bytes": 3563
+    },
+    {
+      "id": "docs/HeoNey/07-decisions-and-open-questions.md",
+      "title": "07. 요구사항, 이전 안, 미결정",
+      "path": "docs/HeoNey/07-decisions-and-open-questions.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T11:52:37+09:00",
+      "size_bytes": 4603
     },
     {
       "id": "docs/HeoNey/README.md",
@@ -168,13 +195,31 @@
       "size_bytes": 19954
     },
     {
+      "id": "docs/HeoNey/source-and-coverage.md",
+      "title": "공유 대화 출처와 보존 범위",
+      "path": "docs/HeoNey/source-and-coverage.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T11:52:37+09:00",
+      "size_bytes": 5651
+    },
+    {
+      "id": "docs/HeoNey/봉화지기_모바일_화면_기획서.md",
+      "title": "봉화 지기 모바일 화면 기획서",
+      "path": "docs/HeoNey/봉화지기_모바일_화면_기획서.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T11:52:37+09:00",
+      "size_bytes": 19391
+    },
+    {
       "id": "docs/README.md",
       "title": "봉화지기 설계 문서 안내",
       "path": "docs/README.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-30T20:42:35+09:00",
-      "size_bytes": 3148
+      "updated_at": "2026-10-31T13:09:19+09:00",
+      "size_bytes": 3927
     },
     {
       "id": "docs/V1/ai-and-infrastructure.md",
@@ -254,8 +299,8 @@
       "path": "docs/V2/04-execution-backlog.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T10:34:34+09:00",
-      "size_bytes": 22214
+      "updated_at": "2026-10-31T13:09:18+09:00",
+      "size_bytes": 25334
     },
     {
       "id": "docs/V2/05-infrastructure-status.md",
@@ -263,8 +308,89 @@
       "path": "docs/V2/05-infrastructure-status.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T10:34:34+09:00",
+      "updated_at": "2026-10-31T10:36:09+09:00",
       "size_bytes": 9590
+    },
+    {
+      "id": "docs/V2/delivery/api-handoff.md",
+      "title": "앱팀 전달서 — 화면별 API 연동",
+      "path": "docs/V2/delivery/api-handoff.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T13:08:08+09:00",
+      "size_bytes": 15673
+    },
+    {
+      "id": "docs/V2/delivery/api-job-review.md",
+      "title": "앱 연동 API 계약과 인계 Job 재검토",
+      "path": "docs/V2/delivery/api-job-review.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T13:04:03+09:00",
+      "size_bytes": 6214
+    },
+    {
+      "id": "docs/V2/delivery/api-reference.md",
+      "title": "API별 경로와 사용법 — 0.1.0 초안",
+      "path": "docs/V2/delivery/api-reference.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T13:10:24+09:00",
+      "size_bytes": 63946
+    },
+    {
+      "id": "docs/V2/delivery/api/examples.json",
+      "title": "{",
+      "path": "docs/V2/delivery/api/examples.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T13:08:09+09:00",
+      "size_bytes": 106645
+    },
+    {
+      "id": "docs/V2/delivery/api/openapi.yaml",
+      "title": "openapi: 3.1.0",
+      "path": "docs/V2/delivery/api/openapi.yaml",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T13:08:09+09:00",
+      "size_bytes": 215282
+    },
+    {
+      "id": "docs/V2/delivery/api/requirements-validation.txt",
+      "title": "openapi-spec-validator==0.7.2",
+      "path": "docs/V2/delivery/api/requirements-validation.txt",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T13:08:09+09:00",
+      "size_bytes": 63
+    },
+    {
+      "id": "docs/V2/delivery/api/screen-map.json",
+      "title": "{",
+      "path": "docs/V2/delivery/api/screen-map.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T13:08:09+09:00",
+      "size_bytes": 5191
+    },
+    {
+      "id": "docs/V2/delivery/api/validation-report.json",
+      "title": "{",
+      "path": "docs/V2/delivery/api/validation-report.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T13:10:30+09:00",
+      "size_bytes": 637
+    },
+    {
+      "id": "docs/V2/delivery/app-api-contract.md",
+      "title": "봉화지기 앱 API 계약 — 0.1.0 초안",
+      "path": "docs/V2/delivery/app-api-contract.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T13:08:08+09:00",
+      "size_bytes": 17634
     },
     {
       "id": "docs/V2/delivery/environment-readiness-evidence.json",
@@ -272,7 +398,7 @@
       "path": "docs/V2/delivery/environment-readiness-evidence.json",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T10:34:34+09:00",
+      "updated_at": "2026-10-31T10:36:09+09:00",
       "size_bytes": 6615
     },
     {
@@ -281,8 +407,26 @@
       "path": "docs/V2/delivery/environment-readiness.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T10:33:08+09:00",
-      "size_bytes": 14690
+      "updated_at": "2026-10-31T11:37:55+09:00",
+      "size_bytes": 15193
+    },
+    {
+      "id": "docs/V2/delivery/tailnet-connectivity-evidence.json",
+      "title": "{",
+      "path": "docs/V2/delivery/tailnet-connectivity-evidence.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T11:35:53+09:00",
+      "size_bytes": 7524
+    },
+    {
+      "id": "docs/V2/delivery/tailnet-connectivity.md",
+      "title": "두 서버 Tailscale 연결 및 검증",
+      "path": "docs/V2/delivery/tailnet-connectivity.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T11:37:55+09:00",
+      "size_bytes": 7797
     }
   ],
   "path": "/Users/hongyongjae/Desktop/helloworld/BONGHWAJIGI/.loom/memory/docs-index.json"

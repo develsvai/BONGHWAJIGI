@@ -1,0 +1,88 @@
+{
+  "status": "RUNNING",
+  "agent": "foreground",
+  "mode": "foreground",
+  "execution_surface": "foreground",
+  "task_run_id": "task-run-20261031-035204-task-def-20261031-035154-v2-5-api-8ae5b0e1-2ec1e11a",
+  "generated_at": "2026-10-31T03:52:04+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-035154-v2-5-api-39004d37/prompt.md",
+    ".loom/tasks/task-20261031-035154-v2-5-api-39004d37/context.md",
+    ".loom/tasks/task-20261031-035154-v2-5-api-39004d37/previous-results.md",
+    ".loom/tasks/task-20261031-035154-v2-5-api-39004d37/git-snapshot.json",
+    ".loom/tasks/task-20261031-035154-v2-5-api-39004d37/result.md",
+    ".loom/tasks/task-20261031-035154-v2-5-api-39004d37/decision.md",
+    ".loom/tasks/task-20261031-035154-v2-5-api-39004d37/troubleshooting.md",
+    ".loom/tasks/task-20261031-035154-v2-5-api-39004d37/logs.txt",
+    ".loom/tasks/task-20261031-035154-v2-5-api-39004d37/agent-events.jsonl",
+    ".loom/tasks/task-20261031-035154-v2-5-api-39004d37/artifacts.json",
+    "docs/V2/delivery/app-api-contract.md",
+    "docs/V2/delivery/api-reference.md",
+    "docs/V2/delivery/api-handoff.md",
+    "docs/V2/delivery/api-job-review.md",
+    "tools/validate_app_api.py",
+    "docs/README.md",
+    "docs/V2/04-execution-backlog.md",
+    "docs/V2/delivery/api/examples.json",
+    "docs/V2/delivery/api/openapi.yaml",
+    "docs/V2/delivery/api/requirements-validation.txt",
+    "docs/V2/delivery/api/screen-map.json",
+    "docs/V2/delivery/api/validation-report.json"
+  ],
+  "artifact_groups": {
+    "user_outputs": [
+      ".loom/tasks/task-20261031-035154-v2-5-api-39004d37/result.md",
+      ".loom/tasks/task-20261031-035154-v2-5-api-39004d37/decision.md",
+      ".loom/tasks/task-20261031-035154-v2-5-api-39004d37/troubleshooting.md"
+    ],
+    "execution_inputs": [
+      ".loom/tasks/task-20261031-035154-v2-5-api-39004d37/prompt.md",
+      ".loom/tasks/task-20261031-035154-v2-5-api-39004d37/context.md",
+      ".loom/tasks/task-20261031-035154-v2-5-api-39004d37/previous-results.md"
+    ],
+    "execution_audit": [
+      ".loom/tasks/task-20261031-035154-v2-5-api-39004d37/git-snapshot.json",
+      ".loom/tasks/task-20261031-035154-v2-5-api-39004d37/logs.txt",
+      ".loom/tasks/task-20261031-035154-v2-5-api-39004d37/agent-events.jsonl",
+      ".loom/tasks/task-20261031-035154-v2-5-api-39004d37/artifacts.json"
+    ],
+    "work_products": [
+      "docs/V2/delivery/app-api-contract.md",
+      "docs/V2/delivery/api-reference.md",
+      "docs/V2/delivery/api-handoff.md",
+      "docs/V2/delivery/api-job-review.md",
+      "tools/validate_app_api.py",
+      "docs/README.md",
+      "docs/V2/04-execution-backlog.md",
+      "docs/V2/delivery/api/examples.json",
+      "docs/V2/delivery/api/openapi.yaml",
+      "docs/V2/delivery/api/requirements-validation.txt",
+      "docs/V2/delivery/api/screen-map.json",
+      "docs/V2/delivery/api/validation-report.json"
+    ]
+  },
+  "contract_snapshot": {
+    "schema_version": 1,
+    "contract_ids": [
+      "task-execution",
+      "done-guardrail"
+    ],
+    "contracts": [
+      {
+        "id": "task-execution",
+        "title": "Task Execution Context Contract",
+        "source_paths": [
+          "loom/application/context_pack.py",
+          "loom/application/team_policy.py"
+        ]
+      },
+      {
+        "id": "done-guardrail",
+        "title": "Task Completion Guardrail Contract",
+        "source_paths": [
+          "loom/application/services.py"
+        ]
+      }
+    ]
+  }
+}
