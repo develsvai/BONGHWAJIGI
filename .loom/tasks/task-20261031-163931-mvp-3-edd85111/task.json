@@ -3,9 +3,9 @@
   "job_id": "job-20261031-002017-v2-fe3bfad0",
   "title": "현행 산불 MVP 아키텍처를 발표용 3장 이미지로 정리",
   "description": "사용자의 기존 다이어그램 대조와 발표용 이미지 작성 지시에 따라 현재 코드와 배포 근거를 확인하고 전체 4단계 흐름, AI 역할, 긴급 알림과 개인 안내 갱신을 3장으로 시각화한다.",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-10-31T16:39:31+00:00",
-  "updated_at": "2026-10-31T16:39:35+00:00",
+  "updated_at": "2026-10-31T16:51:17+00:00",
   "order_index": 20,
   "assigned_agent": "foreground",
   "depends_on": [],
@@ -27,12 +27,25 @@
   "run_attempts": 0,
   "last_error": "",
   "commit_refs": [
-    "5b6210d7424360a4aabd33efaebe201b8b80c914"
+    "5b6210d7424360a4aabd33efaebe201b8b80c914",
+    "e8b042c26fa960376d474a194d9ebbb2c509a631"
   ],
   "branch_name": "develop",
   "git_dirty": true,
-  "git_snapshot_captured_at": "2026-10-31T16:39:35+00:00",
-  "artifacts": [],
+  "git_snapshot_captured_at": "2026-10-31T16:51:16+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-163931-mvp-3-edd85111/agent-events.jsonl",
+    ".loom/tasks/task-20261031-163931-mvp-3-edd85111/artifacts.json",
+    ".loom/tasks/task-20261031-163931-mvp-3-edd85111/context.md",
+    ".loom/tasks/task-20261031-163931-mvp-3-edd85111/decision.md",
+    ".loom/tasks/task-20261031-163931-mvp-3-edd85111/git-snapshot.json",
+    ".loom/tasks/task-20261031-163931-mvp-3-edd85111/logs.txt",
+    ".loom/tasks/task-20261031-163931-mvp-3-edd85111/previous-results.md",
+    ".loom/tasks/task-20261031-163931-mvp-3-edd85111/prompt.md",
+    ".loom/tasks/task-20261031-163931-mvp-3-edd85111/result.md",
+    ".loom/tasks/task-20261031-163931-mvp-3-edd85111/troubleshooting.md",
+    "docs/V2/delivery/presentation-architecture.md"
+  ],
   "source_proposal_id": "",
   "source_prompt": ""
 }
