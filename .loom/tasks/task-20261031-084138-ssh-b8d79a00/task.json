@@ -3,9 +3,9 @@
   "job_id": "job-20261031-002017-v2-fe3bfad0",
   "title": "두 서버 SSH 별칭 설정과 실제 관리 접속 확인",
   "description": "사용자의 직접 요청에 따라 기존 로컬 SSH 설정을 보존하고 inno-gpu-011 및 inno-server-011 별칭을 추가한다. 서버 구조 및 Tailscale 문서를 확인한 뒤 기존 호스트 키와 대조하여 ncloud 계정의 실제 SSH 로그인을 검증한다. 제공된 인증 정보는 인증에만 사용하고 설정·문서·로그에 저장하지 않는다.",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-10-31T08:41:38+00:00",
-  "updated_at": "2026-10-31T08:41:41+00:00",
+  "updated_at": "2026-10-31T08:45:22+00:00",
   "order_index": 8,
   "assigned_agent": "foreground",
   "depends_on": [
@@ -30,12 +30,25 @@
   "run_attempts": 0,
   "last_error": "",
   "commit_refs": [
-    "d0f2ed314795e34c118955593c83fa5cf69d59f0"
+    "d0f2ed314795e34c118955593c83fa5cf69d59f0",
+    "3fcb4548166bc604decef152927e149af6689a4c"
   ],
   "branch_name": "develop",
   "git_dirty": true,
-  "git_snapshot_captured_at": "2026-10-31T08:41:41+00:00",
-  "artifacts": [],
+  "git_snapshot_captured_at": "2026-10-31T08:45:22+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-084138-ssh-b8d79a00/agent-events.jsonl",
+    ".loom/tasks/task-20261031-084138-ssh-b8d79a00/artifacts.json",
+    ".loom/tasks/task-20261031-084138-ssh-b8d79a00/context.md",
+    ".loom/tasks/task-20261031-084138-ssh-b8d79a00/decision.md",
+    ".loom/tasks/task-20261031-084138-ssh-b8d79a00/git-snapshot.json",
+    ".loom/tasks/task-20261031-084138-ssh-b8d79a00/logs.txt",
+    ".loom/tasks/task-20261031-084138-ssh-b8d79a00/previous-results.md",
+    ".loom/tasks/task-20261031-084138-ssh-b8d79a00/prompt.md",
+    ".loom/tasks/task-20261031-084138-ssh-b8d79a00/result.md",
+    ".loom/tasks/task-20261031-084138-ssh-b8d79a00/troubleshooting.md",
+    "docs/V2/delivery/ssh-access.md"
+  ],
   "source_proposal_id": "",
   "source_prompt": ""
 }

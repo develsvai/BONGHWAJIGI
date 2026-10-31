@@ -2,9 +2,9 @@
   "id": "task-run-20261031-084141-task-def-20261031-084138-ssh-27c1f8be-9b0ce398",
   "job_run_id": "job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02",
   "task_definition_id": "task-def-20261031-084138-ssh-27c1f8be",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-10-31T08:41:41+00:00",
-  "updated_at": "2026-10-31T08:41:41+00:00",
+  "updated_at": "2026-10-31T08:45:22+00:00",
   "legacy_task_id": "task-20261031-084138-ssh-b8d79a00",
   "attempt": 1,
   "assigned_agent": "foreground",
@@ -13,13 +13,30 @@
   "lease_expires_at": "",
   "queued_at": "",
   "started_at": "2026-10-31T08:41:41+00:00",
-  "completed_at": "",
+  "completed_at": "2026-10-31T08:45:22+00:00",
   "last_error": "",
-  "commit_refs": [],
-  "branch_name": "",
-  "git_dirty": false,
-  "git_snapshot_captured_at": "",
-  "artifacts": [],
-  "checkpoint_ids": [],
+  "commit_refs": [
+    "3fcb4548166bc604decef152927e149af6689a4c",
+    "d0f2ed314795e34c118955593c83fa5cf69d59f0"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-10-31T08:45:22+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-084138-ssh-b8d79a00/agent-events.jsonl",
+    ".loom/tasks/task-20261031-084138-ssh-b8d79a00/artifacts.json",
+    ".loom/tasks/task-20261031-084138-ssh-b8d79a00/context.md",
+    ".loom/tasks/task-20261031-084138-ssh-b8d79a00/decision.md",
+    ".loom/tasks/task-20261031-084138-ssh-b8d79a00/git-snapshot.json",
+    ".loom/tasks/task-20261031-084138-ssh-b8d79a00/logs.txt",
+    ".loom/tasks/task-20261031-084138-ssh-b8d79a00/previous-results.md",
+    ".loom/tasks/task-20261031-084138-ssh-b8d79a00/prompt.md",
+    ".loom/tasks/task-20261031-084138-ssh-b8d79a00/result.md",
+    ".loom/tasks/task-20261031-084138-ssh-b8d79a00/troubleshooting.md",
+    "docs/V2/delivery/ssh-access.md"
+  ],
+  "checkpoint_ids": [
+    "checkpoint-20261031-084522-task-completed-ssh-7cffcee6"
+  ],
   "review_required_reason": ""
 }
