@@ -1,10 +1,14 @@
 # 산불 XGBoost 학습 자료
 
+국내 1·3·6시간 목표에 대한 원인 진단, 실제 GOES GPU 비교·독립 평가, 기상청 FF 연결과 국내 검증 진행은 [국내 산불 모델 개선 기록](../docs/V2/delivery/korea-wildfire-improvement.md)을 따른다. 국내 FF 715개를 사용한 v2·v3 학습을 완료했고, v4는 21개 지역 창으로 수집·후속 학습을 진행 중이다. 현재 결과는 연구용이며 개인 대응 판단에 적용하지 않는다.
+
+v3의 홍성 튜닝 AP는 1·3·6시간 각각 **0.0336/0.0334/0.0488**로 v2보다 소폭 개선됐지만, 양성 가중 모델의 Brier 점수는 악화됐다. AP는 분류 정확도가 아니며 원점수를 확률로 해석할 수 없다. 독립 보정 검증과 국내 최종 평가는 아직 남아 있다. v4의 학습 14·튜닝 6·보정 1은 요청 지역 창 수이며 독립 사건 수나 유효 표본 수가 아니다.
+
 첫 CUDA 학습 모델·이력·재평가 사본은 `reports/ndws-20261031T104838Z-528483/`에 있으며, [실제 검증 결과](../docs/V2/delivery/xgboost-training-verification.md)에서 연구용 성능과 사용 한계를 확인할 수 있다.
 
-GPU 서버에서 실제 학습을 시작하는 명령과 로그·결과 확인은 [학습 실행 문서](../docs/V2/delivery/xgboost-training-run.md)를 따른다. 실행기는 `python -m bonghwa_training.train`이며 GPU용 서비스 중지/복구 스크립트는 `training/tools/train_gpu.sh`다.
+기존 NDWS GPU 학습은 [학습 실행 문서](../docs/V2/delivery/xgboost-training-run.md)를 따른다. 실행기는 `python -m bonghwa_training.train`, GPU용 서비스 중지/복구 스크립트는 `training/tools/train_gpu.sh`다. 국내 시간별 학습은 `bonghwa_training.goes_train`과 `training/tools/train_hourly_gpu.sh`를 사용하며 설정·재현 명령은 위 개선 기록에 있다.
 
-분석 큐 구현과 독립된 Python 3.12/uv 프로젝트다. 현재 산출물은 실제 공개 관측 자료를 변환한 **미국 NDWS v2 일부 데이터**이며, 국내 개인 영향 예측 모델은 아직 학습·검증하지 않았다.
+분석 큐 구현과 독립된 Python 3.12/uv 프로젝트다. 미국 NDWS 일별·GOES 시간별 자료와 국내 GK2A 시간별 관측 자료를 다룬다. 국내 모델의 정답은 미래 위성 화재 관측이며 개인 피해나 대응 단계가 아니다. 원본·Parquet·국내 모델은 GPU 서버 `/home1/ncloud/bonghwajigi` 아래에 보관한다. 인증키와 승인 사용자용 KMA 원본은 Git에 넣지 않는다.
 
 ## 현재 자료
 
@@ -13,12 +17,21 @@ GPU 서버에서 실제 학습을 시작하는 명령과 로그·결과 확인�
 | 다운로드 원본 3개, SHA256 manifest | `../data/raw/ndws-v2/` |
 | 학습·검증·평가 Parquet와 품질 보고서 | `../data/processed/ndws-v2-bootstrap/` |
 | Git에 보존하는 원본 목록·품질 통계 | `reports/source-manifest.json`, `reports/dataset-report.json` |
+| 국내 FF 원본과 현재 제품 메타데이터 | `../data/raw/korea-wildfire/gk2a-ff/`, `../data/raw/korea-wildfire/gk2a-live/` |
+| 국내 v3 기본·환경 결합 Parquet | `../data/processed/korea-gk2a-hourly-v3/`, `../data/processed/korea-gk2a-context-v3/` |
+| 국내 v2·v3 실제 학습·품질 보고서 | `reports/kma-audit-20261031/`, `reports/kma-recent-audit-20261031/` |
+| 공식 위경도 조견표 대조 | `reports/kma-audit-20261031/projection-audit.json` |
+| 현재 FF 수신·알고리즘 메타데이터 | `reports/kma-audit-20261031/live-metadata/` |
 | 국내 수집 경로 및 입력·정답 판단 | [설계·수집 문서](../docs/V2/delivery/xgboost-training-data.md) |
 | 수집 경로별 확보 상태 | `sources/source-audit.json` |
 
-원본과 Parquet는 용량 때문에 Git에서 제외한다. 위 경로는 저장소 루트 기준 명령으로 재생성한다.
+원본과 Parquet는 Git에서 제외한다. 현재 제품은 2026-10-31 22:40 KST 관측을 22:46:16에 수신했으나, 과거 재처리본과 알고리즘 버전이 달라 실시간 성능 검증은 별도로 필요하다. 공식 900×900 위경도 조견표와 현재 투영 계산의 대조는 완료했다.
 
-## 실행
+`python -m bonghwa_training.prediction_evidence`로 과거 원본에서 당시 후보 전체의 1·3·6시간 점수·좌표·관측 근거·누락을 JSON/GeoJSON으로 내보낼 수 있다. [실제 출력 예시](reports/kma-recent-audit-20261031/replay/summary.json), [실행법](../docs/V2/delivery/korea-wildfire-improvement.md#예측-자료를-활용할-경계)을 참고한다. 홍성 재생 739개 후보와 기존 입력 일치를 확인했다. `bonghwa_training.ranking_audit`는 같은 시점 안에서 모델·현재 거리·최근 거리 기준의 검토 효율을 비교한다. 현재 모델이 최근 화재 거리 기준보다 확실히 우수하지 않아 세 기준을 계속 비교한다.
+
+내부 API는 단일 모의 확률만 지원하고 앱은 예측 연결을 비활성화하므로, 연구 산출물 생성과 앱·개인 정책 연결은 별도다. v4 완료 후 `bonghwajigi-kma-utility-v4` 작업이 사건별 평가·재생 자료를 `data/artifacts/xgboost/kma-utility-v4/`에 자동 생성한다. 2025년 최종 정답은 열지 않는다.
+
+## 기존 NDWS 자료 재현
 
 저장소 루트에서 실행한다. 루트 서비스의 의존성이나 GPU 서빙 환경을 바꾸지 않는다.
 

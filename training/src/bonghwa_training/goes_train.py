@@ -10,9 +10,10 @@ import numpy as np
 import pyarrow.parquet as pq
 import xgboost as xgb
 from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import average_precision_score
 
 from bonghwa_training.download import file_sha256
-from bonghwa_training.goes_build import FEATURES
+from bonghwa_training.goes_build import FEATURES, RECENT_FEATURES
 from bonghwa_training.risk_metrics import logits, operating_points
 from bonghwa_training.train import gpu_lease, metrics
 
@@ -55,22 +56,44 @@ def train(args):
     if file_sha256(args.config) != file_sha256(args.dataset / "config.json"):
         raise ValueError("원본/구축/학습 계약이 다릅니다.")
     args.output.mkdir(parents=True, exist_ok=False)
-    features = list(FEATURES)
+    features = [
+        f for f in cfg.get("feature_names", FEATURES) if f not in cfg.get("drop_features", [])
+    ]
     x, y = load(args.dataset, cfg, "train", features)
     vx, vy = load(args.dataset, cfg, "validation", features)
     h, vh = x[:, -1], vx[:, -1]
     for hours in (1, 3, 6):
         if len(np.unique(y[h == hours])) != 2 or len(np.unique(vy[vh == hours])) != 2:
             raise ValueError(f"{hours}시간 정답의 양성/음성이 부족합니다.")
+    observation_columns = [f for f in features if f not in cfg.get("context_features", [])]
     history_columns = [
-        f for f in features if not any(term in f for term in ("30m", "60m", "last_hour"))
+        f for f in observation_columns if not any(term in f for term in ("30m", "60m", "last_hour"))
     ]
     cases = [
         ("spatial_depth3", 3, history_columns, 1.0),
-        ("history_depth3", 3, features, 1.0),
-        ("history_depth5", 5, features, 1.0),
+        ("history_depth3", 3, observation_columns, 1.0),
+        ("history_depth5", 5, observation_columns, 1.0),
         ("history_weighted", 4, features, float(np.sqrt((y == 0).sum() / y.sum()))),
     ]
+    if cfg.get("context_features"):
+        cases.append(("context_depth5", 5, features, 1.0))
+    if cfg.get("recent_fire_features"):
+        cases.extend(
+            [
+                (
+                    "history_without_recent_depth5",
+                    5,
+                    [f for f in observation_columns if f not in RECENT_FEATURES],
+                    1.0,
+                ),
+                (
+                    "context_without_recent_depth5",
+                    5,
+                    [f for f in features if f not in RECENT_FEATURES],
+                    1.0,
+                ),
+            ]
+        )
     common = {
         "objective": "binary:logistic",
         "tree_method": "hist",
@@ -98,12 +121,23 @@ def train(args):
         "parameters": common,
         "maximum_rounds": args.rounds,
         "early_stopping": 40,
+        "early_stopping_metric": "mean_horizon_ap",
+        "trainer_sha256": file_sha256(Path(__file__)),
+        "xgboost_version": xgb.__version__,
         "selection": "사건 validation의 1·3·6시간 AP 산술평균. 최종 사건은 미열람",
         "monotonicity": "동일 입력에서 예측 기간이 길어져도 누적 위험은 감소하지 않음",
         "source_hashes": {
             e["id"]: file_sha256(args.dataset / f"{e['id']}.parquet")
             for e in cfg["events"]
             if e["split"] != "test"
+        },
+        "usable_event_counts": {
+            split: sum(
+                json.loads((args.dataset / f"{e['id']}-report.json").read_text())["rows"] > 0
+                for e in cfg["events"]
+                if e["split"] == split
+            )
+            for split in ("train", "validation", "calibration")
         },
     }
     (args.output / "plan.json").write_text(json.dumps(plan, indent=2, ensure_ascii=False) + "\n")
@@ -121,18 +155,37 @@ def train(args):
             "scale_pos_weight": weight,
             "monotone_constraints": tuple(1 if f == "horizon_hours" else 0 for f in cols),
         }
+
+        def mean_horizon_ap(
+            prediction, matrix, validation_matrix=validation, training_matrix=training
+        ):
+            if matrix is validation_matrix:
+                truth, periods = vy, vh
+            elif matrix is training_matrix:
+                truth, periods = y, h
+            else:
+                raise ValueError("평가 행렬의 예측 기간을 확인할 수 없습니다.")
+            score = np.mean(
+                [
+                    average_precision_score(truth[periods == hours], prediction[periods == hours])
+                    for hours in (1, 3, 6)
+                ]
+            )
+            return "mean_horizon_ap", float(score)
+
         model = xgb.train(
             parameters,
             training,
             num_boost_round=args.rounds,
             evals=[(training, "train"), (validation, "validation")],
             evals_result=history,
+            custom_metric=mean_horizon_ap,
             verbose_eval=50,
             callbacks=[
                 xgb.callback.EarlyStopping(
                     rounds=40,
                     data_name="validation",
-                    metric_name="aucpr",
+                    metric_name="mean_horizon_ap",
                     maximize=True,
                     save_best=True,
                 )
@@ -205,6 +258,8 @@ def train(args):
         "selected": winner,
         "experiments": results,
         "calibration": calibration,
+        "calibration_fitted": "coefficient" in calibration,
+        "calibration_independently_validated": False,
         "validation_distance_baseline": horizon_metrics(vy, baseline, vh),
         "validation_train_prior": horizon_metrics(vy, np.full(len(vy), y.mean()), vh),
         "monotonicity_verified": True,
@@ -212,14 +267,17 @@ def train(args):
         "operational_use": False,
         "target": cfg["target"],
         "elapsed_seconds": round(perf_counter() - started, 3),
-        "limitations": [
-            "국외 자동 위성 관측의 연구 결과이며 국내 검증 전",
-            "학습3/튜닝1/보정1 사건. 격자·시점 수를 독립 사건 수로 해석할 수 없음",
-            "기상·연료·지형·진화 활동 및 사용자 취약성 입력 없음",
-            "고신뢰 열 이상 관측은 실제 화선 도달·사람 피해의 정답이 아님",
-            "미래 관측 불가 정답 제외로 선택 편향이 있음",
-            "임계값은 연구용 누락/오경보 진단이며 대응 레벨 결정이 아님",
-        ],
+        "limitations": cfg.get(
+            "limitations",
+            [
+                "국외 자동 위성 관측의 연구 결과이며 국내 검증 전",
+                "학습3/튜닝1/보정1 사건. 격자·시점 수를 독립 사건 수로 해석할 수 없음",
+                "기상·연료·지형·진화 활동 및 사용자 취약성 입력 없음",
+                "고신뢰 열 이상 관측은 실제 화선 도달·사람 피해의 정답이 아님",
+                "미래 관측 불가 정답 제외로 선택 편향이 있음",
+                "임계값은 연구용 누락/오경보 진단이며 대응 레벨 결정이 아님",
+            ],
+        ),
     }
     (args.output / "report.json").write_text(
         json.dumps(report, indent=2, ensure_ascii=False, allow_nan=False) + "\n"

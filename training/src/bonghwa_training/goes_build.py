@@ -36,6 +36,44 @@ FEATURES = (
     "horizon_hours",
 )
 
+RECENT_FEATURES = (
+    "distance_recent_fire_60m_km",
+    "nearest_recent_fire_60m_dx_km",
+    "nearest_recent_fire_60m_dy_km",
+    "nearest_recent_fire_60m_age_minutes",
+    "own_last_fire_60m_age_minutes",
+    "recent_fire_60m_neighbors_3",
+    "recent_fire_60m_neighbors_7",
+)
+
+
+def recent_fire_features(states, starts, issue, grid, indices):
+    """미래 프레임을 쓰지 않는 관측 이력. 과거 화재가 현재도 연소 중이라는 뜻은 아니다."""
+    if np.any(starts > issue):
+        raise ValueError("과거 화재 이력에 미래 관측이 포함됐습니다.")
+    seen = np.any(states == 1, axis=0)
+    distance, nearest = distances(seen.astype(np.int8), grid)
+    if distance is None:
+        return {name: np.full(len(indices[0]), np.nan) for name in RECENT_FEATURES}
+    last = np.max(np.where(states == 1, starts[:, None, None], -np.inf), axis=0)
+    near = (nearest[0][indices], nearest[1][indices])
+    age = np.where(np.isfinite(last), (issue - last) / 60, np.nan)
+    return dict(
+        zip(
+            RECENT_FEATURES,
+            [
+                distance[indices],
+                (grid["east_m"][near] - grid["east_m"][indices]) / 1000,
+                (grid["north_m"][near] - grid["north_m"][indices]) / 1000,
+                age[near],
+                age[indices],
+                convolve(seen.astype(float), np.ones((3, 3)), mode="constant")[indices],
+                convolve(seen.astype(float), np.ones((7, 7)), mode="constant")[indices],
+            ],
+            strict=True,
+        )
+    )
+
 
 def utc(value: str) -> datetime:
     return datetime.fromisoformat(value.replace("Z", "+00:00"))
@@ -181,8 +219,66 @@ def distances(state: np.ndarray, grid: dict):
     return dist.reshape(dims) / 1000, nearest
 
 
+def input_snapshot(observations, cfg, index):
+    """Construct all eligible input-time candidates without consulting any future labels."""
+    state, power, temp, starts, ends, available, grid, _ = observations
+    i = index
+    issue = available[i]
+    valid_inputs = np.where((available <= issue) & (ends <= issue))[0]
+    if not len(valid_inputs) or valid_inputs[-1] != i:
+        raise ValueError("현재 입력과 발행 시각이 일치하지 않습니다.")
+    distance, nearest = distances(state[i], grid)
+    if distance is None:
+        return None
+    candidate = (state[i] == 0) & (distance <= cfg["candidate_distance_km"])
+    rr, cc = np.where(candidate)
+    if not len(rr):
+        return None
+    idx = (rr, cc)
+    fire = (state[i] == 1).astype(float)
+    n3 = convolve(fire, np.ones((3, 3)), mode="constant")[idx]
+    n7 = convolve(fire, np.ones((7, 7)), mode="constant")[idx]
+    recent = valid_inputs[ends[valid_inputs] >= issue - 3600]
+    past_distance = []
+    for minutes in (30, 60):
+        prior = valid_inputs[ends[valid_inputs] <= issue - minutes * 60]
+        if not len(prior) or ends[prior[-1]] < issue - (minutes + 10) * 60:
+            past_distance.append(np.full(len(rr), np.nan))
+            continue
+        d, _ = distances(state[prior[-1]], grid)
+        past_distance.append(d[idx] if d is not None else np.full(len(rr), np.nan))
+    near_idx = (nearest[0][idx], nearest[1][idx])
+    hour = (issue % 86400) / 86400 * 2 * np.pi
+    base = {
+        "distance_fire_km": distance[idx],
+        "nearest_fire_dx_km": (grid["east_m"][near_idx] - grid["east_m"][idx]) / 1000,
+        "nearest_fire_dy_km": (grid["north_m"][near_idx] - grid["north_m"][idx]) / 1000,
+        "neighbors_3": n3,
+        "neighbors_7": n7,
+        "nearby_frp_mw": power[i][near_idx],
+        "nearby_temperature_k": temp[i][near_idx],
+        "distance_fire_30m_km": past_distance[0],
+        "distance_fire_60m_km": past_distance[1],
+        "closing_speed_30m_kmh": (past_distance[0] - distance[idx]) * 2,
+        "closing_speed_60m_kmh": past_distance[1] - distance[idx],
+        "fire_frames_last_hour": (state[recent][:, rr, cc] == 1).sum(axis=0),
+        "clear_frames_last_hour": (state[recent][:, rr, cc] == 0).sum(axis=0),
+        "utc_hour_sin": np.full(len(rr), np.sin(hour)),
+        "utc_hour_cos": np.full(len(rr), np.cos(hour)),
+    }
+    if cfg.get("recent_fire_features"):
+        base.update(recent_fire_features(state[recent], starts[recent], issue, grid, idx))
+    return rr, cc, base
+
+
 def build_event(root: Path, output: Path, event: dict, cfg: dict):
-    state, power, temp, starts, ends, available, grid, crs = read_event(root, event)
+    if cfg.get("reader") == "gk2a":
+        from bonghwa_training.kma_event import read_event as read_kma_event
+
+        observations = read_kma_event(root, event, cfg)
+    else:
+        observations = read_event(root, event)
+    state, power, temp, starts, ends, available, grid, crs = observations
     if np.any(np.diff(starts) <= 0):
         raise ValueError("관측 시점 중복/역순")
     initial = utc(event["start_utc"]).timestamp()
@@ -210,54 +306,21 @@ def build_event(root: Path, output: Path, event: dict, cfg: dict):
         valid_inputs = np.where((available <= issue) & (ends <= issue))[0]
         if not len(valid_inputs) or valid_inputs[-1] != i:
             continue
-        distance, nearest = distances(state[i], grid)
-        if distance is None:
+        snapshot = input_snapshot(observations, cfg, i)
+        if snapshot is None:
             continue
-        candidate = (state[i] == 0) & (distance <= cfg["candidate_distance_km"])
-        rr, cc = np.where(candidate)
-        if not len(rr):
-            continue
+        rr, cc, base = snapshot
         idx = (rr, cc)
-        fire = (state[i] == 1).astype(float)
-        n3 = convolve(fire, np.ones((3, 3)), mode="constant")[idx]
-        n7 = convolve(fire, np.ones((7, 7)), mode="constant")[idx]
-        recent = valid_inputs[ends[valid_inputs] >= issue - 3600]
-        past_distance = []
-        for minutes in (30, 60):
-            prior = valid_inputs[ends[valid_inputs] <= issue - minutes * 60]
-            if not len(prior) or ends[prior[-1]] < issue - (minutes + 10) * 60:
-                past_distance.append(np.full(len(rr), np.nan))
-                continue
-            d, _ = distances(state[prior[-1]], grid)
-            past_distance.append(d[idx] if d is not None else np.full(len(rr), np.nan))
-        near_idx = (nearest[0][idx], nearest[1][idx])
-        hour = (issue % 86400) / 86400 * 2 * np.pi
-        base = {
-            "distance_fire_km": distance[idx],
-            "nearest_fire_dx_km": (grid["east_m"][near_idx] - grid["east_m"][idx]) / 1000,
-            "nearest_fire_dy_km": (grid["north_m"][near_idx] - grid["north_m"][idx]) / 1000,
-            "neighbors_3": n3,
-            "neighbors_7": n7,
-            "nearby_frp_mw": power[i][near_idx],
-            "nearby_temperature_k": temp[i][near_idx],
-            "distance_fire_30m_km": past_distance[0],
-            "distance_fire_60m_km": past_distance[1],
-            "closing_speed_30m_kmh": (past_distance[0] - distance[idx]) * 2,
-            "closing_speed_60m_kmh": past_distance[1] - distance[idx],
-            "fire_frames_last_hour": (state[recent][:, rr, cc] == 1).sum(axis=0),
-            "clear_frames_last_hour": (state[recent][:, rr, cc] == 0).sum(axis=0),
-            "utc_hour_sin": np.full(len(rr), np.sin(hour)),
-            "utc_hour_cos": np.full(len(rr), np.cos(hour)),
-        }
         for horizon in cfg["horizons_hours"]:
             future = np.where((starts > issue) & (ends <= issue + horizon * 3600))[0]
             if not len(future):
                 continue
+            cadence = cfg["source_cadence_minutes"] * 60
             complete = (
-                len(future) == horizon * 12
-                and np.max(np.diff(starts[future]), initial=0) <= 330
-                and starts[future[0]] - issue <= 330
-                and issue + horizon * 3600 - ends[future[-1]] <= 330
+                len(future) == horizon * 3600 // cadence
+                and np.max(np.diff(starts[future]), initial=0) <= cadence * 1.1
+                and starts[future[0]] - issue <= cadence * 1.1
+                and issue + horizon * 3600 - ends[future[-1]] <= cadence * 1.1
             )
             target = future_target(state[future][:, rr, cc], complete)
             known = target >= 0
@@ -278,6 +341,12 @@ def build_event(root: Path, output: Path, event: dict, cfg: dict):
                     "col": cc[known].astype(np.int32),
                     "latitude": grid["latitude"][idx][known],
                     "longitude": grid["longitude"][idx][known],
+                    "input_time_basis": [
+                        "assumed_delay_not_actual_release"
+                        if cfg.get("reader") == "gk2a"
+                        else "public_release_proxy"
+                    ]
+                    * int(known.sum()),
                 }
             )
             if writer is None:
@@ -289,8 +358,26 @@ def build_event(root: Path, output: Path, event: dict, cfg: dict):
             stats["horizons"][str(horizon)]["positives"] += int((target == 1).sum())
         stats["anchors"] += 1
     if writer is None:
-        raise ValueError(f"실제 학습 가능한 미래 관측이 없습니다: {event['id']}")
-    writer.close()
+        names = list(FEATURES) + (list(RECENT_FEATURES) if cfg.get("recent_fire_features") else [])
+        empty = {k: pa.array([], type=pa.float32()) for k in names}
+        empty.update(
+            {
+                "fire_within_horizon": pa.array([], type=pa.int8()),
+                "issue_epoch_seconds": pa.array([], type=pa.float64()),
+                "max_input_available_epoch_seconds": pa.array([], type=pa.float64()),
+                "row": pa.array([], type=pa.int32()),
+                "col": pa.array([], type=pa.int32()),
+                "latitude": pa.array([], type=pa.float64()),
+                "longitude": pa.array([], type=pa.float64()),
+                "input_time_basis": pa.array([], type=pa.string()),
+            }
+        )
+        pq.write_table(pa.table(empty), path, compression="zstd")
+        stats["unusable_reason"] = (
+            "관측 가능한 현재 화재/후보/정답이 없어 0행. 비화재 음성으로 간주하지 않음"
+        )
+    else:
+        writer.close()
     stats.update(
         sha256=file_sha256(path),
         event=event,
@@ -298,6 +385,7 @@ def build_event(root: Path, output: Path, event: dict, cfg: dict):
         native_grid_shape=list(grid["latitude"].shape),
         source_frames=len(starts),
         source_manifest_sha256=file_sha256(root / event["id"] / "manifest.json"),
+        input_availability_note=cfg.get("input_availability"),
     )
     (output / f"{event['id']}-report.json").write_text(json.dumps(stats, indent=2) + "\n")
     print(json.dumps({k: v for k, v in stats.items() if k not in ("native_grid_crs",)}), flush=True)
@@ -316,21 +404,25 @@ def build(root: Path, output: Path, config: Path, *, release: Path | None = None
             reports[event["id"]] = build_event(root, output, event, cfg)
     report = {
         "profile": cfg["profile"],
-        "features": list(FEATURES),
+        "features": list(FEATURES)
+        + (list(RECENT_FEATURES) if cfg.get("recent_fire_features") else []),
         "events": reports,
         "config_sha256": file_sha256(config),
         "builder_sha256": file_sha256(Path(__file__)),
         "frozen_release_sha256": file_sha256(release) if release else None,
         "operational_use": False,
         "target": cfg["target"],
-        "target_country": "국외 연구용, 국내 외부 검증 전",
-        "limitations": [
-            "6개 사건 중 학습3/튜닝1/보정1/잠금1로 사건 수가 매우 적음",
-            "환경 기상/연료/지형 및 진화 조치 입력을 아직 결합하지 않음",
-            "위성 격자 열 이상은 실제 화선·개인 피해·도달 시각과 다름",
-            "미래 구름/누락 구간의 음성 정답 제외로 관측 선택 편향이 있음",
-            "국내 위성/실황/예보 입력과 동등성·지연·보정을 별도 검증해야 함",
-        ],
+        "target_country": cfg.get("domain", "국외 연구용, 국내 외부 검증 전"),
+        "limitations": cfg.get(
+            "limitations",
+            [
+                "6개 사건 중 학습3/튜닝1/보정1/잠금1로 사건 수가 매우 적음",
+                "환경 기상/연료/지형 및 진화 조치 입력을 아직 결합하지 않음",
+                "위성 격자 열 이상은 실제 화선·개인 피해·도달 시각과 다름",
+                "미래 구름/누락 구간의 음성 정답 제외로 관측 선택 편향이 있음",
+                "국내 위성/실황/예보 입력과 동등성·지연·보정을 별도 검증해야 함",
+            ],
+        ),
     }
     (output / "report.json").write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n")
     return report

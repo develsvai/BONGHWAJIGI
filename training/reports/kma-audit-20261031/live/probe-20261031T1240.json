@@ -1,0 +1,85 @@
+{
+  "purpose": "live availability metadata only; not training/evaluation labels",
+  "requested_observation_utc": "2026-10-31T12:40:00+00:00",
+  "retrieved_at_utc": "2026-10-31T13:45:39.631374+00:00",
+  "url_without_auth": "https://apihub.kma.go.kr/api/typ05/api/GK2A/LE2/FF/KO/data?date=202610311240",
+  "http_status": 200,
+  "bytes": 97921,
+  "sha256": "a32ec9110cae336c1759024cd6c1b5db92189d6addb0eb15a977b41b16eff867",
+  "schema": {
+    "variables": {
+      "DQF_FF": {
+        "shape": [
+          900,
+          900
+        ],
+        "dtype": "uint8",
+        "attributes": {
+          "_FillValue": "255",
+          "flag_meanings": "0: Invalid, outside of observation range, 1: Invalid, invalid area, 2: Invalid, land area, 3: Invalid, sea/water area, 4: Invalid, cloud area, 5: Invalid, cloud/rejected area, 6: Invalid, urban/rejected area, 7: Low confidence Forest Fire, 8: Mid confidence Forest Fire, 9: High confidence Forest Fire, 10: Industrial Heat Detection",
+          "long_name": "AMI L2 Forest Fire data quality flags",
+          "units": ""
+        }
+      },
+      "FF": {
+        "shape": [
+          900,
+          900
+        ],
+        "dtype": "uint8",
+        "attributes": {
+          "_FillValue": "255",
+          "long_name": "AMI L2 Forest Fire",
+          "units": ""
+        }
+      },
+      "gk2a_imager_projection": {
+        "shape": [],
+        "dtype": "int32",
+        "attributes": {}
+      }
+    },
+    "dimensions": {
+      "dim_y": 900,
+      "dim_x": 900
+    },
+    "global_attributes": {
+      "file_creation_time": "2026-10-31T12:42:47.202Z",
+      "origianl_sourece_file": "gk2a_ami_le2_ff_ela020ge_202610311240.nc",
+      "algorithm_version": "GK2A_FF_v1.2024.01.3",
+      "comment": "TBD",
+      "conventions": "CF-1.7",
+      "institution": "KMA/NMSC> Korea Meteorological Administration, National Meteorological Satellite Center",
+      "instrument": "GK-2A Advanced Meteorological Imager",
+      "license": "Access is restricted to approved users only",
+      "metadata_conventions": "Unidata Dataset Discovery v1.0",
+      "names_of_product": "FF, DQF_FF",
+      "number_of_product": "2",
+      "observation_mode": "ELA",
+      "processing_area": "ELA",
+      "processing_environment": "operation",
+      "references": "RAP03 FF mask v1.0",
+      "title": "AMI L2 FF"
+    },
+    "projection_attributes": {
+      "grid_mapping_name": "lambert_conformal_conic",
+      "standard_parallel1": "30.0",
+      "standard_parallel2": "60.0",
+      "origin_latitude": "38.0",
+      "central_meridian": "126.0",
+      "false_easting": "0.0",
+      "false_northing": "0.0",
+      "image_width": "900",
+      "image_height": "900",
+      "pixel_size": "2000.0",
+      "upper_left_easting": "-899000.0",
+      "upper_left_northing": "899000.0",
+      "upper_right_easting": "899000.0",
+      "upper_right_northing": "899000.0",
+      "lower_left_easting": "-899000.0",
+      "lower_left_northing": "-899000.0",
+      "lower_right_easting": "899000.0",
+      "lower_right_northing": "-899000.0"
+    }
+  }
+}

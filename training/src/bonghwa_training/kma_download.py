@@ -18,6 +18,12 @@ from bonghwa_training.download import file_sha256
 ENDPOINT = "https://apihub.kma.go.kr/api/typ05/api/GK2A/LE2/FF/KO/data"
 
 
+class RateLimited(RuntimeError):
+    def __init__(self, seconds):
+        self.seconds = seconds
+        super().__init__("기상청 요청 제한. 자료 누락으로 처리하지 않습니다.")
+
+
 def load_key(path: Path) -> str:
     value = os.environ.get("KMA_APIHUB_AUTH_KEY", "").strip()
     if not value and path.exists():
@@ -97,6 +103,15 @@ def acquire_one(root: Path, when: datetime, key: str) -> dict:
         part.unlink(missing_ok=True)
         if exc.code == 404:
             raise FileNotFoundError(f"기상청 원본 없음: {stamp}Z") from None
+        if exc.code == 429:
+            raw = exc.headers.get("Retry-After", "30")
+            if not raw.isdigit():
+                from email.utils import parsedate_to_datetime
+
+                raw = str(
+                    max(30, int((parsedate_to_datetime(raw) - datetime.now(UTC)).total_seconds()))
+                )
+            raise RateLimited(max(30, int(raw))) from None
         raise RuntimeError(
             f"기상청 응답 HTTP {exc.code}. 키/활용승인/자료 시각을 확인하세요."
         ) from None
@@ -121,6 +136,20 @@ def acquire_one(root: Path, when: datetime, key: str) -> dict:
     return record
 
 
+def acquire_with_backoff(root, when, key):
+    for attempt in range(4):
+        try:
+            return acquire_one(root, when, key)
+        except RateLimited as exc:
+            delay = max(exc.seconds, 30 * 2**attempt)
+            if attempt == 3 or delay > 300:
+                raise RuntimeError(
+                    "기상청 요청 제한이 반복되거나 긴 중지를 요구해 자동 수집을 중지합니다."
+                ) from None
+            print(json.dumps({"status": "rate_limited", "retry_in_seconds": delay}), flush=True)
+            time.sleep(delay)
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--root", type=Path, default=Path("data/raw/korea-wildfire/gk2a-ff"))
@@ -141,7 +170,7 @@ def main():
     for i in range(a.hours * 6):
         when = start + timedelta(minutes=10 * i)
         try:
-            record = acquire_one(a.root, when, key)
+            record = acquire_with_backoff(a.root, when, key)
         except FileNotFoundError:
             if not a.allow_missing:
                 raise
@@ -155,7 +184,7 @@ def main():
             ),
             flush=True,
         )
-        time.sleep(1)
+        time.sleep(3)
     manifest = a.root / f"manifest-{start.astimezone(UTC):%Y%m%dT%H%MZ}-{a.hours}h.json"
     manifest.write_text(json.dumps(records, indent=2, ensure_ascii=False) + "\n")
     manifest.chmod(0o600)

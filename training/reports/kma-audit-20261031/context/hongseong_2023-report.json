@@ -1,0 +1,58 @@
+{
+  "rows": 65386,
+  "positives": 463,
+  "anchors": 35,
+  "censored_rows": 1319,
+  "horizons": {
+    "1": {
+      "rows": 21885,
+      "positives": 87
+    },
+    "3": {
+      "rows": 21749,
+      "positives": 172
+    },
+    "6": {
+      "rows": 21752,
+      "positives": 204
+    }
+  },
+  "sha256": "fa47b8b9472af8b7aaf0d9afb5e4d144f882f6a34b6a88f2fb5aef7ede0fe3f7",
+  "event": {
+    "id": "hongseong_2023",
+    "split": "validation",
+    "start_utc": "2023-04-02T02:00:00Z",
+    "hours": 12,
+    "bbox": [
+      126.2,
+      36.2,
+      127.0,
+      36.9
+    ],
+    "source": "https://www.opm.go.kr/opm/news/press-release.do?articleNo=153083&mode=view"
+  },
+  "native_grid_crs": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"Unknown based on WGS 84 ellipsoid\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",7030]]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Lambert Conic Conformal (2SP)\",ID[\"EPSG\",9802]],PARAMETER[\"Latitude of false origin\",38,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8821]],PARAMETER[\"Longitude of false origin\",126,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8822]],PARAMETER[\"Latitude of 1st standard parallel\",30,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8823]],PARAMETER[\"Latitude of 2nd standard parallel\",60,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8824]],PARAMETER[\"Easting at false origin\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8826]],PARAMETER[\"Northing at false origin\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8827]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+  "native_grid_shape": [
+    38,
+    35
+  ],
+  "source_frames": 120,
+  "source_manifest_sha256": "84234a7918bc0945a6d86ba58022ad43bc892c8509995dc489c25d783048cc4e",
+  "input_availability_note": "과거 재처리 FF를 쓰는 hindcast. 관측 시각+15분은 실험 가정이며 당시 공개/수신 시각이 아님. 원본 제작 시각은 별도로 기록하며 실시간 성능을 주장하지 않음",
+  "base_parquet_sha256": "36e1565e67abd9771ac5999b9174018817a3f87ef4263ccf049b6b2e34908cb6",
+  "context_missing_fraction": {
+    "forest_fraction": 0.016379653136757103,
+    "elevation_m": 0.016379653136757103,
+    "slope_degrees": 0.016379653136757103,
+    "temperature_c": 0.0,
+    "humidity_pct": 0.0,
+    "wind_speed_ms": 0.0,
+    "wind_u_ms": 0.0,
+    "wind_v_ms": 0.0,
+    "observed_hourly_precipitation_mm": 1.0,
+    "weather_station_distance_km": 0.0,
+    "weather_age_hours": 0.0,
+    "wind_toward_target_ms": 0.0,
+    "wind_cross_target_ms": 0.0
+  }
+}

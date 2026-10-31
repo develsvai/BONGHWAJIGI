@@ -1,0 +1,42 @@
+{
+  "rows": 65386,
+  "positives": 463,
+  "anchors": 35,
+  "censored_rows": 1319,
+  "horizons": {
+    "1": {
+      "rows": 21885,
+      "positives": 87
+    },
+    "3": {
+      "rows": 21749,
+      "positives": 172
+    },
+    "6": {
+      "rows": 21752,
+      "positives": 204
+    }
+  },
+  "sha256": "13a8458cbe9ee32571bf5b281795e83e44581329958e74190c88e37b724f433c",
+  "event": {
+    "id": "hongseong_2023",
+    "split": "validation",
+    "start_utc": "2023-04-02T02:00:00Z",
+    "hours": 12,
+    "bbox": [
+      126.2,
+      36.2,
+      127.0,
+      36.9
+    ],
+    "source": "https://www.opm.go.kr/opm/news/press-release.do?articleNo=153083&mode=view"
+  },
+  "native_grid_crs": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"Unknown based on WGS 84 ellipsoid\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",7030]]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Lambert Conic Conformal (2SP)\",ID[\"EPSG\",9802]],PARAMETER[\"Latitude of false origin\",38,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8821]],PARAMETER[\"Longitude of false origin\",126,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8822]],PARAMETER[\"Latitude of 1st standard parallel\",30,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8823]],PARAMETER[\"Latitude of 2nd standard parallel\",60,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8824]],PARAMETER[\"Easting at false origin\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8826]],PARAMETER[\"Northing at false origin\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8827]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+  "native_grid_shape": [
+    38,
+    35
+  ],
+  "source_frames": 120,
+  "source_manifest_sha256": "84234a7918bc0945a6d86ba58022ad43bc892c8509995dc489c25d783048cc4e",
+  "input_availability_note": "\uacfc\uac70 \uc7ac\ucc98\ub9ac FF\ub97c \uc4f0\ub294 hindcast. \uad00\uce21 \uc2dc\uac01+15\ubd84\uc740 \uc2e4\ud5d8 \uac00\uc815\uc774\uba70 \ub2f9\uc2dc \uacf5\uac1c/\uc218\uc2e0 \uc2dc\uac01\uc774 \uc544\ub2d8. \uc6d0\ubcf8 \uc81c\uc791 \uc2dc\uac01\uc740 \ubcc4\ub3c4\ub85c \uae30\ub85d\ud558\uba70 \uc2e4\uc2dc\uac04 \uc131\ub2a5\uc744 \uc8fc\uc7a5\ud558\uc9c0 \uc54a\uc74c"
+}

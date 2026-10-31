@@ -65,3 +65,56 @@ def test_final_event_needs_unchanged_frozen_model(tmp_path):
     model.write_bytes(b"changed-model")
     with pytest.raises(ValueError, match="바뀌었습니다"):
         verify_release(receipt, cfg)
+
+
+def test_recent_fire_keeps_history_with_age_and_rejects_future_frames():
+    from bonghwa_training.goes_build import recent_fire_features
+
+    state = np.array([[[1, 0, 0]], [[-1, 0, 1]]], dtype=np.int8)
+    grid = {"east_m": np.array([[0.0, 2000.0, 4000.0]]), "north_m": np.zeros((1, 3))}
+    indices = (np.array([0]), np.array([1]))
+    result = recent_fire_features(state, np.array([0, 600]), 900, grid, indices)
+    assert result["distance_recent_fire_60m_km"][0] == 2
+    assert result["nearest_recent_fire_60m_age_minutes"][0] in (5, 15)
+    assert np.isnan(result["own_last_fire_60m_age_minutes"][0])
+    with pytest.raises(ValueError, match="미래"):
+        recent_fire_features(state, np.array([0, 1200]), 900, grid, indices)
+
+
+def test_unobservable_event_is_zero_rows_not_fabricated_negatives(tmp_path, monkeypatch):
+    import pyarrow.parquet as pq
+
+    from bonghwa_training.goes_build import build_event
+
+    event = {"id": "empty", "start_utc": "1970-01-01T00:00:00Z", "hours": 1}
+    (tmp_path / "empty").mkdir()
+    (tmp_path / "empty/manifest.json").write_text("{}")
+    out = tmp_path / "output"
+    out.mkdir()
+    states = np.zeros((12, 1, 1), dtype=np.int8)
+    times = np.arange(12) * 600
+    grid = {
+        "latitude": np.array([[37.0]]),
+        "longitude": np.array([[129.0]]),
+        "east_m": np.array([[0.0]]),
+        "north_m": np.array([[0.0]]),
+    }
+    monkeypatch.setattr(
+        "bonghwa_training.goes_build.read_event",
+        lambda *args: (
+            states,
+            states.astype(float),
+            states.astype(float),
+            times,
+            times,
+            times + 60,
+            grid,
+            "fixture",
+        ),
+    )
+    report = build_event(
+        tmp_path, out, event, {"horizons_hours": [1, 3, 6], "input_interval_minutes": 20}
+    )
+    assert report["rows"] == 0 and report["positives"] == 0
+    assert "unusable_reason" in report
+    assert pq.read_table(out / "empty.parquet").num_rows == 0

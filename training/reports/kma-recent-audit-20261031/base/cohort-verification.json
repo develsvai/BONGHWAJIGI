@@ -1,0 +1,29 @@
+{
+  "same_cohort_and_original_features": true,
+  "events": {
+    "andong_2020": {
+      "rows": 11540,
+      "cohort_sha256": "bb11d4a195f3bbcf74a13d5e9476731c2edd06d61849a5538e7bf1e745a1a3ca"
+    },
+    "andong_2021": {
+      "rows": 91892,
+      "cohort_sha256": "e0a3e69ab7070ace59609ba8a50fba18dd66e654380633088bd8909178b95096"
+    },
+    "hapcheon_2022": {
+      "rows": 6657,
+      "cohort_sha256": "6d8c5baf60823203b149ae5c075b64a0de4c781bb0e2c038313c14ae478d5d36"
+    },
+    "uljin_2022": {
+      "rows": 25406,
+      "cohort_sha256": "d1b601c0937359e844e6a7bae8a24806505420a8705bce05101ca96c69184003"
+    },
+    "gangneung_2023": {
+      "rows": 390,
+      "cohort_sha256": "4178b187b1d70590a7595c1a164835ada18b632d780034fb37c0e02ecc80b0e5"
+    },
+    "hongseong_2023": {
+      "rows": 65386,
+      "cohort_sha256": "4af205a007f8d1513238fa73d1a10958bc11776ba7c2480e1792a3dc6fdeb287"
+    }
+  }
+}
