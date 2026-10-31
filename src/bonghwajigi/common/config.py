@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 from typing import Literal
 
@@ -6,7 +7,9 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(env_prefix="BONGHWA_", env_file=".env", extra="ignore")
+    model_config = SettingsConfigDict(
+        env_prefix="BONGHWA_", env_file=os.environ.get("BONGHWA_ENV_FILE", ".env"), extra="ignore"
+    )
 
     environment: Literal["local", "test", "staging", "production"] = "local"
     mode: Literal["live", "simulation"] = "simulation"
@@ -22,6 +25,14 @@ class Settings(BaseSettings):
     qwen_revision: str | None = None
     embedding_revision: str | None = None
     gpu_lock_path: Path = Path.home() / ".cache/bonghwajigi/gpu.lock"
+    analysis_enabled: bool = False
+    embedding_service_token: SecretStr | None = None
+    embedding_timeout_seconds: float = Field(default=30, ge=1, le=120)
+    retrieval_top_k: int = Field(default=5, ge=1, le=10)
+    web_search_enabled: bool = True
+    web_search_max_results: int = Field(default=5, ge=1, le=10)
+    web_search_lookback_days: int = Field(default=7, ge=1, le=365)
+    outbox_redelivery_seconds: int = Field(default=180, ge=10, le=3600)
 
     @model_validator(mode="after")
     def check_token_budget(self) -> "Settings":

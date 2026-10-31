@@ -1,3 +1,5 @@
+from contextlib import asynccontextmanager
+
 from fastapi import Depends, FastAPI, HTTPException
 
 from bonghwajigi.common.config import Settings
@@ -7,9 +9,22 @@ from bonghwajigi.contracts.scenarios import ScenarioEvent
 
 
 def create_app() -> FastAPI:
-    app = FastAPI(title="봉화지기 일반 서버 · scaffold", version="0.1.0")
+    @asynccontextmanager
+    async def lifespan(app):
+        try:
+            yield
+        finally:
+            if hasattr(app.state, "sessions"):
+                app.state.sessions.kw["bind"].dispose()
+
+    app = FastAPI(title="봉화지기 일반 서버", version="0.1.0", lifespan=lifespan)
     app.state.settings = Settings()
     app.include_router(health_router("api", ("database", "broker", "application")))
+    if app.state.settings.analysis_enabled:
+        from bonghwajigi.api.analysis import attach_analysis
+
+        attach_analysis(app, app.state.settings)
+        return app
 
     @app.post(
         "/internal/v1/scenario-events",

@@ -8,6 +8,8 @@
 
 기본 로컬 실행은 프로세스 상태 확인과 미준비 인터페이스를 제공합니다. 실제 수집·사용자 API·정책·예측·푸시는 아직 구현되지 않았습니다. GPU 서버에는 두 Qwen의 실제 서빙과 XGBoost CUDA 실행 검증을 완료했습니다. [모델 사용법과 결과](docs/V2/delivery/gpu-model-readiness.md)를 따릅니다. 모델 가중치나 GPU 라이브러리는 아래 CPU 개발 설치에 포함하지 않습니다.
 
+분석 기능을 활성화하면 **시나리오 수신 → DB/outbox → Redis 분석 큐 → 인터넷 뉴스 검색·GPU 임베딩 → pgvector 검색 → Qwen 전달 직전 자료**까지 실행할 수 있습니다. Qwen 생성·사건 통합은 호출하지 않습니다. 별도 설정과 실행 방법은 [분석·검색 흐름](docs/V2/delivery/analysis-retrieval-flow.md)을 따릅니다.
+
 ## 로컬 시작
 
 Python 3.12와 uv를 사용합니다. 프로젝트 루트에서 실행합니다.

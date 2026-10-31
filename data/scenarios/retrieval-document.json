@@ -1,0 +1,19 @@
+{
+  "mode": "simulation",
+  "scenario_id": "wildfire-flow-demo",
+  "document_id": "stored-document-demo",
+  "revision": 1,
+  "disaster_type": "wildfire",
+  "origin": "synthetic",
+  "source_kind": "stored_document",
+  "text": "[합성 시연 자료] 관측 문서의 출처와 발표 시각을 확인해 자료를 통합하는 예제입니다. 실제 행동 지침이 아닙니다.",
+  "source": {
+    "title": "합성 검색 자료",
+    "url": "https://example.invalid/stored-document",
+    "published_at": "2026-10-31T08:00:00Z",
+    "collected_at": "2026-10-31T08:30:00Z",
+    "verified": false
+  },
+  "valid_from": "2026-10-31T08:00:00Z",
+  "valid_until": null
+}

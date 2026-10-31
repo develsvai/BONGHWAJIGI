@@ -312,6 +312,24 @@
       "size_bytes": 9590
     },
     {
+      "id": "docs/V2/delivery/analysis-retrieval-evidence.json",
+      "title": "{",
+      "path": "docs/V2/delivery/analysis-retrieval-evidence.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:14:46+09:00",
+      "size_bytes": 2964
+    },
+    {
+      "id": "docs/V2/delivery/analysis-retrieval-flow.md",
+      "title": "시나리오 입력부터 분석·검색과 Qwen 전달 직전까지",
+      "path": "docs/V2/delivery/analysis-retrieval-flow.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:17:26+09:00",
+      "size_bytes": 10495
+    },
+    {
       "id": "docs/V2/delivery/api-handoff.md",
       "title": "앱팀 전달서 — 화면별 API 연동",
       "path": "docs/V2/delivery/api-handoff.md",
@@ -434,8 +452,8 @@
       "path": "docs/V2/delivery/implementation-stack.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T18:14:34+09:00",
-      "size_bytes": 19714
+      "updated_at": "2026-10-31T19:17:26+09:00",
+      "size_bytes": 20034
     },
     {
       "id": "docs/V2/delivery/project-scaffold.md",
@@ -443,8 +461,8 @@
       "path": "docs/V2/delivery/project-scaffold.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T18:13:14+09:00",
-      "size_bytes": 10790
+      "updated_at": "2026-10-31T19:17:26+09:00",
+      "size_bytes": 11198
     },
     {
       "id": "docs/V2/delivery/ssh-access.md",

@@ -1,0 +1,6 @@
+[2026-10-31T09:51:47+00:00] agent=foreground task=task-20261031-095141-qwen-9e2979ea Foreground task session started.
+사용자 인터넷 검색 추가 선택 반영. 시나리오 API·DB/outbox·분석 큐·임베딩/뉴스/pgvector 검색·Qwen 직전 결과 구현.
+실제 PostgreSQL/Redis/Celery 및 SSH 터널의 기존 GPU 임베딩과 인터넷 뉴스 연결 통과. 19:13 KST 뉴스5건·근거5개·ready_for_qwen, 중복 동일job, 생성 미호출.
+pytest27 통과, Ruff/format 통과, 기존 API25/67/48/4 검사 통과, migration 적용·check, Compose 구성·시나리오 검사 통과.
+별도 XGBoost Task와 training/ 변경은 보존하고 자신의 metadata·공용 이벤트 일부만 커밋한다.
+최종 Task/workspace strict OK(6 Jobs/35 Tasks). 다른 작업은 별도 커밋되었으며 이번 작업 파일만 스테이징한다.

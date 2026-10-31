@@ -11,6 +11,12 @@ x-runtime: &runtime
     BONGHWA_MODE: simulation
     BONGHWA_DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-bonghwajigi}:${POSTGRES_PASSWORD:?로컬 .env에 POSTGRES_PASSWORD를 설정하세요}@postgres:5432/${POSTGRES_DB:-bonghwajigi}
     BONGHWA_BROKER_URL: redis://redis:6379/0
+    BONGHWA_ANALYSIS_ENABLED: ${BONGHWA_ANALYSIS_ENABLED:-false}
+    BONGHWA_SERVICE_TOKEN: ${BONGHWA_SERVICE_TOKEN:-}
+    BONGHWA_GPU_BASE_URL: ${BONGHWA_GPU_BASE_URL:-http://gpu-api.invalid}
+    BONGHWA_EMBEDDING_SERVICE_TOKEN: ${BONGHWA_EMBEDDING_SERVICE_TOKEN:-}
+    BONGHWA_EMBEDDING_REVISION: ${BONGHWA_EMBEDDING_REVISION:-}
+    BONGHWA_WEB_SEARCH_ENABLED: ${BONGHWA_WEB_SEARCH_ENABLED:-true}
   depends_on:
     postgres:
       condition: service_healthy
@@ -57,6 +63,10 @@ services:
   analysis:
     <<: *runtime
     command: ["celery", "-A", "bonghwajigi.workers.analysis:app", "worker", "-Q", "analysis", "--concurrency=1", "--loglevel=INFO"]
+  analysis-outbox:
+    <<: *runtime
+    profiles: ["analysis"]
+    command: ["python", "-m", "bonghwajigi.workers.outbox"]
   delivery:
     <<: *runtime
     command: ["celery", "-A", "bonghwajigi.workers.delivery:app", "worker", "-Q", "delivery", "--concurrency=1", "--loglevel=INFO"]

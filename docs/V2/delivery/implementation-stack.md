@@ -8,6 +8,8 @@
 
 **GPU 준비 후속 결과:** 같은 날 별도 Task에서 GPU 서버의 두 Qwen 모델을 실제 로딩하고 localhost 인증 API로 생성·임베딩을 검증했다. 별도 ML 환경에서 XGBoost 합성 CUDA 학습·저장·CPU 재로딩도 통과했다. 설치 버전·리비전·서비스 사용법과 측정 한계는 [GPU 준비 결과](gpu-model-readiness.md)를 따른다. 이 결과로 산불 실모델이나 정책 품질을 완료 처리하지 않는다.
 
+**분석 흐름 후속 구현:** 시나리오 수신·DB/outbox·Redis 분석 큐·인터넷 뉴스 및 저장 자료의 임베딩/pgvector 검색을 연결했다. 실제 생성 모델을 호출하지 않고 Qwen 전달 자료에서 멈춘다. [현재 실행 방법과 검증](analysis-retrieval-flow.md)을 따른다.
+
 ## 1. 결정에 사용한 현재 상태
 
 - 작업 시작 시 `develop`의 `bbf6233`은 원격 `develop`과 같았고 미커밋 변경은 없었다. 원격 `main`에는 그 이전 develop 병합 이력이 있으며 이번 Loom 재고정 커밋은 develop에 있었다.
