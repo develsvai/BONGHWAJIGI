@@ -85,6 +85,12 @@ Samsung SM-G996N에 같은 서명의0.3.1을 업데이트 설치했다. 앱 담�
 
 API 계약 SHA256은 기존과 같은 `323536c7322fcfea70d0853633731de09b19a37479370769a41e7a9e42b72062`, 지도 앱 package-lock SHA256은 `5197246c8a946b42d613b36f0bc887ea2cb844d767378fb9c3baf5433934e419`다. 앱 QA 커밋과 실행 소스의 `src`, `app`, 앱 설정·빌드 스크립트·package/lock에는 차이가 없으며 실제 APK 파일 SHA256도 지도 빌드 manifest와 일치했다. 이후 메인 커밋은 이 재현 결과와 Loom 완료 기록을 추가한다.
 
+## 새 checkout 재현 검증 — 0.3.1
+
+메인 `08a381de06c6371337a7dc1e66aa166fe28e0383`을 정상 push한 뒤 실제 GitHub 원격을 새 디렉터리에 `--recurse-submodules --single-branch --branch develop`으로 clone했다. 앱은 최종 QA와 Loom 완료를 포함하는 `f54cae1c753054de0a8f2eb76166807019db8db4`로 자동 초기화됐고 새 메인·앱 작업 트리 모두 clean이었다. 원본과 새 clone의 `python3 tools/check_mobile_source.py`가 모두 통과했다.
+
+API 계약 SHA256은 `e9075d620d9d916d512328b380e35c9073f9e681fd8236a86cc083787a735671`, package-lock SHA256은 `8d12887f658e24f21ff7d27b85c62e1fd5ec94270923a09b638477b9cf68285d`다. 최종 pin과 실행 소스 `c0b87ea2bab3ba769ebe3bfbbc91e140d0c12f0e`의 실행 코드·설정·빌드 스크립트·package/lock은 동일하다. 실제 APK 66,088,154 bytes의 SHA256은 `c30826365bc023074bdfdc86372e47e8ae780a431ed3ac2caadc5856d79312fe`로 빌드 manifest와 일치했다. 이 재귀 clone 검사는 소스 재현 검사이며 새 APK를 다시 빌드한 검사는 아니다. 이후 메인 커밋은 이 결과와 Loom 완료 기록만 추가한다.
+
 ## 다음 앱 버전 고정
 
 앱 변경은 앱 저장소에서 구현·검증·커밋·원격 push를 끝낸 뒤 새 SHA를 메인 저장소에 반영한다. 서브모듈의 로컬 미커밋 내용을 메인 커밋이 저장해 주지 않는다.

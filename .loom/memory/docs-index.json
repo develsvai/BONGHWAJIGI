@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-31T19:22:45+00:00",
+  "generated_at": "2026-10-31T19:25:43+00:00",
   "docs_paths": [
     "docs"
   ],
@@ -560,8 +560,8 @@
       "path": "docs/V2/delivery/mobile-submodule-deployment.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-11-01T04:22:09+09:00",
-      "size_bytes": 10955
+      "updated_at": "2026-11-01T04:25:42+09:00",
+      "size_bytes": 12097
     },
     {
       "id": "docs/V2/delivery/mvp-app-api.md",
