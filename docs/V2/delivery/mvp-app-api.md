@@ -1,6 +1,6 @@
 # 산불 MVP 앱 API 실행 계약
 
-2026-10-31, Loom Task `task-20261031-132925-api-181c0498`. 사용자 확정 단계는 **경고·대피·위급**이며 [정책 기준](response-policy.md)을 따른다. 서버 코드는 구현했으며 실제 사설망 배포 결과와 주소는 후속 서버 배포 Task에서 기록한다. 앱 저장소는 변경하지 않았다.
+2026-10-31, Loom Task `task-20261031-132925-api-181c0498`. 사용자 확정 단계는 **경고·대피·위급**이며 [정책 기준](response-policy.md)을 따른다. 실제 사설망 접속·계정 발급·배포 결과는 [서버 운영 문서](mvp-server-runbook.md)를 따른다. 앱 저장소는 변경하지 않았다.
 
 ## 버전과 인계
 
@@ -61,9 +61,10 @@ JWT는 고정 HS256, 별도 서명키, issuer/audience/만료/발급·유효 시
 일반 서버의 비밀 설정이 준비된 뒤 관리자가 실행한다. 출력 파일은 Git 밖에 두고 토큰을 로그에 출력하지 않는다.
 
 ```sh
-BONGHWA_ENV_FILE=/home1/ncloud/.config/bonghwajigi/general.env \
-  .venv/bin/python tools/mvp_accounts.py --scenario demo --user user-a \
-  --mobility independent --output /home1/ncloud/.config/bonghwajigi/user-a.json
+cd /home1/ncloud/bonghwajigi
+sudo docker compose --env-file /home1/ncloud/.config/bonghwajigi/general.env \
+  -f deploy/compose/mvp.yaml exec -T api python tools/mvp_accounts.py \
+  --scenario demo --user user-a --mobility independent --output /accounts/user-a.json
 ```
 
 사용자 토큰은 기본 24시간 후 만료된다. 계정 파일을 안전하게 앱 개발 환경에 전달하고 내부 토큰·서명키는 전달하지 않는다. 원격 배포 도구의 실제 경로와 사용법은 서버 문서를 따른다.

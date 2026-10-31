@@ -1,0 +1,641 @@
+{
+  "설명": "일반 서버에서 합성 시연·실제 큐/API·GPU 모델 연결을 검증한 결과. 실제 재난/실제 단말 푸시/실제 예측 결과가 아니다.",
+  "verified_at": "2026-10-31T14:22:14.637000+00:00",
+  "runtime_commit": "654a9ef",
+  "host": "inno-server-011",
+  "normal_replay": {
+    "scenario_id": "mvp-demo-083edaeffc294b79",
+    "mode": "simulation",
+    "verified_at": "2026-10-31T14:17:17.360503+00:00",
+    "origin": "합성 시연이며 실제 재난·공식 발령·실제 단말 수신 결과가 아님",
+    "steps": [
+      {
+        "step": "H2에서 이동 여건별 경고와 조기 대피",
+        "users": {
+          "independent": {
+            "response_id": "d45f900a-0491-488d-a4ac-490e2a8e44a7",
+            "revision": 1,
+            "level": "prepare",
+            "label": "경고",
+            "actions": [
+              "공식 대피 안내와 재난문자를 확인하고 대피할 장소를 확인하세요.",
+              "즉시 이동할 수 있도록 비상용품과 가방을 준비하세요."
+            ],
+            "prediction": {
+              "status": "unavailable",
+              "probability": null,
+              "used_for_response_level": false,
+              "reason": "MODEL_CONNECTION_EXCLUDED"
+            }
+          },
+          "slow": {
+            "response_id": "ce350015-8954-4e11-8442-d10350052de1",
+            "revision": 1,
+            "level": "act",
+            "label": "대피",
+            "actions": [
+              "관계자의 대피 안내에 따라 안내된 장소로 즉시 이동하세요.",
+              "혼자 이동하기 어렵다면 주변 사람이나 조력자에게 도움을 요청해 함께 이동하세요."
+            ],
+            "prediction": {
+              "status": "unavailable",
+              "probability": null,
+              "used_for_response_level": false,
+              "reason": "MODEL_CONNECTION_EXCLUDED"
+            }
+          },
+          "assistance": {
+            "response_id": "283b63f9-3678-4d3b-9024-5a332f0392c1",
+            "revision": 1,
+            "level": "act",
+            "label": "대피",
+            "actions": [
+              "관계자의 대피 안내에 따라 안내된 장소로 즉시 이동하세요.",
+              "혼자 이동하기 어렵다면 주변 사람이나 조력자에게 도움을 요청해 함께 이동하세요."
+            ],
+            "prediction": {
+              "status": "unavailable",
+              "probability": null,
+              "used_for_response_level": false,
+              "reason": "MODEL_CONNECTION_EXCLUDED"
+            }
+          }
+        }
+      },
+      {
+        "step": "긴급 큐 대피 경보: 독립·느린 이동은 대피, 조력자 없는 사용자는 위급",
+        "users": {
+          "independent": {
+            "response_id": "d45f900a-0491-488d-a4ac-490e2a8e44a7",
+            "revision": 2,
+            "level": "act",
+            "label": "대피",
+            "actions": [
+              "관계자의 대피 안내에 따라 안내된 장소로 즉시 이동하세요."
+            ],
+            "prediction": {
+              "status": "unavailable",
+              "probability": null,
+              "used_for_response_level": false,
+              "reason": "MODEL_CONNECTION_EXCLUDED"
+            }
+          },
+          "slow": {
+            "response_id": "ce350015-8954-4e11-8442-d10350052de1",
+            "revision": 2,
+            "level": "act",
+            "label": "대피",
+            "actions": [
+              "관계자의 대피 안내에 따라 안내된 장소로 즉시 이동하세요.",
+              "혼자 이동하기 어렵다면 주변 사람이나 조력자에게 도움을 요청해 함께 이동하세요."
+            ],
+            "prediction": {
+              "status": "unavailable",
+              "probability": null,
+              "used_for_response_level": false,
+              "reason": "MODEL_CONNECTION_EXCLUDED"
+            }
+          },
+          "assistance": {
+            "response_id": "283b63f9-3678-4d3b-9024-5a332f0392c1",
+            "revision": 2,
+            "level": "request_assistance",
+            "label": "위급",
+            "actions": [
+              "119에 연락해 현재 위치와 대피할 수 없는 상황을 알리고 도움을 요청하세요.",
+              "알고 있는 주소나 주변 지형지물, 함께 있는 인원과 이동에 필요한 도움을 알리세요.",
+              "구조기관의 안내를 따르세요. 안내를 받는 동안에도 신고 연결 수단을 사용할 수 있습니다."
+            ],
+            "prediction": {
+              "status": "unavailable",
+              "probability": null,
+              "used_for_response_level": false,
+              "reason": "MODEL_CONNECTION_EXCLUDED"
+            }
+          }
+        }
+      },
+      {
+        "step": "조력자 현장 도착과 이용 가능한 경로 확인 후 대피",
+        "users": {
+          "assistance": {
+            "response_id": "283b63f9-3678-4d3b-9024-5a332f0392c1",
+            "revision": 3,
+            "level": "act",
+            "label": "대피",
+            "actions": [
+              "관계자의 대피 안내에 따라 안내된 장소로 즉시 이동하세요.",
+              "혼자 이동하기 어렵다면 주변 사람이나 조력자에게 도움을 요청해 함께 이동하세요."
+            ],
+            "prediction": {
+              "status": "unavailable",
+              "probability": null,
+              "used_for_response_level": false,
+              "reason": "MODEL_CONNECTION_EXCLUDED"
+            }
+          }
+        }
+      },
+      {
+        "step": "이용 가능한 모든 대피 경로 차단 시 위급",
+        "users": {
+          "slow": {
+            "response_id": "ce350015-8954-4e11-8442-d10350052de1",
+            "revision": 3,
+            "level": "request_assistance",
+            "label": "위급",
+            "actions": [
+              "119에 연락해 현재 위치와 대피할 수 없는 상황을 알리고 도움을 요청하세요.",
+              "알고 있는 주소나 주변 지형지물, 함께 있는 인원과 이동에 필요한 도움을 알리세요.",
+              "구조기관의 안내를 따르세요. 안내를 받는 동안에도 신고 연결 수단을 사용할 수 있습니다."
+            ],
+            "prediction": {
+              "status": "unavailable",
+              "probability": null,
+              "used_for_response_level": false,
+              "reason": "MODEL_CONNECTION_EXCLUDED"
+            }
+          }
+        }
+      },
+      {
+        "step": "경보 해제 후에도 확인 없는 자동 하향 방지",
+        "users": {
+          "independent": {
+            "response_id": "d45f900a-0491-488d-a4ac-490e2a8e44a7",
+            "revision": 4,
+            "level": "act",
+            "label": "대피",
+            "actions": [
+              "관계자의 대피 안내에 따라 안내된 장소로 즉시 이동하세요."
+            ],
+            "prediction": {
+              "status": "unavailable",
+              "probability": null,
+              "used_for_response_level": false,
+              "reason": "MODEL_CONNECTION_EXCLUDED"
+            }
+          }
+        }
+      },
+      {
+        "step": "새 위험 감소 자료와 사용자 확인 후 경고",
+        "users": {
+          "independent": {
+            "response_id": "d45f900a-0491-488d-a4ac-490e2a8e44a7",
+            "revision": 5,
+            "level": "prepare",
+            "label": "경고",
+            "actions": [
+              "공식 대피 안내와 재난문자를 확인하고 대피할 장소를 확인하세요.",
+              "즉시 이동할 수 있도록 비상용품과 가방을 준비하세요."
+            ],
+            "prediction": {
+              "status": "unavailable",
+              "probability": null,
+              "used_for_response_level": false,
+              "reason": "MODEL_CONNECTION_EXCLUDED"
+            }
+          }
+        }
+      },
+      {
+        "step": "새 위치 입력 후 정책 재계산",
+        "users": {
+          "independent": {
+            "response_id": "d45f900a-0491-488d-a4ac-490e2a8e44a7",
+            "revision": 7,
+            "level": "prepare",
+            "label": "경고",
+            "actions": [
+              "공식 대피 안내와 재난문자를 확인하고 대피할 장소를 확인하세요.",
+              "즉시 이동할 수 있도록 비상용품과 가방을 준비하세요."
+            ],
+            "prediction": {
+              "status": "unavailable",
+              "probability": null,
+              "used_for_response_level": false,
+              "reason": "MODEL_CONNECTION_EXCLUDED"
+            }
+          }
+        }
+      }
+    ],
+    "deliveries": {
+      "independent": {
+        "simulated": 6
+      },
+      "slow": {
+        "simulated": 4,
+        "superseded": 1
+      },
+      "assistance": {
+        "simulated": 5,
+        "superseded": 1
+      }
+    },
+    "checks": {
+      "urgent_without_qwen": true,
+      "idempotent_event_acceptance": true,
+      "official_correction_and_cancel": true,
+      "user_owned_resources": true,
+      "cursor_updates": true,
+      "location_delete_and_restore": true,
+      "client_reported_receipt": true,
+      "real_push": false,
+      "actual_prediction_connected": false
+    },
+    "restart_probe": {
+      "user": "independent",
+      "response_id": "d45f900a-0491-488d-a4ac-490e2a8e44a7",
+      "revision": 7
+    }
+  },
+  "gpu_disconnected_replay": {
+    "scenario_id": "mvp-demo-b1a18930a14e44ed",
+    "mode": "simulation",
+    "verified_at": "2026-10-31T14:20:04.796126+00:00",
+    "origin": "합성 시연이며 실제 재난·공식 발령·실제 단말 수신 결과가 아님",
+    "steps": [
+      {
+        "step": "H2에서 이동 여건별 경고와 조기 대피",
+        "users": {
+          "independent": {
+            "response_id": "775fb83a-752a-44dc-98de-9339e382fa7a",
+            "revision": 1,
+            "level": "prepare",
+            "label": "경고",
+            "actions": [
+              "공식 대피 안내와 재난문자를 확인하고 대피할 장소를 확인하세요.",
+              "즉시 이동할 수 있도록 비상용품과 가방을 준비하세요."
+            ],
+            "prediction": {
+              "status": "unavailable",
+              "probability": null,
+              "used_for_response_level": false,
+              "reason": "MODEL_CONNECTION_EXCLUDED"
+            }
+          },
+          "slow": {
+            "response_id": "8414c0db-62de-40d8-a074-308e725551cc",
+            "revision": 1,
+            "level": "act",
+            "label": "대피",
+            "actions": [
+              "관계자의 대피 안내에 따라 안내된 장소로 즉시 이동하세요.",
+              "혼자 이동하기 어렵다면 주변 사람이나 조력자에게 도움을 요청해 함께 이동하세요."
+            ],
+            "prediction": {
+              "status": "unavailable",
+              "probability": null,
+              "used_for_response_level": false,
+              "reason": "MODEL_CONNECTION_EXCLUDED"
+            }
+          },
+          "assistance": {
+            "response_id": "aa1be6cc-fb9e-4142-8fe2-75aa48501e61",
+            "revision": 1,
+            "level": "act",
+            "label": "대피",
+            "actions": [
+              "관계자의 대피 안내에 따라 안내된 장소로 즉시 이동하세요.",
+              "혼자 이동하기 어렵다면 주변 사람이나 조력자에게 도움을 요청해 함께 이동하세요."
+            ],
+            "prediction": {
+              "status": "unavailable",
+              "probability": null,
+              "used_for_response_level": false,
+              "reason": "MODEL_CONNECTION_EXCLUDED"
+            }
+          }
+        }
+      },
+      {
+        "step": "긴급 큐 대피 경보: 독립·느린 이동은 대피, 조력자 없는 사용자는 위급",
+        "users": {
+          "independent": {
+            "response_id": "775fb83a-752a-44dc-98de-9339e382fa7a",
+            "revision": 2,
+            "level": "act",
+            "label": "대피",
+            "actions": [
+              "관계자의 대피 안내에 따라 안내된 장소로 즉시 이동하세요."
+            ],
+            "prediction": {
+              "status": "unavailable",
+              "probability": null,
+              "used_for_response_level": false,
+              "reason": "MODEL_CONNECTION_EXCLUDED"
+            }
+          },
+          "slow": {
+            "response_id": "8414c0db-62de-40d8-a074-308e725551cc",
+            "revision": 2,
+            "level": "act",
+            "label": "대피",
+            "actions": [
+              "관계자의 대피 안내에 따라 안내된 장소로 즉시 이동하세요.",
+              "혼자 이동하기 어렵다면 주변 사람이나 조력자에게 도움을 요청해 함께 이동하세요."
+            ],
+            "prediction": {
+              "status": "unavailable",
+              "probability": null,
+              "used_for_response_level": false,
+              "reason": "MODEL_CONNECTION_EXCLUDED"
+            }
+          },
+          "assistance": {
+            "response_id": "aa1be6cc-fb9e-4142-8fe2-75aa48501e61",
+            "revision": 2,
+            "level": "request_assistance",
+            "label": "위급",
+            "actions": [
+              "119에 연락해 현재 위치와 대피할 수 없는 상황을 알리고 도움을 요청하세요.",
+              "알고 있는 주소나 주변 지형지물, 함께 있는 인원과 이동에 필요한 도움을 알리세요.",
+              "구조기관의 안내를 따르세요. 안내를 받는 동안에도 신고 연결 수단을 사용할 수 있습니다."
+            ],
+            "prediction": {
+              "status": "unavailable",
+              "probability": null,
+              "used_for_response_level": false,
+              "reason": "MODEL_CONNECTION_EXCLUDED"
+            }
+          }
+        }
+      },
+      {
+        "step": "조력자 현장 도착과 이용 가능한 경로 확인 후 대피",
+        "users": {
+          "assistance": {
+            "response_id": "aa1be6cc-fb9e-4142-8fe2-75aa48501e61",
+            "revision": 3,
+            "level": "act",
+            "label": "대피",
+            "actions": [
+              "관계자의 대피 안내에 따라 안내된 장소로 즉시 이동하세요.",
+              "혼자 이동하기 어렵다면 주변 사람이나 조력자에게 도움을 요청해 함께 이동하세요."
+            ],
+            "prediction": {
+              "status": "unavailable",
+              "probability": null,
+              "used_for_response_level": false,
+              "reason": "MODEL_CONNECTION_EXCLUDED"
+            }
+          }
+        }
+      },
+      {
+        "step": "이용 가능한 모든 대피 경로 차단 시 위급",
+        "users": {
+          "slow": {
+            "response_id": "8414c0db-62de-40d8-a074-308e725551cc",
+            "revision": 3,
+            "level": "request_assistance",
+            "label": "위급",
+            "actions": [
+              "119에 연락해 현재 위치와 대피할 수 없는 상황을 알리고 도움을 요청하세요.",
+              "알고 있는 주소나 주변 지형지물, 함께 있는 인원과 이동에 필요한 도움을 알리세요.",
+              "구조기관의 안내를 따르세요. 안내를 받는 동안에도 신고 연결 수단을 사용할 수 있습니다."
+            ],
+            "prediction": {
+              "status": "unavailable",
+              "probability": null,
+              "used_for_response_level": false,
+              "reason": "MODEL_CONNECTION_EXCLUDED"
+            }
+          }
+        }
+      },
+      {
+        "step": "경보 해제 후에도 확인 없는 자동 하향 방지",
+        "users": {
+          "independent": {
+            "response_id": "775fb83a-752a-44dc-98de-9339e382fa7a",
+            "revision": 4,
+            "level": "act",
+            "label": "대피",
+            "actions": [
+              "관계자의 대피 안내에 따라 안내된 장소로 즉시 이동하세요."
+            ],
+            "prediction": {
+              "status": "unavailable",
+              "probability": null,
+              "used_for_response_level": false,
+              "reason": "MODEL_CONNECTION_EXCLUDED"
+            }
+          }
+        }
+      },
+      {
+        "step": "새 위험 감소 자료와 사용자 확인 후 경고",
+        "users": {
+          "independent": {
+            "response_id": "775fb83a-752a-44dc-98de-9339e382fa7a",
+            "revision": 5,
+            "level": "prepare",
+            "label": "경고",
+            "actions": [
+              "공식 대피 안내와 재난문자를 확인하고 대피할 장소를 확인하세요.",
+              "즉시 이동할 수 있도록 비상용품과 가방을 준비하세요."
+            ],
+            "prediction": {
+              "status": "unavailable",
+              "probability": null,
+              "used_for_response_level": false,
+              "reason": "MODEL_CONNECTION_EXCLUDED"
+            }
+          }
+        }
+      },
+      {
+        "step": "새 위치 입력 후 정책 재계산",
+        "users": {
+          "independent": {
+            "response_id": "775fb83a-752a-44dc-98de-9339e382fa7a",
+            "revision": 7,
+            "level": "prepare",
+            "label": "경고",
+            "actions": [
+              "공식 대피 안내와 재난문자를 확인하고 대피할 장소를 확인하세요.",
+              "즉시 이동할 수 있도록 비상용품과 가방을 준비하세요."
+            ],
+            "prediction": {
+              "status": "unavailable",
+              "probability": null,
+              "used_for_response_level": false,
+              "reason": "MODEL_CONNECTION_EXCLUDED"
+            }
+          }
+        }
+      }
+    ],
+    "deliveries": {
+      "independent": {
+        "pending": 1,
+        "simulated": 4,
+        "superseded": 1
+      },
+      "slow": {
+        "simulated": 3,
+        "superseded": 2
+      },
+      "assistance": {
+        "simulated": 4,
+        "superseded": 2
+      }
+    },
+    "checks": {
+      "urgent_without_qwen": true,
+      "idempotent_event_acceptance": true,
+      "official_correction_and_cancel": true,
+      "user_owned_resources": true,
+      "cursor_updates": true,
+      "location_delete_and_restore": true,
+      "client_reported_receipt": true,
+      "real_push": false,
+      "actual_prediction_connected": false
+    },
+    "restart_probe": {
+      "user": "independent",
+      "response_id": "775fb83a-752a-44dc-98de-9339e382fa7a",
+      "revision": 7
+    }
+  },
+  "analysis": {
+    "scenario_id": "mvp-analysis-42fedb0cc43d4ebb",
+    "origin": "합성 관측에 실제 웹 검색 결과를 추가한 모델 통합 점검",
+    "document_status": "indexed",
+    "embedding": {
+      "model": "Qwen/Qwen3-Embedding-0.6B",
+      "revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+      "dimensions": 1024
+    },
+    "web_search": {
+      "provider": "google_news_rss",
+      "query": "산불 산불 after:2026-10-24 before:2026-11-01",
+      "searched_at": "2026-10-31T14:17:35.426027+00:00",
+      "status": "ok",
+      "result_count": 5
+    },
+    "retrieved_evidence_count": 5,
+    "integration_status": "complete",
+    "generation": {
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "input_tokens": 876,
+      "output_tokens": 257,
+      "elapsed_ms": 10355.72
+    },
+    "note": "모델 요약은 정책 승인이나 실제 재난 발령 판단이 아니다. 현재 단계 결정은 검토된 고정 규칙만 사용한다."
+  },
+  "ssh_restrictions": {
+    "source_general_server_only": true,
+    "allowed_destination": "127.0.0.1:8001",
+    "other_port_denied_verified": true,
+    "remote_forward_denied_verified": true,
+    "arbitrary_command_denied_verified": true,
+    "host_key_pinned": true
+  },
+  "restart": {
+    "kind": "전체 일반 서버 Compose 정지/재시작, 볼륨 삭제 없음",
+    "before": {
+      "counts": {
+        "app_accounts": 3,
+        "policy_entities": 30,
+        "policy_projections": 3,
+        "deliveries": 17,
+        "user_changes": 36,
+        "analysis_jobs": 3
+      },
+      "entity_sha256": "dc3326a828c9676d05cafdb309cff2f655bf53ce52f1b27b829125550206a995",
+      "migration": "bde1925b1429",
+      "readiness": {
+        "service": "api",
+        "status": "ready",
+        "stage": "mvp_simulation",
+        "checks": {
+          "database": "connected",
+          "broker": "connected",
+          "application": "simulation_ready",
+          "prediction": "excluded",
+          "gpu": "optional_not_in_readiness"
+        }
+      },
+      "response": {
+        "id": "775fb83a-752a-44dc-98de-9339e382fa7a",
+        "revision": 7,
+        "label": "경고"
+      },
+      "openapi": {
+        "version": "0.2.0-mvp",
+        "paths": 21,
+        "operations": 28
+      }
+    },
+    "after": {
+      "counts": {
+        "app_accounts": 3,
+        "policy_entities": 30,
+        "policy_projections": 3,
+        "deliveries": 17,
+        "user_changes": 36,
+        "analysis_jobs": 3
+      },
+      "entity_sha256": "dc3326a828c9676d05cafdb309cff2f655bf53ce52f1b27b829125550206a995",
+      "migration": "bde1925b1429",
+      "readiness": {
+        "service": "api",
+        "status": "ready",
+        "stage": "mvp_simulation",
+        "checks": {
+          "database": "connected",
+          "broker": "connected",
+          "application": "simulation_ready",
+          "prediction": "excluded",
+          "gpu": "optional_not_in_readiness"
+        }
+      },
+      "response": {
+        "id": "775fb83a-752a-44dc-98de-9339e382fa7a",
+        "revision": 7,
+        "label": "경고"
+      },
+      "openapi": {
+        "version": "0.2.0-mvp",
+        "paths": 21,
+        "operations": 28
+      }
+    },
+    "entities_and_counts_preserved": true
+  },
+  "limits": [
+    "Firebase 미준비: 발신은 모의 전송",
+    "HTTPS/물리 단말 접속 미검증",
+    "실제 예측 모델 연결 제외",
+    "실제 K8s 수집·3D·서버 음성 제외",
+    "위치·통제 경로는 합성 시연 입력이며 실제 안전 경로가 아님"
+  ],
+  "private_network_probe": {
+    "path": "개발 컴퓨터 → SSH 사설망 → 일반 서버 loopback API",
+    "readiness_http": 200,
+    "unauthenticated_home_http": 401,
+    "openapi_version": "0.2.0-mvp",
+    "physical_device_verified": false
+  },
+  "after_restart_delivery_check": {
+    "durable_status": {
+      "deliveries": {
+        "superseded": 5,
+        "simulated": 12
+      },
+      "analysis_jobs": {
+        "complete": 3
+      }
+    },
+    "queue_lengths": {
+      "urgent": 0,
+      "analysis": 0,
+      "delivery": 0
+    }
+  }
+}

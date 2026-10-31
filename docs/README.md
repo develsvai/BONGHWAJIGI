@@ -2,10 +2,12 @@
 
 ## 현재 앱팀 전달 패키지 — 2026-10-31
 
+- [현재 실행 API 0.2.0-mvp](V2/delivery/mvp-app-api.md) · [실행 OpenAPI](V2/delivery/api/mvp-openapi.json) · [사설망 서버 접속](V2/delivery/mvp-server-runbook.md).
+- 확정 정책은 [경고·대피·위급 3단계](V2/delivery/response-policy.md)이며 실제 예측 연결·실제 푸시·3D·서버 음성은 제외한다.
 - [앱팀 화면별 인계서](V2/delivery/api-handoff.md): 5개 화면의 API 호출 순서와 필드 연결, 예외 처리.
 - [API 계약](V2/delivery/app-api-contract.md) · [경로별 사용법](V2/delivery/api-reference.md) · [OpenAPI](V2/delivery/api/openapi.yaml).
 - [API Job 재검토](V2/delivery/api-job-review.md): 선행 초안과 최종 계약·실서버 검증의 구분.
-- 현재 설계는 [V2 핵심](V2/01_서비스_핵심_정리.md)을 기준으로 하며, 화면 연결은 [최신 HeoNey 기획서](HeoNey/봉화지기_모바일_화면_기획서.md)를 함께 사용한다. API는 0.1.0 초안이고 미배포다.
+- 현재 설계는 [V2 핵심](V2/01_서비스_핵심_정리.md)을 기준으로 하며, 화면 연결은 [최신 HeoNey 기획서](HeoNey/봉화지기_모바일_화면_기획서.md)를 함께 사용한다. 아래 0.1.0은 이전 화면 초안이며 실제 서버 응답은 현재 실행 계약을 따른다.
 
 아래 내용은 최초 설계 정리의 배경과 V1 문서 안내다.
 
