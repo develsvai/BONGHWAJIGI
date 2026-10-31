@@ -2,9 +2,9 @@
   "id": "task-run-20261031-090010-task-def-20261031-085956-gpu-qwen-xgboost-184ad0-3691e4b2",
   "job_run_id": "job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02",
   "task_definition_id": "task-def-20261031-085956-gpu-qwen-xgboost-184ad0ab",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-10-31T09:00:10+00:00",
-  "updated_at": "2026-10-31T09:00:10+00:00",
+  "updated_at": "2026-10-31T09:15:45+00:00",
   "legacy_task_id": "task-20261031-085956-gpu-qwen-xgboost-9eea12a5",
   "attempt": 1,
   "assigned_agent": "foreground",
@@ -13,13 +13,30 @@
   "lease_expires_at": "",
   "queued_at": "",
   "started_at": "2026-10-31T09:00:10+00:00",
-  "completed_at": "",
+  "completed_at": "2026-10-31T09:15:45+00:00",
   "last_error": "",
-  "commit_refs": [],
-  "branch_name": "",
-  "git_dirty": false,
-  "git_snapshot_captured_at": "",
-  "artifacts": [],
-  "checkpoint_ids": [],
+  "commit_refs": [
+    "5e1979a8ae9096b88b29c586e8f134b330b353e0",
+    "aac9017bbe3c475ab564805ac4b07be5a630f172"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-10-31T09:15:45+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-085956-gpu-qwen-xgboost-9eea12a5/agent-events.jsonl",
+    ".loom/tasks/task-20261031-085956-gpu-qwen-xgboost-9eea12a5/artifacts.json",
+    ".loom/tasks/task-20261031-085956-gpu-qwen-xgboost-9eea12a5/context.md",
+    ".loom/tasks/task-20261031-085956-gpu-qwen-xgboost-9eea12a5/decision.md",
+    ".loom/tasks/task-20261031-085956-gpu-qwen-xgboost-9eea12a5/git-snapshot.json",
+    ".loom/tasks/task-20261031-085956-gpu-qwen-xgboost-9eea12a5/logs.txt",
+    ".loom/tasks/task-20261031-085956-gpu-qwen-xgboost-9eea12a5/previous-results.md",
+    ".loom/tasks/task-20261031-085956-gpu-qwen-xgboost-9eea12a5/prompt.md",
+    ".loom/tasks/task-20261031-085956-gpu-qwen-xgboost-9eea12a5/result.md",
+    ".loom/tasks/task-20261031-085956-gpu-qwen-xgboost-9eea12a5/troubleshooting.md",
+    "docs/V2/delivery/gpu-model-readiness.md"
+  ],
+  "checkpoint_ids": [
+    "checkpoint-20261031-091545-task-completed-gpu-qwen-xgboost-8c516958"
+  ],
   "review_required_reason": ""
 }

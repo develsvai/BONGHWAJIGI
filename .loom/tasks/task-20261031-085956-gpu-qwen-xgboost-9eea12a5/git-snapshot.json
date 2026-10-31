@@ -17,5 +17,17 @@
     ],
     "captured_at": "2026-10-31T09:00:10+00:00"
   },
-  "after": null
+  "after": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "5e1979a8ae9096b88b29c586e8f134b330b353e0",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/job-runs/job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02/job-run.json",
+      ".loom/task-definitions/task-def-20261031-085956-gpu-qwen-xgboost-184ad0ab/task-definition.json"
+    ],
+    "untracked_files": [],
+    "captured_at": "2026-10-31T09:15:45+00:00"
+  }
 }
