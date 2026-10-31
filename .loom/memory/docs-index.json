@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-31T08:59:06+00:00",
+  "generated_at": "2026-10-31T09:14:35+00:00",
   "docs_paths": [
     "docs"
   ],
@@ -411,13 +411,31 @@
       "size_bytes": 15193
     },
     {
+      "id": "docs/V2/delivery/gpu-model-evidence.json",
+      "title": "{",
+      "path": "docs/V2/delivery/gpu-model-evidence.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T18:12:09+09:00",
+      "size_bytes": 2642
+    },
+    {
+      "id": "docs/V2/delivery/gpu-model-readiness.md",
+      "title": "GPU 서버의 세 모델 실행 준비 결과",
+      "path": "docs/V2/delivery/gpu-model-readiness.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T18:13:14+09:00",
+      "size_bytes": 6812
+    },
+    {
       "id": "docs/V2/delivery/implementation-stack.md",
       "title": "산불 MVP 구현 기술 스택 결정",
       "path": "docs/V2/delivery/implementation-stack.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T17:58:03+09:00",
-      "size_bytes": 19243
+      "updated_at": "2026-10-31T18:14:34+09:00",
+      "size_bytes": 19714
     },
     {
       "id": "docs/V2/delivery/project-scaffold.md",
@@ -425,8 +443,8 @@
       "path": "docs/V2/delivery/project-scaffold.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T17:57:38+09:00",
-      "size_bytes": 10416
+      "updated_at": "2026-10-31T18:13:14+09:00",
+      "size_bytes": 10790
     },
     {
       "id": "docs/V2/delivery/ssh-access.md",

@@ -1,0 +1,6 @@
+[2026-10-31T09:00:10+00:00] agent=foreground task=task-20261031-085956-gpu-qwen-xgboost-9eea12a5 Foreground task session started.
+GPU 신규 사용자 프로젝트 설치. uv 공식 설치주소403은 PyPI SHA256 검증 배포로 해결. .venv-gpu/.venv-ml 분리, 두 모델 고정 revision 다운로드.
+실제 모델 생성 845ms, 1024차원 문서 임베딩 124ms·질의32ms, 인증401·토큰초과422·서빙중학습거부 확인. GPU 9134/23034 MiB.
+XGBoost 3.4.1 합성 cuda:0 5000x16/20회 0.319초, 저장 후 CPU 재추론 차이1.19e-7.
+localhost 사용자 서비스 active/enabled·Linger=yes·토큰파일600. 서비스 재시작 및 기존 SSH 종료 후 새 로그인 ready200 확인.
+검증: pytest12 통과, Ruff check/format 통과, 기존 API계약25/67/48/4 통과, GPU Compose config 및 Task/workspace strict(6 Jobs/33 Tasks) 통과, git diff --check 통과.

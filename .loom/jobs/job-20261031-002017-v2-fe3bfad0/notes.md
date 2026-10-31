@@ -94,3 +94,9 @@ A5에서 두 서버 Tailscale 1.104.4 설치와 기존 tailnet 등록 완료. �
 
 - Task: `task-20261031-084830-python-03ca0991`
 - Tags: `사용자지시`, `MVP`, `시나리오`, `GPU후속`
+## 2026-10-31T09:14:34+00:00
+
+사용자 직접 지시에 따른 GPU 준비 완료: /home1/ncloud/bonghwajigi에서 두 Qwen 고정 revision의 실제 생성·1024차원 임베딩 API를 localhost 사용자 서비스로 실행한다. XGBoost 별도 환경의 합성 CUDA 학습·저장·CPU 재로딩 통과. 서빙과 학습은 GPU 잠금으로 분리했다. 운영 경로·사용법·한계는 docs/V2/delivery/gpu-model-readiness.md와 evidence JSON 참조. 산불 실모델·정책 품질·일반 서버 연결을 완료 처리하지 않는다. K8s 실제 수집은 MVP에서 제외하고 시나리오 입력 구조를 유지한다.
+
+- Task: `task-20261031-085956-gpu-qwen-xgboost-9eea12a5`
+- Tags: `GPU`, `모델준비`, `실제검증`, `시나리오`

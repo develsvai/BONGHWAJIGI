@@ -1,4 +1,4 @@
-from typing import Annotated
+from typing import Annotated, Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -16,3 +16,4 @@ class EmbedRequest(BaseModel):
     texts: list[Annotated[str, Field(min_length=1, max_length=16000)]] = Field(
         min_length=1, max_length=8
     )
+    input_type: Literal["query", "document"] = "document"

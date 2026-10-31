@@ -12,8 +12,8 @@ jobs:
           version: "0.11.10"
           python-version: "3.12"
       - run: uv sync --frozen --extra server --extra collector --group api-contract
-      - run: uv run --no-sync ruff check src tests migrations
-      - run: uv run --no-sync ruff format --check src tests migrations
+      - run: uv run --no-sync ruff check src tests migrations tools/gpu_client.py
+      - run: uv run --no-sync ruff format --check src tests migrations tools/gpu_client.py
       - run: uv run --no-sync pytest
       - run: uv run --no-sync python tools/validate_app_api.py
       - run: docker compose --env-file .env.example -f deploy/compose/general.yaml config --quiet

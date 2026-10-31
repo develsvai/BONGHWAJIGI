@@ -1,3 +1,4 @@
+from pathlib import Path
 from typing import Literal
 
 from pydantic import Field, SecretStr, model_validator
@@ -17,6 +18,10 @@ class Settings(BaseSettings):
     embedding_model: str = "Qwen/Qwen3-Embedding-0.6B"
     gpu_max_total_tokens: int = Field(default=4096, ge=1, le=4096)
     gpu_max_output_tokens: int = Field(default=512, ge=1, le=512)
+    gpu_enabled: bool = False
+    qwen_revision: str | None = None
+    embedding_revision: str | None = None
+    gpu_lock_path: Path = Path.home() / ".cache/bonghwajigi/gpu.lock"
 
     @model_validator(mode="after")
     def check_token_budget(self) -> "Settings":

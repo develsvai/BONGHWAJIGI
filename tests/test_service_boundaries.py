@@ -34,6 +34,28 @@ def test_gpu_without_service_auth_fails_closed():
     assert response.json()["detail"] == "SERVICE_AUTH_NOT_CONFIGURED"
 
 
+def test_enabled_gpu_refuses_startup_without_service_token(monkeypatch):
+    monkeypatch.setenv("BONGHWA_GPU_ENABLED", "true")
+    with pytest.raises(RuntimeError, match="서비스 인증 토큰"):
+        with TestClient(create_gpu()):
+            pass
+
+
+def test_gpu_lease_rejects_overlapping_process_usage(tmp_path):
+    from bonghwajigi.common.gpu_lock import GpuLease
+
+    first = GpuLease(tmp_path / "gpu.lock")
+    second = GpuLease(tmp_path / "gpu.lock")
+    first.acquire()
+    try:
+        with pytest.raises(RuntimeError, match="사용 중"):
+            second.acquire()
+    finally:
+        first.close()
+    second.acquire()
+    second.close()
+
+
 def test_scenario_receiver_cannot_claim_live_ingestion_or_persisted_data(monkeypatch):
     monkeypatch.setenv("BONGHWA_SERVICE_TOKEN", "unit-test-token")
     event = {

@@ -1,0 +1,17 @@
+[Unit]
+Description=Bonghwajigi local GPU model API
+After=network-online.target
+
+[Service]
+WorkingDirectory=%h/bonghwajigi
+EnvironmentFile=%h/.config/bonghwajigi/gpu.env
+ExecStart=%h/bonghwajigi/.venv-gpu/bin/uvicorn bonghwajigi.gpu_api.app:create_app --factory --host 127.0.0.1 --port 8001 --workers 1 --no-access-log
+Restart=on-failure
+RestartSec=10
+TimeoutStartSec=600
+TimeoutStopSec=60
+UMask=0077
+NoNewPrivileges=true
+
+[Install]
+WantedBy=default.target
