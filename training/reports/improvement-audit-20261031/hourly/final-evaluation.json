@@ -1,0 +1,193 @@
+{
+  "evaluated_at_utc": "2026-10-31T12:57:09.883563+00:00",
+  "frozen_release_sha256": "8ef40c83d3d7a83afdb47c874296fd11f350a4e0cbf629cd3b0d5ee8aeeb8441",
+  "selected": "history_depth5",
+  "raw": {
+    "1": {
+      "rows": 51672,
+      "positives": 146,
+      "average_precision": 0.14262241958737015,
+      "roc_auc": 0.8867193793371506,
+      "brier": 0.0026451307348906994,
+      "logloss": 0.016866007819771767,
+      "precision_at_0_5": 0.0,
+      "recall_at_0_5": 0.0
+    },
+    "3": {
+      "rows": 36116,
+      "positives": 356,
+      "average_precision": 0.19688496913405107,
+      "roc_auc": 0.8543428961491089,
+      "brier": 0.009176337160170078,
+      "logloss": 0.04662076756358147,
+      "precision_at_0_5": 1.0,
+      "recall_at_0_5": 0.016853932584269662
+    },
+    "6": {
+      "rows": 17970,
+      "positives": 612,
+      "average_precision": 0.3390153648938981,
+      "roc_auc": 0.8546211481097412,
+      "brier": 0.027894526720046997,
+      "logloss": 0.11444277316331863,
+      "precision_at_0_5": 1.0,
+      "recall_at_0_5": 0.05065359477124183
+    }
+  },
+  "distance_baseline": {
+    "1": {
+      "rows": 51672,
+      "positives": 146,
+      "average_precision": 0.03807051839459907,
+      "roc_auc": 0.8001803451801697,
+      "brier": 0.0027862691786140203,
+      "logloss": 0.026082037016749382,
+      "precision_at_0_5": 0.0,
+      "recall_at_0_5": 0.0
+    },
+    "3": {
+      "rows": 36116,
+      "positives": 356,
+      "average_precision": 0.09449721132367091,
+      "roc_auc": 0.7913268937108815,
+      "brier": 0.012845531105995178,
+      "logloss": 0.06370934844017029,
+      "precision_at_0_5": 0.0,
+      "recall_at_0_5": 0.0
+    },
+    "6": {
+      "rows": 17970,
+      "positives": 612,
+      "average_precision": 0.18952131575987033,
+      "roc_auc": 0.7733716234890469,
+      "brier": 0.0472804419696331,
+      "logloss": 0.18201018869876862,
+      "precision_at_0_5": 0.3048780487804878,
+      "recall_at_0_5": 0.28594771241830064
+    }
+  },
+  "frozen_validation_thresholds": {
+    "1": [
+      {
+        "validation_maximum_fpr_requested": 0.01,
+        "frozen_raw_threshold": 0.06310246884822845,
+        "tp": 46,
+        "fp": 214,
+        "fn": 100,
+        "tn": 51312,
+        "precision": 0.17692307692307693,
+        "recall": 0.3150684931506849,
+        "false_positive_rate": 0.004153243022939875
+      },
+      {
+        "validation_maximum_fpr_requested": 0.05,
+        "frozen_raw_threshold": 0.022289548069238663,
+        "tp": 81,
+        "fp": 3156,
+        "fn": 65,
+        "tn": 48370,
+        "precision": 0.025023169601482854,
+        "recall": 0.5547945205479452,
+        "false_positive_rate": 0.06125063074952451
+      }
+    ],
+    "3": [
+      {
+        "validation_maximum_fpr_requested": 0.01,
+        "frozen_raw_threshold": 0.1505104899406433,
+        "tp": 77,
+        "fp": 218,
+        "fn": 279,
+        "tn": 35542,
+        "precision": 0.26101694915254237,
+        "recall": 0.21629213483146068,
+        "false_positive_rate": 0.0060961968680089485
+      },
+      {
+        "validation_maximum_fpr_requested": 0.05,
+        "frozen_raw_threshold": 0.06271135807037354,
+        "tp": 150,
+        "fp": 2521,
+        "fn": 206,
+        "tn": 33239,
+        "precision": 0.05615874204417821,
+        "recall": 0.42134831460674155,
+        "false_positive_rate": 0.07049776286353468
+      }
+    ],
+    "6": [
+      {
+        "validation_maximum_fpr_requested": 0.01,
+        "frozen_raw_threshold": 0.25599372386932373,
+        "tp": 136,
+        "fp": 120,
+        "fn": 476,
+        "tn": 17238,
+        "precision": 0.53125,
+        "recall": 0.2222222222222222,
+        "false_positive_rate": 0.0069132388524023505
+      },
+      {
+        "validation_maximum_fpr_requested": 0.05,
+        "frozen_raw_threshold": 0.10695227980613708,
+        "tp": 263,
+        "fp": 914,
+        "fn": 349,
+        "tn": 16444,
+        "precision": 0.22344944774851316,
+        "recall": 0.4297385620915033,
+        "false_positive_rate": 0.0526558359257979
+      }
+    ]
+  },
+  "test_events": [
+    "smith_river_2023"
+  ],
+  "test_event_count": 1,
+  "test_files_sha256": {
+    "smith_river_2023": "688c2fee7e48dd1253e080a66dc2fdfef673084c19a20b4ded438206adb459ec"
+  },
+  "operational_use": false,
+  "limitations": [
+    "국외 자동 위성 관측의 연구 결과이며 국내 검증 전",
+    "학습3/튜닝1/보정1 사건. 격자·시점 수를 독립 사건 수로 해석할 수 없음",
+    "기상·연료·지형·진화 활동 및 사용자 취약성 입력 없음",
+    "고신뢰 열 이상 관측은 실제 화선 도달·사람 피해의 정답이 아님",
+    "미래 관측 불가 정답 제외로 선택 편향이 있음",
+    "임계값은 연구용 누락/오경보 진단이며 대응 레벨 결정이 아님",
+    "미사용 사건 1개만의 평가. 이 결과에 맞춘 재튜닝은 별도 새 평가 사건이 필요함",
+    "국내·GK2A에 대한 성능이나 개인 피해 확률을 입증하지 않음"
+  ],
+  "calibrated": {
+    "1": {
+      "rows": 51672,
+      "positives": 146,
+      "average_precision": 0.14262241958737015,
+      "roc_auc": 0.8867193793371506,
+      "brier": 0.0026987746823579073,
+      "logloss": 0.017839081585407257,
+      "precision_at_0_5": 0.0,
+      "recall_at_0_5": 0.0
+    },
+    "3": {
+      "rows": 36116,
+      "positives": 356,
+      "average_precision": 0.19688496913405104,
+      "roc_auc": 0.8543428961491089,
+      "brier": 0.008902931585907936,
+      "logloss": 0.05728534236550331,
+      "precision_at_0_5": 0.8666666666666667,
+      "recall_at_0_5": 0.03651685393258427
+    },
+    "6": {
+      "rows": 17970,
+      "positives": 612,
+      "average_precision": 0.3390153648938981,
+      "roc_auc": 0.8546211481097412,
+      "brier": 0.02867608517408371,
+      "logloss": 0.1607351005077362,
+      "precision_at_0_5": 0.9761904761904762,
+      "recall_at_0_5": 0.06699346405228758
+    }
+  }
+}

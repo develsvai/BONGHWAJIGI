@@ -1,0 +1,85 @@
+{
+  "profile": "kor_modis_viirs_daily_near_active_fire_hindcast_v2",
+  "frozen_before_label_inspection": true,
+  "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "bbox": [
+    124.5,
+    33.0,
+    132.0,
+    38.7
+  ],
+  "train_years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+  ],
+  "validation_years": [
+    2023
+  ],
+  "calibration_years": [
+    2024
+  ],
+  "locked_test_years": [
+    2025
+  ],
+  "year_boundary_exclusion_days": 30,
+  "candidate_distance_km": 20.0,
+  "positive_classes": [
+    8,
+    9
+  ],
+  "negative_classes": [
+    5
+  ],
+  "forest_classes": [
+    50,
+    60,
+    61,
+    62,
+    70,
+    71,
+    72,
+    80,
+    81,
+    82,
+    90,
+    100
+  ],
+  "landcover_year": 2015,
+  "seed": 47,
+  "target": "다음 UTC 날짜의 MODIS 중·고신뢰 또는 VIIRS 중·고신뢰 식생 열 이상 관측 여부. 양성은 두 자료의 합집합, 음성은 MODIS 관측 육지 비화재인 경우만 인정. 개인 피해·도달 시각·대응 레벨이 아님",
+  "candidate": "한국 경계 내 과거 토지피복상 산림 격자 중 직전 UTC 날짜의 산림 열 이상 관측에서 20km 이내. 미래 정답으로 후보를 고르지 않음",
+  "split": "연도 순서 분리, 각 연도 처음과 마지막 30일 제외. 사건별 독립성이 검증될 때까지 운영 불가",
+  "selection_metric": "학습 기간 내 전진 연도 CV AP 평균으로 후보 선택. 2019~2022년마다 그 전 연도까지만 학습. 2023년은 외부 진단으로 남김. 2024년 보정, 2025년 잠금 최종 평가",
+  "research_thresholds": {
+    "maximum_false_positive_rate": [
+      0.01,
+      0.05
+    ],
+    "requested_recall": [
+      0.5,
+      0.8
+    ]
+  },
+  "operational_use": false,
+  "availability": "MODIS 표준 재처리 아카이브와 ISD-Lite 사후 QC 자료를 쓰는 과거 재현 실험. 관측 일시가 발행/수신 시각을 보증하지 않음. 실시간 NRT·기상 입력의 지연 및 품질 동등성을 별도 검증해야 함 VIIRS 표준제품 Collection 2의 type=0과 confidence n/h 필터도 사후 자료이다. NRT와 같은 입력으로 간주하지 않음.",
+  "acceptance": "국내 사용자 대응 연결 성공을 주장하려면 사건 단위 독립 검증, 실시간 입력 가용성, 확률 보정, 누락/오경보 및 사용자 위치별 검증을 추가로 통과해야 함. 연구 지표를 운영 대응 기준으로 승격하지 않음",
+  "include_viirs": true,
+  "selection_validation_years": [
+    2019,
+    2020,
+    2021,
+    2022
+  ]
+}

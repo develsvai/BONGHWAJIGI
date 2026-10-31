@@ -1,0 +1,140 @@
+{
+  "config_sha256": "388df7bef1660f590ef6a480037b4b59a6d90056908fb90682381fd13addf595",
+  "features": [
+    "distance_fire_km",
+    "nearest_fire_dx_km",
+    "nearest_fire_dy_km",
+    "neighbors_3",
+    "neighbors_7",
+    "nearby_frp_mw",
+    "nearby_temperature_k",
+    "distance_fire_30m_km",
+    "distance_fire_60m_km",
+    "closing_speed_30m_kmh",
+    "closing_speed_60m_kmh",
+    "fire_frames_last_hour",
+    "clear_frames_last_hour",
+    "utc_hour_sin",
+    "utc_hour_cos",
+    "horizon_hours"
+  ],
+  "train_rows": 255478,
+  "train_positives": 3976,
+  "validation_rows": 147367,
+  "cases": [
+    {
+      "name": "spatial_depth3",
+      "depth": 3,
+      "features": [
+        "distance_fire_km",
+        "nearest_fire_dx_km",
+        "nearest_fire_dy_km",
+        "neighbors_3",
+        "neighbors_7",
+        "nearby_frp_mw",
+        "nearby_temperature_k",
+        "utc_hour_sin",
+        "utc_hour_cos",
+        "horizon_hours"
+      ],
+      "scale_pos_weight": 1.0
+    },
+    {
+      "name": "history_depth3",
+      "depth": 3,
+      "features": [
+        "distance_fire_km",
+        "nearest_fire_dx_km",
+        "nearest_fire_dy_km",
+        "neighbors_3",
+        "neighbors_7",
+        "nearby_frp_mw",
+        "nearby_temperature_k",
+        "distance_fire_30m_km",
+        "distance_fire_60m_km",
+        "closing_speed_30m_kmh",
+        "closing_speed_60m_kmh",
+        "fire_frames_last_hour",
+        "clear_frames_last_hour",
+        "utc_hour_sin",
+        "utc_hour_cos",
+        "horizon_hours"
+      ],
+      "scale_pos_weight": 1.0
+    },
+    {
+      "name": "history_depth5",
+      "depth": 5,
+      "features": [
+        "distance_fire_km",
+        "nearest_fire_dx_km",
+        "nearest_fire_dy_km",
+        "neighbors_3",
+        "neighbors_7",
+        "nearby_frp_mw",
+        "nearby_temperature_k",
+        "distance_fire_30m_km",
+        "distance_fire_60m_km",
+        "closing_speed_30m_kmh",
+        "closing_speed_60m_kmh",
+        "fire_frames_last_hour",
+        "clear_frames_last_hour",
+        "utc_hour_sin",
+        "utc_hour_cos",
+        "horizon_hours"
+      ],
+      "scale_pos_weight": 1.0
+    },
+    {
+      "name": "history_weighted",
+      "depth": 4,
+      "features": [
+        "distance_fire_km",
+        "nearest_fire_dx_km",
+        "nearest_fire_dy_km",
+        "neighbors_3",
+        "neighbors_7",
+        "nearby_frp_mw",
+        "nearby_temperature_k",
+        "distance_fire_30m_km",
+        "distance_fire_60m_km",
+        "closing_speed_30m_kmh",
+        "closing_speed_60m_kmh",
+        "fire_frames_last_hour",
+        "clear_frames_last_hour",
+        "utc_hour_sin",
+        "utc_hour_cos",
+        "horizon_hours"
+      ],
+      "scale_pos_weight": 7.9533030987814435
+    }
+  ],
+  "parameters": {
+    "objective": "binary:logistic",
+    "tree_method": "hist",
+    "device": "cuda",
+    "eval_metric": [
+      "logloss",
+      "aucpr"
+    ],
+    "eta": 0.05,
+    "min_child_weight": 5,
+    "lambda": 20,
+    "subsample": 0.8,
+    "colsample_bytree": 0.9,
+    "max_bin": 256,
+    "seed": 47,
+    "nthread": 4
+  },
+  "maximum_rounds": 800,
+  "early_stopping": 40,
+  "selection": "사건 validation의 1·3·6시간 AP 산술평균. 최종 사건은 미열람",
+  "monotonicity": "동일 입력에서 예측 기간이 길어져도 누적 위험은 감소하지 않음",
+  "source_hashes": {
+    "dixie_2021": "0498861336f55ab9f9f0621500ba82d3f1b570c72da5d1878919d2d2fb205a54",
+    "bootleg_2021": "43f2a172d4db1857d7bedfb4b663682cf4623d1ff5b6b126167f46ccc714caa2",
+    "caldor_2021": "cc0667af8ad2ed9dea10a25b35a20868e692f1806d5aa30d05f1e3895b9b5aa5",
+    "mosquito_2022": "62f16c8fa53947d459202d746dfe6cd237deed21b836b9d0b4977a312d7c1332",
+    "oak_2022": "5df3e21b5b24dd4f630d835d947e7647af81a15e68023a2adcd1d1aae12dc1ca"
+  }
+}

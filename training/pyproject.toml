@@ -17,6 +17,14 @@ dependencies = [
 
 [project.optional-dependencies]
 train = ["xgboost>=3,<4", "scikit-learn>=1.6,<2"]
+geo = [
+    "rasterio>=1.4,<2",
+    "pyproj>=3.7,<4",
+    "shapely>=2,<3",
+    "planetary-computer>=1,<2",
+    "h5py>=3.12,<4",
+    "netcdf4>=1.7,<2",
+]
 
 [project.scripts]
 bonghwa-dataset = "bonghwa_training.cli:main"
