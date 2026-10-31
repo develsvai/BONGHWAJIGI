@@ -18,5 +18,21 @@
     ],
     "captured_at": "2026-10-30T12:12:37+00:00"
   },
-  "after": null
+  "after": {
+    "available": true,
+    "branch_name": "HeoNey",
+    "commit_sha": "5a351df4e6de87d5b08fe8cda78fe5338ede5368",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/job-runs/job-run-20261030-121237-job-20261030-113757-bonghwajigi-4841f0bc-5c75bb16/job-run.json",
+      ".loom/task-definitions/task-def-20261030-121042-chatgpt-docs-heoney-12c48f46/task-definition.json"
+    ],
+    "untracked_files": [
+      "docs/HeoNey/disaster.png",
+      "docs/HeoNey/nomal_home.png",
+      "\"docs/HeoNey/\\353\\264\\211\\355\\231\\224\\354\\247\\200\\352\\270\\260_\\353\\252\\250\\353\\260\\224\\354\\235\\274_\\355\\231\\224\\353\\251\\264_\\352\\270\\260\\355\\232\\215\\354\\204\\234.md\""
+    ],
+    "captured_at": "2026-10-31T02:44:26+00:00"
+  }
 }

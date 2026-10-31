@@ -4,7 +4,7 @@
   "title": "공유 ChatGPT 대화 전체를 docs/HeoNey에 문서화",
   "description": "사용자가 제공한 ChatGPT 공유 링크의 전체 대화를 읽고 주제별로 빠짐없이 정리한다. 원문 확보가 불가능하면 내용을 추측하지 않고 접근 실패를 기록한다.",
   "created_at": "2026-10-30T12:10:42+00:00",
-  "updated_at": "2026-10-30T12:12:37+00:00",
+  "updated_at": "2026-10-31T02:44:26+00:00",
   "order_index": 2,
   "legacy_task_id": "task-20261030-121042-chatgpt-docs-heoney-d2ca5d76",
   "depends_on": [],
@@ -19,7 +19,7 @@
     "docs/HeoNey/README.md"
   ],
   "document_output_exceptions": [],
-  "default_agent": "codex",
+  "default_agent": "foreground",
   "context_policy_id": "",
   "executor_policy_id": "",
   "review_policy": "",
