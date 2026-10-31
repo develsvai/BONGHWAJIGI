@@ -1,0 +1,71 @@
+{
+  "reviewed_on": "2026-10-31",
+  "domestic_handoff": {
+    "repository": "develsvai/BONGHWAJIGI",
+    "branch": "hyun02063185",
+    "paths_read": [
+      "docs/data-collection/README.md",
+      "docs/data-collection/data/catalog/데이터카탈로그.csv",
+      "docs/data-collection/reviews/20261031/산불MVP_10분갱신_검수가이드.md"
+    ],
+    "status": "remote documentation read; branch not merged; archival ZIP not supplied",
+    "training_label_status": "no verified time-resolved domestic forest-fire progression labels"
+  },
+  "sources": [
+    {
+      "id": "NDWS-v2",
+      "url": "https://www.kaggle.com/datasets/fantineh/next-day-wildfire-spread",
+      "role": "paired current inputs and next-daily fire-observation target",
+      "status": "downloaded first train/eval/test shards; transformed and verified",
+      "authentication": "public per-file API used without credentials",
+      "license": "CC BY 4.0; attribution in training/README.md",
+      "region": "contiguous United States; historical 2012-2020"
+    },
+    {
+      "id": "D01",
+      "url": "https://www.safetydata.go.kr/disaster-data/view?dataSn=228",
+      "endpoint": "https://www.safetydata.go.kr/V2/api/DSSP-IF-00247",
+      "role": "official alert text, issuance time and recipients; not fire-spread labels",
+      "status": "handoff specification only; event originals not acquired by this task",
+      "authentication": "approved serviceKey required"
+    },
+    {
+      "id": "D02",
+      "url": "https://www.data.go.kr/data/3070842/openapi.do",
+      "role": "domestic event registry and incident matching; not hourly fire perimeter",
+      "status": "catalog reviewed; no actual API response verified",
+      "authentication": "public-data portal serviceKey required"
+    },
+    {
+      "id": "D03",
+      "url": "https://www.data.go.kr/data/15121380/fileData.do",
+      "role": "domestic historical incident onset/extinguishment/area; not progression labels",
+      "status": "catalog reviewed; historical CSV not downloaded by this task",
+      "authentication": "portal file-download flow needs verification"
+    },
+    {
+      "id": "D04-D05",
+      "url": "https://www.data.go.kr/data/15057210/openapi.do",
+      "secondary_url": "https://apihub.kma.go.kr/apiList.do?seqApi=2&seqApiSub=239",
+      "role": "local wind, temperature, humidity, precipitation and quality flags",
+      "status": "authentication requirements reviewed; no local historical training series acquired",
+      "authentication": "serviceKey or API Hub authKey and account verification"
+    },
+    {
+      "id": "N01",
+      "url": "https://apihub.kma.go.kr/apiList.do?seqApi=6&seqApiSub=271",
+      "role": "GK2A forest-fire detections; fire-observation covariate",
+      "status": "catalog reviewed; raw historic product and latency not verified",
+      "authentication": "KMA API Hub authKey required"
+    },
+    {
+      "id": "NASA-FIRMS",
+      "url": "https://firms.modaps.eosdis.nasa.gov/content/academy/data_api/firms_api_use.html",
+      "public_csv_example": "https://firms.modaps.eosdis.nasa.gov/data/active_fire/SUOMI_VIIRS_C2_Global_7d.csv",
+      "role": "time-stamped active-fire detections and FRP; not continuous burned perimeters",
+      "status": "handoff reported 379 detections in a broad rectangle, not 379 wildfires; no historic raw copied here",
+      "authentication": "current seven-day CSV public; area/history API uses free MAP_KEY",
+      "caution": "satellite non-detection is not a confirmed no-fire target"
+    }
+  ]
+}

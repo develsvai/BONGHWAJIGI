@@ -36,3 +36,15 @@
 
 2026-10-31 구현 기술 스택 결정: docs/V2/delivery/implementation-stack.md; Task task-20261031-082929-mvp-3188b68a. Python 3.12 + FastAPI/Pydantic 2 + SQLAlchemy 2.x/psycopg 3/Alembic + PostgreSQL 16/PostGIS/pgvector + Celery/Redis + Transformers/Sentence Transformers + XGBoost. 일반 서버 API/정책/CPU 추론, GPU 서버 모델/별도 학습, K8s 수집으로 배치한다. XGBoost GPU 학습과 일반 서버 CPU Predictor를 분리하고 실제 정답·기간·평가/보류를 C1~C4에서 고정한다. 스택 선정은 실제 예측 성능 검증이 아니다. 이번 실행은 스택 문서와 계약 연결만 수행하며 다른 구현 Task·Queue·서버 설치는 시작하지 않는다.
 - Tags: `기술스택`, `산불`, `MVP`
+## 2026-10-31T10:13:51+00:00
+
+사용자는 국외 공개 데이터도 활용하도록 명시했다. XGBoost 데이터 작업은 training/ 및 xgboost-training-data 문서에 격리한다. 다른 작업자의 분석 큐·검색 파일과 GPU 서빙은 변경하지 않는다. 국내 인계 자료는 출처·연결 검증 표본이고 시간별 확산 정답이 부족하여 NDWS v2의 다음 날 1km 위성 화재 관측을 첫 연구용 목표로 사용한다. 개인 영향·60분 도달·대응 레벨과 동일시하지 않는다.
+
+- Task: `task-20261031-100122-xgboost-1f6a6032`
+- Tags: `dataset`, `xgboost`, `scope`
+## 2026-10-31T10:20:24+00:00
+
+NDWS v2 원본 3개(639,939,000바이트) 확보, 중복 46패치 제거와 unknown/QC 처리 후 11,753,527행의 train/validation/test 학습 테이블을 구축했다. 독립 원본 재생성에서 Parquet SHA256과 보고서가 일치했고 실제 XGBoost DMatrix 각 65,536행·20열 검증 및 11개 테스트를 통과했다. 모델 학습은 아직 수행하지 않았다. 자료와 한계·국내 수집 경로는 docs/V2/delivery/xgboost-training-data.md와 training/에 보존한다.
+
+- Task: `task-20261031-100122-xgboost-1f6a6032`
+- Tags: `dataset`, `result`, `validation`

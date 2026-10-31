@@ -1,0 +1,53 @@
+{
+  "verified_at_utc": "2026-10-31T10:18:08.569848+00:00",
+  "full_dataset_batch_validation": {
+    "train": {
+      "rows": 3957875,
+      "labels": {
+        "0": 3907373,
+        "1": 50502
+      }
+    },
+    "validation": {
+      "rows": 3978515,
+      "labels": {
+        "0": 3933419,
+        "1": 45096
+      }
+    },
+    "test": {
+      "rows": 3817137,
+      "labels": {
+        "0": 3765597,
+        "1": 51540
+      }
+    }
+  },
+  "independent_rebuild_report_and_parquet_sha256_match": true,
+  "real_xgboost_dmatrix_check": {
+    "train": {
+      "rows_checked": 65536,
+      "columns": 20,
+      "missing_input_values": 11413
+    },
+    "validation": {
+      "rows_checked": 65536,
+      "columns": 20,
+      "missing_input_values": 5847
+    },
+    "test": {
+      "rows_checked": 65536,
+      "columns": 20,
+      "missing_input_values": 11987
+    }
+  },
+  "model_trained": false,
+  "versions": {
+    "bonghwa-training": "0.1.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "pyarrow": "26.0.0",
+    "protobuf": "7.36.2",
+    "xgboost": "3.4.1"
+  }
+}

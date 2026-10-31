@@ -1,0 +1,40 @@
+{
+  "id": "task-20261031-100122-xgboost-1f6a6032",
+  "job_id": "job-20261031-002626-job-c9f9ff0d",
+  "title": "산불 XGBoost 학습용 공개 원본 확보와 재현 가능한 데이터셋 구축",
+  "description": "사용자가 분석 파이프라인은 다른 작업자가 이어가고 이 작업자는 XGBoost 학습 데이터를 담당하도록 직접 지시했다. 기존 수집 담당 브랜치의 국내 자료 경로와 학습 적합성을 확인하고 사용자가 허용한 국외 공개 확산 자료도 활용한다. 프로필·매뉴얼·경보·뉴스와 환경 예측용 입력·관측 정답의 역할을 구분하고 확보 가능한 목표에 맞는 원본·정답·분할·provenance를 갖춘 학습 데이터셋을 구축한다.",
+  "status": "RUNNING",
+  "created_at": "2026-10-31T10:01:22+00:00",
+  "updated_at": "2026-10-31T10:01:36+00:00",
+  "order_index": 6,
+  "assigned_agent": "foreground",
+  "depends_on": [
+    "task-20261031-085956-gpu-qwen-xgboost-9eea12a5"
+  ],
+  "expected_output": "수집 경로·피처·정답 정의 및 한계 문서, 실제 공개 원본과 해시 manifest, 재현 가능한 수집·변환 코드, XGBoost 학습용 테이블과 학습/검증/평가 분할 및 품질 보고서",
+  "done_condition": "실제 다운로드한 공개 자료에서 입력과 이후 관측 정답이 연결된 데이터셋을 생성하고 누락·unknown·분할·누출·출처를 검증한다. 국내 사용자 영향 예측으로 검증되지 않은 범위를 명시하고 별도 학습 작업에 전달 가능한 결과와 Loom 기록을 커밋한다.",
+  "in_scope": "국내 수집 경로 읽기·공식 출처 확인, 승인된 국외 공개 학습 자료 확보, 데이터 목표와 입력 구분, training 전용 경로의 수집·정규화·검증·분할 코드와 산출물, 데이터 품질 보고서",
+  "out_of_scope": "다른 작업자의 분석 큐·검색 구현과 파일 수정, GPU 서빙 중단·변경, 산불 실모델 운영 배포·성능 확정, 개인 대응 레벨·정책·매뉴얼 결정, 앱 저장소, 원격 push",
+  "validation_hint": "원본 출처·버전·크기·해시 확인, 실제/합성 구분, 관측 정답 0/1/unknown과 미래 입력 누출 검사, 원본 분할 보존·동일 표본 중복 검사, 재생성·스키마·결측 통계와 학습 로더 검사, Loom strict",
+  "required_docs": [
+    "docs/V2/03_학습_검증_흐름도.md",
+    "docs/V2/delivery/implementation-stack.md",
+    "docs/V2/delivery/gpu-model-readiness.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/xgboost-training-data.md"
+  ],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [
+    "e0a14561db446a09342f5abdbd3a175c62dfde2c"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-10-31T10:01:36+00:00",
+  "artifacts": [],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}
