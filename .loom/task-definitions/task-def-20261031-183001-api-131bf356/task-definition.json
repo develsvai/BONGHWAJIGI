@@ -1,0 +1,33 @@
+{
+  "id": "task-def-20261031-183001-api-131bf356",
+  "job_definition_id": "job-20261031-002017-v2-fe3bfad0",
+  "title": "정책 근거 대화·사용자 확인 상태 제안과 합성 시연 경로 API 구현 및 배포",
+  "description": "사용자의 음성·텍스트 대화와 지도 경로 후속 요청에 필요한 서버 API를 구현한다. 텍스트 turn을 기존 정책과 Qwen에 연결하고 상태 제안은 사용자 확인 전 적용하지 않는다. mobile-fire 합성 경로를 서버 fixture로 제공하며 실제 안전 경로로 주장하지 않는다. 앱 구현과 최종 gitlink는 앱 담당자가 별도로 수행한다.",
+  "created_at": "2026-10-31T18:30:01+00:00",
+  "updated_at": "2026-10-31T18:30:05+00:00",
+  "order_index": 26,
+  "legacy_task_id": "task-20261031-183001-api-e700828b",
+  "depends_on": [
+    "task-def-20261031-181512-task-def-e8bcc3cd"
+  ],
+  "expected_output": "대화 turn·상태 제안 응답 계약과 서버 구현; simulation 전용 route fixture/API; OpenAPI·회귀검증·일반서버 배포·운영문서",
+  "done_condition": "인증·응답 소유권·revision·idempotency·만료·동시성 보호를 검증하고 Qwen 오류 시 정책 사실 기반으로 안전하게 처리한다. 제안은 자동DB반영되지 않으며 확정은 기존context API를 쓴다. mobile-demo 경로는 합성 표시되고 운영 route unavailable은 유지된다. 실서버 배포 검증과 normalpush가 완료된다.",
+  "in_scope": "서버 텍스트 대화와 검토 가능한 상태제안; 기존 사용자확인 context 적용; synthetic route fixture·API; 보안/회귀테스트; OpenAPI·문서·일반서버 배포·해당Loom기록",
+  "out_of_scope": "앱코드·앱gitlink변경; 실제GPS수집; 음성파일/STT/TTS서버; 실제검증안전경로·외부길찾기계약; 모델학습·GPU설정변경; 타채팅변경커밋; 비밀출력; 실제긴급연락",
+  "validation_hint": "PostgreSQL 기반 ownership/revision/expiry/idempotency/concurrency/context미변경 테스트; Qwen invalid/failure 제약; synthetic route 범위·운영 unavailable; OpenAPI; 일반서버 실모델 대화 검증; Ruff·pytest·Loomstrict",
+  "required_docs": [
+    "docs/V2/delivery/app-integration-api.md",
+    "docs/V2/delivery/mobile-server-deployment.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/mobile-dialogue-and-route.md"
+  ],
+  "document_output_exceptions": [],
+  "default_agent": "foreground",
+  "context_policy_id": "",
+  "executor_policy_id": "",
+  "review_policy": "",
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

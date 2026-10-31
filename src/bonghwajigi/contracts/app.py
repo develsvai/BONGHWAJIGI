@@ -82,7 +82,16 @@ class StatePatch(Strict):
 
 class ContextOverrides(Strict):
     mobility: (
-        Literal["independent", "walking_aid", "wheelchair", "assistance_required", "unknown"] | None
+        Literal[
+            "independent",
+            "walking_aid",
+            "wheelchair",
+            "assistance_required",
+            "unknown",
+            "needs_time",
+            "requires_help",
+        ]
+        | None
     ) = None
     stairs: Literal["able", "difficult", "unable", "unknown"] | None = None
     alone_now: Literal["yes", "no", "unknown"] = "unknown"
@@ -92,6 +101,7 @@ class ContextWrite(Strict):
     base_revision: int = Field(ge=0)
     observed_at: AwareDatetime
     confirmation: Literal["user_confirmed"]
+    proposal_turn_id: Identifier | None = None
     overrides: ContextOverrides = Field(default_factory=ContextOverrides)
     state: StatePatch = Field(default_factory=StatePatch)
 

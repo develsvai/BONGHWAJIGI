@@ -2470,54 +2470,6 @@
         ]
       }
     },
-    "/v1/me/responses/{response_id}/route": {
-      "get": {
-        "tags": [
-          "mobile-mvp"
-        ],
-        "summary": "Route",
-        "operationId": "route_v1_me_responses__response_id__route_get",
-        "security": [
-          {
-            "UserJWT": []
-          }
-        ],
-        "parameters": [
-          {
-            "name": "response_id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 128,
-              "pattern": "^[a-zA-Z0-9_.:-]+$",
-              "title": "Response Id"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful Response",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
-          },
-          "422": {
-            "description": "Validation Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HTTPValidationError"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/me/responses/{response_id}/support-drafts": {
       "post": {
         "tags": [
@@ -2716,6 +2668,178 @@
             "content": {
               "application/json": {
                 "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/me/responses/{response_id}/text-turns": {
+      "post": {
+        "tags": [
+          "mobile-mvp"
+        ],
+        "summary": "Text Turn",
+        "operationId": "text_turn_v1_me_responses__response_id__text_turns_post",
+        "security": [
+          {
+            "UserJWT": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "response_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128,
+              "pattern": "^[a-zA-Z0-9_.:-]+$",
+              "title": "Response Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TextTurnWrite"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_TextTurnData_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/me/responses/{response_id}/text-turns/{turn_id}": {
+      "get": {
+        "tags": [
+          "mobile-mvp"
+        ],
+        "summary": "Get Text Turn",
+        "operationId": "get_text_turn_v1_me_responses__response_id__text_turns__turn_id__get",
+        "security": [
+          {
+            "UserJWT": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "response_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128,
+              "pattern": "^[a-zA-Z0-9_.:-]+$",
+              "title": "Response Id"
+            }
+          },
+          {
+            "name": "turn_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128,
+              "pattern": "^[a-zA-Z0-9_.:-]+$",
+              "title": "Turn Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_TextTurnData_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/me/responses/{response_id}/route": {
+      "get": {
+        "tags": [
+          "mobile-mvp"
+        ],
+        "summary": "Route",
+        "operationId": "route_v1_me_responses__response_id__route_get",
+        "security": [
+          {
+            "UserJWT": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "response_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128,
+              "pattern": "^[a-zA-Z0-9_.:-]+$",
+              "title": "Response Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_RouteData_"
+                }
               }
             }
           },
@@ -3202,7 +3326,9 @@
                   "walking_aid",
                   "wheelchair",
                   "assistance_required",
-                  "unknown"
+                  "unknown",
+                  "needs_time",
+                  "requires_help"
                 ]
               },
               {
@@ -3243,6 +3369,42 @@
         "type": "object",
         "title": "ContextOverrides"
       },
+      "ContextProposal": {
+        "properties": {
+          "requires_confirmation": {
+            "type": "boolean",
+            "const": true,
+            "title": "Requires Confirmation",
+            "default": true
+          },
+          "base_revision": {
+            "type": "integer",
+            "title": "Base Revision"
+          },
+          "state": {
+            "$ref": "#/components/schemas/StatePatch"
+          },
+          "overrides": {
+            "$ref": "#/components/schemas/ContextOverrides"
+          },
+          "evidence": {
+            "items": {
+              "$ref": "#/components/schemas/ProposalEvidence"
+            },
+            "type": "array",
+            "title": "Evidence"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "base_revision",
+          "state",
+          "overrides",
+          "evidence"
+        ],
+        "title": "ContextProposal"
+      },
       "ContextWrite": {
         "properties": {
           "base_revision": {
@@ -3259,6 +3421,20 @@
             "type": "string",
             "const": "user_confirmed",
             "title": "Confirmation"
+          },
+          "proposal_turn_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 128,
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9_.:-]+$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Proposal Turn Id"
           },
           "overrides": {
             "$ref": "#/components/schemas/ContextOverrides"
@@ -3487,6 +3663,37 @@
         ],
         "title": "DeviceWrite"
       },
+      "DialogueAssistant": {
+        "properties": {
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "qwen_grounded",
+              "reviewed_policy_fallback"
+            ],
+            "title": "Source"
+          },
+          "action_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Action Ids"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "text",
+          "source",
+          "action_ids"
+        ],
+        "title": "DialogueAssistant"
+      },
       "DisasterData": {
         "properties": {
           "id": {
@@ -3627,6 +3834,22 @@
         ],
         "title": "Envelope[ProfileData]"
       },
+      "Envelope_RouteData_": {
+        "properties": {
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "data": {
+            "$ref": "#/components/schemas/RouteData"
+          }
+        },
+        "type": "object",
+        "required": [
+          "meta",
+          "data"
+        ],
+        "title": "Envelope[RouteData]"
+      },
       "Envelope_RulesData_": {
         "properties": {
           "meta": {
@@ -3674,6 +3897,22 @@
           "data"
         ],
         "title": "Envelope[SnapshotData]"
+      },
+      "Envelope_TextTurnData_": {
+        "properties": {
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "data": {
+            "$ref": "#/components/schemas/TextTurnData"
+          }
+        },
+        "type": "object",
+        "required": [
+          "meta",
+          "data"
+        ],
+        "title": "Envelope[TextTurnData]"
       },
       "EnvironmentInput": {
         "properties": {
@@ -4780,6 +5019,37 @@
         ],
         "title": "ProfileWrite"
       },
+      "ProposalEvidence": {
+        "properties": {
+          "field": {
+            "type": "string",
+            "title": "Field"
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "title": "Value"
+          },
+          "quote": {
+            "type": "string",
+            "title": "Quote"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "field",
+          "value",
+          "quote"
+        ],
+        "title": "ProposalEvidence"
+      },
       "ReceiptWrite": {
         "properties": {
           "alert_revision": {
@@ -4942,6 +5212,103 @@
         ],
         "title": "RetrievalDocument"
       },
+      "RouteData": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "simulation",
+              "unavailable"
+            ],
+            "title": "Status"
+          },
+          "route": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/SimulationRoute"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "title": "Reason"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "status",
+          "route",
+          "reason"
+        ],
+        "title": "RouteData"
+      },
+      "RouteDestination": {
+        "properties": {
+          "latitude": {
+            "type": "number",
+            "maximum": 85.0,
+            "minimum": -85.0,
+            "title": "Latitude"
+          },
+          "longitude": {
+            "type": "number",
+            "maximum": 180.0,
+            "minimum": -180.0,
+            "title": "Longitude"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "latitude",
+          "longitude",
+          "name"
+        ],
+        "title": "RouteDestination"
+      },
+      "RouteGeometry": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "LineString",
+            "title": "Type",
+            "default": "LineString"
+          },
+          "coordinates": {
+            "items": {
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array",
+              "maxItems": 2,
+              "minItems": 2
+            },
+            "type": "array",
+            "maxItems": 100,
+            "minItems": 2,
+            "title": "Coordinates"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "coordinates"
+        ],
+        "title": "RouteGeometry"
+      },
       "RouteInput": {
         "properties": {
           "mode": {
@@ -5007,6 +5374,52 @@
           "reason"
         ],
         "title": "RouteInput"
+      },
+      "RoutePoint": {
+        "properties": {
+          "latitude": {
+            "type": "number",
+            "maximum": 85.0,
+            "minimum": -85.0,
+            "title": "Latitude"
+          },
+          "longitude": {
+            "type": "number",
+            "maximum": 180.0,
+            "minimum": -180.0,
+            "title": "Longitude"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "latitude",
+          "longitude"
+        ],
+        "title": "RoutePoint"
+      },
+      "RouteStep": {
+        "properties": {
+          "sequence": {
+            "type": "integer",
+            "title": "Sequence"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "point": {
+            "$ref": "#/components/schemas/RoutePoint"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "sequence",
+          "text",
+          "point"
+        ],
+        "title": "RouteStep"
       },
       "Rule": {
         "properties": {
@@ -5253,6 +5666,75 @@
         ],
         "title": "SessionTokens"
       },
+      "SimulationRoute": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "origin": {
+            "type": "string",
+            "const": "synthetic",
+            "title": "Origin",
+            "default": "synthetic"
+          },
+          "operational_use": {
+            "type": "boolean",
+            "const": false,
+            "title": "Operational Use",
+            "default": false
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "geometry": {
+            "$ref": "#/components/schemas/RouteGeometry"
+          },
+          "start": {
+            "$ref": "#/components/schemas/RouteDestination"
+          },
+          "destination": {
+            "$ref": "#/components/schemas/RouteDestination"
+          },
+          "steps": {
+            "items": {
+              "$ref": "#/components/schemas/RouteStep"
+            },
+            "type": "array",
+            "title": "Steps"
+          },
+          "bounds": {
+            "$ref": "#/components/schemas/Box"
+          },
+          "valid_until": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Valid Until"
+          },
+          "input_versions": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "type": "object",
+            "title": "Input Versions"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "geometry",
+          "start",
+          "destination",
+          "steps",
+          "bounds",
+          "valid_until",
+          "input_versions"
+        ],
+        "title": "SimulationRoute"
+      },
       "SnapshotData": {
         "properties": {
           "id": {
@@ -5467,6 +5949,120 @@
         "additionalProperties": false,
         "type": "object",
         "title": "StatePatch"
+      },
+      "TextTurnData": {
+        "properties": {
+          "turn_id": {
+            "type": "string",
+            "title": "Turn Id"
+          },
+          "response_id": {
+            "type": "string",
+            "title": "Response Id"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "processing",
+              "complete"
+            ],
+            "title": "Status"
+          },
+          "response_revision": {
+            "type": "integer",
+            "title": "Response Revision"
+          },
+          "context_revision": {
+            "type": "integer",
+            "title": "Context Revision"
+          },
+          "valid_until": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Valid Until"
+          },
+          "assistant": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/DialogueAssistant"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "proposal": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ContextProposal"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "reason_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reason Code"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "turn_id",
+          "response_id",
+          "status",
+          "response_revision",
+          "context_revision",
+          "valid_until",
+          "assistant",
+          "proposal",
+          "reason_code"
+        ],
+        "title": "TextTurnData"
+      },
+      "TextTurnWrite": {
+        "properties": {
+          "client_turn_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_.:-]+$",
+            "title": "Client Turn Id"
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 1000,
+            "minLength": 1,
+            "title": "Text"
+          },
+          "base_response_revision": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Base Response Revision"
+          },
+          "base_context_revision": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Base Context Revision"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "client_turn_id",
+          "text",
+          "base_response_revision",
+          "base_context_revision"
+        ],
+        "title": "TextTurnWrite"
       },
       "UserContextData": {
         "properties": {

@@ -297,6 +297,9 @@ def attach_mobile(app, settings):
                     "server_audio": False,
                     "support_draft": False,
                     "route_geometry": False,
+                    "text_turns": True,
+                    "simulation_route": settings.mode == "simulation"
+                    and actor["scenario_id"] == "mobile-demo",
                     "push_provider": settings.push_provider,
                 },
                 "policy_status": "reviewed_mvp",
@@ -716,6 +719,9 @@ def attach_mobile(app, settings):
             identifier = row.incident_id + "/" + actor["sub"]
             current = s.get(PolicyEntity, (actor["scenario_id"], "state", identifier))
             base_check(current, body.base_revision)
+            from bonghwajigi.api.interaction import validate_context_proposal
+
+            validate_context_proposal(s, actor, row, body, moment)
             mobility = {
                 "walking_aid": "needs_time",
                 "wheelchair": "needs_time",
@@ -1058,15 +1064,6 @@ def attach_mobile(app, settings):
                 device.revision += 1
         return envelope({"status": "logged_out"})
 
-    @router.get("/me/responses/{response_id}/route")
-    def route(response_id: Identifier, actor=actor_dependency):
-        with sessions() as s:
-            owned_response(s, actor, response_id)
-        return envelope(
-            {"status": "unavailable", "route": None, "reason": "NO_VERIFIED_ROUTE_GEOMETRY"},
-            "unavailable",
-        )
-
     @router.post("/me/responses/{response_id}/support-drafts", status_code=503)
     def support_draft(response_id: Identifier, actor=actor_dependency):
         with sessions() as s:
@@ -1085,4 +1082,7 @@ def attach_mobile(app, settings):
     def delete_voice(response_id: Identifier, turn_id: Identifier, actor=actor_dependency):
         raise HTTPException(503, detail="VOICE_DISABLED_SERVER_PROVIDES_TEXT")
 
+    from bonghwajigi.api.interaction import attach_interaction
+
+    attach_interaction(app, router, settings, actor_dependency, envelope, owned_response)
     app.include_router(router)

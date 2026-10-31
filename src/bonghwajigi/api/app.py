@@ -55,6 +55,7 @@ def create_app() -> FastAPI:
         with app.state.sessions() as session:
             session.execute(text("SELECT 1 FROM app_accounts LIMIT 1"))
             session.execute(text("SELECT 1 FROM deliveries LIMIT 1"))
+            session.execute(text("SELECT 1 FROM app_text_turns LIMIT 1"))
         with Redis.from_url(
             app.state.settings.broker_url.get_secret_value(),
             socket_connect_timeout=2,

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-31T18:28:26+00:00",
+  "generated_at": "2026-10-31T18:47:26+00:00",
   "docs_paths": [
     "docs"
   ],
@@ -535,6 +535,15 @@
       "document_type": "docs",
       "updated_at": "2026-10-31T23:38:06+09:00",
       "size_bytes": 31804
+    },
+    {
+      "id": "docs/V2/delivery/mobile-dialogue-and-route.md",
+      "title": "앱 텍스트 대화와 합성 시연 경로",
+      "path": "docs/V2/delivery/mobile-dialogue-and-route.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T03:47:26+09:00",
+      "size_bytes": 6999
     },
     {
       "id": "docs/V2/delivery/mobile-server-deployment.md",

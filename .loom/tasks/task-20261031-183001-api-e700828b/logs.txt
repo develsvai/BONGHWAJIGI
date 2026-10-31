@@ -1,0 +1,2 @@
+2026-11-01 KST: 새 Task run; 기존계약·모델·DB 확인; 대화/확정제안·시연경로 구현; OpenAPI와합성fixture 인계; PostgreSQL118테스트·migration/check·Ruff 통과; 실제Qwen2.66초 추론확인. 배포 준비.
+2026-11-01 KST: 종료 시 stale turn 상태 확정 보완; 실제 AppSession 교차 접근/생성 중 취소 추가; 전체120개 테스트와 Ruff 통과.
