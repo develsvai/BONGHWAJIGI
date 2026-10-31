@@ -1,0 +1,35 @@
+{
+  "id": "task-def-20261031-002628-k8s-29758c6d",
+  "job_definition_id": "job-20261031-002017-v2-fe3bfad0",
+  "title": "일반 서버와 K8s의 서비스 실행 기반 구성",
+  "description": "DB 큐 모델 API 배포 단위 인증정보 주입 접근 제한 로그 백업과 복구를 구성한다. 기존 클러스터 서비스와 격리하고 긴급 및 일반 처리 자원과 관측 지표를 분리한다. 설계 기준은 docs/V2이며 HeoNey는 참고다. 앱 구현은 제외하고 앱팀에 API 명세를 제공한다. 이 등록은 작업 계약 고정이며 후속 구현 Task를 지금 실행하거나 Queue에 넣지 않는다.",
+  "created_at": "2026-10-31T00:26:28+00:00",
+  "updated_at": "2026-10-31T00:26:28+00:00",
+  "order_index": 4,
+  "legacy_task_id": "task-20261031-002627-k8s-4bf877bd",
+  "depends_on": [
+    "task-def-20261031-002627-mvp-7a7e3902",
+    "task-def-20261031-002627-task-def-056a7936"
+  ],
+  "expected_output": "docs/V2/delivery/runtime-platform.md 및 작업 범위의 재현 가능한 구현 또는 검증 산출물",
+  "done_condition": "테스트 환경에서 수집 서버 큐 저장소 모델 연결과 재시작 복구가 동작한다.",
+  "in_scope": "DB 큐 모델 API 배포 단위 인증정보 주입 접근 제한 로그 백업과 복구를 구성한다. 기존 클러스터 서비스와 격리하고 긴급 및 일반 처리 자원과 관측 지표를 분리한다.",
+  "out_of_scope": "모바일 앱 화면 권한 및 3D 렌더러 구현; HeoNey UX의 자동 편입; 비밀정보 커밋; 작업 범위 외 운영 변경",
+  "validation_hint": "연결 스모크 검사, 재시작 복구, 최소 접근 권한과 비밀정보 비노출 확인",
+  "required_docs": [
+    "docs/V2/01_서비스_핵심_정리.md",
+    "docs/V2/02_실시간_서버_배치도.md",
+    "docs/V2/03_학습_검증_흐름도.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/runtime-platform.md"
+  ],
+  "document_output_exceptions": [],
+  "default_agent": "unassigned",
+  "context_policy_id": "",
+  "executor_policy_id": "",
+  "review_policy": "",
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

@@ -1,0 +1,18 @@
+{
+  "id": "job-20261031-002626-job-a46f69a4",
+  "title": "기관 데이터와 위치 관련성 파이프라인",
+  "goal": "공식 경보 관측 뉴스의 수집 정규화 사건 통합과 주변 지역 영향 관련성을 구현한다. 설계 기준은 docs/V2이며 HeoNey는 참고다. 앱 구현은 제외하고 앱팀에 API 명세를 제공한다. 이 등록은 작업 계약 고정이며 후속 구현 Task를 지금 실행하거나 Queue에 넣지 않는다.",
+  "status": "PENDING",
+  "created_at": "2026-10-31T00:26:26+00:00",
+  "updated_at": "2026-10-31T00:26:28+00:00",
+  "context_refs": [],
+  "task_ids": [
+    "task-20261031-002627-task-35e0acc7",
+    "task-20261031-002627-task-93368ddf",
+    "task-20261031-002628-task-4b3ae684",
+    "task-20261031-002628-task-52ce54a6",
+    "task-20261031-002628-task-79e4938c"
+  ],
+  "branch_name": "HeoNey",
+  "checkpoint_ids": []
+}

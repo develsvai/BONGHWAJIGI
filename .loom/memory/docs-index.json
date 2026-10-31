@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-30T11:46:44+00:00",
+  "generated_at": "2026-10-31T00:30:53+00:00",
   "docs_paths": [
     "docs"
   ],
@@ -33,6 +33,141 @@
       "size_bytes": 82
     },
     {
+      "id": "docs/HeoNey/01-idea-history.md",
+      "title": "01. 아이디어 탐색 전체 이력",
+      "path": "docs/HeoNey/01-idea-history.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T08:21:41+09:00",
+      "size_bytes": 14051
+    },
+    {
+      "id": "docs/HeoNey/02-service-and-recommendation.md",
+      "title": "02. 서비스와 개인 맞춤형 대피 추천",
+      "path": "docs/HeoNey/02-service-and-recommendation.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T08:21:41+09:00",
+      "size_bytes": 6142
+    },
+    {
+      "id": "docs/HeoNey/03-data-and-ai.md",
+      "title": "03. 데이터·AI·경로 구성",
+      "path": "docs/HeoNey/03-data-and-ai.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T08:21:41+09:00",
+      "size_bytes": 6842
+    },
+    {
+      "id": "docs/HeoNey/04-screens-and-flows.md",
+      "title": "04. 모바일 화면 구성과 전환",
+      "path": "docs/HeoNey/04-screens-and-flows.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T08:21:41+09:00",
+      "size_bytes": 6394
+    },
+    {
+      "id": "docs/HeoNey/README.md",
+      "title": "HeoNey — 해커톤 아이디어 대화 정리",
+      "path": "docs/HeoNey/README.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T08:21:41+09:00",
+      "size_bytes": 4824
+    },
+    {
+      "id": "docs/HeoNey/archive/conversation-01.md",
+      "title": "대화 원문 01 — 관광·지하철·해커톤 관점",
+      "path": "docs/HeoNey/archive/conversation-01.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T08:21:41+09:00",
+      "size_bytes": 30518
+    },
+    {
+      "id": "docs/HeoNey/archive/conversation-02.md",
+      "title": "대화 원문 02 — 청년 경험·아동 서비스",
+      "path": "docs/HeoNey/archive/conversation-02.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T08:21:41+09:00",
+      "size_bytes": 35563
+    },
+    {
+      "id": "docs/HeoNey/archive/conversation-03.md",
+      "title": "대화 원문 03 — 아동 보호 고도화·QR 환승",
+      "path": "docs/HeoNey/archive/conversation-03.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T08:21:41+09:00",
+      "size_bytes": 44703
+    },
+    {
+      "id": "docs/HeoNey/archive/conversation-04.md",
+      "title": "대화 원문 04 — 고령 운전·폭염·재난 비서",
+      "path": "docs/HeoNey/archive/conversation-04.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T08:21:41+09:00",
+      "size_bytes": 42184
+    },
+    {
+      "id": "docs/HeoNey/archive/conversation-05.md",
+      "title": "대화 원문 05 — 고립 문제·일상 아이디어·추천 주제",
+      "path": "docs/HeoNey/archive/conversation-05.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T08:21:41+09:00",
+      "size_bytes": 39523
+    },
+    {
+      "id": "docs/HeoNey/archive/conversation-06.md",
+      "title": "대화 원문 06 — 발표 색상·데이터·개인화",
+      "path": "docs/HeoNey/archive/conversation-06.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T08:21:41+09:00",
+      "size_bytes": 38454
+    },
+    {
+      "id": "docs/HeoNey/archive/conversation-07.md",
+      "title": "대화 원문 07 — 모바일 화면·최종 음성 UX",
+      "path": "docs/HeoNey/archive/conversation-07.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T08:21:41+09:00",
+      "size_bytes": 64902
+    },
+    {
+      "id": "docs/HeoNey/archive/manifest.json",
+      "title": "{",
+      "path": "docs/HeoNey/archive/manifest.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T08:21:41+09:00",
+      "size_bytes": 18571
+    },
+    {
+      "id": "docs/HeoNey/archive/progress-messages.md",
+      "title": "대화 중 진행 안내 원문",
+      "path": "docs/HeoNey/archive/progress-messages.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T08:21:41+09:00",
+      "size_bytes": 6650
+    },
+    {
+      "id": "docs/HeoNey/references.md",
+      "title": "원문 외부 출처 목록",
+      "path": "docs/HeoNey/references.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T08:21:41+09:00",
+      "size_bytes": 19954
+    },
+    {
       "id": "docs/README.md",
       "title": "봉화지기 설계 문서 안내",
       "path": "docs/README.md",
@@ -42,49 +177,94 @@
       "size_bytes": 3148
     },
     {
-      "id": "docs/ai-and-infrastructure.md",
+      "id": "docs/V1/ai-and-infrastructure.md",
       "title": "AI 역할과 서버 구성",
-      "path": "docs/ai-and-infrastructure.md",
+      "path": "docs/V1/ai-and-infrastructure.md",
       "source": "repository_docs",
       "document_type": "docs",
       "updated_at": "2026-10-30T20:45:47+09:00",
       "size_bytes": 8939
     },
     {
-      "id": "docs/architecture-and-data-flow.md",
+      "id": "docs/V1/architecture-and-data-flow.md",
       "title": "데이터 수집과 대응 흐름",
-      "path": "docs/architecture-and-data-flow.md",
+      "path": "docs/V1/architecture-and-data-flow.md",
       "source": "repository_docs",
       "document_type": "docs",
       "updated_at": "2026-10-30T20:42:35+09:00",
       "size_bytes": 9460
     },
     {
-      "id": "docs/decisions-and-meeting-review.md",
+      "id": "docs/V1/decisions-and-meeting-review.md",
       "title": "결정 사항과 회의 대조",
-      "path": "docs/decisions-and-meeting-review.md",
+      "path": "docs/V1/decisions-and-meeting-review.md",
       "source": "repository_docs",
       "document_type": "docs",
       "updated_at": "2026-10-30T20:45:47+09:00",
       "size_bytes": 6461
     },
     {
-      "id": "docs/product-and-scenarios.md",
+      "id": "docs/V1/product-and-scenarios.md",
       "title": "서비스 목표와 사용자 시나리오",
-      "path": "docs/product-and-scenarios.md",
+      "path": "docs/V1/product-and-scenarios.md",
       "source": "repository_docs",
       "document_type": "docs",
       "updated_at": "2026-10-30T20:42:35+09:00",
       "size_bytes": 6493
     },
     {
-      "id": "docs/ui-ux-handoff.md",
+      "id": "docs/V1/ui-ux-handoff.md",
       "title": "UI UX 인계와 확인 항목",
-      "path": "docs/ui-ux-handoff.md",
+      "path": "docs/V1/ui-ux-handoff.md",
       "source": "repository_docs",
       "document_type": "docs",
       "updated_at": "2026-10-30T20:45:47+09:00",
       "size_bytes": 6575
+    },
+    {
+      "id": "docs/V2/01_서비스_핵심_정리.md",
+      "title": "재난 대응 비서 - 서비스 핵심 정리",
+      "path": "docs/V2/01_서비스_핵심_정리.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T08:23:26+09:00",
+      "size_bytes": 14864
+    },
+    {
+      "id": "docs/V2/02_실시간_서버_배치도.md",
+      "title": "재난 대응 비서 - 실시간 서버 배치도",
+      "path": "docs/V2/02_실시간_서버_배치도.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T08:23:26+09:00",
+      "size_bytes": 4418
+    },
+    {
+      "id": "docs/V2/03_학습_검증_흐름도.md",
+      "title": "재난 대응 비서 - 학습·검증 흐름도",
+      "path": "docs/V2/03_학습_검증_흐름도.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T08:23:26+09:00",
+      "size_bytes": 3446
+    },
+    {
+      "id": "docs/V2/04-execution-backlog.md",
+      "title": "V2 실행 계획과 작업 계약",
+      "path": "docs/V2/04-execution-backlog.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T09:30:53+09:00",
+      "size_bytes": 21559
+    },
+    {
+      "id": "docs/V2/05-infrastructure-status.md",
+      "title": "V2 인프라 상태 점검",
+      "path": "docs/V2/05-infrastructure-status.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T09:29:07+09:00",
+      "size_bytes": 5323
     }
   ],
   "path": "/Users/hongyongjae/Desktop/helloworld/BONGHWAJIGI/.loom/memory/docs-index.json"
