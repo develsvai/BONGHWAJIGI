@@ -350,6 +350,7 @@ class Replay:
             "area": self.bundle["synthetic_staging"]["area"],
             "sources": [source],
         }
+        urgent_started = time.monotonic()
         job = self.submit(
             "/internal/v1/scenario-events",
             {
@@ -379,6 +380,25 @@ class Replay:
             },
         )
         urgent = wait(lambda: self.job(job, {"complete"}), "공식 기록 긴급 큐", 60)
+        urgent_visible = {}
+        for role in self.state["roles"]:
+            visible = wait(
+                lambda role=role: next(
+                    (
+                        alert
+                        for alert in self.app("GET", "me/alerts", role)["items"]
+                        if alert["incident_id"] == INCIDENT
+                        and alert["status"] == "active"
+                        and alert["relevance"]["status"] == "inside"
+                    ),
+                    None,
+                ),
+                role + " Qwen 통합 전 공식 경보 노출",
+                60,
+            )
+            if visible["requires_qwen"] is not False:
+                raise AssertionError("공식 경보가 Qwen 통합에 의존합니다.")
+            urgent_visible[role] = round(time.monotonic() - urgent_started, 3)
         # 전국 심각 등급을 개인 위험 H3로 추정하지 않는다. 촬영의 국소 조건은 별도 입력이다.
         self.request(
             "PUT",
@@ -402,7 +422,11 @@ class Replay:
             return value if value["status"] == "complete" else None
 
         integration = wait(integrated, "Qwen 사건 통합", 420)
-        self.state["pipeline"] = {"urgent": urgent, "integration": integration}
+        self.state["pipeline"] = {
+            "urgent": urgent,
+            "integration": integration,
+            "urgent_visible_before_qwen_seconds": urgent_visible,
+        }
         self.state["phase"] = "triggered"
         self.save()
 
@@ -482,6 +506,8 @@ class Replay:
                 raise AssertionError("통제 상태에 이동 경로선을 반환했습니다.")
             if role == "B" and route["route"] is None:
                 raise AssertionError("설정된 참고 경로가 반환되지 않았습니다.")
+            if final["content"]["personal_response"]["level"] != expected:
+                raise AssertionError("답변 확인 후 개인 대응 단계가 설정과 다릅니다.")
             results[role] = {
                 "before": first,
                 "turn": turn,
@@ -505,6 +531,7 @@ class Replay:
             roles[role] = {
                 "response_before": before["content"]["personal_response"],
                 "response_after": after["content"]["personal_response"],
+                "initial_question": before["content"]["assistant_utterance"]["text"],
                 "context_revision_before": before["user_context"]["revision"],
                 "context_revision_after": after["user_context"]["revision"],
                 "confirmed_state": after["user_context"]["data"],
@@ -525,6 +552,9 @@ class Replay:
             "personal_locations_and_route_conditions_origin": "synthetic",
             "urgent_queue_status": self.state["pipeline"]["urgent"]["status"],
             "qwen_integration_status": self.state["pipeline"]["integration"]["status"],
+            "urgent_visible_before_qwen_seconds": self.state["pipeline"][
+                "urgent_visible_before_qwen_seconds"
+            ],
             "actual_gps_used": False,
             "real_push_sent": False,
             "actual_119_used": False,
