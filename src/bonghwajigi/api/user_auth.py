@@ -6,10 +6,10 @@ from fastapi import Depends, HTTPException
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 
 from bonghwajigi.db.analysis_models import now
-from bonghwajigi.db.app_models import AppAccount
+from bonghwajigi.db.app_models import AppAccount, AppSession
 
 
-def issue_token(settings, user, scenario, version=1):
+def issue_token(settings, user, scenario, version=1, *, session_id=None, lifetime_seconds=None):
     stamp = now()
     return jwt.encode(
         {
@@ -21,7 +21,8 @@ def issue_token(settings, user, scenario, version=1):
             "aud": settings.jwt_audience,
             "iat": stamp,
             "nbf": stamp,
-            "exp": stamp + timedelta(seconds=settings.jwt_lifetime_seconds),
+            "exp": stamp + timedelta(seconds=lifetime_seconds or settings.jwt_lifetime_seconds),
+            **({"session_id": session_id} if session_id else {}),
         },
         settings.jwt_secret.get_secret_value(),
         algorithm="HS256",
@@ -70,6 +71,17 @@ def user_auth(settings, sessions):
                     or account.token_version != claims["token_version"]
                 ):
                     raise ValueError
+                if "session_id" in claims:
+                    active = session.get(AppSession, claims["session_id"])
+                    if (
+                        not active
+                        or active.revoked_at is not None
+                        or active.expires_at <= now()
+                        or active.scenario_id != claims["scenario_id"]
+                        or active.user_id != claims["sub"]
+                        or active.account_version != account.token_version
+                    ):
+                        raise ValueError
             return claims
         except (jwt.PyJWTError, ValueError, TypeError):
             raise HTTPException(

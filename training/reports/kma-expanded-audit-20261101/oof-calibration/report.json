@@ -1,0 +1,2111 @@
+{
+  "profile": "kor_gk2a_10min_approach_hindcast_1_3_6h_v4_expanded_context_v1",
+  "completed_at_utc": "2026-10-31T15:35:19.097948+00:00",
+  "plan_sha256": "371be7d5361d9a05bf4334fee706a0609c8fcb08400fa7e5d9e6fdde22cd19e7",
+  "calibrator_sha256": "73ebe9b71ce6e32b2f931207d1abe21dc7d8a4f2a8a9f1803f4852a9cba40b2b",
+  "calibration_fitted": true,
+  "status": "evaluated_research_only",
+  "calibrated_score_research_only": true,
+  "probability_calibrated": false,
+  "validation": {
+    "raw": {
+      "hongseong_2023": {
+        "1": {
+          "rows": 21885,
+          "positives": 87,
+          "positive_fraction": 0.003975325565455792,
+          "missing_score_candidates": 0,
+          "average_precision": 0.038780275507535315,
+          "roc_auc": 0.6691813970067907,
+          "brier": 0.0074635786608367475,
+          "logloss": 0.04413730516577526,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 35,
+            "eligible_candidates": 21885,
+            "examined_candidates": 2205,
+            "true_positives": 29,
+            "total_positives": 87,
+            "random_budget_expected_true_positives": 8.781002603730727,
+            "issues_with_score_ties": 35,
+            "issues_with_boundary_ties": 4,
+            "boundary_tie_candidates": 11,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10075394105551748,
+            "precision": 0.013151927437641724,
+            "recall": 0.3333333333333333,
+            "lift_over_random_budget": 3.302584147700738
+          }
+        },
+        "3": {
+          "rows": 21749,
+          "positives": 172,
+          "positive_fraction": 0.007908409582049749,
+          "missing_score_candidates": 0,
+          "average_precision": 0.05814157148712472,
+          "roc_auc": 0.6291583091815036,
+          "brier": 0.016275334898023533,
+          "logloss": 0.08185141270367774,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 35,
+            "eligible_candidates": 21749,
+            "examined_candidates": 2195,
+            "true_positives": 43,
+            "total_positives": 172,
+            "random_budget_expected_true_positives": 17.377092788980963,
+            "issues_with_score_ties": 35,
+            "issues_with_boundary_ties": 9,
+            "boundary_tie_candidates": 27,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10092418042208837,
+            "precision": 0.01958997722095672,
+            "recall": 0.25,
+            "lift_over_random_budget": 2.4745220919385806
+          }
+        },
+        "6": {
+          "rows": 21752,
+          "positives": 204,
+          "positive_fraction": 0.009378447958808385,
+          "missing_score_candidates": 0,
+          "average_precision": 0.08371833352674347,
+          "roc_auc": 0.6663429479829801,
+          "brier": 0.024722550673727823,
+          "logloss": 0.1153003375293551,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 35,
+            "eligible_candidates": 21752,
+            "examined_candidates": 2191,
+            "true_positives": 65,
+            "total_positives": 204,
+            "random_budget_expected_true_positives": 20.555657023202713,
+            "issues_with_score_ties": 35,
+            "issues_with_boundary_ties": 3,
+            "boundary_tie_candidates": 10,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10072636998896653,
+            "precision": 0.029666818804198997,
+            "recall": 0.31862745098039214,
+            "lift_over_random_budget": 3.1621465529722363
+          }
+        }
+      },
+      "hapcheon_2023": {
+        "1": {
+          "rows": 22935,
+          "positives": 23,
+          "positive_fraction": 0.0010028340963592762,
+          "missing_score_candidates": 0,
+          "average_precision": 0.12548226564893283,
+          "roc_auc": 0.9957569225163954,
+          "brier": 0.003974745394432558,
+          "logloss": 0.025398717498336103,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 34,
+            "eligible_candidates": 22935,
+            "examined_candidates": 2307,
+            "true_positives": 23,
+            "total_positives": 23,
+            "random_budget_expected_true_positives": 2.309700485452175,
+            "issues_with_score_ties": 34,
+            "issues_with_boundary_ties": 2,
+            "boundary_tie_candidates": 6,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10058862001308044,
+            "precision": 0.009969657563935847,
+            "recall": 1.0,
+            "lift_over_random_budget": 9.958001110909079
+          }
+        },
+        "3": {
+          "rows": 21178,
+          "positives": 48,
+          "positive_fraction": 0.0022665029747851546,
+          "missing_score_candidates": 0,
+          "average_precision": 0.20668930752841017,
+          "roc_auc": 0.9950095638113268,
+          "brier": 0.011277814799886815,
+          "logloss": 0.05629688484950709,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 34,
+            "eligible_candidates": 21178,
+            "examined_candidates": 2134,
+            "true_positives": 48,
+            "total_positives": 48,
+            "random_budget_expected_true_positives": 4.829867403927453,
+            "issues_with_score_ties": 34,
+            "issues_with_boundary_ties": 3,
+            "boundary_tie_candidates": 6,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10076494475398999,
+            "precision": 0.022492970946579195,
+            "recall": 1.0,
+            "lift_over_random_budget": 9.938161027147109
+          }
+        },
+        "6": {
+          "rows": 16363,
+          "positives": 70,
+          "positive_fraction": 0.0042779441422722,
+          "missing_score_candidates": 0,
+          "average_precision": 0.334114421979337,
+          "roc_auc": 0.9933485896660266,
+          "brier": 0.026249532513720034,
+          "logloss": 0.1132243360613836,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 34,
+            "eligible_candidates": 16363,
+            "examined_candidates": 1651,
+            "true_positives": 70,
+            "total_positives": 70,
+            "random_budget_expected_true_positives": 7.127145070659637,
+            "issues_with_score_ties": 34,
+            "issues_with_boundary_ties": 0,
+            "boundary_tie_candidates": 0,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10089836826987716,
+            "precision": 0.04239854633555421,
+            "recall": 1.0,
+            "lift_over_random_budget": 9.821604486229619
+          }
+        }
+      },
+      "daejeon_geumsan_2023": {
+        "1": {
+          "rows": 20568,
+          "positives": 62,
+          "positive_fraction": 0.0030143912874367952,
+          "missing_score_candidates": 0,
+          "average_precision": 0.39571428482539994,
+          "roc_auc": 0.9822321869602288,
+          "brier": 0.007666716941496935,
+          "logloss": 0.03986598594904057,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 35,
+            "eligible_candidates": 20568,
+            "examined_candidates": 2072,
+            "true_positives": 59,
+            "total_positives": 62,
+            "random_budget_expected_true_positives": 6.249785383641999,
+            "issues_with_score_ties": 35,
+            "issues_with_boundary_ties": 4,
+            "boundary_tie_candidates": 9,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10073901205756515,
+            "precision": 0.028474903474903474,
+            "recall": 0.9516129032258065,
+            "lift_over_random_budget": 9.440324167678595
+          }
+        },
+        "3": {
+          "rows": 20471,
+          "positives": 134,
+          "positive_fraction": 0.006545845342191393,
+          "missing_score_candidates": 0,
+          "average_precision": 0.4714072717636623,
+          "roc_auc": 0.9834064667076186,
+          "brier": 0.020899056743877136,
+          "logloss": 0.08628783792360978,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 35,
+            "eligible_candidates": 20471,
+            "examined_candidates": 2064,
+            "true_positives": 125,
+            "total_positives": 134,
+            "random_budget_expected_true_positives": 13.514268733356282,
+            "issues_with_score_ties": 35,
+            "issues_with_boundary_ties": 7,
+            "boundary_tie_candidates": 16,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10082555810658982,
+            "precision": 0.060562015503875966,
+            "recall": 0.9328358208955224,
+            "lift_over_random_budget": 9.249483080906304
+          }
+        },
+        "6": {
+          "rows": 20412,
+          "positives": 188,
+          "positive_fraction": 0.009210268469527728,
+          "missing_score_candidates": 0,
+          "average_precision": 0.45515876803146593,
+          "roc_auc": 0.9660568915381766,
+          "brier": 0.03404787507815398,
+          "logloss": 0.13308759477112883,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 35,
+            "eligible_candidates": 20412,
+            "examined_candidates": 2058,
+            "true_positives": 171,
+            "total_positives": 188,
+            "random_budget_expected_true_positives": 18.94844464448936,
+            "issues_with_score_ties": 35,
+            "issues_with_boundary_ties": 7,
+            "boundary_tie_candidates": 16,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10082304526748971,
+            "precision": 0.08309037900874636,
+            "recall": 0.9095744680851063,
+            "lift_over_random_budget": 9.02448740296638
+          }
+        }
+      },
+      "hampyeong_2023": {
+        "1": {
+          "rows": 3988,
+          "positives": 8,
+          "positive_fraction": 0.0020060180541624875,
+          "missing_score_candidates": 0,
+          "average_precision": 0.5452380952380952,
+          "roc_auc": 0.9983040201005025,
+          "brier": 0.0032279030530052957,
+          "logloss": 0.025084995320931842,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 9,
+            "eligible_candidates": 3988,
+            "examined_candidates": 402,
+            "true_positives": 8,
+            "total_positives": 8,
+            "random_budget_expected_true_positives": 0.8014336917562724,
+            "issues_with_score_ties": 9,
+            "issues_with_boundary_ties": 0,
+            "boundary_tie_candidates": 0,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10080240722166499,
+            "precision": 0.01990049751243781,
+            "recall": 1.0,
+            "lift_over_random_budget": 9.98211091234347
+          }
+        },
+        "3": {
+          "rows": 746,
+          "positives": 16,
+          "positive_fraction": 0.021447721179624665,
+          "missing_score_candidates": 0,
+          "average_precision": 0.9843137254901961,
+          "roc_auc": 0.9996575342465754,
+          "brier": 0.0046835519544214076,
+          "logloss": 0.03458794862200136,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 7,
+            "eligible_candidates": 746,
+            "examined_candidates": 79,
+            "true_positives": 4,
+            "total_positives": 16,
+            "random_budget_expected_true_positives": 4.0,
+            "issues_with_score_ties": 5,
+            "issues_with_boundary_ties": 2,
+            "boundary_tie_candidates": 4,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10589812332439678,
+            "precision": 0.05063291139240506,
+            "recall": 0.25,
+            "lift_over_random_budget": 1.0
+          }
+        },
+        "6": {
+          "rows": 16,
+          "positives": 16,
+          "positive_fraction": 1.0,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null,
+          "brier": 0.01086395910602067,
+          "logloss": 0.09784671185196045,
+          "eligible_for_ap_comparison": false,
+          "exclusion_reason": "both_classes_required",
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 4,
+            "eligible_candidates": 16,
+            "examined_candidates": 4,
+            "true_positives": 4,
+            "total_positives": 16,
+            "random_budget_expected_true_positives": 4.0,
+            "issues_with_score_ties": 2,
+            "issues_with_boundary_ties": 0,
+            "boundary_tie_candidates": 0,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.25,
+            "precision": 1.0,
+            "recall": 0.25,
+            "lift_over_random_budget": 1.0
+          }
+        }
+      },
+      "suncheon_2023": {
+        "1": {
+          "rows": 5762,
+          "positives": 0,
+          "positive_fraction": 0.0,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null,
+          "brier": 0.0045470576373813345,
+          "logloss": 0.028898026212505333,
+          "eligible_for_ap_comparison": false,
+          "exclusion_reason": "both_classes_required",
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 12,
+            "eligible_candidates": 5762,
+            "examined_candidates": 583,
+            "true_positives": 0,
+            "total_positives": 0,
+            "random_budget_expected_true_positives": 0.0,
+            "issues_with_score_ties": 12,
+            "issues_with_boundary_ties": 2,
+            "boundary_tie_candidates": 6,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10118014578271434,
+            "precision": 0.0,
+            "recall": null,
+            "lift_over_random_budget": null
+          }
+        },
+        "3": {
+          "rows": 2223,
+          "positives": 0,
+          "positive_fraction": 0.0,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null,
+          "brier": 0.006581326518190375,
+          "logloss": 0.04185791603674992,
+          "eligible_for_ap_comparison": false,
+          "exclusion_reason": "both_classes_required",
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 6,
+            "eligible_candidates": 2223,
+            "examined_candidates": 226,
+            "true_positives": 0,
+            "total_positives": 0,
+            "random_budget_expected_true_positives": 0.0,
+            "issues_with_score_ties": 6,
+            "issues_with_boundary_ties": 0,
+            "boundary_tie_candidates": 0,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10166441745389114,
+            "precision": 0.0,
+            "recall": null,
+            "lift_over_random_budget": null
+          }
+        },
+        "6": {
+          "rows": 0,
+          "positives": 0,
+          "positive_fraction": null,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null,
+          "brier": null,
+          "logloss": null,
+          "eligible_for_ap_comparison": false,
+          "exclusion_reason": "both_classes_required",
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 0,
+            "eligible_candidates": 0,
+            "examined_candidates": 0,
+            "true_positives": 0,
+            "total_positives": 0,
+            "random_budget_expected_true_positives": 0.0,
+            "issues_with_score_ties": 0,
+            "issues_with_boundary_ties": 0,
+            "boundary_tie_candidates": 0,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": null,
+            "precision": null,
+            "recall": null,
+            "lift_over_random_budget": null
+          }
+        }
+      },
+      "yeongju_2023": {
+        "1": {
+          "rows": 10194,
+          "positives": 13,
+          "positive_fraction": 0.0012752599568373554,
+          "missing_score_candidates": 0,
+          "average_precision": 0.5908532445297152,
+          "roc_auc": 0.9988515560659751,
+          "brier": 0.003756694389804631,
+          "logloss": 0.028901018079862176,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 23,
+            "eligible_candidates": 10194,
+            "examined_candidates": 1027,
+            "true_positives": 13,
+            "total_positives": 13,
+            "random_budget_expected_true_positives": 1.3041751934937447,
+            "issues_with_score_ties": 23,
+            "issues_with_boundary_ties": 3,
+            "boundary_tie_candidates": 8,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10074553659015106,
+            "precision": 0.012658227848101266,
+            "recall": 1.0,
+            "lift_over_random_budget": 9.967985946101614
+          }
+        },
+        "3": {
+          "rows": 6323,
+          "positives": 19,
+          "positive_fraction": 0.0030049027360430176,
+          "missing_score_candidates": 0,
+          "average_precision": 0.7723555754460971,
+          "roc_auc": 0.9990732701041944,
+          "brier": 0.011610933208083924,
+          "logloss": 0.0689107850926354,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 19,
+            "eligible_candidates": 6323,
+            "examined_candidates": 639,
+            "true_positives": 18,
+            "total_positives": 19,
+            "random_budget_expected_true_positives": 2.7740407658876753,
+            "issues_with_score_ties": 18,
+            "issues_with_boundary_ties": 3,
+            "boundary_tie_candidates": 8,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10105962359639412,
+            "precision": 0.028169014084507043,
+            "recall": 0.9473684210526315,
+            "lift_over_random_budget": 6.48872944527191
+          }
+        },
+        "6": {
+          "rows": 1039,
+          "positives": 19,
+          "positive_fraction": 0.01828681424446583,
+          "missing_score_candidates": 0,
+          "average_precision": 0.9973684210526316,
+          "roc_auc": 0.9999484004127966,
+          "brier": 0.017997061092156773,
+          "logloss": 0.10088121731897666,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 17,
+            "eligible_candidates": 1039,
+            "examined_candidates": 114,
+            "true_positives": 18,
+            "total_positives": 19,
+            "random_budget_expected_true_positives": 9.128355102193543,
+            "issues_with_score_ties": 9,
+            "issues_with_boundary_ties": 0,
+            "boundary_tie_candidates": 0,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.109720885466795,
+            "precision": 0.15789473684210525,
+            "recall": 0.9473684210526315,
+            "lift_over_random_budget": 1.9718777149318611
+          }
+        }
+      }
+    },
+    "sigmoid": {
+      "hongseong_2023": {
+        "1": {
+          "rows": 21885,
+          "positives": 87,
+          "positive_fraction": 0.003975325565455792,
+          "missing_score_candidates": 0,
+          "average_precision": 0.038780275507535315,
+          "roc_auc": 0.6691813970067907,
+          "brier": 0.003890215259265025,
+          "logloss": 0.02403256537629886,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 35,
+            "eligible_candidates": 21885,
+            "examined_candidates": 2205,
+            "true_positives": 29,
+            "total_positives": 87,
+            "random_budget_expected_true_positives": 8.781002603730727,
+            "issues_with_score_ties": 35,
+            "issues_with_boundary_ties": 4,
+            "boundary_tie_candidates": 11,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10075394105551748,
+            "precision": 0.013151927437641724,
+            "recall": 0.3333333333333333,
+            "lift_over_random_budget": 3.302584147700738
+          }
+        },
+        "3": {
+          "rows": 21749,
+          "positives": 172,
+          "positive_fraction": 0.007908409582049749,
+          "missing_score_candidates": 0,
+          "average_precision": 0.05814157148712472,
+          "roc_auc": 0.6291583091815036,
+          "brier": 0.007658953293580476,
+          "logloss": 0.0440209581226769,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 35,
+            "eligible_candidates": 21749,
+            "examined_candidates": 2195,
+            "true_positives": 43,
+            "total_positives": 172,
+            "random_budget_expected_true_positives": 17.377092788980963,
+            "issues_with_score_ties": 35,
+            "issues_with_boundary_ties": 9,
+            "boundary_tie_candidates": 27,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10092418042208837,
+            "precision": 0.01958997722095672,
+            "recall": 0.25,
+            "lift_over_random_budget": 2.4745220919385806
+          }
+        },
+        "6": {
+          "rows": 21752,
+          "positives": 204,
+          "positive_fraction": 0.009378447958808385,
+          "missing_score_candidates": 0,
+          "average_precision": 0.08371833352674347,
+          "roc_auc": 0.6663429479829801,
+          "brier": 0.008976805812260106,
+          "logloss": 0.04954177510845589,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 35,
+            "eligible_candidates": 21752,
+            "examined_candidates": 2191,
+            "true_positives": 65,
+            "total_positives": 204,
+            "random_budget_expected_true_positives": 20.555657023202713,
+            "issues_with_score_ties": 35,
+            "issues_with_boundary_ties": 3,
+            "boundary_tie_candidates": 10,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10072636998896653,
+            "precision": 0.029666818804198997,
+            "recall": 0.31862745098039214,
+            "lift_over_random_budget": 3.1621465529722363
+          }
+        }
+      },
+      "hapcheon_2023": {
+        "1": {
+          "rows": 22935,
+          "positives": 23,
+          "positive_fraction": 0.0010028340963592762,
+          "missing_score_candidates": 0,
+          "average_precision": 0.12548226564893283,
+          "roc_auc": 0.9957569225163954,
+          "brier": 0.0009349584199222224,
+          "logloss": 0.006401599470826192,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 34,
+            "eligible_candidates": 22935,
+            "examined_candidates": 2307,
+            "true_positives": 23,
+            "total_positives": 23,
+            "random_budget_expected_true_positives": 2.309700485452175,
+            "issues_with_score_ties": 34,
+            "issues_with_boundary_ties": 2,
+            "boundary_tie_candidates": 6,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10058862001308044,
+            "precision": 0.009969657563935847,
+            "recall": 1.0,
+            "lift_over_random_budget": 9.958001110909079
+          }
+        },
+        "3": {
+          "rows": 21178,
+          "positives": 48,
+          "positive_fraction": 0.0022665029747851546,
+          "missing_score_candidates": 0,
+          "average_precision": 0.20668930752841017,
+          "roc_auc": 0.9950095638113268,
+          "brier": 0.0020079507043217577,
+          "logloss": 0.012060669599251847,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 34,
+            "eligible_candidates": 21178,
+            "examined_candidates": 2134,
+            "true_positives": 48,
+            "total_positives": 48,
+            "random_budget_expected_true_positives": 4.829867403927453,
+            "issues_with_score_ties": 34,
+            "issues_with_boundary_ties": 3,
+            "boundary_tie_candidates": 6,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10076494475398999,
+            "precision": 0.022492970946579195,
+            "recall": 1.0,
+            "lift_over_random_budget": 9.938161027147109
+          }
+        },
+        "6": {
+          "rows": 16363,
+          "positives": 70,
+          "positive_fraction": 0.0042779441422722,
+          "missing_score_candidates": 0,
+          "average_precision": 0.334114421979337,
+          "roc_auc": 0.9933485896660266,
+          "brier": 0.0035439950488562557,
+          "logloss": 0.021137505643169997,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 34,
+            "eligible_candidates": 16363,
+            "examined_candidates": 1651,
+            "true_positives": 70,
+            "total_positives": 70,
+            "random_budget_expected_true_positives": 7.127145070659637,
+            "issues_with_score_ties": 34,
+            "issues_with_boundary_ties": 0,
+            "boundary_tie_candidates": 0,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10089836826987716,
+            "precision": 0.04239854633555421,
+            "recall": 1.0,
+            "lift_over_random_budget": 9.821604486229619
+          }
+        }
+      },
+      "daejeon_geumsan_2023": {
+        "1": {
+          "rows": 20568,
+          "positives": 62,
+          "positive_fraction": 0.0030143912874367952,
+          "missing_score_candidates": 0,
+          "average_precision": 0.39571428482539994,
+          "roc_auc": 0.9822321869602288,
+          "brier": 0.002571718251837155,
+          "logloss": 0.01281363607868152,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 35,
+            "eligible_candidates": 20568,
+            "examined_candidates": 2072,
+            "true_positives": 59,
+            "total_positives": 62,
+            "random_budget_expected_true_positives": 6.249785383641999,
+            "issues_with_score_ties": 35,
+            "issues_with_boundary_ties": 4,
+            "boundary_tie_candidates": 9,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10073901205756515,
+            "precision": 0.028474903474903474,
+            "recall": 0.9516129032258065,
+            "lift_over_random_budget": 9.440324167678595
+          }
+        },
+        "3": {
+          "rows": 20471,
+          "positives": 134,
+          "positive_fraction": 0.006545845342191393,
+          "missing_score_candidates": 0,
+          "average_precision": 0.4714072717636623,
+          "roc_auc": 0.9834064667076186,
+          "brier": 0.0050399911298701265,
+          "logloss": 0.023204228200815104,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 35,
+            "eligible_candidates": 20471,
+            "examined_candidates": 2064,
+            "true_positives": 125,
+            "total_positives": 134,
+            "random_budget_expected_true_positives": 13.514268733356282,
+            "issues_with_score_ties": 35,
+            "issues_with_boundary_ties": 7,
+            "boundary_tie_candidates": 16,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10082555810658982,
+            "precision": 0.060562015503875966,
+            "recall": 0.9328358208955224,
+            "lift_over_random_budget": 9.249483080906304
+          }
+        },
+        "6": {
+          "rows": 20412,
+          "positives": 188,
+          "positive_fraction": 0.009210268469527728,
+          "missing_score_candidates": 0,
+          "average_precision": 0.45515876803146593,
+          "roc_auc": 0.9660568915381766,
+          "brier": 0.007107123293411021,
+          "logloss": 0.033426503764471004,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 35,
+            "eligible_candidates": 20412,
+            "examined_candidates": 2058,
+            "true_positives": 171,
+            "total_positives": 188,
+            "random_budget_expected_true_positives": 18.94844464448936,
+            "issues_with_score_ties": 35,
+            "issues_with_boundary_ties": 7,
+            "boundary_tie_candidates": 16,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10082304526748971,
+            "precision": 0.08309037900874636,
+            "recall": 0.9095744680851063,
+            "lift_over_random_budget": 9.02448740296638
+          }
+        }
+      },
+      "hampyeong_2023": {
+        "1": {
+          "rows": 3988,
+          "positives": 8,
+          "positive_fraction": 0.0020060180541624875,
+          "missing_score_candidates": 0,
+          "average_precision": 0.5452380952380952,
+          "roc_auc": 0.9983040201005025,
+          "brier": 0.00173749418798888,
+          "logloss": 0.00886716774874053,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 9,
+            "eligible_candidates": 3988,
+            "examined_candidates": 402,
+            "true_positives": 8,
+            "total_positives": 8,
+            "random_budget_expected_true_positives": 0.8014336917562724,
+            "issues_with_score_ties": 9,
+            "issues_with_boundary_ties": 0,
+            "boundary_tie_candidates": 0,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10080240722166499,
+            "precision": 0.01990049751243781,
+            "recall": 1.0,
+            "lift_over_random_budget": 9.98211091234347
+          }
+        },
+        "3": {
+          "rows": 746,
+          "positives": 16,
+          "positive_fraction": 0.021447721179624665,
+          "missing_score_candidates": 0,
+          "average_precision": 0.9843137254901961,
+          "roc_auc": 0.9996575342465754,
+          "brier": 0.01211242528029736,
+          "logloss": 0.03529917907316102,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 7,
+            "eligible_candidates": 746,
+            "examined_candidates": 79,
+            "true_positives": 4,
+            "total_positives": 16,
+            "random_budget_expected_true_positives": 4.0,
+            "issues_with_score_ties": 5,
+            "issues_with_boundary_ties": 2,
+            "boundary_tie_candidates": 4,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10589812332439678,
+            "precision": 0.05063291139240506,
+            "recall": 0.25,
+            "lift_over_random_budget": 1.0
+          }
+        },
+        "6": {
+          "rows": 16,
+          "positives": 16,
+          "positive_fraction": 1.0,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null,
+          "brier": 0.4538731402968976,
+          "logloss": 1.1431435836739505,
+          "eligible_for_ap_comparison": false,
+          "exclusion_reason": "both_classes_required",
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 4,
+            "eligible_candidates": 16,
+            "examined_candidates": 4,
+            "true_positives": 4,
+            "total_positives": 16,
+            "random_budget_expected_true_positives": 4.0,
+            "issues_with_score_ties": 2,
+            "issues_with_boundary_ties": 0,
+            "boundary_tie_candidates": 0,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.25,
+            "precision": 1.0,
+            "recall": 0.25,
+            "lift_over_random_budget": 1.0
+          }
+        }
+      },
+      "suncheon_2023": {
+        "1": {
+          "rows": 5762,
+          "positives": 0,
+          "positive_fraction": 0.0,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null,
+          "brier": 0.00012269682488582142,
+          "logloss": 0.00445602312116167,
+          "eligible_for_ap_comparison": false,
+          "exclusion_reason": "both_classes_required",
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 12,
+            "eligible_candidates": 5762,
+            "examined_candidates": 583,
+            "true_positives": 0,
+            "total_positives": 0,
+            "random_budget_expected_true_positives": 0.0,
+            "issues_with_score_ties": 12,
+            "issues_with_boundary_ties": 2,
+            "boundary_tie_candidates": 6,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10118014578271434,
+            "precision": 0.0,
+            "recall": null,
+            "lift_over_random_budget": null
+          }
+        },
+        "3": {
+          "rows": 2223,
+          "positives": 0,
+          "positive_fraction": 0.0,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null,
+          "brier": 0.00024801564675206166,
+          "logloss": 0.00624656311452388,
+          "eligible_for_ap_comparison": false,
+          "exclusion_reason": "both_classes_required",
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 6,
+            "eligible_candidates": 2223,
+            "examined_candidates": 226,
+            "true_positives": 0,
+            "total_positives": 0,
+            "random_budget_expected_true_positives": 0.0,
+            "issues_with_score_ties": 6,
+            "issues_with_boundary_ties": 0,
+            "boundary_tie_candidates": 0,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10166441745389114,
+            "precision": 0.0,
+            "recall": null,
+            "lift_over_random_budget": null
+          }
+        },
+        "6": {
+          "rows": 0,
+          "positives": 0,
+          "positive_fraction": null,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null,
+          "brier": null,
+          "logloss": null,
+          "eligible_for_ap_comparison": false,
+          "exclusion_reason": "both_classes_required",
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 0,
+            "eligible_candidates": 0,
+            "examined_candidates": 0,
+            "true_positives": 0,
+            "total_positives": 0,
+            "random_budget_expected_true_positives": 0.0,
+            "issues_with_score_ties": 0,
+            "issues_with_boundary_ties": 0,
+            "boundary_tie_candidates": 0,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": null,
+            "precision": null,
+            "recall": null,
+            "lift_over_random_budget": null
+          }
+        }
+      },
+      "yeongju_2023": {
+        "1": {
+          "rows": 10194,
+          "positives": 13,
+          "positive_fraction": 0.0012752599568373554,
+          "missing_score_candidates": 0,
+          "average_precision": 0.5908532445297152,
+          "roc_auc": 0.9988515560659751,
+          "brier": 0.001008648506664639,
+          "logloss": 0.006968787773661171,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 23,
+            "eligible_candidates": 10194,
+            "examined_candidates": 1027,
+            "true_positives": 13,
+            "total_positives": 13,
+            "random_budget_expected_true_positives": 1.3041751934937447,
+            "issues_with_score_ties": 23,
+            "issues_with_boundary_ties": 3,
+            "boundary_tie_candidates": 8,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10074553659015106,
+            "precision": 0.012658227848101266,
+            "recall": 1.0,
+            "lift_over_random_budget": 9.967985946101614
+          }
+        },
+        "3": {
+          "rows": 6323,
+          "positives": 19,
+          "positive_fraction": 0.0030049027360430176,
+          "missing_score_candidates": 0,
+          "average_precision": 0.7723555754460971,
+          "roc_auc": 0.9990732701041944,
+          "brier": 0.0018902445719782659,
+          "logloss": 0.013213028835577817,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 19,
+            "eligible_candidates": 6323,
+            "examined_candidates": 639,
+            "true_positives": 18,
+            "total_positives": 19,
+            "random_budget_expected_true_positives": 2.7740407658876753,
+            "issues_with_score_ties": 18,
+            "issues_with_boundary_ties": 3,
+            "boundary_tie_candidates": 8,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10105962359639412,
+            "precision": 0.028169014084507043,
+            "recall": 0.9473684210526315,
+            "lift_over_random_budget": 6.48872944527191
+          }
+        },
+        "6": {
+          "rows": 1039,
+          "positives": 19,
+          "positive_fraction": 0.01828681424446583,
+          "missing_score_candidates": 0,
+          "average_precision": 0.9973684210526316,
+          "roc_auc": 0.9999484004127966,
+          "brier": 0.007295114586392153,
+          "logloss": 0.03030938316007014,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 17,
+            "eligible_candidates": 1039,
+            "examined_candidates": 114,
+            "true_positives": 18,
+            "total_positives": 19,
+            "random_budget_expected_true_positives": 9.128355102193543,
+            "issues_with_score_ties": 9,
+            "issues_with_boundary_ties": 0,
+            "boundary_tie_candidates": 0,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.109720885466795,
+            "precision": 0.15789473684210525,
+            "recall": 0.9473684210526315,
+            "lift_over_random_budget": 1.9718777149318611
+          }
+        }
+      }
+    },
+    "constant_training_prior": {
+      "hongseong_2023": {
+        "1": {
+          "rows": 21885,
+          "positives": 87,
+          "positive_fraction": 0.003975325565455792,
+          "missing_score_candidates": 0,
+          "average_precision": 0.003975325565455792,
+          "roc_auc": 0.5,
+          "brier": 0.003963779294088627,
+          "logloss": 0.026790094692760516,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 35,
+            "eligible_candidates": 21885,
+            "examined_candidates": 2205,
+            "true_positives": 1,
+            "total_positives": 87,
+            "random_budget_expected_true_positives": 8.781002603730727,
+            "issues_with_score_ties": 35,
+            "issues_with_boundary_ties": 35,
+            "boundary_tie_candidates": 21885,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10075394105551748,
+            "precision": 0.00045351473922902497,
+            "recall": 0.011494252873563218,
+            "lift_over_random_budget": 0.11388221198968061
+          }
+        },
+        "3": {
+          "rows": 21749,
+          "positives": 172,
+          "positive_fraction": 0.007908409582049749,
+          "missing_score_candidates": 0,
+          "average_precision": 0.007908409582049749,
+          "roc_auc": 0.5,
+          "brier": 0.007850769071413738,
+          "logloss": 0.046538377074065614,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 35,
+            "eligible_candidates": 21749,
+            "examined_candidates": 2195,
+            "true_positives": 1,
+            "total_positives": 172,
+            "random_budget_expected_true_positives": 17.377092788980963,
+            "issues_with_score_ties": 35,
+            "issues_with_boundary_ties": 35,
+            "boundary_tie_candidates": 21749,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10092418042208837,
+            "precision": 0.00045558086560364467,
+            "recall": 0.005813953488372093,
+            "lift_over_random_budget": 0.05754702539392048
+          }
+        },
+        "6": {
+          "rows": 21752,
+          "positives": 204,
+          "positive_fraction": 0.009378447958808385,
+          "missing_score_candidates": 0,
+          "average_precision": 0.009378447958808385,
+          "roc_auc": 0.5,
+          "brier": 0.009295392798417816,
+          "logloss": 0.053354244444321935,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 35,
+            "eligible_candidates": 21752,
+            "examined_candidates": 2191,
+            "true_positives": 2,
+            "total_positives": 204,
+            "random_budget_expected_true_positives": 20.555657023202713,
+            "issues_with_score_ties": 35,
+            "issues_with_boundary_ties": 35,
+            "boundary_tie_candidates": 21752,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10072636998896653,
+            "precision": 0.0009128251939753537,
+            "recall": 0.00980392156862745,
+            "lift_over_random_budget": 0.09729681701453036
+          }
+        }
+      },
+      "hapcheon_2023": {
+        "1": {
+          "rows": 22935,
+          "positives": 23,
+          "positive_fraction": 0.0010028340963592762,
+          "missing_score_candidates": 0,
+          "average_precision": 0.0010028340963592762,
+          "roc_auc": 0.5,
+          "brier": 0.001002655165998394,
+          "logloss": 0.008189299505260272,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 34,
+            "eligible_candidates": 22935,
+            "examined_candidates": 2307,
+            "true_positives": 0,
+            "total_positives": 23,
+            "random_budget_expected_true_positives": 2.309700485452175,
+            "issues_with_score_ties": 34,
+            "issues_with_boundary_ties": 34,
+            "boundary_tie_candidates": 22935,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10058862001308044,
+            "precision": 0.0,
+            "recall": 0.0,
+            "lift_over_random_budget": 0.0
+          }
+        },
+        "3": {
+          "rows": 21178,
+          "positives": 48,
+          "positive_fraction": 0.0022665029747851546,
+          "missing_score_candidates": 0,
+          "average_precision": 0.0022665029747851546,
+          "roc_auc": 0.5,
+          "brier": 0.002273115498903629,
+          "logloss": 0.017411554525328086,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 34,
+            "eligible_candidates": 21178,
+            "examined_candidates": 2134,
+            "true_positives": 0,
+            "total_positives": 48,
+            "random_budget_expected_true_positives": 4.829867403927453,
+            "issues_with_score_ties": 34,
+            "issues_with_boundary_ties": 34,
+            "boundary_tie_candidates": 21178,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10076494475398999,
+            "precision": 0.0,
+            "recall": 0.0,
+            "lift_over_random_budget": 0.0
+          }
+        },
+        "6": {
+          "rows": 16363,
+          "positives": 70,
+          "positive_fraction": 0.0042779441422722,
+          "missing_score_candidates": 0,
+          "average_precision": 0.0042779441422722,
+          "roc_auc": 0.5,
+          "brier": 0.004313139783771722,
+          "logloss": 0.03067855621705196,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 34,
+            "eligible_candidates": 16363,
+            "examined_candidates": 1651,
+            "true_positives": 0,
+            "total_positives": 70,
+            "random_budget_expected_true_positives": 7.127145070659637,
+            "issues_with_score_ties": 34,
+            "issues_with_boundary_ties": 34,
+            "boundary_tie_candidates": 16363,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10089836826987716,
+            "precision": 0.0,
+            "recall": 0.0,
+            "lift_over_random_budget": 0.0
+          }
+        }
+      },
+      "daejeon_geumsan_2023": {
+        "1": {
+          "rows": 20568,
+          "positives": 62,
+          "positive_fraction": 0.0030143912874367952,
+          "missing_score_candidates": 0,
+          "average_precision": 0.0030143912874367952,
+          "roc_auc": 0.5,
+          "brier": 0.003006519801257892,
+          "logloss": 0.02077690949781273,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 35,
+            "eligible_candidates": 20568,
+            "examined_candidates": 2072,
+            "true_positives": 0,
+            "total_positives": 62,
+            "random_budget_expected_true_positives": 6.249785383641999,
+            "issues_with_score_ties": 35,
+            "issues_with_boundary_ties": 35,
+            "boundary_tie_candidates": 20568,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10073901205756515,
+            "precision": 0.0,
+            "recall": 0.0,
+            "lift_over_random_budget": 0.0
+          }
+        },
+        "3": {
+          "rows": 20471,
+          "positives": 134,
+          "positive_fraction": 0.006545845342191393,
+          "missing_score_candidates": 0,
+          "average_precision": 0.006545845342191393,
+          "roc_auc": 0.5,
+          "brier": 0.006503722438200289,
+          "logloss": 0.03950402333724408,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 35,
+            "eligible_candidates": 20471,
+            "examined_candidates": 2064,
+            "true_positives": 0,
+            "total_positives": 134,
+            "random_budget_expected_true_positives": 13.514268733356282,
+            "issues_with_score_ties": 35,
+            "issues_with_boundary_ties": 35,
+            "boundary_tie_candidates": 20471,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10082555810658982,
+            "precision": 0.0,
+            "recall": 0.0,
+            "lift_over_random_budget": 0.0
+          }
+        },
+        "6": {
+          "rows": 20412,
+          "positives": 188,
+          "positive_fraction": 0.009210268469527728,
+          "missing_score_candidates": 0,
+          "average_precision": 0.009210268469527728,
+          "roc_auc": 0.5,
+          "brier": 0.009131112406203694,
+          "logloss": 0.05260655641146803,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 35,
+            "eligible_candidates": 20412,
+            "examined_candidates": 2058,
+            "true_positives": 0,
+            "total_positives": 188,
+            "random_budget_expected_true_positives": 18.94844464448936,
+            "issues_with_score_ties": 35,
+            "issues_with_boundary_ties": 35,
+            "boundary_tie_candidates": 20412,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10082304526748971,
+            "precision": 0.0,
+            "recall": 0.0,
+            "lift_over_random_budget": 0.0
+          }
+        }
+      },
+      "hampyeong_2023": {
+        "1": {
+          "rows": 3988,
+          "positives": 8,
+          "positive_fraction": 0.0020060180541624875,
+          "missing_score_candidates": 0,
+          "average_precision": 0.0020060180541624875,
+          "roc_auc": 0.5,
+          "brier": 0.002002002768253091,
+          "logloss": 0.01446686818072399,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 9,
+            "eligible_candidates": 3988,
+            "examined_candidates": 402,
+            "true_positives": 0,
+            "total_positives": 8,
+            "random_budget_expected_true_positives": 0.8014336917562724,
+            "issues_with_score_ties": 9,
+            "issues_with_boundary_ties": 9,
+            "boundary_tie_candidates": 3988,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10080240722166499,
+            "precision": 0.0,
+            "recall": 0.0,
+            "lift_over_random_budget": 0.0
+          }
+        },
+        "3": {
+          "rows": 746,
+          "positives": 16,
+          "positive_fraction": 0.021447721179624665,
+          "missing_score_candidates": 0,
+          "average_precision": 0.021447721179624665,
+          "roc_auc": 0.5,
+          "brier": 0.021235887783641945,
+          "logloss": 0.11643622434201738,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 7,
+            "eligible_candidates": 746,
+            "examined_candidates": 79,
+            "true_positives": 4,
+            "total_positives": 16,
+            "random_budget_expected_true_positives": 4.0,
+            "issues_with_score_ties": 7,
+            "issues_with_boundary_ties": 7,
+            "boundary_tie_candidates": 746,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10589812332439678,
+            "precision": 0.05063291139240506,
+            "recall": 0.25,
+            "lift_over_random_budget": 1.0
+          }
+        },
+        "6": {
+          "rows": 16,
+          "positives": 16,
+          "positive_fraction": 1.0,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null,
+          "brier": 0.9769502346650778,
+          "logloss": 4.457433973288691,
+          "eligible_for_ap_comparison": false,
+          "exclusion_reason": "both_classes_required",
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 4,
+            "eligible_candidates": 16,
+            "examined_candidates": 4,
+            "true_positives": 4,
+            "total_positives": 16,
+            "random_budget_expected_true_positives": 4.0,
+            "issues_with_score_ties": 4,
+            "issues_with_boundary_ties": 4,
+            "boundary_tie_candidates": 16,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.25,
+            "precision": 1.0,
+            "recall": 0.25,
+            "lift_over_random_budget": 1.0
+          }
+        }
+      },
+      "suncheon_2023": {
+        "1": {
+          "rows": 5762,
+          "positives": 0,
+          "positive_fraction": 0.0,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null,
+          "brier": 3.6560872546631393e-06,
+          "logloss": 0.00191392013837163,
+          "eligible_for_ap_comparison": false,
+          "exclusion_reason": "both_classes_required",
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 12,
+            "eligible_candidates": 5762,
+            "examined_candidates": 583,
+            "true_positives": 0,
+            "total_positives": 0,
+            "random_budget_expected_true_positives": 0.0,
+            "issues_with_score_ties": 12,
+            "issues_with_boundary_ties": 12,
+            "boundary_tie_candidates": 5762,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10118014578271434,
+            "precision": 0.0,
+            "recall": null,
+            "lift_over_random_budget": null
+          }
+        },
+        "3": {
+          "rows": 2223,
+          "positives": 0,
+          "positive_fraction": 0.0,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null,
+          "brier": 3.2424666102976996e-05,
+          "logloss": 0.005710540214359204,
+          "eligible_for_ap_comparison": false,
+          "exclusion_reason": "both_classes_required",
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 6,
+            "eligible_candidates": 2223,
+            "examined_candidates": 226,
+            "true_positives": 0,
+            "total_positives": 0,
+            "random_budget_expected_true_positives": 0.0,
+            "issues_with_score_ties": 6,
+            "issues_with_boundary_ties": 6,
+            "boundary_tie_candidates": 2223,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10166441745389114,
+            "precision": 0.0,
+            "recall": null,
+            "lift_over_random_budget": null
+          }
+        },
+        "6": {
+          "rows": 0,
+          "positives": 0,
+          "positive_fraction": null,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null,
+          "brier": null,
+          "logloss": null,
+          "eligible_for_ap_comparison": false,
+          "exclusion_reason": "both_classes_required",
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 0,
+            "eligible_candidates": 0,
+            "examined_candidates": 0,
+            "true_positives": 0,
+            "total_positives": 0,
+            "random_budget_expected_true_positives": 0.0,
+            "issues_with_score_ties": 0,
+            "issues_with_boundary_ties": 0,
+            "boundary_tie_candidates": 0,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": null,
+            "precision": null,
+            "recall": null,
+            "lift_over_random_budget": null
+          }
+        }
+      },
+      "yeongju_2023": {
+        "1": {
+          "rows": 10194,
+          "positives": 13,
+          "positive_fraction": 0.0012752599568373554,
+          "missing_score_candidates": 0,
+          "average_precision": 0.0012752599568373554,
+          "roc_auc": 0.5,
+          "brier": 0.0012740392210794924,
+          "logloss": 0.00989404371973954,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 23,
+            "eligible_candidates": 10194,
+            "examined_candidates": 1027,
+            "true_positives": 2,
+            "total_positives": 13,
+            "random_budget_expected_true_positives": 1.3041751934937447,
+            "issues_with_score_ties": 23,
+            "issues_with_boundary_ties": 23,
+            "boundary_tie_candidates": 10194,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10074553659015106,
+            "precision": 0.0019474196689386564,
+            "recall": 0.15384615384615385,
+            "lift_over_random_budget": 1.5335362994002484
+          }
+        },
+        "3": {
+          "rows": 6323,
+          "positives": 19,
+          "positive_fraction": 0.0030049027360430176,
+          "missing_score_candidates": 0,
+          "average_precision": 0.0030049027360430176,
+          "roc_auc": 0.5,
+          "brier": 0.003003105970744734,
+          "logloss": 0.021223606073380107,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 19,
+            "eligible_candidates": 6323,
+            "examined_candidates": 639,
+            "true_positives": 6,
+            "total_positives": 19,
+            "random_budget_expected_true_positives": 2.7740407658876753,
+            "issues_with_score_ties": 19,
+            "issues_with_boundary_ties": 19,
+            "boundary_tie_candidates": 6323,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.10105962359639412,
+            "precision": 0.009389671361502348,
+            "recall": 0.3157894736842105,
+            "lift_over_random_budget": 2.1629098150906367
+          }
+        },
+        "6": {
+          "rows": 1039,
+          "positives": 19,
+          "positive_fraction": 0.01828681424446583,
+          "missing_score_candidates": 0,
+          "average_precision": 0.01828681424446583,
+          "roc_auc": 0.5,
+          "brier": 0.017997226260122776,
+          "logloss": 0.0929588293586558,
+          "eligible_for_ap_comparison": true,
+          "exclusion_reason": null,
+          "top_10_percent_per_issue": {
+            "requested_percent_per_issue": 10,
+            "issues": 17,
+            "eligible_candidates": 1039,
+            "examined_candidates": 114,
+            "true_positives": 18,
+            "total_positives": 19,
+            "random_budget_expected_true_positives": 9.128355102193543,
+            "issues_with_score_ties": 10,
+            "issues_with_boundary_ties": 10,
+            "boundary_tie_candidates": 1032,
+            "missing_score_candidates": 0,
+            "examined_missing_score_candidates": 0,
+            "actual_examined_fraction": 0.109720885466795,
+            "precision": 0.15789473684210525,
+            "recall": 0.9473684210526315,
+            "lift_over_random_budget": 1.9718777149318611
+          }
+        }
+      }
+    }
+  },
+  "validation_improvement": {
+    "hongseong_2023": {
+      "1": {
+        "rows": 21885,
+        "brier_reduction": 0.0035733634015717225,
+        "logloss_reduction": 0.020104739789476404,
+        "average_precision_change": 0.0
+      },
+      "3": {
+        "rows": 21749,
+        "brier_reduction": 0.008616381604443057,
+        "logloss_reduction": 0.03783045458100084,
+        "average_precision_change": 0.0
+      },
+      "6": {
+        "rows": 21752,
+        "brier_reduction": 0.015745744861467716,
+        "logloss_reduction": 0.06575856242089921,
+        "average_precision_change": 0.0
+      }
+    },
+    "hapcheon_2023": {
+      "1": {
+        "rows": 22935,
+        "brier_reduction": 0.0030397869745103353,
+        "logloss_reduction": 0.01899711802750991,
+        "average_precision_change": 0.0
+      },
+      "3": {
+        "rows": 21178,
+        "brier_reduction": 0.009269864095565059,
+        "logloss_reduction": 0.04423621525025524,
+        "average_precision_change": 0.0
+      },
+      "6": {
+        "rows": 16363,
+        "brier_reduction": 0.022705537464863777,
+        "logloss_reduction": 0.09208683041821361,
+        "average_precision_change": 0.0
+      }
+    },
+    "daejeon_geumsan_2023": {
+      "1": {
+        "rows": 20568,
+        "brier_reduction": 0.00509499868965978,
+        "logloss_reduction": 0.02705234987035905,
+        "average_precision_change": 0.0
+      },
+      "3": {
+        "rows": 20471,
+        "brier_reduction": 0.01585906561400701,
+        "logloss_reduction": 0.06308360972279467,
+        "average_precision_change": 0.0
+      },
+      "6": {
+        "rows": 20412,
+        "brier_reduction": 0.02694075178474296,
+        "logloss_reduction": 0.09966109100665782,
+        "average_precision_change": 0.0
+      }
+    },
+    "hampyeong_2023": {
+      "1": {
+        "rows": 3988,
+        "brier_reduction": 0.0014904088650164158,
+        "logloss_reduction": 0.016217827572191312,
+        "average_precision_change": 0.0
+      },
+      "3": {
+        "rows": 746,
+        "brier_reduction": -0.007428873325875952,
+        "logloss_reduction": -0.0007112304511596584,
+        "average_precision_change": 0.0
+      },
+      "6": {
+        "rows": 16,
+        "brier_reduction": -0.44300918119087696,
+        "logloss_reduction": -1.0452968718219902,
+        "average_precision_change": null
+      }
+    },
+    "suncheon_2023": {
+      "1": {
+        "rows": 5762,
+        "brier_reduction": 0.004424360812495513,
+        "logloss_reduction": 0.024442003091343662,
+        "average_precision_change": null
+      },
+      "3": {
+        "rows": 2223,
+        "brier_reduction": 0.006333310871438314,
+        "logloss_reduction": 0.03561135292222604,
+        "average_precision_change": null
+      },
+      "6": {
+        "rows": 0,
+        "brier_reduction": null,
+        "logloss_reduction": null,
+        "average_precision_change": null
+      }
+    },
+    "yeongju_2023": {
+      "1": {
+        "rows": 10194,
+        "brier_reduction": 0.002748045883139992,
+        "logloss_reduction": 0.021932230306201006,
+        "average_precision_change": 0.0
+      },
+      "3": {
+        "rows": 6323,
+        "brier_reduction": 0.009720688636105658,
+        "logloss_reduction": 0.055697756257057585,
+        "average_precision_change": 0.0
+      },
+      "6": {
+        "rows": 1039,
+        "brier_reduction": 0.010701946505764622,
+        "logloss_reduction": 0.07057183415890653,
+        "average_precision_change": 0.0
+      }
+    }
+  },
+  "maximum_absolute_validation_ap_change": 0.0,
+  "rank_ap_unchanged_within_1e_10": true,
+  "validation_inventory": {
+    "hongseong_2023": {
+      "rows": 65386,
+      "positives": 463,
+      "period_group": "2023-04-02",
+      "empty_reason": null,
+      "horizons": {
+        "1": {
+          "rows": 21885,
+          "positives": 87,
+          "both_classes": true
+        },
+        "3": {
+          "rows": 21749,
+          "positives": 172,
+          "both_classes": true
+        },
+        "6": {
+          "rows": 21752,
+          "positives": 204,
+          "both_classes": true
+        }
+      }
+    },
+    "hapcheon_2023": {
+      "rows": 60476,
+      "positives": 141,
+      "period_group": "2023-03-08",
+      "empty_reason": null,
+      "horizons": {
+        "1": {
+          "rows": 22935,
+          "positives": 23,
+          "both_classes": true
+        },
+        "3": {
+          "rows": 21178,
+          "positives": 48,
+          "both_classes": true
+        },
+        "6": {
+          "rows": 16363,
+          "positives": 70,
+          "both_classes": true
+        }
+      }
+    },
+    "daejeon_geumsan_2023": {
+      "rows": 61451,
+      "positives": 384,
+      "period_group": "2023-04-02",
+      "empty_reason": null,
+      "horizons": {
+        "1": {
+          "rows": 20568,
+          "positives": 62,
+          "both_classes": true
+        },
+        "3": {
+          "rows": 20471,
+          "positives": 134,
+          "both_classes": true
+        },
+        "6": {
+          "rows": 20412,
+          "positives": 188,
+          "both_classes": true
+        }
+      }
+    },
+    "hampyeong_2023": {
+      "rows": 4750,
+      "positives": 40,
+      "period_group": "2023-04-03",
+      "empty_reason": null,
+      "horizons": {
+        "1": {
+          "rows": 3988,
+          "positives": 8,
+          "both_classes": true
+        },
+        "3": {
+          "rows": 746,
+          "positives": 16,
+          "both_classes": true
+        },
+        "6": {
+          "rows": 16,
+          "positives": 16,
+          "both_classes": false
+        }
+      }
+    },
+    "suncheon_2023": {
+      "rows": 7985,
+      "positives": 0,
+      "period_group": "2023-04-03",
+      "empty_reason": null,
+      "horizons": {
+        "1": {
+          "rows": 5762,
+          "positives": 0,
+          "both_classes": false
+        },
+        "3": {
+          "rows": 2223,
+          "positives": 0,
+          "both_classes": false
+        },
+        "6": {
+          "rows": 0,
+          "positives": 0,
+          "both_classes": false
+        }
+      }
+    },
+    "yeongju_2023": {
+      "rows": 17556,
+      "positives": 51,
+      "period_group": "2023-04-03",
+      "empty_reason": null,
+      "horizons": {
+        "1": {
+          "rows": 10194,
+          "positives": 13,
+          "both_classes": true
+        },
+        "3": {
+          "rows": 6323,
+          "positives": 19,
+          "both_classes": true
+        },
+        "6": {
+          "rows": 1039,
+          "positives": 19,
+          "both_classes": true
+        }
+      }
+    }
+  },
+  "validation_score_precision": {
+    "hongseong_2023": {
+      "1": {
+        "rows": 21885,
+        "clipped_raw_rows": 0,
+        "unique_raw_scores": 13246,
+        "unique_sigmoid_scores": 13246
+      },
+      "3": {
+        "rows": 21749,
+        "clipped_raw_rows": 0,
+        "unique_raw_scores": 13097,
+        "unique_sigmoid_scores": 13097
+      },
+      "6": {
+        "rows": 21752,
+        "clipped_raw_rows": 0,
+        "unique_raw_scores": 13722,
+        "unique_sigmoid_scores": 13722
+      }
+    },
+    "hapcheon_2023": {
+      "1": {
+        "rows": 22935,
+        "clipped_raw_rows": 0,
+        "unique_raw_scores": 10540,
+        "unique_sigmoid_scores": 10540
+      },
+      "3": {
+        "rows": 21178,
+        "clipped_raw_rows": 0,
+        "unique_raw_scores": 9794,
+        "unique_sigmoid_scores": 9794
+      },
+      "6": {
+        "rows": 16363,
+        "clipped_raw_rows": 0,
+        "unique_raw_scores": 9258,
+        "unique_sigmoid_scores": 9258
+      }
+    },
+    "daejeon_geumsan_2023": {
+      "1": {
+        "rows": 20568,
+        "clipped_raw_rows": 0,
+        "unique_raw_scores": 10335,
+        "unique_sigmoid_scores": 10335
+      },
+      "3": {
+        "rows": 20471,
+        "clipped_raw_rows": 0,
+        "unique_raw_scores": 10136,
+        "unique_sigmoid_scores": 10136
+      },
+      "6": {
+        "rows": 20412,
+        "clipped_raw_rows": 0,
+        "unique_raw_scores": 11448,
+        "unique_sigmoid_scores": 11448
+      }
+    },
+    "hampyeong_2023": {
+      "1": {
+        "rows": 3988,
+        "clipped_raw_rows": 0,
+        "unique_raw_scores": 2550,
+        "unique_sigmoid_scores": 2550
+      },
+      "3": {
+        "rows": 746,
+        "clipped_raw_rows": 0,
+        "unique_raw_scores": 530,
+        "unique_sigmoid_scores": 530
+      },
+      "6": {
+        "rows": 16,
+        "clipped_raw_rows": 0,
+        "unique_raw_scores": 14,
+        "unique_sigmoid_scores": 14
+      }
+    },
+    "suncheon_2023": {
+      "1": {
+        "rows": 5762,
+        "clipped_raw_rows": 0,
+        "unique_raw_scores": 3836,
+        "unique_sigmoid_scores": 3836
+      },
+      "3": {
+        "rows": 2223,
+        "clipped_raw_rows": 0,
+        "unique_raw_scores": 1488,
+        "unique_sigmoid_scores": 1488
+      },
+      "6": {
+        "rows": 0,
+        "clipped_raw_rows": 0,
+        "unique_raw_scores": 0,
+        "unique_sigmoid_scores": 0
+      }
+    },
+    "yeongju_2023": {
+      "1": {
+        "rows": 10194,
+        "clipped_raw_rows": 0,
+        "unique_raw_scores": 5166,
+        "unique_sigmoid_scores": 5166
+      },
+      "3": {
+        "rows": 6323,
+        "clipped_raw_rows": 0,
+        "unique_raw_scores": 4137,
+        "unique_sigmoid_scores": 4137
+      },
+      "6": {
+        "rows": 1039,
+        "clipped_raw_rows": 0,
+        "unique_raw_scores": 872,
+        "unique_sigmoid_scores": 872
+      }
+    }
+  },
+  "validation_source_hashes": {
+    "hongseong_2023": "d0e5f9d48c6a99a7f95722441c41f2e04eea0c90bc316982c8422b7da3081341",
+    "hapcheon_2023": "fee8de5ad86b715f08f177b1dbd64266b5557576686aced9229ad06e170c3c5e",
+    "daejeon_geumsan_2023": "0e057f452ad1da22a23df2ac822d48cd0c292e372ef628831cfb140909d7744d",
+    "hampyeong_2023": "e6c921de821e3040b03c2746768e475074f04c074cff107148211d75a44982db",
+    "suncheon_2023": "374782ea22f693b7cc206dec47d9cfdf449ac6046a3dd5844de43ac54d1fabea",
+    "yeongju_2023": "59e17603584717f76efc7625e15762bd7549f57bba419bc028a482f673a52935"
+  },
+  "training_horizon_priors": {
+    "1": {
+      "training_rows": 130747,
+      "training_positives": 250,
+      "score": 0.0019120897611417471
+    },
+    "3": {
+      "training_rows": 105896,
+      "training_positives": 603,
+      "score": 0.005694266072372894
+    },
+    "6": {
+      "training_rows": 78847,
+      "training_positives": 914,
+      "score": 0.011592070719241062
+    }
+  },
+  "each_training_row_predicted_once": true,
+  "oof_sha256": "02ffa231f5ab7081da30e3a5529761a395f86cf06eb0182c67062c19cac752d7",
+  "oof_rows": 315490,
+  "calibration_split_read": false,
+  "test_evaluated": false,
+  "operational_use": false,
+  "elapsed_seconds": 29.988,
+  "limitations": [
+    "Training OOF rows fit the calibrator; their fit is not independent calibration evaluation.",
+    "The candidate was selected using the same grouped CV, creating selection reuse bias.",
+    "2023 validation has prior exploratory exposure and is not an independent final test.",
+    "The global sigmoid targets an unweighted censored row mixture, not event-balanced or operational prevalence.",
+    "OOF scores come from smaller fold models, possibly with different class weights; transfer to the final full-train model is an unverified assumption.",
+    "Positive sigmoid slope preserves ordering/period monotonicity mathematically; fixed logit clipping and floating point ties may change AP numerically.",
+    "Positive metric reductions mean improvement on these same exposed validation rows; no deploy decision or response threshold is selected.",
+    "국내 과거 재처리 위성 관측의 탐색 실험. 실시간 입력 가용성을 검증하지 않음",
+    "화재 근처 30km의 현재 관측 비화재 육지만 평가. 신규 발화·구름 속 화재를 포괄하지 않음",
+    "위성 화재 탐지의 누락·오탐이 정답에 남고 미래 구름 검열로 선택 편향이 있음",
+    "재처리 알고리즘 버전과 실시간 제품의 동등성 및 국내 독립 사건 검증이 필요함",
+    "강릉 보정 표본은 양성12/390행, 6h 음성0. 이 보정 구획으로 확률 신뢰도를 검증할 수 없음",
+    "요청 기준 학습14/튜닝6/보정1. 관측 불가 구획은 0행으로 남음. 같은 날짜 동시 산불은 기상 조건이 공유돼 21개 독립 표본으로 해석할 수 없음",
+    "사건명으로 고른 지역 창이며 모든 탐지점의 사건 귀속·실제 확산 경로는 별도 검증이 필요함",
+    "기상은 최대100km 내 과거 관측소 실황. 국지풍·돌풍·향후 예보를 대신하지 않음",
+    "DSM90/CCI2015를 약1km 감사 격자에서 최근접 표본. 정확한 2km 연료/지형 평균이 아님",
+    "진화 활동·연료 수분·사용자 취약성·현장 피해 정답 없음"
+  ]
+}

@@ -60,3 +60,21 @@ NDWS v2 원본 3개(639,939,000바이트) 확보, 중복 46패치 제거와 unkn
 
 - Task: `task-20261031-105243-cuda-b5a38b8b`
 - Tags: `verification`, `frozen-model`, `holdout`
+## 2026-10-31T15:19:14+00:00
+
+2026-11-01 모델 개선 재개. v4 수집이 00:04 KST에 Hongseong/Gangneung 원본 manifest split과 이미 고정한 학습 분할 차이로 중단된 것을 확인했다. 원본 바이트와 메타데이터는 보존하고 비시험 split만 달라진 캐시를 재사용하며 config/manifest SHA 완료 영수증을 검증하도록 복구했다. 00:15 KST 수집→구축→GPU 학습→순위 진단 unit 재시작. 완료16창 재사용, 남은5창 수집 중. 새 5후보 날짜그룹 CPU CV(1·3·6h AP, 양성가중/사건가중/깊이) 및 같은 validation행의 이전v3/v4 대조를 준비했다. 120 training tests와 Ruff 통과. 2025 잠금 및 운영 미연결 유지. 실제 개선 결과는 아직 대기 중이며 완료 처리하지 않는다.
+
+- Task: `task-20261031-111807-task-9a960503`
+- Tags: `model-improvement`, `recovery`, `group-cv`
+## 2026-10-31T15:27:42+00:00
+
+v4 결과 열람 전 추가 실험 고정: 기간그룹 CV로 선택된 후보의 학습 OOF 예측만으로 단일 전역 sigmoid(logit 1입력, LogisticRegression C=1/class_weight=None/lbfgs/seed47/max_iter1000)를 적합한다. 2023 검증으로 보정 방법·계수를 선택하지 않으며 양의 기울기 및 기간 단조성을 검사하고 원점수/학습prior와 같은 검증행의 Brier/logloss/AP를 보고한다. 순위 AP 개선 방법이 아니며 확률 보정의 개선 여부만 확인한다. OOF는 보정 학습에 쓰여 독립평가가 아니고 선택편향 및 2023 기존 노출을 명시한다. 2025/보정 구획 미열람 유지, 운영 미연결.
+
+- Task: `task-20261031-111807-task-9a960503`
+- Tags: `experiment-plan`, `oof-calibration`
+## 2026-10-31T15:38:34+00:00
+
+v4 실제확보 완료: 21비시험창/1949고유NC/1,349,810,523bytes, train14창315490행1767양성, val6창217604행1079양성. GPU7후보42.28초, 학습11기간그룹5후보CV140.394초 모두완료, Qwen두모델ready복구. 동일val14적격event×h셀 macroAP 기존v3 .356335→v4CV .432810이나 최근거리 .471403 미달, top10% pooled recall .661724→.646895. OOF단일sigmoid29.988초: AP불변, 행가중Brier .015086→.004248 개선이나 사건×기간균등Brier .012697→.030589 악화(함평3/6h), 운영승격보류. 추가 3후보 계획: 거리4개 monotone -1+기간+1의 전체피처/환경·시각제외/현재·최근거리+기간3피처 후보를 같은학습그룹CV로만 기존선택과비교하고 선택후validation1회. 새로운2023기존노출 명시, 보정/2025미열람. 기존artifact불변, 별도모듈/경로 사용.
+
+- Task: `task-20261031-111807-task-9a960503`
+- Tags: `results`, `comparison`, `distance-prior`

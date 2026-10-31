@@ -2,20 +2,19 @@
   "before": {
     "available": true,
     "branch_name": "develop",
-    "commit_sha": "b35e0538bdd8d738566f7938c87315f62c86b7ab",
+    "commit_sha": "18bcde8e118922c249c6b1eb73f073e5fc7aee60",
     "dirty": true,
     "staged_files": [],
     "modified_files": [
       ".loom/events.jsonl",
       ".loom/job-runs/job-run-20261031-100136-job-20261031-002626-job-c9f9ff0d-1370d387/job-run.json",
-      ".loom/jobs/job-20261031-002626-job-c9f9ff0d/job.json"
+      ".loom/task-definitions/task-def-20261031-111807-task-def-2cdadd42/task-definition.json",
+      "docs/V2/delivery/external-resources-and-licenses.md"
     ],
     "untracked_files": [
-      ".loom/task-definitions/task-def-20261031-111807-task-def-2cdadd42/",
-      ".loom/task-runs/task-run-20261031-111820-task-def-20261031-111807-task-def-2cdadd42-fa01fa3a/",
-      ".loom/tasks/task-20261031-111807-task-9a960503/"
+      "docs/V2/delivery/external-resources-evidence.json"
     ],
-    "captured_at": "2026-10-31T11:18:20+00:00"
+    "captured_at": "2026-10-31T15:08:38+00:00"
   },
   "after": null
 }

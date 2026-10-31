@@ -1,0 +1,18 @@
+{
+  "selected": "depth4_positive_sqrt",
+  "selected_at_utc": "2026-10-31T15:33:54.333077+00:00",
+  "plan_sha256": "aa78f1b97c89c5baad3b508a10b4823a25fc4719577df9d8ea74017370f22c34",
+  "cv_result_sha256": {
+    "depth4_unit": "d579f002550fa06677d527dddafa147793f5c50c886e1859c416b9c594f548f3",
+    "depth4_positive3": "e7ac0a7492cd122da86c63aa66833d7cd7c976d2fb231a8a77dcfebab4a8f70a",
+    "depth4_positive_sqrt": "3b06eecd4a3c09912834348d80afde95449169939683eda03cf7f8edcd824e46",
+    "depth4_equal_events": "77f419f844475d851beccdffb91eae75bfc05fae8a51ef03a5364c5a234a178f",
+    "depth2_regularized_equal_events": "aec84c702e875ef73e9a543906e251a9f6d4dbf18632daadb0d647cdf5fc6ddb"
+  },
+  "validation_read_before_selection_in_this_run": false,
+  "mean_event_horizon_ap": 0.3943027189478062,
+  "distance_baseline_mean_event_horizon_ap": {
+    "negative_current_fire_distance": 0.315415818436767,
+    "negative_recent_fire_distance": 0.369650255106617
+  }
+}

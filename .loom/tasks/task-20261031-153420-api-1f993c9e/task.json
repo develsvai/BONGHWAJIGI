@@ -1,0 +1,37 @@
+{
+  "id": "task-20261031-153420-api-1f993c9e",
+  "job_id": "job-20261031-002626-api-18805e8a",
+  "title": "앱 설치 계정·세션과 목업 프로필·사전준비 API 구현",
+  "description": "사용자의 완성 목업 앱 구현·실서버 검증·APK 배포 직접 지시에 따라 사설망 simulation 설치 계정 등록·토큰 갱신·로그아웃을 제공하고 목업 프로필 추가 필드와 별도 사전준비 카드·기본수칙 회피 분류를 구현한다. 실제0.2 계약과 앱 타입을 맞출 수 있도록 출력 스키마·예제를 고정한다.",
+  "status": "RUNNING",
+  "created_at": "2026-10-31T15:34:20+00:00",
+  "updated_at": "2026-10-31T15:34:26+00:00",
+  "order_index": 5,
+  "assigned_agent": "foreground",
+  "depends_on": [],
+  "expected_output": "설치 계정·회전 세션 API와 migration; 프로필·동의/삭제·준비 카드; 명시적인 실행 응답 계약과 검증; 일반 서버 배포 가능한 변경",
+  "done_condition": "앱에 서버 비밀키를 넣지 않고 등록·갱신·로그아웃·프로필 저장/삭제·개인별 준비 카드가 DB에서 동작한다. 사용자 격리·refresh 회전/재사용·revision·민감 메모 동의·출처와 미제공 상태를 검증하고 기존82개 서버 기능을 보존한다.",
+  "in_scope": "사설망 simulation 설치 계정과 세션; 프로필 추가 필드; 동의/삭제; 준비 지침·출처; 실제 응답 계약·테스트·운영 문서",
+  "out_of_scope": "진행 중 학습 변경/중단; 실제 예측 연결; 3D/실제 도로 탐색; Firebase 실발신; 서버 STT/TTS; 실제119연락; 외부 계정 생성/결제; 비밀값 커밋",
+  "validation_hint": "실제PostgreSQL migration와 사용자/토큰 경계·동의·준비 카드 테스트, 기존 서버 회귀·Ruff·OpenAPI·Loom strict",
+  "required_docs": [
+    "docs/V2/delivery/mvp-app-api.md",
+    "docs/V2/delivery/mvp-server-runbook.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/app-integration-api.md"
+  ],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [
+    "a954d985d4c770f681137b302b0ebf20e17e9634"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-10-31T15:34:26+00:00",
+  "artifacts": [],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

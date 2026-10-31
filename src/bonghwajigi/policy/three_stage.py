@@ -15,6 +15,12 @@ LABELS = {
 }
 RANK = {"unknown": 0, "information": 0, "prepare": 1, "act": 2, "request_assistance": 3}
 GUIDES = {
+    "ready-bag": "대피할 때 바로 챙길 수 있도록 비상가방을 미리 준비해 두세요.",
+    "ready-bag-check": "평소 준비한 비상용품의 보관 위치와 사용 가능한 상태를 확인하세요.",
+    "ready-helper": "이동을 도와줄 사람과 미리 연락 방법을 정하고 함께 대피할 준비를 해두세요.",
+    "ready-dependent": "함께 대피할 보호 대상과 미리 연락 방법과 만날 장소를 정해두세요.",
+    "avoid-entry": "입산통제구역과 폐쇄된 등산로에 들어가지 마세요.",
+    "avoid-direction": "산불이 번지는 방향이나 산과 가까운 위험한 길로 이동하지 마세요.",
     "prepare-follow": "공식 대피 안내와 재난문자를 확인하고 대피할 장소를 확인하세요.",
     "prepare-bag": "즉시 이동할 수 있도록 비상용품과 가방을 준비하세요.",
     "prepare-helper": "이동을 도와줄 사람에게 지금 연락하고 함께 이동할 방법을 준비하세요.",
@@ -40,8 +46,7 @@ def bootstrap(session, scenario, moment):
     from bonghwajigi.policy.service import put_entity
 
     current = session.get(PolicyEntity, (scenario, "rules", "active"))
-    if current and current.body.get("policy_version") == POLICY_VERSION:
-        return {"revision": current.revision, "duplicate": True}
+    unchanged = current and current.body.get("policy_version") == POLICY_VERSION
 
     # 이 시각은 정규화한 지침 버전의 게시 시각이다. 원본 웹페이지의 최초 게시일은 미확인이다.
     source = Source(
@@ -52,6 +57,8 @@ def bootstrap(session, scenario, moment):
         verified=True,
     )
     for identifier, text in GUIDES.items():
+        if unchanged and session.get(PolicyEntity, (scenario, "guidance", "mvp-" + identifier)):
+            continue
         put_entity(
             session,
             scenario,
@@ -66,6 +73,8 @@ def bootstrap(session, scenario, moment):
                 expires_at=moment + timedelta(days=30),
             ),
         )
+    if unchanged:
+        return {"revision": current.revision, "duplicate": True}
     return put_entity(
         session,
         scenario,

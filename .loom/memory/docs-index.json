@@ -204,6 +204,15 @@
       "size_bytes": 5651
     },
     {
+      "id": "docs/HeoNey/봉화지기_모바일_화면_기획서.md",
+      "title": "봉화 지기 모바일 화면 기획서",
+      "path": "docs/HeoNey/봉화지기_모바일_화면_기획서.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T11:52:37+09:00",
+      "size_bytes": 19391
+    },
+    {
       "id": "docs/README.md",
       "title": "봉화지기 설계 문서 안내",
       "path": "docs/README.md",
@@ -256,6 +265,33 @@
       "document_type": "docs",
       "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 6575
+    },
+    {
+      "id": "docs/V2/01_서비스_핵심_정리.md",
+      "title": "재난 대응 비서 - 서비스 핵심 정리",
+      "path": "docs/V2/01_서비스_핵심_정리.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T10:22:32+09:00",
+      "size_bytes": 14864
+    },
+    {
+      "id": "docs/V2/02_실시간_서버_배치도.md",
+      "title": "재난 대응 비서 - 실시간 서버 배치도",
+      "path": "docs/V2/02_실시간_서버_배치도.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T10:22:32+09:00",
+      "size_bytes": 4418
+    },
+    {
+      "id": "docs/V2/03_학습_검증_흐름도.md",
+      "title": "재난 대응 비서 - 학습·검증 흐름도",
+      "path": "docs/V2/03_학습_검증_흐름도.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T10:22:32+09:00",
+      "size_bytes": 3446
     },
     {
       "id": "docs/V2/04-execution-backlog.md",

@@ -9,20 +9,32 @@ context_dataset="${BONGHWA_KMA_CONTEXT_DATASET:-data/processed/korea-gk2a-contex
 context_contract="${BONGHWA_KMA_CONTEXT_CONFIG:-training/configs/korea-gk2a-context-v3.json}"
 python_bin=training/.venv/bin/python
 for ((attempt=0; attempt<720; attempt++)); do
-  if ! systemctl --user is-active --quiet "$acquire_unit"; then
+  acquire_state="$(systemctl --user show "$acquire_unit" -p SubState --value)"
+  if [[ "$acquire_state" != running && "$acquire_state" != start ]]; then
     break
   fi
   sleep 15
 done
-if systemctl --user is-active --quiet "$acquire_unit"; then
+if [[ "$acquire_state" == running || "$acquire_state" == start ]]; then
   echo '수집 대기 180분 초과. 학습을 시작하지 않습니다.' >&2
   exit 1
 fi
-if [[ "$(systemctl --user show "$acquire_unit" -p Result --value)" != success ]]; then
+if [[ "$(systemctl --user show "$acquire_unit" -p LoadState --value)" == loaded ]] && \
+   { [[ "$(systemctl --user show "$acquire_unit" -p Result --value)" != success ]] || \
+     [[ "$(systemctl --user show "$acquire_unit" -p ExecMainStatus --value)" != 0 ]]; }; then
   echo '원본 수집 실패. 누락을 음성으로 채우거나 부분 자료로 자동 학습하지 않습니다.' >&2
   exit 1
 fi
 raw_dir=data/raw/korea-wildfire/gk2a-ff
+# Successful transient units may disappear. A missing unit alone is not success:
+# verify the receipt for this exact config and every non-test source manifest.
+"$python_bin" - "$raw_dir" "$pending_contract" <<'PY'
+import sys
+from pathlib import Path
+from bonghwa_training.kma_profile import verify_receipt
+verify_receipt(Path(sys.argv[1]), Path(sys.argv[2]))
+print('수집 설정과 모든 비시험 원본 manifest의 완료 영수증 검증 통과.')
+PY
 if [[ ! -f "$raw_dir/acquisition-config-v1.json" ]]; then
   cp training/configs/korea-gk2a-hourly-v1.json "$raw_dir/acquisition-config-v1.json"
 fi

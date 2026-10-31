@@ -106,7 +106,7 @@
 - Document outputs: `docs/V2/delivery/korea-wildfire-improvement.md`
 - Document output exceptions: -
 - Source proposal: `-`
-- Status: PENDING
+- Status: RUNNING
 - Assigned agent: foreground
 
 ## Advisor Source Prompt

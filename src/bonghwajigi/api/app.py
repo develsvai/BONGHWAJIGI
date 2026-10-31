@@ -1,6 +1,9 @@
 from contextlib import asynccontextmanager
 
 from fastapi import Depends, FastAPI, HTTPException
+from fastapi.exceptions import RequestValidationError
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 
 from bonghwajigi.common.config import Settings
 from bonghwajigi.common.health import health_router
@@ -19,6 +22,31 @@ def create_app() -> FastAPI:
 
     app = FastAPI(title="봉화지기 일반 서버", version="0.1.0", lifespan=lifespan)
     app.state.settings = Settings()
+
+    @app.exception_handler(RequestValidationError)
+    async def invalid_input(request, exc):
+        # FastAPI 기본 오류에 요청 값(선택 의료 메모·토큰)이 포함되지 않게 한다.
+        return JSONResponse(
+            status_code=422,
+            content={
+                "detail": [
+                    {
+                        "loc": list(error["loc"]),
+                        "msg": "입력 값을 확인해 주세요.",
+                        "type": error["type"],
+                    }
+                    for error in exc.errors()
+                ]
+            },
+        )
+
+    if app.state.settings.app_cors_origins:
+        app.add_middleware(
+            CORSMiddleware,
+            allow_origins=app.state.settings.app_cors_origins,
+            allow_methods=["GET", "POST", "PUT", "DELETE"],
+            allow_headers=["Authorization", "Content-Type", "Idempotency-Key"],
+        )
 
     def ready_check():
         from redis import Redis

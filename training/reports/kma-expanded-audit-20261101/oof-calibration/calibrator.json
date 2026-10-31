@@ -1,0 +1,267 @@
+{
+  "status": "fitted_research_only",
+  "calibration_fitted": true,
+  "slope": 0.7637427740797721,
+  "intercept": -2.5817724585209674,
+  "iterations": 9,
+  "converged": true,
+  "reason": null,
+  "oof_sha256": "02ffa231f5ab7081da30e3a5529761a395f86cf06eb0182c67062c19cac752d7",
+  "oof_rows": 315490,
+  "oof_positive_rows": 1767,
+  "each_training_row_predicted_once": true,
+  "clipped_oof_rows": 0,
+  "monotonicity_probe_rows": 87756,
+  "monotonicity_verified": true,
+  "created_at_utc": "2026-10-31T15:35:17.506519+00:00",
+  "plan_sha256": "371be7d5361d9a05bf4334fee706a0609c8fcb08400fa7e5d9e6fdde22cd19e7",
+  "selected_candidate": "depth4_positive_sqrt",
+  "replayed_folds": {
+    "2020-03-19": {
+      "training_events": [
+        "andong_2020",
+        "andong_2021",
+        "hapcheon_2022",
+        "uljin_2022",
+        "goseong_2020",
+        "yeongdeok_2022",
+        "yeongwol_2022",
+        "gangneung_donghae_2022",
+        "bonghwa_2022",
+        "yanggu_2022",
+        "gunwi_2022",
+        "uljin_may_2022",
+        "miryang_2022"
+      ],
+      "held_out_events": [
+        "ulju_2020"
+      ],
+      "resolved_positive_weight": 13.058946920581162,
+      "original_metrics_reproduced": true
+    },
+    "2020-04-25": {
+      "training_events": [
+        "andong_2021",
+        "hapcheon_2022",
+        "uljin_2022",
+        "ulju_2020",
+        "goseong_2020",
+        "yeongdeok_2022",
+        "yeongwol_2022",
+        "gangneung_donghae_2022",
+        "bonghwa_2022",
+        "yanggu_2022",
+        "gunwi_2022",
+        "uljin_may_2022",
+        "miryang_2022"
+      ],
+      "held_out_events": [
+        "andong_2020"
+      ],
+      "resolved_positive_weight": 13.478214259143702,
+      "original_metrics_reproduced": true
+    },
+    "2020-05-01": {
+      "training_events": [
+        "andong_2020",
+        "andong_2021",
+        "hapcheon_2022",
+        "uljin_2022",
+        "ulju_2020",
+        "yeongdeok_2022",
+        "yeongwol_2022",
+        "gangneung_donghae_2022",
+        "bonghwa_2022",
+        "yanggu_2022",
+        "gunwi_2022",
+        "uljin_may_2022",
+        "miryang_2022"
+      ],
+      "held_out_events": [
+        "goseong_2020"
+      ],
+      "resolved_positive_weight": 13.324064477680713,
+      "original_metrics_reproduced": true
+    },
+    "2021-02-21": {
+      "training_events": [
+        "andong_2020",
+        "hapcheon_2022",
+        "uljin_2022",
+        "ulju_2020",
+        "goseong_2020",
+        "yeongdeok_2022",
+        "yeongwol_2022",
+        "gangneung_donghae_2022",
+        "bonghwa_2022",
+        "yanggu_2022",
+        "gunwi_2022",
+        "uljin_may_2022",
+        "miryang_2022"
+      ],
+      "held_out_events": [
+        "andong_2021"
+      ],
+      "resolved_positive_weight": 11.968992196235588,
+      "original_metrics_reproduced": true
+    },
+    "2022-02-16": {
+      "training_events": [
+        "andong_2020",
+        "andong_2021",
+        "hapcheon_2022",
+        "uljin_2022",
+        "ulju_2020",
+        "goseong_2020",
+        "yeongwol_2022",
+        "gangneung_donghae_2022",
+        "bonghwa_2022",
+        "yanggu_2022",
+        "gunwi_2022",
+        "uljin_may_2022",
+        "miryang_2022"
+      ],
+      "held_out_events": [
+        "yeongdeok_2022"
+      ],
+      "resolved_positive_weight": 13.566998566342548,
+      "original_metrics_reproduced": true
+    },
+    "2022-02-28": {
+      "training_events": [
+        "andong_2020",
+        "andong_2021",
+        "uljin_2022",
+        "ulju_2020",
+        "goseong_2020",
+        "yeongdeok_2022",
+        "yeongwol_2022",
+        "gangneung_donghae_2022",
+        "bonghwa_2022",
+        "yanggu_2022",
+        "gunwi_2022",
+        "uljin_may_2022",
+        "miryang_2022"
+      ],
+      "held_out_events": [
+        "hapcheon_2022"
+      ],
+      "resolved_positive_weight": 13.281125050093049,
+      "original_metrics_reproduced": true
+    },
+    "2022-03-04_05": {
+      "training_events": [
+        "andong_2020",
+        "andong_2021",
+        "hapcheon_2022",
+        "ulju_2020",
+        "goseong_2020",
+        "yeongdeok_2022",
+        "bonghwa_2022",
+        "yanggu_2022",
+        "gunwi_2022",
+        "uljin_may_2022",
+        "miryang_2022"
+      ],
+      "held_out_events": [
+        "uljin_2022",
+        "yeongwol_2022",
+        "gangneung_donghae_2022"
+      ],
+      "resolved_positive_weight": 15.503530714877533,
+      "original_metrics_reproduced": true
+    },
+    "2022-04-05": {
+      "training_events": [
+        "andong_2020",
+        "andong_2021",
+        "hapcheon_2022",
+        "uljin_2022",
+        "ulju_2020",
+        "goseong_2020",
+        "yeongdeok_2022",
+        "yeongwol_2022",
+        "gangneung_donghae_2022",
+        "yanggu_2022",
+        "gunwi_2022",
+        "uljin_may_2022",
+        "miryang_2022"
+      ],
+      "held_out_events": [
+        "bonghwa_2022"
+      ],
+      "resolved_positive_weight": 13.380261978844114,
+      "original_metrics_reproduced": true
+    },
+    "2022-04-10": {
+      "training_events": [
+        "andong_2020",
+        "andong_2021",
+        "hapcheon_2022",
+        "uljin_2022",
+        "ulju_2020",
+        "goseong_2020",
+        "yeongdeok_2022",
+        "yeongwol_2022",
+        "gangneung_donghae_2022",
+        "bonghwa_2022",
+        "uljin_may_2022",
+        "miryang_2022"
+      ],
+      "held_out_events": [
+        "yanggu_2022",
+        "gunwi_2022"
+      ],
+      "resolved_positive_weight": 13.779741486725248,
+      "original_metrics_reproduced": true
+    },
+    "2022-05-28": {
+      "training_events": [
+        "andong_2020",
+        "andong_2021",
+        "hapcheon_2022",
+        "uljin_2022",
+        "ulju_2020",
+        "goseong_2020",
+        "yeongdeok_2022",
+        "yeongwol_2022",
+        "gangneung_donghae_2022",
+        "bonghwa_2022",
+        "yanggu_2022",
+        "gunwi_2022",
+        "miryang_2022"
+      ],
+      "held_out_events": [
+        "uljin_may_2022"
+      ],
+      "resolved_positive_weight": 13.267160354033908,
+      "original_metrics_reproduced": true
+    },
+    "2022-05-31": {
+      "training_events": [
+        "andong_2020",
+        "andong_2021",
+        "hapcheon_2022",
+        "uljin_2022",
+        "ulju_2020",
+        "goseong_2020",
+        "yeongdeok_2022",
+        "yeongwol_2022",
+        "gangneung_donghae_2022",
+        "bonghwa_2022",
+        "yanggu_2022",
+        "gunwi_2022",
+        "uljin_may_2022"
+      ],
+      "held_out_events": [
+        "miryang_2022"
+      ],
+      "resolved_positive_weight": 12.578258777603999,
+      "original_metrics_reproduced": true
+    }
+  },
+  "validation_event_data_read_before_receipt": false,
+  "calibrated_score_research_only": true,
+  "probability_calibrated": false,
+  "operational_use": false
+}

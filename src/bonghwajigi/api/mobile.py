@@ -64,6 +64,10 @@ def attach_mobile(app, settings):
             "data": data,
         }
 
+    from bonghwajigi.api.app_sessions import attach_app_sessions
+
+    attach_app_sessions(app, settings, envelope)
+
     def key(actor):
         return actor["scenario_id"], actor["sub"]
 
@@ -284,6 +288,11 @@ def attach_mobile(app, settings):
                 "emergency_phone": "119",
                 "automatic_emergency_call": False,
                 "draft_owner": "device",
+                "registration": {
+                    "enabled": settings.app_registration_enabled and settings.mode == "simulation",
+                    "consent_version": "internal-demo-v1",
+                    "kind": "private_simulation_installation",
+                },
             }
         )
 
@@ -305,6 +314,15 @@ def attach_mobile(app, settings):
             scope_lock(s, actor["scenario_id"])
 
             def apply():
+                if not body.profile.health_consent:
+                    # 동의 철회 뒤 이전 멱등 응답에 의료 메모가 남지 않게 한다.
+                    s.execute(
+                        delete(AppMutation).where(
+                            AppMutation.scenario_id == actor["scenario_id"],
+                            AppMutation.user_id == actor["sub"],
+                            AppMutation.resource == "profile",
+                        )
+                    )
                 revision = store(
                     s,
                     actor,
@@ -856,7 +874,60 @@ def attach_mobile(app, settings):
                     "status": "available" if items else "unavailable",
                     "policy_version": POLICY_VERSION,
                     "items": items,
+                    "avoid": guidance_items(
+                        s, actor, moment, ["mvp-avoid-entry", "mvp-avoid-direction"]
+                    ),
                 }
+            )
+
+    def guidance_items(session, actor, moment, identifiers):
+        items = []
+        for identifier in identifiers:
+            row = session.get(PolicyEntity, (actor["scenario_id"], "guidance", identifier))
+            if (
+                row
+                and row.body["review_state"] == "approved_mvp"
+                and fresh(row.body, moment, "valid_from")
+            ):
+                items.append(
+                    {
+                        "id": identifier,
+                        "text": row.body["text"],
+                        "source": row.body["source"],
+                        "revision": row.revision,
+                        "valid_until": row.body["expires_at"],
+                    }
+                )
+        return items
+
+    @router.get("/me/preparations")
+    def preparations(actor=actor_dependency):
+        with sessions.begin() as s:
+            moment = evaluation_time(scope_lock(s, actor["scenario_id"]))
+            profile = get_entity(s, actor, "app_profile")
+            values = profile.body["data"] if profile else {}
+            second = "mvp-ready-bag-check"
+            reason = "BASIC_PREPARATION"
+            if values.get("mobility") in {
+                "walking_aid",
+                "wheelchair",
+                "assistance_required",
+            } or values.get("stairs") in {"difficult", "unable"}:
+                second, reason = "mvp-ready-helper", "MOBILITY_PREPARATION"
+            elif values.get("dependents"):
+                second, reason = "mvp-ready-dependent", "DEPENDENT_PREPARATION"
+            items = guidance_items(s, actor, moment, ["mvp-ready-bag", second])
+            for item in items:
+                item["reason_code"] = reason if item["id"] == second else "BASIC_PREPARATION"
+            return envelope(
+                {
+                    "status": "available" if items else "unavailable",
+                    "policy_version": POLICY_VERSION,
+                    "profile_revision": profile.revision if profile else 0,
+                    "generated_at": moment,
+                    "items": items,
+                },
+                "current" if items else "unavailable",
             )
 
     @router.get("/home")
@@ -867,6 +938,8 @@ def attach_mobile(app, settings):
                 "basic_rules": safety_rules("wildfire", actor)["data"],
                 "location": get_location(actor)["data"],
                 "features": config(actor)["data"]["features"],
+                "preparations": preparations(actor)["data"],
+                "alerts": alerts(actor)["data"]["items"],
             }
         )
 

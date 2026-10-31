@@ -46,6 +46,11 @@ class Settings(BaseSettings):
     jwt_issuer: str = "bonghwajigi-mvp"
     jwt_audience: str = "bonghwajigi-app"
     jwt_lifetime_seconds: int = Field(default=86400, ge=300, le=604800)
+    app_registration_enabled: bool = False
+    app_registration_scenario: str = "mobile-demo"
+    app_refresh_lifetime_seconds: int = Field(default=604800, ge=3600, le=2592000)
+    app_registration_hourly_limit: int = Field(default=20, ge=1, le=1000)
+    app_cors_origins: list[str] = Field(default_factory=list)
 
     @model_validator(mode="after")
     def check_token_budget(self) -> "Settings":

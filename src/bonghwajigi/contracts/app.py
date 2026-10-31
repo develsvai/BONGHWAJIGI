@@ -1,6 +1,6 @@
 from typing import Literal
 
-from pydantic import AwareDatetime, BaseModel, ConfigDict, Field
+from pydantic import AwareDatetime, BaseModel, ConfigDict, Field, model_validator
 
 from bonghwajigi.contracts.policy import Identifier
 
@@ -10,6 +10,13 @@ class Strict(BaseModel):
 
 
 class AppProfile(Strict):
+    display_name: str = Field(default="", max_length=40)
+    age_band: Literal["under_20", "20_39", "40_59", "60_plus", "unknown"] = "unknown"
+    emergency_contact: str = Field(default="", max_length=120)
+    usual_place: str = Field(default="", max_length=200)
+    building_floor: str = Field(default="", max_length=40)
+    health_consent: bool = False
+    health_notes: str = Field(default="", max_length=500)
     mobility: Literal[
         "independent", "walking_aid", "wheelchair", "assistance_required", "unknown"
     ] = "unknown"
@@ -21,6 +28,12 @@ class AppProfile(Strict):
     )
     helper_registered: bool | None = None
     vehicle_access: bool | None = None
+
+    @model_validator(mode="after")
+    def check_health_consent(self):
+        if self.health_notes.strip() and not self.health_consent:
+            raise ValueError("건강·의료 메모는 별도 동의가 필요합니다.")
+        return self
 
 
 class ProfileWrite(Strict):

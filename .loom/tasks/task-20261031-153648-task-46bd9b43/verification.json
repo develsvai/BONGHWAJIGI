@@ -1,0 +1,593 @@
+{
+  "기준일": "2026-11-01 KST",
+  "서버_테스트": {
+    "통과": 49,
+    "건너뜀": 33,
+    "경고": 1
+  },
+  "학습_테스트": {
+    "통과": 138
+  },
+  "서버_Ruff": "최종 check/format 통과",
+  "학습_Ruff": "check/format 통과",
+  "API_계약": "25경로·67스키마·48HTTP예제·4오류거부 통과",
+  "스테이징_검사": {
+    "staged_file_count": 114,
+    "credential_findings": [],
+    "large_files": [],
+    "python_syntax_errors": [],
+    "manifest": [
+      {
+        "path": ".loom/events.jsonl",
+        "blob": "78ef89ab4add97fc46eec4386c0b8ada597e0c58",
+        "bytes": 167796
+      },
+      {
+        "path": ".loom/job-runs/job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02/job-run.json",
+        "blob": "78d5c6eaa712714b06c559967040c0b0d6e2dc46",
+        "bytes": 461
+      },
+      {
+        "path": ".loom/job-runs/job-run-20261031-035204-job-20261031-002626-api-18805e8a-5ed2228f/job-run.json",
+        "blob": "365bf6c7745f42348bea958069f988a93e41a59d",
+        "bytes": 464
+      },
+      {
+        "path": ".loom/job-runs/job-run-20261031-100136-job-20261031-002626-job-c9f9ff0d-1370d387/job-run.json",
+        "blob": "cce41d37f8166301434ce573da4f06258d814e28",
+        "bytes": 464
+      },
+      {
+        "path": ".loom/jobs/job-20261031-002017-v2-fe3bfad0/job.json",
+        "blob": "733204937e6ce48796e0b21d0ea5933a95ec073d",
+        "bytes": 2372
+      },
+      {
+        "path": ".loom/jobs/job-20261031-002017-v2-fe3bfad0/notes.md",
+        "blob": "e9aa7ed4477e0104ca1bb1fa03e7cf32a0ad3289",
+        "bytes": 13429
+      },
+      {
+        "path": ".loom/jobs/job-20261031-002626-api-18805e8a/job.json",
+        "blob": "3923f5cdda9a9ee1916e724c20ed752023d3f197",
+        "bytes": 1108
+      },
+      {
+        "path": ".loom/jobs/job-20261031-002626-job-c9f9ff0d/notes.md",
+        "blob": "e0b5358618535118c16684ae489bc81881e25cc8",
+        "bytes": 9832
+      },
+      {
+        "path": ".loom/memory/docs-index.json",
+        "blob": "c263a32edeaaf308dc1d9f53c83e18e3398c48f3",
+        "bytes": 25382
+      },
+      {
+        "path": ".loom/task-definitions/task-def-20261031-111807-task-def-2cdadd42/task-definition.json",
+        "blob": "a6252ffae7da3760bf4f3dc711a17c225b9d130e",
+        "bytes": 2828
+      },
+      {
+        "path": ".loom/task-definitions/task-def-20261031-152411-task-def-e2e26cad/task-definition.json",
+        "blob": "8c5a5b78f715dfc33faf36b389dce40a5f0ef191",
+        "bytes": 2117
+      },
+      {
+        "path": ".loom/task-definitions/task-def-20261031-153420-api-422b5de4/task-definition.json",
+        "blob": "5a11d43a3f31602f5d61de58e85ca1c77c647f75",
+        "bytes": 2249
+      },
+      {
+        "path": ".loom/task-definitions/task-def-20261031-153648-task-def-1ca2885c/task-definition.json",
+        "blob": "bcd60197f74c21ed68438089b04bcc9a61b51475",
+        "bytes": 1889
+      },
+      {
+        "path": ".loom/task-runs/task-run-20261031-152415-task-def-20261031-152411-task-def-e2e26cad-06848513/task-run.json",
+        "blob": "48b5d34c972cecff282bda116d29789d0034da00",
+        "bytes": 812
+      },
+      {
+        "path": ".loom/task-runs/task-run-20261031-153426-task-def-20261031-153420-api-422b5de4-1acab0e0/task-run.json",
+        "blob": "6df30f3bb882c564a19332d9df4e337e84d3ca20",
+        "bytes": 802
+      },
+      {
+        "path": ".loom/task-runs/task-run-20261031-153652-task-def-20261031-153648-task-def-1ca2885c-1c3c3be7/task-run.json",
+        "blob": "e955e32d340b2fabf035bccd55d86ee8ef2cb365",
+        "bytes": 812
+      },
+      {
+        "path": ".loom/tasks/task-20261031-111807-task-9a960503/agent-events.jsonl",
+        "blob": "2bc5d1daf63368992ff75118832919aee1bd8698",
+        "bytes": 458
+      },
+      {
+        "path": ".loom/tasks/task-20261031-111807-task-9a960503/artifacts.json",
+        "blob": "a2a72771f7b0fd8957a364736e05dadcecd3a388",
+        "bytes": 2369
+      },
+      {
+        "path": ".loom/tasks/task-20261031-111807-task-9a960503/context.md",
+        "blob": "99e6adc351022af18e85f0386b69c0abf32756e9",
+        "bytes": 34465
+      },
+      {
+        "path": ".loom/tasks/task-20261031-111807-task-9a960503/git-snapshot.json",
+        "blob": "f7a240a10ed844f0884d24c34125e650569961d3",
+        "bytes": 652
+      },
+      {
+        "path": ".loom/tasks/task-20261031-111807-task-9a960503/logs.txt",
+        "blob": "9a36fc4f8a82db7f43856de455b2f857dbb4b8e2",
+        "bytes": 4817
+      },
+      {
+        "path": ".loom/tasks/task-20261031-111807-task-9a960503/prompt.md",
+        "blob": "00d45cf5b559fabf903688610f092b88ac4e4be0",
+        "bytes": 8788
+      },
+      {
+        "path": ".loom/tasks/task-20261031-111807-task-9a960503/task.json",
+        "blob": "f773ac7d8ea33658e283abe208c58658935a0588",
+        "bytes": 2932
+      },
+      {
+        "path": ".loom/tasks/task-20261031-152411-task-f8241639/agent-events.jsonl",
+        "blob": "e7b3df75c0f8d117d4735f855d8fc7af0003d716",
+        "bytes": 229
+      },
+      {
+        "path": ".loom/tasks/task-20261031-152411-task-f8241639/artifacts.json",
+        "blob": "3c3aba44cfefa1e6f092a1207b7c2a48844fe6cb",
+        "bytes": 2369
+      },
+      {
+        "path": ".loom/tasks/task-20261031-152411-task-f8241639/context.md",
+        "blob": "c10cc54a3991890a7723cab6e4771fc9061c5c03",
+        "bytes": 37663
+      },
+      {
+        "path": ".loom/tasks/task-20261031-152411-task-f8241639/decision.md",
+        "blob": "152938451e7bde212d4b16b8251a1017d741a9b7",
+        "bytes": 190
+      },
+      {
+        "path": ".loom/tasks/task-20261031-152411-task-f8241639/git-snapshot.json",
+        "blob": "3c0d487355cd0960d7a9a03db2349d76fbbf98a4",
+        "bytes": 2062
+      },
+      {
+        "path": ".loom/tasks/task-20261031-152411-task-f8241639/logs.txt",
+        "blob": "da320460973b07d5a1ed5d2ee6e1ce9b8dc62a68",
+        "bytes": 246
+      },
+      {
+        "path": ".loom/tasks/task-20261031-152411-task-f8241639/previous-results.md",
+        "blob": "e50bedc8369909a5c5655f4b125cc03c5792480c",
+        "bytes": 4104
+      },
+      {
+        "path": ".loom/tasks/task-20261031-152411-task-f8241639/prompt.md",
+        "blob": "f0d5fdc4bb13981de3da7ccf938f7ed94b539754",
+        "bytes": 8076
+      },
+      {
+        "path": ".loom/tasks/task-20261031-152411-task-f8241639/result.md",
+        "blob": "5a13333c07e534a334388f7c68ad2307d996302e",
+        "bytes": 382
+      },
+      {
+        "path": ".loom/tasks/task-20261031-152411-task-f8241639/task.json",
+        "blob": "7c5b7530346ee695c9c5120c176291472d3fa350",
+        "bytes": 2227
+      },
+      {
+        "path": ".loom/tasks/task-20261031-152411-task-f8241639/troubleshooting.md",
+        "blob": "7897855782baa21ce2eca8875d816480e4419bf8",
+        "bytes": 222
+      },
+      {
+        "path": ".loom/tasks/task-20261031-153420-api-1f993c9e/agent-events.jsonl",
+        "blob": "f8b4555ef90c084cce3a7393a291d98df66f1c67",
+        "bytes": 228
+      },
+      {
+        "path": ".loom/tasks/task-20261031-153420-api-1f993c9e/artifacts.json",
+        "blob": "862fb2b42618dd2fd8d99a32d73db8b2d8742c9b",
+        "bytes": 2344
+      },
+      {
+        "path": ".loom/tasks/task-20261031-153420-api-1f993c9e/context.md",
+        "blob": "1b873b948f13ec9a8d0f70e677eaec97c4b56a26",
+        "bytes": 30211
+      },
+      {
+        "path": ".loom/tasks/task-20261031-153420-api-1f993c9e/decision.md",
+        "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "bytes": 0
+      },
+      {
+        "path": ".loom/tasks/task-20261031-153420-api-1f993c9e/git-snapshot.json",
+        "blob": "1e00259a6b9f42f6c6dc7d2a12e5bacac4ec01bf",
+        "bytes": 2690
+      },
+      {
+        "path": ".loom/tasks/task-20261031-153420-api-1f993c9e/logs.txt",
+        "blob": "22a112362a799506c9d7ca20fd7da6289905e688",
+        "bytes": 117
+      },
+      {
+        "path": ".loom/tasks/task-20261031-153420-api-1f993c9e/previous-results.md",
+        "blob": "34c586b762994028bf9b0837819901295547be57",
+        "bytes": 4012
+      },
+      {
+        "path": ".loom/tasks/task-20261031-153420-api-1f993c9e/prompt.md",
+        "blob": "47f89d78166a38776da05d657c8939bcb2720289",
+        "bytes": 8208
+      },
+      {
+        "path": ".loom/tasks/task-20261031-153420-api-1f993c9e/result.md",
+        "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "bytes": 0
+      },
+      {
+        "path": ".loom/tasks/task-20261031-153420-api-1f993c9e/task.json",
+        "blob": "2d9beedb7053b2011cfbed98d2e41a389179f02b",
+        "bytes": 2362
+      },
+      {
+        "path": ".loom/tasks/task-20261031-153420-api-1f993c9e/troubleshooting.md",
+        "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "bytes": 0
+      },
+      {
+        "path": ".loom/tasks/task-20261031-153648-task-46bd9b43/agent-events.jsonl",
+        "blob": "6d6f800f8e62c4ca2c12a7d216c83bf55c8d5798",
+        "bytes": 229
+      },
+      {
+        "path": ".loom/tasks/task-20261031-153648-task-46bd9b43/artifacts.json",
+        "blob": "9a850c55dec7abfe97db7f46d68bccd1d48e9d78",
+        "bytes": 2369
+      },
+      {
+        "path": ".loom/tasks/task-20261031-153648-task-46bd9b43/context.md",
+        "blob": "e17796a338cbe6c57c283c8648248022a980b017",
+        "bytes": 20145
+      },
+      {
+        "path": ".loom/tasks/task-20261031-153648-task-46bd9b43/decision.md",
+        "blob": "440e625a45070af662529fb9191eadcd8c1ceb99",
+        "bytes": 899
+      },
+      {
+        "path": ".loom/tasks/task-20261031-153648-task-46bd9b43/git-snapshot.json",
+        "blob": "5f3e9e5ef9a97951cc00978993b3d1b94dcfe2ac",
+        "bytes": 3208
+      },
+      {
+        "path": ".loom/tasks/task-20261031-153648-task-46bd9b43/logs.txt",
+        "blob": "f1d5843c011949369dffc12841a3c76b65a3c36b",
+        "bytes": 854
+      },
+      {
+        "path": ".loom/tasks/task-20261031-153648-task-46bd9b43/previous-results.md",
+        "blob": "d01cf26d89a98067522a4659714a3c3fd6f09c93",
+        "bytes": 2374
+      },
+      {
+        "path": ".loom/tasks/task-20261031-153648-task-46bd9b43/prompt.md",
+        "blob": "fbbeb420fb8e3ff24ec5527a6fb8a51569802e0b",
+        "bytes": 7866
+      },
+      {
+        "path": ".loom/tasks/task-20261031-153648-task-46bd9b43/result.md",
+        "blob": "0c310cede0ab7f07d76a998e5a2edb1bd3ba6d95",
+        "bytes": 1815
+      },
+      {
+        "path": ".loom/tasks/task-20261031-153648-task-46bd9b43/task.json",
+        "blob": "9daeae55ee3e8fae36e639fb360677f51129aef1",
+        "bytes": 1997
+      },
+      {
+        "path": ".loom/tasks/task-20261031-153648-task-46bd9b43/troubleshooting.md",
+        "blob": "6710da1fe5ae7988a2feee01d36ddd71f3f4a766",
+        "bytes": 683
+      },
+      {
+        "path": "docs/V2/delivery/korea-wildfire-improvement.md",
+        "blob": "de73671134c57ce65176faae4936018c4d91780b",
+        "bytes": 35652
+      },
+      {
+        "path": "migrations/versions/f735a2ec901b_mobile_refresh_sessions.py",
+        "blob": "95a7580bc82a441c027736d6932135d5501060c4",
+        "bytes": 1396
+      },
+      {
+        "path": "src/bonghwajigi/api/app.py",
+        "blob": "dedf3d545f5e9f0271d5ef18ee5bf923d67a377d",
+        "bytes": 4024
+      },
+      {
+        "path": "src/bonghwajigi/api/app_sessions.py",
+        "blob": "b916a2a4666c9d47026a556eb82a588fcc9ad90b",
+        "bytes": 6562
+      },
+      {
+        "path": "src/bonghwajigi/api/mobile.py",
+        "blob": "31fc3b226b8ef3e61e8d59ecb84b21111065d992",
+        "bytes": 41762
+      },
+      {
+        "path": "src/bonghwajigi/api/user_auth.py",
+        "blob": "f975416a504b274da6aba71daf7bcc069cc68a0e",
+        "bytes": 3625
+      },
+      {
+        "path": "src/bonghwajigi/common/config.py",
+        "blob": "6baf9d688246a5281da4f5a89509119d29a20288",
+        "bytes": 2747
+      },
+      {
+        "path": "src/bonghwajigi/contracts/app.py",
+        "blob": "e083c44bcaa99824561158db872229fad01b9f41",
+        "bytes": 3860
+      },
+      {
+        "path": "src/bonghwajigi/db/app_models.py",
+        "blob": "09fdd2ce379e2ad2d5bf2d4c4357e5743a65e5c0",
+        "bytes": 2015
+      },
+      {
+        "path": "src/bonghwajigi/policy/three_stage.py",
+        "blob": "e0d3e90d27f399f8b363613eefc57dfb7ae83cdb",
+        "bytes": 8318
+      },
+      {
+        "path": "training/configs/korea-gk2a-context-v4.json",
+        "blob": "de43ccd52bacbbeb54decec8df12d83549b68776",
+        "bytes": 13712
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/acquisition-inventory.json",
+        "blob": "f1b45e32115020ccf54c0c45b58ae8dd84e9cadd",
+        "bytes": 4040
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/acquisition-receipt.json",
+        "blob": "1e8a6c5de33f8bf62585d3d342e2877973ce3b7d",
+        "bytes": 5254
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/context-report.json",
+        "blob": "8393af5d2fdfbfe6b113cfe0fd9acf5ef9e13091",
+        "bytes": 112998
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/gpu-run/hourly-20261031T153039Z-560187/context_depth5-history.json",
+        "blob": "b403fe1cbd34d14fd19cd47dcddceefb55f74e03",
+        "bytes": 7500
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/gpu-run/hourly-20261031T153039Z-560187/context_depth5.ubj",
+        "blob": "049940dcb8d7126ee6c9b637a29f6679967990c9",
+        "bytes": 30880
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/gpu-run/hourly-20261031T153039Z-560187/context_without_recent_depth5-history.json",
+        "blob": "809f63e9b5ee57ff38da5cdb6feae86850a272cf",
+        "bytes": 6832
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/gpu-run/hourly-20261031T153039Z-560187/context_without_recent_depth5.ubj",
+        "blob": "4a9b93e35be5abbab39800f30f6ff5f34cfca2df",
+        "bytes": 18713
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/gpu-run/hourly-20261031T153039Z-560187/history_depth3-history.json",
+        "blob": "d1ef348f3938c1c8f137d03d8ec0a7db2d3ee65c",
+        "bytes": 7678
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/gpu-run/hourly-20261031T153039Z-560187/history_depth3.ubj",
+        "blob": "6c7db3cf152e8461a6e7edf3f11013d2d3d677e1",
+        "bytes": 17494
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/gpu-run/hourly-20261031T153039Z-560187/history_depth5-history.json",
+        "blob": "8e68fcd2e85ad47cb4c6fbb90a0ec154ab20fcbe",
+        "bytes": 7252
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/gpu-run/hourly-20261031T153039Z-560187/history_depth5.ubj",
+        "blob": "05df5847f8b576673b0ab88b985d57db0621d138",
+        "bytes": 24394
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/gpu-run/hourly-20261031T153039Z-560187/history_weighted-history.json",
+        "blob": "4479e7094353fa325886d7348653164272799902",
+        "bytes": 7499
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/gpu-run/hourly-20261031T153039Z-560187/history_weighted.ubj",
+        "blob": "5b3050dad221a94c105f6b3336456afa8c4d72cf",
+        "bytes": 23613
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/gpu-run/hourly-20261031T153039Z-560187/history_without_recent_depth5-history.json",
+        "blob": "0d4a50bb10ca4a0a6879777e627f6f7328f5d8b2",
+        "bytes": 7115
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/gpu-run/hourly-20261031T153039Z-560187/history_without_recent_depth5.ubj",
+        "blob": "006845292faedfbfaef716f5531a8cf6017b32bf",
+        "bytes": 22612
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/gpu-run/hourly-20261031T153039Z-560187/plan.json",
+        "blob": "897c13c0779a07204beaf9939a4b08782af1274a",
+        "bytes": 9644
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/gpu-run/hourly-20261031T153039Z-560187/report.json",
+        "blob": "6413e50fd066f3876ed073c278c3f9efa944fce6",
+        "bytes": 40075
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/gpu-run/hourly-20261031T153039Z-560187/spatial_depth3-history.json",
+        "blob": "cec8d4e07d1ac4d84cd820b1e7a7b5beffcee81f",
+        "bytes": 11460
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/gpu-run/hourly-20261031T153039Z-560187/spatial_depth3.ubj",
+        "blob": "94a19de7af115ec909648e8ebf8d98b047588fe4",
+        "bytes": 48054
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/history-interval-diagnosis.json",
+        "blob": "5586d3622cd90385fe72f6091a7afe00b72dc446",
+        "bytes": 979
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/kma-v4-groupcv-20261031T153141Z/depth2_regularized_equal_events-cv.json",
+        "blob": "a5f0b3b8e76897e13dc233be1383c453457c94d3",
+        "bytes": 108644
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/kma-v4-groupcv-20261031T153141Z/depth4_equal_events-cv.json",
+        "blob": "a9941dbdd6af0ae6eb51c2837e72870be081bcb9",
+        "bytes": 108532
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/kma-v4-groupcv-20261031T153141Z/depth4_positive3-cv.json",
+        "blob": "db7013f31419f5f6d9303c3acf7eb6f5e73ea8b2",
+        "bytes": 105567
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/kma-v4-groupcv-20261031T153141Z/depth4_positive_sqrt-cv.json",
+        "blob": "2d692805051b186bb7c77290c980135c6d79ac07",
+        "bytes": 107082
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/kma-v4-groupcv-20261031T153141Z/depth4_positive_sqrt.ubj",
+        "blob": "70e76f748e1a0f9cdcdaf25cd7fa6a2131481bb9",
+        "bytes": 165278
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/kma-v4-groupcv-20261031T153141Z/depth4_unit-cv.json",
+        "blob": "88ac2bbe36c220b135032267b28af5e4f7edb34c",
+        "bytes": 105590
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/kma-v4-groupcv-20261031T153141Z/depth4_unit.ubj",
+        "blob": "25e813bb99c3eb965c7b17379a3f9e12daf52113",
+        "bytes": 162141
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/kma-v4-groupcv-20261031T153141Z/matched-comparison.json",
+        "blob": "35a1cf4e94d5c73fa2160a050a1b4a6aaa7a8f04",
+        "bytes": 133889
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/kma-v4-groupcv-20261031T153141Z/plan.json",
+        "blob": "cd254246e068aef5ed41796f581e5d6e446b979a",
+        "bytes": 26480
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/kma-v4-groupcv-20261031T153141Z/report.json",
+        "blob": "f78dec2c450cc7cad14e3f0e5eb10e3792de7004",
+        "bytes": 819600
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/kma-v4-groupcv-20261031T153141Z/selection.json",
+        "blob": "b8fbafb3ece3d4498a28a874244b72d80ad375f4",
+        "bytes": 956
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/oof-calibration/calibrator.json",
+        "blob": "8708a17d61809f104e7c464ead0e4f682750eaf1",
+        "bytes": 6729
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/oof-calibration/plan.json",
+        "blob": "b71f7bbdba644e1219a71aa5ff050efa8408c24a",
+        "bytes": 14067
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/oof-calibration/report.json",
+        "blob": "254bbf4829d506c02d6a65c6ef54d3570b89ebf9",
+        "bytes": 77205
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/summary.json",
+        "blob": "5d5a00436f043b323f1e3964e3a8222dff0fee1a",
+        "bytes": 5038
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/utility/completion.json",
+        "blob": "72ee440ab7a14fae8186cd54c9d18e323c646118",
+        "bytes": 2861
+      },
+      {
+        "path": "training/reports/kma-expanded-audit-20261101/utility/ranking-audit.json",
+        "blob": "0093abb9e2870b951754e3bd4d3dc0e9cd248912",
+        "bytes": 191140
+      },
+      {
+        "path": "training/src/bonghwa_training/expanded_generalization_experiment.py",
+        "blob": "a215034087fe05dd70c4f1e79eac8b83fd310795",
+        "bytes": 23254
+      },
+      {
+        "path": "training/src/bonghwa_training/expanded_oof_calibration.py",
+        "blob": "e483812bc8c04415d3506bd1ae5a610d63cd9345",
+        "bytes": 22578
+      },
+      {
+        "path": "training/src/bonghwa_training/kma_profile.py",
+        "blob": "57d9cebb15b8ed52c2f751776915fbb09c219c6a",
+        "bytes": 9566
+      },
+      {
+        "path": "training/tests/test_compare_kma_generations.py",
+        "blob": "974e4466b4ee0d4fac6184aca7eb28c6026e6d70",
+        "bytes": 12388
+      },
+      {
+        "path": "training/tests/test_expanded_generalization_experiment.py",
+        "blob": "5e65a27d7ac57f67e796f59b432c97214d6c804a",
+        "bytes": 14674
+      },
+      {
+        "path": "training/tests/test_expanded_oof_calibration.py",
+        "blob": "c806b698773b0e310f2e6645e0995d9821363173",
+        "bytes": 10409
+      },
+      {
+        "path": "training/tests/test_kma_profile.py",
+        "blob": "bc0049521a28b2b06bd6c6e2c503abf0d61182f9",
+        "bytes": 10283
+      },
+      {
+        "path": "training/tools/compare_kma_generations.py",
+        "blob": "1dcd566fb31645bdf355d4bf14e2ddcec936abec",
+        "bytes": 8408
+      },
+      {
+        "path": "training/tools/run_kma_groupcv.sh",
+        "blob": "b38f641ef21908988c6daf23c0874025ee25637e",
+        "bytes": 2576
+      },
+      {
+        "path": "training/tools/run_kma_research.sh",
+        "blob": "b69bab709d953f8475a8c8e5069288079b99642b",
+        "bytes": 2809
+      }
+    ]
+  },
+  "한계": "동시에 작성 중인 기능의 현재 저장 상태이며 DB통합/운영배포 완료가 아님"
+}

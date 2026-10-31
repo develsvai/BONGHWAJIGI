@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "config_sha256": "9ea535680813186be13f2b44cff9e1e2e7091e14e6ae938aa8400a67769f9f9f",
+  "non_test_event_ids": [
+    "andong_2020",
+    "andong_2021",
+    "hapcheon_2022",
+    "uljin_2022",
+    "ulju_2020",
+    "goseong_2020",
+    "yeongdeok_2022",
+    "yeongwol_2022",
+    "gangneung_donghae_2022",
+    "bonghwa_2022",
+    "yanggu_2022",
+    "gunwi_2022",
+    "uljin_may_2022",
+    "miryang_2022",
+    "hongseong_2023",
+    "hapcheon_2023",
+    "daejeon_geumsan_2023",
+    "hampyeong_2023",
+    "suncheon_2023",
+    "yeongju_2023",
+    "gangneung_2023"
+  ],
+  "manifest_sha256": {
+    "andong_2020": "0fdd62c1233e72bf178a6cb51dbe70c615d56221e95dec2bbfd0d3422ed08c1e",
+    "andong_2021": "3f72693f1afe343338d90c7f271c1ef7df87679379027731407cef3482aa3b95",
+    "hapcheon_2022": "b15a4d0bb365bb6b0342da91578a05b63c20af4bef924db65f1fa15e03294dc1",
+    "uljin_2022": "9997ad3b2f9fbbf8574e8e129dad97012efc7b416ab9fe05559431595543e3d8",
+    "ulju_2020": "28c650c7422126154ae1f8dc3cd3b62fc039d4deab319388e3869ff0b4223104",
+    "goseong_2020": "6c004f747d8eed894757c48a326543a65ad6fff58bea6996f6bd3c5735fdaad3",
+    "yeongdeok_2022": "8ef1cf268ab16c77b8d6611082c1a22069122b20bcf52300719eb2b583d143e1",
+    "yeongwol_2022": "26618334c66761063c0110d133a603765c0670149954c526cd1b542cb9161bbf",
+    "gangneung_donghae_2022": "9f8dd308648b058ec40e917d56134ff6a3a53215c2c3385896b4b7de007c29b2",
+    "bonghwa_2022": "900fee87a9894ce388698b0ea0bb227a99cb72c9ef52dbb0a94e62d31b1cef7f",
+    "yanggu_2022": "1bdfad2b7fe26ca1e4768c8917b63aeeb8b9683bf8b2c574518036966d76f1c2",
+    "gunwi_2022": "ac113553e636be1c965e9e3d39c8f55ca855982d2dde162aadeb3b286666dfaa",
+    "uljin_may_2022": "6f5c75ca683d0d98ab652980df362ccdb54e5e7749705352759510e962ec181a",
+    "miryang_2022": "1f97f236f4afb54b0a83c8d8b31b52035f14571db14cd38a54625e01f8c24376",
+    "hongseong_2023": "84234a7918bc0945a6d86ba58022ad43bc892c8509995dc489c25d783048cc4e",
+    "hapcheon_2023": "74cde99409a4500c599bf41758642c009aae2ff33a138652a9396d02e8a85ab1",
+    "daejeon_geumsan_2023": "52357afa4f035523acf58f7183fd8cf961189073d2d16d562db448aae45a3e15",
+    "hampyeong_2023": "270d097cbcba4904c2d444811d3fc040984b26d6f168a183c0222966c74d1c04",
+    "suncheon_2023": "502b8f87eb465fa5e99fd7f37c664004900d7108a7183796a4f1e4fbcb93c936",
+    "yeongju_2023": "8a09a42a46ea04ca329b5204a325f4c175e303a9659ae598fc5bc647c4165400",
+    "gangneung_2023": "6a962a234b93cefe92296479734002925b8fbfbbb33e16c99b9e72f1e99f1540"
+  },
+  "events": {
+    "andong_2020": {
+      "requested_split": "train",
+      "manifest_split": "train",
+      "split_reused": false
+    },
+    "andong_2021": {
+      "requested_split": "train",
+      "manifest_split": "train",
+      "split_reused": false
+    },
+    "hapcheon_2022": {
+      "requested_split": "train",
+      "manifest_split": "train",
+      "split_reused": false
+    },
+    "uljin_2022": {
+      "requested_split": "train",
+      "manifest_split": "train",
+      "split_reused": false
+    },
+    "ulju_2020": {
+      "requested_split": "train",
+      "manifest_split": "train",
+      "split_reused": false
+    },
+    "goseong_2020": {
+      "requested_split": "train",
+      "manifest_split": "train",
+      "split_reused": false
+    },
+    "yeongdeok_2022": {
+      "requested_split": "train",
+      "manifest_split": "train",
+      "split_reused": false
+    },
+    "yeongwol_2022": {
+      "requested_split": "train",
+      "manifest_split": "train",
+      "split_reused": false
+    },
+    "gangneung_donghae_2022": {
+      "requested_split": "train",
+      "manifest_split": "train",
+      "split_reused": false
+    },
+    "bonghwa_2022": {
+      "requested_split": "train",
+      "manifest_split": "train",
+      "split_reused": false
+    },
+    "yanggu_2022": {
+      "requested_split": "train",
+      "manifest_split": "train",
+      "split_reused": false
+    },
+    "gunwi_2022": {
+      "requested_split": "train",
+      "manifest_split": "train",
+      "split_reused": false
+    },
+    "uljin_may_2022": {
+      "requested_split": "train",
+      "manifest_split": "train",
+      "split_reused": false
+    },
+    "miryang_2022": {
+      "requested_split": "train",
+      "manifest_split": "train",
+      "split_reused": false
+    },
+    "hongseong_2023": {
+      "requested_split": "validation",
+      "manifest_split": "calibration",
+      "split_reused": true
+    },
+    "hapcheon_2023": {
+      "requested_split": "validation",
+      "manifest_split": "validation",
+      "split_reused": false
+    },
+    "daejeon_geumsan_2023": {
+      "requested_split": "validation",
+      "manifest_split": "validation",
+      "split_reused": false
+    },
+    "hampyeong_2023": {
+      "requested_split": "validation",
+      "manifest_split": "validation",
+      "split_reused": false
+    },
+    "suncheon_2023": {
+      "requested_split": "validation",
+      "manifest_split": "validation",
+      "split_reused": false
+    },
+    "yeongju_2023": {
+      "requested_split": "validation",
+      "manifest_split": "validation",
+      "split_reused": false
+    },
+    "gangneung_2023": {
+      "requested_split": "calibration",
+      "manifest_split": "validation",
+      "split_reused": true
+    }
+  },
+  "completed_at_utc": "2026-10-31T15:29:45.917343+00:00"
+}

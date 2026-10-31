@@ -24,7 +24,7 @@ Keep code identifiers, file paths, shell commands, URLs, commit hashes, and orig
 - Job ID: `job-20261031-002626-job-c9f9ff0d`
 - Title: 영향 확률 데이터셋과 모델
 - Goal: 산불 영향의 입력·목표 격자·기간·관측 정답을 먼저 고정하고 GPU XGBoost 설치·학습·결과 확인과 일반 서버 CPU 연결을 준비한다. 실제 정답이 없으면 합성 연결검증과 실제 예측 보류를 명시하고 실제 성능을 주장하지 않는다. 이 갱신은 사용자 지시에 따른 계약 재고정이며 구현 실행·Queue 등록은 포함하지 않는다. 기존 완료 이력과 Task ID를 보존한다.
-- Status: `PENDING`
+- Status: `RUNNING`
 - Required branch: `develop`
 - Task count: `9`
 
@@ -41,7 +41,7 @@ Keep code identifiers, file paths, shell commands, URLs, commit hashes, and orig
 - Document outputs: `docs/V2/delivery/korea-wildfire-improvement.md`
 - Document output exceptions: -
 - Source proposal: `-`
-- Status: `PENDING`
+- Status: `RUNNING`
 - Agent: `foreground`
 - Order: `9`
 - Depends on: `task-20261031-105243-cuda-b5a38b8b`

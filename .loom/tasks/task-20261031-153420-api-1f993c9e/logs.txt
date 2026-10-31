@@ -1,0 +1,1 @@
+[2026-10-31T15:34:26+00:00] agent=foreground task=task-20261031-153420-api-1f993c9e Foreground task session started.
