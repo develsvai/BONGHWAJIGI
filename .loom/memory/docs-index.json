@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-31T00:30:53+00:00",
+  "generated_at": "2026-10-31T00:53:09+00:00",
   "docs_paths": [
     "docs"
   ],
@@ -254,8 +254,8 @@
       "path": "docs/V2/04-execution-backlog.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T09:30:53+09:00",
-      "size_bytes": 21559
+      "updated_at": "2026-10-31T09:52:53+09:00",
+      "size_bytes": 21951
     },
     {
       "id": "docs/V2/05-infrastructure-status.md",
@@ -263,8 +263,8 @@
       "path": "docs/V2/05-infrastructure-status.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T09:29:07+09:00",
-      "size_bytes": 5323
+      "updated_at": "2026-10-31T09:53:09+09:00",
+      "size_bytes": 9177
     }
   ],
   "path": "/Users/hongyongjae/Desktop/helloworld/BONGHWAJIGI/.loom/memory/docs-index.json"
