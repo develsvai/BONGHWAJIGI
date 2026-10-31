@@ -16,4 +16,6 @@ uv run --no-sync python -m bonghwajigi.ingestion.replay /path/to/scenario.jsonl 
 
 `analysis-event.jsonl`과 `retrieval-document.json`은 합성 입력 형식 예제다. `example.invalid`는 실제 출처가 아니다. 현재 시각으로 인터넷 검색까지 자동 시연하려면 [분석 흐름 안내](../../docs/V2/delivery/analysis-retrieval-flow.md)의 실행 도구를 사용한다.
 
+`yeongdeok-integration.json`은 공식 게시물의 산불 경보 발령 기록과 행동요령 요약을 포함한 과거 재생 입력이다. 발령 기록은 현재 경보나 직접 수신한 재난문자 원본이 아니다. 실행할 때 별도 scenario ID와 실제 수집 시각을 부여하고, 지역·과거 시점으로 뉴스를 검색한 뒤 실제 Qwen3를 호출한다. [통합 결과와 사용법](../../docs/V2/delivery/qwen-integration-result.md)을 따른다.
+
 실제 수집 원본은 `data/raw/`에 두고 Git에 넣지 않는다. 재사용 가능한 시연 자료도 출처·사용 조건과 개인정보를 검토한 뒤 포함한다. 대표 재난 사례·정답·대응 레벨은 이 예제로 확정하지 않는다.

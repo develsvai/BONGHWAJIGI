@@ -10,6 +10,8 @@
 
 분석 기능을 활성화하면 **시나리오 수신 → DB/outbox → Redis 분석 큐 → 인터넷 뉴스 검색·GPU 임베딩 → pgvector 검색 → Qwen 전달 직전 자료**까지 실행할 수 있습니다. Qwen 생성·사건 통합은 호출하지 않습니다. 별도 설정과 실행 방법은 [분석·검색 흐름](docs/V2/delivery/analysis-retrieval-flow.md)을 따릅니다.
 
+별도 시연 도구는 공식 경보의 과거 발령 기록을 추가하고 실제 Qwen3 통합까지 실행합니다. 결과와 원문은 [경보 포함 Qwen3 통합 결과](docs/V2/delivery/qwen-integration-result.md)에 보관했습니다. 수치 입력이 부족해 XGBoost 추론은 차단하며, 이 도구를 분석 워커의 자동 후속 작업으로 연결한 상태는 아닙니다.
+
 ## 로컬 시작
 
 Python 3.12와 uv를 사용합니다. 프로젝트 루트에서 실행합니다.

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-31T10:43:02+00:00",
+  "generated_at": "2026-10-31T10:44:09+00:00",
   "docs_paths": [
     "docs"
   ],
@@ -463,6 +463,78 @@
       "document_type": "docs",
       "updated_at": "2026-10-31T19:17:26+09:00",
       "size_bytes": 11198
+    },
+    {
+      "id": "docs/V2/delivery/qwen-integration-result.md",
+      "title": "경보 포함 Qwen3 통합 결과 — 추론 입력 직전",
+      "path": "docs/V2/delivery/qwen-integration-result.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:43:52+09:00",
+      "size_bytes": 10806
+    },
+    {
+      "id": "docs/V2/delivery/qwen-integration/generation-request.json",
+      "title": "{",
+      "path": "docs/V2/delivery/qwen-integration/generation-request.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:40:33+09:00",
+      "size_bytes": 3141
+    },
+    {
+      "id": "docs/V2/delivery/qwen-integration/generation-response.json",
+      "title": "{",
+      "path": "docs/V2/delivery/qwen-integration/generation-response.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:40:47+09:00",
+      "size_bytes": 1146
+    },
+    {
+      "id": "docs/V2/delivery/qwen-integration/pre-inference.json",
+      "title": "{",
+      "path": "docs/V2/delivery/qwen-integration/pre-inference.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:40:47+09:00",
+      "size_bytes": 10621
+    },
+    {
+      "id": "docs/V2/delivery/qwen-integration/retrieval-handoff.json",
+      "title": "{",
+      "path": "docs/V2/delivery/qwen-integration/retrieval-handoff.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:40:33+09:00",
+      "size_bytes": 8119
+    },
+    {
+      "id": "docs/V2/delivery/qwen-integration/run-metadata.json",
+      "title": "{",
+      "path": "docs/V2/delivery/qwen-integration/run-metadata.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:40:47+09:00",
+      "size_bytes": 575
+    },
+    {
+      "id": "docs/V2/delivery/qwen-integration/scenario-input.json",
+      "title": "{",
+      "path": "docs/V2/delivery/qwen-integration/scenario-input.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:40:27+09:00",
+      "size_bytes": 5895
+    },
+    {
+      "id": "docs/V2/delivery/qwen-integration/source-checks.json",
+      "title": "[",
+      "path": "docs/V2/delivery/qwen-integration/source-checks.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:40:28+09:00",
+      "size_bytes": 1080
     },
     {
       "id": "docs/V2/delivery/ssh-access.md",

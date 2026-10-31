@@ -1,0 +1,243 @@
+{
+  "schema_version": "0.1.0",
+  "mode": "simulation",
+  "origin": "historical_replay",
+  "scenario_id": "yeongdeok-ccce4c1174a14a59977ff286914d0050",
+  "stage": "pre_inference_review",
+  "as_of": "2025-03-27T00:00:00+09:00",
+  "replay_semantics": "publication_time_cutoff; collected_now; not_historical_availability",
+  "incident": {
+    "disaster_type": "wildfire",
+    "area_name": "경상북도 영덕군",
+    "area_origin": "scenario_operator_label",
+    "coordinates": null,
+    "grid_id": null
+  },
+  "official_alerts": [
+    {
+      "alert_id": "historical-national-wildfire-warning-20250325-1600",
+      "scenario_id": "yeongdeok-ccce4c1174a14a59977ff286914d0050",
+      "source_id": "official-wildfire-warning-20250326",
+      "record_kind": "official_warning_notice_record",
+      "origin": "historical_replay",
+      "authority": "산림청",
+      "issued_at": "2025-03-25T16:00:00+09:00",
+      "severity": "심각",
+      "target_area": "전국",
+      "original_excerpt": "정부는 25일 오후 4시부로 산불경보 '심각' 단계를 전국으로 확대하고 국가소방동원령을 추가 발동했다.",
+      "original_sms_available": false,
+      "current_effective_status": "not_checked"
+    }
+  ],
+  "alert_delivery": {
+    "executed": false,
+    "requires_qwen": false
+  },
+  "integration": {
+    "summary": "당시 경상북도 영덕군 전 지역에 산불 확산이 보도됐으며, 산에서 떨어진 곳으로 대피가 안내됐다. 정부는 전국 산불경보를 심각 단계로 확대하고 국가소방동원령을 발동했다.",
+    "summary_review_status": "not_reviewed",
+    "facts": [
+      {
+        "evidence_id": "official-wildfire-warning-20250326",
+        "quote": "[공식 게시물 요약] 산림청의 전국 산불 위기경보 심각 확대 기록과 경북 산불 확산 상황이다. 의성 산불이 안동·청송·영양·영덕으로 번졌으며 주민 대피와 전기·통신·도로 장애가 보고됐다."
+      },
+      {
+        "evidence_id": "web-a5462476e9cbe05117537a8e904682a43c9efdaf",
+        "quote": "[속보] 의성산불 확산에 영양·영덕군도 주민 대피 재난문자 - 중앙일보"
+      },
+      {
+        "evidence_id": "web-bfdc6172bf3384a722f3fe8417ac6da84ae2fe07",
+        "quote": "영덕군 \"전 지역에 산불 확산…산에서 떨어진 곳으로 대피해야\" - 연합뉴스TV"
+      }
+    ],
+    "validation": "schema_and_exact_evidence_quotes_only; not_semantic_approval",
+    "approved_policy": false
+  },
+  "source_catalog": [
+    {
+      "evidence_id": "official-wildfire-warning-20250326",
+      "text": "[공식 게시물 요약] 산림청의 전국 산불 위기경보 심각 확대 기록과 경북 산불 확산 상황이다. 의성 산불이 안동·청송·영양·영덕으로 번졌으며 주민 대피와 전기·통신·도로 장애가 보고됐다. [공식 게시물 원문 발췌] 정부는 25일 오후 4시부로 산불경보 '심각' 단계를 전국으로 확대하고 국가소방동원령을 추가 발동했다.",
+      "source": {
+        "title": "산불경보 '심각' 단계 전국 확대…국가적으로 엄중한 상황",
+        "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148940993",
+        "published_at": "2025-03-26T23:59:59+09:00",
+        "collected_at": "2026-10-31T10:40:27.835464Z",
+        "verified": true,
+        "publisher": "대한민국 정책브리핑",
+        "publisher_url": "https://www.korea.kr/"
+      },
+      "origin": "historical_replay",
+      "source_kind": "stored_document",
+      "selection_method": "pinned_official_source",
+      "approved_policy": false
+    },
+    {
+      "evidence_id": "official-wildfire-guidance-20250305",
+      "text": "[공식 행동요령 요약·미승인 참고 자료] 행정안전부 안전한TV가 게시한 산불 행동요령 자료다. 산불 발견 신고, 확산 방향을 고려한 이동, 미처 벗어나지 못했을 때의 자세 등을 다룬다. 이 자료 자체는 현재 사용자의 위치·대피 경로·개인별 대응 정책을 제공하지 않는다.",
+      "source": {
+        "title": "[사회재난] 산불 발생 시 행동 요령",
+        "url": "https://www.safetv.go.kr/base/video/view?idx=2759&menuLevel=&menuNo=&playlistManagementIdx=8",
+        "published_at": "2025-03-05T17:55:36+09:00",
+        "collected_at": "2026-10-31T10:40:27.835464Z",
+        "verified": true,
+        "publisher": "행정안전부 안전한TV",
+        "publisher_url": "https://www.safetv.go.kr/"
+      },
+      "origin": "historical_replay",
+      "source_kind": "stored_document",
+      "selection_method": "pinned_official_source",
+      "approved_policy": false
+    },
+    {
+      "evidence_id": "web-a5462476e9cbe05117537a8e904682a43c9efdaf",
+      "text": "[속보] 의성산불 확산에 영양·영덕군도 주민 대피 재난문자 - 중앙일보\n[속보] 의성산불 확산에 영양·영덕군도 주민 대피 재난문자 중앙일보",
+      "source": {
+        "title": "[속보] 의성산불 확산에 영양·영덕군도 주민 대피 재난문자 - 중앙일보",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBFa2p1clJ1b3RsOFNWRF9QSEVoY003OEppNjJmMXJOSmh1alhJWFJCemt5THFVdnpHeG4xa1VYN1FSaGN2OWhlNTNjaHMxYVh1d1YxRWh3?oc=5",
+        "published_at": "2025-03-25T07:00:00Z",
+        "collected_at": "2026-10-31T10:40:31.711582Z",
+        "verified": false,
+        "publisher": "중앙일보",
+        "publisher_url": "https://www.joongang.co.kr/"
+      },
+      "origin": "collected_sample",
+      "source_kind": "news_search",
+      "selection_method": "embedding_retrieval",
+      "approved_policy": false
+    },
+    {
+      "evidence_id": "web-bfdc6172bf3384a722f3fe8417ac6da84ae2fe07",
+      "text": "영덕군 \"전 지역에 산불 확산…산에서 떨어진 곳으로 대피해야\" - 연합뉴스TV\n영덕군 \"전 지역에 산불 확산…산에서 떨어진 곳으로 대피해야\" 연합뉴스TV",
+      "source": {
+        "title": "영덕군 \"전 지역에 산불 확산…산에서 떨어진 곳으로 대피해야\" - 연합뉴스TV",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5QeWY1WDM4OHVBaVkxM3ljNUVOdU5JcWNhQXVSTlFWV05Oby1sdnFtSHRCd1hrcEg2cUszYkYzX0VGdVhuV2lDMW9BbDdCOUFmNzduV0R3ckJ5MnFxaUkzNDk3UFFuY2M?oc=5",
+        "published_at": "2025-03-26T07:00:00Z",
+        "collected_at": "2026-10-31T10:40:31.711582Z",
+        "verified": false,
+        "publisher": "연합뉴스TV",
+        "publisher_url": "https://www.yonhapnewstv.co.kr/"
+      },
+      "origin": "collected_sample",
+      "source_kind": "news_search",
+      "selection_method": "embedding_retrieval",
+      "approved_policy": false
+    },
+    {
+      "evidence_id": "web-10ad3118163431c1e2f1d6a369e0b42d322ed198",
+      "text": "영덕군 \"전 지역에 산불 확산…산에서 떨어진 곳으로 대피해야\" - 연합뉴스\n영덕군 \"전 지역에 산불 확산…산에서 떨어진 곳으로 대피해야\" 연합뉴스",
+      "source": {
+        "title": "영덕군 \"전 지역에 산불 확산…산에서 떨어진 곳으로 대피해야\" - 연합뉴스",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5HWm9MU0FEQ180WFZvcUMzX3ZpSHoyTy1tWDZtQ2JyVlpqSFgweHlFb0lPajA1Q3hmb21BQUJ6aFpjMVVETWw0SHAxX0dYWGMtNzBqSVNndll1WDjSAWBBVV95cUxOTFp4M3RxSGZidFczX092cHo2X3ltRW8xYW1PZ3dQbVE3NDJCSnU2dlA4NTQtTlQ0dmNxWkFxUldVQnV6azUxY3VBZFFSMFQ0V3hSc0k3R3NiTG9tVklFYlE?oc=5",
+        "published_at": "2025-03-25T07:00:00Z",
+        "collected_at": "2026-10-31T10:40:31.711582Z",
+        "verified": false,
+        "publisher": "연합뉴스",
+        "publisher_url": "https://www.yna.co.kr/"
+      },
+      "origin": "collected_sample",
+      "source_kind": "news_search",
+      "selection_method": "embedding_retrieval",
+      "approved_policy": false
+    }
+  ],
+  "user_context": {
+    "profile": null,
+    "location": null,
+    "policy": null
+  },
+  "inference_gate": {
+    "status": "blocked",
+    "reasons": [
+      "MISSING_STRUCTURED_RASTER_INPUTS",
+      "MISSING_GRID_AND_GEOGRAPHIC_ALIGNMENT",
+      "MODEL_DOMAIN_NOT_VALIDATED_FOR_KOREA"
+    ],
+    "feature_contract": {
+      "source": "training/reports/dataset-report.json",
+      "source_sha256": "b170a4be420fcf4970153e795558c41023166cd3710064b571e839dfb032da90",
+      "feature_names": [
+        "elevation",
+        "pdsi",
+        "NDVI",
+        "pr",
+        "sph",
+        "th",
+        "tmmn",
+        "tmmx",
+        "vs",
+        "erc",
+        "population",
+        "PrevFireMask",
+        "previous_fire_unknown",
+        "previous_fire_neighbors_8",
+        "observed_neighbors_8",
+        "distance_to_observed_fire_within_patch_km",
+        "patch_has_observed_fire",
+        "wind_direction_sin",
+        "wind_direction_cos",
+        "physical_qc_invalid_count"
+      ],
+      "target": "fire_next_day",
+      "interpretation": "next daily satellite fire observation; not personal impact"
+    },
+    "numeric_features": {
+      "elevation": null,
+      "pdsi": null,
+      "NDVI": null,
+      "pr": null,
+      "sph": null,
+      "th": null,
+      "tmmn": null,
+      "tmmx": null,
+      "vs": null,
+      "erc": null,
+      "population": null,
+      "PrevFireMask": null,
+      "previous_fire_unknown": null,
+      "previous_fire_neighbors_8": null,
+      "observed_neighbors_8": null,
+      "distance_to_observed_fire_within_patch_km": null,
+      "patch_has_observed_fire": null,
+      "wind_direction_sin": null,
+      "wind_direction_cos": null,
+      "physical_qc_invalid_count": null
+    },
+    "missing_features": [
+      "elevation",
+      "pdsi",
+      "NDVI",
+      "pr",
+      "sph",
+      "th",
+      "tmmn",
+      "tmmx",
+      "vs",
+      "erc",
+      "population",
+      "PrevFireMask",
+      "previous_fire_unknown",
+      "previous_fire_neighbors_8",
+      "observed_neighbors_8",
+      "distance_to_observed_fire_within_patch_km",
+      "patch_has_observed_fire",
+      "wind_direction_sin",
+      "wind_direction_cos",
+      "physical_qc_invalid_count"
+    ],
+    "input_matrix_created": false,
+    "xgboost_invoked": false,
+    "probability": null,
+    "personal_response_level": null
+  },
+  "provenance": {
+    "retrieval_handoff_sha256": "30870c7c13e28bcef0dccd36181645ac204a3ba273c72b81f5d082b60f4d96bb",
+    "model": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "input_tokens": 1021,
+    "output_tokens": 334,
+    "elapsed_ms": 13404.69,
+    "qwen_invoked": true,
+    "token_budget_checked": true,
+    "evidence_is_untrusted_data": true
+  }
+}

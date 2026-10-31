@@ -1,0 +1,39 @@
+{
+  "id": "task-20261031-103324-qwen3-b1f9a853",
+  "job_id": "job-20261031-002017-v2-fe3bfad0",
+  "title": "재난 경보를 포함한 Qwen3 사건 통합 실행과 추론 직전 결과 문서화",
+  "description": "사용자 직접 지시: 기존 검색 묶음의 경보 포함 여부를 확인하고 경보·저장 자료·검색 근거를 Qwen3로 실제 통합한 뒤 XGBoost 입력 직전에서 멈춰 결과 문서를 제공한다. 이전 결과에는 실제 경보가 없었음을 명시하며 확보 가능한 공식 경보 또는 명확히 표시한 재생 자료를 사용한다.",
+  "status": "RUNNING",
+  "created_at": "2026-10-31T10:33:24+00:00",
+  "updated_at": "2026-10-31T10:33:34+00:00",
+  "order_index": 12,
+  "assigned_agent": "foreground",
+  "depends_on": [
+    "task-20261031-095141-qwen-9e2979ea"
+  ],
+  "expected_output": "경보 포함 시나리오 입력, Qwen3 통합 및 근거 검증 도구, 실제 생성 원문과 검증된 추론 전 JSON, 사람이 읽는 결과 문서",
+  "done_condition": "실제 Qwen3 모델을 호출해 출처가 연결된 통합 결과를 저장한다. 경보 원문과 모의·과거 구분을 보존하며 없는 수치와 개인 정보를 만들지 않고 입력 결측과 추론 가능 여부를 문서화한다. XGBoost 추론·대응 결정·알림을 실행하지 않는다. 검증 및 Loom 기록을 커밋한다.",
+  "in_scope": "공식 경보 자료 확인·재생, 기존 검색 결과와 사건 단위 결합, Qwen3 생성 클라이언트와 구조화 검증, 추론 입력 사전 검사, 실제 GPU 호출 및 결과 문서화",
+  "out_of_scope": "XGBoost 학습·추론, 개인 정책·대응 레벨·알림, 실제 K8s 수집, 앱 저장소, 다른 채팅의 학습 작업 변경, 공개 포트·서비스 강제 중단",
+  "validation_hint": "공식 경보 출처와 원문 보존, 사건·시각 격리, 모델 출력 근거 및 JSON 검증, 수치 날조 거부, 실제 Qwen3 호출·모델 버전·토큰 수 기록, XGBoost 미호출 확인, 기존 테스트 및 Loom strict",
+  "required_docs": [
+    "docs/V2/delivery/analysis-retrieval-flow.md",
+    "docs/V2/delivery/gpu-model-readiness.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/qwen-integration-result.md"
+  ],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [
+    "407ae94a71bba048ddb6a804e976df9f8e662937"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-10-31T10:33:34+00:00",
+  "artifacts": [],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

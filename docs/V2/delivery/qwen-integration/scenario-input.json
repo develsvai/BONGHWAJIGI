@@ -1,0 +1,101 @@
+{
+  "mode": "simulation",
+  "origin": "historical_replay",
+  "area_name": "경상북도 영덕군",
+  "as_of": "2025-03-27T00:00:00+09:00",
+  "search_query": "영덕 대피",
+  "collection_note": "현재 확보한 과거 게시물의 발표일 기준 재생이다. 당시 수집·열람 가능성을 재현한 백테스트가 아니다. 날짜만 공개된 자료는 해당 날짜의 마지막 초를 발표 시각 상한으로 사용한다.",
+  "source_definitions": [
+    {
+      "document_id": "official-wildfire-warning-20250326",
+      "source_kind": "stored_document",
+      "origin": "historical_replay",
+      "text": "[공식 게시물 요약] 산림청의 전국 산불 위기경보 심각 확대 기록과 경북 산불 확산 상황이다. 의성 산불이 안동·청송·영양·영덕으로 번졌으며 주민 대피와 전기·통신·도로 장애가 보고됐다. [공식 게시물 원문 발췌] 정부는 25일 오후 4시부로 산불경보 '심각' 단계를 전국으로 확대하고 국가소방동원령을 추가 발동했다.",
+      "source": {
+        "title": "산불경보 '심각' 단계 전국 확대…국가적으로 엄중한 상황",
+        "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148940993",
+        "published_at": "2025-03-26T23:59:59+09:00",
+        "verified": true,
+        "publisher": "대한민국 정책브리핑",
+        "publisher_url": "https://www.korea.kr/"
+      },
+      "published_at_precision": "date_only_conservative_upper_bound",
+      "fetch_must_contain": "정부는 25일 오후 4시부로 산불경보",
+      "content_form": "editor_summary_and_short_original_excerpt"
+    },
+    {
+      "document_id": "official-wildfire-guidance-20250305",
+      "source_kind": "stored_document",
+      "origin": "historical_replay",
+      "text": "[공식 행동요령 요약·미승인 참고 자료] 행정안전부 안전한TV가 게시한 산불 행동요령 자료다. 산불 발견 신고, 확산 방향을 고려한 이동, 미처 벗어나지 못했을 때의 자세 등을 다룬다. 이 자료 자체는 현재 사용자의 위치·대피 경로·개인별 대응 정책을 제공하지 않는다.",
+      "source": {
+        "title": "[사회재난] 산불 발생 시 행동 요령",
+        "url": "https://www.safetv.go.kr/base/video/view?idx=2759&menuLevel=&menuNo=&playlistManagementIdx=8",
+        "published_at": "2025-03-05T17:55:36+09:00",
+        "verified": true,
+        "publisher": "행정안전부 안전한TV",
+        "publisher_url": "https://www.safetv.go.kr/"
+      },
+      "published_at_precision": "second",
+      "fetch_must_contain": "산불 발생 시 행동 요령",
+      "content_form": "editor_summary; not_reviewed_policy"
+    }
+  ],
+  "official_alerts": [
+    {
+      "alert_id": "historical-national-wildfire-warning-20250325-1600",
+      "source_id": "official-wildfire-warning-20250326",
+      "record_kind": "official_warning_notice_record",
+      "origin": "historical_replay",
+      "authority": "산림청",
+      "issued_at": "2025-03-25T16:00:00+09:00",
+      "severity": "심각",
+      "target_area": "전국",
+      "original_excerpt": "정부는 25일 오후 4시부로 산불경보 '심각' 단계를 전국으로 확대하고 국가소방동원령을 추가 발동했다.",
+      "original_sms_available": false,
+      "current_effective_status": "not_checked",
+      "scenario_id": "yeongdeok-ccce4c1174a14a59977ff286914d0050"
+    }
+  ],
+  "scenario_id": "yeongdeok-ccce4c1174a14a59977ff286914d0050",
+  "documents": [
+    {
+      "mode": "simulation",
+      "scenario_id": "yeongdeok-ccce4c1174a14a59977ff286914d0050",
+      "document_id": "official-wildfire-warning-20250326",
+      "revision": 1,
+      "origin": "historical_replay",
+      "source_kind": "stored_document",
+      "text": "[공식 게시물 요약] 산림청의 전국 산불 위기경보 심각 확대 기록과 경북 산불 확산 상황이다. 의성 산불이 안동·청송·영양·영덕으로 번졌으며 주민 대피와 전기·통신·도로 장애가 보고됐다. [공식 게시물 원문 발췌] 정부는 25일 오후 4시부로 산불경보 '심각' 단계를 전국으로 확대하고 국가소방동원령을 추가 발동했다.",
+      "source": {
+        "title": "산불경보 '심각' 단계 전국 확대…국가적으로 엄중한 상황",
+        "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148940993",
+        "published_at": "2025-03-26T23:59:59+09:00",
+        "verified": true,
+        "publisher": "대한민국 정책브리핑",
+        "publisher_url": "https://www.korea.kr/",
+        "collected_at": "2026-10-31T10:40:27.835464+00:00"
+      },
+      "valid_from": "2025-03-26T23:59:59+09:00"
+    },
+    {
+      "mode": "simulation",
+      "scenario_id": "yeongdeok-ccce4c1174a14a59977ff286914d0050",
+      "document_id": "official-wildfire-guidance-20250305",
+      "revision": 1,
+      "origin": "historical_replay",
+      "source_kind": "stored_document",
+      "text": "[공식 행동요령 요약·미승인 참고 자료] 행정안전부 안전한TV가 게시한 산불 행동요령 자료다. 산불 발견 신고, 확산 방향을 고려한 이동, 미처 벗어나지 못했을 때의 자세 등을 다룬다. 이 자료 자체는 현재 사용자의 위치·대피 경로·개인별 대응 정책을 제공하지 않는다.",
+      "source": {
+        "title": "[사회재난] 산불 발생 시 행동 요령",
+        "url": "https://www.safetv.go.kr/base/video/view?idx=2759&menuLevel=&menuNo=&playlistManagementIdx=8",
+        "published_at": "2025-03-05T17:55:36+09:00",
+        "verified": true,
+        "publisher": "행정안전부 안전한TV",
+        "publisher_url": "https://www.safetv.go.kr/",
+        "collected_at": "2026-10-31T10:40:27.835464+00:00"
+      },
+      "valid_from": "2025-03-05T17:55:36+09:00"
+    }
+  ]
+}

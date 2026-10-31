@@ -1,0 +1,16 @@
+{
+  "finished_at": "2026-10-31T10:40:47.277960+00:00",
+  "scenario_id": "yeongdeok-ccce4c1174a14a59977ff286914d0050",
+  "analysis_job_id": "074f4d1a-6377-40de-b3df-005de9f12940",
+  "status": "integration_completed",
+  "web_search": {
+    "provider": "google_news_rss",
+    "query": "산불 영덕 대피 after:2025-03-20 before:2025-03-28",
+    "searched_at": "2026-10-31T10:40:31.711582+00:00",
+    "status": "ok",
+    "result_count": 5
+  },
+  "model_output_validation": "schema_and_exact_evidence_quotes_passed",
+  "xgboost_invoked": false,
+  "inference_gate": "blocked"
+}
