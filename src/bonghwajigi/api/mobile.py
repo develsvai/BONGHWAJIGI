@@ -93,6 +93,12 @@ def attach_mobile(app, settings):
         if (row.revision if row else 0) != base:
             raise HTTPException(409, detail="REVISION_CONFLICT")
 
+    def input_time(value, moment, error_code):
+        # 단말의 작은 시계 오차를 수용하되 정책 유효기간은 서버 시각을 넘겨 늘리지 않는다.
+        if not moment - timedelta(minutes=5) <= value <= moment + timedelta(seconds=30):
+            raise HTTPException(422, detail=error_code)
+        return min(value, moment)
+
     def store(session, actor, kind, data, base):
         row = get_entity(session, actor, kind)
         base_check(row, base)
@@ -508,15 +514,20 @@ def attach_mobile(app, settings):
             )
             if not device:
                 raise HTTPException(404, detail="INSTALLATION_NOT_FOUND")
-            if body.captured_at > moment or body.captured_at < moment - timedelta(minutes=5):
-                raise HTTPException(422, detail="LOCATION_TIME_INVALID")
+            captured_at = input_time(body.captured_at, moment, "LOCATION_TIME_INVALID")
 
             def apply():
                 old, app_row = (
                     get_entity(s, actor, "location"),
                     get_entity(s, actor, "app_location"),
                 )
-                if old and at(old.body["observed_at"]) >= body.captured_at:
+                if old and at(old.body["observed_at"]) >= captured_at:
+                    raise HTTPException(409, detail="LOCATION_FIX_SUPERSEDED")
+                if (
+                    app_row
+                    and app_row.body["data"].get("captured_at")
+                    and at(app_row.body["data"]["captured_at"]) >= body.captured_at
+                ):
                     raise HTTPException(409, detail="LOCATION_FIX_SUPERSEDED")
                 if (
                     app_row
@@ -541,8 +552,8 @@ def attach_mobile(app, settings):
                         latitude=body.latitude,
                         longitude=body.longitude,
                         accuracy_m=body.accuracy_m,
-                        observed_at=body.captured_at,
-                        expires_at=body.captured_at + timedelta(minutes=5),
+                        observed_at=captured_at,
+                        expires_at=captured_at + timedelta(minutes=5),
                     ),
                     user_id=actor["sub"],
                 )
@@ -561,11 +572,14 @@ def attach_mobile(app, settings):
         with sessions.begin() as s:
             moment = evaluation_time(scope_lock(s, actor["scenario_id"]))
             row = get_entity(s, actor, "app_location")
+            deleted = {"deleted_at": moment.isoformat()}
+            if row and row.body["data"].get("captured_at"):
+                deleted["captured_at"] = row.body["data"]["captured_at"]
             store(
                 s,
                 actor,
                 "app_location",
-                {"deleted_at": moment.isoformat()},
+                deleted,
                 row.revision if row else 0,
             )
             current = get_entity(s, actor, "location")
@@ -698,8 +712,7 @@ def attach_mobile(app, settings):
             scope = scope_lock(s, actor["scenario_id"])
             row = owned_response(s, actor, response_id)
             moment = evaluation_time(scope)
-            if not moment - timedelta(minutes=5) <= body.observed_at <= moment:
-                raise HTTPException(422, detail="CONTEXT_TIME_INVALID")
+            observed_at = input_time(body.observed_at, moment, "CONTEXT_TIME_INVALID")
             identifier = row.incident_id + "/" + actor["sub"]
             current = s.get(PolicyEntity, (actor["scenario_id"], "state", identifier))
             base_check(current, body.base_revision)
@@ -720,8 +733,8 @@ def attach_mobile(app, settings):
                 identifier,
                 CurrentStateInput(
                     revision=body.base_revision + 1,
-                    observed_at=body.observed_at,
-                    expires_at=body.observed_at + timedelta(minutes=5),
+                    observed_at=observed_at,
+                    expires_at=observed_at + timedelta(minutes=5),
                     mobility_override=mobility,
                     **state,
                 ),
@@ -732,7 +745,7 @@ def attach_mobile(app, settings):
                 {
                     "context_revision": body.base_revision + 1,
                     "response_id": response_id,
-                    "expires_at": body.observed_at + timedelta(minutes=5),
+                    "expires_at": observed_at + timedelta(minutes=5),
                     "reevaluation": "pending",
                 }
             )

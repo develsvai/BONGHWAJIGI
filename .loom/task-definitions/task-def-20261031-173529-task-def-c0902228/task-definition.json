@@ -1,0 +1,32 @@
+{
+  "id": "task-def-20261031-173529-task-def-c0902228",
+  "job_definition_id": "job-20261031-002017-v2-fe3bfad0",
+  "title": "실기기 시계 오차로 거절되는 위치 입력을 보정하고 일반 서버 검증",
+  "description": "사용자 승인 앱 실연동 검증 중 단말 시계가 NTP 동기화 일반 서버보다 약0.6초 앞서 합성 위치 PUT이422로 거절됨을 확인했다. 소폭 미래시각만 수신시각으로 보정하여 정상 단말 위치 갱신을 지원하고 실제 배포와 검증을 마친다.",
+  "created_at": "2026-10-31T17:35:29+00:00",
+  "updated_at": "2026-10-31T17:35:58+00:00",
+  "order_index": 23,
+  "legacy_task_id": "task-20261031-173529-task-0623c231",
+  "depends_on": [
+    "task-def-20261031-163810-api-449d29b7"
+  ],
+  "expected_output": "위치 입력 시계 오차 보정과 경계 테스트; 서버 배포·단말 검증 결과 문서",
+  "done_condition": "30초 이내 미래 위치는 서버 수신시각으로 보정되어5분 유효기간을 초과 연장하지 않고, 더 큰 미래 및5분 초과 과거는422를 유지한다. 경계 테스트와 실제 일반 서버 시계 오차 요청 검증이 통과하고 기존 데이터·GPU·학습을 보존한다.",
+  "in_scope": "위치 API 시간 검증 최소 수정; 의미있는 회귀/경계 테스트; 해당 일반 서버 배포와 읽기 검증; 작업 기록",
+  "out_of_scope": "앱 코드; 실제 모델 연결; GPU·학습·DB초기화; 서브모듈Task 완료; 외부실제알림",
+  "validation_hint": "실제 PostgreSQL 위치 API 회귀 테스트; 미래0.6초·30초·30초초과·과거5분초과 경계; live API clock-skew smoke; git diff check; Loom strict",
+  "required_docs": [
+    "docs/V2/delivery/mobile-server-deployment.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/mobile-location-clock-skew.md"
+  ],
+  "document_output_exceptions": [],
+  "default_agent": "",
+  "context_policy_id": "",
+  "executor_policy_id": "",
+  "review_policy": "",
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

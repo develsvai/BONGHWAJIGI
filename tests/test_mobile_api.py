@@ -1,4 +1,4 @@
-from datetime import timedelta
+from datetime import datetime, timedelta
 
 import jwt
 import pytest
@@ -160,6 +160,101 @@ def test_state_is_confirmed_transient_and_cannot_claim_authoritative_route(mobil
             f"/v1/me/responses/{identifier}/context", json=body, headers=headers()
         ).status_code
         == 422
+    )
+
+
+@pytest.mark.parametrize(
+    "offset,accepted", [(-300, True), (-300.001, False), (0.6, True), (30, True), (30.001, False)]
+)
+def test_location_clock_skew_has_bounded_validity(mobile, offset, accepted):
+    client, sessions, scenario, _, headers = mobile
+    with sessions.begin() as s:
+        s.delete(s.get(PolicyEntity, (scenario, "location", "a")))
+    captured = MOMENT + timedelta(seconds=offset)
+    body = {
+        "fix_id": "skew-fix",
+        "installation_id": "phone",
+        "latitude": 36,
+        "longitude": 129,
+        "accuracy_m": 10,
+        "captured_at": captured.isoformat(),
+    }
+    response = client.put("/v1/me/location", json=body, headers=headers())
+    if not accepted:
+        assert response.status_code == 422
+        assert response.json()["detail"] == "LOCATION_TIME_INVALID"
+        with sessions() as s:
+            assert s.get(PolicyEntity, (scenario, "location", "a")) is None
+        return
+    assert response.status_code == 200
+    effective = min(captured, MOMENT)
+    with sessions() as s:
+        row = s.get(PolicyEntity, (scenario, "location", "a"))
+        assert row.body["observed_at"] == effective.isoformat().replace("+00:00", "Z")
+        assert row.body["expires_at"] == (effective + timedelta(minutes=5)).isoformat().replace(
+            "+00:00", "Z"
+        )
+    assert (
+        client.put("/v1/me/location", json=body, headers=headers()).json()["data"]
+        == response.json()["data"]
+    )
+
+
+def test_clock_skew_location_cannot_replay_or_resurrect_after_deletion(mobile, monkeypatch):
+    client, sessions, scenario, _, headers = mobile
+    with sessions.begin() as s:
+        s.delete(s.get(PolicyEntity, (scenario, "location", "a")))
+    body = {
+        "fix_id": "ahead-fix",
+        "installation_id": "phone",
+        "latitude": 36,
+        "longitude": 129,
+        "accuracy_m": 10,
+        "captured_at": (MOMENT + timedelta(seconds=30)).isoformat(),
+    }
+    assert client.put("/v1/me/location", json=body, headers=headers()).status_code == 200
+    monkeypatch.setattr(
+        "bonghwajigi.api.mobile.evaluation_time", lambda scope: MOMENT + timedelta(seconds=2)
+    )
+    assert client.put("/v1/me/location", json=body, headers=headers()).status_code == 200
+    body["fix_id"] = "same-capture-new-id"
+    assert client.put("/v1/me/location", json=body, headers=headers()).status_code == 409
+    assert client.delete("/v1/me/location", headers=headers()).status_code == 200
+    assert client.put("/v1/me/location", json=body, headers=headers()).status_code == 409
+    assert client.get("/v1/me/location", headers=headers()).json()["data"]["fix"] is None
+
+
+@pytest.mark.parametrize(
+    "offset,accepted", [(-300, True), (-300.001, False), (0.6, True), (30, True), (30.001, False)]
+)
+def test_context_clock_skew_has_bounded_validity(mobile, offset, accepted):
+    client, sessions, scenario, _, headers = mobile
+    set_environment(sessions, scenario, "H3")
+    identifier = response_id(sessions, scenario, "a")
+    observed = MOMENT + timedelta(seconds=offset)
+    body = {
+        "base_revision": 0,
+        "observed_at": observed.isoformat(),
+        "confirmation": "user_confirmed",
+        "state": {"observed_hazard": "trapped"},
+    }
+    response = client.put(f"/v1/me/responses/{identifier}/context", json=body, headers=headers())
+    if not accepted:
+        assert response.status_code == 422
+        assert response.json()["detail"] == "CONTEXT_TIME_INVALID"
+        with sessions() as s:
+            assert s.get(PolicyEntity, (scenario, "state", "fire/a")) is None
+        return
+    assert response.status_code == 202
+    effective = min(observed, MOMENT)
+    with sessions() as s:
+        row = s.get(PolicyEntity, (scenario, "state", "fire/a"))
+        assert row.body["observed_at"] == effective.isoformat().replace("+00:00", "Z")
+        assert row.body["expires_at"] == (effective + timedelta(minutes=5)).isoformat().replace(
+            "+00:00", "Z"
+        )
+    assert datetime.fromisoformat(response.json()["data"]["expires_at"]) == effective + timedelta(
+        minutes=5
     )
 
 
