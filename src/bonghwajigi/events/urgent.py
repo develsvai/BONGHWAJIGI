@@ -27,7 +27,10 @@ def process_urgent(sessions, job_id):
                 current = session.get(
                     PolicyEntity, (job.scenario_id, "incident", payload.incident_id)
                 )
-                if current is None or current.revision < payload.incident.revision:
+                archived = bool(current and current.body.get("feed_visibility") == "archived")
+                if not archived and (
+                    current is None or current.revision < payload.incident.revision
+                ):
                     put_entity(
                         session,
                         job.scenario_id,
@@ -84,6 +87,9 @@ def process_urgent(sessions, job_id):
                             )
                             if previously_targeted or relation == "inside":
                                 urgency = "normal"
+                        # Preserve new original records without reactivating an archived fixture.
+                        if archived or payload.incident.feed_visibility == "archived":
+                            urgency = None
                         matched += int(urgency is not None)
                         emit_change(
                             session,

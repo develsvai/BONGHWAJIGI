@@ -199,6 +199,12 @@ def attach_mobile(app, settings):
         ).all()
         result = []
         for row in rows:
+            incident = session.get(
+                PolicyEntity, (actor["scenario_id"], "incident", row.entity_id.split("/", 1)[0])
+            )
+            archived = incident and incident.body.get("feed_visibility") == "archived"
+            if archived and identifier is None:
+                continue
             relation, reason = relevance(
                 location.body if location else None, row.body["area"], moment
             )
@@ -240,7 +246,9 @@ def attach_mobile(app, settings):
                         "valid_until": row.body["expires_at"],
                         "instruction_kind": row.body["instruction_kind"],
                         "source": row.body["source"],
-                        "status": "cancelled"
+                        "status": "archived"
+                        if archived
+                        else "cancelled"
                         if row.body["state"] == "cancelled"
                         else ("active" if active else "unconfirmed_or_expired"),
                         "relevance": {"status": relation, "reason_code": reason},
@@ -689,6 +697,9 @@ def attach_mobile(app, settings):
         with sessions.begin() as s:
             scope = scope_lock(s, actor["scenario_id"])
             row = owned_response(s, actor, response_id)
+            incident = s.get(PolicyEntity, (actor["scenario_id"], "incident", row.incident_id))
+            if incident and incident.body.get("feed_visibility") == "archived":
+                raise HTTPException(410, detail="INCIDENT_ARCHIVED")
             moment = evaluation_time(scope)
             observed_at = input_time(body.observed_at, moment, "CONTEXT_TIME_INVALID")
             identifier = row.incident_id + "/" + actor["sub"]
@@ -868,6 +879,8 @@ def attach_mobile(app, settings):
             ).all()
             items = []
             for row in rows:
+                if row.body.get("feed_visibility") == "archived":
+                    continue
                 relation, reason = relevance(
                     location.body if location else None, row.body["area"], moment
                 )

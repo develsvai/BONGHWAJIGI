@@ -42,6 +42,10 @@ def dispatch_deliveries(session, publisher, redelivery_seconds):
 
 
 def stale(session, row):
+    incident_id = row.resource_id.split("/", 1)[0]
+    incident = session.get(PolicyEntity, (row.scenario_id, "incident", incident_id))
+    if incident and incident.body.get("feed_visibility") == "archived":
+        return True
     if row.resource_type == "response":
         projection = session.scalar(
             select(PolicyProjection).where(

@@ -55,6 +55,9 @@ def current_context(session, actor, row, moment):
 
 
 def current_policy(session, row):
+    incident = session.get(PolicyEntity, (row.scenario_id, "incident", row.incident_id))
+    if incident and incident.body.get("feed_visibility") == "archived":
+        raise HTTPException(410, detail="INCIDENT_ARCHIVED")
     data = projection_view(session, row)
     if data["pending_update"] or not data["content"] or not data["content"]["valid_until"]:
         raise HTTPException(409, detail="RESPONSE_REFRESH_REQUIRED")
@@ -127,6 +130,8 @@ def turn_view(turn):
 
 def route_data(settings, actor, row, incident, location, moment, route_input=None):
     unavailable = {"status": "unavailable", "route": None, "reason": "NO_VERIFIED_ROUTE_GEOMETRY"}
+    if incident and incident.body.get("feed_visibility") == "archived":
+        return {**unavailable, "reason": "INCIDENT_ARCHIVED"}
     if settings.mode != "simulation" or not incident or not fresh(incident.body, moment):
         return unavailable
     if not location or not fresh(location.body, moment):

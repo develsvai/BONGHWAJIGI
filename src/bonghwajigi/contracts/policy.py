@@ -47,6 +47,7 @@ class LocationInput(Versioned):
 
 class IncidentInput(Versioned):
     origin: Literal["synthetic", "historical_replay", "collected_sample"]
+    feed_visibility: Literal["visible", "archived"] = "visible"
     disaster_type: Literal["wildfire"] = "wildfire"
     title: str = Field(min_length=1, max_length=500)
     observed_at: AwareDatetime
@@ -56,6 +57,8 @@ class IncidentInput(Versioned):
 
     @model_validator(mode="after")
     def check(self):
+        if self.feed_visibility == "archived" and self.origin != "synthetic":
+            raise ValueError("합성 사건만 현행 피드에서 보관 처리할 수 있습니다.")
         if self.expires_at <= self.observed_at:
             raise ValueError("사건 자료의 유효 기간이 잘못됐습니다.")
         if any(source.published_at > self.observed_at for source in self.sources):

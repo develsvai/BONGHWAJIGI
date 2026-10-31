@@ -147,6 +147,12 @@ def register_observation(session, job_id, event):
     if context is None:
         return
     scope_lock(session, event["scenario_id"])
+    current_incident = session.get(
+        PolicyEntity, (event["scenario_id"], "incident", context.incident_id)
+    )
+    # Queue redelivery cannot unarchive a fixture. Its original job remains auditable.
+    if current_incident and current_incident.body.get("feed_visibility") == "archived":
+        return
     existing = session.scalar(
         select(PolicyIntegration).where(
             PolicyIntegration.scenario_id == event["scenario_id"],
@@ -244,6 +250,7 @@ def evaluate(session, projection, moment):
     rules, prediction = body("rules", "active"), body("prediction", incident_id)
     relation, relation_reason = relevance(location, incident["area"], moment)
     incident_fresh = fresh(incident, moment)
+    archived = incident.get("feed_visibility") == "archived"
     reasons = ["RESPONSE_LEVEL_CONFIGURATION_PENDING", relation_reason]
     if not incident_fresh:
         reasons.append("INCIDENT_EXPIRED_OR_FUTURE")
@@ -276,7 +283,9 @@ def evaluate(session, projection, moment):
             {
                 "alert_id": row.entity_id.split("/", 1)[1],
                 **notice,
-                "record_status": "active_record"
+                "record_status": "archived_record"
+                if archived
+                else "active_record"
                 if active
                 else ("cancelled" if notice["state"] == "cancelled" else "unconfirmed_or_expired"),
                 "user_relevance": alert_relation,
@@ -284,7 +293,7 @@ def evaluate(session, projection, moment):
             }
         )
 
-    related = relation == "inside" and incident_fresh
+    related = relation == "inside" and incident_fresh and not archived
     conditions = {
         "related": related,
         "mobility_assistance": related and profile.get("mobility_assistance", False),
@@ -324,7 +333,7 @@ def evaluate(session, projection, moment):
         "policy_version": rules["revision"] if rules else None,
         "reason_codes": sorted(set(reasons)),
     }
-    if rules and rules["review_state"] == "approved_mvp":
+    if rules and rules["review_state"] == "approved_mvp" and not archived:
         from bonghwajigi.contracts.app import AppProfile
         from bonghwajigi.policy.profile import normalize_profile
         from bonghwajigi.policy.three_stage import decide
@@ -382,9 +391,19 @@ def evaluate(session, projection, moment):
                         "reason_code": "reviewed_three_stage_policy",
                     }
                 )
+    if archived:
+        personal = {
+            "level": "unknown",
+            "number": None,
+            "label": "보관된 기록",
+            "reason_codes": ["SYNTHETIC_INCIDENT_ARCHIVED"],
+            "questions": [],
+            "automatic_emergency_call": False,
+        }
+        actions = []
     prediction_state = "unavailable"
     probability = None
-    if prediction and fresh(prediction, moment):
+    if not archived and prediction and fresh(prediction, moment):
         pred_relation, _ = relevance(location, prediction["area"], moment)
         if prediction["status"] == "simulation" and pred_relation == "inside":
             prediction_state, probability = "simulation", prediction["probability"]
@@ -433,7 +452,9 @@ def evaluate(session, projection, moment):
                 "sources",
             )
         },
-        "state": "simulation_preview"
+        "state": "archived"
+        if archived
+        else "simulation_preview"
         if personal["level"] in {"prepare", "act", "request_assistance", "information"}
         else "outside_scope"
         if relation == "outside"

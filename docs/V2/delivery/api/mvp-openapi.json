@@ -889,6 +889,76 @@
         }
       }
     },
+    "/internal/v1/policy/scenarios/{scenario_id}/regional-conditions/{region_id}": {
+      "put": {
+        "tags": [
+          "policy-simulation"
+        ],
+        "summary": "Regional Conditions",
+        "operationId": "regional_conditions_internal_v1_policy_scenarios__scenario_id__regional_conditions__region_id__put",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "scenario_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128,
+              "pattern": "^[a-zA-Z0-9_.:-]+$",
+              "title": "Scenario Id"
+            }
+          },
+          {
+            "name": "region_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128,
+              "pattern": "^[a-zA-Z0-9_.:-]+$",
+              "title": "Region Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegionalConditionsInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/internal/v1/policy/scenarios/{scenario_id}/bootstrap-policy": {
       "post": {
         "tags": [
@@ -2952,7 +3022,8 @@
             "enum": [
               "active",
               "cancelled",
-              "unconfirmed_or_expired"
+              "unconfirmed_or_expired",
+              "archived"
             ],
             "title": "Status"
           },
@@ -3474,6 +3545,27 @@
             "type": "string",
             "format": "date-time",
             "title": "Expires At"
+          },
+          "child_present": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Child Present"
+          },
+          "alone_now": {
+            "type": "string",
+            "enum": [
+              "yes",
+              "no",
+              "unknown"
+            ],
+            "title": "Alone Now",
+            "default": "unknown"
           },
           "mobility_override": {
             "anyOf": [
@@ -4106,6 +4198,9 @@
           "basic_rules": {
             "$ref": "#/components/schemas/RulesData"
           },
+          "today_guidance": {
+            "$ref": "#/components/schemas/RegionalGuidanceData"
+          },
           "location": {
             "$ref": "#/components/schemas/LocationData"
           },
@@ -4138,6 +4233,7 @@
         "required": [
           "nearby_disasters",
           "basic_rules",
+          "today_guidance",
           "location",
           "features",
           "preparations",
@@ -4166,6 +4262,15 @@
               "collected_sample"
             ],
             "title": "Origin"
+          },
+          "feed_visibility": {
+            "type": "string",
+            "enum": [
+              "visible",
+              "archived"
+            ],
+            "title": "Feed Visibility",
+            "default": "visible"
           },
           "disaster_type": {
             "type": "string",
@@ -4843,6 +4948,10 @@
             "type": "integer",
             "title": "Profile Revision"
           },
+          "location_input_revision": {
+            "type": "integer",
+            "title": "Location Input Revision"
+          },
           "generated_at": {
             "type": "string",
             "format": "date-time",
@@ -4861,6 +4970,7 @@
           "status",
           "policy_version",
           "profile_revision",
+          "location_input_revision",
           "generated_at",
           "items"
         ],
@@ -4883,6 +4993,18 @@
             "type": "integer",
             "title": "Revision"
           },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "common",
+              "personal"
+            ],
+            "title": "Kind"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
           "valid_until": {
             "type": "string",
             "format": "date-time",
@@ -4899,6 +5021,8 @@
           "text",
           "source",
           "revision",
+          "kind",
+          "title",
           "valid_until",
           "reason_code"
         ],
@@ -4942,6 +5066,16 @@
           "mobility_assistance": {
             "type": "boolean",
             "title": "Mobility Assistance",
+            "default": false
+          },
+          "child_registered": {
+            "type": "boolean",
+            "title": "Child Registered",
+            "default": false
+          },
+          "assistive_device": {
+            "type": "boolean",
+            "title": "Assistive Device",
             "default": false
           },
           "children_accompanying": {
@@ -5089,6 +5223,70 @@
         ],
         "title": "ReceiptWrite"
       },
+      "ReferenceRoute": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "title": "Id"
+          },
+          "origin": {
+            "type": "string",
+            "enum": [
+              "synthetic",
+              "historical_replay"
+            ],
+            "title": "Origin",
+            "default": "synthetic"
+          },
+          "operational_use": {
+            "type": "boolean",
+            "const": false,
+            "title": "Operational Use",
+            "default": false
+          },
+          "label": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1,
+            "title": "Label"
+          },
+          "geometry": {
+            "$ref": "#/components/schemas/RouteGeometry"
+          },
+          "start": {
+            "$ref": "#/components/schemas/RouteDestination"
+          },
+          "destination": {
+            "$ref": "#/components/schemas/RouteDestination"
+          },
+          "steps": {
+            "items": {
+              "$ref": "#/components/schemas/RouteStep"
+            },
+            "type": "array",
+            "maxItems": 100,
+            "minItems": 1,
+            "title": "Steps"
+          },
+          "bounds": {
+            "$ref": "#/components/schemas/Box"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "geometry",
+          "start",
+          "destination",
+          "steps",
+          "bounds"
+        ],
+        "title": "ReferenceRoute"
+      },
       "RefreshRequest": {
         "properties": {
           "refresh_token": {
@@ -5104,6 +5302,237 @@
           "refresh_token"
         ],
         "title": "RefreshRequest"
+      },
+      "RegionalConditionsInput": {
+        "properties": {
+          "region_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_.:-]+$",
+            "title": "Region Id"
+          },
+          "mode": {
+            "type": "string",
+            "const": "simulation",
+            "title": "Mode",
+            "default": "simulation"
+          },
+          "revision": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Revision"
+          },
+          "origin": {
+            "type": "string",
+            "enum": [
+              "synthetic",
+              "historical_replay",
+              "collected_sample"
+            ],
+            "title": "Origin"
+          },
+          "observed_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Observed At"
+          },
+          "expires_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Expires At"
+          },
+          "original_observed_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Original Observed At"
+          },
+          "area": {
+            "$ref": "#/components/schemas/Box"
+          },
+          "forest_nearby": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Forest Nearby"
+          },
+          "dry_warning": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dry Warning"
+          },
+          "fog_observed": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fog Observed"
+          },
+          "sources": {
+            "items": {
+              "$ref": "#/components/schemas/Source"
+            },
+            "type": "array",
+            "maxItems": 10,
+            "minItems": 1,
+            "title": "Sources"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "region_id",
+          "revision",
+          "origin",
+          "observed_at",
+          "expires_at",
+          "area",
+          "sources"
+        ],
+        "title": "RegionalConditionsInput"
+      },
+      "RegionalGuidanceData": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "available",
+              "unavailable"
+            ],
+            "title": "Status"
+          },
+          "location_input_revision": {
+            "type": "integer",
+            "title": "Location Input Revision"
+          },
+          "generated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Generated At"
+          },
+          "valid_until": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Valid Until"
+          },
+          "reason_codes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Reason Codes"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/RegionalGuidanceItem"
+            },
+            "type": "array",
+            "title": "Items"
+          }
+        },
+        "type": "object",
+        "required": [
+          "status",
+          "location_input_revision",
+          "generated_at",
+          "valid_until",
+          "reason_codes",
+          "items"
+        ],
+        "title": "RegionalGuidanceData"
+      },
+      "RegionalGuidanceItem": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "source": {
+            "$ref": "#/components/schemas/Source"
+          },
+          "revision": {
+            "type": "integer",
+            "title": "Revision"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "valid_until": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Valid Until"
+          },
+          "evidence": {
+            "items": {
+              "$ref": "#/components/schemas/Source"
+            },
+            "type": "array",
+            "title": "Evidence"
+          },
+          "origin": {
+            "type": "string",
+            "title": "Origin"
+          },
+          "original_observed_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Original Observed At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "text",
+          "source",
+          "revision",
+          "title",
+          "valid_until",
+          "evidence",
+          "origin",
+          "original_observed_at"
+        ],
+        "title": "RegionalGuidanceItem"
       },
       "Relevance": {
         "properties": {
@@ -5262,6 +5691,8 @@
           },
           "name": {
             "type": "string",
+            "maxLength": 200,
+            "minLength": 1,
             "title": "Name"
           }
         },
@@ -5361,6 +5792,16 @@
               }
             ],
             "title": "Destination"
+          },
+          "reference_route": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ReferenceRoute"
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "additionalProperties": false,
@@ -5402,10 +5843,14 @@
         "properties": {
           "sequence": {
             "type": "integer",
+            "maximum": 100.0,
+            "minimum": 1.0,
             "title": "Sequence"
           },
           "text": {
             "type": "string",
+            "maxLength": 500,
+            "minLength": 1,
             "title": "Text"
           },
           "point": {
@@ -5670,11 +6115,16 @@
         "properties": {
           "id": {
             "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
             "title": "Id"
           },
           "origin": {
             "type": "string",
-            "const": "synthetic",
+            "enum": [
+              "synthetic",
+              "historical_replay"
+            ],
             "title": "Origin",
             "default": "synthetic"
           },
@@ -5686,6 +6136,8 @@
           },
           "label": {
             "type": "string",
+            "maxLength": 200,
+            "minLength": 1,
             "title": "Label"
           },
           "geometry": {
@@ -5702,6 +6154,8 @@
               "$ref": "#/components/schemas/RouteStep"
             },
             "type": "array",
+            "maxItems": 100,
+            "minItems": 1,
             "title": "Steps"
           },
           "bounds": {
@@ -5872,6 +6326,27 @@
       },
       "StatePatch": {
         "properties": {
+          "child_present": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Child Present"
+          },
+          "alone_now": {
+            "type": "string",
+            "enum": [
+              "yes",
+              "no",
+              "unknown"
+            ],
+            "title": "Alone Now",
+            "default": "unknown"
+          },
           "helper_present": {
             "anyOf": [
               {

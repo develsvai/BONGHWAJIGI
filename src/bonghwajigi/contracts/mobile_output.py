@@ -106,7 +106,7 @@ class AlertData(BaseModel):
     valid_until: AwareDatetime
     instruction_kind: str
     source: Source
-    status: Literal["active", "cancelled", "unconfirmed_or_expired"]
+    status: Literal["active", "cancelled", "unconfirmed_or_expired", "archived"]
     relevance: Relevance
     requires_qwen: Literal[False]
 
