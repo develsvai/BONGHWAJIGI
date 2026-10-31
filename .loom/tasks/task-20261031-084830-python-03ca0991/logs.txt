@@ -2,3 +2,4 @@
 구조 및 사용자 추가 지시 반영: MVP 시나리오 입력, K8s 구성 보존. CPU 설치 및 모델 미설치 확인.
 검증: pytest 10 통과, Ruff check/format 통과, 실제 두 Uvicorn live=200/ready=503 후 종료, 기존 API 25/67/48/4 통과, 두 Compose config 및 K8s 구문, offline Alembic, wheel 빌드, uv lock check 통과.
 Task boundary strict OK; workspace strict OK(6 Jobs/32 Tasks); git diff --check 통과. GPU 준비는 사용자가 직접 지시한 후속 Task에서 진행한다.
+[2026-10-31T08:59:32+00:00] agent=foreground task=task-20261031-084830-python-03ca0991 스캐폴딩·시나리오 입력 경계와 로컬 실행 검증을 완료했다. 후속 GPU 모델 준비를 이어간다.

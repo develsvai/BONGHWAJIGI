@@ -1,1 +1,2 @@
 {"id": "event-2dd710c7fad9", "type": "foreground_session_started", "message": "Foreground task session started.", "created_at": "2026-10-31T08:48:35+00:00", "agent": "foreground", "task_id": "task-20261031-084830-python-03ca0991"}
+{"id": "event-d6fb18801037", "type": "foreground_session_done", "message": "스캐폴딩·시나리오 입력 경계와 로컬 실행 검증을 완료했다. 후속 GPU 모델 준비를 이어간다.", "created_at": "2026-10-31T08:59:32+00:00", "agent": "foreground", "task_id": "task-20261031-084830-python-03ca0991"}
