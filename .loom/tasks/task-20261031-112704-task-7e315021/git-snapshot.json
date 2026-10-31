@@ -23,5 +23,32 @@
     ],
     "captured_at": "2026-10-31T11:27:08+00:00"
   },
-  "after": null
+  "after": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "29a41d6596d62aef567cfa3beedcf715acc65eed",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/events.jsonl",
+      ".loom/job-runs/job-run-20261031-100136-job-20261031-002626-job-c9f9ff0d-1370d387/job-run.json",
+      ".loom/job-runs/job-run-20261031-112708-job-20261031-002626-job-97436430-40a6fc29/job-run.json",
+      ".loom/jobs/job-20261031-002626-job-c9f9ff0d/job.json",
+      ".loom/task-definitions/task-def-20261031-112704-task-def-87cfa7a1/task-definition.json",
+      "training/pyproject.toml",
+      "training/uv.lock"
+    ],
+    "untracked_files": [
+      ".loom/task-definitions/task-def-20261031-111807-task-def-2cdadd42/",
+      ".loom/task-runs/task-run-20261031-111820-task-def-20261031-111807-task-def-2cdadd42-fa01fa3a/",
+      ".loom/tasks/task-20261031-111807-task-9a960503/",
+      "training/configs/",
+      "training/reports/threshold-diagnosis.json",
+      "training/src/bonghwa_training/korea_build.py",
+      "training/src/bonghwa_training/korea_download.py",
+      "training/src/bonghwa_training/korea_train.py",
+      "training/tests/test_korea.py"
+    ],
+    "captured_at": "2026-10-31T11:49:09+00:00"
+  }
 }
