@@ -3,9 +3,9 @@
   "job_id": "job-20261030-113757-bonghwajigi-4841f0bc",
   "title": "모바일 화면 기획서에 홈과 긴급 대응 예시 이미지 삽입",
   "description": "사용자가 docs/HeoNey에 추가한 모바일 화면 기획서에서 홈과 긴급 대응 화면의 텍스트 와이어프레임을 대응하는 PNG 이미지로 교체하고, 나머지 화면의 예시는 보존한다.",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-10-31T02:44:37+00:00",
-  "updated_at": "2026-10-31T02:44:40+00:00",
+  "updated_at": "2026-10-31T02:45:26+00:00",
   "order_index": 3,
   "assigned_agent": "foreground",
   "depends_on": [],
@@ -23,12 +23,25 @@
   "run_attempts": 0,
   "last_error": "",
   "commit_refs": [
-    "8f443fc727e55df388cf10c582b0428b95728450"
+    "8f443fc727e55df388cf10c582b0428b95728450",
+    "830f013d890abbf6d09ccc0d53cdeb2ac5467fec"
   ],
   "branch_name": "HeoNey",
   "git_dirty": true,
-  "git_snapshot_captured_at": "2026-10-31T02:44:40+00:00",
-  "artifacts": [],
+  "git_snapshot_captured_at": "2026-10-31T02:45:26+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-024437-task-ee0db844/agent-events.jsonl",
+    ".loom/tasks/task-20261031-024437-task-ee0db844/artifacts.json",
+    ".loom/tasks/task-20261031-024437-task-ee0db844/context.md",
+    ".loom/tasks/task-20261031-024437-task-ee0db844/decision.md",
+    ".loom/tasks/task-20261031-024437-task-ee0db844/git-snapshot.json",
+    ".loom/tasks/task-20261031-024437-task-ee0db844/logs.txt",
+    ".loom/tasks/task-20261031-024437-task-ee0db844/previous-results.md",
+    ".loom/tasks/task-20261031-024437-task-ee0db844/prompt.md",
+    ".loom/tasks/task-20261031-024437-task-ee0db844/result.md",
+    ".loom/tasks/task-20261031-024437-task-ee0db844/troubleshooting.md",
+    "docs/HeoNey/봉화지기_모바일_화면_기획서.md"
+  ],
   "source_proposal_id": "",
   "source_prompt": ""
 }
