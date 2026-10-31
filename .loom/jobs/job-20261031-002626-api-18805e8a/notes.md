@@ -45,3 +45,9 @@
 
 2026-10-31 구현 기술 스택 결정: docs/V2/delivery/implementation-stack.md; Task task-20261031-082929-mvp-3188b68a. Python 3.12 + FastAPI/Pydantic 2 + SQLAlchemy 2.x/psycopg 3/Alembic + PostgreSQL 16/PostGIS/pgvector + Celery/Redis + Transformers/Sentence Transformers + XGBoost. 일반 서버 API/정책/CPU 추론, GPU 서버 모델/별도 학습, K8s 수집으로 배치한다. 기존 OpenAPI를 FastAPI/Pydantic 계약으로 대조한다. 전경 getUpdates long polling, PushGateway/FCM HTTP v1 첫 어댑터를 기준으로 앱의 실제 fcm/apns 토큰과 인증·HTTPS를 E1에서 합의한다. 모의 전송과 실제 단말 전달을 구분한다. 이번 실행은 스택 문서와 계약 연결만 수행하며 다른 구현 Task·Queue·서버 설치는 시작하지 않는다.
 - Tags: `기술스택`, `산불`, `MVP`
+## 2026-10-31T15:58:58+00:00
+
+사용자의 새 앱 구현·실서버 연결·APK 배포 지시에 필요한 설치 계정/회전 세션·프로필·준비 카드·명시적 현재 응답 계약을 추가했다. 실제 PostgreSQL91개·migration·Ruff 통과. 앱/단말/배포는 앱Job에서 이어가며 실제예측·학습·FCM은 기존 범위를 유지한다.
+
+- Task: `task-20261031-153420-api-1f993c9e`
+- Tags: `앱연동`, `검증`, `계약`

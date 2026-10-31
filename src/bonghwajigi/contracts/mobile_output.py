@@ -6,6 +6,7 @@ from pydantic import AwareDatetime, BaseModel, ConfigDict
 
 from bonghwajigi.contracts.analysis import Source
 from bonghwajigi.contracts.app import AppProfile, LocationWrite
+from bonghwajigi.contracts.policy import CurrentStateInput
 
 
 class Meta(BaseModel):
@@ -23,11 +24,13 @@ class Envelope[T](BaseModel):
 
 class ProfileData(BaseModel):
     revision: int
+    input_revision: int
     profile: AppProfile
 
 
 class LocationData(BaseModel):
     revision: int
+    input_revision: int
     status: Literal["available", "stale", "unavailable"]
     fix: LocationWrite | None
     valid_until: AwareDatetime | None
@@ -124,6 +127,19 @@ class PolicyAction(BaseModel):
     source: Source
 
 
+class PolicyUtterance(BaseModel):
+    id: str
+    text: str
+    source: Literal["reviewed_policy_text"]
+    valid_until: AwareDatetime | None
+
+
+class UserContextData(BaseModel):
+    revision: int
+    status: Literal["available", "stale", "unavailable"]
+    data: CurrentStateInput | None
+
+
 class PolicyContent(BaseModel):
     model_config = ConfigDict(extra="allow")
     mode: Literal["simulation"]
@@ -140,6 +156,7 @@ class PolicyContent(BaseModel):
     context: dict
     input_versions: dict[str, int]
     valid_until: AwareDatetime | None
+    assistant_utterance: PolicyUtterance | None
 
 
 class SnapshotData(BaseModel):
@@ -150,3 +167,4 @@ class SnapshotData(BaseModel):
     pending_update: bool
     error_code: str | None
     content: PolicyContent | None
+    user_context: UserContextData

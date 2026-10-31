@@ -189,6 +189,7 @@ def attach_mobile(app, settings):
         if not row or not internal:
             return {
                 "revision": row.revision if row else 0,
+                "input_revision": internal.revision if internal else 0,
                 "status": "unavailable",
                 "fix": None,
                 "valid_until": None,
@@ -197,6 +198,7 @@ def attach_mobile(app, settings):
         valid = fresh(internal.body, moment)
         return {
             "revision": row.revision,
+            "input_revision": internal.revision,
             "status": "available" if valid else "stale",
             "fix": row.body["data"],
             "valid_until": internal.body["expires_at"],
@@ -312,8 +314,13 @@ def attach_mobile(app, settings):
     def get_profile(actor=actor_dependency):
         with sessions() as s:
             row = get_entity(s, actor, "app_profile")
+            internal = get_entity(s, actor, "profile")
             return envelope(
-                {"revision": row.revision if row else 0, "profile": row.body["data"] if row else {}}
+                {
+                    "revision": row.revision if row else 0,
+                    "input_revision": internal.revision if internal else 0,
+                    "profile": row.body["data"] if row else {},
+                }
             )
 
     @router.put("/me/profile")
@@ -343,15 +350,20 @@ def attach_mobile(app, settings):
                     body.base_revision,
                 )
                 old = get_entity(s, actor, "profile")
+                input_revision = old.revision + 1 if old else 1
                 put_entity(
                     s,
                     actor["scenario_id"],
                     "profile",
                     actor["sub"],
-                    normalized(body.profile, old.revision + 1 if old else 1),
+                    normalized(body.profile, input_revision),
                     user_id=actor["sub"],
                 )
-                return {"revision": revision, "profile": body.profile.model_dump(mode="json")}
+                return {
+                    "revision": revision,
+                    "input_revision": input_revision,
+                    "profile": body.profile.model_dump(mode="json"),
+                }
 
             return envelope(
                 mutation(s, actor, "profile", idempotency_key, body.model_dump(mode="json"), apply)
@@ -364,12 +376,13 @@ def attach_mobile(app, settings):
             current = get_entity(s, actor, "app_profile")
             revision = store(s, actor, "app_profile", {}, current.revision if current else 0)
             old = get_entity(s, actor, "profile")
+            input_revision = old.revision + 1 if old else 1
             put_entity(
                 s,
                 actor["scenario_id"],
                 "profile",
                 actor["sub"],
-                ProfileInput(revision=old.revision + 1 if old else 1),
+                ProfileInput(revision=input_revision),
                 user_id=actor["sub"],
             )
             s.execute(
@@ -379,7 +392,7 @@ def attach_mobile(app, settings):
                     AppMutation.resource == "profile",
                 )
             )
-            return envelope({"revision": revision, "profile": {}})
+            return envelope({"revision": revision, "input_revision": input_revision, "profile": {}})
 
     @router.get("/me/preferences")
     def get_preferences(actor=actor_dependency):
@@ -637,9 +650,22 @@ def attach_mobile(app, settings):
     @router.get("/me/responses/{response_id}", response_model=Envelope[SnapshotData])
     def response(response_id: Identifier, actor=actor_dependency):
         with sessions.begin() as s:
-            scope_lock(s, actor["scenario_id"])
+            scope = scope_lock(s, actor["scenario_id"])
             row = owned_response(s, actor, response_id)
             data = projection_view(s, row)
+            moment = evaluation_time(scope)
+            state = s.get(
+                PolicyEntity, (actor["scenario_id"], "state", row.incident_id + "/" + actor["sub"])
+            )
+            data["user_context"] = {
+                "revision": state.revision if state else 0,
+                "status": "available"
+                if state and fresh(state.body, moment)
+                else "stale"
+                if state
+                else "unavailable",
+                "data": state.body if state else None,
+            }
             if data["content"]:
                 data["content"]["prediction"] = {
                     "status": "unavailable",
@@ -647,6 +673,22 @@ def attach_mobile(app, settings):
                     "used_for_response_level": False,
                     "reason": "MODEL_CONNECTION_EXCLUDED",
                 }
+                questions = data["content"]["personal_response"].get("questions", [])
+                text = (
+                    questions[0]
+                    if questions
+                    else "\n".join(item["text"] for item in data["content"]["actions"])
+                )
+                data["content"]["assistant_utterance"] = (
+                    {
+                        "id": row.id + ":" + str(row.revision),
+                        "text": text,
+                        "source": "reviewed_policy_text",
+                        "valid_until": data["content"]["valid_until"],
+                    }
+                    if text and not data["pending_update"]
+                    else None
+                )
             return envelope(
                 {"id": row.id, **data}, "partial" if data["pending_update"] else "current"
             )
@@ -667,6 +709,8 @@ def attach_mobile(app, settings):
                 "wheelchair": "needs_time",
                 "assistance_required": "requires_help",
             }.get(body.overrides.mobility, body.overrides.mobility)
+            if body.overrides.stairs in {"difficult", "unable"} and mobility != "requires_help":
+                mobility = "needs_time"
             state = body.state.model_dump()
             if body.overrides.alone_now == "yes" and state["helper_present"] is None:
                 state["helper_present"] = False

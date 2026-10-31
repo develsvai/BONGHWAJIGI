@@ -4009,6 +4009,10 @@
             "type": "integer",
             "title": "Revision"
           },
+          "input_revision": {
+            "type": "integer",
+            "title": "Input Revision"
+          },
           "status": {
             "type": "string",
             "enum": [
@@ -4051,6 +4055,7 @@
         "type": "object",
         "required": [
           "revision",
+          "input_revision",
           "status",
           "fix",
           "valid_until",
@@ -4359,6 +4364,16 @@
               }
             ],
             "title": "Valid Until"
+          },
+          "assistant_utterance": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PolicyUtterance"
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "additionalProperties": true,
@@ -4377,9 +4392,47 @@
           "prediction",
           "context",
           "input_versions",
-          "valid_until"
+          "valid_until",
+          "assistant_utterance"
         ],
         "title": "PolicyContent"
+      },
+      "PolicyUtterance": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "source": {
+            "type": "string",
+            "const": "reviewed_policy_text",
+            "title": "Source"
+          },
+          "valid_until": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Valid Until"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "text",
+          "source",
+          "valid_until"
+        ],
+        "title": "PolicyUtterance"
       },
       "PredictionInput": {
         "properties": {
@@ -4617,6 +4670,10 @@
             "type": "integer",
             "title": "Revision"
           },
+          "input_revision": {
+            "type": "integer",
+            "title": "Input Revision"
+          },
           "profile": {
             "$ref": "#/components/schemas/AppProfile"
           }
@@ -4624,6 +4681,7 @@
         "type": "object",
         "required": [
           "revision",
+          "input_revision",
           "profile"
         ],
         "title": "ProfileData"
@@ -5244,6 +5302,9 @@
                 "type": "null"
               }
             ]
+          },
+          "user_context": {
+            "$ref": "#/components/schemas/UserContextData"
           }
         },
         "type": "object",
@@ -5254,7 +5315,8 @@
           "evaluated_at",
           "pending_update",
           "error_code",
-          "content"
+          "content",
+          "user_context"
         ],
         "title": "SnapshotData"
       },
@@ -5404,6 +5466,40 @@
         "additionalProperties": false,
         "type": "object",
         "title": "StatePatch"
+      },
+      "UserContextData": {
+        "properties": {
+          "revision": {
+            "type": "integer",
+            "title": "Revision"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "available",
+              "stale",
+              "unavailable"
+            ],
+            "title": "Status"
+          },
+          "data": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/CurrentStateInput"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "revision",
+          "status",
+          "data"
+        ],
+        "title": "UserContextData"
       },
       "ValidationError": {
         "properties": {

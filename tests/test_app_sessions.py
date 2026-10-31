@@ -4,11 +4,14 @@ from uuid import uuid4
 import pytest
 from sqlalchemy import delete, select
 from test_mobile_api import mobile as mobile
+from test_mobile_api import response_id
+from test_three_stage import MOMENT, set_environment
 from test_three_stage import mvp_db as mvp_db
 
 from bonghwajigi.db.analysis_models import now
 from bonghwajigi.db.app_models import AppMutation, AppSession
 from bonghwajigi.db.policy_models import PolicyEntity
+from bonghwajigi.policy.service import evaluate_once
 
 
 def registration():
@@ -177,3 +180,31 @@ def test_home_has_independent_preparations_and_avoid_guidance(installation):
     assert len(data["preparations"]["items"]) == 2
     assert len(data["basic_rules"]["avoid"]) == 2
     assert isinstance(data["alerts"], list)
+
+
+def test_confirmed_stairs_change_updates_level_and_server_authored_text(mobile):
+    client, sessions, scenario, _, headers = mobile
+    set_environment(sessions, scenario, "H2")
+    identifier = response_id(sessions, scenario, "a")
+    path = "/v1/me/responses/" + identifier
+    before = client.get(path, headers=headers()).json()["data"]
+    assert before["content"]["personal_response"]["label"] == "경고"
+    result = client.put(
+        path + "/context",
+        headers=headers(),
+        json={
+            "base_revision": 0,
+            "observed_at": MOMENT.isoformat(),
+            "confirmation": "user_confirmed",
+            "overrides": {"stairs": "difficult"},
+        },
+    )
+    assert result.status_code == 202
+    pending = client.get(path, headers=headers()).json()["data"]
+    assert pending["content"]["assistant_utterance"] is None
+    evaluate_once(sessions)
+    after = client.get(path, headers=headers()).json()["data"]
+    assert after["user_context"]["revision"] == 1
+    assert after["content"]["personal_response"]["label"] == "대피"
+    assert after["content"]["assistant_utterance"]["source"] == "reviewed_policy_text"
+    assert after["content"]["prediction"]["probability"] is None
