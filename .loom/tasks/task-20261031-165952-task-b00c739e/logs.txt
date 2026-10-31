@@ -3,3 +3,4 @@
 검증: bundled Python /private/tmp/bonghwa-check-original-style.py — 991x1587 RGB, SHA-256 일치, 문서 링크 5개 통과.
 검증: loom validate --strict — Workspace metadata validation OK, 6 jobs / 53 tasks / 53 definitions.
 검증: git diff --check -- 작업 전용 문서·프롬프트·task 디렉터리 — 통과.
+[2026-10-31T17:15:20+00:00] agent=foreground task=task-20261031-165952-task-b00c739e 원본 스타일 세로 이미지와 변경 내용·편집 프롬프트 작성, PNG 및 상대 링크·Loom 검증 완료. 구현 커밋 29b1e1e.

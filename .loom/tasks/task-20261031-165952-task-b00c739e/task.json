@@ -3,9 +3,9 @@
   "job_id": "job-20261031-002017-v2-fe3bfad0",
   "title": "원본 세로 아키텍처 스타일에 현행 변경만 반영한 이미지 작성",
   "description": "사용자의 후속 직접 요청에 따라 이전 3장 발표 자료를 보존하고 제공된 세로 다이어그램의 배치·색상·사각형·긴급 경로 스타일을 유지한 한 장을 만든다.",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-10-31T16:59:52+00:00",
-  "updated_at": "2026-10-31T17:01:12+00:00",
+  "updated_at": "2026-10-31T17:15:20+00:00",
   "order_index": 21,
   "assigned_agent": "foreground",
   "depends_on": [],
@@ -25,12 +25,25 @@
   "run_attempts": 0,
   "last_error": "",
   "commit_refs": [
-    "dcbc62e74dec687c38bb76d37ff02a5c12bfc515"
+    "dcbc62e74dec687c38bb76d37ff02a5c12bfc515",
+    "29b1e1e7bf489d90a54190a7144aa5acc68623b6"
   ],
   "branch_name": "develop",
   "git_dirty": true,
-  "git_snapshot_captured_at": "2026-10-31T17:01:12+00:00",
-  "artifacts": [],
+  "git_snapshot_captured_at": "2026-10-31T17:15:20+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-165952-task-b00c739e/agent-events.jsonl",
+    ".loom/tasks/task-20261031-165952-task-b00c739e/artifacts.json",
+    ".loom/tasks/task-20261031-165952-task-b00c739e/context.md",
+    ".loom/tasks/task-20261031-165952-task-b00c739e/decision.md",
+    ".loom/tasks/task-20261031-165952-task-b00c739e/git-snapshot.json",
+    ".loom/tasks/task-20261031-165952-task-b00c739e/logs.txt",
+    ".loom/tasks/task-20261031-165952-task-b00c739e/previous-results.md",
+    ".loom/tasks/task-20261031-165952-task-b00c739e/prompt.md",
+    ".loom/tasks/task-20261031-165952-task-b00c739e/result.md",
+    ".loom/tasks/task-20261031-165952-task-b00c739e/troubleshooting.md",
+    "docs/V2/delivery/original-style-architecture.md"
+  ],
   "source_proposal_id": "",
   "source_prompt": ""
 }
