@@ -1,0 +1,8 @@
+2026-11-01 KST. 사용자 직접 지시로 발표용 아키텍처 Task 시작.
+기존 이미지, deploy/compose/mvp.yaml, retrieval/pipeline.py, policy/integration.py, policy/service.py, policy/three_stage.py, events/urgent.py, notifications/service.py, api/mobile.py 및 배포·학습 문서 읽기.
+node source/build.mjs /private/tmp/bonghwa-architecture-build: 3장 생성 성공.
+node source/finalize.mjs /private/tmp/bonghwa-architecture-build: PPTX 3장, 무결성·크기·글꼴·재가져오기 통과, finding/warning 0.
+최종 PPTX 재가져오기 PNG 3장 렌더링 및 view_image 시각 검증 완료.
+Python/Pillow 검증: 해상도 3200x1800, 텍스트 137개 폭, 상대 문서 링크, PPTX 3장, ZIP 무결성 PASS.
+loom validate --strict: OK 6 jobs / 51 tasks / 51 task definitions.
+git diff --check -- docs/V2/delivery/presentation-architecture.md docs/V2/delivery/architecture-slides: PASS.
