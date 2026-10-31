@@ -1,0 +1,6 @@
+[2026-10-31T10:53:00+00:00] agent=foreground task=task-20261031-105243-cuda-b5a38b8b Foreground task session started.
+[2026-10-31T11:01:24.813775+00:00] Verified fixed run ndws-20261031T104838Z-528483. Model SHA256 matches original report, server file and local copy; 64 rounds, best index 33, 34 trees, 30 rounds after best.
+Actual server CPU verify_model.py run: full dataset hash/schema/labels pass; original validation metrics reproduced; first test evaluation AP=0.2372731788825363 ROC-AUC=0.8828560426406582. No retraining or parameter changes.
+At diagnostic threshold 0.5: validation TP=209 FN=44887 FP=326; test TP=12 FN=51528 FP=55. Threshold not approved for alerts.
+Qwen active/ready and GPU PID 528588 confirmed. No GPU service stop/restart during audit. Ruff and py_compile passed. Original model/report unchanged.
+Actual source report elapsed_seconds=24.869; journal wrapper 19:48:38 to 19:49:09 KST. Earlier 5-10 minute estimate corrected.

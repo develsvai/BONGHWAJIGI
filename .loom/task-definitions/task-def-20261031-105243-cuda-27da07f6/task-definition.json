@@ -1,0 +1,33 @@
+{
+  "id": "task-def-20261031-105243-cuda-27da07f6",
+  "job_definition_id": "job-20261031-002626-job-c9f9ff0d",
+  "title": "사용자가 실행한 CUDA 학습 산출물과 독립 재추론 검증",
+  "description": "사용자가 제공한 완료 로그와 GPU 화면을 바탕으로 실제 서버의 고정 모델·보고서·학습 이력·데이터 해시를 확인한다. 모델을 새로 학습하지 않고 CPU 재로딩으로 validation 점수를 재계산하고, 고정한 모델에 대해 첫 holdout test 평가를 기록한다. Qwen 복구 상태를 확인한다.",
+  "created_at": "2026-10-31T10:52:43+00:00",
+  "updated_at": "2026-10-31T10:52:59+00:00",
+  "order_index": 8,
+  "legacy_task_id": "task-20261031-105243-cuda-b5a38b8b",
+  "depends_on": [
+    "task-def-20261031-102643-xgboost-gpu-9e696fb4"
+  ],
+  "expected_output": "고정 모델 SHA256과 실제 산출물 사본, 재현 가능한 재추론 검증 코드, validation 일치 및 첫 test 평가 보고서, 서비스 상태 근거와 해석 문서",
+  "done_condition": "모델 무결성·트리 수·최적 회차·학습 이력·데이터 계약을 검증하고 재추론 validation 지표가 보고서와 일치하는지 검사한다. 고정 모델의 test 결과와 단순 기준선·진단 임계값 성능을 분리해 기록하고 운영 사용 가능 여부 및 남은 한계를 설명한다.",
+  "in_scope": "training 전용 검증 도구·작은 산출물과 문서, 서버 읽기 전용 상태 조회·CPU 재추론, 원본 모델을 변경하지 않는 검증 보고서, Loom 기록",
+  "out_of_scope": "재학습·튜닝·운영 배포·대응 레벨 결정·GPU 서비스 중단·다른 작업자 파일·앱·원격 push",
+  "validation_hint": "모델·데이터 SHA256, 피처 순서·0/1 정답·64회 이력/최적 회차·CPU 재로딩, validation 지표 재계산 일치, test 미사용 상태에서 고정한 모델의 첫 평가, Qwen ready, Loom strict",
+  "required_docs": [
+    "docs/V2/delivery/xgboost-training-data.md",
+    "docs/V2/delivery/xgboost-training-run.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/xgboost-training-verification.md"
+  ],
+  "document_output_exceptions": [],
+  "default_agent": "foreground",
+  "context_policy_id": "",
+  "executor_policy_id": "",
+  "review_policy": "",
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

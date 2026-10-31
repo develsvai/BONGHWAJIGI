@@ -1,5 +1,7 @@
 # XGBoost 학습 시작 방법
 
+사용자가 실행한 첫 CUDA 학습의 실제 완료·성능·서비스 복구 검증은 [학습 결과 검증 문서](xgboost-training-verification.md)를 따른다. 아래 준비 시점의 예상과 실제 측정 결과를 구분한다.
+
 2026-10-31, Task `task-20261031-102643-xgboost-gpu-63a490e2`. 실제 자료 일부로 CPU 학습 실행기를 검증했다. GPU 전체 학습과 Qwen 서비스 중단은 이번 준비 작업에서 실행하지 않았다.
 
 GPU 서버 `/home1/ncloud/bonghwajigi/`에 코드·`training/.venv`·원본 `data/raw/ndws-v2/`·변환 `data/processed/ndws-v2-bootstrap/`을 준비했다. 대용량 Tailnet 전송이 느려 서버에서 같은 원본을 직접 다운로드하고 재생성했다. 원본 SHA256 3개와 train/test Parquet 해시는 맥과 일치한다. validation은 코사인 파생 열에서만 플랫폼에 따른 바이트 차이가 있고, 소수 6자리 반올림 값의 해시는 일치한다. 나머지 19개 입력과 정답의 열 해시는 일치한다. 서버 보고서는 `training/reports/gpu-dataset-report.json`에 별도로 보존해 전체 바이트가 같다고 주장하지 않는다.

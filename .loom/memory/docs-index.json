@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-31T10:44:09+00:00",
+  "generated_at": "2026-10-31T11:01:25+00:00",
   "docs_paths": [
     "docs"
   ],
@@ -578,8 +578,17 @@
       "path": "docs/V2/delivery/xgboost-training-run.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T19:41:26+09:00",
-      "size_bytes": 6128
+      "updated_at": "2026-10-31T20:00:14+09:00",
+      "size_bytes": 6371
+    },
+    {
+      "id": "docs/V2/delivery/xgboost-training-verification.md",
+      "title": "첫 CUDA 학습 완료와 저장 모델 검증",
+      "path": "docs/V2/delivery/xgboost-training-verification.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T20:00:14+09:00",
+      "size_bytes": 6591
     }
   ],
   "path": "/Users/hongyongjae/Desktop/helloworld/BONGHWAJIGI/.loom/memory/docs-index.json"

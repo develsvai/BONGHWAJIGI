@@ -1,0 +1,16 @@
+{
+  "objective": "binary:logistic",
+  "tree_method": "hist",
+  "device": "cuda",
+  "eval_metric": [
+    "logloss",
+    "aucpr"
+  ],
+  "max_depth": 6,
+  "eta": 0.05,
+  "subsample": 0.8,
+  "colsample_bytree": 0.9,
+  "max_bin": 256,
+  "seed": 47,
+  "nthread": 4
+}

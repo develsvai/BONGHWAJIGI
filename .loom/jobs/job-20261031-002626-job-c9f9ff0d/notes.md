@@ -54,3 +54,9 @@ NDWS v2 원본 3개(639,939,000바이트) 확보, 중복 46패치 제거와 unkn
 
 - Task: `task-20261031-102643-xgboost-gpu-63a490e2`
 - Tags: `training`, `preflight`, `scope`
+## 2026-10-31T10:55:42+00:00
+
+사용자가 직접 시작한 NDWS CUDA run ndws-20261031T104838Z-528483를 확인했다. 실제 모델 SHA256 14a988b3b8e2755c54bc89f82a00d4babee2c3c24970df57df10973112809cb5가 보고서와 일치하고 64회 이력의 최고 검증 회차는 index 33이다. Qwen active/ready와 GPU 프로세스 복구를 확인했다. 원본 모델을 고정하고 CPU validation 재현 및 첫 test 평가만 진행하며 재학습·임계값 결정은 하지 않는다.
+
+- Task: `task-20261031-105243-cuda-b5a38b8b`
+- Tags: `verification`, `frozen-model`, `holdout`
