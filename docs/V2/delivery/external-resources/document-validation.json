@@ -1,0 +1,24 @@
+{
+  "checked_at_utc": "2026-10-31T14:58:12.747300+00:00",
+  "scope": "BONGHWAJIGI backend and training; APP excluded",
+  "external_lock_pairs_expected": 174,
+  "external_pairs_documented": 174,
+  "missing_inventory_pairs": [],
+  "extra_inventory_pairs": [],
+  "missing_markdown_rows": [],
+  "malformed_four_column_tables": [],
+  "broken_local_links": [],
+  "credential_pattern_counts": {
+    "docs/V2/delivery/external-resources-and-licenses.md": 0,
+    "docs/V2/delivery/external-resources/python-inventory.json": 0,
+    "docs/V2/delivery/external-resources/python-coverage.json": 0,
+    "docs/V2/delivery/external-resources/data-and-content-sources.json": 0
+  },
+  "lock_sha256": {
+    "uv.lock": "8b0c3710815987ba0663ac1ffca139d7f4135673ec52cdb82c95c7d18a65a5de",
+    "training/uv.lock": "d32f342337527d3320c8dbf253304d1fbeba4794723cfbe86010a433d92aada7"
+  },
+  "runtime_or_training_changed": false,
+  "orphan_table_blocks": [],
+  "table_block_count": 12
+}

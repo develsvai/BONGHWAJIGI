@@ -2,6 +2,8 @@
 
 ## 현재 앱팀 전달 패키지 — 2026-10-31
 
+- [발표용 외부 자원·API·모델·데이터·라이선스 전수 목록](V2/delivery/external-resources-and-licenses.md): 실제 사용과 조사·구성을 구분하고, Python 의존성 174개 버전 항목을 포함한다.
+
 - [현재 실행 API 0.2.0-mvp](V2/delivery/mvp-app-api.md) · [실행 OpenAPI](V2/delivery/api/mvp-openapi.json) · [사설망 서버 접속](V2/delivery/mvp-server-runbook.md).
 - 확정 정책은 [경고·대피·위급 3단계](V2/delivery/response-policy.md)이며 실제 예측 연결·실제 푸시·3D·서버 음성은 제외한다.
 - [앱팀 화면별 인계서](V2/delivery/api-handoff.md): 5개 화면의 API 호출 순서와 필드 연결, 예외 처리.
