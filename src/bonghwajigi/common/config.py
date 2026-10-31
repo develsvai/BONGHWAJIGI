@@ -33,6 +33,10 @@ class Settings(BaseSettings):
     web_search_max_results: int = Field(default=5, ge=1, le=10)
     web_search_lookback_days: int = Field(default=7, ge=1, le=365)
     outbox_redelivery_seconds: int = Field(default=180, ge=10, le=3600)
+    policy_enabled: bool = False
+    policy_qwen_enabled: bool = False
+    policy_poll_seconds: float = Field(default=2, ge=0.2, le=60)
+    policy_check_seconds: int = Field(default=30, ge=1, le=3600)
 
     @model_validator(mode="after")
     def check_token_budget(self) -> "Settings":

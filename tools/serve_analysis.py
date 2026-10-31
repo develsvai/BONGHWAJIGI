@@ -14,7 +14,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--port", type=int, default=18000)
     args = parser.parse_args()
-    if not Settings().analysis_enabled:
+    settings = Settings()
+    if not settings.analysis_enabled:
         parser.exit(2, "분석 환경 설정에서 BONGHWA_ANALYSIS_ENABLED=true가 필요합니다.\n")
     root = Path(__file__).resolve().parents[1]
     commands = [
@@ -45,6 +46,20 @@ def main():
         ],
         [sys.executable, "-m", "bonghwajigi.workers.outbox"],
     ]
+    if settings.policy_enabled:
+        commands.append(
+            [sys.executable, "-m", "bonghwajigi.workers.policy_loop", "--mode", "plans"]
+        )
+        if settings.policy_qwen_enabled:
+            commands.append(
+                [
+                    sys.executable,
+                    "-m",
+                    "bonghwajigi.workers.policy_loop",
+                    "--mode",
+                    "integrations",
+                ]
+            )
     children = []
 
     def stop(signum, frame):

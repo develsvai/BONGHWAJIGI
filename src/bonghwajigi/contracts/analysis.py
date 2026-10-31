@@ -3,6 +3,8 @@ from typing import Literal
 
 from pydantic import AwareDatetime, BaseModel, ConfigDict, Field, HttpUrl, model_validator
 
+from bonghwajigi.contracts.spatial import PolicyContext
+
 
 class Source(BaseModel):
     model_config = ConfigDict(extra="forbid")
@@ -28,11 +30,14 @@ class AnalysisInput(BaseModel):
     search_query: str = Field(min_length=1, max_length=200)
     as_of: AwareDatetime
     source: Source
+    policy_context: PolicyContext | None = None
 
     @model_validator(mode="after")
     def check_time(self):
         if self.source.published_at > self.as_of:
             raise ValueError("원자료 발표 시각이 시나리오 평가 시각보다 미래입니다.")
+        if self.policy_context and self.policy_context.expires_at <= self.as_of:
+            raise ValueError("정책용 사건 자료의 유효 종료 시각이 평가 시각보다 뒤여야 합니다.")
         return self
 
 

@@ -22,9 +22,16 @@ def attach_analysis(app, settings):
     def accept(kind, scenario_id, external_id, body):
         try:
             with sessions.begin() as session:
-                return accept_job(session, kind, scenario_id, external_id, body)
+                accepted = accept_job(session, kind, scenario_id, external_id, body)
+                if kind == "analysis" and settings.policy_enabled and not accepted.duplicate:
+                    from bonghwajigi.policy.service import register_observation
+
+                    register_observation(session, accepted.job_id, body)
+                return accepted
         except IngestionConflict:
             raise HTTPException(409, detail="IDEMPOTENCY_CONFLICT") from None
+        except ValueError:
+            raise HTTPException(422, detail="INVALID_POLICY_OBSERVATION") from None
         except SQLAlchemyError:
             raise HTTPException(503, detail="DATABASE_UNAVAILABLE") from None
 

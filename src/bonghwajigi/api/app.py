@@ -24,7 +24,14 @@ def create_app() -> FastAPI:
         from bonghwajigi.api.analysis import attach_analysis
 
         attach_analysis(app, app.state.settings)
+        if app.state.settings.policy_enabled:
+            from bonghwajigi.api.policy import attach_policy
+
+            attach_policy(app, app.state.settings)
         return app
+
+    if app.state.settings.policy_enabled:
+        raise RuntimeError("정책 루프에는 분석 수신 경로를 활성화해야 합니다.")
 
     @app.post(
         "/internal/v1/scenario-events",

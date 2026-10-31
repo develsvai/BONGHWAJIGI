@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-31T11:01:25+00:00",
+  "generated_at": "2026-10-31T11:47:22+00:00",
   "docs_paths": [
     "docs"
   ],
@@ -454,6 +454,24 @@
       "document_type": "docs",
       "updated_at": "2026-10-31T19:17:26+09:00",
       "size_bytes": 20034
+    },
+    {
+      "id": "docs/V2/delivery/personal-policy-loop-evidence.json",
+      "title": "{",
+      "path": "docs/V2/delivery/personal-policy-loop-evidence.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T20:42:17+09:00",
+      "size_bytes": 26013
+    },
+    {
+      "id": "docs/V2/delivery/personal-policy-loop.md",
+      "title": "개인별 대응 계획의 자동 갱신 루프",
+      "path": "docs/V2/delivery/personal-policy-loop.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T20:45:11+09:00",
+      "size_bytes": 13504
     },
     {
       "id": "docs/V2/delivery/project-scaffold.md",

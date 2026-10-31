@@ -1,0 +1,27 @@
+{
+  "before": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "b35e0538bdd8d738566f7938c87315f62c86b7ab",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/events.jsonl",
+      ".loom/job-runs/job-run-20261031-100136-job-20261031-002626-job-c9f9ff0d-1370d387/job-run.json",
+      ".loom/jobs/job-20261031-002626-job-97436430/job.json",
+      ".loom/jobs/job-20261031-002626-job-c9f9ff0d/job.json"
+    ],
+    "untracked_files": [
+      ".loom/job-runs/job-run-20261031-112708-job-20261031-002626-job-97436430-40a6fc29/",
+      ".loom/task-definitions/task-def-20261031-111807-task-def-2cdadd42/",
+      ".loom/task-definitions/task-def-20261031-112704-task-def-87cfa7a1/",
+      ".loom/task-runs/task-run-20261031-111820-task-def-20261031-111807-task-def-2cdadd42-fa01fa3a/",
+      ".loom/task-runs/task-run-20261031-112708-task-def-20261031-112704-task-def-87cfa7a1-5dd1459f/",
+      ".loom/tasks/task-20261031-111807-task-9a960503/",
+      ".loom/tasks/task-20261031-112704-task-7e315021/",
+      "training/reports/threshold-diagnosis.json"
+    ],
+    "captured_at": "2026-10-31T11:27:08+00:00"
+  },
+  "after": null
+}
