@@ -14,7 +14,7 @@
 | [결정 사항과 회의 대조](decisions-and-meeting-review.md) | 회의와 대화의 공통점, 변경점, 미결정 사항 |
 | [UI/UX 인계와 확인 항목](ui-ux-handoff.md) | 화면별 필요한 정보와 예외 상태, 다음 검토 순서 |
 | [재난 데이터 수집 자료](data-collection/README.md) | [산불MVP·10분 갱신 검수](data-collection/reviews/20261031/산불MVP_10분갱신_검수가이드.md), 국내외 카탈로그, 실제 표본, Mac 수집 예제, 검증 상태 |
-| [발표자료와 PPT 템플릿](presentations/README.md) | 발표용 PPTX 5개를 `slides`에 통합, 원본 템플릿 1개는 `templates`에 보관, 발표 순서는 이후 정리 (2026-10-31) |
+| [발표자료와 PPT 템플릿](presentations/README.md) | 발표용 PPTX 6개를 `slides`에 통합, 원본 템플릿 1개는 `templates`에 보관, 발표 순서는 이후 정리 (2026-10-31) |
 
 ## 상태 표기
 

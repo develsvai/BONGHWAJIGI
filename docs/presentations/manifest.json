@@ -1,7 +1,7 @@
 {
   "updated": "2026-10-31",
   "branch": "hyun02063185",
-  "created_pptx_count": 5,
+  "created_pptx_count": 6,
   "template_pptx_count": 1,
   "files": [
     {
@@ -43,6 +43,14 @@
       "slides": 1,
       "sha256": "bf63a0145543183dfb35e5b6f84379ca4a000faa29b111fd10e589769b50babf",
       "git_blob_sha": "b296f864d9adc418436038faf33b9965b5b11e61"
+    },
+    {
+      "path": "docs/presentations/slides/봉화지기_서비스소개_v1.pptx",
+      "category": "slides",
+      "bytes": 25031,
+      "slides": 1,
+      "sha256": "a32b7bfd15079b80e1fa3b049d5bbcda3acb2820b1bdcababb7e8fccd5d82e01",
+      "git_blob_sha": "8656bb4f8ed6438e8d7143a00e163e14b547e4ad"
     },
     {
       "path": "docs/presentations/templates/CODYSSEY_해커톤_빈템플릿.pptx",

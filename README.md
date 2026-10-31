@@ -25,4 +25,4 @@ loom validate --strict
 
 ## 개인 브랜치 발표자료
 
-2026년 10월 31일 기준, `hyun02063185` 브랜치의 [발표자료 폴더](docs/presentations/README.md)에 작성한 PPTX 5개와 원본 템플릿 1개를 보관합니다. 발표용 PPT 5개는 `slides`에, 원본 템플릿은 `templates`에 모았습니다. 발표 순서는 이후 정리하며, 각 초안은 한 장짜리이고 전체 통합본은 아직 작성 전입니다.
+2026년 10월 31일 기준, `hyun02063185` 브랜치의 [발표자료 폴더](docs/presentations/README.md)에 작성한 PPTX 6개와 원본 템플릿 1개를 보관합니다. 발표용 PPT 6개는 `slides`에, 원본 템플릿은 `templates`에 모았습니다. 발표 순서는 이후 정리하며, 각 초안은 한 장짜리이고 전체 통합본은 아직 작성 전입니다.
