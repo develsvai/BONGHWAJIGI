@@ -5,3 +5,4 @@
 - GPU readonly SSH: .venv-gpu, training/.venv, .venv-ml 배포 metadata 확보. 인증파일 값 미조회.
 - 문서 및 외부174종 전수 근거JSON 생성. docs/README.md 색인 추가.
 - 누락·표·로컬링크·인증정보 패턴 검사 및 Loom strict 통과.
+[2026-10-31T14:58:40+00:00] agent=foreground task=task-20261031-144549-api-066d6981 발표용 4열 자원 표와 API 상세, Python 외부 174개 버전 전수 대조, 공식 라이선스 근거 및 미확정 범위 정리 완료. 문서/검증 근거 커밋 fd5fc48. 앱과 실행 코드는 변경하지 않았으며 모델 개선 작업은 계속 진행 중.
