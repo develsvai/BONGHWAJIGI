@@ -71,6 +71,8 @@ class DeviceWrite(Strict):
 
 
 class StatePatch(Strict):
+    child_present: bool | None = None
+    alone_now: Literal["yes", "no", "unknown"] = "unknown"
     helper_present: bool | None = None
     can_move: bool | None = None
     injured: bool | None = None
@@ -78,6 +80,12 @@ class StatePatch(Strict):
     location_type: Literal["unknown", "house", "outside", "vehicle"] = "unknown"
     evacuation_status: Literal["unknown", "not_started", "moving", "arrived"] = "unknown"
     deescalation_confirmed: bool = False
+
+    @model_validator(mode="after")
+    def consistent_companions(self):
+        if self.alone_now == "yes" and (self.child_present is True or self.helper_present is True):
+            raise ValueError("혼자 있음과 현재 동행 상태를 함께 확인할 수 없습니다.")
+        return self
 
 
 class ContextOverrides(Strict):

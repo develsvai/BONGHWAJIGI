@@ -99,7 +99,9 @@ def test_profile_revision_idempotency_and_mapping(mobile):
     with sessions() as s:
         row = s.get(PolicyEntity, (scenario, "profile", "a"))
         assert row.body["mobility"] == "needs_time"
-        assert row.body["children_accompanying"] is True
+        assert row.body["children_accompanying"] is False
+        assert row.body["child_registered"] is True
+        assert row.body["assistive_device"] is True
     assert client.get("/v1/me/profile", headers=headers("b")).json()["data"]["revision"] == 0
 
 

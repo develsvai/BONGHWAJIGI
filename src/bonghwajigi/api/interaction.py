@@ -125,20 +125,40 @@ def turn_view(turn):
     }
 
 
-def route_data(settings, actor, row, incident, location, moment):
+def route_data(settings, actor, row, incident, location, moment, route_input=None):
     unavailable = {"status": "unavailable", "route": None, "reason": "NO_VERIFIED_ROUTE_GEOMETRY"}
-    if (
-        settings.mode != "simulation"
-        or actor["scenario_id"] != "mobile-demo"
-        or row.incident_id != "mobile-fire"
-        or not incident
-        or incident.body.get("origin") != "synthetic"
-        or not fresh(incident.body, moment)
-    ):
+    if settings.mode != "simulation" or not incident or not fresh(incident.body, moment):
         return unavailable
     if not location or not fresh(location.body, moment):
         return {**unavailable, "reason": "SIMULATION_LOCATION_REQUIRED"}
-    point = location.body
+    # A per-user route record overrides the old fixture. Never display a blocked, stale,
+    # unverified or unknown route as available, including when it carries old geometry.
+    if route_input:
+        if not fresh(route_input.body, moment) or not route_input.body["source"]["verified"]:
+            return {**unavailable, "reason": "ROUTE_EVIDENCE_UNAVAILABLE"}
+        if at(route_input.body["source"]["published_at"]) > moment:
+            return {**unavailable, "reason": "ROUTE_EVIDENCE_UNAVAILABLE"}
+        if route_input.body["status"] != "open":
+            return {
+                **unavailable,
+                "reason": "ROUTE_BLOCKED"
+                if route_input.body["status"] == "blocked"
+                else "ROUTE_STATUS_UNKNOWN",
+            }
+        route = route_input.body.get("reference_route")
+        if not route:
+            return unavailable
+        route = json.loads(json.dumps(route))
+    elif (
+        actor["scenario_id"] == "mobile-demo"
+        and row.incident_id == "mobile-fire"
+        and incident.body.get("origin") == "synthetic"
+    ):
+        fixture = Path(__file__).parents[1] / "policy/mobile_route.json"
+        route = json.loads(fixture.read_text())
+    else:
+        return unavailable
+    point, start = location.body, route["start"]
     distance = (
         6371000
         * 2
@@ -146,24 +166,26 @@ def route_data(settings, actor, row, incident, location, moment):
             min(
                 1,
                 math.sqrt(
-                    math.sin(math.radians(point["latitude"] - 36.4) / 2) ** 2
-                    + math.cos(math.radians(36.4))
+                    math.sin(math.radians(point["latitude"] - start["latitude"]) / 2) ** 2
+                    + math.cos(math.radians(start["latitude"]))
                     * math.cos(math.radians(point["latitude"]))
-                    * math.sin(math.radians(point["longitude"] - 129.35) / 2) ** 2
+                    * math.sin(math.radians(point["longitude"] - start["longitude"]) / 2) ** 2
                 ),
             )
         )
     )
     if point["accuracy_m"] > 100 or distance > 200:
         return {**unavailable, "reason": "OUTSIDE_SIMULATION_ROUTE_START"}
-    fixture = Path(__file__).parents[1] / "policy/mobile_route.json"
-    route = json.loads(fixture.read_text())
-    route["valid_until"] = min(at(incident.body["expires_at"]), at(point["expires_at"]))
-    route["input_versions"] = {
+    deadlines = [at(incident.body["expires_at"]), at(point["expires_at"])]
+    versions = {
         "incident:" + row.incident_id: incident.revision,
         "location:" + actor["sub"]: location.revision,
     }
-    return {"status": "simulation", "route": route, "reason": "SYNTHETIC_DEMO_ONLY"}
+    if route_input:
+        deadlines.append(at(route_input.body["expires_at"]))
+        versions["route:" + route_input.entity_id] = route_input.revision
+    route["valid_until"], route["input_versions"] = min(deadlines), versions
+    return {"status": "simulation", "route": route, "reason": "REFERENCE_ROUTE_NOT_VERIFIED_SAFE"}
 
 
 def attach_interaction(app, router, settings, actor_dependency, envelope, owned_response):
@@ -293,5 +315,8 @@ def attach_interaction(app, router, settings, actor_dependency, envelope, owned_
             row = owned_response(s, actor, response_id)
             incident = s.get(PolicyEntity, (actor["scenario_id"], "incident", row.incident_id))
             location = s.get(PolicyEntity, (actor["scenario_id"], "location", actor["sub"]))
-            data = route_data(settings, actor, row, incident, location, moment)
+            route_input = s.get(
+                PolicyEntity, (actor["scenario_id"], "route", row.incident_id + "/" + actor["sub"])
+            )
+            data = route_data(settings, actor, row, incident, location, moment, route_input)
             return envelope(data, "current" if data["route"] else "unavailable")

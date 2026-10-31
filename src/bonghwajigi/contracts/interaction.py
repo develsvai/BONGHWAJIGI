@@ -4,7 +4,7 @@ from pydantic import AwareDatetime, Field, field_validator
 
 from bonghwajigi.contracts.app import ContextOverrides, StatePatch, Strict
 from bonghwajigi.contracts.policy import Identifier
-from bonghwajigi.contracts.spatial import Box
+from bonghwajigi.contracts.routes import ReferenceRoute
 
 
 class TextTurnWrite(Strict):
@@ -53,36 +53,7 @@ class TextTurnData(Strict):
     reason_code: str | None
 
 
-class RoutePoint(Strict):
-    latitude: float = Field(ge=-85, le=85, allow_inf_nan=False)
-    longitude: float = Field(ge=-180, le=180, allow_inf_nan=False)
-
-
-class RouteDestination(RoutePoint):
-    name: str
-
-
-class RouteGeometry(Strict):
-    type: Literal["LineString"] = "LineString"
-    coordinates: list[tuple[float, float]] = Field(min_length=2, max_length=100)
-
-
-class RouteStep(Strict):
-    sequence: int
-    text: str
-    point: RoutePoint
-
-
-class SimulationRoute(Strict):
-    id: str
-    origin: Literal["synthetic"] = "synthetic"
-    operational_use: Literal[False] = False
-    label: str
-    geometry: RouteGeometry
-    start: RouteDestination
-    destination: RouteDestination
-    steps: list[RouteStep]
-    bounds: Box
+class SimulationRoute(ReferenceRoute):
     valid_until: AwareDatetime
     input_versions: dict[str, int]
 

@@ -168,6 +168,15 @@ def run_job(job_id, sessions, embedder, web_search, settings):
                         analyze(session, job, embedder, web_search, settings),
                         "ready_for_qwen",
                     )
+                    if settings.policy_enabled:
+                        from bonghwajigi.policy.service import register_regional_observation
+
+                        try:
+                            register_regional_observation(session, job.body)
+                        except ValueError as exc:
+                            raise EmbeddingError(
+                                "REGIONAL_OBSERVATION_CONFLICT_OR_INVALID", permanent=True
+                            ) from exc
             job.result, job.status, job.error_code = result, state, None
         except EmbeddingError as exc:
             job.error_code = exc.code

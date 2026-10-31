@@ -45,6 +45,8 @@ class GuidanceItem(BaseModel):
 
 
 class PreparedItem(GuidanceItem):
+    kind: Literal["common", "personal"]
+    title: str
     valid_until: AwareDatetime
     reason_code: str
 
@@ -57,8 +59,26 @@ class PreparationsData(BaseModel):
     status: Literal["available", "unavailable"]
     policy_version: str
     profile_revision: int
+    location_input_revision: int
     generated_at: AwareDatetime
     items: list[PreparedItem]
+
+
+class RegionalGuidanceItem(GuidanceItem):
+    title: str
+    valid_until: AwareDatetime
+    evidence: list[Source]
+    origin: str
+    original_observed_at: AwareDatetime | None
+
+
+class RegionalGuidanceData(BaseModel):
+    status: Literal["available", "unavailable"]
+    location_input_revision: int
+    generated_at: AwareDatetime
+    valid_until: AwareDatetime | None
+    reason_codes: list[str]
+    items: list[RegionalGuidanceItem]
 
 
 class RulesData(BaseModel):
@@ -105,6 +125,7 @@ class DisasterData(BaseModel):
 class HomeData(BaseModel):
     nearby_disasters: list[DisasterData]
     basic_rules: RulesData
+    today_guidance: RegionalGuidanceData
     location: LocationData
     features: dict[str, bool | str]
     preparations: PreparationsData

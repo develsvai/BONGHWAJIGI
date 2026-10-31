@@ -39,6 +39,7 @@ from bonghwajigi.db.delivery_models import ChangeSequence, Delivery, Device, Use
 from bonghwajigi.db.policy_models import PolicyEntity, PolicyProjection, PolicySnapshot
 from bonghwajigi.integration.service import digest
 from bonghwajigi.notifications.service import emit_change
+from bonghwajigi.policy.profile import normalize_profile
 from bonghwajigi.policy.service import (
     at,
     enqueue,
@@ -135,32 +136,6 @@ def attach_mobile(app, settings):
                 )
             )
         return result
-
-    def normalized(profile, revision):
-        mobility = {
-            "independent": "independent",
-            "walking_aid": "needs_time",
-            "wheelchair": "needs_time",
-            "assistance_required": "requires_help",
-            "unknown": "unknown",
-        }[profile.mobility]
-        if mobility != "requires_help" and (
-            profile.stairs in {"difficult", "unable"}
-            or "vision" in profile.sensory_supports
-            or profile.dependents
-        ):
-            mobility = "needs_time"
-        return ProfileInput(
-            revision=revision,
-            mobility=mobility,
-            mobility_assistance=mobility in {"needs_time", "requires_help"},
-            children_accompanying="child" in profile.dependents,
-            helper_registered=profile.helper_registered,
-            vehicle_access=profile.vehicle_access,
-            communication="audio"
-            if profile.communication_preference == "voice"
-            else profile.communication_preference,
-        )
 
     def owned_response(session, actor, identifier):
         row = session.scalar(
@@ -364,7 +339,7 @@ def attach_mobile(app, settings):
                     actor["scenario_id"],
                     "profile",
                     actor["sub"],
-                    normalized(body.profile, input_revision),
+                    normalize_profile(body.profile, input_revision),
                     user_id=actor["sub"],
                 )
                 return {
@@ -730,8 +705,16 @@ def attach_mobile(app, settings):
             if body.overrides.stairs in {"difficult", "unable"} and mobility != "requires_help":
                 mobility = "needs_time"
             state = body.state.model_dump()
-            if body.overrides.alone_now == "yes" and state["helper_present"] is None:
+            if body.overrides.alone_now != "unknown":
+                if state["alone_now"] not in {"unknown", body.overrides.alone_now}:
+                    raise HTTPException(422, detail="CONTEXT_COMPANION_CONFLICT")
+                state["alone_now"] = body.overrides.alone_now
+            if state["alone_now"] == "yes" and state["helper_present"] is None:
                 state["helper_present"] = False
+            if state["alone_now"] == "yes" and (
+                state["child_present"] is True or state["helper_present"] is True
+            ):
+                raise HTTPException(422, detail="CONTEXT_COMPANION_CONFLICT")
             put_entity(
                 s,
                 actor["scenario_id"],
@@ -978,38 +961,23 @@ def attach_mobile(app, settings):
     def preparations(actor=actor_dependency):
         with sessions.begin() as s:
             moment = evaluation_time(scope_lock(s, actor["scenario_id"]))
-            profile = get_entity(s, actor, "app_profile")
-            values = profile.body["data"] if profile else {}
-            second = "mvp-ready-bag-check"
-            reason = "BASIC_PREPARATION"
-            if values.get("mobility") in {
-                "walking_aid",
-                "wheelchair",
-                "assistance_required",
-            } or values.get("stairs") in {"difficult", "unable"}:
-                second, reason = "mvp-ready-helper", "MOBILITY_PREPARATION"
-            elif values.get("dependents"):
-                second, reason = "mvp-ready-dependent", "DEPENDENT_PREPARATION"
-            items = guidance_items(s, actor, moment, ["mvp-ready-bag", second])
-            for item in items:
-                item["reason_code"] = reason if item["id"] == second else "BASIC_PREPARATION"
-            return envelope(
-                {
-                    "status": "available" if items else "unavailable",
-                    "policy_version": POLICY_VERSION,
-                    "profile_revision": profile.revision if profile else 0,
-                    "generated_at": moment,
-                    "items": items,
-                },
-                "current" if items else "unavailable",
-            )
+            from bonghwajigi.policy.home import preparations as preparation_cards
+
+            data = preparation_cards(s, actor, moment)
+            return envelope(data, "current" if data["items"] else "unavailable")
 
     @router.get("/home", response_model=Envelope[HomeData])
     def home(actor=actor_dependency):
+        from bonghwajigi.policy.home import today_guidance
+
+        with sessions.begin() as s:
+            moment = evaluation_time(scope_lock(s, actor["scenario_id"]))
+            regional = today_guidance(s, actor, moment)
         return envelope(
             {
                 "nearby_disasters": disasters(actor)["data"]["items"][:3],
                 "basic_rules": safety_rules("wildfire", actor)["data"],
+                "today_guidance": regional,
                 "location": get_location(actor)["data"],
                 "features": config(actor)["data"]["features"],
                 "preparations": preparations(actor)["data"],

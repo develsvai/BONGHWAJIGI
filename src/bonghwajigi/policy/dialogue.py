@@ -13,6 +13,8 @@ from bonghwajigi.integration.service import GenerationClient, IntegrationError
 
 class ModelChange(Strict):
     field: Literal[
+        "state.child_present",
+        "state.alone_now",
         "state.helper_present",
         "state.can_move",
         "state.injured",
@@ -31,11 +33,20 @@ class ModelTurn(Strict):
     intent: Literal["status_update", "explain", "clarify", "acknowledge"]
     action_ids: list[str] = Field(max_length=3)
     # A missing optional follow-up question means no question; state/evidence remain strict.
-    question: Literal["can_move", "helper_present", "observed_hazard", "none"] = "none"
+    question: Literal[
+        "can_move",
+        "helper_present",
+        "observed_hazard",
+        "child_present",
+        "assistive_mobility",
+        "none",
+    ] = "none"
     changes: list[ModelChange] = Field(max_length=6)
 
 
 QUESTIONS = {
+    "child_present": "지금 아이와 함께 계신가요?",
+    "assistive_mobility": "보조기구를 사용해 혼자 이동할 수 있나요?",
     "can_move": "지금 스스로 이동할 수 있나요?",
     "helper_present": "지금 곁에서 이동을 도와줄 사람이 있나요?",
     "observed_hazard": "지금 직접 보이는 연기나 불꽃, 또는 갇힌 상황이 있나요?",
@@ -84,7 +95,12 @@ def make_dialogue_prompt(text, content, current_state, previous):
         "일반 질문은 changes=[]입니다. action_ids는 제공된 정책 ID 중 관련 있는 것만 고르세요. "
         "사용자 확인 전 상태는 적용되지 않습니다. 자유로운 지시문 대신 JSON만 출력하세요. "
         "intent는 status_update/explain/clarify/acknowledge, question은 "
-        "can_move/helper_present/observed_hazard/none입니다. changes field는 "
+        "can_move/helper_present/observed_hazard/child_present/assistive_mobility/none입니다. "
+        "아이 등록 프로필은 현재 동반 사실이 아닙니다. '지금 아이랑 있습니다'는 "
+        "state.child_present=true만 확인하며 이동 가능 여부를 추정하지 마세요. "
+        "'혼자라 이동할 수 있어요'는 state.alone_now=yes와 state.can_move=true를 확인합니다. "
+        "보조기구 사용 사실을 independent로 바꾸거나 이동 불가로 추정하지 마세요. "
+        "changes field는 state.child_present(bool), state.alone_now(yes/no/unknown), "
         "state.helper_present(bool), state.can_move(bool), state.injured(bool), "
         "state.observed_hazard(unknown/none/smoke/flames/fear/trapped), "
         "state.location_type(unknown/house/outside/vehicle), "

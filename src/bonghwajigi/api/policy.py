@@ -3,6 +3,7 @@ from sqlalchemy import select
 from sqlalchemy.exc import SQLAlchemyError
 
 from bonghwajigi.common.security import service_auth
+from bonghwajigi.contracts.analysis import RegionalConditionsInput
 from bonghwajigi.contracts.policy import (
     AlertInput,
     ClockInput,
@@ -129,6 +130,14 @@ def attach_policy(app, settings):
     @router.put("/rules", status_code=202)
     def rules(scenario_id: Identifier, body: RuleSetInput):
         return mutate(lambda s: put_entity(s, scenario_id, "rules", "active", body))
+
+    @router.put("/regional-conditions/{region_id}", status_code=202)
+    def regional_conditions(
+        scenario_id: Identifier, region_id: Identifier, body: RegionalConditionsInput
+    ):
+        if region_id != body.region_id:
+            raise HTTPException(422, detail="REGION_ID_MISMATCH")
+        return mutate(lambda s: put_entity(s, scenario_id, "regional_conditions", region_id, body))
 
     @router.post("/bootstrap-policy", status_code=202)
     def bootstrap_policy(scenario_id: Identifier):

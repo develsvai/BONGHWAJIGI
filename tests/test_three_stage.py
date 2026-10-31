@@ -81,6 +81,21 @@ def test_urgent_does_not_require_a_question_and_fear_does_not_mean_trapped():
     assert response["automatic_emergency_call"] is False
 
 
+def test_trapped_child_gets_help_guidance_without_movement_instruction():
+    response, actions = decide(
+        {"child_registered": True},
+        {"observed_hazard": "trapped", "child_present": True},
+        {},
+        {},
+        [],
+        None,
+        True,
+    )
+    assert response["level"] == "request_assistance"
+    assert "mvp-act-child" not in actions
+    assert "mvp-assist-child-stay" in actions
+
+
 def test_unknown_is_not_blocked_and_deescalation_requires_confirmation():
     previous = {"personal_response": {"level": "act"}}
     response, _ = decide(

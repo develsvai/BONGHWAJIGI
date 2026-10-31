@@ -93,7 +93,32 @@ def put_entity(session, scenario, kind, key, payload, *, user_id=None, incident_
         )
     session.flush()
     enqueue(session, scenario, user_id, incident_id)
+    if kind == "regional_conditions":
+        from bonghwajigi.notifications.service import emit_change
+
+        users = session.scalars(
+            select(PolicyEntity.entity_id).where(
+                PolicyEntity.scenario_id == scenario, PolicyEntity.kind == "profile"
+            )
+        ).all()
+        for user in users:
+            emit_change(session, scenario, user, "home", key, payload.revision)
     return {"revision": payload.revision, "duplicate": False}
+
+
+def register_regional_observation(session, event):
+    payload = AnalysisInput.model_validate(event["payload"])
+    regional = payload.regional_conditions
+    if regional is None:
+        return
+    scope_lock(session, event["scenario_id"])
+    current = session.get(
+        PolicyEntity, (event["scenario_id"], "regional_conditions", regional.region_id)
+    )
+    # An older queued observation must never overwrite a newer regional record.
+    if current and current.revision > regional.revision:
+        return
+    put_entity(session, event["scenario_id"], "regional_conditions", regional.region_id, regional)
 
 
 def put_clock(session, scenario, payload):
@@ -300,8 +325,18 @@ def evaluate(session, projection, moment):
         "reason_codes": sorted(set(reasons)),
     }
     if rules and rules["review_state"] == "approved_mvp":
+        from bonghwajigi.contracts.app import AppProfile
+        from bonghwajigi.policy.profile import normalize_profile
         from bonghwajigi.policy.three_stage import decide
 
+        # Re-normalize stored app profiles too: older releases treated registered dependents
+        # as present companions. Do not carry that inference into the approved policy.
+        app_profile = entity("app_profile", user)
+        if app_profile:
+            selected.append(app_profile)
+            profile = normalize_profile(
+                AppProfile.model_validate(app_profile.body["data"]), app_profile.revision
+            ).model_dump()
         state_row = entity("state", incident_id + "/" + user)
         environment_row, route_row = (
             entity("environment", incident_id),

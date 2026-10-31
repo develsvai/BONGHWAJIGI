@@ -3,6 +3,7 @@ from typing import Annotated, Literal
 from pydantic import AwareDatetime, BaseModel, ConfigDict, Field, model_validator
 
 from bonghwajigi.contracts.analysis import Source
+from bonghwajigi.contracts.routes import ReferenceRoute
 from bonghwajigi.contracts.spatial import Box
 
 Identifier = Annotated[str, Field(min_length=1, max_length=128, pattern=r"^[a-zA-Z0-9_.:-]+$")]
@@ -20,6 +21,9 @@ class ClockInput(Versioned):
 
 class ProfileInput(Versioned):
     mobility_assistance: bool = False
+    child_registered: bool = False
+    assistive_device: bool = False
+    # Legacy simulation rules only. The approved policy uses confirmed CurrentStateInput.
     children_accompanying: bool = False
     mobility: Literal["unknown", "independent", "needs_time", "requires_help"] = "unknown"
     helper_registered: bool | None = None
@@ -154,6 +158,8 @@ class EnvironmentInput(TimedInput):
 
 
 class CurrentStateInput(TimedInput):
+    child_present: bool | None = None
+    alone_now: Literal["yes", "no", "unknown"] = "unknown"
     mobility_override: Literal["unknown", "independent", "needs_time", "requires_help"] | None = (
         None
     )
@@ -165,6 +171,12 @@ class CurrentStateInput(TimedInput):
     evacuation_status: Literal["unknown", "not_started", "moving", "arrived"] = "unknown"
     deescalation_confirmed: bool = False
 
+    @model_validator(mode="after")
+    def consistent_companions(self):
+        if self.alone_now == "yes" and (self.child_present is True or self.helper_present is True):
+            raise ValueError("혼자 있음과 현재 동행 상태를 함께 확인할 수 없습니다.")
+        return self
+
 
 class RouteInput(TimedInput):
     status: Literal["open", "blocked", "unknown"]
@@ -172,6 +184,7 @@ class RouteInput(TimedInput):
     reason: str = Field(min_length=1, max_length=500)
     # open은 현재 이용 가능한 대피 경로, blocked는 이용 가능한 대체 경로도 없다는 뜻이다.
     destination: str | None = Field(default=None, max_length=300)
+    reference_route: ReferenceRoute | None = None
 
 
 class UrgentInput(BaseModel):

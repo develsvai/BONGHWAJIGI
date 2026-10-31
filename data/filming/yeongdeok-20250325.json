@@ -1,0 +1,383 @@
+{
+  "schema_version": 1,
+  "mode": "simulation",
+  "origin": "historical_replay",
+  "collected_at": "2026-10-31T19:35:02+00:00",
+  "incident": {
+    "id": "historical-20250325-yeongdeok",
+    "title": "2025년 3월 의성 산불의 영덕 지역 확산",
+    "disaster_type": "wildfire",
+    "area_name": "경상북도 영덕군",
+    "historical_date_range": [
+      "2025-03-25",
+      "2025-03-26"
+    ],
+    "official_fire_boundary": null,
+    "official_point_coordinates": null
+  },
+  "collection_note": "공식 과거 사건·사후 기후분석과 현재 행동요령을 조합한 촬영 재생 자료이다. 2025년 당시 이용 가능 정보를 재현하는 백테스트가 아니다. 일자만 공개된 자료의 published_at은 그날 23:59:59 KST를 보수적 상한으로 저장했으며 실제 발표 시각이 아니다. 날짜 미공개 자료는 이번 열람 시각을 이용 가능 시각 상한으로 사용한다.",
+  "source_definitions": [
+    {
+      "document_id": "gov-wildfire-20250326",
+      "source_kind": "stored_document",
+      "origin": "historical_replay",
+      "text": "[공식 역사자료 요약] 2025년 3월 22일 의성에서 발생한 산불이 25일 강한 서풍을 타고 안동·청송·영양·영덕으로 확산했다. 25일 오후부터 주민 대피가 진행됐고 여러 지역에 도로 차단과 전기·통신 장애가 있었다. 25일 16시 전국 산불경보가 심각으로 확대됐다. 정부는 건조특보와 강풍특보가 함께 발효된 상황을 설명했다. 이 문서는 개별 도로 구간·가구별 탈출 가능성·공식 화선 좌표를 제공하지 않는다. 전국 심각 경보는 개인 대피명령이나 개인 대응 3단계와 다르다.",
+      "source": {
+        "title": "산불경보 '심각' 단계 전국 확대…국가적으로 엄중한 상황",
+        "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148940993",
+        "published_at": "2025-03-26T23:59:59+09:00",
+        "collected_at": "2026-10-31T19:35:02+00:00",
+        "verified": true,
+        "publisher": "대한민국 정책브리핑"
+      },
+      "published_at_precision": "date_only_conservative_upper_bound",
+      "original_published_date": "2025-03-26",
+      "original_published_at": null,
+      "content_form": "editor_summary",
+      "original_excerpt": "",
+      "terms": {
+        "name": "공공누리 제1유형",
+        "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148940993",
+        "verified": true,
+        "note": "페이지 하단에 텍스트 한정 출처표시 조건 명시. 연합뉴스 사진은 사용하지 않음."
+      }
+    },
+    {
+      "document_id": "kma-daegu-gyeongbuk-20250402",
+      "source_kind": "stored_document",
+      "origin": "historical_replay",
+      "text": "[공식 사후 분석 요약] 대구지방기상청은 2025년 4월 2일 11시에 3월 기후특성을 발표했다. 3월 하순 고온·건조·강한 서풍이 이어져 산불이 발생·확산하기 쉬운 조건이었다. 3월 21~26일 대구·경북 평균기온은 15.4도, 상대습도는 42%였고 같은 기간 비가 내리지 않았다. 이는 광역·기간 평균 분석이며 두 사용자 위치의 실시간 관측값이 아니다. 이 자료에서는 촬영 장소의 안개 발생을 확인하지 못했다.",
+      "source": {
+        "title": "대구·경북 2025년 3월 기후특성",
+        "url": "https://www.kma.go.kr/kma/servlet/NeoboardProcess?bid=press2&callback=&fno=1&k=ATC202504021111341_e5c09311-18e7-4641-8efb-ea86b64d12e4.pdf&mode=download&num=12893&ses=USER_SESSION",
+        "published_at": "2025-04-02T11:00:00+09:00",
+        "collected_at": "2026-10-31T19:35:02+00:00",
+        "verified": true,
+        "publisher": "기상청 대구지방기상청"
+      },
+      "published_at_precision": "minute",
+      "original_published_date": null,
+      "original_published_at": "2025-04-02T11:00:00+09:00",
+      "content_form": "editor_summary",
+      "original_excerpt": "",
+      "terms": {
+        "name": "공공누리 제1유형",
+        "url": "https://www.kma.go.kr/kma/servlet/NeoboardProcess?bid=press2&callback=&fno=1&k=ATC202504021111341_e5c09311-18e7-4641-8efb-ea86b64d12e4.pdf&mode=download&num=12893&ses=USER_SESSION",
+        "verified": true,
+        "note": "공식 PDF 3쪽 출처표시 표기 확인. 사후 발표 자료이므로 3월 25일 시점에 알려진 자료인 것처럼 재현하지 않음."
+      }
+    },
+    {
+      "document_id": "mois-wildfire-action-guide-current",
+      "source_kind": "stored_document",
+      "origin": "collected_sample",
+      "text": "[공식 행동요령 검토 요약] 평소 물·비상식품·옷·연락망·보조배터리 등을 준비하고 가족의 대피 장소·경로를 알아둔다. 건조하고 바람이 많은 날 산림 주변 소각을 피하고 입산통제·폐쇄 구간에 들어가지 않는다. 대피 안내가 있으면 관계자 지시와 재난정보를 확인하며 이동한다. 어린이와 함께 있을 때 떨어지지 않게 대피한다. 이동에 도움이 되는 지팡이·휠체어 등을 미리 준비하고 조력자 및 연락 방법을 정한다. 긴급하면 119 등에 도움을 요청한다. 개별 안전경로를 확인해 주는 자료는 아니다.",
+      "source": {
+        "title": "국민안전24 산불 국민행동요령",
+        "url": "https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=forestFires&menuSn=4",
+        "published_at": "2026-10-31T19:35:02+00:00",
+        "collected_at": "2026-10-31T19:35:02+00:00",
+        "verified": true,
+        "publisher": "행정안전부 국민안전24"
+      },
+      "published_at_precision": "retrieval_time_upper_bound_original_unknown",
+      "original_published_date": null,
+      "original_published_at": null,
+      "content_form": "editor_summary_and_short_original_excerpt",
+      "original_excerpt": "어린이의 경우 헤어지지 않도록 손을 잡고 대피하며, 행동요령을 말해주어 함께 대처할 수 있도록 합니다.",
+      "terms": {
+        "name": "페이지별 재이용 표시 미확인",
+        "url": "https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=forestFires&menuSn=4",
+        "verified": false,
+        "note": "공식 공개 행동요령의 짧은 발췌와 자체 요약만 보존. 이미지·동영상·전문을 복제하지 않음."
+      }
+    },
+    {
+      "document_id": "yeongdeok-palgaksan-geography",
+      "source_kind": "stored_document",
+      "origin": "collected_sample",
+      "text": "[공식 지리 소개 요약] 영덕군은 달산면 옥산리 515의 산성계곡생태공원을 팔각산 인근 산성계곡·옥계계곡 합류부의 숲과 농지를 활용한 공간으로 소개한다. 영덕군에 산림·산지·계곡 환경이 존재한다는 지역 맥락이다. 이 자료의 공원은 지정 산불 대피소로 확인되지 않았으며 촬영 사용자 위치와의 거리, 화선, 도로 안전성도 검증하지 않았다.",
+      "source": {
+        "title": "산성계곡생태공원 어드벤처 소개",
+        "url": "https://stay.yd.go.kr/adventure/pages/sub.htm?nav_code=adv1591964511",
+        "published_at": "2026-10-31T19:35:02+00:00",
+        "collected_at": "2026-10-31T19:35:02+00:00",
+        "verified": true,
+        "publisher": "영덕군"
+      },
+      "published_at_precision": "retrieval_time_upper_bound_original_unknown",
+      "original_published_date": null,
+      "original_published_at": null,
+      "content_form": "editor_summary",
+      "original_excerpt": "",
+      "terms": {
+        "name": "재이용 조건 미확인",
+        "url": "https://stay.yd.go.kr/adventure/pages/sub.htm?nav_code=adv1591964511",
+        "verified": false,
+        "note": "지명·공개 주소 등 사실과 짧은 자체 요약만 기록. 사진·지도·관광 이미지 사용 안 함."
+      }
+    },
+    {
+      "document_id": "gangdong-emergency-bag-20240827",
+      "source_kind": "stored_document",
+      "origin": "collected_sample",
+      "text": "[공식 공통 준비자료 요약] 가족별 비상배낭에 물·조리 없이 먹을 식품·의류·연락망·개인 필수품을 준비한다. 어린이 명찰과 영유아용 젖병·분유·기저귀도 예시로 든다. 모든 어린이를 영아로 간주하지 않고 실제 나이와 필요한 물품에 맞춰 준비한다. 보호 대상 등록만으로 현재 아이 동반을 추정하지 않는다.",
+      "source": {
+        "title": "생존배낭 및 비상용품 체크리스트",
+        "url": "https://www.gangdong.go.kr/web/newportal/contents/gdp_005_006_004_001_002",
+        "published_at": "2024-08-27T23:59:59+09:00",
+        "collected_at": "2026-10-31T19:35:02+00:00",
+        "verified": true,
+        "publisher": "서울특별시 강동구"
+      },
+      "published_at_precision": "updated_date_only_conservative_upper_bound",
+      "original_published_date": "2024-08-27",
+      "original_published_at": null,
+      "content_form": "editor_summary",
+      "original_excerpt": "",
+      "terms": {
+        "name": "페이지별 재이용 표시 미확인",
+        "url": "https://www.gangdong.go.kr/web/newportal/contents/gdp_005_006_004_001_002",
+        "verified": false,
+        "note": "공개 사실의 자체 요약만 기록. 체크리스트 디자인·사진을 복제하지 않음."
+      }
+    },
+    {
+      "document_id": "incheon-assisted-mobility-preparation",
+      "source_kind": "stored_document",
+      "origin": "collected_sample",
+      "text": "[공식 보조기구 준비자료 요약] 비상가방을 준비하고 스스로 이동 가능한 범위에 맞는 보조기구를 준비한다. 일상에서 이동 방법과 도움 요청 방식을 확인하며 탈출 경로를 미리 계획한다. 지체장애인 일반 자료를 참고하되 보조기구 사용 사실만으로 현재 혼자 이동할 수 없다고 판정하지 않는다.",
+      "source": {
+        "title": "지체장애인용 재난 대비 행동요령",
+        "url": "https://www.incheon.go.kr/safe/SAFE020406",
+        "published_at": "2026-05-06T23:59:59+09:00",
+        "collected_at": "2026-10-31T19:35:02+00:00",
+        "verified": true,
+        "publisher": "인천광역시"
+      },
+      "published_at_precision": "updated_date_only_conservative_upper_bound",
+      "original_published_date": "2026-05-06",
+      "original_published_at": null,
+      "content_form": "editor_summary",
+      "original_excerpt": "",
+      "terms": {
+        "name": "공공누리 제1유형",
+        "url": "https://www.incheon.go.kr/safe/SAFE020406",
+        "verified": true,
+        "note": "페이지에 공공누리 출처표시 및 국민안전24 원출처 표기. 최종업데이트는 2026-05-06이므로 당시 2025년 자료라는 주장은 하지 않음."
+      }
+    }
+  ],
+  "official_alerts": [
+    {
+      "alert_id": "historical-national-wildfire-warning-20250325-1600",
+      "source_id": "gov-wildfire-20250326",
+      "record_kind": "official_warning_notice_record",
+      "origin": "historical_replay",
+      "authority": "산림청",
+      "issued_at": "2025-03-25T16:00:00+09:00",
+      "issued_at_precision": "minute",
+      "severity": "심각",
+      "target_area": "전국",
+      "original_excerpt": "정부는 25일 오후 4시부로 산불경보 '심각' 단계를 전국으로 확대하고 국가소방동원령을 추가 발동했다.",
+      "original_text_scope": "정부 공식 보도에 포함된 경보 발령 사실 문장; CBS 전문 아님",
+      "original_sms_available": false,
+      "evacuation_order": false,
+      "current_effective_status": "historical_only"
+    }
+  ],
+  "official_evacuations": [],
+  "official_evacuation_source_status": "영덕 개별 주민대피명령 또는 CBS 원문 미확보. 공식 원문인 것처럼 대피 문장을 만들어 넣지 않는다.",
+  "regional_facts": {
+    "region_id": "yeongdeok-20250325",
+    "original_observed_at": null,
+    "original_observed_date_range": [
+      "2025-03-25",
+      "2025-03-26"
+    ],
+    "original_observed_at_precision": "date_range_only",
+    "dry_warning": true,
+    "dry_warning_source_ids": [
+      "gov-wildfire-20250326"
+    ],
+    "dry_warning_scope": "정부의 경북 산불 대응 당시 건조특보 발효 설명; 영덕 특정 지점의 경보 발표·해제 원전은 미확보",
+    "fog_observed": null,
+    "fog_evidence_status": "미확인; 연무·연기와 안개를 바꿔 쓰지 않음",
+    "forest_nearby": null,
+    "regional_forest_context": true,
+    "geography_source_ids": [
+      "yeongdeok-palgaksan-geography"
+    ],
+    "climate_summary": {
+      "period": [
+        "2025-03-21",
+        "2025-03-26"
+      ],
+      "spatial_scope": "대구·경북 광역 분석",
+      "mean_temperature_c": 15.4,
+      "relative_humidity_percent": 42,
+      "rain_occurred": false,
+      "source_id": "kma-daegu-gyeongbuk-20250402",
+      "individual_location_measurement": false
+    },
+    "road_restriction_context": {
+      "reported": true,
+      "source_ids": [
+        "gov-wildfire-20250326"
+      ],
+      "specific_segments_verified": false,
+      "geometry": null,
+      "individual_escape_blocked": null,
+      "note": "정부 공식 보도는 산불 영향 지역의 도로 차단을 보고한다. 모든 길이 막혔거나 A가 탈출할 수 없다는 근거가 아니다."
+    }
+  },
+  "synthetic_staging": {
+    "origin": "synthetic",
+    "operational_use": false,
+    "area": {
+      "west": 129.0,
+      "east": 129.8,
+      "south": 36.0,
+      "north": 37.0
+    },
+    "area_meaning": "촬영 입력을 수용하는 거친 사각형이며 영덕 행정경계·실제 화선·확산예측 영역이 아님",
+    "forest_nearby": true,
+    "forest_nearby_basis": "촬영의 가상 사용자 환경 설정. 팔각산 인근 산림 지리는 지역 맥락이며 두 좌표의 산림 인접 거리를 검증한 것은 아님",
+    "roles": {
+      "A": {
+        "latitude": 36.43,
+        "longitude": 129.32,
+        "profile": {
+          "dependent": "child"
+        },
+        "child_present_before_answer": null,
+        "blocked_escape": true,
+        "route_state_origin": "synthetic",
+        "route_geometry": null,
+        "stage_expected": "emergency",
+        "stage_reason": "합성 현장 시나리오의 탈출 경로 불가 상태; 어린이 프로필·거리·광역 도로통제만으로 추론하지 않음",
+        "question": "지금 아이와 함께 계신가요?",
+        "answer": "지금 아이랑 있습니다.",
+        "confirmation_required": true,
+        "confirmed_state": {
+          "child_present": true
+        }
+      },
+      "B": {
+        "latitude": 36.4,
+        "longitude": 129.35,
+        "profile": {
+          "mobility": "assistive_device"
+        },
+        "can_move_before_answer": null,
+        "alone_before_answer": null,
+        "blocked_escape": false,
+        "route_state_origin": "synthetic",
+        "route_reference": "src/bonghwajigi/policy/mobile_route.json",
+        "route_reference_meaning": "허구의 표시용 선; 실제 도로·무장애 경로·안전 목적지 검증 없음",
+        "stage_expected": "evacuate",
+        "stage_reason": "별도의 합성 대피 필요·경로 사용 가능 설정; 전국 심각 경보만으로 실제 대피명령을 만들지 않음",
+        "question": "보조기구를 사용해 혼자 이동할 수 있나요?",
+        "answer_recommended": "지금 혼자 있고, 보조기구를 사용해서 이동할 수 있어요.",
+        "confirmation_required": true,
+        "confirmed_state": {
+          "helper_present": false,
+          "can_move": true
+        }
+      }
+    }
+  },
+  "guidance_candidates": [
+    {
+      "id": "prepared-common-bag",
+      "slot": "common",
+      "title": "비상가방 준비",
+      "text": "물과 바로 먹을 식품, 보조배터리, 비상연락망을 한곳에 챙겨 두세요.",
+      "source_ids": [
+        "mois-wildfire-action-guide-current",
+        "gangdong-emergency-bag-20240827"
+      ],
+      "review_status": "출처와 문구 대조 완료; 정책 등록은 구현 담당 검토 후"
+    },
+    {
+      "id": "prepared-child-bag",
+      "slot": "personal",
+      "title": "어린이 비상용품 준비",
+      "text": "아이에게 필요한 물·식품·여벌 옷과 비상연락처를 챙겨 두세요.",
+      "source_ids": [
+        "mois-wildfire-action-guide-current",
+        "gangdong-emergency-bag-20240827"
+      ],
+      "review_status": "일반 준비물의 보호 대상 맞춤 표현; 현재 아이 동반을 뜻하지 않음"
+    },
+    {
+      "id": "prepared-assistive-device",
+      "slot": "personal",
+      "title": "이동 보조기구 준비",
+      "text": "평소 쓰는 보조기구를 준비하고, 필요할 때 도움을 요청할 연락처를 확인하세요.",
+      "source_ids": [
+        "mois-wildfire-action-guide-current",
+        "incheon-assisted-mobility-preparation"
+      ],
+      "review_status": "보조기구 사용만으로 이동불가를 추정하지 않음"
+    },
+    {
+      "id": "regional-dry-forest",
+      "slot": "regional",
+      "title": "건조한 날 산불 주의",
+      "text": "산림 주변 소각을 피하고, 입산통제·등산로 폐쇄 안내를 확인하세요.",
+      "source_ids": [
+        "mois-wildfire-action-guide-current",
+        "gov-wildfire-20250326",
+        "kma-daegu-gyeongbuk-20250402"
+      ],
+      "review_status": "확인된 건조 맥락과 산림 주변 설정이 모두 유효할 때 사용"
+    },
+    {
+      "id": "child-keep-together",
+      "slot": "response",
+      "title": "아이와 함께 이동",
+      "text": "아이와 떨어지지 않도록 손을 잡고 관계자의 대피 안내를 따르세요.",
+      "requires_confirmed_state": {
+        "child_present": true
+      },
+      "source_ids": [
+        "mois-wildfire-action-guide-current"
+      ],
+      "review_status": "현재 동반 확인 뒤만 사용; 통제 경로 진입 명령으로 사용하지 않음"
+    },
+    {
+      "id": "blocked-seek-help",
+      "slot": "response",
+      "title": "도움 요청",
+      "text": "탈출이 어렵다면 119에 현재 위치와 도움이 필요한 상황을 알리세요.",
+      "requires_scenario_fact": "개인별 탈출 곤란 확인",
+      "source_ids": [
+        "mois-wildfire-action-guide-current"
+      ],
+      "review_status": "자동 전화·문자 발신 없음; 지역 도로 차단만으로 선택하지 않음"
+    }
+  ],
+  "unverified_candidates": [
+    {
+      "url": "https://www.newsro.kr/articles/832886",
+      "kind": "군 발표 재인용 민간 기사",
+      "claimed_items": [
+        "2025-03-25 18:00 지품·달산 주민대피",
+        "18:58 국도34호선 구미~황장 통제",
+        "19:30 영덕 9읍면 대피"
+      ],
+      "primary_verified": false,
+      "use_in_official_alert": false,
+      "note": "단서만 보존. 피해자 이름·사진·전문은 수집하지 않음. 영덕군 본사이트 열람은 방화벽 차단 응답으로 확인 중단."
+    }
+  ],
+  "limitations": [
+    "실제 화선·확산 방향·안전 대피경로·도로 폴리라인·사용자 GPS를 확보하지 않았다.",
+    "개별 대피명령 CBS 원문과 영덕의 정확한 건조특보 발효/해제 시각은 미확보다.",
+    "안개는 관측 근거가 없어 null이며 연기를 안개로 표시하지 않는다.",
+    "현재 행동요령과 4월 사후 기후분석을 3월 당시 공개된 자료로 주장하지 않는다.",
+    "원시 출처 시각은 유지하고 재생의 observed_at/expires_at만 실행기가 별도 설정한다.",
+    "화면에서 시연 표현을 정리해도 내부 mode/origin/operational_use 및 영상 바깥 재생 고지는 보존한다."
+  ]
+}

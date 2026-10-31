@@ -19,6 +19,12 @@ GUIDES = {
     "ready-bag-check": "평소 준비한 비상용품의 보관 위치와 사용 가능한 상태를 확인하세요.",
     "ready-helper": "이동을 도와줄 사람과 미리 연락 방법을 정하고 함께 대피할 준비를 해두세요.",
     "ready-dependent": "함께 대피할 보호 대상과 미리 연락 방법과 만날 장소를 정해두세요.",
+    "ready-child": "아이에게 필요한 물·간식·여벌 옷을 비상가방에 챙기세요.",
+    "ready-aid": "평소 사용하는 보조기구가 바로 사용 가능한지 확인하세요.",
+    "ready-local": "주변 산림과 입산 통제 정보를 확인하고 가족과 연락 방법을 정해두세요.",
+    "regional-dry": ("건조한 산림 주변에서는 불씨에 주의하고 입산 통제 정보를 확인하세요."),
+    "regional-fog": "주변 지역에서 안개가 관측됐어요. 시야를 확인하고 이동할 때 주의하세요.",
+    "regional-forest": "산림 주변에서는 불씨를 조심하고 입산 통제 정보를 확인하세요.",
     "avoid-entry": "입산통제구역과 폐쇄된 등산로에 들어가지 마세요.",
     "avoid-direction": "산불이 번지는 방향이나 산과 가까운 위험한 길로 이동하지 마세요.",
     "prepare-follow": "공식 대피 안내와 재난문자를 확인하고 대피할 장소를 확인하세요.",
@@ -27,6 +33,13 @@ GUIDES = {
     "act-follow": "관계자의 대피 안내에 따라 안내된 장소로 즉시 이동하세요.",
     "act-assist": "혼자 이동하기 어렵다면 주변 사람이나 조력자에게 도움을 요청해 함께 이동하세요.",
     "act-child": "아이와 떨어지지 않도록 손을 잡고 함께 대피하세요.",
+    "assist-child": (
+        "아이와 떨어지지 마세요. 119에 현재 위치와 아이 동반·경로 통제 상황을 알리세요."
+    ),
+    "assist-child-stay": (
+        "아이와 떨어지지 마세요. 119에 현재 위치와 아이 동반·도움이 필요한 상황을 알리세요."
+    ),
+    "act-aid": "보조기구를 챙기고 관계자의 대피 안내에 따라 이동하세요.",
     "assist-call": "119에 연락해 현재 위치와 대피할 수 없는 상황을 알리고 도움을 요청하세요.",
     "assist-location": (
         "알고 있는 주소나 주변 지형지물, 함께 있는 인원과 이동에 필요한 도움을 알리세요."
@@ -96,8 +109,9 @@ def decide(profile, state, environment, route, alerts, previous, related):
         mobility = "needs_time"
     if state.get("can_move") is False:
         mobility = "requires_help"
-    needs_time = mobility in {"needs_time", "requires_help"} or profile.get("children_accompanying")
-    helper = state.get("helper_present") is True
+    child_present = state.get("child_present") is True
+    needs_time = mobility in {"needs_time", "requires_help"} or child_present
+    helper = state.get("helper_present") is True and state.get("alone_now") != "yes"
     hazard = state.get("observed_hazard", "unknown")
     active = [
         a
@@ -158,8 +172,21 @@ def decide(profile, state, environment, route, alerts, previous, related):
         ids.insert(0, "prepare-helper")
     if level == "act" and mobility in {"needs_time", "requires_help"}:
         ids.append("act-assist")
-    if level == "act" and profile.get("children_accompanying"):
+    if level == "act" and child_present:
         ids.append("act-child")
+    if level == "request_assistance" and child_present:
+        ids.append("assist-child" if route.get("status") == "blocked" else "assist-child-stay")
+    if level == "act" and profile.get("assistive_device") and state.get("can_move") is True:
+        ids.append("act-aid")
+    # Questions refine current observations after the level is already determined. They do
+    # not delay emergency guidance or turn a potential companion into a present companion.
+    if level in {"prepare", "act", "request_assistance"}:
+        if profile.get("child_registered") and state.get("child_present") is None:
+            questions = ["지금 아이와 함께 계신가요?"]
+        elif profile.get("assistive_device") and state.get("can_move") is None:
+            questions = ["보조기구를 사용해 혼자 이동할 수 있나요?"]
+        elif level == "request_assistance":
+            questions = []
     return {
         "level": level,
         "number": RANK[level] or None,
@@ -167,7 +194,7 @@ def decide(profile, state, environment, route, alerts, previous, related):
         "policy_version": POLICY_VERSION,
         "hazard_band": band,
         "reason_codes": reasons,
-        "questions": [] if level == "request_assistance" else questions[:1],
+        "questions": questions[:1],
         "support_available": True,
         "automatic_emergency_call": False,
     }, ["mvp-" + i for i in ids]
