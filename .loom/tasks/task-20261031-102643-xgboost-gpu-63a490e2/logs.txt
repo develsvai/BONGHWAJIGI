@@ -4,3 +4,4 @@ Local and server CPU real-data preflight: 131072 rows per train/validation; CPU 
 GPU server: standalone training/.venv and raw/processed NDWS prepared. Public raw hashes match. Train/test Parquet match; validation cosine differs in bytes but rounded 6 decimals match; other 19 inputs and target match.
 systemd true unit succeeded; Qwen shared GPU lease blocks training; Linger=yes; active/ready confirmed after preparation. No full CUDA training or Qwen stop performed.
 Temporary transfer archives removed. See docs/V2/delivery/xgboost-training-run.md and training/reports/gpu-training-readiness.json.
+[2026-10-31T10:44:05+00:00] agent=foreground task=task-20261031-102643-xgboost-gpu-63a490e2 실자료 학습 실행기와 수동 GPU 시작/서비스 복구 절차를 e9c3586에 커밋했다. 로컬·GPU 서버 CPU 사전 실행, 15개 테스트, 전체 자료·해시·GPU 잠금·systemd 실행과 Qwen ready를 확인했다. GPU 전체 학습과 Qwen 중단은 자동 실행하지 않았다.
