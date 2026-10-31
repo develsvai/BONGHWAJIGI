@@ -1,0 +1,24 @@
+{
+  "before": {
+    "available": true,
+    "branch_name": "HeoNey",
+    "commit_sha": "8f443fc727e55df388cf10c582b0428b95728450",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/events.jsonl",
+      ".loom/jobs/job-20261030-113757-bonghwajigi-4841f0bc/job.json"
+    ],
+    "untracked_files": [
+      ".loom/job-runs/job-run-20261031-024440-job-20261030-113757-bonghwajigi-4841f0bc-085d115c/",
+      ".loom/task-definitions/task-def-20261031-024437-task-def-11cbe896/",
+      ".loom/task-runs/task-run-20261031-024440-task-def-20261031-024437-task-def-11cbe896-b6a47968/",
+      ".loom/tasks/task-20261031-024437-task-ee0db844/",
+      "docs/HeoNey/disaster.png",
+      "docs/HeoNey/nomal_home.png",
+      "\"docs/HeoNey/\\353\\264\\211\\355\\231\\224\\354\\247\\200\\352\\270\\260_\\353\\252\\250\\353\\260\\224\\354\\235\\274_\\355\\231\\224\\353\\251\\264_\\352\\270\\260\\355\\232\\215\\354\\204\\234.md\""
+    ],
+    "captured_at": "2026-10-31T02:44:40+00:00"
+  },
+  "after": null
+}

@@ -1,0 +1,34 @@
+{
+  "id": "task-20261031-024437-task-ee0db844",
+  "job_id": "job-20261030-113757-bonghwajigi-4841f0bc",
+  "title": "모바일 화면 기획서에 홈과 긴급 대응 예시 이미지 삽입",
+  "description": "사용자가 docs/HeoNey에 추가한 모바일 화면 기획서에서 홈과 긴급 대응 화면의 텍스트 와이어프레임을 대응하는 PNG 이미지로 교체하고, 나머지 화면의 예시는 보존한다.",
+  "status": "RUNNING",
+  "created_at": "2026-10-31T02:44:37+00:00",
+  "updated_at": "2026-10-31T02:44:40+00:00",
+  "order_index": 3,
+  "assigned_agent": "foreground",
+  "depends_on": [],
+  "expected_output": "기획서의 평상시 홈 및 긴급 재난 대응 절에 nomal_home.png와 disaster.png가 보이는 Markdown 이미지, 정확한 캡션과 파일 참조",
+  "done_condition": "기획서에서 두 이미지가 실제 렌더링되고 해당 텍스트 예시가 제거되며 다른 요구사항과 사용자 파일이 보존되고 검증·커밋·Loom 완료 기록이 남는다.",
+  "in_scope": "docs/HeoNey/봉화지기_모바일_화면_기획서.md; docs/HeoNey/nomal_home.png; docs/HeoNey/disaster.png; 문서 검증; 로컬 커밋",
+  "out_of_scope": "이미지 내용 자체 편집; 3D·프로필·기본 수칙용 새 이미지 생성; 기능 구현; 배포; 원격 push",
+  "validation_hint": "이미지 파일의 존재·형식과 Markdown 상대경로 확인; 기획서 내용 대조; git diff --check; loom validate --strict",
+  "required_docs": [],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/HeoNey/봉화지기_모바일_화면_기획서.md"
+  ],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [
+    "8f443fc727e55df388cf10c582b0428b95728450"
+  ],
+  "branch_name": "HeoNey",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-10-31T02:44:40+00:00",
+  "artifacts": [],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}
