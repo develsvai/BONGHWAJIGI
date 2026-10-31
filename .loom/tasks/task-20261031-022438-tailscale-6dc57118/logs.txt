@@ -10,3 +10,4 @@ GPU 100.65.45.63, 일반 서버 100.116.5.9. 최초 PacketFilter=[]와 TCP 22 �
 클러스터 6대 Ready, Running 파드 84개 모두 준비 상태. 양 서버 기존 기본 경로·외부 DNS·KOSIS TLS 검증 유지. 일반 서버 실패 유닛 없음, GPU 기존 실패 유닛 2개 동일.
 보고서·A2 후속 안내·실행 작업표 및 Task 결과/결정/문제 해결 기록 작성. 일반 파드 egress/API 검증은 A3의 후속 조건으로 고정.
 완료 전 검증: loom validate --strict 및 task validate 통과. git diff --check, 변경 파일 21개 키 패턴·JSON 구문·문서 링크 검사 통과. 모든 진단 SSH 세션 종료.
+[2026-10-31T02:39:37+00:00] agent=foreground task=task-20261031-022438-tailscale-6dc57118 두 서버 Tailscale 등록과 사용자 승인 TCP 22 규칙 적용 완료. Tailnet SSH 실제 로그인, 마스터발 및 서버 상호 연결을 검증했다. 일반 파드 egress와 API 포트 인증은 A3 후속 조건으로 구분했고 검증 문서와 Loom 기록을 develop의 439a9df에 커밋했다.

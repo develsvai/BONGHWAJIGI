@@ -3,9 +3,9 @@
   "job_id": "job-20261031-002017-v2-fe3bfad0",
   "title": "두 제공 서버를 기존 Tailscale 망에 연결하고 클러스터 통신 검증",
   "description": "사용자가 제공한 인증키로 두 서버에 Tailscale을 설정하고 기존 클러스터 tailnet과 연결하도록 직접 지시했다. develop에서 설치 등록과 실제 통신을 확인하고 접속 주소와 운영 방법을 기록한다.",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-10-31T02:24:38+00:00",
-  "updated_at": "2026-10-31T02:24:42+00:00",
+  "updated_at": "2026-10-31T02:39:37+00:00",
   "order_index": 6,
   "assigned_agent": "foreground",
   "depends_on": [
@@ -27,12 +27,25 @@
   "run_attempts": 0,
   "last_error": "",
   "commit_refs": [
-    "23a26fd55f2bed35feaae6100caa91bfa61bc524"
+    "23a26fd55f2bed35feaae6100caa91bfa61bc524",
+    "439a9df4bcef5717ee344e6f45a5e53100f9e117"
   ],
   "branch_name": "develop",
   "git_dirty": true,
-  "git_snapshot_captured_at": "2026-10-31T02:24:42+00:00",
-  "artifacts": [],
+  "git_snapshot_captured_at": "2026-10-31T02:39:37+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/agent-events.jsonl",
+    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/artifacts.json",
+    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/context.md",
+    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/decision.md",
+    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/git-snapshot.json",
+    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/logs.txt",
+    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/previous-results.md",
+    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/prompt.md",
+    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/result.md",
+    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/troubleshooting.md",
+    "docs/V2/delivery/tailnet-connectivity.md"
+  ],
   "source_proposal_id": "",
   "source_prompt": ""
 }

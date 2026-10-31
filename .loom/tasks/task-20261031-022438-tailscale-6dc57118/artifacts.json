@@ -1,48 +1,42 @@
 {
-  "status": "RUNNING",
+  "status": "DONE",
   "agent": "foreground",
   "mode": "foreground",
   "execution_surface": "foreground",
   "task_run_id": "task-run-20261031-022441-task-def-20261031-022438-tailscale-946bd75d-6d82de6d",
-  "generated_at": "2026-10-31T02:24:42+00:00",
+  "generated_at": "2026-10-31T02:39:37+00:00",
   "artifacts": [
-    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/prompt.md",
-    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/context.md",
-    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/previous-results.md",
-    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/git-snapshot.json",
-    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/result.md",
-    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/decision.md",
-    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/troubleshooting.md",
-    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/logs.txt",
     ".loom/tasks/task-20261031-022438-tailscale-6dc57118/agent-events.jsonl",
     ".loom/tasks/task-20261031-022438-tailscale-6dc57118/artifacts.json",
-    "docs/V2/delivery/tailnet-connectivity.md",
-    "docs/V2/delivery/tailnet-connectivity-evidence.json",
-    "docs/V2/delivery/environment-readiness.md",
-    "docs/V2/04-execution-backlog.md"
+    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/context.md",
+    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/decision.md",
+    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/git-snapshot.json",
+    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/logs.txt",
+    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/previous-results.md",
+    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/prompt.md",
+    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/result.md",
+    ".loom/tasks/task-20261031-022438-tailscale-6dc57118/troubleshooting.md",
+    "docs/V2/delivery/tailnet-connectivity.md"
   ],
   "artifact_groups": {
     "user_outputs": [
-      ".loom/tasks/task-20261031-022438-tailscale-6dc57118/result.md",
       ".loom/tasks/task-20261031-022438-tailscale-6dc57118/decision.md",
+      ".loom/tasks/task-20261031-022438-tailscale-6dc57118/result.md",
       ".loom/tasks/task-20261031-022438-tailscale-6dc57118/troubleshooting.md"
     ],
     "execution_inputs": [
-      ".loom/tasks/task-20261031-022438-tailscale-6dc57118/prompt.md",
       ".loom/tasks/task-20261031-022438-tailscale-6dc57118/context.md",
-      ".loom/tasks/task-20261031-022438-tailscale-6dc57118/previous-results.md"
+      ".loom/tasks/task-20261031-022438-tailscale-6dc57118/previous-results.md",
+      ".loom/tasks/task-20261031-022438-tailscale-6dc57118/prompt.md"
     ],
     "execution_audit": [
-      ".loom/tasks/task-20261031-022438-tailscale-6dc57118/git-snapshot.json",
-      ".loom/tasks/task-20261031-022438-tailscale-6dc57118/logs.txt",
       ".loom/tasks/task-20261031-022438-tailscale-6dc57118/agent-events.jsonl",
-      ".loom/tasks/task-20261031-022438-tailscale-6dc57118/artifacts.json"
+      ".loom/tasks/task-20261031-022438-tailscale-6dc57118/artifacts.json",
+      ".loom/tasks/task-20261031-022438-tailscale-6dc57118/git-snapshot.json",
+      ".loom/tasks/task-20261031-022438-tailscale-6dc57118/logs.txt"
     ],
     "work_products": [
-      "docs/V2/delivery/tailnet-connectivity.md",
-      "docs/V2/delivery/tailnet-connectivity-evidence.json",
-      "docs/V2/delivery/environment-readiness.md",
-      "docs/V2/04-execution-backlog.md"
+      "docs/V2/delivery/tailnet-connectivity.md"
     ]
   },
   "contract_snapshot": {
@@ -68,5 +62,8 @@
         ]
       }
     ]
-  }
+  },
+  "document_outputs": [
+    "docs/V2/delivery/tailnet-connectivity.md"
+  ]
 }
