@@ -1,0 +1,78 @@
+{
+  "verified_at_kst": "2026-11-01T01:47:00+09:00",
+  "initial_deployed_commit": "d8dc54a",
+  "migration": "f735a2ec901b",
+  "local_tests_passed": 92,
+  "local_alembic_check": "No new upgrade operations detected.",
+  "existing_non_mobile_accounts_before_after": [
+    9,
+    9
+  ],
+  "existing_non_mobile_policy_inputs_before_after": [
+    87,
+    87
+  ],
+  "private_env_mode": "0600",
+  "database_backup_mode": "0600",
+  "general_service": "active",
+  "gpu_tunnel_service": "active",
+  "gpu_or_training_changed": false,
+  "api": {
+    "readiness": 200,
+    "schema_version": "0.2.0-mvp",
+    "registration_enabled": true,
+    "unauthenticated_profile": 401,
+    "allowed_cors": "http://localhost:8081",
+    "unlisted_cors_status": 400
+  },
+  "synthetic": {
+    "scenario_id": "mobile-demo",
+    "incident_id": "mobile-fire",
+    "position": {
+      "latitude": 36.4,
+      "longitude": 129.35,
+      "accuracy_m": 10
+    },
+    "expires_at": "2026-11-01T16:46:29.962990+00:00",
+    "urgent_queue_complete": true,
+    "checks": [
+      "registration",
+      "device_registration",
+      "profile_other_dependent",
+      "location",
+      "official_original_text",
+      "policy_warning_evacuation_emergency",
+      "reviewed_policy_text",
+      "cursor_updates",
+      "cross_user_404",
+      "refresh_rotation",
+      "logout_access_refresh_401"
+    ],
+    "labels": [
+      "경고",
+      "대피",
+      "위급"
+    ],
+    "actual_prediction_connected": false,
+    "real_push": false
+  },
+  "network": {
+    "usb_forward": "http://127.0.0.1:18080",
+    "private_https": "https://inno-server-011.tail2dac17.ts.net",
+    "tailscale_serve": "configured_after_explicit_user_approval",
+    "server_self_https_tls_validated": 200,
+    "developer_machine_https": "timeout",
+    "effective_destination_ports": [
+      22
+    ],
+    "https_acl_grant_present": false,
+    "funnel_enabled": false,
+    "acl_modified": false
+  },
+  "limitations": [
+    "실제단말검증은앱Task에서이어감",
+    "Tailnet443접근규칙추가필요",
+    "FCM/지도자격미준비",
+    "실제예측미연결"
+  ]
+}

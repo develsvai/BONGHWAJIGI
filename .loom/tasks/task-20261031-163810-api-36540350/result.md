@@ -1,7 +1,13 @@
-# 진행 결과
+# 결과
 
-Compose에 등록·시나리오·CORS 설정 전달을 추가하고 기타 보호 대상 계약을 보완했다. 합성 자료 도구 tools/mobile_demo.py를 추가했다. 일반 서버 배포와 실제 검증은 이어서 기록한다.
+일반 서버에 앱 설치/세션 API와 migration을 배포하고 mobile-demo 합성 사건·긴급 큐 원문을 준비했다. 사용자 등록부터 프로필·위치·현재상태→경고/대피/위급→화면변경 cursor→refresh/로그아웃까지 실제 API로 검증했다. 기존 계정9개와 입력87개는 보존됐고 GPU/학습은 변경하지 않았다.
 
 ## 검증
 
-.venv/bin/alembic upgrade head, .venv/bin/alembic check 통과. BONGHWA_TEST_DATABASE_URL을 격리 로컬 DB로 지정한 .venv/bin/pytest -q 전체 92개 통과. 변경 Python의 ruff check 통과.
+격리 로컬 PostgreSQL에서 .venv/bin/alembic upgrade head 및 .venv/bin/alembic check, .venv/bin/pytest -q 전체92개 통과. 변경 파일 ruff check 통과. 배포 서버 python tools/mobile_demo.py의 긴급 큐 완료·원문·3단계·타사용자404·토큰 회전/로그아웃401 검사 통과. /health/ready200와 OpenAPI0.2.0-mvp, 허용CORS/차단CORS 확인.
+
+## 접속과 한계
+
+SSH localhost18080 터널을 유지하며 휴대폰은 adb reverse로 연결할 수 있다. 승인된 Tailscale Serve HTTPS는 서버 자체 TLS200이나 유효 ACL에443이 없어 다른 단말에서 시간 초과다. ACL은 변경하지 않았다. 실제 단말 검증/APK는 앱Task에서 진행하며 실예측·실FCM·지도자격은 제공 완료로 표기하지 않는다.
+
+상세: docs/V2/delivery/mobile-server-deployment.md 및 mobile-server-evidence.json.

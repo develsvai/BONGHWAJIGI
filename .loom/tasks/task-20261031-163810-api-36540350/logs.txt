@@ -1,3 +1,5 @@
 [2026-10-31T16:38:14+00:00] agent=foreground task=task-20261031-163810-api-36540350 Foreground task session started.
 
 2026-11-01 KST: 로컬 DB alembic upgrade head/check 및 pytest -q 92개 통과. ruff check 통과. 일반 서버 기존 서비스와 GPU 터널 active, env600 확인. SSH loopback18080 연결 준비.
+
+2026-11-01 KST: d8dc54a 이미지 배포, f735a2ec901b migration, 기존 계정9/입력87 보존. python tools/mobile_demo.py 로 긴급 큐·경고→대피→위급·세션 회전·로그아웃 검증 통과. HTTPS 자체200, 유효 ACL목적지22만 확인.

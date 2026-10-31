@@ -191,6 +191,17 @@ def main():
 
         app(
             "PUT",
+            "me/devices/" + installation,
+            {
+                "platform": "android",
+                "push_provider": "fcm",
+                "push_token": None,
+                "notification_permission": "granted",
+                "app_version": "synthetic-api-verification",
+            },
+        )
+        app(
+            "PUT",
             "me/profile",
             {
                 "base_revision": 1,
@@ -199,6 +210,17 @@ def main():
                     "mobility": "independent",
                     "dependents": ["other"],
                 },
+            },
+        )
+        cards = app("GET", "me/preparations")
+        assert cards["items"][1]["reason_code"] == "DEPENDENT_PREPARATION"
+        # 보호 대상 자체가 준비 시간을 늘리는 입력이므로 독립 이동 단계 시험 전에 해제한다.
+        app(
+            "PUT",
+            "me/profile",
+            {
+                "base_revision": 2,
+                "profile": {"display_name": "합성 단말 검증", "mobility": "independent"},
             },
         )
         app(
@@ -242,7 +264,7 @@ def main():
             ),
             "공식 원문",
         )
-        assert alert["requires_qwen"] is False and "[합성 시연]" in alert["raw_text"]
+        assert alert["requires_qwen"] is False and "[합성 시연]" in alert["original_text"]
         cursor = app("GET", "me/updates")["next_cursor"]
         path = "me/responses/" + first["id"]
         app(
