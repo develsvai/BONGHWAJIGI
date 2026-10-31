@@ -3,9 +3,9 @@
   "job_id": "job-20261031-002017-v2-fe3bfad0",
   "title": "두 서버와 K8s 상태 점검 및 V2 실행 작업 등록",
   "description": "사용자의 직접 요청에 따라 VPN 경유 두 서버와 현재 K8s 클러스터를 읽기 전용으로 조회하고 V2 TODO를 Job과 Task 계약으로 등록한다. 미래 구현은 실행하지 않는다.",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-10-31T00:20:27+00:00",
-  "updated_at": "2026-10-31T00:42:27+00:00",
+  "updated_at": "2026-10-31T00:53:31+00:00",
   "order_index": 1,
   "assigned_agent": "foreground",
   "depends_on": [],
@@ -26,11 +26,12 @@
   "commit_refs": [
     "84969858045462fc8faaa018061b571d14496f34",
     "5400153dacb6973bd2fa1869f38568d2b9bb15ea",
-    "8823e65fda207d37335741c0b5b8162f35fd1e86"
+    "8823e65fda207d37335741c0b5b8162f35fd1e86",
+    "cb8f40e5cedf7b8726352c53abb58ba0bd6694d9"
   ],
   "branch_name": "HeoNey",
   "git_dirty": true,
-  "git_snapshot_captured_at": "2026-10-31T00:42:27+00:00",
+  "git_snapshot_captured_at": "2026-10-31T00:53:31+00:00",
   "artifacts": [
     ".loom/tasks/task-20261031-002027-k8s-v2-a251b54e/agent-events.jsonl",
     ".loom/tasks/task-20261031-002027-k8s-v2-a251b54e/artifacts.json",

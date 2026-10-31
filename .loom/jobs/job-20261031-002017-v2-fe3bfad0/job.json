@@ -2,9 +2,9 @@
   "id": "job-20261031-002017-v2-fe3bfad0",
   "title": "V2 실행 기반과 통합 검증",
   "goal": "V2를 설계 기준으로 MVP 범위와 실행 환경을 고정하고, 다중 출처 수집부터 개인별 안내까지 통합 검증한다. HeoNey는 참고이며 앱 구현은 제외하고 API 명세를 제공한다.",
-  "status": "RUNNING",
+  "status": "PENDING",
   "created_at": "2026-10-31T00:20:17+00:00",
-  "updated_at": "2026-10-31T00:42:27+00:00",
+  "updated_at": "2026-10-31T00:53:31+00:00",
   "context_refs": [],
   "task_ids": [
     "task-20261031-002027-k8s-v2-a251b54e",
@@ -14,5 +14,7 @@
     "task-20261031-002631-task-df03e0e8"
   ],
   "branch_name": "HeoNey",
-  "checkpoint_ids": []
+  "checkpoint_ids": [
+    "checkpoint-20261031-005331-task-completed-k8s-v2-b865bde5"
+  ]
 }
