@@ -13,7 +13,7 @@
 | [AI 역할과 서버 구성](ai-and-infrastructure.md) | GPU 활용, 모델 후보, 확률 검증, 역할 제한 |
 | [결정 사항과 회의 대조](decisions-and-meeting-review.md) | 회의와 대화의 공통점, 변경점, 미결정 사항 |
 | [UI/UX 인계와 확인 항목](ui-ux-handoff.md) | 화면별 필요한 정보와 예외 상태, 다음 검토 순서 |
-| [재난 데이터 수집 자료](data-collection/README.md) | 국내외 카탈로그, 실제 표본, Mac 수집 예제, 사례 검증 상태 |
+| [재난 데이터 수집 자료](data-collection/README.md) | [산불MVP·10분 갱신 검수](data-collection/reviews/20261031/산불MVP_10분갱신_검수가이드.md), 국내외 카탈로그, 실제 표본, Mac 수집 예제, 검증 상태 |
 
 ## 상태 표기
 
