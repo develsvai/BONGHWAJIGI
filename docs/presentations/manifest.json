@@ -1,0 +1,56 @@
+{
+  "updated": "2026-10-31",
+  "branch": "hyun02063185",
+  "created_pptx_count": 5,
+  "template_pptx_count": 1,
+  "files": [
+    {
+      "path": "docs/presentations/archive/봉화지기_AI추천서비스_표지.pptx",
+      "category": "archive",
+      "bytes": 23689,
+      "slides": 1,
+      "sha256": "f1e8c9965e24da886e4d15a325166000ba1d90033efaa63605c6d072f201c2ca",
+      "git_blob_sha": "5a0022b5575edb1f33a767c03d0e354fe521163b"
+    },
+    {
+      "path": "docs/presentations/archive/봉화지기_구룡마을_지도_표지.pptx",
+      "category": "archive",
+      "bytes": 328226,
+      "slides": 1,
+      "sha256": "c2a529b2825d84784c9c73a3b18558544d08850a37d9d1198f2af1a8dfbb30de",
+      "git_blob_sha": "13022611a4feb7458cd0325d8d2fda05e710b8f9"
+    },
+    {
+      "path": "docs/presentations/slides/봉화지기_확산지도_개인경험_표지_v2.pptx",
+      "category": "slides",
+      "bytes": 430196,
+      "slides": 1,
+      "sha256": "b89ee8482a05a4b1c836c5d6f1daf7016bed90bb61cdfdadd256effe1682c62c",
+      "git_blob_sha": "a27fcf5d8d4e1f183470d2acfd09a31faddb2630"
+    },
+    {
+      "path": "docs/presentations/slides/봉화지기_03_서비스대상과목적.pptx",
+      "category": "slides",
+      "bytes": 26272,
+      "slides": 1,
+      "sha256": "eb0856b93de7f550dd49f71e66e9fe8a26b5fd8e6c9d19f510c081065b94a715",
+      "git_blob_sha": "e5bffc6ccbb8252b70b0db9806ba0576c551432e"
+    },
+    {
+      "path": "docs/presentations/slides/봉화지기_목업HTML_화면미리보기.pptx",
+      "category": "slides",
+      "bytes": 315478,
+      "slides": 1,
+      "sha256": "bf63a0145543183dfb35e5b6f84379ca4a000faa29b111fd10e589769b50babf",
+      "git_blob_sha": "b296f864d9adc418436038faf33b9965b5b11e61"
+    },
+    {
+      "path": "docs/presentations/templates/CODYSSEY_해커톤_빈템플릿.pptx",
+      "category": "templates",
+      "bytes": 67153,
+      "slides": 11,
+      "sha256": "b20b3083dbbd2e11b0dbd360d5a0d5e2f7b6dafb4463ced61f6545ac07e5fdc6",
+      "git_blob_sha": "217ab07974bc9e9f36b7ff768c43c6df5e60e1f2"
+    }
+  ]
+}
