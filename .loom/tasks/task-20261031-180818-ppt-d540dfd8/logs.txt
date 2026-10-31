@@ -3,3 +3,4 @@
 검증: node build-tech-stack.mjs /private/tmp/bonghwa-tech-stack — PPTX 1장·PNG 3200x1800.
 검증: node finalize-tech-stack.mjs /private/tmp/bonghwa-tech-stack — 패키지·크기·글꼴·재가져오기 통과, finding 0 / warning 0.
 검증: ZIP XML — 편집 가능 도형 40, 본문 이미지 0, 필수 문구·수치 포함. PNG 원본 크기 시각 검토와 문서 링크 검사 통과.
+[2026-10-31T18:11:53+00:00] agent=foreground task=task-20261031-180818-ppt-d540dfd8 편집 가능한 기술 스택 PPT 1장과 PNG 작성. 패키지·레이아웃·참조 글꼴·재가져오기 및 시각 검증 통과. 커밋 7018c0d.
