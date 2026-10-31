@@ -3,9 +3,9 @@
   "job_id": "job-20261031-002626-api-18805e8a",
   "title": "앱 설치 계정·세션과 목업 프로필·사전준비 API 구현",
   "description": "사용자의 완성 목업 앱 구현·실서버 검증·APK 배포 직접 지시에 따라 사설망 simulation 설치 계정 등록·토큰 갱신·로그아웃을 제공하고 목업 프로필 추가 필드와 별도 사전준비 카드·기본수칙 회피 분류를 구현한다. 실제0.2 계약과 앱 타입을 맞출 수 있도록 출력 스키마·예제를 고정한다.",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-10-31T15:34:20+00:00",
-  "updated_at": "2026-10-31T16:01:10+00:00",
+  "updated_at": "2026-10-31T16:01:28+00:00",
   "order_index": 5,
   "assigned_agent": "foreground",
   "depends_on": [],
@@ -27,11 +27,12 @@
   "last_error": "",
   "commit_refs": [
     "a954d985d4c770f681137b302b0ebf20e17e9634",
-    "85337a026e09f2fc034a4813ecec6381090569a2"
+    "85337a026e09f2fc034a4813ecec6381090569a2",
+    "97f7b6abbd0256862c8707010997dbf354e17b4c"
   ],
   "branch_name": "develop",
   "git_dirty": true,
-  "git_snapshot_captured_at": "2026-10-31T16:01:10+00:00",
+  "git_snapshot_captured_at": "2026-10-31T16:01:28+00:00",
   "artifacts": [
     ".loom/tasks/task-20261031-153420-api-1f993c9e/agent-events.jsonl",
     ".loom/tasks/task-20261031-153420-api-1f993c9e/artifacts.json",

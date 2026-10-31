@@ -30,5 +30,27 @@
     ],
     "captured_at": "2026-10-31T16:01:10+00:00"
   },
-  "after": null
+  "after": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "97f7b6abbd0256862c8707010997dbf354e17b4c",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/events.jsonl",
+      ".loom/job-runs/job-run-20261031-035204-job-20261031-002626-api-18805e8a-5ed2228f/job-run.json",
+      ".loom/jobs/job-20261031-002626-job-c9f9ff0d/notes.md",
+      ".loom/memory/docs-index.json",
+      ".loom/task-definitions/task-def-20261031-153420-api-422b5de4/task-definition.json",
+      ".loom/tasks/task-20261031-111807-task-9a960503/decision.md",
+      ".loom/tasks/task-20261031-111807-task-9a960503/logs.txt",
+      ".loom/tasks/task-20261031-111807-task-9a960503/result.md",
+      ".loom/tasks/task-20261031-111807-task-9a960503/troubleshooting.md",
+      "docs/V2/delivery/korea-wildfire-improvement.md"
+    ],
+    "untracked_files": [
+      "training/reports/kma-expanded-audit-20261101/kma-v4-distance-prior-20261031-final-v1/"
+    ],
+    "captured_at": "2026-10-31T16:01:28+00:00"
+  }
 }

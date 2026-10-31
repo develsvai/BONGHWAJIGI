@@ -1,40 +1,43 @@
 {
-  "status": "RUNNING",
+  "status": "DONE",
   "agent": "foreground",
   "mode": "foreground",
   "execution_surface": "foreground",
   "task_run_id": "task-run-20261031-153426-task-def-20261031-153420-api-422b5de4-1acab0e0",
-  "generated_at": "2026-10-31T16:01:10+00:00",
+  "generated_at": "2026-10-31T16:01:28+00:00",
   "artifacts": [
-    ".loom/tasks/task-20261031-153420-api-1f993c9e/prompt.md",
-    ".loom/tasks/task-20261031-153420-api-1f993c9e/context.md",
-    ".loom/tasks/task-20261031-153420-api-1f993c9e/previous-results.md",
-    ".loom/tasks/task-20261031-153420-api-1f993c9e/git-snapshot.json",
-    ".loom/tasks/task-20261031-153420-api-1f993c9e/result.md",
-    ".loom/tasks/task-20261031-153420-api-1f993c9e/decision.md",
-    ".loom/tasks/task-20261031-153420-api-1f993c9e/troubleshooting.md",
-    ".loom/tasks/task-20261031-153420-api-1f993c9e/logs.txt",
     ".loom/tasks/task-20261031-153420-api-1f993c9e/agent-events.jsonl",
-    ".loom/tasks/task-20261031-153420-api-1f993c9e/artifacts.json"
+    ".loom/tasks/task-20261031-153420-api-1f993c9e/artifacts.json",
+    ".loom/tasks/task-20261031-153420-api-1f993c9e/context.md",
+    ".loom/tasks/task-20261031-153420-api-1f993c9e/decision.md",
+    ".loom/tasks/task-20261031-153420-api-1f993c9e/git-snapshot.json",
+    ".loom/tasks/task-20261031-153420-api-1f993c9e/logs.txt",
+    ".loom/tasks/task-20261031-153420-api-1f993c9e/previous-results.md",
+    ".loom/tasks/task-20261031-153420-api-1f993c9e/prompt.md",
+    ".loom/tasks/task-20261031-153420-api-1f993c9e/result.md",
+    ".loom/tasks/task-20261031-153420-api-1f993c9e/troubleshooting.md",
+    "docs/V2/delivery/app-integration-api.md"
   ],
   "artifact_groups": {
     "user_outputs": [
-      ".loom/tasks/task-20261031-153420-api-1f993c9e/result.md",
       ".loom/tasks/task-20261031-153420-api-1f993c9e/decision.md",
+      ".loom/tasks/task-20261031-153420-api-1f993c9e/result.md",
       ".loom/tasks/task-20261031-153420-api-1f993c9e/troubleshooting.md"
     ],
     "execution_inputs": [
-      ".loom/tasks/task-20261031-153420-api-1f993c9e/prompt.md",
       ".loom/tasks/task-20261031-153420-api-1f993c9e/context.md",
-      ".loom/tasks/task-20261031-153420-api-1f993c9e/previous-results.md"
+      ".loom/tasks/task-20261031-153420-api-1f993c9e/previous-results.md",
+      ".loom/tasks/task-20261031-153420-api-1f993c9e/prompt.md"
     ],
     "execution_audit": [
-      ".loom/tasks/task-20261031-153420-api-1f993c9e/git-snapshot.json",
-      ".loom/tasks/task-20261031-153420-api-1f993c9e/logs.txt",
       ".loom/tasks/task-20261031-153420-api-1f993c9e/agent-events.jsonl",
-      ".loom/tasks/task-20261031-153420-api-1f993c9e/artifacts.json"
+      ".loom/tasks/task-20261031-153420-api-1f993c9e/artifacts.json",
+      ".loom/tasks/task-20261031-153420-api-1f993c9e/git-snapshot.json",
+      ".loom/tasks/task-20261031-153420-api-1f993c9e/logs.txt"
     ],
-    "work_products": []
+    "work_products": [
+      "docs/V2/delivery/app-integration-api.md"
+    ]
   },
   "contract_snapshot": {
     "schema_version": 1,
@@ -59,5 +62,8 @@
         ]
       }
     ]
-  }
+  },
+  "document_outputs": [
+    "docs/V2/delivery/app-integration-api.md"
+  ]
 }
