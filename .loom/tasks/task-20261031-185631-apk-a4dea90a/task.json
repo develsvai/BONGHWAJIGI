@@ -3,9 +3,9 @@
   "job_id": "job-20261031-002017-v2-fe3bfad0",
   "title": "음성대화·시연경로 APK 앱 서브모듈 고정과 신규 자원 문서 동기화",
   "description": "사용자가 요청한 앱 UI·음성대화·상태 확인·시연경로 후속 패치를 실제 검증한 최종 앱 커밋으로 고정한다. 앱 담당자의 최종 단말 QA와 원격 SHA를 받은 뒤 gitlink를 갱신하며 신규 음성인식·글꼴 자원 이용 내역을 실제 패키지 기준으로 기록한다.",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-10-31T18:56:31+00:00",
-  "updated_at": "2026-10-31T18:56:40+00:00",
+  "updated_at": "2026-10-31T19:25:52+00:00",
   "order_index": 27,
   "assigned_agent": "foreground",
   "depends_on": [
@@ -29,12 +29,26 @@
   "run_attempts": 0,
   "last_error": "",
   "commit_refs": [
-    "1b22581dd94e045332b2d6fd1bce3f8093e03d0a"
+    "1b22581dd94e045332b2d6fd1bce3f8093e03d0a",
+    "8708fe99003bda401d676d149f78fb0ec6d3061c"
   ],
   "branch_name": "develop",
   "git_dirty": true,
-  "git_snapshot_captured_at": "2026-10-31T18:56:40+00:00",
-  "artifacts": [],
+  "git_snapshot_captured_at": "2026-10-31T19:25:52+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-185631-apk-a4dea90a/agent-events.jsonl",
+    ".loom/tasks/task-20261031-185631-apk-a4dea90a/artifacts.json",
+    ".loom/tasks/task-20261031-185631-apk-a4dea90a/context.md",
+    ".loom/tasks/task-20261031-185631-apk-a4dea90a/decision.md",
+    ".loom/tasks/task-20261031-185631-apk-a4dea90a/git-snapshot.json",
+    ".loom/tasks/task-20261031-185631-apk-a4dea90a/logs.txt",
+    ".loom/tasks/task-20261031-185631-apk-a4dea90a/previous-results.md",
+    ".loom/tasks/task-20261031-185631-apk-a4dea90a/prompt.md",
+    ".loom/tasks/task-20261031-185631-apk-a4dea90a/result.md",
+    ".loom/tasks/task-20261031-185631-apk-a4dea90a/troubleshooting.md",
+    "docs/V2/delivery/external-resources-and-licenses.md",
+    "docs/V2/delivery/mobile-submodule-deployment.md"
+  ],
   "source_proposal_id": "",
   "source_prompt": ""
 }
