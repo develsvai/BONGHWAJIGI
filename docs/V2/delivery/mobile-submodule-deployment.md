@@ -69,6 +69,12 @@ Android SDK·JDK·서명키·공개 API 주소를 준비한 APK 빌드와 단말
 
 `python3 tools/check_mobile_source.py`가 원본 checkout과 새 clone에서 모두 통과했다. API 계약 SHA256은 `323536c7322fcfea70d0853633731de09b19a37479370769a41e7a9e42b72062`, 앱 package-lock SHA256은 `08b60136671bfe60a1a9c04480da64e1d9b27c49a9107867219f4d390b2dbf65`다. 이후 메인 커밋은 이 검증 결과와 Loom 완료 기록을 추가한다.
 
+## 새 checkout 재현 검증 — 0.2.1
+
+메인 `ad0d34dd67bf7bf21829fc1bffd291f06c35b4d2`를 정상 push한 뒤 실제 GitHub 원격을 새 디렉터리에 `--recurse-submodules --single-branch --branch develop`으로 clone했다. 앱은 `ced24463bb79a6ef5d3b532f6d2a48215ca84a56`에 자동 고정됐고 새 메인·앱 작업 트리 모두 clean이었다. 원본과 새 clone의 `python3 tools/check_mobile_source.py`가 모두 통과했다.
+
+API 계약 SHA256은 기존과 같은 `323536c7322fcfea70d0853633731de09b19a37479370769a41e7a9e42b72062`, 지도 앱 package-lock SHA256은 `5197246c8a946b42d613b36f0bc887ea2cb844d767378fb9c3baf5433934e419`다. 앱 QA 커밋과 실행 소스의 `src`, `app`, 앱 설정·빌드 스크립트·package/lock에는 차이가 없으며 실제 APK 파일 SHA256도 지도 빌드 manifest와 일치했다. 이후 메인 커밋은 이 재현 결과와 Loom 완료 기록을 추가한다.
+
 ## 다음 앱 버전 고정
 
 앱 변경은 앱 저장소에서 구현·검증·커밋·원격 push를 끝낸 뒤 새 SHA를 메인 저장소에 반영한다. 서브모듈의 로컬 미커밋 내용을 메인 커밋이 저장해 주지 않는다.

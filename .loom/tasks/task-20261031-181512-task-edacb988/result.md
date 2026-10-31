@@ -1,10 +1,10 @@
-# 준비 결과
+# 완료 결과
 
 지도 연결 앱에 대한 읽기 검토를 수행했다. 지역 관련성 문구의 최신 입력 확인과 simulation 모드의 좌표 표기 문제를 전달했고 앱 담당자가 보완했다. SDK2.9.1 초기화 콜백은 타일/인증 성공이 아니라는 점을 확인했다.
 
 ## 검증
 
-최종 앱 QA 커밋 ced24463bb79a6ef5d3b532f6d2a48215ca84a56을 origin/develop에서 fetch하고 detached checkout했다. manifest·실제 APK 해시·앱/서버 API 계약은 대조 통과했고 메인 커밋 뒤 새 재귀 checkout을 검증한다. 이번 준비 과정에서는 앱 코드·서버·GPU·학습을 수정하지 않았다.
+최종 앱 QA 커밋 ced24463bb79a6ef5d3b532f6d2a48215ca84a56을 origin/develop에서 fetch하고 detached checkout했다. manifest·실제 APK 해시·앱/서버 API 계약은 대조 통과했고 메인 원격 push 후 새 재귀 checkout까지 검증했다. 이번 준비 과정에서는 앱 코드·서버·GPU·학습을 수정하지 않았다.
 
 ## 지도 자원 근거
 
@@ -26,3 +26,9 @@
 - 실제 APK 파일SHA256과 manifest가5d4b2cb00adead0d2f6e2e1f51c76c32819c6b7b5095189549dd8fc0079aee25로 일치.
 - 앱/서버 OpenAPI 내용동일, SHA256323536c7322fcfea70d0853633731de09b19a37479370769a41e7a9e42b72062. lockfile SHA2565197246c8a946b42d613b36f0bc887ea2cb844d767378fb9c3baf5433934e419.
 - 앱 담당자 검증: TypeScript·45테스트·웹 export·native release 빌드·실제 단말 업데이트 설치. 타일/마커 캡처와 사용자 직접 영역 확인의 근거를 구분해 기록했다.
+
+## 원격 재현과 경계
+
+main ad0d34dd67bf7bf21829fc1bffd291f06c35b4d2 정상 push 후 /private/tmp/bonghwa-map-recursive-20261101-1829에 실제 GitHub를 재귀 clone했다. main/app 모두 clean, gitlink ced24463bb79a6ef5d3b532f6d2a48215ca84a56 자동 초기화, sourcechecker·OpenAPI·lockfile 해시 대조 통과. 문서 로컬 링크와 git diff check, Loom strict(6 Jobs/56 Tasks) 통과.
+
+다른 채팅의 학습·발표·라이선스 후속 자원은 작업 트리에 보존하고 이번 커밋에 포함하지 않았다. main 작업 트리 전체가 clean이라고 주장하지 않는다. 앱 코드·지도 키·서버 API·GPU·학습을 수정하지 않았다. 실제GPS·경로계산·FCM 실발신은 이번 지도 QA 범위 밖이다. 후속 UI/대화 요청은 별도 Task에서 진행한다.
