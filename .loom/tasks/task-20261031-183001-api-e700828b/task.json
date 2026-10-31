@@ -3,9 +3,9 @@
   "job_id": "job-20261031-002017-v2-fe3bfad0",
   "title": "정책 근거 대화·사용자 확인 상태 제안과 합성 시연 경로 API 구현 및 배포",
   "description": "사용자의 음성·텍스트 대화와 지도 경로 후속 요청에 필요한 서버 API를 구현한다. 텍스트 turn을 기존 정책과 Qwen에 연결하고 상태 제안은 사용자 확인 전 적용하지 않는다. mobile-fire 합성 경로를 서버 fixture로 제공하며 실제 안전 경로로 주장하지 않는다. 앱 구현과 최종 gitlink는 앱 담당자가 별도로 수행한다.",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-10-31T18:30:01+00:00",
-  "updated_at": "2026-10-31T18:30:05+00:00",
+  "updated_at": "2026-10-31T18:55:41+00:00",
   "order_index": 26,
   "assigned_agent": "foreground",
   "depends_on": [
@@ -28,12 +28,25 @@
   "run_attempts": 0,
   "last_error": "",
   "commit_refs": [
-    "e02c5312e5979282ad958cf1f81d5d3540fda11f"
+    "e02c5312e5979282ad958cf1f81d5d3540fda11f",
+    "cb02dcffde7186b60ed150b83b16485309ce6eaa"
   ],
   "branch_name": "develop",
   "git_dirty": true,
-  "git_snapshot_captured_at": "2026-10-31T18:30:05+00:00",
-  "artifacts": [],
+  "git_snapshot_captured_at": "2026-10-31T18:55:41+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-183001-api-e700828b/agent-events.jsonl",
+    ".loom/tasks/task-20261031-183001-api-e700828b/artifacts.json",
+    ".loom/tasks/task-20261031-183001-api-e700828b/context.md",
+    ".loom/tasks/task-20261031-183001-api-e700828b/decision.md",
+    ".loom/tasks/task-20261031-183001-api-e700828b/git-snapshot.json",
+    ".loom/tasks/task-20261031-183001-api-e700828b/logs.txt",
+    ".loom/tasks/task-20261031-183001-api-e700828b/previous-results.md",
+    ".loom/tasks/task-20261031-183001-api-e700828b/prompt.md",
+    ".loom/tasks/task-20261031-183001-api-e700828b/result.md",
+    ".loom/tasks/task-20261031-183001-api-e700828b/troubleshooting.md",
+    "docs/V2/delivery/mobile-dialogue-and-route.md"
+  ],
   "source_proposal_id": "",
   "source_prompt": ""
 }
