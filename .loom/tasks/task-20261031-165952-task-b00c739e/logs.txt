@@ -1,0 +1,5 @@
+[2026-10-31T17:01:12+00:00] agent=foreground task=task-20261031-165952-task-b00c739e Foreground task session started.
+작업: 원본 PNG 참조 → 기본 제공 image_gen 편집 → 연결선 수정 → 최종 PNG 및 프롬프트 저장.
+검증: bundled Python /private/tmp/bonghwa-check-original-style.py — 991x1587 RGB, SHA-256 일치, 문서 링크 5개 통과.
+검증: loom validate --strict — Workspace metadata validation OK, 6 jobs / 53 tasks / 53 definitions.
+검증: git diff --check -- 작업 전용 문서·프롬프트·task 디렉터리 — 통과.

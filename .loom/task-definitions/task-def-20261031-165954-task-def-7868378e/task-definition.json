@@ -1,0 +1,30 @@
+{
+  "id": "task-def-20261031-165954-task-def-7868378e",
+  "job_definition_id": "job-20261031-002017-v2-fe3bfad0",
+  "title": "원본 세로 아키텍처 스타일에 현행 변경만 반영한 이미지 작성",
+  "description": "사용자의 후속 직접 요청에 따라 이전 3장 발표 자료를 보존하고 제공된 세로 다이어그램의 배치·색상·사각형·긴급 경로 스타일을 유지한 한 장을 만든다.",
+  "created_at": "2026-10-31T16:59:53+00:00",
+  "updated_at": "2026-10-31T17:01:11+00:00",
+  "order_index": 21,
+  "legacy_task_id": "task-20261031-165952-task-b00c739e",
+  "depends_on": [],
+  "expected_output": "원본 스타일의 세로 아키텍처 PNG 한 장과 반영 내용 기록",
+  "done_condition": "원본을 직접 비교하고 K8s 수집 보류·시나리오 입력·독립 긴급 경로·고정 정책·예측 및 푸시 미연결을 정확히 표시하며 한글과 화살표를 시각 검증한다.",
+  "in_scope": "원본 이미지 참조 재작성, 현재 구조 변경 반영, 이미지 검증과 Loom 기록",
+  "out_of_scope": "기존 3장 변경·삭제, 실행 코드·학습·서버·앱 변경, 실제 예측과 푸시 연결",
+  "validation_hint": "원본 대비 스타일·한글·화살표·현재 상태 대조, 출력 해상도, Loom strict",
+  "required_docs": [
+    "docs/V2/delivery/presentation-architecture.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/original-style-architecture.md"
+  ],
+  "document_output_exceptions": [],
+  "default_agent": "foreground",
+  "context_policy_id": "",
+  "executor_policy_id": "",
+  "review_policy": "",
+  "source_proposal_id": "",
+  "source_prompt": ""
+}
