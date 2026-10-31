@@ -1,0 +1,233 @@
+{
+  "generated_at": "2026-10-31T01:34:34.096309+00:00",
+  "branch": "develop",
+  "task_id": "task-20261031-002627-task-5ce3742e",
+  "assessment": "검증 수행 및 미해결 운영 조건 기록; 전체 서비스 준비 완료는 아님",
+  "network": {
+    "user_confirmed_separate_vpns": true,
+    "probes": [
+      {
+        "source": "node/master",
+        "general_server_tcp22_connected": false,
+        "gpu_server_tcp22_connected": false
+      },
+      {
+        "source": "node/worker01",
+        "general_server_tcp22_connected": false,
+        "gpu_server_tcp22_connected": false
+      },
+      {
+        "source": "node/worker02",
+        "general_server_tcp22_connected": false,
+        "gpu_server_tcp22_connected": false
+      },
+      {
+        "source": "node/worker03",
+        "general_server_tcp22_connected": false,
+        "gpu_server_tcp22_connected": false
+      },
+      {
+        "source": "node/worker04",
+        "general_server_tcp22_connected": false,
+        "gpu_server_tcp22_connected": false
+      },
+      {
+        "source": "node/worker05",
+        "general_server_tcp22_connected": false,
+        "gpu_server_tcp22_connected": false
+      },
+      {
+        "source": "pod/worker01",
+        "general_server_tcp22_connected": false,
+        "gpu_server_tcp22_connected": false
+      },
+      {
+        "source": "pod/worker02",
+        "general_server_tcp22_connected": false,
+        "gpu_server_tcp22_connected": false
+      },
+      {
+        "source": "pod/worker03",
+        "general_server_tcp22_connected": false,
+        "gpu_server_tcp22_connected": false
+      },
+      {
+        "source": "pod/worker04",
+        "general_server_tcp22_connected": false,
+        "gpu_server_tcp22_connected": false
+      },
+      {
+        "source": "pod/worker05",
+        "general_server_tcp22_connected": false,
+        "gpu_server_tcp22_connected": false
+      }
+    ],
+    "gpu_to_general_tcp22": "성공",
+    "general_to_gpu_tcp22": "A0에서 성공; A2 재검사 못 함",
+    "ordinary_pod_service_dns_success_count": 5,
+    "public_dns_domains": [
+      "apis.data.go.kr",
+      "kosis.kr",
+      "apihub.kma.go.kr"
+    ],
+    "ordinary_pod_tcp443_success_count": 15,
+    "https_tls_validation": "worker-04 파드에서 세 도메인 모두 인증서 검증 성공",
+    "https_root_http_status": [
+      400,
+      302,
+      200
+    ]
+  },
+  "capacity": [
+    {
+      "node": "k8s-master",
+      "cpu_request_millicores": 950.0,
+      "cpu_request_headroom_millicores": 1050.0,
+      "memory_request_headroom_gib": 5.4,
+      "node_disk_available_gib": 30.23,
+      "regular_workload_candidate": false
+    },
+    {
+      "node": "k8s-worker-01",
+      "cpu_request_millicores": 1225.0,
+      "cpu_request_headroom_millicores": 775.0,
+      "memory_request_headroom_gib": 5.37,
+      "node_disk_available_gib": 53.67,
+      "regular_workload_candidate": true
+    },
+    {
+      "node": "k8s-worker-02",
+      "cpu_request_millicores": 1000.0,
+      "cpu_request_headroom_millicores": 1000.0,
+      "memory_request_headroom_gib": 6.26,
+      "node_disk_available_gib": 58.79,
+      "regular_workload_candidate": true
+    },
+    {
+      "node": "k8s-worker-03",
+      "cpu_request_millicores": 1050.0,
+      "cpu_request_headroom_millicores": 950.0,
+      "memory_request_headroom_gib": 6.17,
+      "node_disk_available_gib": 64.55,
+      "regular_workload_candidate": true
+    },
+    {
+      "node": "k8s-worker-04",
+      "cpu_request_millicores": 625.0,
+      "cpu_request_headroom_millicores": 1375.0,
+      "memory_request_headroom_gib": 6.45,
+      "node_disk_available_gib": 68.7,
+      "regular_workload_candidate": true
+    },
+    {
+      "node": "k8s-worker-05",
+      "cpu_request_millicores": 910.0,
+      "cpu_request_headroom_millicores": 1090.0,
+      "memory_request_headroom_gib": 6.24,
+      "node_disk_available_gib": 66.95,
+      "regular_workload_candidate": true
+    }
+  ],
+  "shared_nfs_filesystems": [
+    {
+      "storage_class": "nfs-storage",
+      "capacity_gib": 294.73,
+      "available_gib": 275.52
+    },
+    {
+      "storage_class": "nfs-bulk",
+      "capacity_gib": 491.08,
+      "available_gib": 461.59
+    }
+  ],
+  "dns": {
+    "master_resolver_nameservers": 4,
+    "event_applied_nameservers": 3,
+    "recent_coredns_error_or_servfail_count": 0,
+    "configuration_changed": false
+  },
+  "gpu": {
+    "device": "NVIDIA L4",
+    "count": 1,
+    "driver": "580.159.04",
+    "cuInit": 0,
+    "cuDeviceGetCount": 0,
+    "cuCtxCreate": 0,
+    "cuMemAlloc_1MiB": 0,
+    "cuMemset": 0,
+    "cuMemcpyDtoH": 0,
+    "pattern_match": true,
+    "cuMemFree": 0,
+    "cuCtxDestroy": 0,
+    "after_memory_used_mib": 0,
+    "actual_model_benchmark": "미실행",
+    "failed_services": [
+      "mlnx_interface_mgr@eth0.service",
+      "nvidia-fabricmanager.service"
+    ]
+  },
+  "general_server": {
+    "a0_internal_inspection": "2026-10-31 09:48 KST 성공",
+    "a2_internal_inspection": "첨부 자격 증명 판독 및 인증 실패로 재조회 못 함",
+    "credentials_saved": false
+  },
+  "other_validation_tasks": [
+    {
+      "code": "C4",
+      "task_id": "task-20261031-002629-task-2b63fdb8",
+      "status": "PENDING",
+      "reason": "실제 검증에 필요한 선행 산출물 미구현",
+      "prerequisites": [
+        "C3"
+      ],
+      "contract_validation": "통과",
+      "functional_validation": "미실행"
+    },
+    {
+      "code": "D3",
+      "task_id": "task-20261031-002629-qwen-617b8d58",
+      "status": "PENDING",
+      "reason": "실제 검증에 필요한 선행 산출물 미구현",
+      "prerequisites": [
+        "B2",
+        "D1",
+        "A2"
+      ],
+      "contract_validation": "통과",
+      "functional_validation": "미실행"
+    },
+    {
+      "code": "E2",
+      "task_id": "task-20261031-002631-api-0f38b4c1",
+      "status": "PENDING",
+      "reason": "실제 검증에 필요한 선행 산출물 미구현",
+      "prerequisites": [
+        "E1",
+        "D5",
+        "D6"
+      ],
+      "contract_validation": "통과",
+      "functional_validation": "미실행"
+    },
+    {
+      "code": "A4",
+      "task_id": "task-20261031-002631-task-df03e0e8",
+      "status": "PENDING",
+      "reason": "실제 검증에 필요한 선행 산출물 미구현",
+      "prerequisites": [
+        "B5",
+        "C5",
+        "D5",
+        "E2"
+      ],
+      "contract_validation": "통과",
+      "functional_validation": "미실행"
+    }
+  ],
+  "final_health": {
+    "checked_at": "2026-10-31T01:30:57.012977+00:00",
+    "ready_nodes": 6,
+    "running_not_ready": [],
+    "restart_changes": []
+  }
+}

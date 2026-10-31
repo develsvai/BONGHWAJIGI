@@ -24,8 +24,8 @@ Keep code identifiers, file paths, shell commands, URLs, commit hashes, and orig
 - Job ID: `job-20261031-002017-v2-fe3bfad0`
 - Title: V2 실행 기반과 통합 검증
 - Goal: V2를 설계 기준으로 MVP 범위와 실행 환경을 고정하고, 다중 출처 수집부터 개인별 안내까지 통합 검증한다. HeoNey는 참고이며 앱 구현은 제외하고 API 명세를 제공한다.
-- Status: `PENDING`
-- Required branch: `HeoNey`
+- Status: `RUNNING`
+- Required branch: `develop`
 - Task count: `5`
 
 ## Task
@@ -41,7 +41,7 @@ Keep code identifiers, file paths, shell commands, URLs, commit hashes, and orig
 - Document outputs: `docs/V2/delivery/environment-readiness.md`
 - Document output exceptions: -
 - Source proposal: `-`
-- Status: `PENDING`
+- Status: `RUNNING`
 - Agent: `foreground`
 - Order: `3`
 - Depends on: `task-20261031-002027-k8s-v2-a251b54e`
@@ -71,7 +71,7 @@ Keep code identifiers, file paths, shell commands, URLs, commit hashes, and orig
 
 ## Repository Rules
 
-- Work on `HeoNey` unless a stronger Team required policy says otherwise.
+- Work on `develop` unless a stronger Team required policy says otherwise.
 - Do not use destructive reset or checkout to discard user changes.
 - Do not revert changes you did not make.
 - Use the repository's existing style, tests, and local helper APIs.

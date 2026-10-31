@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-31T00:53:09+00:00",
+  "generated_at": "2026-10-31T01:35:11+00:00",
   "docs_paths": [
     "docs"
   ],
@@ -38,7 +38,7 @@
       "path": "docs/HeoNey/01-idea-history.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T08:21:41+09:00",
+      "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 14051
     },
     {
@@ -47,7 +47,7 @@
       "path": "docs/HeoNey/02-service-and-recommendation.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T08:21:41+09:00",
+      "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 6142
     },
     {
@@ -56,7 +56,7 @@
       "path": "docs/HeoNey/03-data-and-ai.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T08:21:41+09:00",
+      "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 6842
     },
     {
@@ -65,7 +65,7 @@
       "path": "docs/HeoNey/04-screens-and-flows.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T08:21:41+09:00",
+      "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 6394
     },
     {
@@ -74,7 +74,7 @@
       "path": "docs/HeoNey/README.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T08:21:41+09:00",
+      "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 4824
     },
     {
@@ -83,7 +83,7 @@
       "path": "docs/HeoNey/archive/conversation-01.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T08:21:41+09:00",
+      "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 30518
     },
     {
@@ -92,7 +92,7 @@
       "path": "docs/HeoNey/archive/conversation-02.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T08:21:41+09:00",
+      "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 35563
     },
     {
@@ -101,7 +101,7 @@
       "path": "docs/HeoNey/archive/conversation-03.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T08:21:41+09:00",
+      "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 44703
     },
     {
@@ -110,7 +110,7 @@
       "path": "docs/HeoNey/archive/conversation-04.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T08:21:41+09:00",
+      "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 42184
     },
     {
@@ -119,7 +119,7 @@
       "path": "docs/HeoNey/archive/conversation-05.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T08:21:41+09:00",
+      "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 39523
     },
     {
@@ -128,7 +128,7 @@
       "path": "docs/HeoNey/archive/conversation-06.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T08:21:41+09:00",
+      "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 38454
     },
     {
@@ -137,7 +137,7 @@
       "path": "docs/HeoNey/archive/conversation-07.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T08:21:41+09:00",
+      "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 64902
     },
     {
@@ -146,7 +146,7 @@
       "path": "docs/HeoNey/archive/manifest.json",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T08:21:41+09:00",
+      "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 18571
     },
     {
@@ -155,7 +155,7 @@
       "path": "docs/HeoNey/archive/progress-messages.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T08:21:41+09:00",
+      "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 6650
     },
     {
@@ -164,7 +164,7 @@
       "path": "docs/HeoNey/references.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T08:21:41+09:00",
+      "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 19954
     },
     {
@@ -182,7 +182,7 @@
       "path": "docs/V1/ai-and-infrastructure.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-30T20:45:47+09:00",
+      "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 8939
     },
     {
@@ -191,7 +191,7 @@
       "path": "docs/V1/architecture-and-data-flow.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-30T20:42:35+09:00",
+      "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 9460
     },
     {
@@ -200,7 +200,7 @@
       "path": "docs/V1/decisions-and-meeting-review.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-30T20:45:47+09:00",
+      "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 6461
     },
     {
@@ -209,7 +209,7 @@
       "path": "docs/V1/product-and-scenarios.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-30T20:42:35+09:00",
+      "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 6493
     },
     {
@@ -218,34 +218,34 @@
       "path": "docs/V1/ui-ux-handoff.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-30T20:45:47+09:00",
+      "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 6575
     },
     {
-      "id": "docs/V2/01_서비스_핵심_정리.md",
+      "id": "docs/V2/01_서비스_핵심_정리.md",
       "title": "재난 대응 비서 - 서비스 핵심 정리",
-      "path": "docs/V2/01_서비스_핵심_정리.md",
+      "path": "docs/V2/01_서비스_핵심_정리.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T08:23:26+09:00",
+      "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 14864
     },
     {
-      "id": "docs/V2/02_실시간_서버_배치도.md",
+      "id": "docs/V2/02_실시간_서버_배치도.md",
       "title": "재난 대응 비서 - 실시간 서버 배치도",
-      "path": "docs/V2/02_실시간_서버_배치도.md",
+      "path": "docs/V2/02_실시간_서버_배치도.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T08:23:26+09:00",
+      "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 4418
     },
     {
-      "id": "docs/V2/03_학습_검증_흐름도.md",
+      "id": "docs/V2/03_학습_검증_흐름도.md",
       "title": "재난 대응 비서 - 학습·검증 흐름도",
-      "path": "docs/V2/03_학습_검증_흐름도.md",
+      "path": "docs/V2/03_학습_검증_흐름도.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T08:23:26+09:00",
+      "updated_at": "2026-10-31T10:22:32+09:00",
       "size_bytes": 3446
     },
     {
@@ -254,8 +254,8 @@
       "path": "docs/V2/04-execution-backlog.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T09:52:53+09:00",
-      "size_bytes": 21951
+      "updated_at": "2026-10-31T10:34:34+09:00",
+      "size_bytes": 22214
     },
     {
       "id": "docs/V2/05-infrastructure-status.md",
@@ -263,8 +263,26 @@
       "path": "docs/V2/05-infrastructure-status.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T09:53:09+09:00",
-      "size_bytes": 9177
+      "updated_at": "2026-10-31T10:34:34+09:00",
+      "size_bytes": 9590
+    },
+    {
+      "id": "docs/V2/delivery/environment-readiness-evidence.json",
+      "title": "{",
+      "path": "docs/V2/delivery/environment-readiness-evidence.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T10:34:34+09:00",
+      "size_bytes": 6615
+    },
+    {
+      "id": "docs/V2/delivery/environment-readiness.md",
+      "title": "실행 환경 검증 결과",
+      "path": "docs/V2/delivery/environment-readiness.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T10:33:08+09:00",
+      "size_bytes": 14690
     }
   ],
   "path": "/Users/hongyongjae/Desktop/helloworld/BONGHWAJIGI/.loom/memory/docs-index.json"

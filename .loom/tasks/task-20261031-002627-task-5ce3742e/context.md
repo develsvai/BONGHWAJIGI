@@ -75,7 +75,7 @@
 - Agent provider: `claude`
 - Agent model: `adapter-default`
 - Reasoning effort: `high`
-- Required branch: `HeoNey`
+- Required branch: `develop`
 - Dirty branch switch: `blocked`
 - Commit policy: `manual`
 - Include `.loom` metadata in Git: `yes`
@@ -106,8 +106,8 @@
 - Document outputs: `docs/V2/delivery/environment-readiness.md`
 - Document output exceptions: -
 - Source proposal: `-`
-- Status: PENDING
-- Assigned agent: unassigned
+- Status: RUNNING
+- Assigned agent: foreground
 
 ## Advisor Source Prompt
 
@@ -161,6 +161,12 @@ No Advisor source prompt recorded for this Task.
 
 - Task: `task-20261031-002627-task-5ce3742e`
 - Tags: `user-request`, `validation`
+## 2026-10-31T01:22:32+00:00
+
+사용자가 검증을 계속하기 전에 develop과 HeoNey를 동기화하고 develop에서 실행하도록 지시했다. 원격 최신 상태 조회 결과 develop은 HeoNey의 조상이며 충돌 없는 fast-forward가 가능하다. 진행 중 A2 기록을 보존하고 실행 브랜치 정책을 develop으로 변경한 뒤 검증을 이어간다.
+
+- Task: `task-20261031-002627-task-5ce3742e`
+- Tags: `user-direction`, `branch`
 
 ## Context References
 
