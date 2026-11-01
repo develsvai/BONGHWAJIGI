@@ -1,0 +1,152 @@
+[
+  {
+    "source_id": "firms0",
+    "path": "data/raw/MODIS_C6_1_Global_7d.csv",
+    "source_url": "https://firms.modaps.eosdis.nasa.gov/data/active_fire/MODIS_C6_1_Global_7d.csv",
+    "request_started_at_utc": "2026-10-30T10:28:55.810723+00:00",
+    "http": 200,
+    "bytes": 5733539,
+    "sha256": "b442483af069d153930bfe6e5db0b8cc1eac2f1a4bc4678aaa5141047147a17d",
+    "note": "보관 응답. HTTP 성공과 데이터 유효성은 별도 검사."
+  },
+  {
+    "source_id": "firms1",
+    "path": "data/raw/SUOMI_VIIRS_C2_Global_7d.csv",
+    "source_url": "https://firms.modaps.eosdis.nasa.gov/data/active_fire/SUOMI_VIIRS_C2_Global_7d.csv",
+    "request_started_at_utc": "2026-10-30T10:28:55.810723+00:00",
+    "http": 200,
+    "bytes": 33623500,
+    "sha256": "05f9a16bd1e0bb60f3971f4f031d4df8a6ef323f84afaa8c2938042bb0473192",
+    "note": "보관 응답. HTTP 성공과 데이터 유효성은 별도 검사."
+  },
+  {
+    "source_id": "firms2",
+    "path": "data/raw/J1_VIIRS_C2_Global_7d.csv",
+    "source_url": "https://firms.modaps.eosdis.nasa.gov/data/active_fire/J1_VIIRS_C2_Global_7d.csv",
+    "request_started_at_utc": "2026-10-30T10:28:55.810723+00:00",
+    "http": 200,
+    "bytes": 35542396,
+    "sha256": "e58ec2fb74055ca2d7bcb8c780c8da5443fb8b153113945febc33bc71c2be80a",
+    "note": "보관 응답. HTTP 성공과 데이터 유효성은 별도 검사."
+  },
+  {
+    "source_id": "firms3",
+    "path": "data/raw/J2_VIIRS_C2_Global_7d.csv",
+    "source_url": "https://firms.modaps.eosdis.nasa.gov/data/active_fire/J2_VIIRS_C2_Global_7d.csv",
+    "request_started_at_utc": "2026-10-30T10:28:55.810723+00:00",
+    "http": 200,
+    "bytes": 33114881,
+    "sha256": "cf39edd50eda5c2242eb525cc1dc2326ebd3e024b25a13281d7357c5831a34a9",
+    "note": "보관 응답. HTTP 성공과 데이터 유효성은 별도 검사."
+  },
+  {
+    "source_id": "sentinel1",
+    "path": "data/raw/sentinel1_catalog.json",
+    "source_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?%24filter=Collection%2FName+eq+%27SENTINEL-1%27+and+OData.CSC.Intersects%28area%3Dgeography%27SRID%3D4326%3BPOLYGON%28%28127.04+37.46%2C127.09+37.46%2C127.09+37.50%2C127.04+37.50%2C127.04+37.46%29%29%27%29+and+ContentDate%2FStart+ge+2026-10-25T00%3A00%3A00.000Z+and+ContentDate%2FStart+lt+2026-10-30T00%3A00%3A00.000Z&%24top=100&%24count=true&%24expand=Attributes&%24orderby=ContentDate%2FStart+asc",
+    "request_started_at_utc": "2026-10-30T10:28:55.810723+00:00",
+    "http": 200,
+    "bytes": 30917,
+    "sha256": "7c0d01bb2c6cb762f27c00b195a35f4abf51761b97c635021ff7547461f5571a",
+    "note": "보관 응답. HTTP 성공과 데이터 유효성은 별도 검사."
+  },
+  {
+    "source_id": "sentinel2",
+    "path": "data/raw/sentinel2_catalog.json",
+    "source_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?%24filter=Collection%2FName+eq+%27SENTINEL-2%27+and+OData.CSC.Intersects%28area%3Dgeography%27SRID%3D4326%3BPOLYGON%28%28127.04+37.46%2C127.09+37.46%2C127.09+37.50%2C127.04+37.50%2C127.04+37.46%29%29%27%29+and+ContentDate%2FStart+ge+2026-10-25T00%3A00%3A00.000Z+and+ContentDate%2FStart+lt+2026-10-30T00%3A00%3A00.000Z&%24top=100&%24count=true&%24expand=Attributes&%24orderby=ContentDate%2FStart+asc",
+    "request_started_at_utc": "2026-10-30T10:28:55.810723+00:00",
+    "http": 200,
+    "bytes": 8093,
+    "sha256": "6d22103815aa9e23368dcec7a18f439899d9c7b9c43fa1e0e4ef0c035c0764de",
+    "note": "보관 응답. HTTP 성공과 데이터 유효성은 별도 검사."
+  },
+  {
+    "source_id": "usgs",
+    "path": "data/raw/usgs_query.json",
+    "source_url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2026-10-27&endtime=2026-10-29&minlatitude=33&maxlatitude=39&minlongitude=124&maxlongitude=132",
+    "request_started_at_utc": "2026-10-30T10:28:55.810723+00:00",
+    "http": 200,
+    "bytes": 321,
+    "sha256": "feac8a98e7607094b22a7123e4dca826bcb30d925be2b7a39dc15eb9320e71aa",
+    "note": "보관 응답. HTTP 성공과 데이터 유효성은 별도 검사."
+  },
+  {
+    "source_id": "gdacs",
+    "path": "data/raw/gdacs_rss.xml",
+    "source_url": "https://www.gdacs.org/xml/rss.xml",
+    "request_started_at_utc": "2026-10-30T10:28:55.810723+00:00",
+    "http": 200,
+    "bytes": 830917,
+    "sha256": "96830130498dcb793e0409d5454fcfeb12e30a174d1edbb16b7adb01abbfeb3e",
+    "note": "보관 응답. HTTP 성공과 데이터 유효성은 별도 검사."
+  },
+  {
+    "source_id": "kma_daily",
+    "path": "data/raw/kma_seoul_daily.html",
+    "source_url": "https://www.weather.go.kr/w/obs-climate/land/past-obs/obs-by-day.do?stn=108&yy=2026&mm=10&obs=1",
+    "request_started_at_utc": "2026-10-30T10:29:50.211209+00:00",
+    "http": 200,
+    "bytes": 109343,
+    "sha256": "ac31c280f4dcc5311f27fa58350e0acd82a66211b6bb25cf3b0f50db85701e43",
+    "note": "보관 응답. HTTP 성공과 데이터 유효성은 별도 검사."
+  },
+  {
+    "source_id": "gangnam",
+    "path": "data/raw/gangnam_release.html",
+    "source_url": "https://gangnam.go.kr/board/B_000031/1075546/view.do?mid=ID01_0313",
+    "request_started_at_utc": "2026-10-30T10:28:14.980Z",
+    "http": 200,
+    "bytes": 462750,
+    "sha256": "ddb576bd66b8537cbaf113872708b94b80bfd31113e35eaeebc29c513f6db2fa",
+    "note": "보관 응답. HTTP 성공과 데이터 유효성은 별도 검사."
+  },
+  {
+    "source_id": "seoul_release",
+    "path": "data/raw/seoul_release.html",
+    "source_url": "https://www.seoul.go.kr/news/news_report.do?nttNo=468977",
+    "request_started_at_utc": "2026-10-30T10:30:43.950664+00:00",
+    "http": 200,
+    "bytes": 92919,
+    "sha256": "1d2af2503eeceddc185fe7dd43b55d9d86a5582871fcd8f1ad15041158e32fc5",
+    "note": "보관 응답. HTTP 성공과 데이터 유효성은 별도 검사."
+  },
+  {
+    "source_id": "safety_api",
+    "path": "data/raw/safety_api_spec.html",
+    "source_url": "https://www.safetydata.go.kr/disaster-data/apiDataTable?dataSn=228",
+    "request_started_at_utc": "2026-10-30T10:30:43.949228+00:00",
+    "http": 200,
+    "bytes": 32587,
+    "sha256": "e577ecd25e5c91c8d45f49d4643bef05d366e90ec58422074ac8688a32b5528c",
+    "note": "보관 응답. HTTP 성공과 데이터 유효성은 별도 검사."
+  },
+  {
+    "source_id": "safety_meta",
+    "path": "data/raw/safety_metadata.html",
+    "source_url": "https://www.safetydata.go.kr/disaster-data/view?dataSn=228",
+    "request_started_at_utc": "2026-10-30T10:29:50.213180+00:00",
+    "http": 200,
+    "bytes": 68166,
+    "sha256": "b1da5ccefaa7a70b7e002e5699d21c80d2dc9bb5051d5848bf0c02c6d2765b8d",
+    "note": "보관 응답. HTTP 성공과 데이터 유효성은 별도 검사."
+  },
+  {
+    "source_id": "asos",
+    "path": "data/raw/asos_auth_error.json",
+    "source_url": "https://apis.data.go.kr/1360000/AsosHourlyInfoService/getWthrDataList?dataType=JSON&numOfRows=100&pageNo=1&dataCd=ASOS&dateCd=HR&startDt=20261027&startHh=00&endDt=20261028&endHh=23&stnIds=108",
+    "request_started_at_utc": "2026-10-30T10:28:15.062Z",
+    "http": 401,
+    "bytes": 186,
+    "sha256": "590786cb9c69b91f8bf8a7ffea2eb86317992d429be2571373783cc5caf80780",
+    "note": "보관 응답. HTTP 성공과 데이터 유효성은 별도 검사."
+  },
+  {
+    "source_id": "asos_meta",
+    "path": "data/raw/asos_metadata.html",
+    "source_url": "https://www.data.go.kr/data/15057210/openapi.do",
+    "request_started_at_utc": "2026-10-30T10:29:50.213498+00:00",
+    "http": 200,
+    "bytes": 218318,
+    "sha256": "1ae6ebd9fc400bcb74f5aadc7070f6749586685efb5390bb6eec7c1a4aef60f9",
+    "note": "보관 응답. HTTP 성공과 데이터 유효성은 별도 검사."
+  }
+]
