@@ -1,0 +1,138 @@
+{
+  "simulation_only": true,
+  "operational_use": false,
+  "probability": null,
+  "source_asof_verified": false,
+  "event_id": "walker_2019",
+  "split": "train",
+  "requests": [
+    {
+      "name": "CC-service.json",
+      "role": "service_metadata",
+      "product": "CC",
+      "url": "https://edcintl.cr.usgs.gov/arcgis/rest/services/Landfire_LF2016/LF2016_CC_CONUS/ImageServer?f=pjson"
+    },
+    {
+      "name": "CC-100m.tif",
+      "role": "raw_canopy_grid",
+      "product": "CC",
+      "url": "https://edcintl.cr.usgs.gov/arcgis/rest/services/Landfire_LF2016/LF2016_CC_CONUS/ImageServer/exportImage?bbox=677100%2C4414500%2C718200%2C4456400&bboxSR=32610&imageSR=32610&size=411%2C419&format=tiff&pixelType=S16&interpolation=RSP_NearestNeighbor&renderingRule=%7B%22rasterFunction%22%3A%22None%22%7D&f=image",
+      "request_parameters": {
+        "bbox": "677100,4414500,718200,4456400",
+        "bboxSR": "32610",
+        "imageSR": "32610",
+        "size": "411,419",
+        "format": "tiff",
+        "pixelType": "S16",
+        "interpolation": "RSP_NearestNeighbor",
+        "renderingRule": "{\"rasterFunction\":\"None\"}",
+        "f": "image"
+      }
+    },
+    {
+      "name": "CC-units.html",
+      "role": "official_product_unit_documentation",
+      "product": "CC",
+      "url": "https://www.landfire.gov/fuel/cc"
+    },
+    {
+      "name": "CH-service.json",
+      "role": "service_metadata",
+      "product": "CH",
+      "url": "https://edcintl.cr.usgs.gov/arcgis/rest/services/Landfire_LF2016/LF2016_CH_CONUS/ImageServer?f=pjson"
+    },
+    {
+      "name": "CH-100m.tif",
+      "role": "raw_canopy_grid",
+      "product": "CH",
+      "url": "https://edcintl.cr.usgs.gov/arcgis/rest/services/Landfire_LF2016/LF2016_CH_CONUS/ImageServer/exportImage?bbox=677100%2C4414500%2C718200%2C4456400&bboxSR=32610&imageSR=32610&size=411%2C419&format=tiff&pixelType=S16&interpolation=RSP_NearestNeighbor&renderingRule=%7B%22rasterFunction%22%3A%22None%22%7D&f=image",
+      "request_parameters": {
+        "bbox": "677100,4414500,718200,4456400",
+        "bboxSR": "32610",
+        "imageSR": "32610",
+        "size": "411,419",
+        "format": "tiff",
+        "pixelType": "S16",
+        "interpolation": "RSP_NearestNeighbor",
+        "renderingRule": "{\"rasterFunction\":\"None\"}",
+        "f": "image"
+      }
+    },
+    {
+      "name": "CH-units.html",
+      "role": "official_product_unit_documentation",
+      "product": "CH",
+      "url": "https://www.landfire.gov/fuel/ch"
+    },
+    {
+      "name": "CBH-service.json",
+      "role": "service_metadata",
+      "product": "CBH",
+      "url": "https://edcintl.cr.usgs.gov/arcgis/rest/services/Landfire_LF2016/LF2016_CBH_CONUS/ImageServer?f=pjson"
+    },
+    {
+      "name": "CBH-100m.tif",
+      "role": "raw_canopy_grid",
+      "product": "CBH",
+      "url": "https://edcintl.cr.usgs.gov/arcgis/rest/services/Landfire_LF2016/LF2016_CBH_CONUS/ImageServer/exportImage?bbox=677100%2C4414500%2C718200%2C4456400&bboxSR=32610&imageSR=32610&size=411%2C419&format=tiff&pixelType=S16&interpolation=RSP_NearestNeighbor&renderingRule=%7B%22rasterFunction%22%3A%22None%22%7D&f=image",
+      "request_parameters": {
+        "bbox": "677100,4414500,718200,4456400",
+        "bboxSR": "32610",
+        "imageSR": "32610",
+        "size": "411,419",
+        "format": "tiff",
+        "pixelType": "S16",
+        "interpolation": "RSP_NearestNeighbor",
+        "renderingRule": "{\"rasterFunction\":\"None\"}",
+        "f": "image"
+      }
+    },
+    {
+      "name": "CBH-units.html",
+      "role": "official_product_unit_documentation",
+      "product": "CBH",
+      "url": "https://www.landfire.gov/fuel/cbh"
+    },
+    {
+      "name": "CBD-service.json",
+      "role": "service_metadata",
+      "product": "CBD",
+      "url": "https://edcintl.cr.usgs.gov/arcgis/rest/services/Landfire_LF2016/LF2016_CBD_CONUS/ImageServer?f=pjson"
+    },
+    {
+      "name": "CBD-100m.tif",
+      "role": "raw_canopy_grid",
+      "product": "CBD",
+      "url": "https://edcintl.cr.usgs.gov/arcgis/rest/services/Landfire_LF2016/LF2016_CBD_CONUS/ImageServer/exportImage?bbox=677100%2C4414500%2C718200%2C4456400&bboxSR=32610&imageSR=32610&size=411%2C419&format=tiff&pixelType=S16&interpolation=RSP_NearestNeighbor&renderingRule=%7B%22rasterFunction%22%3A%22None%22%7D&f=image",
+      "request_parameters": {
+        "bbox": "677100,4414500,718200,4456400",
+        "bboxSR": "32610",
+        "imageSR": "32610",
+        "size": "411,419",
+        "format": "tiff",
+        "pixelType": "S16",
+        "interpolation": "RSP_NearestNeighbor",
+        "renderingRule": "{\"rasterFunction\":\"None\"}",
+        "f": "image"
+      }
+    },
+    {
+      "name": "CBD-units.html",
+      "role": "official_product_unit_documentation",
+      "product": "CBD",
+      "url": "https://www.landfire.gov/fuel/cbd"
+    }
+  ],
+  "max_requests": 12,
+  "max_bytes_per_request": 10000000,
+  "automatic_retries": 0,
+  "license": {
+    "name": "Public domain USGS/LANDFIRE data; source attribution retained",
+    "scope": "Published LANDFIRE raster products; not a license for ELMFIRE software",
+    "provider_evidence_url": "https://landfire.gov/helpdesk",
+    "provider_evidence_record": "11081 (2024-02-28): LF data/maps/graphics are public domain",
+    "usgs_policy_url": "https://pubs.usgs.gov/documentation/faq",
+    "citation": "LANDFIRE 2016 Remap, Forest Canopy Cover/Height/Base Height/Bulk Density, USGS/USFS"
+  },
+  "created_at_utc": "2026-10-31T17:51:49.914295+00:00"
+}

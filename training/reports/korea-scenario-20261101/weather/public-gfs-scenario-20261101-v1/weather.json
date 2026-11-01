@@ -1,0 +1,169 @@
+{
+  "schema_version": "elmfire_open_meteo_point_weather_v1",
+  "source": "OpenMeteo_GFS",
+  "status": "ready",
+  "point": {
+    "longitude": 129.3,
+    "latitude": 37.0
+  },
+  "simulation_start_time_utc": "2026-10-31T18:00:00+00:00",
+  "retrieved_at_utc": "2026-10-31T17:03:28.684683+00:00",
+  "forecast_issue_time_utc": null,
+  "forecast_issue_time_known": false,
+  "issue_time_note": "Open-Meteo response does not identify the underlying GFS issue cycle; retrieval time is not a forecast issue time",
+  "wind_axis_basis_verified": true,
+  "wind_direction_basis": "true_north_clockwise_from",
+  "wind_height_m": 10,
+  "wind_speed_unit": "m/s",
+  "wind_direction_unit": "degree",
+  "axis_verification": {
+    "artifact_path": "axis-evidence.json",
+    "sha256": "6ae8ae6d440ec989ad5708968954c4e95c73fe6c8bfb984944d1da0df5db2d6a",
+    "method": "Official Open-Meteo pinned source review: GFS regular latitude-longitude grid and 10m UGRD/VGRD mapping; DerivedMapping windDirection; MeteorologyTests cardinal FROM-direction examples. API units and ordered times are separately checked on each response."
+  },
+  "axis_verification_limitations": [
+    "The live API does not disclose its software revision or original forecast issuance cycle.",
+    "No live NOAA original U/V or GRIB rotation flags were compared in this fallback.",
+    "Public GFS spatial resolution cannot resolve local terrain/fire-induced winds; one point is treated as uniform over the scenario domain.",
+    "This evidence does not establish the wind axes of KMA KIML; KMA component direction remains unverified.",
+    "Non-commercial research use of the free API only. Data CC-BY-4.0; underlying NOAA GFS. No provider endorsement.",
+    "This convention check is not wildfire accuracy validation."
+  ],
+  "provenance": [
+    {
+      "role": "open_meteo_response",
+      "artifact_path": "response.json",
+      "sha256": "fc66f60990887a046aa8f877e679bfa0d721a30b8ad21bbe1b75d7e05ce6a74f",
+      "retrieved_at_utc": "2026-10-31T17:03:28.684683+00:00",
+      "source_url": "https://api.open-meteo.com/v1/gfs?latitude=37.0&longitude=129.3&models=gfs_global&hourly=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m%2Cwind_direction_10m%2Cprecipitation&temperature_unit=celsius&wind_speed_unit=ms&precipitation_unit=mm&timezone=UTC&timeformat=iso8601&start_hour=2026-10-31T18%3A00&end_hour=2026-11-01T00%3A00&cell_selection=nearest"
+    },
+    {
+      "role": "open_meteo_request_receipt",
+      "artifact_path": "receipt.json",
+      "sha256": "77105264847982860990cee04be043d8e05e020c4d15fd04195daea61b6aad8f",
+      "retrieved_at_utc": "2026-10-31T17:03:28.684683+00:00",
+      "source_url": "https://api.open-meteo.com/v1/gfs?latitude=37.0&longitude=129.3&models=gfs_global&hourly=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m%2Cwind_direction_10m%2Cprecipitation&temperature_unit=celsius&wind_speed_unit=ms&precipitation_unit=mm&timezone=UTC&timeformat=iso8601&start_hour=2026-10-31T18%3A00&end_hour=2026-11-01T00%3A00&cell_selection=nearest"
+    },
+    {
+      "role": "axis_verification_evidence",
+      "artifact_path": "axis-evidence.json",
+      "sha256": "6ae8ae6d440ec989ad5708968954c4e95c73fe6c8bfb984944d1da0df5db2d6a",
+      "retrieved_at_utc": "2026-10-31T17:02:06.716595+00:00",
+      "source_url": "https://github.com/open-meteo/open-meteo/tree/2060d804a65d584ad546cfa246020c64f34695bd"
+    }
+  ],
+  "requested_model": "gfs_global",
+  "endpoint": "https://api.open-meteo.com/v1/gfs",
+  "hours": [
+    {
+      "valid_time_utc": "2026-10-31T18:00:00+00:00",
+      "wind_speed_m_s": 3.08,
+      "wind_direction_deg": 257,
+      "temperature_2m_c": 5.5,
+      "relative_humidity_2m_percent": 42,
+      "precipitation_mm": 0.0,
+      "precipitation_interval_start_utc": "2026-10-31T17:00:00+00:00",
+      "forecast_issue_time_utc": null,
+      "hours_after_retrieval": 0.9420320325,
+      "observed": false
+    },
+    {
+      "valid_time_utc": "2026-10-31T19:00:00+00:00",
+      "wind_speed_m_s": 3.11,
+      "wind_direction_deg": 266,
+      "temperature_2m_c": 5.7,
+      "relative_humidity_2m_percent": 41,
+      "precipitation_mm": 0.0,
+      "precipitation_interval_start_utc": "2026-10-31T18:00:00+00:00",
+      "forecast_issue_time_utc": null,
+      "hours_after_retrieval": 1.9420320324999998,
+      "observed": false
+    },
+    {
+      "valid_time_utc": "2026-10-31T20:00:00+00:00",
+      "wind_speed_m_s": 3.22,
+      "wind_direction_deg": 263,
+      "temperature_2m_c": 6.3,
+      "relative_humidity_2m_percent": 40,
+      "precipitation_mm": 0.0,
+      "precipitation_interval_start_utc": "2026-10-31T19:00:00+00:00",
+      "forecast_issue_time_utc": null,
+      "hours_after_retrieval": 2.9420320325000002,
+      "observed": false
+    },
+    {
+      "valid_time_utc": "2026-10-31T21:00:00+00:00",
+      "wind_speed_m_s": 3.42,
+      "wind_direction_deg": 263,
+      "temperature_2m_c": 6.3,
+      "relative_humidity_2m_percent": 41,
+      "precipitation_mm": 0.0,
+      "precipitation_interval_start_utc": "2026-10-31T20:00:00+00:00",
+      "forecast_issue_time_utc": null,
+      "hours_after_retrieval": 3.9420320325000002,
+      "observed": false
+    },
+    {
+      "valid_time_utc": "2026-10-31T22:00:00+00:00",
+      "wind_speed_m_s": 3.28,
+      "wind_direction_deg": 258,
+      "temperature_2m_c": 6.5,
+      "relative_humidity_2m_percent": 42,
+      "precipitation_mm": 0.0,
+      "precipitation_interval_start_utc": "2026-10-31T21:00:00+00:00",
+      "forecast_issue_time_utc": null,
+      "hours_after_retrieval": 4.9420320325,
+      "observed": false
+    },
+    {
+      "valid_time_utc": "2026-10-31T23:00:00+00:00",
+      "wind_speed_m_s": 3.04,
+      "wind_direction_deg": 261,
+      "temperature_2m_c": 7.2,
+      "relative_humidity_2m_percent": 45,
+      "precipitation_mm": 0.0,
+      "precipitation_interval_start_utc": "2026-10-31T22:00:00+00:00",
+      "forecast_issue_time_utc": null,
+      "hours_after_retrieval": 5.9420320325,
+      "observed": false
+    },
+    {
+      "valid_time_utc": "2026-11-01T00:00:00+00:00",
+      "wind_speed_m_s": 2.42,
+      "wind_direction_deg": 277,
+      "temperature_2m_c": 7.7,
+      "relative_humidity_2m_percent": 47,
+      "precipitation_mm": 0.0,
+      "precipitation_interval_start_utc": "2026-10-31T23:00:00+00:00",
+      "forecast_issue_time_utc": null,
+      "hours_after_retrieval": 6.9420320325,
+      "observed": false
+    }
+  ],
+  "returned_grid_point": {
+    "longitude": 129.25781,
+    "latitude": 36.960625
+  },
+  "observed": false,
+  "operational_use": false,
+  "historical_issue_time_availability_proven": false,
+  "fire_labels_requested": false,
+  "holdout_2025_accessed": false,
+  "kma_data_combined": false,
+  "personal_risk_probability": null,
+  "data_licence": "CC-BY-4.0",
+  "licence_url": "https://open-meteo.com/en/licence",
+  "attribution": "Weather data by Open-Meteo.com; underlying model NOAA GFS",
+  "service_terms_url": "https://open-meteo.com/en/terms",
+  "service_terms_note": "Free API is non-commercial; a paid plan is required commercially",
+  "documentation_url": "https://open-meteo.com/en/docs/gfs-api",
+  "limitations": [
+    "Single GFS grid-point forecast is applied uniformly to the scenario domain",
+    "Global forecast cannot resolve local terrain, mountain gusts or fire-induced winds",
+    "2015 land cover or assumed fuels do not acquire current moisture from this API",
+    "Seven t0..t6 hourly knots define a six-hour scenario, not seven hours of duration",
+    "Provider wind-axis evidence does not prove the deployed server software revision",
+    "Future retrieval checks do not establish a known underlying forecast issue cycle",
+    "Weather input alone does not establish fire approach or personal harm probability"
+  ]
+}

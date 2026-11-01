@@ -1,0 +1,280 @@
+{
+ "currentVersion": 11.1,
+ "serviceDescription": "Landfire_LF2016/LF2016_CH_CONUS",
+ "name": "Landfire_LF2016/LF2016_CH_CONUS",
+ "description": "",
+ "extent": {
+  "xmin": -2362425,
+  "ymin": 258915,
+  "xmax": 2263815,
+  "ymax": 3177435,
+  "spatialReference": {
+   "wkid": 5070,
+   "latestWkid": 5070
+  }
+ },
+ "initialExtent": {
+  "xmin": -2362425,
+  "ymin": 258915,
+  "xmax": 2263815,
+  "ymax": 3177435,
+  "spatialReference": {
+   "wkid": 5070,
+   "latestWkid": 5070
+  }
+ },
+ "fullExtent": {
+  "xmin": -2362425,
+  "ymin": 258915,
+  "xmax": 2263815,
+  "ymax": 3177435,
+  "spatialReference": {
+   "wkid": 5070,
+   "latestWkid": 5070
+  }
+ },
+ "sortableFields": "",
+ "bandCount": 1,
+ "pixelType": "S16",
+ "minValues": [
+  0
+ ],
+ "maxValues": [
+  510
+ ],
+ "meanValues": [
+  58.81561026019248
+ ],
+ "stdvValues": [
+  92.15928229029404
+ ],
+ "hasMultidimensions": false,
+ "pixelSizeX": 30,
+ "pixelSizeY": 30,
+ "datasetFormat": "AMD",
+ "uncompressedSize": 30003942144,
+ "blockWidth": 2048,
+ "blockHeight": 256,
+ "compressionType": "None",
+ "bandNames": [
+  "Band_1"
+ ],
+ "allowCopy": true,
+ "allowAnalysis": true,
+ "itemAccess": false,
+ "noDataValue": -9999,
+ "noDataValues": [
+  -9999
+ ],
+ "minPixelSize": 0,
+ "maxPixelSize": 0,
+ "copyrightText": "",
+ "serviceDataType": "esriImageServiceDataTypeThematic",
+ "serviceSourceType": "esriImageServiceSourceTypeMosaicDataset",
+ "objectIdField": "OBJECTID",
+ "fields": [
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "domain": null
+  },
+  {
+   "name": "Shape",
+   "type": "esriFieldTypeGeometry",
+   "alias": "Shape",
+   "domain": null
+  },
+  {
+   "name": "Name",
+   "type": "esriFieldTypeString",
+   "alias": "Name",
+   "domain": null,
+   "length": 200
+  },
+  {
+   "name": "MinPS",
+   "type": "esriFieldTypeDouble",
+   "alias": "MinPS",
+   "domain": null
+  },
+  {
+   "name": "MaxPS",
+   "type": "esriFieldTypeDouble",
+   "alias": "MaxPS",
+   "domain": null
+  },
+  {
+   "name": "LowPS",
+   "type": "esriFieldTypeDouble",
+   "alias": "LowPS",
+   "domain": null
+  },
+  {
+   "name": "HighPS",
+   "type": "esriFieldTypeDouble",
+   "alias": "HighPS",
+   "domain": null
+  },
+  {
+   "name": "Category",
+   "type": "esriFieldTypeInteger",
+   "alias": "Category",
+   "domain": {
+    "type": "codedValue",
+    "name": "MosaicCatalogItemCategoryDomain",
+    "description": "Catalog item categories.",
+    "codedValues": [
+     {
+      "name": "Unknown",
+      "code": 0
+     },
+     {
+      "name": "Primary",
+      "code": 1
+     },
+     {
+      "name": "Overview",
+      "code": 2
+     },
+     {
+      "name": "Unprocessed Overview",
+      "code": 3
+     },
+     {
+      "name": "Partial Overview",
+      "code": 4
+     },
+     {
+      "name": "Inactive",
+      "code": 5
+     },
+     {
+      "name": "Uploaded",
+      "code": 253
+     },
+     {
+      "name": "Incomplete",
+      "code": 254
+     },
+     {
+      "name": "Custom",
+      "code": 255
+     }
+    ],
+    "mergePolicy": "esriMPTDefaultValue",
+    "splitPolicy": "esriSPTDefaultValue"
+   }
+  },
+  {
+   "name": "Tag",
+   "type": "esriFieldTypeString",
+   "alias": "Tag",
+   "domain": null,
+   "length": 100
+  },
+  {
+   "name": "GroupName",
+   "type": "esriFieldTypeString",
+   "alias": "GroupName",
+   "domain": null,
+   "length": 100
+  },
+  {
+   "name": "ProductName",
+   "type": "esriFieldTypeString",
+   "alias": "ProductName",
+   "domain": null,
+   "length": 100
+  },
+  {
+   "name": "CenterX",
+   "type": "esriFieldTypeDouble",
+   "alias": "CenterX",
+   "domain": null
+  },
+  {
+   "name": "CenterY",
+   "type": "esriFieldTypeDouble",
+   "alias": "CenterY",
+   "domain": null
+  },
+  {
+   "name": "ZOrder",
+   "type": "esriFieldTypeInteger",
+   "alias": "ZOrder",
+   "domain": null
+  },
+  {
+   "name": "Shape_Length",
+   "type": "esriFieldTypeDouble",
+   "alias": "Shape_Length",
+   "domain": null
+  },
+  {
+   "name": "Shape_Area",
+   "type": "esriFieldTypeDouble",
+   "alias": "Shape_Area",
+   "domain": null
+  }
+ ],
+ "capabilities": "Image,Metadata,Catalog,Mensuration",
+ "defaultMosaicMethod": "Northwest",
+ "allowedMosaicMethods": "NorthWest,Center,LockRaster,ByAttribute,Nadir,Viewpoint,Seamline,None",
+ "sortField": "",
+ "sortValue": null,
+ "sortAscending": true,
+ "mosaicOperator": "First",
+ "maxDownloadSizeLimit": 2048,
+ "defaultCompressionQuality": 75,
+ "defaultResamplingMethod": "Nearest",
+ "maxImageHeight": 100000,
+ "maxImageWidth": 100000,
+ "maxRecordCount": 1000,
+ "maxDownloadImageCount": 20,
+ "maxMosaicImageCount": 20,
+ "allowRasterFunction": true,
+ "rasterFunctionInfos": [
+  {
+   "name": "LF2016_CH_CONUS",
+   "description": "Use a table to name and symbolize the values in a dataset. Columns for the table are comma delimited: PixelValue, AttributeName, RedValue, GreenValue, BlueValue.",
+   "help": ""
+  },
+  {
+   "name": "None",
+   "description": "Make a Raster or Raster Dataset into a Function Raster Dataset.",
+   "help": ""
+  }
+ ],
+ "rasterTypeInfos": [
+  {
+   "name": "Raster Dataset",
+   "description": "Supports all ArcGIS Raster Datasets",
+   "help": ""
+  }
+ ],
+ "mensurationCapabilities": "Basic",
+ "hasHistograms": true,
+ "hasColormap": false,
+ "hasRasterAttributeTable": false,
+ "minScale": 0,
+ "maxScale": 0,
+ "exportTilesAllowed": false,
+ "supportsStatistics": true,
+ "supportsAdvancedQueries": true,
+ "editFieldsInfo": null,
+ "ownershipBasedAccessControlForRasters": null,
+ "allowComputeTiePoints": false,
+ "useStandardizedQueries": true,
+ "advancedQueryCapabilities": {
+  "useStandardizedQueries": true,
+  "supportsStatistics": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsPagination": true
+ },
+ "spatialReference": {
+  "wkid": 5070,
+  "latestWkid": 5070
+ }
+}

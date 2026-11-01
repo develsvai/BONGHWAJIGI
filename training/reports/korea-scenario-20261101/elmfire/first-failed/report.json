@@ -1,0 +1,448 @@
+{
+  "simulation_only": true,
+  "operational_use": false,
+  "probability": null,
+  "status": "partial_failure",
+  "cases": [
+    {
+      "id": "fuel_181",
+      "fuel_model": 181,
+      "simulation_only": true,
+      "operational_use": false,
+      "probability": null,
+      "status": "failed",
+      "input_sha256": {
+        "adj.tif": "15b1b3d76a00deaf44ba45229430e7568f790e9fe99a637b445baa4df18540ee",
+        "elmfire.data": "3f65c37a6522e14218b2474755f33fa4b625c1100be9f6e50104dcbb74a86f16",
+        "landscape.tif": "de8f288a748c462429dd10d7f2fda6eb73aff4dd40608703575e6681a0b73972",
+        "m1.tif": "3ab676a6e650cf7275fa2ce9e7479f06a5d4a0221820443cf72cf704bc180da0",
+        "m10.tif": "e21236691e2474f9af760d23e56ee25c1feab71d5453f9f702f50b32249d62e5",
+        "m100.tif": "ec520c9cd5e7d100006b38ecd5880d821b273ef7149a8f76a69eecdc0b4cb11a",
+        "phi.tif": "15b1b3d76a00deaf44ba45229430e7568f790e9fe99a637b445baa4df18540ee",
+        "wd.tif": "a1c8ee2a85dc1d9ec5186de92400b9ce2646028e7c325dfe7ee8dfe4ccdf30f3",
+        "ws.tif": "2c0f335f9e46e925256d26d32d5143fdde77f31d268542d47c680330e72e0ab3"
+      },
+      "error_type": "ValueError",
+      "error": "Empty or out-of-horizon arrival output",
+      "elapsed_seconds": 0.957
+    },
+    {
+      "id": "fuel_183",
+      "fuel_model": 183,
+      "simulation_only": true,
+      "operational_use": false,
+      "probability": null,
+      "status": "failed",
+      "input_sha256": {
+        "adj.tif": "15b1b3d76a00deaf44ba45229430e7568f790e9fe99a637b445baa4df18540ee",
+        "elmfire.data": "3f65c37a6522e14218b2474755f33fa4b625c1100be9f6e50104dcbb74a86f16",
+        "landscape.tif": "ec29c59ddcb03de0f0f6c089ef0fa6563f78dfbfc451afda5a8c288b372eb8b8",
+        "m1.tif": "3ab676a6e650cf7275fa2ce9e7479f06a5d4a0221820443cf72cf704bc180da0",
+        "m10.tif": "e21236691e2474f9af760d23e56ee25c1feab71d5453f9f702f50b32249d62e5",
+        "m100.tif": "ec520c9cd5e7d100006b38ecd5880d821b273ef7149a8f76a69eecdc0b4cb11a",
+        "phi.tif": "15b1b3d76a00deaf44ba45229430e7568f790e9fe99a637b445baa4df18540ee",
+        "wd.tif": "a1c8ee2a85dc1d9ec5186de92400b9ce2646028e7c325dfe7ee8dfe4ccdf30f3",
+        "ws.tif": "2c0f335f9e46e925256d26d32d5143fdde77f31d268542d47c680330e72e0ab3"
+      },
+      "error_type": "ValueError",
+      "error": "Empty or out-of-horizon arrival output",
+      "elapsed_seconds": 0.957
+    },
+    {
+      "id": "fuel_185",
+      "fuel_model": 185,
+      "simulation_only": true,
+      "operational_use": false,
+      "probability": null,
+      "status": "failed",
+      "input_sha256": {
+        "adj.tif": "15b1b3d76a00deaf44ba45229430e7568f790e9fe99a637b445baa4df18540ee",
+        "elmfire.data": "3f65c37a6522e14218b2474755f33fa4b625c1100be9f6e50104dcbb74a86f16",
+        "landscape.tif": "1d94988f5e6c9100cca3584fdaf18920e6e10985cef6918951035709320c141a",
+        "m1.tif": "3ab676a6e650cf7275fa2ce9e7479f06a5d4a0221820443cf72cf704bc180da0",
+        "m10.tif": "e21236691e2474f9af760d23e56ee25c1feab71d5453f9f702f50b32249d62e5",
+        "m100.tif": "ec520c9cd5e7d100006b38ecd5880d821b273ef7149a8f76a69eecdc0b4cb11a",
+        "phi.tif": "15b1b3d76a00deaf44ba45229430e7568f790e9fe99a637b445baa4df18540ee",
+        "wd.tif": "a1c8ee2a85dc1d9ec5186de92400b9ce2646028e7c325dfe7ee8dfe4ccdf30f3",
+        "ws.tif": "2c0f335f9e46e925256d26d32d5143fdde77f31d268542d47c680330e72e0ab3"
+      },
+      "error_type": "ValueError",
+      "error": "Assumed ignition center must have an initial arrival of zero",
+      "elapsed_seconds": 0.907
+    }
+  ],
+  "probes": [
+    {
+      "id": "assumed_ignition",
+      "row": 49,
+      "column": 49,
+      "xy_m": [
+        526642.8540702973,
+        4094964.4265484256
+      ],
+      "longitude_latitude": [
+        129.29943982628814,
+        37.000452134228375
+      ],
+      "eligibility": "included_forest",
+      "actual_user_location": false,
+      "simulation_only": true,
+      "operational_use": false,
+      "probability": null,
+      "completed_scenarios": 0,
+      "planned_scenarios": 3,
+      "initially_reached_scenarios": 0,
+      "future_arrival_counts": {
+        "1h": 0,
+        "3h": 0,
+        "6h": 0
+      },
+      "scenario_fraction": {
+        "1h": null,
+        "3h": null,
+        "6h": null
+      },
+      "unavailable_reason": "partial_or_failed_ensemble"
+    },
+    {
+      "id": "north_1000m",
+      "row": 39,
+      "column": 49,
+      "xy_m": [
+        526642.8540702973,
+        4095964.4265484256
+      ],
+      "longitude_latitude": [
+        129.2994751835412,
+        37.00946643297297
+      ],
+      "eligibility": "included_forest",
+      "actual_user_location": false,
+      "simulation_only": true,
+      "operational_use": false,
+      "probability": null,
+      "completed_scenarios": 0,
+      "planned_scenarios": 3,
+      "initially_reached_scenarios": 0,
+      "future_arrival_counts": {
+        "1h": 0,
+        "3h": 0,
+        "6h": 0
+      },
+      "scenario_fraction": {
+        "1h": null,
+        "3h": null,
+        "6h": null
+      },
+      "unavailable_reason": "partial_or_failed_ensemble"
+    },
+    {
+      "id": "east_1000m",
+      "row": 49,
+      "column": 59,
+      "xy_m": [
+        527642.8540702973,
+        4094964.4265484256
+      ],
+      "longitude_latitude": [
+        129.3106787082889,
+        37.00042324970466
+      ],
+      "eligibility": "excluded_nonforest",
+      "actual_user_location": false,
+      "simulation_only": true,
+      "operational_use": false,
+      "probability": null,
+      "completed_scenarios": 0,
+      "planned_scenarios": 3,
+      "initially_reached_scenarios": 0,
+      "future_arrival_counts": {
+        "1h": 0,
+        "3h": 0,
+        "6h": 0
+      },
+      "scenario_fraction": {
+        "1h": null,
+        "3h": null,
+        "6h": null
+      },
+      "unavailable_reason": "excluded_nonforest"
+    },
+    {
+      "id": "south_1000m",
+      "row": 59,
+      "column": 49,
+      "xy_m": [
+        526642.8540702973,
+        4093964.4265484256
+      ],
+      "longitude_latitude": [
+        129.2994044847613,
+        36.99143782173205
+      ],
+      "eligibility": "included_forest",
+      "actual_user_location": false,
+      "simulation_only": true,
+      "operational_use": false,
+      "probability": null,
+      "completed_scenarios": 0,
+      "planned_scenarios": 3,
+      "initially_reached_scenarios": 0,
+      "future_arrival_counts": {
+        "1h": 0,
+        "3h": 0,
+        "6h": 0
+      },
+      "scenario_fraction": {
+        "1h": null,
+        "3h": null,
+        "6h": null
+      },
+      "unavailable_reason": "partial_or_failed_ensemble"
+    },
+    {
+      "id": "west_1000m",
+      "row": 49,
+      "column": 39,
+      "xy_m": [
+        525642.8540702973,
+        4094964.4265484256
+      ],
+      "longitude_latitude": [
+        129.28820092856108,
+        37.00047995462585
+      ],
+      "eligibility": "included_forest",
+      "actual_user_location": false,
+      "simulation_only": true,
+      "operational_use": false,
+      "probability": null,
+      "completed_scenarios": 0,
+      "planned_scenarios": 3,
+      "initially_reached_scenarios": 0,
+      "future_arrival_counts": {
+        "1h": 0,
+        "3h": 0,
+        "6h": 0
+      },
+      "scenario_fraction": {
+        "1h": null,
+        "3h": null,
+        "6h": null
+      },
+      "unavailable_reason": "partial_or_failed_ensemble"
+    }
+  ],
+  "stage": "final_integrity",
+  "plan_sha256": "f7174dbabd7b348566f7d4ece9fea610d0586809ec8af510cfb21e80012510da",
+  "plan": {
+    "simulation_only": true,
+    "operational_use": false,
+    "probability": null,
+    "study": "korea_terrain_fixed_fuel_sensitivity_v1",
+    "created_at_utc": "2026-10-31T17:03:58.868838+00:00",
+    "source_commit": "f4927b7ce68cb74eb0eb117085cc920782c8644e",
+    "binary_sha256": "f57750977084080f692cc51498f16f21197ee34de767e11d6407749bb52f947b",
+    "license": "AGPL-3.0 with Commons Clause; commercial use requires separate terms",
+    "license_scope": "Private research evaluation only; no hosted/API/product integration",
+    "license_sha256": {
+      "LICENSE.md": "55032df426cd4157e55c37ac34c9efb31fd6412e869a2e1f55e84f1a87e19dd6",
+      "COMMERCIAL_LICENSE.md": "d34d51903b386bb31253159788f13a2bf2579f3c8d1e34e69e8963da066a7236"
+    },
+    "references": {
+      "probe": {
+        "path": "/home1/ncloud/bonghwajigi/data/artifacts/elmfire/synthetic-20261101-first/report.json",
+        "sha256": "c43e9140c1976df69ce5034e77656af81b6111e2a88dd18a3407cdca4aea3336"
+      },
+      "terrain": {
+        "path": "/home1/ncloud/bonghwajigi/data/processed/korea-terrain-100m-v1/manifest.json",
+        "sha256": "d42d368edc9a3ef056756c6fce50f1a0308ec38a6b238b417122bd4d7584084d"
+      },
+      "weather": {
+        "path": "/home1/ncloud/bonghwajigi/data/raw/korea-wildfire/public-gfs-scenario-20261101-v1/weather.json",
+        "sha256": "5ada81547790061591f39cc9ca009b4af004d6fc6691aa7cddb2bec658a2d0bb"
+      }
+    },
+    "grid": {
+      "crs": "EPSG:32652",
+      "shape": [
+        100,
+        100
+      ],
+      "pixel_size_m": 100,
+      "transform": [
+        100.0,
+        0.0,
+        521692.8540702973,
+        0.0,
+        -100.0,
+        4099914.4265484256
+      ]
+    },
+    "source_terrain_limitations": [
+      "Copernicus GLO-90 is a surface DSM, not a bare-earth DTM; filename COG_30 is not 30m resolution",
+      "100m metric regridding does not increase source detail; DEM bilinear and CCI nearest only",
+      "2015 land-cover classes may differ from present conditions and do not provide current fuel",
+      "CCI quality, observation-count and current-pixel-state assets were not acquired",
+      "CCI 0 or unsupported class is unknown, never nonburnable; urban and non-tree are not safe",
+      "Tree classes do not determine species, Scott-Burgan fuel, canopy, fuel load or moisture",
+      "DEM source nodata metadata alone does not establish terrain accuracy or bare-earth height",
+      "Scenario extent is a fixed requested square, not a fire observation or validated hazard extent"
+    ],
+    "simulation_start_time_utc": "2026-10-31T18:00:00+00:00",
+    "weather_source": "OpenMeteo_GFS",
+    "forecast_issue_time_utc": null,
+    "forecast_issue_time_known": false,
+    "issue_time_note": "Open-Meteo response does not identify the underlying GFS issue cycle; retrieval time is not a forecast issue time",
+    "wind_axis_verification_method": "Official Open-Meteo pinned source review: GFS regular latitude-longitude grid and 10m UGRD/VGRD mapping; DerivedMapping windDirection; MeteorologyTests cardinal FROM-direction examples. API units and ordered times are separately checked on each response.",
+    "horizon_seconds": {
+      "1h": 3600,
+      "3h": 10800,
+      "6h": 21600
+    },
+    "weather_band_count": 7,
+    "dt_meteorology_seconds": 3600,
+    "scenario_plan": [
+      {
+        "id": "fuel_181",
+        "fuel_model": 181
+      },
+      {
+        "id": "fuel_183",
+        "fuel_model": 183
+      },
+      {
+        "id": "fuel_185",
+        "fuel_model": 185
+      }
+    ],
+    "scenario_interpretation": "Three fixed assumed fuels, not an uncertainty distribution or calibrated probability",
+    "ignition_rule": "Nearest explicit forest cell to domain center within 500m; row-major ties; actual cell center",
+    "static_data_acquisition_upper_bound_utc": "2026-10-31T16:52:56.456446+00:00",
+    "static_data_time_note": "DEM individual retrieval times verified. CCI download timestamp unavailable; the hash-linked derived manifest creation is its acquisition upper bound",
+    "ignition_observed": false,
+    "probe_locations": [
+      {
+        "id": "assumed_ignition",
+        "row": 49,
+        "column": 49,
+        "xy_m": [
+          526642.8540702973,
+          4094964.4265484256
+        ],
+        "longitude_latitude": [
+          129.29943982628814,
+          37.000452134228375
+        ],
+        "eligibility": "included_forest",
+        "actual_user_location": false
+      },
+      {
+        "id": "north_1000m",
+        "row": 39,
+        "column": 49,
+        "xy_m": [
+          526642.8540702973,
+          4095964.4265484256
+        ],
+        "longitude_latitude": [
+          129.2994751835412,
+          37.00946643297297
+        ],
+        "eligibility": "included_forest",
+        "actual_user_location": false
+      },
+      {
+        "id": "east_1000m",
+        "row": 49,
+        "column": 59,
+        "xy_m": [
+          527642.8540702973,
+          4094964.4265484256
+        ],
+        "longitude_latitude": [
+          129.3106787082889,
+          37.00042324970466
+        ],
+        "eligibility": "excluded_nonforest",
+        "actual_user_location": false
+      },
+      {
+        "id": "south_1000m",
+        "row": 59,
+        "column": 49,
+        "xy_m": [
+          526642.8540702973,
+          4093964.4265484256
+        ],
+        "longitude_latitude": [
+          129.2994044847613,
+          36.99143782173205
+        ],
+        "eligibility": "included_forest",
+        "actual_user_location": false
+      },
+      {
+        "id": "west_1000m",
+        "row": 49,
+        "column": 39,
+        "xy_m": [
+          525642.8540702973,
+          4094964.4265484256
+        ],
+        "longitude_latitude": [
+          129.28820092856108,
+          37.00047995462585
+        ],
+        "eligibility": "included_forest",
+        "actual_user_location": false
+      }
+    ],
+    "assumptions": {
+      "canopy_cover_height_base_density": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "dead_moisture_percent_m1_m10_m100": [
+        6,
+        7,
+        8
+      ],
+      "live_herb_woody_foliar_moisture_percent": [
+        60,
+        90,
+        90
+      ],
+      "surface_only": true,
+      "spotting": false,
+      "suppression": false,
+      "fuel_calibrated_for_korea": false,
+      "spatial_point_wind_uniform": true
+    },
+    "mask_semantics": {
+      "included_forest_cells": 8083,
+      "excluded_water_cells": 0,
+      "excluded_known_nonforest_cells": 1917,
+      "unknown_cells": 0,
+      "excluded_is_safe": false,
+      "codes": "fuel98 water; fuel99 other known nonforest; exclusion is a study boundary"
+    },
+    "wind_conversion": {
+      "input": "10m m/s true-north clockwise FROM",
+      "raster": "10m km/h grid-north clockwise FROM",
+      "engine": "kph *0.621 to mph; 10m *0.87 to20ft then fuel wind-adjustment",
+      "rotation": "per-cell projected true-north vector; WDgrid=WDtrue+rotation",
+      "rotation_min_max_deg": [
+        -0.21437238156795502,
+        -0.14682751893997192
+      ]
+    },
+    "cpu_threads_per_case": 1,
+    "case_timeout_seconds": 300,
+    "validation": "Input/execution consistency only; no observed perimeter, Korean validation or personal safety inference"
+  },
+  "elapsed_seconds": 2.924,
+  "finished_at_utc": "2026-10-31T17:04:01.722036+00:00"
+}

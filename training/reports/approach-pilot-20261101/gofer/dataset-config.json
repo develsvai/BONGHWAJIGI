@@ -1,0 +1,291 @@
+{
+  "profile": "gofer_reconstructed_perimeter_approach_1_3_6h_v1",
+  "target": "gofer_reconstructed_perimeter_first_approach",
+  "feature_names": [
+    "distance_km",
+    "prior_distance_km",
+    "closing_speed_kmh",
+    "history_elapsed_hours",
+    "elapsed_event_hours",
+    "perimeter_area_km2",
+    "perimeter_growth_km2_per_h"
+  ],
+  "events": [
+    {
+      "id": "antelope_2021",
+      "name": "Antelope",
+      "year": 2021,
+      "start_utc": "2021-08-01T17:00:00+00:00",
+      "split": "validation",
+      "period_group": "2021"
+    },
+    {
+      "id": "august_complex_2020",
+      "name": "August Complex",
+      "year": 2020,
+      "start_utc": "2020-08-16T21:00:00+00:00",
+      "split": "train",
+      "period_group": "2020"
+    },
+    {
+      "id": "beckwourth_complex_2021",
+      "name": "Beckwourth Complex",
+      "year": 2021,
+      "start_utc": "2021-06-30T23:00:00+00:00",
+      "split": "validation",
+      "period_group": "2021"
+    },
+    {
+      "id": "bobcat_2020",
+      "name": "Bobcat",
+      "year": 2020,
+      "start_utc": "2020-09-06T19:00:00+00:00",
+      "split": "train",
+      "period_group": "2020"
+    },
+    {
+      "id": "caldor_2021",
+      "name": "Caldor",
+      "year": 2021,
+      "start_utc": "2021-08-15T01:00:00+00:00",
+      "split": "validation",
+      "period_group": "2021"
+    },
+    {
+      "id": "creek_2020",
+      "name": "Creek",
+      "year": 2020,
+      "start_utc": "2020-09-05T01:00:00+00:00",
+      "split": "train",
+      "period_group": "2020"
+    },
+    {
+      "id": "czu_lightning_complex_2020",
+      "name": "CZU Lightning Complex",
+      "year": 2020,
+      "start_utc": "2020-08-16T15:00:00+00:00",
+      "split": "train",
+      "period_group": "2020"
+    },
+    {
+      "id": "dixie_2021",
+      "name": "Dixie",
+      "year": 2021,
+      "start_utc": "2021-07-14T00:00:00+00:00",
+      "split": "validation",
+      "period_group": "2021"
+    },
+    {
+      "id": "dolan_2020",
+      "name": "Dolan",
+      "year": 2020,
+      "start_utc": "2020-08-18T18:00:00+00:00",
+      "split": "train",
+      "period_group": "2020"
+    },
+    {
+      "id": "glass_2020",
+      "name": "Glass",
+      "year": 2020,
+      "start_utc": "2020-09-27T10:00:00+00:00",
+      "split": "train",
+      "period_group": "2020"
+    },
+    {
+      "id": "july_complex_2020",
+      "name": "July Complex",
+      "year": 2020,
+      "start_utc": "2020-07-22T17:00:00+00:00",
+      "split": "train",
+      "period_group": "2020"
+    },
+    {
+      "id": "kincade_2019",
+      "name": "Kincade",
+      "year": 2019,
+      "start_utc": "2019-10-24T04:00:00+00:00",
+      "split": "train",
+      "period_group": "2019"
+    },
+    {
+      "id": "knp_complex_2021",
+      "name": "KNP Complex",
+      "year": 2021,
+      "start_utc": "2021-09-10T14:00:00+00:00",
+      "split": "validation",
+      "period_group": "2021"
+    },
+    {
+      "id": "lnu_lightning_complex_2020",
+      "name": "LNU Lightning Complex",
+      "year": 2020,
+      "start_utc": "2020-08-17T13:00:00+00:00",
+      "split": "train",
+      "period_group": "2020"
+    },
+    {
+      "id": "mccash_2021",
+      "name": "McCash",
+      "year": 2021,
+      "start_utc": "2021-08-01T02:00:00+00:00",
+      "split": "validation",
+      "period_group": "2021"
+    },
+    {
+      "id": "mcfarland_2021",
+      "name": "McFarland",
+      "year": 2021,
+      "start_utc": "2021-07-30T01:00:00+00:00",
+      "split": "validation",
+      "period_group": "2021"
+    },
+    {
+      "id": "monument_2021",
+      "name": "Monument",
+      "year": 2021,
+      "start_utc": "2021-07-31T01:00:00+00:00",
+      "split": "validation",
+      "period_group": "2021"
+    },
+    {
+      "id": "north_complex_2020",
+      "name": "North Complex",
+      "year": 2020,
+      "start_utc": "2020-08-17T16:00:00+00:00",
+      "split": "train",
+      "period_group": "2020"
+    },
+    {
+      "id": "red_salmon_complex_2020",
+      "name": "Red Salmon Complex",
+      "year": 2020,
+      "start_utc": "2020-07-27T18:00:00+00:00",
+      "split": "train",
+      "period_group": "2020"
+    },
+    {
+      "id": "river_complex_2021",
+      "name": "River Complex",
+      "year": 2021,
+      "start_utc": "2021-07-30T21:00:00+00:00",
+      "split": "validation",
+      "period_group": "2021"
+    },
+    {
+      "id": "scu_lightning_complex_2020",
+      "name": "SCU Lightning Complex",
+      "year": 2020,
+      "start_utc": "2020-08-16T11:00:00+00:00",
+      "split": "train",
+      "period_group": "2020"
+    },
+    {
+      "id": "slater_and_devil_2020",
+      "name": "Slater and Devil",
+      "year": 2020,
+      "start_utc": "2020-09-08T13:00:00+00:00",
+      "split": "train",
+      "period_group": "2020"
+    },
+    {
+      "id": "sqf_complex_2020",
+      "name": "SQF Complex",
+      "year": 2020,
+      "start_utc": "2020-08-19T14:00:00+00:00",
+      "split": "train",
+      "period_group": "2020"
+    },
+    {
+      "id": "tamarack_2021",
+      "name": "Tamarack",
+      "year": 2021,
+      "start_utc": "2021-07-04T18:00:00+00:00",
+      "split": "validation",
+      "period_group": "2021"
+    },
+    {
+      "id": "w_5_cold_springs_2020",
+      "name": "W-5 Cold Springs",
+      "year": 2020,
+      "start_utc": "2020-08-18T18:00:00+00:00",
+      "split": "train",
+      "period_group": "2020"
+    },
+    {
+      "id": "walker_2019",
+      "name": "Walker",
+      "year": 2019,
+      "start_utc": "2019-09-04T07:00:00+00:00",
+      "split": "train",
+      "period_group": "2019"
+    },
+    {
+      "id": "windy_2021",
+      "name": "Windy",
+      "year": 2021,
+      "start_utc": "2021-09-10T00:00:00+00:00",
+      "split": "validation",
+      "period_group": "2021"
+    },
+    {
+      "id": "zogg_2020",
+      "name": "Zogg",
+      "year": 2020,
+      "start_utc": "2020-09-27T21:00:00+00:00",
+      "split": "train",
+      "period_group": "2020"
+    }
+  ],
+  "split_rule": "2019 and 2020 train; 2021 validation; no label-based selection",
+  "retrospective_proxy_only": true,
+  "operational_use": false,
+  "source_asof_verified": false,
+  "personal_harm_probability": false,
+  "source": {
+    "record_url": "https://zenodo.org/records/14642378",
+    "license": "CC-BY-4.0",
+    "version": "0.2",
+    "archive_bytes": 75711678,
+    "archive_sha256": "96eca2e18529eb274ca94af9a730bcf1c9c6da597fb04a9b5cf9167aada451c2",
+    "record_sha256": "8d12b0ff647965e9b434e8197537b29fd06ea3a0417e038a7d5bcf6f11b60d93",
+    "attribution": "Liu et al. (2025), GOFER v0.2, doi:10.5281/zenodo.14642378"
+  },
+  "source_audit": {
+    "source_fields": [
+      "fname",
+      "fyear",
+      "tUTC",
+      "tLocal",
+      "tLocalGMT",
+      "timestep",
+      "farea",
+      "fareaPer",
+      "fperim"
+    ],
+    "source_crs": "EPSG:4326",
+    "projection": "EPSG:5070",
+    "geometry_repairs": 0,
+    "archive_members": 120
+  },
+  "settings": {
+    "radius_km": 2,
+    "max_distance_km": 20,
+    "spacing_km": 2,
+    "issue_interval_hours": 6,
+    "max_issue_hours": 72,
+    "horizon_hours": 6
+  },
+  "limitations": [
+    "Retrospective California large-fire satellite reconstruction, not ground arrival or harm.",
+    "GOFER source QA uses final FRAP references to remove stray polygons.",
+    "GOFER threshold/parallax parameters were tuned using 2020 final MTBS perimeters.",
+    "Source removes trailing no-growth hours; end-of-series censoring may be informative.",
+    "Source has coarse GOES resolution and smoothing; grid spacing adds no observation detail.",
+    "A research radius is not a safety distance or a response-level threshold.",
+    "Past-timestamp features do not establish historical operational availability.",
+    "Targets are a synthetic spatial grid, not users, buildings, or representative population.",
+    "Nearby simultaneous fires are not unified; only the named event perimeter is considered.",
+    "Censoring here concerns reconstruction follow-up, not absence of real-world fire.",
+    "No South Korea transfer, smoke exposure, individual injury, or evacuation validation."
+  ]
+}

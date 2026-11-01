@@ -1,0 +1,699 @@
+[
+  {
+    "fold": 0,
+    "train": [
+      "bobcat_2020",
+      "creek_2020",
+      "glass_2020",
+      "july_complex_2020",
+      "kincade_2019",
+      "red_salmon_complex_2020",
+      "slater_and_devil_2020",
+      "walker_2019",
+      "zogg_2020"
+    ],
+    "held": [
+      "august_complex_2020",
+      "czu_lightning_complex_2020",
+      "dolan_2020",
+      "lnu_lightning_complex_2020",
+      "north_complex_2020",
+      "scu_lightning_complex_2020",
+      "sqf_complex_2020",
+      "w_5_cold_springs_2020"
+    ],
+    "selected": {
+      "name": "legacy_d2",
+      "features": [
+        "distance_km",
+        "prior_distance_km",
+        "closing_speed_kmh",
+        "history_elapsed_hours",
+        "elapsed_event_hours",
+        "perimeter_area_km2",
+        "perimeter_growth_km2_per_h"
+      ],
+      "depth": 2,
+      "rounds": 150
+    },
+    "selection": {
+      "folds": [
+        {
+          "train": [
+            "glass_2020",
+            "july_complex_2020",
+            "kincade_2019",
+            "red_salmon_complex_2020",
+            "walker_2019",
+            "zogg_2020"
+          ],
+          "held": [
+            "bobcat_2020",
+            "creek_2020",
+            "slater_and_devil_2020"
+          ]
+        },
+        {
+          "train": [
+            "bobcat_2020",
+            "creek_2020",
+            "kincade_2019",
+            "red_salmon_complex_2020",
+            "slater_and_devil_2020",
+            "walker_2019"
+          ],
+          "held": [
+            "glass_2020",
+            "july_complex_2020",
+            "zogg_2020"
+          ]
+        },
+        {
+          "train": [
+            "bobcat_2020",
+            "creek_2020",
+            "glass_2020",
+            "july_complex_2020",
+            "slater_and_devil_2020",
+            "zogg_2020"
+          ],
+          "held": [
+            "kincade_2019",
+            "red_salmon_complex_2020",
+            "walker_2019"
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "candidate": "distance_d2",
+          "macro_ap": 0.11522671709372367,
+          "macro_brier": 0.0067891794561647754,
+          "eligible_event_horizons": 25
+        },
+        {
+          "candidate": "legacy_d2",
+          "macro_ap": 0.23596073081610064,
+          "macro_brier": 0.006369679896495116,
+          "eligible_event_horizons": 25
+        },
+        {
+          "candidate": "legacy_d3",
+          "macro_ap": 0.21026835102842106,
+          "macro_brier": 0.006448568721141244,
+          "eligible_event_horizons": 25
+        },
+        {
+          "candidate": "history_d2",
+          "macro_ap": 0.22851218127631856,
+          "macro_brier": 0.006469183492164895,
+          "eligible_event_horizons": 25
+        },
+        {
+          "candidate": "history_d3",
+          "macro_ap": 0.21447187049678948,
+          "macro_brier": 0.0065627162878593446,
+          "eligible_event_horizons": 25
+        },
+        {
+          "candidate": "history_d4",
+          "macro_ap": 0.20044990148267317,
+          "macro_brier": 0.006629245308364194,
+          "eligible_event_horizons": 25
+        }
+      ],
+      "selected": "legacy_d2",
+      "selection_metric": "eligible_event_horizon_macro_AP"
+    },
+    "calibration": {
+      "slope": 1.0025194180755996,
+      "intercept": 0.05083200945348083,
+      "method": "shared_positive_slope_sigmoid",
+      "weighting": "equal_event_horizon",
+      "objective": 0.027530412395860043,
+      "training_rows": 172279,
+      "operational_validated": false
+    },
+    "thresholds": {
+      "raw": 0.01712419092655182,
+      "calibrated": 0.01782159134745598,
+      "distance": -5.05352783203125
+    },
+    "model_sha256": "65c78cb47fccc78060a88825f5b3a0af2afc0c59e30253db38d2f97edb73c19d"
+  },
+  {
+    "fold": 1,
+    "train": [
+      "august_complex_2020",
+      "czu_lightning_complex_2020",
+      "dolan_2020",
+      "glass_2020",
+      "july_complex_2020",
+      "kincade_2019",
+      "lnu_lightning_complex_2020",
+      "north_complex_2020",
+      "red_salmon_complex_2020",
+      "scu_lightning_complex_2020",
+      "sqf_complex_2020",
+      "w_5_cold_springs_2020",
+      "walker_2019",
+      "zogg_2020"
+    ],
+    "held": [
+      "bobcat_2020",
+      "creek_2020",
+      "slater_and_devil_2020"
+    ],
+    "selected": {
+      "name": "history_d2",
+      "features": [
+        "distance_km",
+        "prior_distance_km",
+        "closing_speed_kmh",
+        "history_elapsed_hours",
+        "elapsed_event_hours",
+        "perimeter_area_km2",
+        "perimeter_growth_km2_per_h",
+        "past_distance_km_1h",
+        "closing_speed_kmh_1h",
+        "area_growth_km2_per_h_1h",
+        "actual_history_hours_1h",
+        "history_known_1h",
+        "past_distance_km_3h",
+        "closing_speed_kmh_3h",
+        "area_growth_km2_per_h_3h",
+        "actual_history_hours_3h",
+        "history_known_3h",
+        "past_distance_km_6h",
+        "closing_speed_kmh_6h",
+        "area_growth_km2_per_h_6h",
+        "actual_history_hours_6h",
+        "history_known_6h",
+        "past_distance_km_12h",
+        "closing_speed_kmh_12h",
+        "area_growth_km2_per_h_12h",
+        "actual_history_hours_12h",
+        "history_known_12h",
+        "nearest_boundary_to_target_east_unit",
+        "nearest_boundary_to_target_north_unit",
+        "growth_direction_3h_east_unit",
+        "growth_direction_3h_north_unit",
+        "target_growth_alignment_3h",
+        "rear_growth_area_fraction_3h",
+        "new_growth_area_fraction_3h",
+        "growth_direction_known_3h"
+      ],
+      "depth": 2,
+      "rounds": 150
+    },
+    "selection": {
+      "folds": [
+        {
+          "train": [
+            "glass_2020",
+            "july_complex_2020",
+            "kincade_2019",
+            "red_salmon_complex_2020",
+            "walker_2019",
+            "zogg_2020"
+          ],
+          "held": [
+            "august_complex_2020",
+            "czu_lightning_complex_2020",
+            "dolan_2020",
+            "lnu_lightning_complex_2020",
+            "north_complex_2020",
+            "scu_lightning_complex_2020",
+            "sqf_complex_2020",
+            "w_5_cold_springs_2020"
+          ]
+        },
+        {
+          "train": [
+            "august_complex_2020",
+            "czu_lightning_complex_2020",
+            "dolan_2020",
+            "kincade_2019",
+            "lnu_lightning_complex_2020",
+            "north_complex_2020",
+            "red_salmon_complex_2020",
+            "scu_lightning_complex_2020",
+            "sqf_complex_2020",
+            "w_5_cold_springs_2020",
+            "walker_2019"
+          ],
+          "held": [
+            "glass_2020",
+            "july_complex_2020",
+            "zogg_2020"
+          ]
+        },
+        {
+          "train": [
+            "august_complex_2020",
+            "czu_lightning_complex_2020",
+            "dolan_2020",
+            "glass_2020",
+            "july_complex_2020",
+            "lnu_lightning_complex_2020",
+            "north_complex_2020",
+            "scu_lightning_complex_2020",
+            "sqf_complex_2020",
+            "w_5_cold_springs_2020",
+            "zogg_2020"
+          ],
+          "held": [
+            "kincade_2019",
+            "red_salmon_complex_2020",
+            "walker_2019"
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "candidate": "distance_d2",
+          "macro_ap": 0.13402430064201398,
+          "macro_brier": 0.0066552163420315735,
+          "eligible_event_horizons": 39
+        },
+        {
+          "candidate": "legacy_d2",
+          "macro_ap": 0.22334717897079237,
+          "macro_brier": 0.00632501857087066,
+          "eligible_event_horizons": 39
+        },
+        {
+          "candidate": "legacy_d3",
+          "macro_ap": 0.21957585554843292,
+          "macro_brier": 0.006517081928731862,
+          "eligible_event_horizons": 39
+        },
+        {
+          "candidate": "history_d2",
+          "macro_ap": 0.23429148632604907,
+          "macro_brier": 0.0063951036377364375,
+          "eligible_event_horizons": 39
+        },
+        {
+          "candidate": "history_d3",
+          "macro_ap": 0.22295575401714543,
+          "macro_brier": 0.006574291483351165,
+          "eligible_event_horizons": 39
+        },
+        {
+          "candidate": "history_d4",
+          "macro_ap": 0.19465811593528778,
+          "macro_brier": 0.006699316417282154,
+          "eligible_event_horizons": 39
+        }
+      ],
+      "selected": "history_d2",
+      "selection_metric": "eligible_event_horizon_macro_AP"
+    },
+    "calibration": {
+      "slope": 0.9143167458093373,
+      "intercept": -0.08677443343354822,
+      "method": "shared_positive_slope_sigmoid",
+      "weighting": "equal_event_horizon",
+      "objective": 0.027673134908551448,
+      "training_rows": 252976,
+      "operational_validated": false
+    },
+    "thresholds": {
+      "raw": 0.013979949988424778,
+      "calibrated": 0.018376152962446213,
+      "distance": -5.087665557861328
+    },
+    "model_sha256": "76f55c8204ce1fa1f8ba5f149db8228c847781889ddb0506b4e4a01c3f7a9888"
+  },
+  {
+    "fold": 2,
+    "train": [
+      "august_complex_2020",
+      "bobcat_2020",
+      "creek_2020",
+      "czu_lightning_complex_2020",
+      "dolan_2020",
+      "kincade_2019",
+      "lnu_lightning_complex_2020",
+      "north_complex_2020",
+      "red_salmon_complex_2020",
+      "scu_lightning_complex_2020",
+      "slater_and_devil_2020",
+      "sqf_complex_2020",
+      "w_5_cold_springs_2020",
+      "walker_2019"
+    ],
+    "held": [
+      "glass_2020",
+      "july_complex_2020",
+      "zogg_2020"
+    ],
+    "selected": {
+      "name": "history_d2",
+      "features": [
+        "distance_km",
+        "prior_distance_km",
+        "closing_speed_kmh",
+        "history_elapsed_hours",
+        "elapsed_event_hours",
+        "perimeter_area_km2",
+        "perimeter_growth_km2_per_h",
+        "past_distance_km_1h",
+        "closing_speed_kmh_1h",
+        "area_growth_km2_per_h_1h",
+        "actual_history_hours_1h",
+        "history_known_1h",
+        "past_distance_km_3h",
+        "closing_speed_kmh_3h",
+        "area_growth_km2_per_h_3h",
+        "actual_history_hours_3h",
+        "history_known_3h",
+        "past_distance_km_6h",
+        "closing_speed_kmh_6h",
+        "area_growth_km2_per_h_6h",
+        "actual_history_hours_6h",
+        "history_known_6h",
+        "past_distance_km_12h",
+        "closing_speed_kmh_12h",
+        "area_growth_km2_per_h_12h",
+        "actual_history_hours_12h",
+        "history_known_12h",
+        "nearest_boundary_to_target_east_unit",
+        "nearest_boundary_to_target_north_unit",
+        "growth_direction_3h_east_unit",
+        "growth_direction_3h_north_unit",
+        "target_growth_alignment_3h",
+        "rear_growth_area_fraction_3h",
+        "new_growth_area_fraction_3h",
+        "growth_direction_known_3h"
+      ],
+      "depth": 2,
+      "rounds": 150
+    },
+    "selection": {
+      "folds": [
+        {
+          "train": [
+            "bobcat_2020",
+            "creek_2020",
+            "kincade_2019",
+            "red_salmon_complex_2020",
+            "slater_and_devil_2020",
+            "walker_2019"
+          ],
+          "held": [
+            "august_complex_2020",
+            "czu_lightning_complex_2020",
+            "dolan_2020",
+            "lnu_lightning_complex_2020",
+            "north_complex_2020",
+            "scu_lightning_complex_2020",
+            "sqf_complex_2020",
+            "w_5_cold_springs_2020"
+          ]
+        },
+        {
+          "train": [
+            "august_complex_2020",
+            "czu_lightning_complex_2020",
+            "dolan_2020",
+            "kincade_2019",
+            "lnu_lightning_complex_2020",
+            "north_complex_2020",
+            "red_salmon_complex_2020",
+            "scu_lightning_complex_2020",
+            "sqf_complex_2020",
+            "w_5_cold_springs_2020",
+            "walker_2019"
+          ],
+          "held": [
+            "bobcat_2020",
+            "creek_2020",
+            "slater_and_devil_2020"
+          ]
+        },
+        {
+          "train": [
+            "august_complex_2020",
+            "bobcat_2020",
+            "creek_2020",
+            "czu_lightning_complex_2020",
+            "dolan_2020",
+            "lnu_lightning_complex_2020",
+            "north_complex_2020",
+            "scu_lightning_complex_2020",
+            "slater_and_devil_2020",
+            "sqf_complex_2020",
+            "w_5_cold_springs_2020"
+          ],
+          "held": [
+            "kincade_2019",
+            "red_salmon_complex_2020",
+            "walker_2019"
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "candidate": "distance_d2",
+          "macro_ap": 0.14341431139036706,
+          "macro_brier": 0.007754489729493452,
+          "eligible_event_horizons": 39
+        },
+        {
+          "candidate": "legacy_d2",
+          "macro_ap": 0.24152355813528567,
+          "macro_brier": 0.007384013518059787,
+          "eligible_event_horizons": 39
+        },
+        {
+          "candidate": "legacy_d3",
+          "macro_ap": 0.2572741296780035,
+          "macro_brier": 0.007584273735292733,
+          "eligible_event_horizons": 39
+        },
+        {
+          "candidate": "history_d2",
+          "macro_ap": 0.28626165342115784,
+          "macro_brier": 0.007290460748966628,
+          "eligible_event_horizons": 39
+        },
+        {
+          "candidate": "history_d3",
+          "macro_ap": 0.26694442399247165,
+          "macro_brier": 0.00746766518689886,
+          "eligible_event_horizons": 39
+        },
+        {
+          "candidate": "history_d4",
+          "macro_ap": 0.25415129413334214,
+          "macro_brier": 0.007568745492573639,
+          "eligible_event_horizons": 39
+        }
+      ],
+      "selected": "history_d2",
+      "selection_metric": "eligible_event_horizon_macro_AP"
+    },
+    "calibration": {
+      "slope": 1.0159142133448966,
+      "intercept": 0.1762424828258907,
+      "method": "shared_positive_slope_sigmoid",
+      "weighting": "equal_event_horizon",
+      "objective": 0.03022098055141603,
+      "training_rows": 257382,
+      "operational_validated": false
+    },
+    "thresholds": {
+      "raw": 0.0193315539509058,
+      "calibrated": 0.02161025069653988,
+      "distance": -5.384114742279053
+    },
+    "model_sha256": "bffe223dbd8aedf57940d2210dc752abfbd915c080445f6acdfa50858607e9b8"
+  },
+  {
+    "fold": 3,
+    "train": [
+      "august_complex_2020",
+      "bobcat_2020",
+      "creek_2020",
+      "czu_lightning_complex_2020",
+      "dolan_2020",
+      "glass_2020",
+      "july_complex_2020",
+      "lnu_lightning_complex_2020",
+      "north_complex_2020",
+      "scu_lightning_complex_2020",
+      "slater_and_devil_2020",
+      "sqf_complex_2020",
+      "w_5_cold_springs_2020",
+      "zogg_2020"
+    ],
+    "held": [
+      "kincade_2019",
+      "red_salmon_complex_2020",
+      "walker_2019"
+    ],
+    "selected": {
+      "name": "history_d2",
+      "features": [
+        "distance_km",
+        "prior_distance_km",
+        "closing_speed_kmh",
+        "history_elapsed_hours",
+        "elapsed_event_hours",
+        "perimeter_area_km2",
+        "perimeter_growth_km2_per_h",
+        "past_distance_km_1h",
+        "closing_speed_kmh_1h",
+        "area_growth_km2_per_h_1h",
+        "actual_history_hours_1h",
+        "history_known_1h",
+        "past_distance_km_3h",
+        "closing_speed_kmh_3h",
+        "area_growth_km2_per_h_3h",
+        "actual_history_hours_3h",
+        "history_known_3h",
+        "past_distance_km_6h",
+        "closing_speed_kmh_6h",
+        "area_growth_km2_per_h_6h",
+        "actual_history_hours_6h",
+        "history_known_6h",
+        "past_distance_km_12h",
+        "closing_speed_kmh_12h",
+        "area_growth_km2_per_h_12h",
+        "actual_history_hours_12h",
+        "history_known_12h",
+        "nearest_boundary_to_target_east_unit",
+        "nearest_boundary_to_target_north_unit",
+        "growth_direction_3h_east_unit",
+        "growth_direction_3h_north_unit",
+        "target_growth_alignment_3h",
+        "rear_growth_area_fraction_3h",
+        "new_growth_area_fraction_3h",
+        "growth_direction_known_3h"
+      ],
+      "depth": 2,
+      "rounds": 150
+    },
+    "selection": {
+      "folds": [
+        {
+          "train": [
+            "bobcat_2020",
+            "creek_2020",
+            "glass_2020",
+            "july_complex_2020",
+            "slater_and_devil_2020",
+            "zogg_2020"
+          ],
+          "held": [
+            "august_complex_2020",
+            "czu_lightning_complex_2020",
+            "dolan_2020",
+            "lnu_lightning_complex_2020",
+            "north_complex_2020",
+            "scu_lightning_complex_2020",
+            "sqf_complex_2020",
+            "w_5_cold_springs_2020"
+          ]
+        },
+        {
+          "train": [
+            "august_complex_2020",
+            "czu_lightning_complex_2020",
+            "dolan_2020",
+            "glass_2020",
+            "july_complex_2020",
+            "lnu_lightning_complex_2020",
+            "north_complex_2020",
+            "scu_lightning_complex_2020",
+            "sqf_complex_2020",
+            "w_5_cold_springs_2020",
+            "zogg_2020"
+          ],
+          "held": [
+            "bobcat_2020",
+            "creek_2020",
+            "slater_and_devil_2020"
+          ]
+        },
+        {
+          "train": [
+            "august_complex_2020",
+            "bobcat_2020",
+            "creek_2020",
+            "czu_lightning_complex_2020",
+            "dolan_2020",
+            "lnu_lightning_complex_2020",
+            "north_complex_2020",
+            "scu_lightning_complex_2020",
+            "slater_and_devil_2020",
+            "sqf_complex_2020",
+            "w_5_cold_springs_2020"
+          ],
+          "held": [
+            "glass_2020",
+            "july_complex_2020",
+            "zogg_2020"
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "candidate": "distance_d2",
+          "macro_ap": 0.14260413028131064,
+          "macro_brier": 0.007797233257276405,
+          "eligible_event_horizons": 41
+        },
+        {
+          "candidate": "legacy_d2",
+          "macro_ap": 0.27399908394529665,
+          "macro_brier": 0.007403703638590828,
+          "eligible_event_horizons": 41
+        },
+        {
+          "candidate": "legacy_d3",
+          "macro_ap": 0.2731344526055459,
+          "macro_brier": 0.007560543011398598,
+          "eligible_event_horizons": 41
+        },
+        {
+          "candidate": "history_d2",
+          "macro_ap": 0.27564136751207974,
+          "macro_brier": 0.007376251786592461,
+          "eligible_event_horizons": 41
+        },
+        {
+          "candidate": "history_d3",
+          "macro_ap": 0.2690341021238664,
+          "macro_brier": 0.007493366687239835,
+          "eligible_event_horizons": 41
+        },
+        {
+          "candidate": "history_d4",
+          "macro_ap": 0.26645109926300764,
+          "macro_brier": 0.007647604788785213,
+          "eligible_event_horizons": 41
+        }
+      ],
+      "selected": "history_d2",
+      "selection_metric": "eligible_event_horizon_macro_AP"
+    },
+    "calibration": {
+      "slope": 1.029229679812798,
+      "intercept": 0.34158658786680746,
+      "method": "shared_positive_slope_sigmoid",
+      "weighting": "equal_event_horizon",
+      "objective": 0.030228865896208944,
+      "training_rows": 276082,
+      "operational_validated": false
+    },
+    "thresholds": {
+      "raw": 0.01797299273312092,
+      "calibrated": 0.02239862270653248,
+      "distance": -5.219485759735107
+    },
+    "model_sha256": "e4c09bac60da799e32e35d50495c2a88040569001d362bc18b0bad5e35568d43"
+  }
+]

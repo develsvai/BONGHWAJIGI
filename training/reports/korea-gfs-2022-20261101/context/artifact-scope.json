@@ -1,0 +1,20 @@
+{
+  "source_raw_in_git": false,
+  "source_raw_local_and_server_relative_path": "data/raw/korea-source-alignment-20261101/weather/gfs-2022-current-v1",
+  "decoded_local_and_server_relative_path": "data/processed/korea-gfs-native-windows-2022-20261101",
+  "context_local_and_server_relative_path": "data/processed/korea-gfs-context-2022-primary-20261101",
+  "original_artifacts_unchanged": true,
+  "private_credentials_included": false,
+  "files": {
+    "korea_gfs_context.py": "e1d171887a70cab4c652073fb98d4300381aee37e55f88f07eaa8d8cccbc088c",
+    "plan.json": "f9aad36dbb4437424524ba9a03befc23903dee1fde951729a94b6a5284ab52ff",
+    "report.json": "63cf122fa327b15820e3b57e7638a56c487f4fbfdf6ea1afaafa6f40930d6350",
+    "download.py": "e61e0c300ce70fdb53151b73e44f34caf4f3f27663b791ba6efb137f67879bd3",
+    "decoded-plan.json": "28f6e0972d081e9eb5f243e7781acc5b8adbd0bc3afe5ac118c5ab4e23325293",
+    "started.json": "abd78810871e328a9b120a8614e4119aa1f9e6563ce8f6b045292acb96daeedd",
+    "decoded-report.json": "2680de18111531cc6f27273a1ab38762431063eccf27bc04ece41515e7a0af03",
+    "preflight-check.json": "057e55a629a1d3f37bd834c53853e9bd0cdf38a3103b2f31e77e7589835c3e2f",
+    "kma_weather_alignment_probe.py": "c00908a10fe95110c920aba010cccace53827fd7ed9a1cb0786431299aa1b4e8",
+    "input-audit.json": "21fa5c9a91c20ba409d9d0f5cc117232c26f0402a20ba55bb288308190f7d542"
+  }
+}

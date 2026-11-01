@@ -1,0 +1,89 @@
+{
+  "folds": [
+    {
+      "train": [
+        "glass_2020",
+        "july_complex_2020",
+        "kincade_2019",
+        "red_salmon_complex_2020",
+        "walker_2019",
+        "zogg_2020"
+      ],
+      "held": [
+        "bobcat_2020",
+        "creek_2020",
+        "slater_and_devil_2020"
+      ]
+    },
+    {
+      "train": [
+        "bobcat_2020",
+        "creek_2020",
+        "kincade_2019",
+        "red_salmon_complex_2020",
+        "slater_and_devil_2020",
+        "walker_2019"
+      ],
+      "held": [
+        "glass_2020",
+        "july_complex_2020",
+        "zogg_2020"
+      ]
+    },
+    {
+      "train": [
+        "bobcat_2020",
+        "creek_2020",
+        "glass_2020",
+        "july_complex_2020",
+        "slater_and_devil_2020",
+        "zogg_2020"
+      ],
+      "held": [
+        "kincade_2019",
+        "red_salmon_complex_2020",
+        "walker_2019"
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "candidate": "distance_d2",
+      "macro_ap": 0.11522671709372367,
+      "macro_brier": 0.0067891794561647754,
+      "eligible_event_horizons": 25
+    },
+    {
+      "candidate": "legacy_d2",
+      "macro_ap": 0.23596073081610064,
+      "macro_brier": 0.006369679896495116,
+      "eligible_event_horizons": 25
+    },
+    {
+      "candidate": "legacy_d3",
+      "macro_ap": 0.21026835102842106,
+      "macro_brier": 0.006448568721141244,
+      "eligible_event_horizons": 25
+    },
+    {
+      "candidate": "history_d2",
+      "macro_ap": 0.22851218127631856,
+      "macro_brier": 0.006469183492164895,
+      "eligible_event_horizons": 25
+    },
+    {
+      "candidate": "history_d3",
+      "macro_ap": 0.21447187049678948,
+      "macro_brier": 0.0065627162878593446,
+      "eligible_event_horizons": 25
+    },
+    {
+      "candidate": "history_d4",
+      "macro_ap": 0.20044990148267317,
+      "macro_brier": 0.006629245308364194,
+      "eligible_event_horizons": 25
+    }
+  ],
+  "selected": "legacy_d2",
+  "selection_metric": "eligible_event_horizon_macro_AP"
+}

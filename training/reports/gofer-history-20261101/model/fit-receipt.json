@@ -1,0 +1,218 @@
+{
+  "plan_sha256": "eb243b62622bcea3f872443d6ac7c69040ee81cf1ab4237efdd32c093d77f61b",
+  "selected": {
+    "name": "history_d2",
+    "features": [
+      "distance_km",
+      "prior_distance_km",
+      "closing_speed_kmh",
+      "history_elapsed_hours",
+      "elapsed_event_hours",
+      "perimeter_area_km2",
+      "perimeter_growth_km2_per_h",
+      "past_distance_km_1h",
+      "closing_speed_kmh_1h",
+      "area_growth_km2_per_h_1h",
+      "actual_history_hours_1h",
+      "history_known_1h",
+      "past_distance_km_3h",
+      "closing_speed_kmh_3h",
+      "area_growth_km2_per_h_3h",
+      "actual_history_hours_3h",
+      "history_known_3h",
+      "past_distance_km_6h",
+      "closing_speed_kmh_6h",
+      "area_growth_km2_per_h_6h",
+      "actual_history_hours_6h",
+      "history_known_6h",
+      "past_distance_km_12h",
+      "closing_speed_kmh_12h",
+      "area_growth_km2_per_h_12h",
+      "actual_history_hours_12h",
+      "history_known_12h",
+      "nearest_boundary_to_target_east_unit",
+      "nearest_boundary_to_target_north_unit",
+      "growth_direction_3h_east_unit",
+      "growth_direction_3h_north_unit",
+      "target_growth_alignment_3h",
+      "rear_growth_area_fraction_3h",
+      "new_growth_area_fraction_3h",
+      "growth_direction_known_3h"
+    ],
+    "depth": 2,
+    "rounds": 150
+  },
+  "selection": {
+    "folds": [
+      {
+        "train": [
+          "bobcat_2020",
+          "creek_2020",
+          "glass_2020",
+          "july_complex_2020",
+          "kincade_2019",
+          "red_salmon_complex_2020",
+          "slater_and_devil_2020",
+          "walker_2019",
+          "zogg_2020"
+        ],
+        "held": [
+          "august_complex_2020",
+          "czu_lightning_complex_2020",
+          "dolan_2020",
+          "lnu_lightning_complex_2020",
+          "north_complex_2020",
+          "scu_lightning_complex_2020",
+          "sqf_complex_2020",
+          "w_5_cold_springs_2020"
+        ]
+      },
+      {
+        "train": [
+          "august_complex_2020",
+          "czu_lightning_complex_2020",
+          "dolan_2020",
+          "glass_2020",
+          "july_complex_2020",
+          "kincade_2019",
+          "lnu_lightning_complex_2020",
+          "north_complex_2020",
+          "red_salmon_complex_2020",
+          "scu_lightning_complex_2020",
+          "sqf_complex_2020",
+          "w_5_cold_springs_2020",
+          "walker_2019",
+          "zogg_2020"
+        ],
+        "held": [
+          "bobcat_2020",
+          "creek_2020",
+          "slater_and_devil_2020"
+        ]
+      },
+      {
+        "train": [
+          "august_complex_2020",
+          "bobcat_2020",
+          "creek_2020",
+          "czu_lightning_complex_2020",
+          "dolan_2020",
+          "kincade_2019",
+          "lnu_lightning_complex_2020",
+          "north_complex_2020",
+          "red_salmon_complex_2020",
+          "scu_lightning_complex_2020",
+          "slater_and_devil_2020",
+          "sqf_complex_2020",
+          "w_5_cold_springs_2020",
+          "walker_2019"
+        ],
+        "held": [
+          "glass_2020",
+          "july_complex_2020",
+          "zogg_2020"
+        ]
+      },
+      {
+        "train": [
+          "august_complex_2020",
+          "bobcat_2020",
+          "creek_2020",
+          "czu_lightning_complex_2020",
+          "dolan_2020",
+          "glass_2020",
+          "july_complex_2020",
+          "lnu_lightning_complex_2020",
+          "north_complex_2020",
+          "scu_lightning_complex_2020",
+          "slater_and_devil_2020",
+          "sqf_complex_2020",
+          "w_5_cold_springs_2020",
+          "zogg_2020"
+        ],
+        "held": [
+          "kincade_2019",
+          "red_salmon_complex_2020",
+          "walker_2019"
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "candidate": "distance_d2",
+        "macro_ap": 0.1342029593881001,
+        "macro_brier": 0.0072770077416256145,
+        "eligible_event_horizons": 48
+      },
+      {
+        "candidate": "legacy_d2",
+        "macro_ap": 0.2539055354898095,
+        "macro_brier": 0.006867077927987945,
+        "eligible_event_horizons": 48
+      },
+      {
+        "candidate": "legacy_d3",
+        "macro_ap": 0.230499059482145,
+        "macro_brier": 0.007130614192326046,
+        "eligible_event_horizons": 48
+      },
+      {
+        "candidate": "history_d2",
+        "macro_ap": 0.2745996277942531,
+        "macro_brier": 0.00676597231251756,
+        "eligible_event_horizons": 48
+      },
+      {
+        "candidate": "history_d3",
+        "macro_ap": 0.2578143521587592,
+        "macro_brier": 0.006911827951947036,
+        "eligible_event_horizons": 48
+      },
+      {
+        "candidate": "history_d4",
+        "macro_ap": 0.2297144987292742,
+        "macro_brier": 0.00702154368692016,
+        "eligible_event_horizons": 48
+      }
+    ],
+    "selected": "history_d2",
+    "selection_metric": "eligible_event_horizon_macro_AP"
+  },
+  "calibration": {
+    "slope": 1.0258070478015238,
+    "intercept": 0.17656209996135697,
+    "method": "shared_positive_slope_sigmoid",
+    "weighting": "equal_event_horizon",
+    "objective": 0.02803493322102058,
+    "training_rows": 319573,
+    "operational_validated": false
+  },
+  "thresholds": {
+    "raw": 0.01928577944636345,
+    "calibrated": 0.020760081708431244,
+    "distance": -5.173450469970703
+  },
+  "model_sha256": "219c1d5aa8ac9955090fed21f953b01ec853b84cc94a09cd7da15620d0d43410",
+  "training_hashes": {
+    "august_complex_2020": "e6da144981b8f7a32783c7dfd13ef5767124325af9529d02e9e2dde5fdb368ad",
+    "bobcat_2020": "30080d5bbc8cf783f4c33fa6af437f2839ef6df3b372793dd378f6c285241330",
+    "creek_2020": "7bb867fa57bedbdd60322e46c2c9400f61821e176a2171f6eb9c6b4eab1fc762",
+    "czu_lightning_complex_2020": "c339bf84cc9ba6988857227f0282155c878c39c6461047cf1c15be9e12520301",
+    "dolan_2020": "f3c87a94777c6c3f37bad7be72071112a0476f0d0a25f3446ff762bff892855e",
+    "glass_2020": "cc290b70fbfa14825ca11382669652d5af64d695e2cdbcad2e11b222fd3dca62",
+    "july_complex_2020": "02c56a76775e12bc80b9ced194693ec9b46b63ca39cb7b55a84accdf87f4a2d5",
+    "kincade_2019": "fd18ec54f5eca8f9781294da95ed78b60e4f294a858a2b9ed0cba79be249353e",
+    "lnu_lightning_complex_2020": "f493902ebc49063f34b0a87c4afbbea18c9f66ef068bb2179404a02495b49403",
+    "north_complex_2020": "f16d7d7402af65e4635e14ab9410784bb00ccb86c755a6b4c7b06def06a8b37f",
+    "red_salmon_complex_2020": "e3db65ec23b4573d7688999795d33d68a9b1d6c8098c89ed97711c8734d5be62",
+    "scu_lightning_complex_2020": "706a7551ee8282c59d8983bfa470a2acce253f8eea9cd8b5b0728477ac145e10",
+    "slater_and_devil_2020": "5e04f035425c6d2246eacfd6d2ade62ed546ecf209a67b7f8274b0d776f5e5c4",
+    "sqf_complex_2020": "235aa340b1b299eb686674fe083caac0bc9e938f3ae224c9db27a7a34d976e3c",
+    "w_5_cold_springs_2020": "c5bbd546db0433b79ed8f5f6860c9412cf817e386c980c55a1df336724189cc5",
+    "walker_2019": "8153a987c4b49ef9bfd924ee33c1f123aa7c4912046403c614af5dabb60c4dc7",
+    "zogg_2020": "b2e4876cd3c5a2a314365f72d95c8df60c4adfda5f749293e55b301123f2dab1"
+  },
+  "reload_max_difference": 0.0,
+  "validation_read_before_receipt_in_this_run": false,
+  "prior_validation_exposure_acknowledged": true
+}

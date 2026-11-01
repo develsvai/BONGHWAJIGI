@@ -1,0 +1,222 @@
+{
+  "created_at_utc": "2026-10-31T18:34:25.947821+00:00",
+  "dataset_path": "data/processed/korea-first-observation-train-20261101-v2",
+  "dataset_report_sha256": "d067bb9491faeacbe1cece1a9ba615f89a0882aae90760941bfbe749c76fffa8",
+  "source_hashes": {
+    "andong_2020": "41c0d86b5f154862c15ffd2722b15d02582847477eb1a46d9dd31236cb089cd5",
+    "andong_2021": "03423a5a5b31cd13c9aea32d3ba949c2dcd9d18ec7c6ffd3406327dd27bd32a0",
+    "bonghwa_2022": "fcbebcec3a87a3c72b527ab55ff7abea722b17395c58a0909d5bdba7bbeac910",
+    "gangneung_donghae_2022": "f14bb4af81aee46cb6129ef788bbdf09027fecc6e2421ca597c01375f7cda22f",
+    "goseong_2020": "d02fc57bde573d054752c9b8cc9aa65ee819aeb0e3bc874d1a0ba7baa4a22c54",
+    "gunwi_2022": "fdd8dbaa7b2a634ff11cbf4954a5f1397a7bc7fa01d9bb5e6ee0590de01afcc0",
+    "hapcheon_2022": "3b7fd3eec38e8f0053c275bfda91f5b01216b6b8da5d37f4db459291d12d3830",
+    "miryang_2022": "a2b24b1fc0019f550de8a944160b2ff6cded733bc9260800c429a51f8ea46de3",
+    "uljin_2022": "3b31f4a3b588e46ae278cbce0326b0ce79537aef0d6514ecf38401abd5201f60",
+    "uljin_may_2022": "2be216310dd8f2270adc33601451693ccee3a458c28cb2440694469823f2250f",
+    "ulju_2020": "56e62ce26af73be3bf74c2bc1597c77c31534620926c744cecbb4f1abc07345c",
+    "yanggu_2022": "cd5cae6f786516a20e215211b038fac53f93f12387bb873608c7319917f6ddb4",
+    "yeongdeok_2022": "1524c6424c1f1f0e38fb512c2bf0ba58134c3ca7e04f77d695ab0928d03b765e",
+    "yeongwol_2022": "d8b7715c64f473d902f1a87bee143326faecca167c4ef7e04ced264c7266883f"
+  },
+  "read_columns": [
+    "cohort_primary_clear60",
+    "actual_history_30m_minutes",
+    "actual_history_60m_minutes",
+    "actual_closing_speed_30m_kmh",
+    "actual_closing_speed_60m_kmh",
+    "history_60m_clear_count",
+    "history_60m_fire_count",
+    "history_60m_unknown_count",
+    "history_60m_source_coverage_fraction",
+    "history_120m_clear_count",
+    "history_120m_fire_count",
+    "history_120m_unknown_count",
+    "history_120m_source_coverage_fraction"
+  ],
+  "train_event_count": 14,
+  "primary_rows_including_horizon_repeats": 404130,
+  "row_count_note": "Each event/issue/cell input repeats across1/3/6h; no future targets or audit columns were read.",
+  "rows_per_event": {
+    "andong_2020": 20586,
+    "andong_2021": 97359,
+    "bonghwa_2022": 3180,
+    "gangneung_donghae_2022": 23895,
+    "goseong_2020": 9507,
+    "gunwi_2022": 987,
+    "hapcheon_2022": 13797,
+    "miryang_2022": 57663,
+    "uljin_2022": 35382,
+    "uljin_may_2022": 2604,
+    "ulju_2020": 37842,
+    "yanggu_2022": 53016,
+    "yeongdeok_2022": 36189,
+    "yeongwol_2022": 12123
+  },
+  "features": {
+    "actual_history_30m_minutes": {
+      "rows": 404130,
+      "missing_rows": 0,
+      "infinite_rows": 0,
+      "finite_min": 20.0,
+      "finite_max": 20.0,
+      "finite_nunique": 1,
+      "constant_among_observed": true,
+      "observed_support_if_at_most_20": [
+        20.0
+      ]
+    },
+    "actual_history_60m_minutes": {
+      "rows": 404130,
+      "missing_rows": 0,
+      "infinite_rows": 0,
+      "finite_min": 50.0,
+      "finite_max": 50.0,
+      "finite_nunique": 1,
+      "constant_among_observed": true,
+      "observed_support_if_at_most_20": [
+        50.0
+      ]
+    },
+    "actual_closing_speed_30m_kmh": {
+      "rows": 404130,
+      "missing_rows": 17316,
+      "infinite_rows": 0,
+      "finite_min": -81.17977905273438,
+      "finite_max": 157.4161376953125,
+      "finite_nunique": 39198,
+      "constant_among_observed": false,
+      "observed_support_if_at_most_20": null
+    },
+    "actual_closing_speed_60m_kmh": {
+      "rows": 404130,
+      "missing_rows": 29973,
+      "infinite_rows": 0,
+      "finite_min": -31.677963256835938,
+      "finite_max": 65.42601013183594,
+      "finite_nunique": 41171,
+      "constant_among_observed": false,
+      "observed_support_if_at_most_20": null
+    },
+    "history_60m_clear_count": {
+      "rows": 404130,
+      "missing_rows": 0,
+      "infinite_rows": 0,
+      "finite_min": 7.0,
+      "finite_max": 7.0,
+      "finite_nunique": 1,
+      "constant_among_observed": true,
+      "observed_support_if_at_most_20": [
+        7.0
+      ]
+    },
+    "history_60m_fire_count": {
+      "rows": 404130,
+      "missing_rows": 0,
+      "infinite_rows": 0,
+      "finite_min": 0.0,
+      "finite_max": 0.0,
+      "finite_nunique": 1,
+      "constant_among_observed": true,
+      "observed_support_if_at_most_20": [
+        0.0
+      ]
+    },
+    "history_60m_unknown_count": {
+      "rows": 404130,
+      "missing_rows": 0,
+      "infinite_rows": 0,
+      "finite_min": 0.0,
+      "finite_max": 0.0,
+      "finite_nunique": 1,
+      "constant_among_observed": true,
+      "observed_support_if_at_most_20": [
+        0.0
+      ]
+    },
+    "history_60m_source_coverage_fraction": {
+      "rows": 404130,
+      "missing_rows": 0,
+      "infinite_rows": 0,
+      "finite_min": 1.0,
+      "finite_max": 1.0,
+      "finite_nunique": 1,
+      "constant_among_observed": true,
+      "observed_support_if_at_most_20": [
+        1.0
+      ]
+    },
+    "history_120m_clear_count": {
+      "rows": 404130,
+      "missing_rows": 0,
+      "infinite_rows": 0,
+      "finite_min": 7.0,
+      "finite_max": 13.0,
+      "finite_nunique": 7,
+      "constant_among_observed": false,
+      "observed_support_if_at_most_20": [
+        7.0,
+        8.0,
+        9.0,
+        10.0,
+        11.0,
+        12.0,
+        13.0
+      ]
+    },
+    "history_120m_fire_count": {
+      "rows": 404130,
+      "missing_rows": 0,
+      "infinite_rows": 0,
+      "finite_min": 0.0,
+      "finite_max": 0.0,
+      "finite_nunique": 1,
+      "constant_among_observed": true,
+      "observed_support_if_at_most_20": [
+        0.0
+      ]
+    },
+    "history_120m_unknown_count": {
+      "rows": 404130,
+      "missing_rows": 0,
+      "infinite_rows": 0,
+      "finite_min": 0.0,
+      "finite_max": 6.0,
+      "finite_nunique": 7,
+      "constant_among_observed": false,
+      "observed_support_if_at_most_20": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0
+      ]
+    },
+    "history_120m_source_coverage_fraction": {
+      "rows": 404130,
+      "missing_rows": 0,
+      "infinite_rows": 0,
+      "finite_min": 0.5384615659713745,
+      "finite_max": 1.0,
+      "finite_nunique": 5,
+      "constant_among_observed": false,
+      "observed_support_if_at_most_20": [
+        0.5384615659713745,
+        0.692307710647583,
+        0.8461538553237915,
+        0.9230769276618958,
+        1.0
+      ]
+    }
+  },
+  "observed_relations": {
+    "history_120m_clear_plus_unknown_always_13": true,
+    "history_120m_fire_always_zero": true,
+    "actual_history_30m_always_20": true,
+    "actual_history_60m_always_50": true
+  },
+  "all_or_partly_constant_feature_count": 7,
+  "nontrain_read": false,
+  "operational_use": false
+}

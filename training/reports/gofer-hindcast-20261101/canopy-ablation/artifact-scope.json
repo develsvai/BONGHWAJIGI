@@ -1,0 +1,102 @@
+{
+  "remote_original_artifact": "/home1/ncloud/bonghwajigi/data/artifacts/elmfire/walker2019-canopy-ablation-v1",
+  "included": "Reports, fixed plan, pre-evaluation receipt, all6 logs/namelists/stats; no raster inputs or scratch copies",
+  "new_api_requests": 12,
+  "operational_use": false,
+  "probability": null,
+  "physical_retuning_after_results": false,
+  "local_files": {
+    "canopy_crown0_m3_4_5/inputs/elmfire.data": {
+      "bytes": 1366,
+      "sha256": "8fd76081ac52a9d1bb43f3e97706a2b5169fe03fc54fc8ed2e9e0be6164ed58d"
+    },
+    "canopy_crown0_m3_4_5/outputs/fire_size_stats.csv": {
+      "bytes": 495,
+      "sha256": "785e724421930e5adc9292fcaa74ea69837f9cf2182b255f242ed653c154052d"
+    },
+    "canopy_crown0_m3_4_5/run.log": {
+      "bytes": 66874,
+      "sha256": "6cdbbe2102700632167fe0c6686186a591a7380dfc0dbedcbcf4c00d6f3047ac"
+    },
+    "canopy_crown0_m6_7_8/inputs/elmfire.data": {
+      "bytes": 1366,
+      "sha256": "8fd76081ac52a9d1bb43f3e97706a2b5169fe03fc54fc8ed2e9e0be6164ed58d"
+    },
+    "canopy_crown0_m6_7_8/outputs/fire_size_stats.csv": {
+      "bytes": 495,
+      "sha256": "7590c512e5e0de9bd8ed6a603b2cc56f90d58d7097f2642af70d4637b1ac0e98"
+    },
+    "canopy_crown0_m6_7_8/run.log": {
+      "bytes": 66874,
+      "sha256": "874b71c80fa270de59bffe9a6f16ad6c065c827344171658ac347d94e8bad9fa"
+    },
+    "canopy_crown0_m9_10_11/inputs/elmfire.data": {
+      "bytes": 1366,
+      "sha256": "8fd76081ac52a9d1bb43f3e97706a2b5169fe03fc54fc8ed2e9e0be6164ed58d"
+    },
+    "canopy_crown0_m9_10_11/outputs/fire_size_stats.csv": {
+      "bytes": 495,
+      "sha256": "061e986f219fab0edd8cffb269da6de5abed58499de2b5c1bda65006c294ce8b"
+    },
+    "canopy_crown0_m9_10_11/run.log": {
+      "bytes": 66878,
+      "sha256": "54df622db6cead2be086220621e6fd9a33696153545ff9070c16c6a4dd4434c4"
+    },
+    "canopy_crown1_m3_4_5/inputs/elmfire.data": {
+      "bytes": 1366,
+      "sha256": "6d3b2ee3bb3651805f9a89747ed4ecabcc3bbd1f1183a39bc44d6765376c4e87"
+    },
+    "canopy_crown1_m3_4_5/outputs/fire_size_stats.csv": {
+      "bytes": 495,
+      "sha256": "8c018b8bdc5bb7538e47b681c2d90fe61eafc8757f5740a3d48d23731d94b33a"
+    },
+    "canopy_crown1_m3_4_5/run.log": {
+      "bytes": 79417,
+      "sha256": "398f1e157137fbd6fa7246b6f8209a9ec5377ea70b67f46a6061d5915a63104a"
+    },
+    "canopy_crown1_m6_7_8/inputs/elmfire.data": {
+      "bytes": 1366,
+      "sha256": "6d3b2ee3bb3651805f9a89747ed4ecabcc3bbd1f1183a39bc44d6765376c4e87"
+    },
+    "canopy_crown1_m6_7_8/outputs/fire_size_stats.csv": {
+      "bytes": 495,
+      "sha256": "a37a4dcfaca6a375760446c258299a9be9cd40831df829922140534d98caf752"
+    },
+    "canopy_crown1_m6_7_8/run.log": {
+      "bytes": 67435,
+      "sha256": "c95731cbf8c5cd515485fd206aaabfcb50a63e183558b67d737503115ac1a50e"
+    },
+    "canopy_crown1_m9_10_11/inputs/elmfire.data": {
+      "bytes": 1366,
+      "sha256": "6d3b2ee3bb3651805f9a89747ed4ecabcc3bbd1f1183a39bc44d6765376c4e87"
+    },
+    "canopy_crown1_m9_10_11/outputs/fire_size_stats.csv": {
+      "bytes": 495,
+      "sha256": "98f5d6a4a844485f5f5d7da84364e682ee2ec8a487660ebd80e14165d8ac0f60"
+    },
+    "canopy_crown1_m9_10_11/run.log": {
+      "bytes": 66833,
+      "sha256": "049eefc15df4cdbfe9d7987c804f50c600bcf8efa0b06cf1c405cf34f6e1241d"
+    },
+    "evaluation.json": {
+      "bytes": 45499,
+      "sha256": "67d6780b6a9a643fdb4b9d437b302475bd6db89237d7aa4b25cc69fa7652593e"
+    },
+    "fit-receipt.json": {
+      "bytes": 28674,
+      "sha256": "cbfd931d03d7e84e242c533be907ca24881af727e2672b61a00a7bce9b95f2ab"
+    },
+    "licenses.json": {
+      "bytes": 1140,
+      "sha256": "bce5c81a031d554963d98424ff21b23a9706e4f5010bd61fc560811ccebc5dc9"
+    },
+    "plan.json": {
+      "bytes": 24069,
+      "sha256": "aa35cff3967feb5cf99d7edc2d9939a4eb1e493e568c46c4f7d05c496878a84c"
+    },
+    "report.json": {
+      "bytes": 53881,
+      "sha256": "aea7d33d1c5d0167bc7925768e6a76eb39a924a8ca03f632c157c62d8d387873"
+    }
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "schema_version": "hrrr_independent_h2_review_v1",
+  "review_started_at_utc": "2026-10-31T17:30:51.492245+00:00",
+  "review_completed_at_utc": "2026-10-31T17:30:51.951397+00:00",
+  "reviewer": "korea_impact_data_review subagent; independent from module author",
+  "verdict": "No blocking physical or metadata error found in the actual h2 probe and examined code path",
+  "operational_use": false,
+  "probability": null,
+  "source_code": {
+    "path": "training/src/bonghwa_training/hrrr_hindcast_weather.py",
+    "sha256": "09305dddc1f0e089b89164c8b762f7820b5301b32551307990c41af39bfcb160",
+    "unchanged_during_review": true
+  },
+  "inputs": [
+    {
+      "path": "data/raw/gofer-hindcast/walker-2019/hrrr-probe/ugrd-h2.grib2",
+      "sha256": "09bd887402717f16b48aec28e8b87010a23d335bd5bbaeb8ed0151a198fb498c",
+      "bytes": 1168856,
+      "raw_metadata": {
+        "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+        "valid_time_utc": "2019-09-04T22:00:00+00:00",
+        "height_m": 10,
+        "grid_definition_template": 30,
+        "resolution_component_flags": 8,
+        "grid_relative": true,
+        "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+        "product_template": 0,
+        "variable": "UGRD"
+      },
+      "decoded_metadata": {
+        "GRIB_UNIT": "[m/s]",
+        "GRIB_COMMENT": "u-component of wind [m/s]",
+        "GRIB_ELEMENT": "UGRD",
+        "GRIB_SHORT_NAME": "10-HTGL",
+        "GRIB_REF_TIME": "1567627200",
+        "GRIB_VALID_TIME": "1567634400",
+        "GRIB_FORECAST_SECONDS": "7200",
+        "GRIB_DISCIPLINE": "0(Meteorological)",
+        "GRIB_IDS": "CENTER=7(US-NCEP) SUBCENTER=0 MASTER_TABLE=2 LOCAL_TABLE=1 SIGNF_REF_TIME=1(Start_of_Forecast) REF_TIME=2019-09-04T20:00:00Z PROD_STATUS=0(Operational) TYPE=1(Forecast)",
+        "GRIB_PDS_PDTN": "0",
+        "GRIB_PDS_TEMPLATE_NUMBERS": "2 2 2 0 83 0 0 0 1 0 0 0 2 103 0 0 0 0 10 255 0 0 0 0 0",
+        "GRIB_PDS_TEMPLATE_ASSEMBLED_VALUES": "2 2 2 0 83 0 0 1 2 103 0 10 255 0 0"
+      }
+    },
+    {
+      "path": "data/raw/gofer-hindcast/walker-2019/hrrr-probe/vgrd-h2.grib2",
+      "sha256": "e039a0fbac37b01e634bfd807614e463fc1c7d74b3e8fb8c78a7a93722210872",
+      "bytes": 1116306,
+      "raw_metadata": {
+        "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+        "valid_time_utc": "2019-09-04T22:00:00+00:00",
+        "height_m": 10,
+        "grid_definition_template": 30,
+        "resolution_component_flags": 8,
+        "grid_relative": true,
+        "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+        "product_template": 0,
+        "variable": "VGRD"
+      },
+      "decoded_metadata": {
+        "GRIB_UNIT": "[m/s]",
+        "GRIB_COMMENT": "v-component of wind [m/s]",
+        "GRIB_ELEMENT": "VGRD",
+        "GRIB_SHORT_NAME": "10-HTGL",
+        "GRIB_REF_TIME": "1567627200",
+        "GRIB_VALID_TIME": "1567634400",
+        "GRIB_FORECAST_SECONDS": "7200",
+        "GRIB_DISCIPLINE": "0(Meteorological)",
+        "GRIB_IDS": "CENTER=7(US-NCEP) SUBCENTER=0 MASTER_TABLE=2 LOCAL_TABLE=1 SIGNF_REF_TIME=1(Start_of_Forecast) REF_TIME=2019-09-04T20:00:00Z PROD_STATUS=0(Operational) TYPE=1(Forecast)",
+        "GRIB_PDS_PDTN": "0",
+        "GRIB_PDS_TEMPLATE_NUMBERS": "2 3 2 0 83 0 0 0 1 0 0 0 2 103 0 0 0 0 10 255 0 0 0 0 0",
+        "GRIB_PDS_TEMPLATE_ASSEMBLED_VALUES": "2 3 2 0 83 0 0 1 2 103 0 10 255 0 0"
+      }
+    }
+  ],
+  "scope": {
+    "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+    "valid_time_utc": "2019-09-04T22:00:00+00:00",
+    "forecast_hour": 2,
+    "height_m": 10,
+    "components": [
+      "UGRD",
+      "VGRD"
+    ],
+    "unit": "m/s",
+    "target_crs": "EPSG:32610",
+    "target_shape": [
+      419,
+      411
+    ],
+    "target_transform": [
+      100.0,
+      0.0,
+      677100.0,
+      0.0,
+      -100.0,
+      4456400.0
+    ],
+    "all_target_values_finite": true,
+    "speed_range_m_s": [
+      0.021527094766497612,
+      4.824307441711426
+    ],
+    "direction_range_deg": [
+      0.05074489861726761,
+      359.9437561035156
+    ],
+    "source_grid_north_true_bearing_range_deg": [
+      -14.701285831266924,
+      -14.140613224470082
+    ],
+    "wrong_forecast_hours": [
+      {
+        "variable": "UGRD",
+        "requested_forecast_hour": 1,
+        "rejected": true
+      },
+      {
+        "variable": "UGRD",
+        "requested_forecast_hour": 3,
+        "rejected": true
+      },
+      {
+        "variable": "VGRD",
+        "requested_forecast_hour": 1,
+        "rejected": true
+      },
+      {
+        "variable": "VGRD",
+        "requested_forecast_hour": 3,
+        "rejected": true
+      }
+    ]
+  },
+  "rotation_sign_check": {
+    "geographic_test_location": {
+      "longitude_deg": -120.4,
+      "latitude_deg": 40.1
+    },
+    "source_grid_definition": "Lambert conformal tangent cone, lat_1=lat_2=38.5 deg, lon_0=-97.5 deg, sphere radius 6371229 m",
+    "module_formula": "east=u*cos(beta)+v*sin(beta); north=-u*sin(beta)+v*cos(beta)",
+    "beta_definition": "Clockwise true-north bearing of projected source-grid positive y direction",
+    "module_finite_difference_beta_deg": -14.255586942013085,
+    "independent_proj_meridian_convergence_deg": -14.255585179073037,
+    "beta_minus_proj_deg": -1.7629400481666835e-06,
+    "independent_projected_1km_north_geodesic_azimuth_deg": -14.255553853212,
+    "unit_grid_east_rotated_true_east_north": [
+      0.9692069025600577,
+      0.24624780208143743
+    ],
+    "unit_grid_north_rotated_true_east_north": [
+      -0.24624780208143743,
+      0.9692069025600577
+    ],
+    "max_rotation_norm_difference_m_s": 8.881784197001252e-16
+  },
+  "manual_vector_bilinear_check": {
+    "method": "For 25 target pixel centers, transform coordinates into the source CRS; independently derive Lambert tangent-cone convergence beta=sin(lat_1)*(longitude-lon_0); rotate each of four surrounding raw U/V cells with the analytical basis; apply explicit bilinear weights to east/north components; derive speed and clockwise true-north FROM direction after interpolation.",
+    "sample_count": 25,
+    "sampled_target_cells_zero_based": [
+      {
+        "row": 0,
+        "column": 0
+      },
+      {
+        "row": 0,
+        "column": 102
+      },
+      {
+        "row": 0,
+        "column": 205
+      },
+      {
+        "row": 0,
+        "column": 308
+      },
+      {
+        "row": 0,
+        "column": 410
+      },
+      {
+        "row": 104,
+        "column": 0
+      },
+      {
+        "row": 104,
+        "column": 102
+      },
+      {
+        "row": 104,
+        "column": 205
+      },
+      {
+        "row": 104,
+        "column": 308
+      },
+      {
+        "row": 104,
+        "column": 410
+      },
+      {
+        "row": 209,
+        "column": 0
+      },
+      {
+        "row": 209,
+        "column": 102
+      },
+      {
+        "row": 209,
+        "column": 205
+      },
+      {
+        "row": 209,
+        "column": 308
+      },
+      {
+        "row": 209,
+        "column": 410
+      },
+      {
+        "row": 314,
+        "column": 0
+      },
+      {
+        "row": 314,
+        "column": 102
+      },
+      {
+        "row": 314,
+        "column": 205
+      },
+      {
+        "row": 314,
+        "column": 308
+      },
+      {
+        "row": 314,
+        "column": 410
+      },
+      {
+        "row": 418,
+        "column": 0
+      },
+      {
+        "row": 418,
+        "column": 102
+      },
+      {
+        "row": 418,
+        "column": 205
+      },
+      {
+        "row": 418,
+        "column": 308
+      },
+      {
+        "row": 418,
+        "column": 410
+      }
+    ],
+    "max_component_difference_m_s": 0.0010414739496319436,
+    "max_speed_difference_m_s": 0.001211673500156607,
+    "max_circular_direction_difference_deg": 0.05456283055423228,
+    "error_interpretation": "Small differences from the module GDAL reprojection were observed. The exact cause was not established; these are numerical agreement measurements, not forecast accuracy."
+  },
+  "independence_scope": [
+    "Independent reviewer and explicit analytical Lambert rotation and four-cell bilinear implementation; did not call module grid_to_true for the analytical interpolation reference.",
+    "The separate one-point basis example calls grid_to_true only to report the module output; its angle is checked against PROJ factors and a projected 1km geodesic bearing.",
+    "Both paths share GDAL/rasterio GRIB decoding and PROJ coordinate-transformation libraries. This is not an independent second GRIB decoder or independent geodetic library verification.",
+    "The comparison uses the module target grid as the agreed grid contract, not an independently inferred fire footprint."
+  ],
+  "limitations": [
+    "Only actual h2 U/V files were numerically reviewed; h3 through h8 source files and outputs were not independently evaluated here.",
+    "Archived operational forecast reference and valid time were checked; actual historical publication/retrieval availability before simulation start was not established.",
+    "No forecast skill, fire spread accuracy, arrival-time calibration, Korean transfer performance, personal harm probability, or operational suitability is established by these checks.",
+    "25 sampled pixel comparisons are not exhaustive bitwise verification of all output cells. The entire h2 output was checked for finite values.",
+    "Source wind resolution is 3km; resampling onto 100m cells does not create 100m meteorological detail."
+  ],
+  "official_metadata_references": [
+    "https://www.nco.ncep.noaa.gov/pmb/docs/grib2/grib2_doc/grib2_table3-3.shtml",
+    "https://www.nco.ncep.noaa.gov/pmb/docs/grib2/grib2_doc/grib2_temp3-30.shtml",
+    "https://www.nco.ncep.noaa.gov/pmb/docs/grib2/grib2_doc/grib2_temp4-0.shtml"
+  ]
+}

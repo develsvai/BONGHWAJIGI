@@ -1,0 +1,355 @@
+{
+  "profile": "korea_static_terrain_100m_research_v1",
+  "status": "ready",
+  "created_at_utc": "2026-10-31T16:52:56.456446+00:00",
+  "operational_use": false,
+  "fire_labels_accessed": false,
+  "fuel_model_mapping_performed": false,
+  "crs": "EPSG:32652",
+  "shape": [
+    100,
+    100
+  ],
+  "pixel_size_m": 100,
+  "transform": [
+    100.0,
+    0.0,
+    521692.8540702973,
+    0.0,
+    -100.0,
+    4099914.4265484256
+  ],
+  "bounds_m": [
+    521692.8540702973,
+    4089914.4265484256,
+    531692.8540702973,
+    4099914.4265484256
+  ],
+  "requested_center_longitude_latitude": [
+    129.3,
+    37.0
+  ],
+  "actual_domain_center_easting_northing_m": [
+    526692.8540702973,
+    4094914.4265484256
+  ],
+  "actual_domain_center_longitude_latitude": [
+    129.3,
+    37.000000000000014
+  ],
+  "central_cell_centers": [
+    {
+      "row": 49,
+      "column": 49,
+      "easting_m": 526642.8540702973,
+      "northing_m": 4094964.4265484256,
+      "longitude_latitude": [
+        129.29943982628814,
+        37.000452134228375
+      ]
+    },
+    {
+      "row": 49,
+      "column": 50,
+      "easting_m": 526742.8540702973,
+      "northing_m": 4094964.4265484256,
+      "longitude_latitude": [
+        129.3005637152056,
+        37.00044929366161
+      ]
+    },
+    {
+      "row": 50,
+      "column": 49,
+      "easting_m": 526642.8540702973,
+      "northing_m": 4094864.4265484256,
+      "longitude_latitude": [
+        129.2994362914279,
+        36.99955070359755
+      ]
+    },
+    {
+      "row": 50,
+      "column": 50,
+      "easting_m": 526742.8540702973,
+      "northing_m": 4094864.4265484256,
+      "longitude_latitude": [
+        129.30056016707846,
+        36.99954786312319
+      ]
+    }
+  ],
+  "center_note": "Even-sized grid: requested point is the intersection of four cells",
+  "aspect_reference": "grid_north_clockwise_downslope",
+  "aspect_reference_note": "EPSG:32652 grid north; not true north",
+  "flat_aspect_convention": "0 is numeric only; direction undefined where flat_mask=1",
+  "forest_mask_definition": {
+    "tree_classes": [
+      50,
+      60,
+      61,
+      62,
+      70,
+      71,
+      72,
+      80,
+      81,
+      82,
+      90,
+      151,
+      160,
+      170
+    ],
+    "one": "explicit CCI tree-cover or sparse-tree class",
+    "zero": "other known class; does not mean nonburnable or safe",
+    "unknown": 255,
+    "mixed_tree_shrub_class_100_excluded": true
+  },
+  "sources": {
+    "dem": [
+      {
+        "path": "data/raw/korea-wildfire/static/dem/Copernicus_DSM_COG_30_N36_00_E129_00_DEM.tif",
+        "sha256": "92746ac13c1d2849bdb88aae3f3cb80e6d5431d096faeebf2874e36ee310b5a6",
+        "bytes": 2603113,
+        "source_url": "https://elevationeuwest.blob.core.windows.net/copernicus-dem/COP90_hh/Copernicus_DSM_COG_30_N36_00_E129_00_DEM.tif",
+        "source_sidecar": "data/raw/korea-wildfire/static/dem/Copernicus_DSM_COG_30_N36_00_E129_00_DEM.tif.source.json",
+        "source_sidecar_sha256": "800b48c299100753c059d01930b2e11a829a15a60cecfa9586b6bbc8b7d2e022",
+        "crs": "EPSG:4326",
+        "shape": [
+          1200,
+          1200
+        ],
+        "transform": [
+          0.0008333333333333334,
+          0.0,
+          128.99958333333333,
+          0.0,
+          -0.0008333333333333334,
+          37.000416666666666
+        ],
+        "bounds": [
+          128.99958333333333,
+          36.000416666666666,
+          129.99958333333333,
+          37.000416666666666
+        ],
+        "dtype": "float32",
+        "nodata": null,
+        "retrieved_at_utc": "2026-10-31T11:35:14.104190+00:00",
+        "headers": {
+          "ETag": "\"0x8D975BFA0A61FB4\"",
+          "Last-Modified": "Sun, 12 Sep 2021 07:33:34 GMT"
+        },
+        "collection": "cop-dem-glo-90",
+        "nominal_resolution_m": 90,
+        "stac_datetime": "2021-04-22T00:00:00Z"
+      },
+      {
+        "path": "data/raw/korea-wildfire/static/dem/Copernicus_DSM_COG_30_N37_00_E129_00_DEM.tif",
+        "sha256": "6524632f915843c48f9fc26e109726b77a8bca6ef5dfc285cc22e4253b863628",
+        "bytes": 1111098,
+        "source_url": "https://elevationeuwest.blob.core.windows.net/copernicus-dem/COP90_hh/Copernicus_DSM_COG_30_N37_00_E129_00_DEM.tif",
+        "source_sidecar": "data/raw/korea-wildfire/static/dem/Copernicus_DSM_COG_30_N37_00_E129_00_DEM.tif.source.json",
+        "source_sidecar_sha256": "6ed1213d06ea83962a500ae50e0e9a797ca5741e3cfea4714ee954e317654d37",
+        "crs": "EPSG:4326",
+        "shape": [
+          1200,
+          1200
+        ],
+        "transform": [
+          0.0008333333333333334,
+          0.0,
+          128.99958333333333,
+          0.0,
+          -0.0008333333333333334,
+          38.000416666666666
+        ],
+        "bounds": [
+          128.99958333333333,
+          37.000416666666666,
+          129.99958333333333,
+          38.000416666666666
+        ],
+        "dtype": "float32",
+        "nodata": null,
+        "retrieved_at_utc": "2026-10-31T11:34:51.767343+00:00",
+        "headers": {
+          "ETag": "\"0x8D975BFC053473D\"",
+          "Last-Modified": "Sun, 12 Sep 2021 07:34:27 GMT"
+        },
+        "collection": "cop-dem-glo-90",
+        "nominal_resolution_m": 90,
+        "stac_datetime": "2021-04-22T00:00:00Z"
+      }
+    ],
+    "landcover": {
+      "path": "data/raw/korea-wildfire/static/landcover-2015-korea.tif",
+      "sha256": "298da9b18754ee9b5c1a2d609fdf3fc8bda0581841a485074293301754c3ecb4",
+      "bytes": 468393,
+      "source_url": "https://landcoverdata.blob.core.windows.net/esa-cci-lc/cog/v2.0.7cds/N00E090/2015/ESACCI-LC-L4-LCCS-Map-300m-P1Y-2015-v2.0.7cds-N00E090-lccs_class.tif",
+      "source_sidecar": "data/raw/korea-wildfire/static/landcover-2015-korea.json",
+      "source_sidecar_sha256": "3cdac7eb3e829ec39cffe481b0df8a52e0ed52ee1d1e5ee59638be1a7e2812b8",
+      "crs": "EPSG:4326",
+      "shape": [
+        2052,
+        2700
+      ],
+      "transform": [
+        0.002777777777777778,
+        0.0,
+        124.5,
+        0.0,
+        -0.0027777777777777783,
+        38.7
+      ],
+      "bounds": [
+        124.5,
+        33.0,
+        132.0,
+        38.7
+      ],
+      "dtype": "uint8",
+      "nodata": 0.0,
+      "derivation": "원본 COG의 bbox 창 추출",
+      "bbox": [
+        124.5,
+        33.0,
+        132.0,
+        38.7
+      ],
+      "item_id": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-2015-v2.0.7cds-N00E090",
+      "collection": "esa-cci-lc",
+      "year": 2015,
+      "nominal_resolution_m": 300,
+      "quality_assets_acquired": false
+    },
+    "stac": [
+      {
+        "path": "data/raw/korea-wildfire/stac/dem.json",
+        "sha256": "c38bbc9c5119fd0aed00e99f2192d4fbb488afeb80a417097405d36df494db15"
+      },
+      {
+        "path": "data/raw/korea-wildfire/stac/landcover.json",
+        "sha256": "d27299aaff81a47f47909636782cd5c3540bf90eabd22dc3a3f6d23637abb271"
+      }
+    ]
+  },
+  "qc": {
+    "dem": {
+      "mosaic_shape": [
+        2400,
+        1200
+      ],
+      "resampling": "bilinear",
+      "valid_target_pixels_including_halo": 10404,
+      "target_pixels_including_halo": 10404,
+      "valid_coverage_fraction": 1.0,
+      "source_zero_elevation_preserved": true,
+      "source_nodata_reassigned": false,
+      "footprint_and_interpolation_support_complete": true
+    },
+    "halo_pixels_each_side": 1,
+    "terrain_finite_fraction": 1.0,
+    "landcover_class_counts": {
+      "11": 405,
+      "30": 1168,
+      "60": 1131,
+      "61": 39,
+      "70": 6832,
+      "80": 66,
+      "100": 53,
+      "120": 87,
+      "121": 177,
+      "150": 12,
+      "160": 15,
+      "180": 15
+    },
+    "landcover_unknown_pixels": 0,
+    "landcover_known_fraction": 1.0,
+    "flat_pixels": 0
+  },
+  "outputs": {
+    "elevation_m.tif": {
+      "path": "elevation_m.tif",
+      "sha256": "2242fc8597047d25a1db471ef167a795000340c93067478c38905cae08950b58",
+      "bytes": 36424,
+      "dtype": "float32",
+      "nodata": null,
+      "minimum": 16.93949317932129,
+      "maximum": 797.2478637695312
+    },
+    "slope_deg.tif": {
+      "path": "slope_deg.tif",
+      "sha256": "4f75c30863fcda1a845e347e9ba68e7766100b70aa4113ede7c4d0d167933439",
+      "bytes": 36210,
+      "dtype": "float32",
+      "nodata": null,
+      "minimum": 0.1934255063533783,
+      "maximum": 36.87614822387695
+    },
+    "aspect_deg.tif": {
+      "path": "aspect_deg.tif",
+      "sha256": "1d23d3270582d9f53bf2a9c0bc776fa1813928683dd9c4d2995329357d7aae03",
+      "bytes": 36943,
+      "dtype": "float32",
+      "nodata": null,
+      "minimum": 0.05639077350497246,
+      "maximum": 359.9933776855469
+    },
+    "flat_mask.tif": {
+      "path": "flat_mask.tif",
+      "sha256": "ff14553261d875f577afc76dfb16f58b24e4d798a1429b8859c4f60684ab28a9",
+      "bytes": 912,
+      "dtype": "uint8",
+      "nodata": null,
+      "minimum": 0.0,
+      "maximum": 0.0
+    },
+    "landcover_class.tif": {
+      "path": "landcover_class.tif",
+      "sha256": "b99fb4576c4d6bda9b59eb9547a68c47fe0b2a1a398c66a4a0a104cb7b026e11",
+      "bytes": 1472,
+      "dtype": "uint8",
+      "nodata": 0,
+      "minimum": 11.0,
+      "maximum": 180.0
+    },
+    "forest_mask.tif": {
+      "path": "forest_mask.tif",
+      "sha256": "5022901139a11c93087e36c993076051478a2a932ad98a78a097efc01a4322b0",
+      "bytes": 1275,
+      "dtype": "uint8",
+      "nodata": 255,
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "water_mask.tif": {
+      "path": "water_mask.tif",
+      "sha256": "2451506ad88b6463269a66392da4920d86f8f74fb5142dd5bc1484758253888f",
+      "bytes": 960,
+      "dtype": "uint8",
+      "nodata": 255,
+      "minimum": 0.0,
+      "maximum": 0.0
+    },
+    "unknown_mask.tif": {
+      "path": "unknown_mask.tif",
+      "sha256": "9cd8815778f3e38b10a6840e3ceb01a0c21a0d25358c11a74a29cbaf86500293",
+      "bytes": 930,
+      "dtype": "uint8",
+      "nodata": null,
+      "minimum": 0.0,
+      "maximum": 0.0
+    }
+  },
+  "limitations": [
+    "Copernicus GLO-90 is a surface DSM, not a bare-earth DTM; filename COG_30 is not 30m resolution",
+    "100m metric regridding does not increase source detail; DEM bilinear and CCI nearest only",
+    "2015 land-cover classes may differ from present conditions and do not provide current fuel",
+    "CCI quality, observation-count and current-pixel-state assets were not acquired",
+    "CCI 0 or unsupported class is unknown, never nonburnable; urban and non-tree are not safe",
+    "Tree classes do not determine species, Scott-Burgan fuel, canopy, fuel load or moisture",
+    "DEM source nodata metadata alone does not establish terrain accuracy or bare-earth height",
+    "Scenario extent is a fixed requested square, not a fire observation or validated hazard extent"
+  ]
+}

@@ -1,0 +1,431 @@
+{
+  "schema": "korea_public_label_source_review_v1",
+  "reviewed_at_utc": "2026-10-31T18:28:00.603976+00:00",
+  "scope": "2019–2024 domestic temporal perimeter and static forest inputs",
+  "result": {
+    "new_hourly_measured_perimeter_gis_acquired": false,
+    "new_static_landcover_acquired": true,
+    "downloaded_domestic2025_event_or_label_files": false,
+    "trained_or_evaluated": false,
+    "source_files_modified": false,
+    "external_contact_or_application_submitted": false,
+    "total_retained_raw_and_derived_bytes": 7755593,
+    "budget_bytes": 100000000
+  },
+  "sources": [
+    {
+      "id": "esa_worldcover_2021",
+      "name": "ESA WorldCover 2021 v200 N36E129",
+      "type": "static_land_cover",
+      "status": "acquired_and_raster_inspected",
+      "urls": [
+        "https://esa-worldcover.org/en/data-access",
+        "https://esa-worldcover.org/en/release-worldcover-map-2021",
+        "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v200/2021/map/ESA_WorldCover_10m_2021_v200_N36E129_Map.tif"
+      ],
+      "reference_period": [
+        "2021-01-01",
+        "2021-12-31"
+      ],
+      "released_at": "2022-10-28",
+      "observation_timestamp_precision": "annual composite; no pixel-level acquisition timestamp in downloaded map",
+      "crs": "EPSG:4326",
+      "crs_verified_from_file": true,
+      "license": "CC-BY-4.0",
+      "direct_data_file": "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v200/2021/map/ESA_WorldCover_10m_2021_v200_N36E129_Map.tif",
+      "raw_file": "data/raw/korea-source-alignment-20261101/public-labels/ESA_WorldCover_10m_2021_v200_N36E129_Map.tif",
+      "raw_sha256": "c824fd6d591124a4d92ba909ea636f6c62e966c60426f69a3cbc7d90f95ee948",
+      "bytes": 6602194,
+      "purpose": "static tree-cover and land-cover candidate, not a calibrated fuel model or fire arrival label",
+      "asof_for_2022_march": false,
+      "aoi": {
+        "center_lon_lat": [
+          129.3,
+          37.0
+        ],
+        "requested_bounds_lon_lat": [
+          129.24,
+          36.955,
+          129.36,
+          37.045
+        ],
+        "window_shape": [
+          1080,
+          1440
+        ],
+        "class_counts": {
+          "10": 1467174,
+          "30": 39560,
+          "40": 31765,
+          "50": 10132,
+          "60": 5833,
+          "80": 736
+        },
+        "selection": "pre-existing fixed Korea scenario domain; no fire outcome access",
+        "unknown_code_0_count": 0,
+        "tree_cover_code_10_count": 1467174
+      },
+      "clip": {
+        "path": "esa-worldcover-2021-korea-fixed-scenario-clip.tif",
+        "sha256": "99e14f4847b47afedcd290c2b37d4d96682b7aa83ceb6d6604af08ffbc2ee8df",
+        "bytes": 41499,
+        "transformation": "exact native pixel window; no resampling",
+        "transform": [
+          8.333333333333333e-05,
+          0.0,
+          129.24,
+          0.0,
+          -8.333333333333333e-05,
+          37.045
+        ],
+        "required_attribution": "© ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data (2021) processed by ESA WorldCover consortium",
+        "transformation_notice": "Native pixel window clipped for a fixed geographic area; no class remapping or spatial resampling."
+      },
+      "training_ingested": false
+    },
+    {
+      "id": "kfs_forest_map",
+      "name": "Korea Forest Service 1:5000 forest map 2019 / 2024",
+      "type": "static_forest_gis",
+      "status": "official_catalog_and_application_workflow_verified_no_application_submitted",
+      "urls": [
+        "https://www.data.go.kr/data/15093362/fileData.do?recommendDataYn=Y",
+        "https://map.forest.go.kr/forest/"
+      ],
+      "reference_periods": {
+        "2019": [
+          "2015",
+          "2019"
+        ],
+        "2024": [
+          "2020",
+          "2024"
+        ]
+      },
+      "license": "catalog says 이용허락범위 제한 없음; application conditions also apply",
+      "format": "SHP ZIP",
+      "crs": null,
+      "crs_verified_from_file": false,
+      "direct_data_file": null,
+      "downloaded": false,
+      "application_submitted": false,
+      "barriers": [
+        "Form requires applicant information, pledge/purpose; no external submission authorized or performed.",
+        "Portal shows both mandatory identity verification notice and general applicant no-auth text; actual authentication workflow not tested."
+      ],
+      "fields": [
+        "tree species",
+        "stand origin",
+        "forest type",
+        "diameter class",
+        "age class",
+        "canopy density",
+        "stand height",
+        "update year"
+      ],
+      "warnings": [
+        "not a Scott-Burgan fuel map",
+        "2024 survey may include post-2022-fire conditions",
+        "map-year and per-stand survey/update/release dates must be separated"
+      ]
+    },
+    {
+      "id": "fired_korea_2024",
+      "name": "FIRED South Korea November 2000–July 2024",
+      "type": "satellite_daily_burn_reconstruction_candidate",
+      "status": "pre2025_official_repo_link_identified_record_403_stopped",
+      "urls": [
+        "https://raw.githubusercontent.com/earthlab/firedpy/6376e3f91852287d54f629e663177fd6d2031bbf/README.md",
+        "https://scholar.colorado.edu/concern/datasets/kw52j990z"
+      ],
+      "pinned_commit": "6376e3f91852287d54f629e663177fd6d2031bbf",
+      "pinned_commit_at": "2024-11-13T05:02:18Z",
+      "record_http_status": 403,
+      "downloaded": false,
+      "bypass_attempted": false,
+      "daily_layer_verified": false,
+      "license": null,
+      "crs": null,
+      "raw_observation_time_verified": false,
+      "warnings": [
+        "MODIS daily reconstructed burned extent is not hourly measured active fire front.",
+        "No assumption that code/paper license grants rights to this archive."
+      ]
+    },
+    {
+      "id": "jrc_globfire_daily",
+      "name": "JRC GlobFire v2 DailyPerimeters",
+      "type": "satellite_daily_burn_reconstruction",
+      "status": "official_catalog_verified_no_data_download",
+      "urls": [
+        "https://developers.google.com/earth-engine/datasets/catalog/JRC_GWIS_GlobFire_v2_DailyPerimeters",
+        "https://doi.org/10.1038/s41597-019-0312-2"
+      ],
+      "availability": [
+        "2001-01-01T00:00:00Z",
+        "2021-01-01T00:00:00Z"
+      ],
+      "license": "CC-BY-4.0",
+      "known_fields": {
+        "Id": "integer event identifier",
+        "InitialDate": "integer epoch milliseconds for initial fire date"
+      },
+      "crs": null,
+      "downloaded": false,
+      "barriers": [
+        "Earth Engine registered access required for documented subset route; no account created/used."
+      ],
+      "warnings": [
+        "MODIS MCD64A1 space-time grouping, not 1–6h physical arrival truth",
+        "Daily layer timestamp field semantics must be verified in actual export; InitialDate is event start, not necessarily per-snapshot observation time.",
+        "Bulk GWIS 2002–2023 archive is about4.2GB; not downloaded under100MB budget and final perimeters differ from daily layers."
+      ]
+    },
+    {
+      "id": "nifos_2023_time_perimeters",
+      "name": "NIFOS 2023 four-fire temporal perimeters, Fire9(1)31",
+      "type": "requested_measured_or_manually_reconstructed_temporal_geometry",
+      "status": "prior_audit_request_only_candidate_no_contact",
+      "urls": [
+        "https://www.mdpi.com/2571-6255/9/1/31"
+      ],
+      "prior_evidence": "training/reports/gofer-hindcast-20261101/domestic-label-sources.md",
+      "downloaded": false,
+      "license": null,
+      "crs": null,
+      "raw_snapshot_count_verified": false,
+      "paper_table_nonzero_perimeter_rows": 31,
+      "warnings": [
+        "paper licensing is not raw GIS permission",
+        "Case4 ignition/first-observation date inconsistency requires source clarification",
+        "source observation and operational availability need separate fields"
+      ]
+    },
+    {
+      "id": "korea_sentinel2_14cases_2024",
+      "name": "Single-Temporal Sentinel-2 for Analyzing Burned Area Detection Methods:14 Korea cases2019–2023",
+      "type": "postfire_burned_area",
+      "status": "primary_search_metadata_only_publisher429_no_retry",
+      "urls": [
+        "https://www.mdpi.com/2072-4292/16/5/884",
+        "https://doi.org/10.3390/rs16050884"
+      ],
+      "downloaded": false,
+      "license": null,
+      "crs": null,
+      "raw_gis_available_verified": false,
+      "warnings": [
+        "postfire image delineation is not hourly active-front truth",
+        "No inference that a journal open-access notice licenses unverified raw masks"
+      ]
+    },
+    {
+      "id": "jrc_gfc2020",
+      "name": "JRC Global Forest Cover2020 currentv4",
+      "type": "static_tree_cover",
+      "status": "official_documentation_reviewed_not_downloaded",
+      "urls": [
+        "https://forobs.jrc.ec.europa.eu/GFC",
+        "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/FOREST/GFC2020/LATEST/"
+      ],
+      "reference_year": 2020,
+      "current_version_year": 2026,
+      "license": "official page states free use without restriction with acknowledgement under Copernicus terms",
+      "crs": "WGS84 per documentation; not file-verified",
+      "downloaded": false,
+      "warnings": [
+        "2020 reference year does not make2026 revision operationally available in2020–2024",
+        "~50GB global mosaic not downloaded",
+        "WMS RGB is visualization, not analysis-ready class raster",
+        "tree-cover extent is not fuel load/moisture model"
+      ]
+    }
+  ],
+  "source_assets": [
+    {
+      "path": "data/raw/korea-source-alignment-20261101/public-labels/ESA_WorldCover_10m_2021_v200_N36E129_Map.tif",
+      "bytes": 6602194,
+      "sha256": "c824fd6d591124a4d92ba909ea636f6c62e966c60426f69a3cbc7d90f95ee948"
+    },
+    {
+      "path": "data/raw/korea-source-alignment-20261101/public-labels/ESA_WorldCover_10m_2021_v200_N36E129_Map.tif.metadata.json",
+      "bytes": 3044,
+      "sha256": "24cf035616eaaf1529ed4898dc6bb679ebe3b26180f6d475900d7e1f65f85aba"
+    },
+    {
+      "path": "data/raw/korea-source-alignment-20261101/public-labels/esa-worldcover-2021-korea-fixed-scenario-clip.tif",
+      "bytes": 41499,
+      "sha256": "99e14f4847b47afedcd290c2b37d4d96682b7aa83ceb6d6604af08ffbc2ee8df"
+    },
+    {
+      "path": "data/raw/korea-source-alignment-20261101/public-labels/esa-worldcover-2021-release.html",
+      "bytes": 28536,
+      "sha256": "7a0dd349d71e78e1cd3f7ddf3ca033bff94503f47afaedffccf3c30e8d3c9a4a"
+    },
+    {
+      "path": "data/raw/korea-source-alignment-20261101/public-labels/esa-worldcover-2021-release.html.metadata.json",
+      "bytes": 918,
+      "sha256": "f18d64de993a90a2ccd3195a7db9736cb5b9d8d1a51019b68cf884088df79b6b"
+    },
+    {
+      "path": "data/raw/korea-source-alignment-20261101/public-labels/esa-worldcover-N36E129-head.json",
+      "bytes": 739,
+      "sha256": "8688f43c13a56f5e37e08dd4d714ba96a8ab3ec85a9eae4987f71094430614a4"
+    },
+    {
+      "path": "data/raw/korea-source-alignment-20261101/public-labels/esa-worldcover-data-access.html",
+      "bytes": 49887,
+      "sha256": "71dccb4c949d489a903865f97ff3bddab75dbefad7f1c277acd1ba94967ed0e8"
+    },
+    {
+      "path": "data/raw/korea-source-alignment-20261101/public-labels/esa-worldcover-data-access.html.metadata.json",
+      "bytes": 902,
+      "sha256": "7e5bbff6af6270d0dcfd3007b4cf2f0276c19d250dab2deee74c00d99237ff6f"
+    },
+    {
+      "path": "data/raw/korea-source-alignment-20261101/public-labels/fired-korea-2024-access-attempt.json",
+      "bytes": 450,
+      "sha256": "ffef3b231623da52b5f13a77b0bd53edf1bf5cac28064ee5efc7ef0fae5f87b5"
+    },
+    {
+      "path": "data/raw/korea-source-alignment-20261101/public-labels/firedpy-20241113-readme.md",
+      "bytes": 39526,
+      "sha256": "819f60cc643ea57dc9a2ec6ffdfce9cd8579bf6cbef8aaa3eb7aaec8933fa6f9"
+    },
+    {
+      "path": "data/raw/korea-source-alignment-20261101/public-labels/firedpy-20241113-readme.md.metadata.json",
+      "bytes": 563,
+      "sha256": "b17282928a32f40f475cb7904837c30873c7f76caba902141602bde812f95e5a"
+    },
+    {
+      "path": "data/raw/korea-source-alignment-20261101/public-labels/globfire-daily-catalog.html",
+      "bytes": 98027,
+      "sha256": "271dd22a42779d4d334dcdfc94c0af46ea2a0867f668392c899556a9fe22b8df"
+    },
+    {
+      "path": "data/raw/korea-source-alignment-20261101/public-labels/globfire-daily-catalog.html.metadata.json",
+      "bytes": 341,
+      "sha256": "e9d8c6e61d1aa2a9c5492d30726c70d0087db6392f7443f36b942cc6610ed068"
+    },
+    {
+      "path": "data/raw/korea-source-alignment-20261101/public-labels/kfs-forest-2024-catalog.html",
+      "bytes": 170654,
+      "sha256": "5adf76ae8778ce077cb05087d72cf3167c73b6c622d75a9bc6e2e750be1cd735"
+    },
+    {
+      "path": "data/raw/korea-source-alignment-20261101/public-labels/kfs-forest-2024-catalog.html.metadata.json",
+      "bytes": 312,
+      "sha256": "1205ca85e5cfcee99da0488254c16271c734c483fb3ee4625689353a6d6487dc"
+    },
+    {
+      "path": "data/raw/korea-source-alignment-20261101/public-labels/kfs-forest-portal-metadata.html",
+      "bytes": 717723,
+      "sha256": "a1077fdf4bb1e7898c06afc0a8a0479bc7713259289292037a31b08c93a964ec"
+    },
+    {
+      "path": "data/raw/korea-source-alignment-20261101/public-labels/kfs-forest-portal-metadata.html.metadata.json",
+      "bytes": 278,
+      "sha256": "41159a3e5f1847032632660af096de9503276fcf0dc96dc16c1da2057f0e5387"
+    }
+  ],
+  "proposed_ingestion_schema": {
+    "format": "GeoPackage snapshots + provenance/rights JSON; explicit source CRS; normalized UTC times; JSON fields are proposed required contract, not received data",
+    "fields": [
+      {
+        "field": "schema_version,event_id,snapshot_id",
+        "type": "string",
+        "required": true,
+        "rule": "Versioned format; stable event and snapshot identifiers. Event year2019–2024 allowlist; duplicate IDs rejected."
+      },
+      {
+        "field": "geometry,geometry_kind",
+        "type": "GeoPackage layer or GeoJSON geometry + enum",
+        "required": true,
+        "rule": "Separate active_front_line, contained_front_line, burned_extent_polygon, estimated_perimeter_polygon, ignition_point. Points never silently become polygons."
+      },
+      {
+        "field": "crs_epsg,crs_wkt,axis_order,horizontal_units",
+        "type": "integer|null,string,string,string",
+        "required": true,
+        "rule": "WKT authoritative if EPSG unknown; preserve source CRS and axis order. No guessing. Unknown CRS quarantined."
+      },
+      {
+        "field": "observation_time_original,observation_start_utc,observation_end_utc,source_timezone,time_precision_seconds",
+        "type": "string,datetime,datetime,IANA zone,number|null",
+        "required": true,
+        "rule": "Preserve source text and time interval. UTC conversion needs explicit timezone evidence. Start<=end; ambiguous local dates quarantined."
+      },
+      {
+        "field": "created_at_utc,transmitted_at_utc,available_at_utc,availability_evidence,availability_known",
+        "type": "datetime|null,datetime|null,datetime|null,string|null,boolean",
+        "required": true,
+        "rule": "Unknowns remain null. Retrospective label may be accepted when rights/time/geometry verified; operational predictor feature only when available_at<=issue and evidence exists."
+      },
+      {
+        "field": "revision_id,revised_at_utc,supersedes_snapshot_id,retrospective_reconstruction,uses_final_perimeter",
+        "type": "string,datetime|null,string|null,boolean,boolean|null",
+        "required": true,
+        "rule": "Retain every source revision; no overwrite. Future-informed corrected boundaries cannot be declared as-of predictors."
+      },
+      {
+        "field": "sensor_or_method,platform,source_image_ids,observation_footprint",
+        "type": "enum,string|null,array,geometry|null",
+        "required": true,
+        "rule": "Differentiate helicopter,drone,ground,manual map,satellite. Unknown footprint prevents interpreting uncovered cells as negative."
+      },
+      {
+        "field": "horizontal_uncertainty_m,temporal_uncertainty_seconds,uncertainty_method,coverage_status,cloud_or_occlusion_mask",
+        "type": "number|null,number|null,string|null,enum,path|null",
+        "required": true,
+        "rule": "Missing uncertainty explicitly unknown; image-to-map work includes GCP residual/digitization error. No invented zero uncertainty."
+      },
+      {
+        "field": "polygon_completeness,unburned_islands,front_state,suppression_observations",
+        "type": "enum,geometry|null,enum,array",
+        "required": true,
+        "rule": "Partial line/non-observation never treated as safe negative; suppression evidence timestamped separately."
+      },
+      {
+        "field": "provider,source_url,source_file,source_sha256,source_bytes,retrieved_at_utc",
+        "type": "string,string,string,hex64,integer,datetime",
+        "required": true,
+        "rule": "Preserve immutable source and provenance; archive members each hashed; derived files link parent SHA and transformations."
+      },
+      {
+        "field": "license_id,license_url,rights_evidence_file_sha256,attribution,permissions",
+        "type": "string|null,string|null,hex64|null,string|null,object",
+        "required": true,
+        "rule": "Explicit separate rights for research training, validation, derivative GIS, model publication, demo, commercial service, raw redistribution. Unknown rights quarantine for training."
+      },
+      {
+        "field": "event_group_id,split_role,approved_use",
+        "type": "string,enum,enum",
+        "required": true,
+        "rule": "Pre-register related event/time groups and partitions before outcomes. Approved_use is metadata_only, retrospective_label, or asof_feature; holdout2025 excluded."
+      }
+    ],
+    "acceptance_guards": [
+      "Reject/quarantine missing CRS, ambiguous timezone, nonmonotonic observation intervals, missing raw rights, or inconsistent geometry type.",
+      "Do not silently correct NIFOS Case4 date discrepancy; retain discrepancy record pending original verification.",
+      "Check projected lengths/areas and coordinate ranges, polygon validity and islands; do not automatically buffer lines into full burned polygons.",
+      "Record exact/reconstructed/estimated label provenance separately; GIS coordinate precision does not prove ground accuracy.",
+      "First-approach label between observed outside and observed inside is interval-censored; do not impute exact arrival or interpolate1h from daily burn maps.",
+      "A full outside observation at t may contribute censoring only over verified covered domain; cloud/partial/unobserved never automatically negative.",
+      "Issue candidates and features use predeclared region plus inputs actually available at issue; future/final bounds used only in evaluation labels.",
+      "Reference year, acquisition interval, publication date and revision date remain separate; e.g.WorldCover2021 release2022-10-28 is not March2022 operational input.",
+      "No location identifiers, event year or absolute coordinates automatically added as predictive features.",
+      "Real terrain/landcover alone does not calibrate physical fuel, smoke exposure, injury or evacuation response probability."
+    ]
+  },
+  "exclusions": {
+    "reason": "mixed2025 domestic sources in search snippets were not opened further/downloaded/ingested",
+    "examples": [
+      "2022–2025 time-of-arrival reconstruction article",
+      "2018–2025 burn probability repository/dataset",
+      "2015–2025 Korea episodes dataset",
+      "2022–2025 annual Uljin recovery raster record"
+    ],
+    "generic_catalog_2025_metadata": "Forest portal HTML includes2025 menu option and service notices; no2025 event dataset selected or accessed."
+  },
+  "conclusion": "Useful static inputs were acquired, but no newly verified hourly ground-front GIS labels. Domestic1–6h personal impact probability remains unvalidated."
+}

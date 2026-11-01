@@ -1,0 +1,1107 @@
+{
+  "summary": {
+    "macro_known_event_horizon_ap": 0.19850354624870584,
+    "eligible_ap_cells": 16,
+    "total_cells": 30,
+    "budget": {
+      "candidate_rows": 276096,
+      "known_rows": 199681,
+      "unknown_rows": 76415,
+      "observed_positives": 638,
+      "selected_rows": 27876,
+      "selected_known": 19072,
+      "selected_unknown": 8804,
+      "true_positives": 287,
+      "false_positives": 18785,
+      "missing_score_rows": 0,
+      "selected_missing_score_rows": 0,
+      "issues": 555,
+      "known_fraction": 0.7232303256838202,
+      "selected_fraction": 0.10096488178025034,
+      "selected_unknown_fraction": 0.3158272348974028,
+      "observed_positive_recall": 0.4498432601880878,
+      "precision_known_selected": 0.015048238255033557,
+      "precision_lower_bound": 0.010295594776868991,
+      "precision_upper_bound": 0.32612282967427175
+    }
+  },
+  "folds": [
+    {
+      "held_groups": [
+        "2020-04-25",
+        "2022-02-28",
+        "2022-05-28"
+      ],
+      "held_ids": [
+        "andong_2020",
+        "hapcheon_2022",
+        "uljin_may_2022"
+      ],
+      "training_ids": [
+        "andong_2021",
+        "bonghwa_2022",
+        "gangneung_donghae_2022",
+        "goseong_2020",
+        "miryang_2022",
+        "uljin_2022",
+        "yeongwol_2022"
+      ],
+      "positive_weight": 17.749484997798522
+    },
+    {
+      "held_groups": [
+        "2020-05-01",
+        "2022-03-04_05",
+        "2022-05-31"
+      ],
+      "held_ids": [
+        "gangneung_donghae_2022",
+        "goseong_2020",
+        "miryang_2022",
+        "uljin_2022",
+        "yeongwol_2022"
+      ],
+      "training_ids": [
+        "andong_2020",
+        "andong_2021",
+        "bonghwa_2022",
+        "hapcheon_2022",
+        "uljin_may_2022"
+      ],
+      "positive_weight": 28.080844620247202
+    },
+    {
+      "held_groups": [
+        "2021-02-21",
+        "2022-04-05"
+      ],
+      "held_ids": [
+        "andong_2021",
+        "bonghwa_2022"
+      ],
+      "training_ids": [
+        "andong_2020",
+        "gangneung_donghae_2022",
+        "goseong_2020",
+        "hapcheon_2022",
+        "miryang_2022",
+        "uljin_2022",
+        "uljin_may_2022",
+        "yeongwol_2022"
+      ],
+      "positive_weight": 13.94745609534339
+    }
+  ],
+  "held_out": {
+    "andong_2020": {
+      "1": {
+        "known_only_metrics": {
+          "rows": 4730,
+          "positives": 0,
+          "positive_fraction": 0.0,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 6862,
+          "known_rows": 4730,
+          "unknown_rows": 2132,
+          "observed_positives": 0,
+          "selected_rows": 697,
+          "selected_known": 428,
+          "selected_unknown": 269,
+          "true_positives": 0,
+          "false_positives": 428,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 21,
+          "known_fraction": 0.6893034100845234,
+          "selected_fraction": 0.10157388516467503,
+          "selected_unknown_fraction": 0.38593974175035867,
+          "observed_positive_recall": null,
+          "precision_known_selected": 0.0,
+          "precision_lower_bound": 0.0,
+          "precision_upper_bound": 0.38593974175035867
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      },
+      "3": {
+        "known_only_metrics": {
+          "rows": 2710,
+          "positives": 22,
+          "positive_fraction": 0.008118081180811807,
+          "missing_score_candidates": 0,
+          "average_precision": 0.0671326861741238,
+          "roc_auc": 0.9342870670995671
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 6862,
+          "known_rows": 2710,
+          "unknown_rows": 4152,
+          "observed_positives": 22,
+          "selected_rows": 697,
+          "selected_known": 310,
+          "selected_unknown": 387,
+          "true_positives": 8,
+          "false_positives": 302,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 21,
+          "known_fraction": 0.39492859224715826,
+          "selected_fraction": 0.10157388516467503,
+          "selected_unknown_fraction": 0.5552367288378766,
+          "observed_positive_recall": 0.36363636363636365,
+          "precision_known_selected": 0.025806451612903226,
+          "precision_lower_bound": 0.011477761836441894,
+          "precision_upper_bound": 0.5667144906743186
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      },
+      "6": {
+        "known_only_metrics": {
+          "rows": 385,
+          "positives": 28,
+          "positive_fraction": 0.07272727272727272,
+          "missing_score_candidates": 0,
+          "average_precision": 0.6402129534601416,
+          "roc_auc": 0.9456782713085234
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 6862,
+          "known_rows": 385,
+          "unknown_rows": 6477,
+          "observed_positives": 28,
+          "selected_rows": 697,
+          "selected_known": 28,
+          "selected_unknown": 669,
+          "true_positives": 11,
+          "false_positives": 17,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 21,
+          "known_fraction": 0.05610609151850773,
+          "selected_fraction": 0.10157388516467503,
+          "selected_unknown_fraction": 0.9598278335724534,
+          "observed_positive_recall": 0.39285714285714285,
+          "precision_known_selected": 0.39285714285714285,
+          "precision_lower_bound": 0.015781922525107604,
+          "precision_upper_bound": 0.975609756097561
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      }
+    },
+    "hapcheon_2022": {
+      "1": {
+        "known_only_metrics": {
+          "rows": 2980,
+          "positives": 0,
+          "positive_fraction": 0.0,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 4599,
+          "known_rows": 2980,
+          "unknown_rows": 1619,
+          "observed_positives": 0,
+          "selected_rows": 464,
+          "selected_known": 256,
+          "selected_unknown": 208,
+          "true_positives": 0,
+          "false_positives": 256,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 12,
+          "known_fraction": 0.6479669493368123,
+          "selected_fraction": 0.10089149815177212,
+          "selected_unknown_fraction": 0.4482758620689655,
+          "observed_positive_recall": null,
+          "precision_known_selected": 0.0,
+          "precision_lower_bound": 0.0,
+          "precision_upper_bound": 0.4482758620689655
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      },
+      "3": {
+        "known_only_metrics": {
+          "rows": 473,
+          "positives": 0,
+          "positive_fraction": 0.0,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 4599,
+          "known_rows": 473,
+          "unknown_rows": 4126,
+          "observed_positives": 0,
+          "selected_rows": 464,
+          "selected_known": 11,
+          "selected_unknown": 453,
+          "true_positives": 0,
+          "false_positives": 11,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 12,
+          "known_fraction": 0.10284844531419873,
+          "selected_fraction": 0.10089149815177212,
+          "selected_unknown_fraction": 0.9762931034482759,
+          "observed_positive_recall": null,
+          "precision_known_selected": 0.0,
+          "precision_lower_bound": 0.0,
+          "precision_upper_bound": 0.9762931034482759
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      },
+      "6": {
+        "known_only_metrics": {
+          "rows": 19,
+          "positives": 0,
+          "positive_fraction": 0.0,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 4599,
+          "known_rows": 19,
+          "unknown_rows": 4580,
+          "observed_positives": 0,
+          "selected_rows": 464,
+          "selected_known": 0,
+          "selected_unknown": 464,
+          "true_positives": 0,
+          "false_positives": 0,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 12,
+          "known_fraction": 0.004131332898456186,
+          "selected_fraction": 0.10089149815177212,
+          "selected_unknown_fraction": 1.0,
+          "observed_positive_recall": null,
+          "precision_known_selected": null,
+          "precision_lower_bound": 0.0,
+          "precision_upper_bound": 1.0
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      }
+    },
+    "uljin_may_2022": {
+      "1": {
+        "known_only_metrics": {
+          "rows": 850,
+          "positives": 0,
+          "positive_fraction": 0.0,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 868,
+          "known_rows": 850,
+          "unknown_rows": 18,
+          "observed_positives": 0,
+          "selected_rows": 89,
+          "selected_known": 88,
+          "selected_unknown": 1,
+          "true_positives": 0,
+          "false_positives": 88,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 3,
+          "known_fraction": 0.9792626728110599,
+          "selected_fraction": 0.10253456221198157,
+          "selected_unknown_fraction": 0.011235955056179775,
+          "observed_positive_recall": null,
+          "precision_known_selected": 0.0,
+          "precision_lower_bound": 0.0,
+          "precision_upper_bound": 0.011235955056179775
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      },
+      "3": {
+        "known_only_metrics": {
+          "rows": 850,
+          "positives": 0,
+          "positive_fraction": 0.0,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 868,
+          "known_rows": 850,
+          "unknown_rows": 18,
+          "observed_positives": 0,
+          "selected_rows": 89,
+          "selected_known": 88,
+          "selected_unknown": 1,
+          "true_positives": 0,
+          "false_positives": 88,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 3,
+          "known_fraction": 0.9792626728110599,
+          "selected_fraction": 0.10253456221198157,
+          "selected_unknown_fraction": 0.011235955056179775,
+          "observed_positive_recall": null,
+          "precision_known_selected": 0.0,
+          "precision_lower_bound": 0.0,
+          "precision_upper_bound": 0.011235955056179775
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      },
+      "6": {
+        "known_only_metrics": {
+          "rows": 850,
+          "positives": 0,
+          "positive_fraction": 0.0,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 868,
+          "known_rows": 850,
+          "unknown_rows": 18,
+          "observed_positives": 0,
+          "selected_rows": 89,
+          "selected_known": 87,
+          "selected_unknown": 2,
+          "true_positives": 0,
+          "false_positives": 87,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 3,
+          "known_fraction": 0.9792626728110599,
+          "selected_fraction": 0.10253456221198157,
+          "selected_unknown_fraction": 0.02247191011235955,
+          "observed_positive_recall": null,
+          "precision_known_selected": 0.0,
+          "precision_lower_bound": 0.0,
+          "precision_upper_bound": 0.02247191011235955
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      }
+    },
+    "gangneung_donghae_2022": {
+      "1": {
+        "known_only_metrics": {
+          "rows": 7123,
+          "positives": 0,
+          "positive_fraction": 0.0,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 7965,
+          "known_rows": 7123,
+          "unknown_rows": 842,
+          "observed_positives": 0,
+          "selected_rows": 807,
+          "selected_known": 684,
+          "selected_unknown": 123,
+          "true_positives": 0,
+          "false_positives": 684,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 23,
+          "known_fraction": 0.8942875078468299,
+          "selected_fraction": 0.10131826741996233,
+          "selected_unknown_fraction": 0.1524163568773234,
+          "observed_positive_recall": null,
+          "precision_known_selected": 0.0,
+          "precision_lower_bound": 0.0,
+          "precision_upper_bound": 0.1524163568773234
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      },
+      "3": {
+        "known_only_metrics": {
+          "rows": 7000,
+          "positives": 2,
+          "positive_fraction": 0.00028571428571428574,
+          "missing_score_candidates": 0,
+          "average_precision": 0.004956622325043378,
+          "roc_auc": 0.9579879965704488
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 7965,
+          "known_rows": 7000,
+          "unknown_rows": 965,
+          "observed_positives": 2,
+          "selected_rows": 807,
+          "selected_known": 634,
+          "selected_unknown": 173,
+          "true_positives": 2,
+          "false_positives": 632,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 23,
+          "known_fraction": 0.8788449466415568,
+          "selected_fraction": 0.10131826741996233,
+          "selected_unknown_fraction": 0.21437422552664187,
+          "observed_positive_recall": 1.0,
+          "precision_known_selected": 0.0031545741324921135,
+          "precision_lower_bound": 0.0024783147459727386,
+          "precision_upper_bound": 0.21685254027261464
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      },
+      "6": {
+        "known_only_metrics": {
+          "rows": 6951,
+          "positives": 2,
+          "positive_fraction": 0.00028772838440512156,
+          "missing_score_candidates": 0,
+          "average_precision": 0.005057873161321437,
+          "roc_auc": 0.9585551877968053
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 7965,
+          "known_rows": 6951,
+          "unknown_rows": 1014,
+          "observed_positives": 2,
+          "selected_rows": 807,
+          "selected_known": 617,
+          "selected_unknown": 190,
+          "true_positives": 2,
+          "false_positives": 615,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 23,
+          "known_fraction": 0.8726930320150659,
+          "selected_fraction": 0.10131826741996233,
+          "selected_unknown_fraction": 0.23543990086741015,
+          "observed_positive_recall": 1.0,
+          "precision_known_selected": 0.0032414910858995136,
+          "precision_lower_bound": 0.0024783147459727386,
+          "precision_upper_bound": 0.2379182156133829
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      }
+    },
+    "goseong_2020": {
+      "1": {
+        "known_only_metrics": {
+          "rows": 2185,
+          "positives": 5,
+          "positive_fraction": 0.002288329519450801,
+          "missing_score_candidates": 0,
+          "average_precision": 0.42930402930402933,
+          "roc_auc": 0.9980733944954128
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 3169,
+          "known_rows": 2185,
+          "unknown_rows": 984,
+          "observed_positives": 5,
+          "selected_rows": 324,
+          "selected_known": 209,
+          "selected_unknown": 115,
+          "true_positives": 5,
+          "false_positives": 204,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 10,
+          "known_fraction": 0.6894919532975702,
+          "selected_fraction": 0.10224045440201956,
+          "selected_unknown_fraction": 0.3549382716049383,
+          "observed_positive_recall": 1.0,
+          "precision_known_selected": 0.023923444976076555,
+          "precision_lower_bound": 0.015432098765432098,
+          "precision_upper_bound": 0.37037037037037035
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      },
+      "3": {
+        "known_only_metrics": {
+          "rows": 312,
+          "positives": 5,
+          "positive_fraction": 0.016025641025641024,
+          "missing_score_candidates": 0,
+          "average_precision": 0.6161904761904762,
+          "roc_auc": 0.9941368078175896
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 3169,
+          "known_rows": 312,
+          "unknown_rows": 2857,
+          "observed_positives": 5,
+          "selected_rows": 324,
+          "selected_known": 23,
+          "selected_unknown": 301,
+          "true_positives": 5,
+          "false_positives": 18,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 10,
+          "known_fraction": 0.09845377090564847,
+          "selected_fraction": 0.10224045440201956,
+          "selected_unknown_fraction": 0.9290123456790124,
+          "observed_positive_recall": 1.0,
+          "precision_known_selected": 0.21739130434782608,
+          "precision_lower_bound": 0.015432098765432098,
+          "precision_upper_bound": 0.9444444444444444
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      },
+      "6": {
+        "known_only_metrics": {
+          "rows": 5,
+          "positives": 5,
+          "positive_fraction": 1.0,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 3169,
+          "known_rows": 5,
+          "unknown_rows": 3164,
+          "observed_positives": 5,
+          "selected_rows": 324,
+          "selected_known": 5,
+          "selected_unknown": 319,
+          "true_positives": 5,
+          "false_positives": 0,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 10,
+          "known_fraction": 0.001577784790154623,
+          "selected_fraction": 0.10224045440201956,
+          "selected_unknown_fraction": 0.9845679012345679,
+          "observed_positive_recall": 1.0,
+          "precision_known_selected": 1.0,
+          "precision_lower_bound": 0.015432098765432098,
+          "precision_upper_bound": 1.0
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      }
+    },
+    "miryang_2022": {
+      "1": {
+        "known_only_metrics": {
+          "rows": 17545,
+          "positives": 3,
+          "positive_fraction": 0.00017098888572242806,
+          "missing_score_candidates": 0,
+          "average_precision": 0.00021405636817695327,
+          "roc_auc": 0.2397674153460267
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 19221,
+          "known_rows": 17545,
+          "unknown_rows": 1676,
+          "observed_positives": 3,
+          "selected_rows": 1939,
+          "selected_known": 1788,
+          "selected_unknown": 151,
+          "true_positives": 0,
+          "false_positives": 1788,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 32,
+          "known_fraction": 0.9128037042817752,
+          "selected_fraction": 0.10087924665730191,
+          "selected_unknown_fraction": 0.0778751933986591,
+          "observed_positive_recall": 0.0,
+          "precision_known_selected": 0.0,
+          "precision_lower_bound": 0.0,
+          "precision_upper_bound": 0.0778751933986591
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      },
+      "3": {
+        "known_only_metrics": {
+          "rows": 13482,
+          "positives": 9,
+          "positive_fraction": 0.0006675567423230974,
+          "missing_score_candidates": 0,
+          "average_precision": 0.0010563789012287398,
+          "roc_auc": 0.5744781744559078
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 19221,
+          "known_rows": 13482,
+          "unknown_rows": 5739,
+          "observed_positives": 9,
+          "selected_rows": 1939,
+          "selected_known": 1383,
+          "selected_unknown": 556,
+          "true_positives": 0,
+          "false_positives": 1383,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 32,
+          "known_fraction": 0.7014203215233339,
+          "selected_fraction": 0.10087924665730191,
+          "selected_unknown_fraction": 0.28674574522949975,
+          "observed_positive_recall": 0.0,
+          "precision_known_selected": 0.0,
+          "precision_lower_bound": 0.0,
+          "precision_upper_bound": 0.28674574522949975
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      },
+      "6": {
+        "known_only_metrics": {
+          "rows": 7982,
+          "positives": 18,
+          "positive_fraction": 0.0022550739163117012,
+          "missing_score_candidates": 0,
+          "average_precision": 0.002328667347440568,
+          "roc_auc": 0.4602656398236509
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 19221,
+          "known_rows": 7982,
+          "unknown_rows": 11239,
+          "observed_positives": 18,
+          "selected_rows": 1939,
+          "selected_known": 827,
+          "selected_unknown": 1112,
+          "true_positives": 0,
+          "false_positives": 827,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 32,
+          "known_fraction": 0.4152749596795172,
+          "selected_fraction": 0.10087924665730191,
+          "selected_unknown_fraction": 0.5734914904589995,
+          "observed_positive_recall": 0.0,
+          "precision_known_selected": 0.0,
+          "precision_lower_bound": 0.0,
+          "precision_upper_bound": 0.5734914904589995
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      }
+    },
+    "uljin_2022": {
+      "1": {
+        "known_only_metrics": {
+          "rows": 9474,
+          "positives": 38,
+          "positive_fraction": 0.004010977411864049,
+          "missing_score_candidates": 0,
+          "average_precision": 0.02816576577545337,
+          "roc_auc": 0.7878324334575311
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 11794,
+          "known_rows": 9474,
+          "unknown_rows": 2320,
+          "observed_positives": 38,
+          "selected_rows": 1192,
+          "selected_known": 860,
+          "selected_unknown": 332,
+          "true_positives": 8,
+          "false_positives": 852,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 31,
+          "known_fraction": 0.8032898083771409,
+          "selected_fraction": 0.1010683398338138,
+          "selected_unknown_fraction": 0.2785234899328859,
+          "observed_positive_recall": 0.21052631578947367,
+          "precision_known_selected": 0.009302325581395349,
+          "precision_lower_bound": 0.006711409395973154,
+          "precision_upper_bound": 0.28523489932885904
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      },
+      "3": {
+        "known_only_metrics": {
+          "rows": 6609,
+          "positives": 163,
+          "positive_fraction": 0.024663337872597973,
+          "missing_score_candidates": 0,
+          "average_precision": 0.16678287720469767,
+          "roc_auc": 0.8039322431374192
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 11794,
+          "known_rows": 6609,
+          "unknown_rows": 5185,
+          "observed_positives": 163,
+          "selected_rows": 1192,
+          "selected_known": 590,
+          "selected_unknown": 602,
+          "true_positives": 65,
+          "false_positives": 525,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 31,
+          "known_fraction": 0.5603696794980498,
+          "selected_fraction": 0.1010683398338138,
+          "selected_unknown_fraction": 0.5050335570469798,
+          "observed_positive_recall": 0.3987730061349693,
+          "precision_known_selected": 0.11016949152542373,
+          "precision_lower_bound": 0.05453020134228188,
+          "precision_upper_bound": 0.5595637583892618
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      },
+      "6": {
+        "known_only_metrics": {
+          "rows": 4897,
+          "positives": 255,
+          "positive_fraction": 0.05207269756994078,
+          "missing_score_candidates": 0,
+          "average_precision": 0.2124937462441329,
+          "roc_auc": 0.7781927161213474
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 11794,
+          "known_rows": 4897,
+          "unknown_rows": 6897,
+          "observed_positives": 255,
+          "selected_rows": 1192,
+          "selected_known": 497,
+          "selected_unknown": 695,
+          "true_positives": 93,
+          "false_positives": 404,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 31,
+          "known_fraction": 0.4152111243004918,
+          "selected_fraction": 0.1010683398338138,
+          "selected_unknown_fraction": 0.5830536912751678,
+          "observed_positive_recall": 0.36470588235294116,
+          "precision_known_selected": 0.18712273641851107,
+          "precision_lower_bound": 0.07802013422818792,
+          "precision_upper_bound": 0.6610738255033557
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      }
+    },
+    "yeongwol_2022": {
+      "1": {
+        "known_only_metrics": {
+          "rows": 3761,
+          "positives": 0,
+          "positive_fraction": 0.0,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 4041,
+          "known_rows": 3761,
+          "unknown_rows": 280,
+          "observed_positives": 0,
+          "selected_rows": 410,
+          "selected_known": 380,
+          "selected_unknown": 30,
+          "true_positives": 0,
+          "false_positives": 380,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 15,
+          "known_fraction": 0.9307102202425143,
+          "selected_fraction": 0.10146003464488988,
+          "selected_unknown_fraction": 0.07317073170731707,
+          "observed_positive_recall": null,
+          "precision_known_selected": 0.0,
+          "precision_lower_bound": 0.0,
+          "precision_upper_bound": 0.07317073170731707
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      },
+      "3": {
+        "known_only_metrics": {
+          "rows": 3689,
+          "positives": 0,
+          "positive_fraction": 0.0,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 4041,
+          "known_rows": 3689,
+          "unknown_rows": 352,
+          "observed_positives": 0,
+          "selected_rows": 410,
+          "selected_known": 362,
+          "selected_unknown": 48,
+          "true_positives": 0,
+          "false_positives": 362,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 15,
+          "known_fraction": 0.912892848304875,
+          "selected_fraction": 0.10146003464488988,
+          "selected_unknown_fraction": 0.11707317073170732,
+          "observed_positive_recall": null,
+          "precision_known_selected": 0.0,
+          "precision_lower_bound": 0.0,
+          "precision_upper_bound": 0.11707317073170732
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      },
+      "6": {
+        "known_only_metrics": {
+          "rows": 3658,
+          "positives": 0,
+          "positive_fraction": 0.0,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 4041,
+          "known_rows": 3658,
+          "unknown_rows": 383,
+          "observed_positives": 0,
+          "selected_rows": 410,
+          "selected_known": 349,
+          "selected_unknown": 61,
+          "true_positives": 0,
+          "false_positives": 349,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 15,
+          "known_fraction": 0.9052214798317249,
+          "selected_fraction": 0.10146003464488988,
+          "selected_unknown_fraction": 0.14878048780487804,
+          "observed_positive_recall": null,
+          "precision_known_selected": 0.0,
+          "precision_lower_bound": 0.0,
+          "precision_upper_bound": 0.14878048780487804
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      }
+    },
+    "andong_2021": {
+      "1": {
+        "known_only_metrics": {
+          "rows": 32051,
+          "positives": 17,
+          "positive_fraction": 0.0005304046675610745,
+          "missing_score_candidates": 0,
+          "average_precision": 0.015547246200133995,
+          "roc_auc": 0.9752129171578727
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 32453,
+          "known_rows": 32051,
+          "unknown_rows": 402,
+          "observed_positives": 17,
+          "selected_rows": 3263,
+          "selected_known": 3143,
+          "selected_unknown": 120,
+          "true_positives": 17,
+          "false_positives": 3126,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 33,
+          "known_fraction": 0.9876128555141281,
+          "selected_fraction": 0.1005454041228854,
+          "selected_unknown_fraction": 0.03677597303095311,
+          "observed_positive_recall": 1.0,
+          "precision_known_selected": 0.005408845052497614,
+          "precision_lower_bound": 0.005209929512718358,
+          "precision_upper_bound": 0.04198590254367147
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      },
+      "3": {
+        "known_only_metrics": {
+          "rows": 30950,
+          "positives": 24,
+          "positive_fraction": 0.0007754442649434572,
+          "missing_score_candidates": 0,
+          "average_precision": 0.017686093383130364,
+          "roc_auc": 0.9697402670891806
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 32453,
+          "known_rows": 30950,
+          "unknown_rows": 1503,
+          "observed_positives": 24,
+          "selected_rows": 3263,
+          "selected_known": 2908,
+          "selected_unknown": 355,
+          "true_positives": 24,
+          "false_positives": 2884,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 33,
+          "known_fraction": 0.9536868702431208,
+          "selected_fraction": 0.1005454041228854,
+          "selected_unknown_fraction": 0.10879558688323629,
+          "observed_positive_recall": 1.0,
+          "precision_known_selected": 0.008253094910591471,
+          "precision_lower_bound": 0.007355194606190622,
+          "precision_upper_bound": 0.11615078148942691
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      },
+      "6": {
+        "known_only_metrics": {
+          "rows": 27930,
+          "positives": 26,
+          "positive_fraction": 0.0009308986752595775,
+          "missing_score_candidates": 0,
+          "average_precision": 0.01892726793976316,
+          "roc_auc": 0.9554930089978828
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 32453,
+          "known_rows": 27930,
+          "unknown_rows": 4523,
+          "observed_positives": 26,
+          "selected_rows": 3263,
+          "selected_known": 2485,
+          "selected_unknown": 778,
+          "true_positives": 26,
+          "false_positives": 2459,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 33,
+          "known_fraction": 0.8606292176378146,
+          "selected_fraction": 0.1005454041228854,
+          "selected_unknown_fraction": 0.238430891817346,
+          "observed_positive_recall": 1.0,
+          "precision_known_selected": 0.010462776659959759,
+          "precision_lower_bound": 0.00796812749003984,
+          "precision_upper_bound": 0.24639901930738584
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      }
+    },
+    "bonghwa_2022": {
+      "1": {
+        "known_only_metrics": {
+          "rows": 218,
+          "positives": 4,
+          "positive_fraction": 0.01834862385321101,
+          "missing_score_candidates": 0,
+          "average_precision": 0.95,
+          "roc_auc": 0.9988317757009346
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 1060,
+          "known_rows": 218,
+          "unknown_rows": 842,
+          "observed_positives": 4,
+          "selected_rows": 107,
+          "selected_known": 20,
+          "selected_unknown": 87,
+          "true_positives": 4,
+          "false_positives": 16,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 5,
+          "known_fraction": 0.20566037735849058,
+          "selected_fraction": 0.1009433962264151,
+          "selected_unknown_fraction": 0.8130841121495327,
+          "observed_positive_recall": 1.0,
+          "precision_known_selected": 0.2,
+          "precision_lower_bound": 0.037383177570093455,
+          "precision_upper_bound": 0.8504672897196262
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      },
+      "3": {
+        "known_only_metrics": {
+          "rows": 6,
+          "positives": 6,
+          "positive_fraction": 1.0,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 1060,
+          "known_rows": 6,
+          "unknown_rows": 1054,
+          "observed_positives": 6,
+          "selected_rows": 107,
+          "selected_known": 6,
+          "selected_unknown": 101,
+          "true_positives": 6,
+          "false_positives": 0,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 5,
+          "known_fraction": 0.005660377358490566,
+          "selected_fraction": 0.1009433962264151,
+          "selected_unknown_fraction": 0.9439252336448598,
+          "observed_positive_recall": 1.0,
+          "precision_known_selected": 1.0,
+          "precision_lower_bound": 0.056074766355140186,
+          "precision_upper_bound": 1.0
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      },
+      "6": {
+        "known_only_metrics": {
+          "rows": 6,
+          "positives": 6,
+          "positive_fraction": 1.0,
+          "missing_score_candidates": 0,
+          "average_precision": null,
+          "roc_auc": null
+        },
+        "budget": {
+          "requested_percent_per_issue": 10,
+          "candidate_rows": 1060,
+          "known_rows": 6,
+          "unknown_rows": 1054,
+          "observed_positives": 6,
+          "selected_rows": 107,
+          "selected_known": 6,
+          "selected_unknown": 101,
+          "true_positives": 6,
+          "false_positives": 0,
+          "missing_score_rows": 0,
+          "selected_missing_score_rows": 0,
+          "issues": 5,
+          "known_fraction": 0.005660377358490566,
+          "selected_fraction": 0.1009433962264151,
+          "selected_unknown_fraction": 0.9439252336448598,
+          "observed_positive_recall": 1.0,
+          "precision_known_selected": 1.0,
+          "precision_lower_bound": 0.056074766355140186,
+          "precision_upper_bound": 1.0
+        },
+        "semantics": "Known-only AP has observation-coverage selection; budget includes unknowns. Bounds concern encoded observation labels, not real fire or personal harm."
+      }
+    }
+  }
+}

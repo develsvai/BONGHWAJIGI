@@ -1,0 +1,29 @@
+{
+  "status": "completed",
+  "network_requests": 0,
+  "source_code_sha256": "d8a8224e6c910caa9437678e6db1eb14a3b6e5e83e4b545f4df08ff2132611a0",
+  "source_gfs_report_sha256": "98a78ab332a842e5f164120a3458b602550f1775b34e6dfb8ced52399e653ea6",
+  "operational_use": false,
+  "probability": null,
+  "validation_read": false,
+  "calibration_read": false,
+  "test_read": false,
+  "outputs": {
+    "common-time-comparison.json": {
+      "sha256": "9326d544ec8c853418fe22416d61ba1f4ab364c15495ff0fbcad08eaf3dec583",
+      "bytes": 1938
+    },
+    "gfs-values.json": {
+      "sha256": "3cd9ce4c896903deb0cfa0b52ac4a83023fb2e85ab788ee85b01c89ba098ff95",
+      "bytes": 9900
+    },
+    "acquisition-plan-estimate.json": {
+      "sha256": "1ac7b8049234d65fa05620cb4ef9aba7de014d92542b58f16e6ec89975e90deb",
+      "bytes": 57072
+    },
+    "input-audit.json": {
+      "sha256": "78b934a8d316bae77a154c67327bfe1973f9f712d2c2a0c6aec56e377558427e",
+      "bytes": 11207
+    }
+  }
+}

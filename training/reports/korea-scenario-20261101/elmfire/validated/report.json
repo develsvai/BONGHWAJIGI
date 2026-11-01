@@ -1,0 +1,867 @@
+{
+  "simulation_only": true,
+  "operational_use": false,
+  "probability": null,
+  "status": "complete",
+  "cases": [
+    {
+      "id": "fuel_181",
+      "fuel_model": 181,
+      "simulation_only": true,
+      "operational_use": false,
+      "probability": null,
+      "status": "complete",
+      "input_sha256": {
+        "adj.tif": "0b379e11a395d4762bc77a185590529964a27149416a3ff1aeb4143cf4c5e831",
+        "elmfire.data": "eeb176f01b25533df152f9802f9142a6b49c65ec0fc127d9204df402f2b3ad17",
+        "landscape.tif": "122ef615b77ffa63d32ebcc18e4555dc44dce58ffb3d20276d51af0fe53dadd0",
+        "m1.tif": "a92fbfad90c97d77c828d97015ae55757bb5eb158579858e94eed6b5710560c0",
+        "m10.tif": "49cdd61bd8cbe04e3630de6ebaffcde59153162713fc928d27945a9c6696f0aa",
+        "m100.tif": "ef0d20c7e649dea669e4587378ccf7ecf4d3aa72d5878cd16194ae8769b2a696",
+        "phi.tif": "0b379e11a395d4762bc77a185590529964a27149416a3ff1aeb4143cf4c5e831",
+        "wd.tif": "901d0270e26f82202bb84a603dee55431dfcd11c402644d2df0c4f3b01483cdb",
+        "ws.tif": "8ba20441a93d8e5759795b8c3530b1088b1d058d83ba88a3301b508c9694733c"
+      },
+      "probes": [
+        {
+          "id": "assumed_ignition",
+          "row": 49,
+          "column": 49,
+          "xy_m": [
+            526642.8540702973,
+            4094964.4265484256
+          ],
+          "longitude_latitude": [
+            129.29943982628814,
+            37.000452134228375
+          ],
+          "eligibility": "included_forest",
+          "actual_user_location": false,
+          "arrival_seconds": 0.0,
+          "state": "initially_reached"
+        },
+        {
+          "id": "north_1000m",
+          "row": 39,
+          "column": 49,
+          "xy_m": [
+            526642.8540702973,
+            4095964.4265484256
+          ],
+          "longitude_latitude": [
+            129.2994751835412,
+            37.00946643297297
+          ],
+          "eligibility": "included_forest",
+          "actual_user_location": false,
+          "arrival_seconds": null,
+          "state": "unreached_within_horizon"
+        },
+        {
+          "id": "east_1000m",
+          "row": 49,
+          "column": 59,
+          "xy_m": [
+            527642.8540702973,
+            4094964.4265484256
+          ],
+          "longitude_latitude": [
+            129.3106787082889,
+            37.00042324970466
+          ],
+          "eligibility": "excluded_nonforest",
+          "actual_user_location": false,
+          "arrival_seconds": null,
+          "state": "excluded_nonforest"
+        },
+        {
+          "id": "south_1000m",
+          "row": 59,
+          "column": 49,
+          "xy_m": [
+            526642.8540702973,
+            4093964.4265484256
+          ],
+          "longitude_latitude": [
+            129.2994044847613,
+            36.99143782173205
+          ],
+          "eligibility": "included_forest",
+          "actual_user_location": false,
+          "arrival_seconds": null,
+          "state": "unreached_within_horizon"
+        },
+        {
+          "id": "west_1000m",
+          "row": 49,
+          "column": 39,
+          "xy_m": [
+            525642.8540702973,
+            4094964.4265484256
+          ],
+          "longitude_latitude": [
+            129.28820092856108,
+            37.00047995462585
+          ],
+          "eligibility": "included_forest",
+          "actual_user_location": false,
+          "arrival_seconds": null,
+          "state": "unreached_within_horizon"
+        }
+      ],
+      "arrival_path": "/home1/ncloud/bonghwajigi/data/artifacts/elmfire/korea-100m-20261101-nodata-fix/fuel_181/outputs/time_of_arrival_0000001_0021600.tif",
+      "arrival_sha256": "dc94dfe69b1468dfe4ec3cbb69914b7e738cc3aa347ebe46e00bfc2768f76b12",
+      "arrival_unit": "seconds_since_assumed_ignition",
+      "arrival_nodata": -9999.0,
+      "output_transform": [
+        100.0,
+        0.0,
+        521692.84,
+        0.0,
+        -100.0,
+        4099914.5
+      ],
+      "coordinate_rounding_note": "Pinned engine uses single-precision map coordinates and F12.2 headers; up to 0.3m origin roundoff is accepted, without shifting cell indices",
+      "reached_cells": 1,
+      "initial_cells": 1,
+      "reached_boundary_cells": 0,
+      "boundary_note": "Extent-censored study; outside-domain arrival is not evaluated",
+      "future_reached_area_ha": {
+        "1h": 0,
+        "3h": 0,
+        "6h": 0
+      },
+      "maximum_arrival_seconds": 0.0,
+      "coverage": {
+        "full_horizon_completed": true,
+        "early_stop_detected": false,
+        "early_stop_reason": null,
+        "stats_tstop_seconds_rounded": 21600.0,
+        "logged_stop_step_seconds_rounded": null,
+        "covered_until_seconds_lower_bound": 21600.0,
+        "coverage_time_method": "stats confirms full planned horizon without early-stop message",
+        "horizon_completed": {
+          "1h": true,
+          "3h": true,
+          "6h": true
+        },
+        "stats_sha256": "de7cfd2dd18268999db177dfa8afceb766bd2315dcbc54d21f3476503e5324c8",
+        "run_log_sha256": "cc2668086c25ce42d50587320bf66e43c4a5888f37c1e193c9ce411a2f800b95",
+        "note": "Early solver termination does not evaluate later weather or establish no later spread"
+      },
+      "observed_future_reached_area_ha": {
+        "1h": 0,
+        "3h": 0,
+        "6h": 0
+      },
+      "elapsed_seconds": 0.908
+    },
+    {
+      "id": "fuel_183",
+      "fuel_model": 183,
+      "simulation_only": true,
+      "operational_use": false,
+      "probability": null,
+      "status": "complete",
+      "input_sha256": {
+        "adj.tif": "0b379e11a395d4762bc77a185590529964a27149416a3ff1aeb4143cf4c5e831",
+        "elmfire.data": "eeb176f01b25533df152f9802f9142a6b49c65ec0fc127d9204df402f2b3ad17",
+        "landscape.tif": "3ea481a29a0478eb54071bacc00261cbf95500663fb8ecbda0f71f2ee84ca8f3",
+        "m1.tif": "a92fbfad90c97d77c828d97015ae55757bb5eb158579858e94eed6b5710560c0",
+        "m10.tif": "49cdd61bd8cbe04e3630de6ebaffcde59153162713fc928d27945a9c6696f0aa",
+        "m100.tif": "ef0d20c7e649dea669e4587378ccf7ecf4d3aa72d5878cd16194ae8769b2a696",
+        "phi.tif": "0b379e11a395d4762bc77a185590529964a27149416a3ff1aeb4143cf4c5e831",
+        "wd.tif": "901d0270e26f82202bb84a603dee55431dfcd11c402644d2df0c4f3b01483cdb",
+        "ws.tif": "8ba20441a93d8e5759795b8c3530b1088b1d058d83ba88a3301b508c9694733c"
+      },
+      "probes": [
+        {
+          "id": "assumed_ignition",
+          "row": 49,
+          "column": 49,
+          "xy_m": [
+            526642.8540702973,
+            4094964.4265484256
+          ],
+          "longitude_latitude": [
+            129.29943982628814,
+            37.000452134228375
+          ],
+          "eligibility": "included_forest",
+          "actual_user_location": false,
+          "arrival_seconds": 0.0,
+          "state": "initially_reached"
+        },
+        {
+          "id": "north_1000m",
+          "row": 39,
+          "column": 49,
+          "xy_m": [
+            526642.8540702973,
+            4095964.4265484256
+          ],
+          "longitude_latitude": [
+            129.2994751835412,
+            37.00946643297297
+          ],
+          "eligibility": "included_forest",
+          "actual_user_location": false,
+          "arrival_seconds": null,
+          "state": "unreached_within_horizon"
+        },
+        {
+          "id": "east_1000m",
+          "row": 49,
+          "column": 59,
+          "xy_m": [
+            527642.8540702973,
+            4094964.4265484256
+          ],
+          "longitude_latitude": [
+            129.3106787082889,
+            37.00042324970466
+          ],
+          "eligibility": "excluded_nonforest",
+          "actual_user_location": false,
+          "arrival_seconds": null,
+          "state": "excluded_nonforest"
+        },
+        {
+          "id": "south_1000m",
+          "row": 59,
+          "column": 49,
+          "xy_m": [
+            526642.8540702973,
+            4093964.4265484256
+          ],
+          "longitude_latitude": [
+            129.2994044847613,
+            36.99143782173205
+          ],
+          "eligibility": "included_forest",
+          "actual_user_location": false,
+          "arrival_seconds": null,
+          "state": "unreached_within_horizon"
+        },
+        {
+          "id": "west_1000m",
+          "row": 49,
+          "column": 39,
+          "xy_m": [
+            525642.8540702973,
+            4094964.4265484256
+          ],
+          "longitude_latitude": [
+            129.28820092856108,
+            37.00047995462585
+          ],
+          "eligibility": "included_forest",
+          "actual_user_location": false,
+          "arrival_seconds": null,
+          "state": "unreached_within_horizon"
+        }
+      ],
+      "arrival_path": "/home1/ncloud/bonghwajigi/data/artifacts/elmfire/korea-100m-20261101-nodata-fix/fuel_183/outputs/time_of_arrival_0000001_0021600.tif",
+      "arrival_sha256": "dc94dfe69b1468dfe4ec3cbb69914b7e738cc3aa347ebe46e00bfc2768f76b12",
+      "arrival_unit": "seconds_since_assumed_ignition",
+      "arrival_nodata": -9999.0,
+      "output_transform": [
+        100.0,
+        0.0,
+        521692.84,
+        0.0,
+        -100.0,
+        4099914.5
+      ],
+      "coordinate_rounding_note": "Pinned engine uses single-precision map coordinates and F12.2 headers; up to 0.3m origin roundoff is accepted, without shifting cell indices",
+      "reached_cells": 1,
+      "initial_cells": 1,
+      "reached_boundary_cells": 0,
+      "boundary_note": "Extent-censored study; outside-domain arrival is not evaluated",
+      "future_reached_area_ha": {
+        "1h": 0,
+        "3h": 0,
+        "6h": 0
+      },
+      "maximum_arrival_seconds": 0.0,
+      "coverage": {
+        "full_horizon_completed": true,
+        "early_stop_detected": false,
+        "early_stop_reason": null,
+        "stats_tstop_seconds_rounded": 21600.0,
+        "logged_stop_step_seconds_rounded": null,
+        "covered_until_seconds_lower_bound": 21600.0,
+        "coverage_time_method": "stats confirms full planned horizon without early-stop message",
+        "horizon_completed": {
+          "1h": true,
+          "3h": true,
+          "6h": true
+        },
+        "stats_sha256": "de7cfd2dd18268999db177dfa8afceb766bd2315dcbc54d21f3476503e5324c8",
+        "run_log_sha256": "817feacb685b96a68c858c64255d9080cbcd49f3cd94d5cd0a113b49ee7e086f",
+        "note": "Early solver termination does not evaluate later weather or establish no later spread"
+      },
+      "observed_future_reached_area_ha": {
+        "1h": 0,
+        "3h": 0,
+        "6h": 0
+      },
+      "elapsed_seconds": 0.907
+    },
+    {
+      "id": "fuel_185",
+      "fuel_model": 185,
+      "simulation_only": true,
+      "operational_use": false,
+      "probability": null,
+      "status": "complete",
+      "input_sha256": {
+        "adj.tif": "0b379e11a395d4762bc77a185590529964a27149416a3ff1aeb4143cf4c5e831",
+        "elmfire.data": "eeb176f01b25533df152f9802f9142a6b49c65ec0fc127d9204df402f2b3ad17",
+        "landscape.tif": "4489aa2f28bd702ffadc182b14e41b706447f2a2c9e366bd573efe17e79a9a89",
+        "m1.tif": "a92fbfad90c97d77c828d97015ae55757bb5eb158579858e94eed6b5710560c0",
+        "m10.tif": "49cdd61bd8cbe04e3630de6ebaffcde59153162713fc928d27945a9c6696f0aa",
+        "m100.tif": "ef0d20c7e649dea669e4587378ccf7ecf4d3aa72d5878cd16194ae8769b2a696",
+        "phi.tif": "0b379e11a395d4762bc77a185590529964a27149416a3ff1aeb4143cf4c5e831",
+        "wd.tif": "901d0270e26f82202bb84a603dee55431dfcd11c402644d2df0c4f3b01483cdb",
+        "ws.tif": "8ba20441a93d8e5759795b8c3530b1088b1d058d83ba88a3301b508c9694733c"
+      },
+      "probes": [
+        {
+          "id": "assumed_ignition",
+          "row": 49,
+          "column": 49,
+          "xy_m": [
+            526642.8540702973,
+            4094964.4265484256
+          ],
+          "longitude_latitude": [
+            129.29943982628814,
+            37.000452134228375
+          ],
+          "eligibility": "included_forest",
+          "actual_user_location": false,
+          "arrival_seconds": 0.0,
+          "state": "initially_reached"
+        },
+        {
+          "id": "north_1000m",
+          "row": 39,
+          "column": 49,
+          "xy_m": [
+            526642.8540702973,
+            4095964.4265484256
+          ],
+          "longitude_latitude": [
+            129.2994751835412,
+            37.00946643297297
+          ],
+          "eligibility": "included_forest",
+          "actual_user_location": false,
+          "arrival_seconds": null,
+          "state": "unreached_within_horizon"
+        },
+        {
+          "id": "east_1000m",
+          "row": 49,
+          "column": 59,
+          "xy_m": [
+            527642.8540702973,
+            4094964.4265484256
+          ],
+          "longitude_latitude": [
+            129.3106787082889,
+            37.00042324970466
+          ],
+          "eligibility": "excluded_nonforest",
+          "actual_user_location": false,
+          "arrival_seconds": null,
+          "state": "excluded_nonforest"
+        },
+        {
+          "id": "south_1000m",
+          "row": 59,
+          "column": 49,
+          "xy_m": [
+            526642.8540702973,
+            4093964.4265484256
+          ],
+          "longitude_latitude": [
+            129.2994044847613,
+            36.99143782173205
+          ],
+          "eligibility": "included_forest",
+          "actual_user_location": false,
+          "arrival_seconds": null,
+          "state": "unreached_within_horizon"
+        },
+        {
+          "id": "west_1000m",
+          "row": 49,
+          "column": 39,
+          "xy_m": [
+            525642.8540702973,
+            4094964.4265484256
+          ],
+          "longitude_latitude": [
+            129.28820092856108,
+            37.00047995462585
+          ],
+          "eligibility": "included_forest",
+          "actual_user_location": false,
+          "arrival_seconds": null,
+          "state": "unreached_within_horizon"
+        }
+      ],
+      "arrival_path": "/home1/ncloud/bonghwajigi/data/artifacts/elmfire/korea-100m-20261101-nodata-fix/fuel_185/outputs/time_of_arrival_0000001_0021600.tif",
+      "arrival_sha256": "9c1eaabebb290db44cf9722b837ecd28b0ccd705dbf0461e3588fdb1e6d63adc",
+      "arrival_unit": "seconds_since_assumed_ignition",
+      "arrival_nodata": -9999.0,
+      "output_transform": [
+        100.0,
+        0.0,
+        521692.84,
+        0.0,
+        -100.0,
+        4099914.5
+      ],
+      "coordinate_rounding_note": "Pinned engine uses single-precision map coordinates and F12.2 headers; up to 0.3m origin roundoff is accepted, without shifting cell indices",
+      "reached_cells": 4,
+      "initial_cells": 1,
+      "reached_boundary_cells": 0,
+      "boundary_note": "Extent-censored study; outside-domain arrival is not evaluated",
+      "future_reached_area_ha": {
+        "1h": 0,
+        "3h": 1,
+        "6h": 3
+      },
+      "maximum_arrival_seconds": 20425.0,
+      "coverage": {
+        "full_horizon_completed": true,
+        "early_stop_detected": false,
+        "early_stop_reason": null,
+        "stats_tstop_seconds_rounded": 21600.0,
+        "logged_stop_step_seconds_rounded": null,
+        "covered_until_seconds_lower_bound": 21600.0,
+        "coverage_time_method": "stats confirms full planned horizon without early-stop message",
+        "horizon_completed": {
+          "1h": true,
+          "3h": true,
+          "6h": true
+        },
+        "stats_sha256": "d9d3f7c0adf73fc80ab5f6897c235b09bafa55f05d1a47f3d64f0e18d14719f2",
+        "run_log_sha256": "6d1127499325c816ce189a51d0dd6c25d040f93d9caa9109121b8e1a1ab4d865",
+        "note": "Early solver termination does not evaluate later weather or establish no later spread"
+      },
+      "observed_future_reached_area_ha": {
+        "1h": 0,
+        "3h": 1,
+        "6h": 3
+      },
+      "elapsed_seconds": 0.958
+    }
+  ],
+  "probes": [
+    {
+      "id": "assumed_ignition",
+      "row": 49,
+      "column": 49,
+      "xy_m": [
+        526642.8540702973,
+        4094964.4265484256
+      ],
+      "longitude_latitude": [
+        129.29943982628814,
+        37.000452134228375
+      ],
+      "eligibility": "included_forest",
+      "actual_user_location": false,
+      "simulation_only": true,
+      "operational_use": false,
+      "probability": null,
+      "completed_scenarios": 3,
+      "planned_scenarios": 3,
+      "initially_reached_scenarios": 3,
+      "future_arrival_counts": {
+        "1h": 0,
+        "3h": 0,
+        "6h": 0
+      },
+      "scenario_fraction": {
+        "1h": null,
+        "3h": null,
+        "6h": null
+      },
+      "horizon_unavailable_reason": {
+        "1h": "initial_exposure_not_future_arrival",
+        "3h": "initial_exposure_not_future_arrival",
+        "6h": "initial_exposure_not_future_arrival"
+      },
+      "unavailable_reason": "initial_exposure_not_future_arrival"
+    },
+    {
+      "id": "north_1000m",
+      "row": 39,
+      "column": 49,
+      "xy_m": [
+        526642.8540702973,
+        4095964.4265484256
+      ],
+      "longitude_latitude": [
+        129.2994751835412,
+        37.00946643297297
+      ],
+      "eligibility": "included_forest",
+      "actual_user_location": false,
+      "simulation_only": true,
+      "operational_use": false,
+      "probability": null,
+      "completed_scenarios": 3,
+      "planned_scenarios": 3,
+      "initially_reached_scenarios": 0,
+      "future_arrival_counts": {
+        "1h": 0,
+        "3h": 0,
+        "6h": 0
+      },
+      "scenario_fraction": {
+        "1h": 0.0,
+        "3h": 0.0,
+        "6h": 0.0
+      },
+      "horizon_unavailable_reason": {
+        "1h": null,
+        "3h": null,
+        "6h": null
+      },
+      "unavailable_reason": null
+    },
+    {
+      "id": "east_1000m",
+      "row": 49,
+      "column": 59,
+      "xy_m": [
+        527642.8540702973,
+        4094964.4265484256
+      ],
+      "longitude_latitude": [
+        129.3106787082889,
+        37.00042324970466
+      ],
+      "eligibility": "excluded_nonforest",
+      "actual_user_location": false,
+      "simulation_only": true,
+      "operational_use": false,
+      "probability": null,
+      "completed_scenarios": 3,
+      "planned_scenarios": 3,
+      "initially_reached_scenarios": 0,
+      "future_arrival_counts": {
+        "1h": 0,
+        "3h": 0,
+        "6h": 0
+      },
+      "scenario_fraction": {
+        "1h": null,
+        "3h": null,
+        "6h": null
+      },
+      "horizon_unavailable_reason": {
+        "1h": "excluded_nonforest",
+        "3h": "excluded_nonforest",
+        "6h": "excluded_nonforest"
+      },
+      "unavailable_reason": "excluded_nonforest"
+    },
+    {
+      "id": "south_1000m",
+      "row": 59,
+      "column": 49,
+      "xy_m": [
+        526642.8540702973,
+        4093964.4265484256
+      ],
+      "longitude_latitude": [
+        129.2994044847613,
+        36.99143782173205
+      ],
+      "eligibility": "included_forest",
+      "actual_user_location": false,
+      "simulation_only": true,
+      "operational_use": false,
+      "probability": null,
+      "completed_scenarios": 3,
+      "planned_scenarios": 3,
+      "initially_reached_scenarios": 0,
+      "future_arrival_counts": {
+        "1h": 0,
+        "3h": 0,
+        "6h": 0
+      },
+      "scenario_fraction": {
+        "1h": 0.0,
+        "3h": 0.0,
+        "6h": 0.0
+      },
+      "horizon_unavailable_reason": {
+        "1h": null,
+        "3h": null,
+        "6h": null
+      },
+      "unavailable_reason": null
+    },
+    {
+      "id": "west_1000m",
+      "row": 49,
+      "column": 39,
+      "xy_m": [
+        525642.8540702973,
+        4094964.4265484256
+      ],
+      "longitude_latitude": [
+        129.28820092856108,
+        37.00047995462585
+      ],
+      "eligibility": "included_forest",
+      "actual_user_location": false,
+      "simulation_only": true,
+      "operational_use": false,
+      "probability": null,
+      "completed_scenarios": 3,
+      "planned_scenarios": 3,
+      "initially_reached_scenarios": 0,
+      "future_arrival_counts": {
+        "1h": 0,
+        "3h": 0,
+        "6h": 0
+      },
+      "scenario_fraction": {
+        "1h": 0.0,
+        "3h": 0.0,
+        "6h": 0.0
+      },
+      "horizon_unavailable_reason": {
+        "1h": null,
+        "3h": null,
+        "6h": null
+      },
+      "unavailable_reason": null
+    }
+  ],
+  "stage": "final_integrity",
+  "plan_sha256": "7d10ab5cefbed5872b8d7545d7a9c65466450b77f1e75d621183a935661a71a5",
+  "plan": {
+    "simulation_only": true,
+    "operational_use": false,
+    "probability": null,
+    "study": "korea_terrain_fixed_fuel_sensitivity_v1",
+    "created_at_utc": "2026-10-31T17:10:07.270193+00:00",
+    "source_commit": "f4927b7ce68cb74eb0eb117085cc920782c8644e",
+    "binary_sha256": "f57750977084080f692cc51498f16f21197ee34de767e11d6407749bb52f947b",
+    "license": "AGPL-3.0 with Commons Clause; commercial use requires separate terms",
+    "license_scope": "Private research evaluation only; no hosted/API/product integration",
+    "license_sha256": {
+      "LICENSE.md": "55032df426cd4157e55c37ac34c9efb31fd6412e869a2e1f55e84f1a87e19dd6",
+      "COMMERCIAL_LICENSE.md": "d34d51903b386bb31253159788f13a2bf2579f3c8d1e34e69e8963da066a7236"
+    },
+    "references": {
+      "probe": {
+        "path": "/home1/ncloud/bonghwajigi/data/artifacts/elmfire/synthetic-20261101-first/report.json",
+        "sha256": "c43e9140c1976df69ce5034e77656af81b6111e2a88dd18a3407cdca4aea3336"
+      },
+      "terrain": {
+        "path": "/home1/ncloud/bonghwajigi/data/processed/korea-terrain-100m-v1/manifest.json",
+        "sha256": "d42d368edc9a3ef056756c6fce50f1a0308ec38a6b238b417122bd4d7584084d"
+      },
+      "weather": {
+        "path": "/home1/ncloud/bonghwajigi/data/raw/korea-wildfire/public-gfs-scenario-20261101-v1/weather.json",
+        "sha256": "5ada81547790061591f39cc9ca009b4af004d6fc6691aa7cddb2bec658a2d0bb"
+      }
+    },
+    "grid": {
+      "crs": "EPSG:32652",
+      "shape": [
+        100,
+        100
+      ],
+      "pixel_size_m": 100,
+      "transform": [
+        100.0,
+        0.0,
+        521692.8540702973,
+        0.0,
+        -100.0,
+        4099914.4265484256
+      ]
+    },
+    "source_terrain_limitations": [
+      "Copernicus GLO-90 is a surface DSM, not a bare-earth DTM; filename COG_30 is not 30m resolution",
+      "100m metric regridding does not increase source detail; DEM bilinear and CCI nearest only",
+      "2015 land-cover classes may differ from present conditions and do not provide current fuel",
+      "CCI quality, observation-count and current-pixel-state assets were not acquired",
+      "CCI 0 or unsupported class is unknown, never nonburnable; urban and non-tree are not safe",
+      "Tree classes do not determine species, Scott-Burgan fuel, canopy, fuel load or moisture",
+      "DEM source nodata metadata alone does not establish terrain accuracy or bare-earth height",
+      "Scenario extent is a fixed requested square, not a fire observation or validated hazard extent"
+    ],
+    "simulation_start_time_utc": "2026-10-31T18:00:00+00:00",
+    "weather_source": "OpenMeteo_GFS",
+    "forecast_issue_time_utc": null,
+    "forecast_issue_time_known": false,
+    "issue_time_note": "Open-Meteo response does not identify the underlying GFS issue cycle; retrieval time is not a forecast issue time",
+    "wind_axis_verification_method": "Official Open-Meteo pinned source review: GFS regular latitude-longitude grid and 10m UGRD/VGRD mapping; DerivedMapping windDirection; MeteorologyTests cardinal FROM-direction examples. API units and ordered times are separately checked on each response.",
+    "horizon_seconds": {
+      "1h": 3600,
+      "3h": 10800,
+      "6h": 21600
+    },
+    "weather_band_count": 7,
+    "dt_meteorology_seconds": 3600,
+    "engine_raster_nodata": -9999,
+    "initial_state_encoding": "Arrival 0 seconds is valid assumed ignition; negative nodata denotes no arrival in this simulation. Input sentinel prevents engine default0 collision.",
+    "scenario_plan": [
+      {
+        "id": "fuel_181",
+        "fuel_model": 181
+      },
+      {
+        "id": "fuel_183",
+        "fuel_model": 183
+      },
+      {
+        "id": "fuel_185",
+        "fuel_model": 185
+      }
+    ],
+    "scenario_interpretation": "Three fixed assumed fuels, not an uncertainty distribution or calibrated probability",
+    "ignition_rule": "Nearest explicit forest cell to domain center within 500m; row-major ties; actual cell center",
+    "static_data_acquisition_upper_bound_utc": "2026-10-31T16:52:56.456446+00:00",
+    "static_data_time_note": "DEM individual retrieval times verified. CCI download timestamp unavailable; the hash-linked derived manifest creation is its acquisition upper bound",
+    "ignition_observed": false,
+    "probe_locations": [
+      {
+        "id": "assumed_ignition",
+        "row": 49,
+        "column": 49,
+        "xy_m": [
+          526642.8540702973,
+          4094964.4265484256
+        ],
+        "longitude_latitude": [
+          129.29943982628814,
+          37.000452134228375
+        ],
+        "eligibility": "included_forest",
+        "actual_user_location": false
+      },
+      {
+        "id": "north_1000m",
+        "row": 39,
+        "column": 49,
+        "xy_m": [
+          526642.8540702973,
+          4095964.4265484256
+        ],
+        "longitude_latitude": [
+          129.2994751835412,
+          37.00946643297297
+        ],
+        "eligibility": "included_forest",
+        "actual_user_location": false
+      },
+      {
+        "id": "east_1000m",
+        "row": 49,
+        "column": 59,
+        "xy_m": [
+          527642.8540702973,
+          4094964.4265484256
+        ],
+        "longitude_latitude": [
+          129.3106787082889,
+          37.00042324970466
+        ],
+        "eligibility": "excluded_nonforest",
+        "actual_user_location": false
+      },
+      {
+        "id": "south_1000m",
+        "row": 59,
+        "column": 49,
+        "xy_m": [
+          526642.8540702973,
+          4093964.4265484256
+        ],
+        "longitude_latitude": [
+          129.2994044847613,
+          36.99143782173205
+        ],
+        "eligibility": "included_forest",
+        "actual_user_location": false
+      },
+      {
+        "id": "west_1000m",
+        "row": 49,
+        "column": 39,
+        "xy_m": [
+          525642.8540702973,
+          4094964.4265484256
+        ],
+        "longitude_latitude": [
+          129.28820092856108,
+          37.00047995462585
+        ],
+        "eligibility": "included_forest",
+        "actual_user_location": false
+      }
+    ],
+    "assumptions": {
+      "canopy_cover_height_base_density": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "dead_moisture_percent_m1_m10_m100": [
+        6,
+        7,
+        8
+      ],
+      "live_herb_woody_foliar_moisture_percent": [
+        60,
+        90,
+        90
+      ],
+      "surface_only": true,
+      "spotting": false,
+      "suppression": false,
+      "fuel_calibrated_for_korea": false,
+      "spatial_point_wind_uniform": true
+    },
+    "mask_semantics": {
+      "included_forest_cells": 8083,
+      "excluded_water_cells": 0,
+      "excluded_known_nonforest_cells": 1917,
+      "unknown_cells": 0,
+      "excluded_is_safe": false,
+      "codes": "fuel98 water; fuel99 other known nonforest; exclusion is a study boundary"
+    },
+    "wind_conversion": {
+      "input": "10m m/s true-north clockwise FROM",
+      "raster": "10m km/h grid-north clockwise FROM",
+      "engine": "kph *0.621 to mph; 10m *0.87 to20ft then fuel wind-adjustment",
+      "rotation": "per-cell projected true-north vector; WDgrid=WDtrue+rotation",
+      "rotation_min_max_deg": [
+        -0.21437238156795502,
+        -0.14682751893997192
+      ]
+    },
+    "cpu_threads_per_case": 1,
+    "feedback_level": 3,
+    "coverage_rule": "Audit solver stop via fire_size_stats and STOPPING log; final raster filename does not prove full-horizon integration. Beyond solver coverage remains null.",
+    "case_timeout_seconds": 300,
+    "validation": "Input/execution consistency only; no observed perimeter, Korean validation or personal safety inference"
+  },
+  "elapsed_seconds": 2.873,
+  "finished_at_utc": "2026-10-31T17:10:10.075397+00:00"
+}

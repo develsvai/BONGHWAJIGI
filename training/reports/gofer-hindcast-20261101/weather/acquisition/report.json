@@ -1,0 +1,562 @@
+{
+  "plan": {
+    "cycle_utc": "2019-09-04T20:00:00+00:00",
+    "simulation_start_time_utc": "2019-09-04T22:00:00+00:00",
+    "forecast_hours": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "variables": [
+      "UGRD",
+      "VGRD"
+    ],
+    "max_new_http_requests": 18,
+    "request_spacing_seconds": 1,
+    "retries": 0,
+    "reuse": "Verified h2 index and U/V from the bounded access probe",
+    "operational_use": false,
+    "historical_release_time_verified": false
+  },
+  "records": [
+    {
+      "path": "h02.idx",
+      "sha256": "51ee2d40c63b6bf397f2ececfb60722d70c438fd99e48f4567837d96784de71b",
+      "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20190904/conus/hrrr.t20z.wrfsfcf02.grib2.idx",
+      "retrieved_at_utc": "2026-10-31T17:19:07.784976+00:00",
+      "reused": true,
+      "role": "index",
+      "hour": 2
+    },
+    {
+      "variable": "UGRD",
+      "path": "h02-ugrd.grib2",
+      "sha256": "09bd887402717f16b48aec28e8b87010a23d335bd5bbaeb8ed0151a198fb498c",
+      "bytes": 1168856,
+      "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20190904/conus/hrrr.t20z.wrfsfcf02.grib2",
+      "range": [
+        48386714,
+        49555569
+      ],
+      "content_range": "bytes 48386714-49555569/128014177",
+      "retrieved_at_utc": "2026-10-31T17:22:00.400315+00:00",
+      "sections": [
+        {
+          "number": 1,
+          "length": 21
+        },
+        {
+          "number": 3,
+          "length": 81,
+          "template": 30,
+          "flags_octet47": 8,
+          "grid_relative": true
+        },
+        {
+          "number": 4,
+          "length": 34,
+          "template": 0,
+          "category": 2,
+          "parameter": 2,
+          "forecast_unit": 1,
+          "forecast_hour": 2,
+          "surface": 103,
+          "height_scale": 0,
+          "height": 10
+        },
+        {
+          "number": 5,
+          "length": 49
+        },
+        {
+          "number": 6,
+          "length": 6
+        },
+        {
+          "number": 7,
+          "length": 1168645
+        }
+      ],
+      "reused": true,
+      "role": "wind_grib",
+      "hour": 2,
+      "metadata": {
+        "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+        "valid_time_utc": "2019-09-04T22:00:00+00:00",
+        "height_m": 10,
+        "grid_definition_template": 30,
+        "resolution_component_flags": 8,
+        "grid_relative": true,
+        "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+        "product_template": 0,
+        "variable": "UGRD"
+      }
+    },
+    {
+      "variable": "VGRD",
+      "path": "h02-vgrd.grib2",
+      "sha256": "e039a0fbac37b01e634bfd807614e463fc1c7d74b3e8fb8c78a7a93722210872",
+      "bytes": 1116306,
+      "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20190904/conus/hrrr.t20z.wrfsfcf02.grib2",
+      "range": [
+        49555570,
+        50671875
+      ],
+      "content_range": "bytes 49555570-50671875/128014177",
+      "retrieved_at_utc": "2026-10-31T17:22:02.030679+00:00",
+      "sections": [
+        {
+          "number": 1,
+          "length": 21
+        },
+        {
+          "number": 3,
+          "length": 81,
+          "template": 30,
+          "flags_octet47": 8,
+          "grid_relative": true
+        },
+        {
+          "number": 4,
+          "length": 34,
+          "template": 0,
+          "category": 2,
+          "parameter": 3,
+          "forecast_unit": 1,
+          "forecast_hour": 2,
+          "surface": 103,
+          "height_scale": 0,
+          "height": 10
+        },
+        {
+          "number": 5,
+          "length": 49
+        },
+        {
+          "number": 6,
+          "length": 6
+        },
+        {
+          "number": 7,
+          "length": 1116095
+        }
+      ],
+      "reused": true,
+      "role": "wind_grib",
+      "hour": 2,
+      "metadata": {
+        "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+        "valid_time_utc": "2019-09-04T22:00:00+00:00",
+        "height_m": 10,
+        "grid_definition_template": 30,
+        "resolution_component_flags": 8,
+        "grid_relative": true,
+        "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+        "product_template": 0,
+        "variable": "VGRD"
+      }
+    },
+    {
+      "path": "h03.idx",
+      "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20190904/conus/hrrr.t20z.wrfsfcf03.grib2.idx",
+      "http_status": 200,
+      "byte_range": null,
+      "content_range": "",
+      "bytes": 8888,
+      "sha256": "347dd4f52526e087deb0863c598463d8bd3e37dd3b5343ad026312274859d7b0",
+      "retrieved_at_utc": "2026-10-31T17:26:45.647161+00:00",
+      "role": "index",
+      "hour": 3
+    },
+    {
+      "path": "h03-ugrd.grib2",
+      "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20190904/conus/hrrr.t20z.wrfsfcf03.grib2",
+      "http_status": 206,
+      "byte_range": [
+        49838898,
+        51005063
+      ],
+      "content_range": "bytes 49838898-51005063/127186200",
+      "bytes": 1166166,
+      "sha256": "3a667d59edf89be71fdf88d0381e7902043f58b0a0f821b3fb88923db3341a97",
+      "retrieved_at_utc": "2026-10-31T17:26:48.393317+00:00",
+      "role": "wind_grib",
+      "hour": 3,
+      "variable": "UGRD",
+      "metadata": {
+        "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+        "valid_time_utc": "2019-09-04T23:00:00+00:00",
+        "height_m": 10,
+        "grid_definition_template": 30,
+        "resolution_component_flags": 8,
+        "grid_relative": true,
+        "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+        "product_template": 0,
+        "variable": "UGRD"
+      }
+    },
+    {
+      "path": "h03-vgrd.grib2",
+      "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20190904/conus/hrrr.t20z.wrfsfcf03.grib2",
+      "http_status": 206,
+      "byte_range": [
+        51005064,
+        52122464
+      ],
+      "content_range": "bytes 51005064-52122464/127186200",
+      "bytes": 1117401,
+      "sha256": "c85b499ff73ca0917fb545ce3240be9bca7d684ba1cfc9a01215723ccbdd8d4c",
+      "retrieved_at_utc": "2026-10-31T17:26:51.153442+00:00",
+      "role": "wind_grib",
+      "hour": 3,
+      "variable": "VGRD",
+      "metadata": {
+        "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+        "valid_time_utc": "2019-09-04T23:00:00+00:00",
+        "height_m": 10,
+        "grid_definition_template": 30,
+        "resolution_component_flags": 8,
+        "grid_relative": true,
+        "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+        "product_template": 0,
+        "variable": "VGRD"
+      }
+    },
+    {
+      "path": "h04.idx",
+      "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20190904/conus/hrrr.t20z.wrfsfcf04.grib2.idx",
+      "http_status": 200,
+      "byte_range": null,
+      "content_range": "",
+      "bytes": 8885,
+      "sha256": "19126068f48c267890d7b69a50777916b19cd8965a98e514f689275148886e68",
+      "retrieved_at_utc": "2026-10-31T17:26:52.820991+00:00",
+      "role": "index",
+      "hour": 4
+    },
+    {
+      "path": "h04-ugrd.grib2",
+      "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20190904/conus/hrrr.t20z.wrfsfcf04.grib2",
+      "http_status": 206,
+      "byte_range": [
+        49837051,
+        50994839
+      ],
+      "content_range": "bytes 49837051-50994839/125679291",
+      "bytes": 1157789,
+      "sha256": "774c19c78065df3fc243d2cf4fbbab6abcf77f22a737fc1579ea00014a758b50",
+      "retrieved_at_utc": "2026-10-31T17:26:55.727409+00:00",
+      "role": "wind_grib",
+      "hour": 4,
+      "variable": "UGRD",
+      "metadata": {
+        "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+        "valid_time_utc": "2019-09-05T00:00:00+00:00",
+        "height_m": 10,
+        "grid_definition_template": 30,
+        "resolution_component_flags": 8,
+        "grid_relative": true,
+        "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+        "product_template": 0,
+        "variable": "UGRD"
+      }
+    },
+    {
+      "path": "h04-vgrd.grib2",
+      "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20190904/conus/hrrr.t20z.wrfsfcf04.grib2",
+      "http_status": 206,
+      "byte_range": [
+        50994840,
+        52111766
+      ],
+      "content_range": "bytes 50994840-52111766/125679291",
+      "bytes": 1116927,
+      "sha256": "d8f28b8b8fafd45a83ed78d323b6ae5965bfc09f8fe4b0b33c03c4e5aab5308f",
+      "retrieved_at_utc": "2026-10-31T17:26:58.440719+00:00",
+      "role": "wind_grib",
+      "hour": 4,
+      "variable": "VGRD",
+      "metadata": {
+        "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+        "valid_time_utc": "2019-09-05T00:00:00+00:00",
+        "height_m": 10,
+        "grid_definition_template": 30,
+        "resolution_component_flags": 8,
+        "grid_relative": true,
+        "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+        "product_template": 0,
+        "variable": "VGRD"
+      }
+    },
+    {
+      "path": "h05.idx",
+      "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20190904/conus/hrrr.t20z.wrfsfcf05.grib2.idx",
+      "http_status": 200,
+      "byte_range": null,
+      "content_range": "",
+      "bytes": 8879,
+      "sha256": "8cd6825efe7ec2c67e9cef91acd5c2ea9ed0ebee4e02c88beb303102841182ec",
+      "retrieved_at_utc": "2026-10-31T17:27:00.180082+00:00",
+      "role": "index",
+      "hour": 5
+    },
+    {
+      "path": "h05-ugrd.grib2",
+      "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20190904/conus/hrrr.t20z.wrfsfcf05.grib2",
+      "http_status": 206,
+      "byte_range": [
+        48418093,
+        49568200
+      ],
+      "content_range": "bytes 48418093-49568200/121358913",
+      "bytes": 1150108,
+      "sha256": "9ea5cb376e2f469eb607bf1ce13f08915bddac23e862213dc070ae4e6dbb4ef7",
+      "retrieved_at_utc": "2026-10-31T17:27:03.086180+00:00",
+      "role": "wind_grib",
+      "hour": 5,
+      "variable": "UGRD",
+      "metadata": {
+        "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+        "valid_time_utc": "2019-09-05T01:00:00+00:00",
+        "height_m": 10,
+        "grid_definition_template": 30,
+        "resolution_component_flags": 8,
+        "grid_relative": true,
+        "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+        "product_template": 0,
+        "variable": "UGRD"
+      }
+    },
+    {
+      "path": "h05-vgrd.grib2",
+      "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20190904/conus/hrrr.t20z.wrfsfcf05.grib2",
+      "http_status": 206,
+      "byte_range": [
+        49568201,
+        50684094
+      ],
+      "content_range": "bytes 49568201-50684094/121358913",
+      "bytes": 1115894,
+      "sha256": "61e374df6bfa162aeb6a5ec34aea72ceeb3d0d775166019df4f1a9fc8c50233e",
+      "retrieved_at_utc": "2026-10-31T17:27:05.782232+00:00",
+      "role": "wind_grib",
+      "hour": 5,
+      "variable": "VGRD",
+      "metadata": {
+        "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+        "valid_time_utc": "2019-09-05T01:00:00+00:00",
+        "height_m": 10,
+        "grid_definition_template": 30,
+        "resolution_component_flags": 8,
+        "grid_relative": true,
+        "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+        "product_template": 0,
+        "variable": "VGRD"
+      }
+    },
+    {
+      "path": "h06.idx",
+      "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20190904/conus/hrrr.t20z.wrfsfcf06.grib2.idx",
+      "http_status": 200,
+      "byte_range": null,
+      "content_range": "",
+      "bytes": 8877,
+      "sha256": "7d9693f369e8bf4e04a9359553c91044d035742c6714babde0babc0b6e36f12d",
+      "retrieved_at_utc": "2026-10-31T17:27:07.426592+00:00",
+      "role": "index",
+      "hour": 6
+    },
+    {
+      "path": "h06-ugrd.grib2",
+      "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20190904/conus/hrrr.t20z.wrfsfcf06.grib2",
+      "http_status": 206,
+      "byte_range": [
+        49291610,
+        50467433
+      ],
+      "content_range": "bytes 49291610-50467433/119219416",
+      "bytes": 1175824,
+      "sha256": "fd830b30c0367796468f470b07f70273ebfb1b0683208c8a6b4772164cb93872",
+      "retrieved_at_utc": "2026-10-31T17:27:10.315128+00:00",
+      "role": "wind_grib",
+      "hour": 6,
+      "variable": "UGRD",
+      "metadata": {
+        "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+        "valid_time_utc": "2019-09-05T02:00:00+00:00",
+        "height_m": 10,
+        "grid_definition_template": 30,
+        "resolution_component_flags": 8,
+        "grid_relative": true,
+        "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+        "product_template": 0,
+        "variable": "UGRD"
+      }
+    },
+    {
+      "path": "h06-vgrd.grib2",
+      "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20190904/conus/hrrr.t20z.wrfsfcf06.grib2",
+      "http_status": 206,
+      "byte_range": [
+        50467434,
+        51614178
+      ],
+      "content_range": "bytes 50467434-51614178/119219416",
+      "bytes": 1146745,
+      "sha256": "adc2214d0ecc3c285056f060f43bca9edd14d541695bcf342e7624ff45f7796a",
+      "retrieved_at_utc": "2026-10-31T17:27:14.023568+00:00",
+      "role": "wind_grib",
+      "hour": 6,
+      "variable": "VGRD",
+      "metadata": {
+        "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+        "valid_time_utc": "2019-09-05T02:00:00+00:00",
+        "height_m": 10,
+        "grid_definition_template": 30,
+        "resolution_component_flags": 8,
+        "grid_relative": true,
+        "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+        "product_template": 0,
+        "variable": "VGRD"
+      }
+    },
+    {
+      "path": "h07.idx",
+      "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20190904/conus/hrrr.t20z.wrfsfcf07.grib2.idx",
+      "http_status": 200,
+      "byte_range": null,
+      "content_range": "",
+      "bytes": 8877,
+      "sha256": "294bdfbdb3b57e69828a028c448c0b953a07f2d13057115cb35431f7f32740ac",
+      "retrieved_at_utc": "2026-10-31T17:27:15.801155+00:00",
+      "role": "index",
+      "hour": 7
+    },
+    {
+      "path": "h07-ugrd.grib2",
+      "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20190904/conus/hrrr.t20z.wrfsfcf07.grib2",
+      "http_status": 206,
+      "byte_range": [
+        49670025,
+        50890562
+      ],
+      "content_range": "bytes 49670025-50890562/118046515",
+      "bytes": 1220538,
+      "sha256": "126a78a1fa998b6f2dbc99a440c5f3fb87e4e396cf0e645e984c5905820214b8",
+      "retrieved_at_utc": "2026-10-31T17:27:18.793577+00:00",
+      "role": "wind_grib",
+      "hour": 7,
+      "variable": "UGRD",
+      "metadata": {
+        "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+        "valid_time_utc": "2019-09-05T03:00:00+00:00",
+        "height_m": 10,
+        "grid_definition_template": 30,
+        "resolution_component_flags": 8,
+        "grid_relative": true,
+        "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+        "product_template": 0,
+        "variable": "UGRD"
+      }
+    },
+    {
+      "path": "h07-vgrd.grib2",
+      "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20190904/conus/hrrr.t20z.wrfsfcf07.grib2",
+      "http_status": 206,
+      "byte_range": [
+        50890563,
+        52080282
+      ],
+      "content_range": "bytes 50890563-52080282/118046515",
+      "bytes": 1189720,
+      "sha256": "a169a1852a6447b5c42b52a067a6e09f51c1fcc2fc59938c806b34ef63bd9676",
+      "retrieved_at_utc": "2026-10-31T17:27:21.638010+00:00",
+      "role": "wind_grib",
+      "hour": 7,
+      "variable": "VGRD",
+      "metadata": {
+        "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+        "valid_time_utc": "2019-09-05T03:00:00+00:00",
+        "height_m": 10,
+        "grid_definition_template": 30,
+        "resolution_component_flags": 8,
+        "grid_relative": true,
+        "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+        "product_template": 0,
+        "variable": "VGRD"
+      }
+    },
+    {
+      "path": "h08.idx",
+      "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20190904/conus/hrrr.t20z.wrfsfcf08.grib2.idx",
+      "http_status": 200,
+      "byte_range": null,
+      "content_range": "",
+      "bytes": 8876,
+      "sha256": "9ec20dd529e76e10b7998010ca7c63506b23fbe208c2464a8363ed20bef5b14d",
+      "retrieved_at_utc": "2026-10-31T17:27:23.281847+00:00",
+      "role": "index",
+      "hour": 8
+    },
+    {
+      "path": "h08-ugrd.grib2",
+      "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20190904/conus/hrrr.t20z.wrfsfcf08.grib2",
+      "http_status": 206,
+      "byte_range": [
+        47837474,
+        49083568
+      ],
+      "content_range": "bytes 47837474-49083568/115830661",
+      "bytes": 1246095,
+      "sha256": "5815e1c04199b36fa26923f48c2f3af5dd345f148e317e75ea4f920b2a20451c",
+      "retrieved_at_utc": "2026-10-31T17:27:25.957561+00:00",
+      "role": "wind_grib",
+      "hour": 8,
+      "variable": "UGRD",
+      "metadata": {
+        "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+        "valid_time_utc": "2019-09-05T04:00:00+00:00",
+        "height_m": 10,
+        "grid_definition_template": 30,
+        "resolution_component_flags": 8,
+        "grid_relative": true,
+        "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+        "product_template": 0,
+        "variable": "UGRD"
+      }
+    },
+    {
+      "path": "h08-vgrd.grib2",
+      "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20190904/conus/hrrr.t20z.wrfsfcf08.grib2",
+      "http_status": 206,
+      "byte_range": [
+        49083569,
+        50297032
+      ],
+      "content_range": "bytes 49083569-50297032/115830661",
+      "bytes": 1213464,
+      "sha256": "1aee0db33be9d8c410cecaf6286655f864cc572aa72042ade6eea2e9972b4d1e",
+      "retrieved_at_utc": "2026-10-31T17:27:28.662913+00:00",
+      "role": "wind_grib",
+      "hour": 8,
+      "variable": "VGRD",
+      "metadata": {
+        "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+        "valid_time_utc": "2019-09-05T04:00:00+00:00",
+        "height_m": 10,
+        "grid_definition_template": 30,
+        "resolution_component_flags": 8,
+        "grid_relative": true,
+        "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+        "product_template": 0,
+        "variable": "VGRD"
+      }
+    }
+  ],
+  "http_attempts": 18,
+  "complete": true
+}

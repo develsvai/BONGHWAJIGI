@@ -1,0 +1,2108 @@
+{
+  "schema": "gfs_primary_cohort_acquisition_plan_v1",
+  "created_at_utc": "2026-10-31T18:38:50.618256+00:00",
+  "source_code_sha256": "7c50826fce9da786f7efeafec8870f561932da51c6c8db9aca345012f598e201",
+  "source_config_sha256": "5b89472738b19e88ee5683ef31ed79191e4f559d58ae71b59d917afcbdfe5107",
+  "source_sample_receipt_sha256": "98a78ab332a842e5f164120a3458b602550f1775b34e6dfb8ced52399e653ea6",
+  "source_profile": "kor_gk2a_first_future_observation_train_only_v1",
+  "source_dataset": "data/processed/korea-first-observation-train-20261101-v2",
+  "cohort": "cohort_primary_clear60, fixed from available input history only",
+  "future_unknown_rows_preserved": true,
+  "future_outcome_or_audit_columns_read": false,
+  "validation_read": false,
+  "calibration_read": false,
+  "test_read": false,
+  "execution_authorized": false,
+  "calculation_only": true,
+  "network_requests": 0,
+  "operational_use": false,
+  "total_primary_rows_with_horizon_repeats": 404130,
+  "total_unique_point_issue_rows": 134710,
+  "cycle_rule": "Latest six-hour cycle at least six hours before issue; require actual object LastModified <= issue separately",
+  "valid_time_rule": "floor(issue to hour)+horizon; never replace a forecast with an analysis",
+  "same_global_files_reused_across_events": true,
+  "events": {
+    "andong_2020": {
+      "source_sha256": "41c0d86b5f154862c15ffd2722b15d02582847477eb1a46d9dd31236cb089cd5",
+      "decoded_columns": [
+        "cohort_primary_clear60",
+        "issue_epoch_seconds",
+        "row",
+        "col"
+      ],
+      "all_candidate_rows": 31542,
+      "primary_rows_with_horizon_repeats": 20586,
+      "unique_point_issue_rows": 6862,
+      "unique_issue_times": 21,
+      "first_issue_utc": "2020-04-25T05:15:00+00:00",
+      "last_issue_utc": "2020-04-25T11:55:00+00:00",
+      "first_cycle_utc": "2020-04-24T18:00:00+00:00",
+      "first_lead_hours": 11,
+      "current_files": 7,
+      "current_plus_1_3_6h_files": 16,
+      "archive_date_requires_separate_probe": true
+    },
+    "andong_2021": {
+      "source_sha256": "03423a5a5b31cd13c9aea32d3ba949c2dcd9d18ec7c6ffd3406327dd27bd32a0",
+      "decoded_columns": [
+        "cohort_primary_clear60",
+        "issue_epoch_seconds",
+        "row",
+        "col"
+      ],
+      "all_candidate_rows": 98829,
+      "primary_rows_with_horizon_repeats": 97359,
+      "unique_point_issue_rows": 32453,
+      "unique_issue_times": 33,
+      "first_issue_utc": "2021-02-21T08:15:00+00:00",
+      "last_issue_utc": "2021-02-21T19:55:00+00:00",
+      "first_cycle_utc": "2021-02-21T00:00:00+00:00",
+      "first_lead_hours": 8,
+      "current_files": 12,
+      "current_plus_1_3_6h_files": 29,
+      "archive_date_requires_separate_probe": true
+    },
+    "bonghwa_2022": {
+      "source_sha256": "fcbebcec3a87a3c72b527ab55ff7abea722b17395c58a0909d5bdba7bbeac910",
+      "decoded_columns": [
+        "cohort_primary_clear60",
+        "issue_epoch_seconds",
+        "row",
+        "col"
+      ],
+      "all_candidate_rows": 5721,
+      "primary_rows_with_horizon_repeats": 3180,
+      "unique_point_issue_rows": 1060,
+      "unique_issue_times": 5,
+      "first_issue_utc": "2022-04-05T04:55:00+00:00",
+      "last_issue_utc": "2022-04-05T06:15:00+00:00",
+      "first_cycle_utc": "2022-04-04T18:00:00+00:00",
+      "first_lead_hours": 10,
+      "current_files": 3,
+      "current_plus_1_3_6h_files": 11,
+      "archive_date_requires_separate_probe": false
+    },
+    "gangneung_donghae_2022": {
+      "source_sha256": "f14bb4af81aee46cb6129ef788bbdf09027fecc6e2421ca597c01375f7cda22f",
+      "decoded_columns": [
+        "cohort_primary_clear60",
+        "issue_epoch_seconds",
+        "row",
+        "col"
+      ],
+      "all_candidate_rows": 28251,
+      "primary_rows_with_horizon_repeats": 23895,
+      "unique_point_issue_rows": 7965,
+      "unique_issue_times": 23,
+      "first_issue_utc": "2022-03-05T00:15:00+00:00",
+      "last_issue_utc": "2022-03-05T11:55:00+00:00",
+      "first_cycle_utc": "2022-03-04T18:00:00+00:00",
+      "first_lead_hours": 6,
+      "current_files": 9,
+      "current_plus_1_3_6h_files": 23,
+      "archive_date_requires_separate_probe": false
+    },
+    "goseong_2020": {
+      "source_sha256": "d02fc57bde573d054752c9b8cc9aa65ee819aeb0e3bc874d1a0ba7baa4a22c54",
+      "decoded_columns": [
+        "cohort_primary_clear60",
+        "issue_epoch_seconds",
+        "row",
+        "col"
+      ],
+      "all_candidate_rows": 11619,
+      "primary_rows_with_horizon_repeats": 9507,
+      "unique_point_issue_rows": 3169,
+      "unique_issue_times": 10,
+      "first_issue_utc": "2020-05-01T12:15:00+00:00",
+      "last_issue_utc": "2020-05-01T15:15:00+00:00",
+      "first_cycle_utc": "2020-05-01T06:00:00+00:00",
+      "first_lead_hours": 6,
+      "current_files": 4,
+      "current_plus_1_3_6h_files": 10,
+      "archive_date_requires_separate_probe": true
+    },
+    "gunwi_2022": {
+      "source_sha256": "fdd8dbaa7b2a634ff11cbf4954a5f1397a7bc7fa01d9bb5e6ee0590de01afcc0",
+      "decoded_columns": [
+        "cohort_primary_clear60",
+        "issue_epoch_seconds",
+        "row",
+        "col"
+      ],
+      "all_candidate_rows": 4260,
+      "primary_rows_with_horizon_repeats": 987,
+      "unique_point_issue_rows": 329,
+      "unique_issue_times": 5,
+      "first_issue_utc": "2022-04-10T05:35:00+00:00",
+      "last_issue_utc": "2022-04-10T11:15:00+00:00",
+      "first_cycle_utc": "2022-04-09T18:00:00+00:00",
+      "first_lead_hours": 11,
+      "current_files": 3,
+      "current_plus_1_3_6h_files": 11,
+      "archive_date_requires_separate_probe": false
+    },
+    "hapcheon_2022": {
+      "source_sha256": "3b7fd3eec38e8f0053c275bfda91f5b01216b6b8da5d37f4db459291d12d3830",
+      "decoded_columns": [
+        "cohort_primary_clear60",
+        "issue_epoch_seconds",
+        "row",
+        "col"
+      ],
+      "all_candidate_rows": 24600,
+      "primary_rows_with_horizon_repeats": 13797,
+      "unique_point_issue_rows": 4599,
+      "unique_issue_times": 12,
+      "first_issue_utc": "2022-02-28T09:15:00+00:00",
+      "last_issue_utc": "2022-02-28T17:55:00+00:00",
+      "first_cycle_utc": "2022-02-28T00:00:00+00:00",
+      "first_lead_hours": 9,
+      "current_files": 6,
+      "current_plus_1_3_6h_files": 15,
+      "archive_date_requires_separate_probe": false
+    },
+    "miryang_2022": {
+      "source_sha256": "a2b24b1fc0019f550de8a944160b2ff6cded733bc9260800c429a51f8ea46de3",
+      "decoded_columns": [
+        "cohort_primary_clear60",
+        "issue_epoch_seconds",
+        "row",
+        "col"
+      ],
+      "all_candidate_rows": 59955,
+      "primary_rows_with_horizon_repeats": 57663,
+      "unique_point_issue_rows": 19221,
+      "unique_issue_times": 32,
+      "first_issue_utc": "2022-05-31T01:15:00+00:00",
+      "last_issue_utc": "2022-05-31T11:35:00+00:00",
+      "first_cycle_utc": "2022-05-30T18:00:00+00:00",
+      "first_lead_hours": 7,
+      "current_files": 11,
+      "current_plus_1_3_6h_files": 23,
+      "archive_date_requires_separate_probe": false
+    },
+    "uljin_2022": {
+      "source_sha256": "3b31f4a3b588e46ae278cbce0326b0ce79537aef0d6514ecf38401abd5201f60",
+      "decoded_columns": [
+        "cohort_primary_clear60",
+        "issue_epoch_seconds",
+        "row",
+        "col"
+      ],
+      "all_candidate_rows": 44712,
+      "primary_rows_with_horizon_repeats": 35382,
+      "unique_point_issue_rows": 11794,
+      "unique_issue_times": 31,
+      "first_issue_utc": "2022-03-04T02:35:00+00:00",
+      "last_issue_utc": "2022-03-04T12:55:00+00:00",
+      "first_cycle_utc": "2022-03-03T18:00:00+00:00",
+      "first_lead_hours": 8,
+      "current_files": 11,
+      "current_plus_1_3_6h_files": 26,
+      "archive_date_requires_separate_probe": false
+    },
+    "uljin_may_2022": {
+      "source_sha256": "2be216310dd8f2270adc33601451693ccee3a458c28cb2440694469823f2250f",
+      "decoded_columns": [
+        "cohort_primary_clear60",
+        "issue_epoch_seconds",
+        "row",
+        "col"
+      ],
+      "all_candidate_rows": 2766,
+      "primary_rows_with_horizon_repeats": 2604,
+      "unique_point_issue_rows": 868,
+      "unique_issue_times": 3,
+      "first_issue_utc": "2022-05-28T07:55:00+00:00",
+      "last_issue_utc": "2022-05-28T08:35:00+00:00",
+      "first_cycle_utc": "2022-05-28T00:00:00+00:00",
+      "first_lead_hours": 7,
+      "current_files": 2,
+      "current_plus_1_3_6h_files": 7,
+      "archive_date_requires_separate_probe": false
+    },
+    "ulju_2020": {
+      "source_sha256": "56e62ce26af73be3bf74c2bc1597c77c31534620926c744cecbb4f1abc07345c",
+      "decoded_columns": [
+        "cohort_primary_clear60",
+        "issue_epoch_seconds",
+        "row",
+        "col"
+      ],
+      "all_candidate_rows": 42063,
+      "primary_rows_with_horizon_repeats": 37842,
+      "unique_point_issue_rows": 12614,
+      "unique_issue_times": 31,
+      "first_issue_utc": "2020-03-19T06:15:00+00:00",
+      "last_issue_utc": "2020-03-19T16:15:00+00:00",
+      "first_cycle_utc": "2020-03-19T00:00:00+00:00",
+      "first_lead_hours": 6,
+      "current_files": 11,
+      "current_plus_1_3_6h_files": 23,
+      "archive_date_requires_separate_probe": true
+    },
+    "yanggu_2022": {
+      "source_sha256": "cd5cae6f786516a20e215211b038fac53f93f12387bb873608c7319917f6ddb4",
+      "decoded_columns": [
+        "cohort_primary_clear60",
+        "issue_epoch_seconds",
+        "row",
+        "col"
+      ],
+      "all_candidate_rows": 59814,
+      "primary_rows_with_horizon_repeats": 53016,
+      "unique_point_issue_rows": 17672,
+      "unique_issue_times": 30,
+      "first_issue_utc": "2022-04-10T07:15:00+00:00",
+      "last_issue_utc": "2022-04-10T18:35:00+00:00",
+      "first_cycle_utc": "2022-04-10T00:00:00+00:00",
+      "first_lead_hours": 7,
+      "current_files": 12,
+      "current_plus_1_3_6h_files": 27,
+      "archive_date_requires_separate_probe": false
+    },
+    "yeongdeok_2022": {
+      "source_sha256": "1524c6424c1f1f0e38fb512c2bf0ba58134c3ca7e04f77d695ab0928d03b765e",
+      "decoded_columns": [
+        "cohort_primary_clear60",
+        "issue_epoch_seconds",
+        "row",
+        "col"
+      ],
+      "all_candidate_rows": 37401,
+      "primary_rows_with_horizon_repeats": 36189,
+      "unique_point_issue_rows": 12063,
+      "unique_issue_times": 36,
+      "first_issue_utc": "2022-02-16T02:15:00+00:00",
+      "last_issue_utc": "2022-02-16T13:55:00+00:00",
+      "first_cycle_utc": "2022-02-15T18:00:00+00:00",
+      "first_lead_hours": 8,
+      "current_files": 12,
+      "current_plus_1_3_6h_files": 29,
+      "archive_date_requires_separate_probe": false
+    },
+    "yeongwol_2022": {
+      "source_sha256": "d8b7715c64f473d902f1a87bee143326faecca167c4ef7e04ced264c7266883f",
+      "decoded_columns": [
+        "cohort_primary_clear60",
+        "issue_epoch_seconds",
+        "row",
+        "col"
+      ],
+      "all_candidate_rows": 15177,
+      "primary_rows_with_horizon_repeats": 12123,
+      "unique_point_issue_rows": 4041,
+      "unique_issue_times": 15,
+      "first_issue_utc": "2022-03-04T05:15:00+00:00",
+      "last_issue_utc": "2022-03-04T16:55:00+00:00",
+      "first_cycle_utc": "2022-03-03T18:00:00+00:00",
+      "first_lead_hours": 11,
+      "current_files": 7,
+      "current_plus_1_3_6h_files": 19,
+      "archive_date_requires_separate_probe": false
+    }
+  },
+  "current_only": {
+    "unique_cycle_lead_files": 105,
+    "estimated_requests_index_head_one_range": 315,
+    "estimated_bytes_one_range_based_on_single_sample": 722247015,
+    "requests_four_separate_fields_plus_index": 525,
+    "estimated_bytes_four_exact_fields_plus_index": 338772525,
+    "cycle_lead_inventory": [
+      {
+        "cycle_utc": "2020-03-19T00:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2020-03-19T06:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T00:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2020-03-19T07:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T00:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2020-03-19T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T00:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2020-03-19T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T00:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2020-03-19T10:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T00:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2020-03-19T11:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T06:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2020-03-19T12:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T06:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2020-03-19T13:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T06:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2020-03-19T14:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T06:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2020-03-19T15:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T06:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2020-03-19T16:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-04-24T18:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2020-04-25T05:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-04-25T00:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2020-04-25T06:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-04-25T00:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2020-04-25T07:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-04-25T00:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2020-04-25T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-04-25T00:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2020-04-25T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-04-25T00:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2020-04-25T10:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-04-25T00:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2020-04-25T11:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-05-01T06:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2020-05-01T12:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-05-01T06:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2020-05-01T13:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-05-01T06:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2020-05-01T14:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-05-01T06:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2020-05-01T15:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T00:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2021-02-21T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T00:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2021-02-21T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T00:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2021-02-21T10:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T00:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2021-02-21T11:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T06:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2021-02-21T12:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T06:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2021-02-21T13:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T06:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2021-02-21T14:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T06:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2021-02-21T15:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T06:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2021-02-21T16:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T06:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2021-02-21T17:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T12:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2021-02-21T18:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T12:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2021-02-21T19:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-15T18:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-02-16T02:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-15T18:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-02-16T03:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-15T18:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-02-16T04:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-15T18:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-02-16T05:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T00:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2022-02-16T06:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T00:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-02-16T07:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T00:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-02-16T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T00:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-02-16T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T00:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-02-16T10:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T00:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-02-16T11:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T06:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2022-02-16T12:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T06:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-02-16T13:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-28T00:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-02-28T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-28T06:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-02-28T13:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-28T06:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-02-28T14:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-28T06:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-02-28T15:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-28T06:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-02-28T16:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-28T06:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-02-28T17:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-03T18:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-03-04T02:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-03T18:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-03-04T03:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-03T18:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-03-04T04:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-03T18:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-03-04T05:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T00:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2022-03-04T06:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T00:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-03-04T07:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T00:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-03-04T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T00:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-03-04T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T00:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-03-04T10:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T00:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-03-04T11:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T06:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2022-03-04T12:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T06:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-03-04T13:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T06:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-03-04T14:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T06:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-03-04T15:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T06:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-03-04T16:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T18:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2022-03-05T00:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T18:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-03-05T02:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T18:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-03-05T03:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T18:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-03-05T04:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-05T00:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2022-03-05T06:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-05T00:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-03-05T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-05T00:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-03-05T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-05T00:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-03-05T10:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-05T00:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-03-05T11:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-04T18:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-04-05T04:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-04T18:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-04-05T05:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-05T00:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2022-04-05T06:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-09T18:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-04-10T05:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T00:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-04-10T07:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T00:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-04-10T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T00:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-04-10T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T00:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-04-10T10:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T00:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-04-10T11:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T06:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2022-04-10T12:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T06:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-04-10T13:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T06:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-04-10T14:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T06:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-04-10T15:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T06:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-04-10T16:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T06:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-04-10T17:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T12:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2022-04-10T18:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-28T00:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-05-28T07:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-28T00:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-05-28T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-30T18:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-05-31T01:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-30T18:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-05-31T02:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-30T18:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-05-31T03:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-30T18:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-05-31T04:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-30T18:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-05-31T05:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-31T00:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2022-05-31T06:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-31T00:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-05-31T07:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-31T00:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-05-31T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-31T00:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-05-31T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-31T00:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-05-31T10:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-31T00:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-05-31T11:00:00+00:00"
+      }
+    ]
+  },
+  "current_plus_1_3_6h": {
+    "unique_cycle_lead_files": 250,
+    "estimated_requests_index_head_one_range": 750,
+    "estimated_bytes_one_range_based_on_single_sample": 1719635750,
+    "requests_four_separate_fields_plus_index": 1250,
+    "estimated_bytes_four_exact_fields_plus_index": 806601250,
+    "cycle_lead_inventory": [
+      {
+        "cycle_utc": "2020-03-19T00:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2020-03-19T06:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T00:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2020-03-19T07:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T00:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2020-03-19T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T00:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2020-03-19T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T00:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2020-03-19T10:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T00:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2020-03-19T11:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T00:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2020-03-19T12:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T00:00:00+00:00",
+        "lead_hours": 13,
+        "valid_time_utc": "2020-03-19T13:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T00:00:00+00:00",
+        "lead_hours": 14,
+        "valid_time_utc": "2020-03-19T14:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T00:00:00+00:00",
+        "lead_hours": 15,
+        "valid_time_utc": "2020-03-19T15:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T00:00:00+00:00",
+        "lead_hours": 16,
+        "valid_time_utc": "2020-03-19T16:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T00:00:00+00:00",
+        "lead_hours": 17,
+        "valid_time_utc": "2020-03-19T17:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T06:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2020-03-19T12:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T06:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2020-03-19T13:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T06:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2020-03-19T14:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T06:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2020-03-19T15:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T06:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2020-03-19T16:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T06:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2020-03-19T17:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T06:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2020-03-19T18:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T06:00:00+00:00",
+        "lead_hours": 13,
+        "valid_time_utc": "2020-03-19T19:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T06:00:00+00:00",
+        "lead_hours": 14,
+        "valid_time_utc": "2020-03-19T20:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T06:00:00+00:00",
+        "lead_hours": 15,
+        "valid_time_utc": "2020-03-19T21:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-03-19T06:00:00+00:00",
+        "lead_hours": 16,
+        "valid_time_utc": "2020-03-19T22:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-04-24T18:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2020-04-25T05:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-04-24T18:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2020-04-25T06:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-04-24T18:00:00+00:00",
+        "lead_hours": 14,
+        "valid_time_utc": "2020-04-25T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-04-24T18:00:00+00:00",
+        "lead_hours": 17,
+        "valid_time_utc": "2020-04-25T11:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-04-25T00:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2020-04-25T06:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-04-25T00:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2020-04-25T07:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-04-25T00:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2020-04-25T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-04-25T00:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2020-04-25T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-04-25T00:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2020-04-25T10:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-04-25T00:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2020-04-25T11:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-04-25T00:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2020-04-25T12:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-04-25T00:00:00+00:00",
+        "lead_hours": 13,
+        "valid_time_utc": "2020-04-25T13:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-04-25T00:00:00+00:00",
+        "lead_hours": 14,
+        "valid_time_utc": "2020-04-25T14:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-04-25T00:00:00+00:00",
+        "lead_hours": 15,
+        "valid_time_utc": "2020-04-25T15:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-04-25T00:00:00+00:00",
+        "lead_hours": 16,
+        "valid_time_utc": "2020-04-25T16:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-04-25T00:00:00+00:00",
+        "lead_hours": 17,
+        "valid_time_utc": "2020-04-25T17:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-05-01T06:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2020-05-01T12:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-05-01T06:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2020-05-01T13:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-05-01T06:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2020-05-01T14:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-05-01T06:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2020-05-01T15:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-05-01T06:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2020-05-01T16:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-05-01T06:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2020-05-01T17:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-05-01T06:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2020-05-01T18:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-05-01T06:00:00+00:00",
+        "lead_hours": 13,
+        "valid_time_utc": "2020-05-01T19:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-05-01T06:00:00+00:00",
+        "lead_hours": 14,
+        "valid_time_utc": "2020-05-01T20:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2020-05-01T06:00:00+00:00",
+        "lead_hours": 15,
+        "valid_time_utc": "2020-05-01T21:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T00:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2021-02-21T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T00:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2021-02-21T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T00:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2021-02-21T10:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T00:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2021-02-21T11:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T00:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2021-02-21T12:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T00:00:00+00:00",
+        "lead_hours": 13,
+        "valid_time_utc": "2021-02-21T13:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T00:00:00+00:00",
+        "lead_hours": 14,
+        "valid_time_utc": "2021-02-21T14:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T00:00:00+00:00",
+        "lead_hours": 15,
+        "valid_time_utc": "2021-02-21T15:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T00:00:00+00:00",
+        "lead_hours": 16,
+        "valid_time_utc": "2021-02-21T16:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T00:00:00+00:00",
+        "lead_hours": 17,
+        "valid_time_utc": "2021-02-21T17:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T06:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2021-02-21T12:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T06:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2021-02-21T13:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T06:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2021-02-21T14:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T06:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2021-02-21T15:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T06:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2021-02-21T16:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T06:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2021-02-21T17:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T06:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2021-02-21T18:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T06:00:00+00:00",
+        "lead_hours": 13,
+        "valid_time_utc": "2021-02-21T19:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T06:00:00+00:00",
+        "lead_hours": 14,
+        "valid_time_utc": "2021-02-21T20:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T06:00:00+00:00",
+        "lead_hours": 15,
+        "valid_time_utc": "2021-02-21T21:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T06:00:00+00:00",
+        "lead_hours": 16,
+        "valid_time_utc": "2021-02-21T22:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T06:00:00+00:00",
+        "lead_hours": 17,
+        "valid_time_utc": "2021-02-21T23:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T12:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2021-02-21T18:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T12:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2021-02-21T19:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T12:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2021-02-21T20:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T12:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2021-02-21T21:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T12:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2021-02-21T22:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T12:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2021-02-22T00:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2021-02-21T12:00:00+00:00",
+        "lead_hours": 13,
+        "valid_time_utc": "2021-02-22T01:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-15T18:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-02-16T02:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-15T18:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-02-16T03:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-15T18:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-02-16T04:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-15T18:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-02-16T05:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-15T18:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2022-02-16T06:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-15T18:00:00+00:00",
+        "lead_hours": 13,
+        "valid_time_utc": "2022-02-16T07:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-15T18:00:00+00:00",
+        "lead_hours": 14,
+        "valid_time_utc": "2022-02-16T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-15T18:00:00+00:00",
+        "lead_hours": 15,
+        "valid_time_utc": "2022-02-16T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-15T18:00:00+00:00",
+        "lead_hours": 16,
+        "valid_time_utc": "2022-02-16T10:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-15T18:00:00+00:00",
+        "lead_hours": 17,
+        "valid_time_utc": "2022-02-16T11:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T00:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2022-02-16T06:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T00:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-02-16T07:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T00:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-02-16T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T00:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-02-16T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T00:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-02-16T10:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T00:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-02-16T11:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T00:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2022-02-16T12:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T00:00:00+00:00",
+        "lead_hours": 13,
+        "valid_time_utc": "2022-02-16T13:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T00:00:00+00:00",
+        "lead_hours": 14,
+        "valid_time_utc": "2022-02-16T14:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T00:00:00+00:00",
+        "lead_hours": 15,
+        "valid_time_utc": "2022-02-16T15:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T00:00:00+00:00",
+        "lead_hours": 16,
+        "valid_time_utc": "2022-02-16T16:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T00:00:00+00:00",
+        "lead_hours": 17,
+        "valid_time_utc": "2022-02-16T17:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T06:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2022-02-16T12:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T06:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-02-16T13:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T06:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-02-16T14:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T06:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-02-16T15:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T06:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-02-16T16:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T06:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2022-02-16T18:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-16T06:00:00+00:00",
+        "lead_hours": 13,
+        "valid_time_utc": "2022-02-16T19:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-28T00:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-02-28T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-28T00:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-02-28T10:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-28T00:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2022-02-28T12:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-28T00:00:00+00:00",
+        "lead_hours": 15,
+        "valid_time_utc": "2022-02-28T15:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-28T06:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-02-28T13:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-28T06:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-02-28T14:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-28T06:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-02-28T15:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-28T06:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-02-28T16:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-28T06:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-02-28T17:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-28T06:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2022-02-28T18:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-28T06:00:00+00:00",
+        "lead_hours": 13,
+        "valid_time_utc": "2022-02-28T19:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-28T06:00:00+00:00",
+        "lead_hours": 14,
+        "valid_time_utc": "2022-02-28T20:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-28T06:00:00+00:00",
+        "lead_hours": 15,
+        "valid_time_utc": "2022-02-28T21:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-28T06:00:00+00:00",
+        "lead_hours": 16,
+        "valid_time_utc": "2022-02-28T22:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-02-28T06:00:00+00:00",
+        "lead_hours": 17,
+        "valid_time_utc": "2022-02-28T23:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-03T18:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-03-04T02:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-03T18:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-03-04T03:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-03T18:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-03-04T04:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-03T18:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-03-04T05:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-03T18:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2022-03-04T06:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-03T18:00:00+00:00",
+        "lead_hours": 13,
+        "valid_time_utc": "2022-03-04T07:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-03T18:00:00+00:00",
+        "lead_hours": 14,
+        "valid_time_utc": "2022-03-04T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-03T18:00:00+00:00",
+        "lead_hours": 15,
+        "valid_time_utc": "2022-03-04T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-03T18:00:00+00:00",
+        "lead_hours": 16,
+        "valid_time_utc": "2022-03-04T10:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-03T18:00:00+00:00",
+        "lead_hours": 17,
+        "valid_time_utc": "2022-03-04T11:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T00:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2022-03-04T06:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T00:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-03-04T07:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T00:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-03-04T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T00:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-03-04T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T00:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-03-04T10:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T00:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-03-04T11:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T00:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2022-03-04T12:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T00:00:00+00:00",
+        "lead_hours": 13,
+        "valid_time_utc": "2022-03-04T13:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T00:00:00+00:00",
+        "lead_hours": 14,
+        "valid_time_utc": "2022-03-04T14:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T00:00:00+00:00",
+        "lead_hours": 15,
+        "valid_time_utc": "2022-03-04T15:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T00:00:00+00:00",
+        "lead_hours": 16,
+        "valid_time_utc": "2022-03-04T16:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T00:00:00+00:00",
+        "lead_hours": 17,
+        "valid_time_utc": "2022-03-04T17:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T06:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2022-03-04T12:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T06:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-03-04T13:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T06:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-03-04T14:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T06:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-03-04T15:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T06:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-03-04T16:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T06:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-03-04T17:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T06:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2022-03-04T18:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T06:00:00+00:00",
+        "lead_hours": 13,
+        "valid_time_utc": "2022-03-04T19:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T06:00:00+00:00",
+        "lead_hours": 14,
+        "valid_time_utc": "2022-03-04T20:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T06:00:00+00:00",
+        "lead_hours": 15,
+        "valid_time_utc": "2022-03-04T21:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T06:00:00+00:00",
+        "lead_hours": 16,
+        "valid_time_utc": "2022-03-04T22:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T18:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2022-03-05T00:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T18:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-03-05T01:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T18:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-03-05T02:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T18:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-03-05T03:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T18:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-03-05T04:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T18:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-03-05T05:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T18:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2022-03-05T06:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T18:00:00+00:00",
+        "lead_hours": 13,
+        "valid_time_utc": "2022-03-05T07:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T18:00:00+00:00",
+        "lead_hours": 14,
+        "valid_time_utc": "2022-03-05T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T18:00:00+00:00",
+        "lead_hours": 15,
+        "valid_time_utc": "2022-03-05T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-04T18:00:00+00:00",
+        "lead_hours": 16,
+        "valid_time_utc": "2022-03-05T10:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-05T00:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2022-03-05T06:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-05T00:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-03-05T07:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-05T00:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-03-05T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-05T00:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-03-05T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-05T00:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-03-05T10:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-05T00:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-03-05T11:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-05T00:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2022-03-05T12:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-05T00:00:00+00:00",
+        "lead_hours": 13,
+        "valid_time_utc": "2022-03-05T13:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-05T00:00:00+00:00",
+        "lead_hours": 14,
+        "valid_time_utc": "2022-03-05T14:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-05T00:00:00+00:00",
+        "lead_hours": 15,
+        "valid_time_utc": "2022-03-05T15:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-05T00:00:00+00:00",
+        "lead_hours": 16,
+        "valid_time_utc": "2022-03-05T16:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-03-05T00:00:00+00:00",
+        "lead_hours": 17,
+        "valid_time_utc": "2022-03-05T17:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-04T18:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-04-05T04:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-04T18:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-04-05T05:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-04T18:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2022-04-05T06:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-04T18:00:00+00:00",
+        "lead_hours": 13,
+        "valid_time_utc": "2022-04-05T07:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-04T18:00:00+00:00",
+        "lead_hours": 14,
+        "valid_time_utc": "2022-04-05T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-04T18:00:00+00:00",
+        "lead_hours": 16,
+        "valid_time_utc": "2022-04-05T10:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-04T18:00:00+00:00",
+        "lead_hours": 17,
+        "valid_time_utc": "2022-04-05T11:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-05T00:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2022-04-05T06:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-05T00:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-04-05T07:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-05T00:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-04-05T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-05T00:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2022-04-05T12:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-09T18:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-04-10T05:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-09T18:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2022-04-10T06:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-09T18:00:00+00:00",
+        "lead_hours": 14,
+        "valid_time_utc": "2022-04-10T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-09T18:00:00+00:00",
+        "lead_hours": 17,
+        "valid_time_utc": "2022-04-10T11:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T00:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-04-10T07:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T00:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-04-10T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T00:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-04-10T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T00:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-04-10T10:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T00:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-04-10T11:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T00:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2022-04-10T12:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T00:00:00+00:00",
+        "lead_hours": 13,
+        "valid_time_utc": "2022-04-10T13:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T00:00:00+00:00",
+        "lead_hours": 14,
+        "valid_time_utc": "2022-04-10T14:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T00:00:00+00:00",
+        "lead_hours": 15,
+        "valid_time_utc": "2022-04-10T15:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T00:00:00+00:00",
+        "lead_hours": 16,
+        "valid_time_utc": "2022-04-10T16:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T00:00:00+00:00",
+        "lead_hours": 17,
+        "valid_time_utc": "2022-04-10T17:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T06:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2022-04-10T12:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T06:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-04-10T13:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T06:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-04-10T14:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T06:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-04-10T15:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T06:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-04-10T16:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T06:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-04-10T17:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T06:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2022-04-10T18:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T06:00:00+00:00",
+        "lead_hours": 13,
+        "valid_time_utc": "2022-04-10T19:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T06:00:00+00:00",
+        "lead_hours": 14,
+        "valid_time_utc": "2022-04-10T20:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T06:00:00+00:00",
+        "lead_hours": 15,
+        "valid_time_utc": "2022-04-10T21:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T06:00:00+00:00",
+        "lead_hours": 16,
+        "valid_time_utc": "2022-04-10T22:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T06:00:00+00:00",
+        "lead_hours": 17,
+        "valid_time_utc": "2022-04-10T23:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T12:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2022-04-10T18:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T12:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-04-10T19:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T12:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-04-10T21:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-04-10T12:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2022-04-11T00:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-28T00:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-05-28T07:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-28T00:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-05-28T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-28T00:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-05-28T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-28T00:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-05-28T10:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-28T00:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-05-28T11:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-28T00:00:00+00:00",
+        "lead_hours": 13,
+        "valid_time_utc": "2022-05-28T13:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-28T00:00:00+00:00",
+        "lead_hours": 14,
+        "valid_time_utc": "2022-05-28T14:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-30T18:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-05-31T01:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-30T18:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-05-31T02:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-30T18:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-05-31T03:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-30T18:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-05-31T04:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-30T18:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-05-31T05:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-30T18:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2022-05-31T06:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-30T18:00:00+00:00",
+        "lead_hours": 13,
+        "valid_time_utc": "2022-05-31T07:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-30T18:00:00+00:00",
+        "lead_hours": 14,
+        "valid_time_utc": "2022-05-31T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-30T18:00:00+00:00",
+        "lead_hours": 15,
+        "valid_time_utc": "2022-05-31T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-30T18:00:00+00:00",
+        "lead_hours": 16,
+        "valid_time_utc": "2022-05-31T10:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-30T18:00:00+00:00",
+        "lead_hours": 17,
+        "valid_time_utc": "2022-05-31T11:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-31T00:00:00+00:00",
+        "lead_hours": 6,
+        "valid_time_utc": "2022-05-31T06:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-31T00:00:00+00:00",
+        "lead_hours": 7,
+        "valid_time_utc": "2022-05-31T07:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-31T00:00:00+00:00",
+        "lead_hours": 8,
+        "valid_time_utc": "2022-05-31T08:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-31T00:00:00+00:00",
+        "lead_hours": 9,
+        "valid_time_utc": "2022-05-31T09:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-31T00:00:00+00:00",
+        "lead_hours": 10,
+        "valid_time_utc": "2022-05-31T10:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-31T00:00:00+00:00",
+        "lead_hours": 11,
+        "valid_time_utc": "2022-05-31T11:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-31T00:00:00+00:00",
+        "lead_hours": 12,
+        "valid_time_utc": "2022-05-31T12:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-31T00:00:00+00:00",
+        "lead_hours": 13,
+        "valid_time_utc": "2022-05-31T13:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-31T00:00:00+00:00",
+        "lead_hours": 14,
+        "valid_time_utc": "2022-05-31T14:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-31T00:00:00+00:00",
+        "lead_hours": 15,
+        "valid_time_utc": "2022-05-31T15:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-31T00:00:00+00:00",
+        "lead_hours": 16,
+        "valid_time_utc": "2022-05-31T16:00:00+00:00"
+      },
+      {
+        "cycle_utc": "2022-05-31T00:00:00+00:00",
+        "lead_hours": 17,
+        "valid_time_utc": "2022-05-31T17:00:00+00:00"
+      }
+    ]
+  },
+  "supersedes_for_acquisition": "comparison-v1/acquisition-plan-estimate.json used future-known-only v4 rows and must not control feature availability",
+  "limits": [
+    "Single-sample compressed byte estimate; date/field layouts can differ",
+    "An index success does not verify all weather files or the GRIB axis/units",
+    "Missing archives must not silently drop an event or row from comparisons",
+    "Object LastModified is not verified first-publication latency",
+    "0.25 degree GFS does not resolve mountain-scale local winds",
+    "No model improvement or calibrated personal probability established"
+  ]
+}

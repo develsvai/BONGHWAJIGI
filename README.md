@@ -360,7 +360,7 @@ cd /home1/ncloud/bonghwajigi
 ```sh
 uv run --no-sync ruff check src tests migrations
 uv run --no-sync ruff format --check src tests migrations
-uv run --no-sync pytest
+uv run --no-sync python -m pytest
 uv run --no-sync python tools/validate_app_api.py
 
 # 별도 학습 프로젝트. GPU 설치·학습 실행과 구분한다.

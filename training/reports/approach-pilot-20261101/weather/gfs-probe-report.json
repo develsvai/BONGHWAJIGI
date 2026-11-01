@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "purpose": "non_commercial_research_adapter_smoke_test",
+  "source_kind": "numerical_weather_forecast",
+  "provider": "Open-Meteo / NOAA GFS",
+  "requested_model": "gfs_global",
+  "model_identity_basis": "explicit request parameter",
+  "forecast_reference_time_utc": null,
+  "issue_time_note": "provider response does not identify the underlying forecast cycle",
+  "request_started_at_utc": "2026-10-31T16:23:12.359908+00:00",
+  "request_parameters": {
+    "latitude": "37.0",
+    "longitude": "129.3",
+    "models": "gfs_global",
+    "hourly": "temperature_2m,relative_humidity_2m,wind_speed_10m,wind_direction_10m,precipitation",
+    "temperature_unit": "celsius",
+    "wind_speed_unit": "ms",
+    "precipitation_unit": "mm",
+    "timezone": "UTC",
+    "timeformat": "iso8601",
+    "start_hour": "2026-10-31T17:00",
+    "end_hour": "2026-10-31T22:00",
+    "cell_selection": "nearest"
+  },
+  "source_url": "https://api.open-meteo.com/v1/gfs?latitude=37.0&longitude=129.3&models=gfs_global&hourly=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m%2Cwind_direction_10m%2Cprecipitation&temperature_unit=celsius&wind_speed_unit=ms&precipitation_unit=mm&timezone=UTC&timeformat=iso8601&start_hour=2026-10-31T17%3A00&end_hour=2026-10-31T22%3A00&cell_selection=nearest",
+  "max_http_attempts": 1,
+  "observed": false,
+  "fire_labels_requested": false,
+  "holdout_2025_accessed": false,
+  "historical_input_availability_proven": false,
+  "operational_use": false,
+  "personal_risk_probability": false,
+  "data_licence": "CC-BY-4.0",
+  "licence_url": "https://open-meteo.com/en/licence",
+  "attribution": "Weather data by Open-Meteo.com; underlying model NOAA GFS",
+  "service_terms_url": "https://open-meteo.com/en/terms",
+  "service_terms_note": "Free API is non-commercial; commercial service needs a paid plan",
+  "documentation_url": "https://open-meteo.com/en/docs/gfs-api",
+  "limits": [
+    "Current retrieval is not evidence of historical issue-time availability",
+    "GFS global grid cannot resolve local mountain/fire winds",
+    "Nearest returned grid point is retained; requested point is not a local sensor",
+    "Precipitation is forecast accumulation for the preceding hour, not an observation",
+    "This is weather input connectivity, not verified fire approach or smoke risk"
+  ],
+  "retrieved_at_utc": "2026-10-31T16:23:13.206739+00:00",
+  "returned_grid_latitude": 36.960625,
+  "returned_grid_longitude": 129.25781,
+  "units": {
+    "temperature_2m": "°C",
+    "relative_humidity_2m": "%",
+    "wind_speed_10m": "m/s",
+    "wind_direction_10m": "°",
+    "precipitation": "mm"
+  },
+  "records": [
+    {
+      "valid_time_utc": "2026-10-31T17:00:00+00:00",
+      "hours_after_retrieval": 0.6129981280555555,
+      "forecast_reference_time_utc": null,
+      "observed": false,
+      "values": {
+        "temperature_2m": 6.0,
+        "relative_humidity_2m": 45,
+        "wind_speed_10m": 3.03,
+        "wind_direction_10m": 262,
+        "precipitation": 0.0
+      },
+      "missing_variables": [],
+      "usable_for_adapter_check": true,
+      "precipitation_interval_start_utc": "2026-10-31T16:00:00+00:00"
+    },
+    {
+      "valid_time_utc": "2026-10-31T18:00:00+00:00",
+      "hours_after_retrieval": 1.6129981280555554,
+      "forecast_reference_time_utc": null,
+      "observed": false,
+      "values": {
+        "temperature_2m": 5.5,
+        "relative_humidity_2m": 42,
+        "wind_speed_10m": 3.08,
+        "wind_direction_10m": 257,
+        "precipitation": 0.0
+      },
+      "missing_variables": [],
+      "usable_for_adapter_check": true,
+      "precipitation_interval_start_utc": "2026-10-31T17:00:00+00:00"
+    },
+    {
+      "valid_time_utc": "2026-10-31T19:00:00+00:00",
+      "hours_after_retrieval": 2.6129981280555556,
+      "forecast_reference_time_utc": null,
+      "observed": false,
+      "values": {
+        "temperature_2m": 5.7,
+        "relative_humidity_2m": 41,
+        "wind_speed_10m": 3.11,
+        "wind_direction_10m": 266,
+        "precipitation": 0.0
+      },
+      "missing_variables": [],
+      "usable_for_adapter_check": true,
+      "precipitation_interval_start_utc": "2026-10-31T18:00:00+00:00"
+    },
+    {
+      "valid_time_utc": "2026-10-31T20:00:00+00:00",
+      "hours_after_retrieval": 3.6129981280555556,
+      "forecast_reference_time_utc": null,
+      "observed": false,
+      "values": {
+        "temperature_2m": 6.3,
+        "relative_humidity_2m": 40,
+        "wind_speed_10m": 3.22,
+        "wind_direction_10m": 263,
+        "precipitation": 0.0
+      },
+      "missing_variables": [],
+      "usable_for_adapter_check": true,
+      "precipitation_interval_start_utc": "2026-10-31T19:00:00+00:00"
+    },
+    {
+      "valid_time_utc": "2026-10-31T21:00:00+00:00",
+      "hours_after_retrieval": 4.612998128055556,
+      "forecast_reference_time_utc": null,
+      "observed": false,
+      "values": {
+        "temperature_2m": 6.3,
+        "relative_humidity_2m": 41,
+        "wind_speed_10m": 3.42,
+        "wind_direction_10m": 263,
+        "precipitation": 0.0
+      },
+      "missing_variables": [],
+      "usable_for_adapter_check": true,
+      "precipitation_interval_start_utc": "2026-10-31T20:00:00+00:00"
+    },
+    {
+      "valid_time_utc": "2026-10-31T22:00:00+00:00",
+      "hours_after_retrieval": 5.612998128055556,
+      "forecast_reference_time_utc": null,
+      "observed": false,
+      "values": {
+        "temperature_2m": 6.5,
+        "relative_humidity_2m": 42,
+        "wind_speed_10m": 3.28,
+        "wind_direction_10m": 258,
+        "precipitation": 0.0
+      },
+      "missing_variables": [],
+      "usable_for_adapter_check": true,
+      "precipitation_interval_start_utc": "2026-10-31T21:00:00+00:00"
+    }
+  ],
+  "all_values_present": true,
+  "status": "validated_forecast_response",
+  "bytes": 690,
+  "source_sha256": "90fd4d51d44f9e809e51aecd873c0d2c4824507bc8c0183520246f1d1d1127d7"
+}

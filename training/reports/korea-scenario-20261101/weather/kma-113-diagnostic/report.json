@@ -1,0 +1,83 @@
+{
+  "created_at_utc": "2026-10-31T17:01:47.129375+00:00",
+  "source_code_sha256": "2857a02db5ac9b7fbad77c5089e8f8b48709654502de5c48f97e92490f06a1f2",
+  "endpoint": "https://apihub.kma.go.kr/api/typ06/url/nwp_nc_vars_down.php",
+  "http_attempts": 2,
+  "results": [
+    {
+      "parameters_without_auth": {
+        "group": "KIML",
+        "data": "U",
+        "tmfc": "2026103112",
+        "hf": "5",
+        "lon1": "129.29",
+        "lat1": "36.98",
+        "lon2": "129.31",
+        "lat2": "37.01",
+        "vars": "U10",
+        "dataType": "NC"
+      },
+      "started_at_utc": "2026-10-31T17:01:45.913703+00:00",
+      "retrieved_at_utc": "2026-10-31T17:01:46.019769+00:00",
+      "http_status": 403,
+      "content_type": "application/json",
+      "retry_after": "",
+      "body_bytes_read": 149,
+      "body_truncated": false,
+      "original_body_persisted": false,
+      "source_body_sha256": "ff23610cc2da35ed934d17aac7ee0a101e2ff906e0a0d3e740fb0003eb623db0",
+      "source_body_contained_sensitive_content": false,
+      "classification": {
+        "category_flags": {
+          "mentions_permission_or_application": true,
+          "mentions_authentication_or_key": false,
+          "mentions_ip_or_access_control": false,
+          "mentions_rate_or_quota": false
+        },
+        "http_status": 403,
+        "cause_confirmed": false,
+        "interpretation": "Provider text is evidence only; HTTP 403 alone does not identify the cause."
+      },
+      "safe_body_excerpt": "{\n  \"result\" : {\n    \"status\" : 403,\n    \"message\" : \"활용신청이 필요한 API 입니다. 활용신청 후 다시 시도해 주십시오.\"\n  }\n}"
+    },
+    {
+      "parameters_without_auth": {
+        "group": "KIML",
+        "data": "U",
+        "tmfc": "2026103112",
+        "hf": "5",
+        "lon1": "129.29",
+        "lat1": "36.98",
+        "lon2": "129.31",
+        "lat2": "37.01",
+        "vars": "T2",
+        "dataType": "TEXT"
+      },
+      "started_at_utc": "2026-10-31T17:01:47.021106+00:00",
+      "retrieved_at_utc": "2026-10-31T17:01:47.129012+00:00",
+      "http_status": 403,
+      "content_type": "application/json",
+      "retry_after": "",
+      "body_bytes_read": 149,
+      "body_truncated": false,
+      "original_body_persisted": false,
+      "source_body_sha256": "ff23610cc2da35ed934d17aac7ee0a101e2ff906e0a0d3e740fb0003eb623db0",
+      "source_body_contained_sensitive_content": false,
+      "classification": {
+        "category_flags": {
+          "mentions_permission_or_application": true,
+          "mentions_authentication_or_key": false,
+          "mentions_ip_or_access_control": false,
+          "mentions_rate_or_quota": false
+        },
+        "http_status": 403,
+        "cause_confirmed": false,
+        "interpretation": "Provider text is evidence only; HTTP 403 alone does not identify the cause."
+      },
+      "safe_body_excerpt": "{\n  \"result\" : {\n    \"status\" : 403,\n    \"message\" : \"활용신청이 필요한 API 입니다. 활용신청 후 다시 시도해 주십시오.\"\n  }\n}"
+    }
+  ],
+  "original_error_bodies_saved": false,
+  "cause_confirmed": false,
+  "output": "data/raw/korea-wildfire/kma-113-diagnostic-20261031T170145Z"
+}

@@ -1,0 +1,402 @@
+{
+  "input_only": true,
+  "target_read": false,
+  "validation_read": false,
+  "calibration_read": false,
+  "test_read": false,
+  "events": {
+    "andong_2020": {
+      "rows_with_horizon_repeats": 11540,
+      "source_sha256": "2091a0fb906808c648f14c878be95f10978184f5440f5f79f97e56db9c49f4bb",
+      "weather_station_distance_km": {
+        "finite_rows": 10611,
+        "missing_rows": 929,
+        "p05_p50_p95": [
+          7.339657783508301,
+          23.056970596313477,
+          65.93638610839844
+        ],
+        "maximum": 84.74738311767578
+      },
+      "weather_age_hours": {
+        "finite_rows": 10611,
+        "missing_rows": 929,
+        "p05_p50_p95": [
+          1.25,
+          1.9166666269302368,
+          2.9166667461395264
+        ],
+        "maximum": 2.9166667461395264
+      },
+      "issue_time_min_max_utc": [
+        "2020-04-25T05:15:00+00:00",
+        "2020-04-25T11:55:00+00:00"
+      ]
+    },
+    "andong_2021": {
+      "rows_with_horizon_repeats": 91892,
+      "source_sha256": "e612f55d72e1d52fc598564de256509c92745f45590c9c2932ed2e677d80cab2",
+      "weather_station_distance_km": {
+        "finite_rows": 63522,
+        "missing_rows": 28370,
+        "p05_p50_p95": [
+          9.134681701660156,
+          27.678050994873047,
+          39.72551345825195
+        ],
+        "maximum": 45.24901580810547
+      },
+      "weather_age_hours": {
+        "finite_rows": 63522,
+        "missing_rows": 28370,
+        "p05_p50_p95": [
+          1.25,
+          2.25,
+          2.9166667461395264
+        ],
+        "maximum": 2.9166667461395264
+      },
+      "issue_time_min_max_utc": [
+        "2021-02-21T08:15:00+00:00",
+        "2021-02-21T19:55:00+00:00"
+      ]
+    },
+    "hapcheon_2022": {
+      "rows_with_horizon_repeats": 6657,
+      "source_sha256": "c3a0f450e57f5620837c97d8a568a2a54b1316ef69d1414750a9ce07e480f4cc",
+      "weather_station_distance_km": {
+        "finite_rows": 6657,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          5.164512634277344,
+          21.491117477416992,
+          37.89894104003906
+        ],
+        "maximum": 43.56478500366211
+      },
+      "weather_age_hours": {
+        "finite_rows": 6657,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          1.25,
+          1.5833333730697632,
+          1.9166666269302368
+        ],
+        "maximum": 2.9166667461395264
+      },
+      "issue_time_min_max_utc": [
+        "2022-02-28T07:55:00+00:00",
+        "2022-02-28T17:55:00+00:00"
+      ]
+    },
+    "uljin_2022": {
+      "rows_with_horizon_repeats": 25406,
+      "source_sha256": "b6ca014e075d845717277aa4dab6a0ffb9b0dae82573befc189463047c90fa99",
+      "weather_station_distance_km": {
+        "finite_rows": 25406,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          8.160797119140625,
+          24.386062622070312,
+          38.41997146606445
+        ],
+        "maximum": 45.52787780761719
+      },
+      "weather_age_hours": {
+        "finite_rows": 25406,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          1.25,
+          1.5833333730697632,
+          1.9166666269302368
+        ],
+        "maximum": 1.9166666269302368
+      },
+      "issue_time_min_max_utc": [
+        "2022-03-04T02:35:00+00:00",
+        "2022-03-04T12:55:00+00:00"
+      ]
+    },
+    "ulju_2020": {
+      "rows_with_horizon_repeats": 25594,
+      "source_sha256": "b672258bcb5edd564e5d45eaddb00c86973caabab9eaf9e53261b48a7806d421",
+      "weather_station_distance_km": {
+        "finite_rows": 25594,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          5.268673896789551,
+          21.01129913330078,
+          31.035802841186523
+        ],
+        "maximum": 34.26437759399414
+      },
+      "weather_age_hours": {
+        "finite_rows": 25594,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          1.25,
+          1.5833333730697632,
+          1.9166666269302368
+        ],
+        "maximum": 2.9166667461395264
+      },
+      "issue_time_min_max_utc": [
+        "2020-03-19T06:15:00+00:00",
+        "2020-03-19T14:55:00+00:00"
+      ]
+    },
+    "goseong_2020": {
+      "rows_with_horizon_repeats": 4311,
+      "source_sha256": "dba83e20de183f35132c1766f070cc132bb3753e15f994d922781aacaeb2d1d1",
+      "weather_station_distance_km": {
+        "finite_rows": 4311,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          8.000083923339844,
+          28.34579086303711,
+          55.10940933227539
+        ],
+        "maximum": 63.240726470947266
+      },
+      "weather_age_hours": {
+        "finite_rows": 4311,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          1.25,
+          1.5833333730697632,
+          2.25
+        ],
+        "maximum": 2.25
+      },
+      "issue_time_min_max_utc": [
+        "2020-05-01T12:15:00+00:00",
+        "2020-05-01T16:35:00+00:00"
+      ]
+    },
+    "yeongdeok_2022": {
+      "rows_with_horizon_repeats": 35489,
+      "source_sha256": "b1c5c3e21f7306c8a83065b6cc5a596354fa1a550369989a6ade610f1cb15179",
+      "weather_station_distance_km": {
+        "finite_rows": 35489,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          25.276004409790065,
+          40.46913528442383,
+          51.25882339477539
+        ],
+        "maximum": 53.85175704956055
+      },
+      "weather_age_hours": {
+        "finite_rows": 35489,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          1.25,
+          1.5833333730697632,
+          1.9166666269302368
+        ],
+        "maximum": 1.9166666269302368
+      },
+      "issue_time_min_max_utc": [
+        "2022-02-16T02:15:00+00:00",
+        "2022-02-16T13:55:00+00:00"
+      ]
+    },
+    "yeongwol_2022": {
+      "rows_with_horizon_repeats": 13205,
+      "source_sha256": "030b33514f7bdf20285dca6b77fcb0cd4eedfb3f925cce34dd3300938afab4a2",
+      "weather_station_distance_km": {
+        "finite_rows": 13205,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          4.881980895996094,
+          15.188569068908691,
+          28.88637924194336
+        ],
+        "maximum": 34.338775634765625
+      },
+      "weather_age_hours": {
+        "finite_rows": 13205,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          1.25,
+          1.5833333730697632,
+          1.9166666269302368
+        ],
+        "maximum": 1.9166666269302368
+      },
+      "issue_time_min_max_utc": [
+        "2022-03-04T05:15:00+00:00",
+        "2022-03-04T16:55:00+00:00"
+      ]
+    },
+    "gangneung_donghae_2022": {
+      "rows_with_horizon_repeats": 24417,
+      "source_sha256": "25f28f567fec2735c5d5bc0647058d18640b33a2da0e04708bae842d964dfe49",
+      "weather_station_distance_km": {
+        "finite_rows": 24417,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          3.7185842990875244,
+          14.848502159118652,
+          27.782175064086914
+        ],
+        "maximum": 34.14635467529297
+      },
+      "weather_age_hours": {
+        "finite_rows": 24417,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          1.25,
+          1.5833333730697632,
+          2.25
+        ],
+        "maximum": 2.9166667461395264
+      },
+      "issue_time_min_max_utc": [
+        "2022-03-05T00:15:00+00:00",
+        "2022-03-05T11:55:00+00:00"
+      ]
+    },
+    "bonghwa_2022": {
+      "rows_with_horizon_repeats": 255,
+      "source_sha256": "00e38b268ec33be70f8c859fff19bf97c455f9c5af4027e7fa2e0ae7a407022e",
+      "weather_station_distance_km": {
+        "finite_rows": 255,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          10.082887744903566,
+          34.19731140136719,
+          43.971637344360346
+        ],
+        "maximum": 45.52787780761719
+      },
+      "weather_age_hours": {
+        "finite_rows": 255,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          1.25,
+          1.9166666269302368,
+          1.9166666269302368
+        ],
+        "maximum": 1.9166666269302368
+      },
+      "issue_time_min_max_utc": [
+        "2022-04-05T04:55:00+00:00",
+        "2022-04-05T05:35:00+00:00"
+      ]
+    },
+    "yanggu_2022": {
+      "rows_with_horizon_repeats": 34026,
+      "source_sha256": "248eb6ac14c592782f80c1c532e18a9e5f5d27550b08a38e84ea43dab8344d90",
+      "weather_station_distance_km": {
+        "finite_rows": 34026,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          12.954401969909668,
+          34.937416076660156,
+          51.085731506347656
+        ],
+        "maximum": 57.59761428833008
+      },
+      "weather_age_hours": {
+        "finite_rows": 34026,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          1.25,
+          1.5833333730697632,
+          1.9166666269302368
+        ],
+        "maximum": 1.9166666269302368
+      },
+      "issue_time_min_max_utc": [
+        "2022-04-10T07:15:00+00:00",
+        "2022-04-10T18:35:00+00:00"
+      ]
+    },
+    "gunwi_2022": {
+      "rows_with_horizon_repeats": 105,
+      "source_sha256": "cbe4c8453f4c24099227362c5a2cf1133f1e268022e9fac831e65b3c32fa5ff2",
+      "weather_station_distance_km": {
+        "finite_rows": 105,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          20.456228256225586,
+          24.906816482543945,
+          35.01293182373047
+        ],
+        "maximum": 35.542545318603516
+      },
+      "weather_age_hours": {
+        "finite_rows": 105,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          1.5833333730697632,
+          1.5833333730697632,
+          1.9166666269302368
+        ],
+        "maximum": 1.9166666269302368
+      },
+      "issue_time_min_max_utc": [
+        "2022-04-10T05:35:00+00:00",
+        "2022-04-10T10:55:00+00:00"
+      ]
+    },
+    "uljin_may_2022": {
+      "rows_with_horizon_repeats": 2700,
+      "source_sha256": "ff76c7b36741e7627586787616e49069b955581c1a46ef166b8c7fffaed5a90c",
+      "weather_station_distance_km": {
+        "finite_rows": 2700,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          12.461201715469363,
+          29.048175811767578,
+          41.98487606048581
+        ],
+        "maximum": 45.52787780761719
+      },
+      "weather_age_hours": {
+        "finite_rows": 2700,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          1.25,
+          1.5833333730697632,
+          1.9166666269302368
+        ],
+        "maximum": 1.9166666269302368
+      },
+      "issue_time_min_max_utc": [
+        "2022-05-28T07:55:00+00:00",
+        "2022-05-28T08:35:00+00:00"
+      ]
+    },
+    "miryang_2022": {
+      "rows_with_horizon_repeats": 39893,
+      "source_sha256": "c54a34620ee041ede0102d6511e25d04ff6db7a9dc4d327aad95dc33193fcced",
+      "weather_station_distance_km": {
+        "finite_rows": 39893,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          15.492652893066406,
+          29.218652725219727,
+          39.292022705078125
+        ],
+        "maximum": 41.91421890258789
+      },
+      "weather_age_hours": {
+        "finite_rows": 39893,
+        "missing_rows": 0,
+        "p05_p50_p95": [
+          1.25,
+          1.5833333730697632,
+          1.9166666269302368
+        ],
+        "maximum": 2.25
+      },
+      "issue_time_min_max_utc": [
+        "2022-05-31T01:15:00+00:00",
+        "2022-05-31T11:35:00+00:00"
+      ]
+    }
+  },
+  "note": "Row-weighted descriptive input audit, repeated 1/3/6h rows retained; no performance metrics"
+}

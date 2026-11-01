@@ -1,0 +1,104 @@
+{
+  "folds": [
+    {
+      "train": [
+        "bobcat_2020",
+        "creek_2020",
+        "glass_2020",
+        "july_complex_2020",
+        "slater_and_devil_2020",
+        "zogg_2020"
+      ],
+      "held": [
+        "august_complex_2020",
+        "czu_lightning_complex_2020",
+        "dolan_2020",
+        "lnu_lightning_complex_2020",
+        "north_complex_2020",
+        "scu_lightning_complex_2020",
+        "sqf_complex_2020",
+        "w_5_cold_springs_2020"
+      ]
+    },
+    {
+      "train": [
+        "august_complex_2020",
+        "czu_lightning_complex_2020",
+        "dolan_2020",
+        "glass_2020",
+        "july_complex_2020",
+        "lnu_lightning_complex_2020",
+        "north_complex_2020",
+        "scu_lightning_complex_2020",
+        "sqf_complex_2020",
+        "w_5_cold_springs_2020",
+        "zogg_2020"
+      ],
+      "held": [
+        "bobcat_2020",
+        "creek_2020",
+        "slater_and_devil_2020"
+      ]
+    },
+    {
+      "train": [
+        "august_complex_2020",
+        "bobcat_2020",
+        "creek_2020",
+        "czu_lightning_complex_2020",
+        "dolan_2020",
+        "lnu_lightning_complex_2020",
+        "north_complex_2020",
+        "scu_lightning_complex_2020",
+        "slater_and_devil_2020",
+        "sqf_complex_2020",
+        "w_5_cold_springs_2020"
+      ],
+      "held": [
+        "glass_2020",
+        "july_complex_2020",
+        "zogg_2020"
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "candidate": "distance_d2",
+      "macro_ap": 0.14260413028131064,
+      "macro_brier": 0.007797233257276405,
+      "eligible_event_horizons": 41
+    },
+    {
+      "candidate": "legacy_d2",
+      "macro_ap": 0.27399908394529665,
+      "macro_brier": 0.007403703638590828,
+      "eligible_event_horizons": 41
+    },
+    {
+      "candidate": "legacy_d3",
+      "macro_ap": 0.2731344526055459,
+      "macro_brier": 0.007560543011398598,
+      "eligible_event_horizons": 41
+    },
+    {
+      "candidate": "history_d2",
+      "macro_ap": 0.27564136751207974,
+      "macro_brier": 0.007376251786592461,
+      "eligible_event_horizons": 41
+    },
+    {
+      "candidate": "history_d3",
+      "macro_ap": 0.2690341021238664,
+      "macro_brier": 0.007493366687239835,
+      "eligible_event_horizons": 41
+    },
+    {
+      "candidate": "history_d4",
+      "macro_ap": 0.26645109926300764,
+      "macro_brier": 0.007647604788785213,
+      "eligible_event_horizons": 41
+    }
+  ],
+  "selected": "history_d2",
+  "selection_metric": "eligible_event_horizon_macro_AP"
+}

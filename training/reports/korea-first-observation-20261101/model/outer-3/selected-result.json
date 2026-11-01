@@ -1,0 +1,138 @@
+{
+  "index": 3,
+  "held_ids": [
+    "andong_2021",
+    "bonghwa_2022"
+  ],
+  "training_ids": [
+    "andong_2020",
+    "gangneung_donghae_2022",
+    "goseong_2020",
+    "gunwi_2022",
+    "hapcheon_2022",
+    "miryang_2022",
+    "uljin_2022",
+    "uljin_may_2022",
+    "ulju_2020",
+    "yanggu_2022",
+    "yeongdeok_2022",
+    "yeongwol_2022"
+  ],
+  "selected": "A_original34",
+  "inner_macro_ap": {
+    "A_original34": 0.22154376393759012,
+    "B_corrected_history44": 0.21064308917673497,
+    "C_corrected_history_wind50": 0.21225235604641993
+  },
+  "positive_weight": 14.087419041596998,
+  "training_event_shares": {
+    "andong_2020": {
+      "rows": 7825,
+      "row_share": 0.03978887741974851,
+      "weight_sum": 7825.0,
+      "weight_share": 0.03978887741974851,
+      "positive_rows": 50,
+      "class_adjusted_weight_sum": 8479.37095207985,
+      "class_adjusted_weight_share": 0.04046134675323836
+    },
+    "gangneung_donghae_2022": {
+      "rows": 21074,
+      "row_share": 0.10715793006310287,
+      "weight_sum": 21074.0,
+      "weight_share": 0.10715793006310287,
+      "positive_rows": 4,
+      "class_adjusted_weight_sum": 21126.34967616639,
+      "class_adjusted_weight_share": 0.10080943087740074
+    },
+    "goseong_2020": {
+      "rows": 2502,
+      "row_share": 0.012722271093189873,
+      "weight_sum": 2502.0,
+      "weight_share": 0.012722271093189873,
+      "positive_rows": 15,
+      "class_adjusted_weight_sum": 2698.311285623955,
+      "class_adjusted_weight_share": 0.01287563773218671
+    },
+    "gunwi_2022": {
+      "rows": 10,
+      "row_share": 5.08484056482409e-05,
+      "weight_sum": 10.0,
+      "weight_share": 5.08484056482409e-05,
+      "positive_rows": 2,
+      "class_adjusted_weight_sum": 36.174838083194,
+      "class_adjusted_weight_share": 0.00017261689289196008
+    },
+    "hapcheon_2022": {
+      "rows": 3472,
+      "row_share": 0.01765456644106924,
+      "weight_sum": 3472.0,
+      "weight_share": 0.01765456644106924,
+      "positive_rows": 0,
+      "class_adjusted_weight_sum": 3472.0,
+      "class_adjusted_weight_share": 0.016567478498247058
+    },
+    "miryang_2022": {
+      "rows": 39009,
+      "row_share": 0.19835454559322294,
+      "weight_sum": 39009.0,
+      "weight_share": 0.19835454559322294,
+      "positive_rows": 30,
+      "class_adjusted_weight_sum": 39401.622571247906,
+      "class_adjusted_weight_share": 0.18801426691969922
+    },
+    "uljin_2022": {
+      "rows": 20980,
+      "row_share": 0.1066799550500094,
+      "weight_sum": 20980.0,
+      "weight_share": 0.1066799550500094,
+      "positive_rows": 456,
+      "class_adjusted_weight_sum": 26947.86308296823,
+      "class_adjusted_weight_share": 0.1285881745969994
+    },
+    "uljin_may_2022": {
+      "rows": 2550,
+      "row_share": 0.012966343440301429,
+      "weight_sum": 2550.0,
+      "weight_share": 0.012966343440301429,
+      "positive_rows": 0,
+      "class_adjusted_weight_sum": 2550.0,
+      "class_adjusted_weight_share": 0.012167934956949886
+    },
+    "ulju_2020": {
+      "rows": 23231,
+      "row_share": 0.11812593116142843,
+      "weight_sum": 23231.0,
+      "weight_share": 0.11812593116142843,
+      "positive_rows": 38,
+      "class_adjusted_weight_sum": 23728.321923580686,
+      "class_adjusted_weight_share": 0.11322536384458737
+    },
+    "yanggu_2022": {
+      "rows": 30180,
+      "row_share": 0.15346048824639102,
+      "weight_sum": 30180.0,
+      "weight_share": 0.15346048824639102,
+      "positive_rows": 171,
+      "class_adjusted_weight_sum": 32417.948656113087,
+      "class_adjusted_weight_share": 0.15468999634718628
+    },
+    "yeongdeok_2022": {
+      "rows": 34722,
+      "row_share": 0.17655583409182204,
+      "weight_sum": 34722.0,
+      "weight_share": 0.17655583409182204,
+      "positive_rows": 220,
+      "class_adjusted_weight_sum": 37601.23218915134,
+      "class_adjusted_weight_share": 0.17942327356029955
+    },
+    "yeongwol_2022": {
+      "rows": 11108,
+      "row_share": 0.056482408994065994,
+      "weight_sum": 11108.0,
+      "weight_share": 0.056482408994065994,
+      "positive_rows": 0,
+      "class_adjusted_weight_sum": 11108.0,
+      "class_adjusted_weight_share": 0.05300447902031346
+    }
+  }
+}

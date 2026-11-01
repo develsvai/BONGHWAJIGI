@@ -1,0 +1,128 @@
+{
+  "event": {
+    "id": "gangneung_donghae_2022",
+    "split": "train",
+    "start_utc": "2022-03-05T00:00:00Z",
+    "hours": 12,
+    "bbox": [
+      128.65,
+      37.35,
+      129.4,
+      37.95
+    ],
+    "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003737",
+    "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+  },
+  "anchors": 26,
+  "rows": 28251,
+  "original_v4_rows": 24417,
+  "matched_v4_rows": 24417,
+  "base_feature_max_abs_difference": 0.0,
+  "horizons": {
+    "1": {
+      "all_candidates": {
+        "rows": 9417,
+        "positive": 7,
+        "negative": 8305,
+        "unknown": 1105,
+        "blind_gap_fire_observed": 1,
+        "source120_incomplete": 2898
+      },
+      "primary_clear60": {
+        "rows": 7965,
+        "positive": 0,
+        "negative": 7123,
+        "unknown": 842,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 1696
+      },
+      "sensitivity_clear120": {
+        "rows": 6116,
+        "positive": 0,
+        "negative": 6030,
+        "unknown": 86,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 0
+      },
+      "prior_fire_120m": {
+        "rows": 8,
+        "positive": 4,
+        "negative": 1,
+        "unknown": 3,
+        "blind_gap_fire_observed": 1,
+        "source120_incomplete": 1
+      }
+    },
+    "3": {
+      "all_candidates": {
+        "rows": 9417,
+        "positive": 14,
+        "negative": 8082,
+        "unknown": 1321,
+        "blind_gap_fire_observed": 1,
+        "source120_incomplete": 2898
+      },
+      "primary_clear60": {
+        "rows": 7965,
+        "positive": 2,
+        "negative": 6998,
+        "unknown": 965,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 1696
+      },
+      "sensitivity_clear120": {
+        "rows": 6116,
+        "positive": 0,
+        "negative": 5992,
+        "unknown": 124,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 0
+      },
+      "prior_fire_120m": {
+        "rows": 8,
+        "positive": 4,
+        "negative": 1,
+        "unknown": 3,
+        "blind_gap_fire_observed": 1,
+        "source120_incomplete": 1
+      }
+    },
+    "6": {
+      "all_candidates": {
+        "rows": 9417,
+        "positive": 18,
+        "negative": 7991,
+        "unknown": 1408,
+        "blind_gap_fire_observed": 1,
+        "source120_incomplete": 2898
+      },
+      "primary_clear60": {
+        "rows": 7965,
+        "positive": 2,
+        "negative": 6949,
+        "unknown": 1014,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 1696
+      },
+      "sensitivity_clear120": {
+        "rows": 6116,
+        "positive": 0,
+        "negative": 5956,
+        "unknown": 160,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 0
+      },
+      "prior_fire_120m": {
+        "rows": 8,
+        "positive": 6,
+        "negative": 1,
+        "unknown": 1,
+        "blind_gap_fire_observed": 1,
+        "source120_incomplete": 1
+      }
+    }
+  },
+  "sha256": "f14bb4af81aee46cb6129ef788bbdf09027fecc6e2421ca597c01375f7cda22f",
+  "survival_training_eligible": false,
+  "operational_use": false
+}

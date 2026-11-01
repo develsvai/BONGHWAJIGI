@@ -1,0 +1,117 @@
+{
+  "study": "synthetic_3x3_wind_sensitivity_v1",
+  "simulation_only": true,
+  "operational_use": false,
+  "probability": null,
+  "personal_risk_validated": false,
+  "source_probe_report": "/home1/ncloud/bonghwajigi/data/artifacts/elmfire/synthetic-20261101-first/report.json",
+  "source_probe_report_sha256": "c43e9140c1976df69ce5034e77656af81b6111e2a88dd18a3407cdca4aea3336",
+  "source_commit": "f4927b7ce68cb74eb0eb117085cc920782c8644e",
+  "source_binary_sha256": "f57750977084080f692cc51498f16f21197ee34de767e11d6407749bb52f947b",
+  "source_inputs_sha256": {
+    "adj.tif": "ff88a903882d7a46f4fa627f90558ed345a9e2a4aa842316dcff878da5fdef5d",
+    "elmfire.data": "7c39ca99a9ac0a30e8537fee89a095e3016fc22be633ff9f2674f966b60a6a38",
+    "fuel_models.csv": "22b50f3b3dc3b95d1372601a02ff998e197745aff8ee4f96f2c513865e724acb",
+    "landscape.tif": "3b162ee3911e173ab3c98b766083c645da066a29536282b3527144f0c5e9f3dc",
+    "m1.tif": "fa5c45c67ac61cb3495f408047d8f55fc1267992029d4eaa8e6ef293cc071c37",
+    "m10.tif": "1396140c25372948a8e2aa9f01a0739736465a85a01b110ceffc14911409f72b",
+    "m100.tif": "496df0b8bde56a9b0e9335d705956a07b265f3a657374267324a33b6218f65df",
+    "phi.tif": "ff88a903882d7a46f4fa627f90558ed345a9e2a4aa842316dcff878da5fdef5d",
+    "wd.tif": "9de94a2972d73670abf3786a596f6929ac5c046f37ba85c8e948a172c2576570",
+    "ws.tif": "4183d295eeaa7badd79e122ca537674e50cfe2830569607d60a5ccc90c21380a"
+  },
+  "license": "AGPL-3.0 with Commons Clause; commercial use requires separate terms",
+  "license_scope": "Private research evaluation only; no hosted/API/product integration",
+  "created_at": "2026-10-31T16:25:07.337126+00:00",
+  "stop_seconds": 21600,
+  "horizon_seconds": {
+    "1h": 3600,
+    "3h": 10800,
+    "6h": 21600
+  },
+  "cpu_threads_per_case": 1,
+  "sequential_cases": true,
+  "scenario_interpretation": "Equal counts over nine predetermined synthetic wind combinations. Not samples from a real uncertainty distribution, not calibrated probability.",
+  "grid": {
+    "crs": "EPSG:32610",
+    "units": "metres",
+    "cellsize_m": 30,
+    "coordinates": "Artificial tutorial coordinates, NOT actual geographic user locations"
+  },
+  "scenario_plan": [
+    {
+      "id": "ws10_wd340",
+      "wind_speed_mph": 10,
+      "wind_direction_deg": 340
+    },
+    {
+      "id": "ws10_wd000",
+      "wind_speed_mph": 10,
+      "wind_direction_deg": 0
+    },
+    {
+      "id": "ws10_wd020",
+      "wind_speed_mph": 10,
+      "wind_direction_deg": 20
+    },
+    {
+      "id": "ws15_wd340",
+      "wind_speed_mph": 15,
+      "wind_direction_deg": 340
+    },
+    {
+      "id": "ws15_wd000",
+      "wind_speed_mph": 15,
+      "wind_direction_deg": 0
+    },
+    {
+      "id": "ws15_wd020",
+      "wind_speed_mph": 15,
+      "wind_direction_deg": 20
+    },
+    {
+      "id": "ws20_wd340",
+      "wind_speed_mph": 20,
+      "wind_direction_deg": 340
+    },
+    {
+      "id": "ws20_wd000",
+      "wind_speed_mph": 20,
+      "wind_direction_deg": 0
+    },
+    {
+      "id": "ws20_wd020",
+      "wind_speed_mph": 20,
+      "wind_direction_deg": 20
+    }
+  ],
+  "probe_locations": [
+    {
+      "id": "ignition_neighborhood",
+      "x_m": 0.0,
+      "y_m": 3000.0
+    },
+    {
+      "id": "south_1500m",
+      "x_m": 0.0,
+      "y_m": 1500.0
+    },
+    {
+      "id": "southwest",
+      "x_m": -1500.0,
+      "y_m": 1500.0
+    },
+    {
+      "id": "southeast",
+      "x_m": 1500.0,
+      "y_m": 1500.0
+    },
+    {
+      "id": "north_1500m",
+      "x_m": 0.0,
+      "y_m": 4500.0
+    }
+  ],
+  "fraction_rule": "Only if all nine scenarios succeed and none has arrival <=0 at the probe: count(0 < arrival_seconds <= horizon) / 9. Otherwise null. Unburned within the complete simulation is distinct from a failed scenario.",
+  "validation_scope": "Synthetic sensitivity only; no Korean/physical validation"
+}

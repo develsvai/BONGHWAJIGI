@@ -1,0 +1,89 @@
+{
+  "created_at_utc": "2026-10-31T16:25:32.270796+00:00",
+  "dataset_config_sha256": "dd38c6f831009cac18f3d5854c7846284f92a2e82aa2f6ae34ce0f5ba8191722",
+  "source_sha256": "d2013815132975c7bd83d329d18a6183d332d07b7e044eda5f7a709c83f370d3",
+  "target": "GOFER reconstructed-perimeter first approach, not personal harm",
+  "radius_km": 2,
+  "retrospective_proxy_only": true,
+  "source_asof_verified": false,
+  "personal_harm_probability": false,
+  "dataset_source": {
+    "record_url": "https://zenodo.org/records/14642378",
+    "license": "CC-BY-4.0",
+    "version": "0.2",
+    "archive_bytes": 75711678,
+    "archive_sha256": "96eca2e18529eb274ca94af9a730bcf1c9c6da597fb04a9b5cf9167aada451c2",
+    "record_sha256": "8d12b0ff647965e9b434e8197537b29fd06ea3a0417e038a7d5bcf6f11b60d93",
+    "attribution": "Liu et al. (2025), GOFER v0.2, doi:10.5281/zenodo.14642378"
+  },
+  "dataset_settings": {
+    "radius_km": 2,
+    "max_distance_km": 20,
+    "spacing_km": 2,
+    "issue_interval_hours": 6,
+    "max_issue_hours": 72,
+    "horizon_hours": 6
+  },
+  "horizons_hours": [
+    1,
+    3,
+    6
+  ],
+  "candidates": [
+    {
+      "name": "aft_distance",
+      "features": [
+        "distance_km"
+      ],
+      "parameters": {
+        "objective": "survival:aft",
+        "eval_metric": "aft-nloglik",
+        "aft_loss_distribution": "normal",
+        "aft_loss_distribution_scale": 1.0,
+        "tree_method": "hist",
+        "device": "cpu",
+        "nthread": 2,
+        "seed": 47,
+        "max_depth": 3,
+        "eta": 0.05,
+        "min_child_weight": 5,
+        "lambda": 20,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0
+      }
+    },
+    {
+      "name": "aft_history",
+      "features": [
+        "distance_km",
+        "prior_distance_km",
+        "closing_speed_kmh",
+        "history_elapsed_hours",
+        "elapsed_event_hours",
+        "perimeter_area_km2",
+        "perimeter_growth_km2_per_h"
+      ],
+      "parameters": {
+        "objective": "survival:aft",
+        "eval_metric": "aft-nloglik",
+        "aft_loss_distribution": "normal",
+        "aft_loss_distribution_scale": 1.0,
+        "tree_method": "hist",
+        "device": "cpu",
+        "nthread": 2,
+        "seed": 47,
+        "max_depth": 3,
+        "eta": 0.05,
+        "min_child_weight": 5,
+        "lambda": 20,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0
+      }
+    }
+  ],
+  "rounds": 100,
+  "selection": "None; two fixed models are compared without validation-based tuning",
+  "probability_calibrated": false,
+  "operational_use": false,
+  "test_evaluated": false
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": "open_meteo_seven_hour_request_receipt_v1",
+  "source": "OpenMeteo_GFS",
+  "source_url": "https://api.open-meteo.com/v1/gfs?latitude=37.0&longitude=129.3&models=gfs_global&hourly=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m%2Cwind_direction_10m%2Cprecipitation&temperature_unit=celsius&wind_speed_unit=ms&precipitation_unit=mm&timezone=UTC&timeformat=iso8601&start_hour=2026-10-31T18%3A00&end_hour=2026-11-01T00%3A00&cell_selection=nearest",
+  "request_parameters": {
+    "latitude": "37.0",
+    "longitude": "129.3",
+    "models": "gfs_global",
+    "hourly": "temperature_2m,relative_humidity_2m,wind_speed_10m,wind_direction_10m,precipitation",
+    "temperature_unit": "celsius",
+    "wind_speed_unit": "ms",
+    "precipitation_unit": "mm",
+    "timezone": "UTC",
+    "timeformat": "iso8601",
+    "start_hour": "2026-10-31T18:00",
+    "end_hour": "2026-11-01T00:00",
+    "cell_selection": "nearest"
+  },
+  "request_started_at_utc": "2026-10-31T17:03:27.823529+00:00",
+  "max_http_attempts": 1,
+  "forecast_issue_time_utc": null,
+  "forecast_issue_time_known": false,
+  "model_identity_basis": "explicit gfs_global request parameter, not a returned cycle ID",
+  "operational_use": false,
+  "fire_labels_requested": false,
+  "kma_data_combined": false,
+  "status": "validated_forecast_response",
+  "retrieved_at_utc": "2026-10-31T17:03:28.684683+00:00",
+  "http_status": 200,
+  "response_headers": {
+    "Date": "Sat, 31 Oct 2026 17:03:28 GMT",
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "response_path": "response.json",
+  "response_bytes": 730,
+  "response_sha256": "fc66f60990887a046aa8f877e679bfa0d721a30b8ad21bbe1b75d7e05ce6a74f"
+}

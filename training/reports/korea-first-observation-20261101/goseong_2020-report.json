@@ -1,0 +1,128 @@
+{
+  "event": {
+    "id": "goseong_2020",
+    "split": "train",
+    "start_utc": "2020-05-01T12:00:00Z",
+    "hours": 12,
+    "bbox": [
+      128.2,
+      38.1,
+      128.75,
+      38.55
+    ],
+    "source": "https://www.korea.kr/briefing/policyBriefingView.do?newsId=156393191",
+    "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+  },
+  "anchors": 12,
+  "rows": 11619,
+  "original_v4_rows": 4311,
+  "matched_v4_rows": 4311,
+  "base_feature_max_abs_difference": 0.0,
+  "horizons": {
+    "1": {
+      "all_candidates": {
+        "rows": 3873,
+        "positive": 8,
+        "negative": 2862,
+        "unknown": 1003,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 1608
+      },
+      "primary_clear60": {
+        "rows": 3169,
+        "positive": 5,
+        "negative": 2180,
+        "unknown": 984,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 956
+      },
+      "sensitivity_clear120": {
+        "rows": 2175,
+        "positive": 0,
+        "negative": 1234,
+        "unknown": 941,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 0
+      },
+      "prior_fire_120m": {
+        "rows": 21,
+        "positive": 3,
+        "negative": 11,
+        "unknown": 7,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 11
+      }
+    },
+    "3": {
+      "all_candidates": {
+        "rows": 3873,
+        "positive": 8,
+        "negative": 926,
+        "unknown": 2939,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 1608
+      },
+      "primary_clear60": {
+        "rows": 3169,
+        "positive": 5,
+        "negative": 307,
+        "unknown": 2857,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 956
+      },
+      "sensitivity_clear120": {
+        "rows": 2175,
+        "positive": 0,
+        "negative": 0,
+        "unknown": 2175,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 0
+      },
+      "prior_fire_120m": {
+        "rows": 21,
+        "positive": 3,
+        "negative": 10,
+        "unknown": 8,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 11
+      }
+    },
+    "6": {
+      "all_candidates": {
+        "rows": 3873,
+        "positive": 8,
+        "negative": 499,
+        "unknown": 3366,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 1608
+      },
+      "primary_clear60": {
+        "rows": 3169,
+        "positive": 5,
+        "negative": 0,
+        "unknown": 3164,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 956
+      },
+      "sensitivity_clear120": {
+        "rows": 2175,
+        "positive": 0,
+        "negative": 0,
+        "unknown": 2175,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 0
+      },
+      "prior_fire_120m": {
+        "rows": 21,
+        "positive": 3,
+        "negative": 10,
+        "unknown": 8,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 11
+      }
+    }
+  },
+  "sha256": "d02fc57bde573d054752c9b8cc9aa65ee819aeb0e3bc874d1a0ba7baa4a22c54",
+  "survival_training_eligible": false,
+  "operational_use": false
+}

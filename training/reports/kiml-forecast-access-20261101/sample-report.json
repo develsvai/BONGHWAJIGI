@@ -1,0 +1,39 @@
+{
+  "id": "kiml-20260919T12Z-t2-h0-user-sample",
+  "model": "KIML",
+  "endpoint": "https://apihub.kma.go.kr/api/typ06/url/nwp_nc_pnt_down.php",
+  "parameters_without_auth": {
+    "group": "KIML",
+    "data": "U",
+    "vars": "T2",
+    "tmfc": "2026091912",
+    "hf": "0",
+    "lon": "127.5",
+    "lat": "37.5",
+    "dataType": "CSV"
+  },
+  "forecast_reference_time_utc": "2026-09-19T12:00:00+00:00",
+  "requested_valid_time_utc": "2026-09-19T12:00:00+00:00",
+  "lead_hours": 0,
+  "observed": false,
+  "operational_use": false,
+  "purpose": "Exact user-provided sample parameters with key read privately from server config",
+  "status": "response_received",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at_utc": "2026-10-31T16:34:47.667882+00:00",
+      "http_status": 200
+    }
+  ],
+  "retrieved_at_utc": "2026-10-31T16:34:47.898128+00:00",
+  "bytes": 108,
+  "source_sha256": "1d68886094943d9a4de8deb04a190152b71a53b29c0071802b7a30a99c30e29a",
+  "content_status": "numeric_candidate_requires_schema_review",
+  "schema_verified": false,
+  "numeric_row_count": 1,
+  "reference_stamp_seen": false,
+  "valid_stamp_seen": false,
+  "interpretation": "HTTP success/numeric text alone does not prove meteorological values",
+  "raw_file": "response.txt"
+}

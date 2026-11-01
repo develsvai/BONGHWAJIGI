@@ -1,0 +1,125 @@
+{
+  "purpose": "synthetic_installation_research_probe",
+  "simulation_only": true,
+  "operational_use": false,
+  "personal_risk_validated": false,
+  "source_url": "https://github.com/lautenberger/elmfire.git",
+  "source_commit": "f4927b7ce68cb74eb0eb117085cc920782c8644e",
+  "tutorial": "tutorials/01-constant-wind",
+  "license": "AGPL-3.0 with Commons Clause; commercial use requires separate terms",
+  "license_scope": "Private research evaluation only; no hosted/API/product integration",
+  "license_urls": [
+    "https://github.com/lautenberger/elmfire/blob/f4927b7ce68cb74eb0eb117085cc920782c8644e/LICENSE.md",
+    "https://github.com/lautenberger/elmfire/blob/f4927b7ce68cb74eb0eb117085cc920782c8644e/COMMERCIAL_LICENSE.md"
+  ],
+  "bootstrap_url": "https://github.com/mamba-org/micromamba-releases/releases/download/2.10.0-0/micromamba-linux-64",
+  "bootstrap_sha256": "701f39c06f8e6a670a0e186c8479b9e5c0502a2f0cda6cef65d83bdd2875e8bd",
+  "environment_specs": [
+    "python=3.12",
+    "gdal>=3.8,<3.11",
+    "rasterio",
+    "numpy>=2,<3",
+    "gfortran_linux-64=14",
+    "mpich>=4,<5",
+    "make",
+    "bc"
+  ],
+  "dependency_reproducibility": "Initial solve is recorded as an explicit package lock; later rebuilds reuse it. Version ranges alone are not a byte-identical dependency lock.",
+  "cpu_threads": 1,
+  "gpu_used": false,
+  "services_changed": false,
+  "case": {
+    "domain_m": 12000,
+    "cellsize_m": 30,
+    "stop_seconds": 19800
+  },
+  "status": "synthetic_probe_passed",
+  "stages": [
+    {
+      "name": "platform",
+      "started_at": "2026-10-31T16:19:34.998420+00:00",
+      "status": "complete",
+      "elapsed_seconds": 0.001
+    },
+    {
+      "name": "source_and_license",
+      "started_at": "2026-10-31T16:19:35.000177+00:00",
+      "status": "complete",
+      "elapsed_seconds": 20.893
+    },
+    {
+      "name": "bootstrap",
+      "started_at": "2026-10-31T16:19:55.894133+00:00",
+      "status": "complete",
+      "elapsed_seconds": 0.783
+    },
+    {
+      "name": "environment",
+      "started_at": "2026-10-31T16:19:56.677981+00:00",
+      "status": "complete",
+      "elapsed_seconds": 28.413
+    },
+    {
+      "name": "build",
+      "started_at": "2026-10-31T16:20:25.150474+00:00",
+      "status": "complete",
+      "elapsed_seconds": 54.163
+    },
+    {
+      "name": "synthetic_tutorial",
+      "started_at": "2026-10-31T16:21:19.474773+00:00",
+      "status": "complete",
+      "elapsed_seconds": 8.73
+    },
+    {
+      "name": "output_validation",
+      "started_at": "2026-10-31T16:21:28.205121+00:00",
+      "status": "complete",
+      "elapsed_seconds": 0.315
+    }
+  ],
+  "started_at": "2026-10-31T16:19:34.998321+00:00",
+  "elapsed_seconds": 113.523,
+  "current_stage": "output_validation",
+  "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.39",
+  "license_sha256": {
+    "LICENSE.md": "55032df426cd4157e55c37ac34c9efb31fd6412e869a2e1f55e84f1a87e19dd6",
+    "COMMERCIAL_LICENSE.md": "d34d51903b386bb31253159788f13a2bf2579f3c8d1e34e69e8963da066a7236"
+  },
+  "source_version": "1.1",
+  "environment_lock_sha256": "2c44b4cb48f84e1de466c5a06bff419b2a1605be9c9dea940e29c22a439732a3",
+  "binary_sha256": "f57750977084080f692cc51498f16f21197ee34de767e11d6407749bb52f947b",
+  "binary_path": "/home1/ncloud/bonghwajigi/data/artifacts/research-tools/elmfire/bin/elmfire_1.1",
+  "tutorial_script_sha256": "6b4317d5dcd61fa072392337509abc5244571864ae3b9437470e11a2a7f438e4",
+  "input_sha256": {
+    "adj.tif": "ff88a903882d7a46f4fa627f90558ed345a9e2a4aa842316dcff878da5fdef5d",
+    "elmfire.data": "7c39ca99a9ac0a30e8537fee89a095e3016fc22be633ff9f2674f966b60a6a38",
+    "fuel_models.csv": "22b50f3b3dc3b95d1372601a02ff998e197745aff8ee4f96f2c513865e724acb",
+    "landscape.tif": "3b162ee3911e173ab3c98b766083c645da066a29536282b3527144f0c5e9f3dc",
+    "m1.tif": "fa5c45c67ac61cb3495f408047d8f55fc1267992029d4eaa8e6ef293cc071c37",
+    "m10.tif": "1396140c25372948a8e2aa9f01a0739736465a85a01b110ceffc14911409f72b",
+    "m100.tif": "496df0b8bde56a9b0e9335d705956a07b265f3a657374267324a33b6218f65df",
+    "phi.tif": "ff88a903882d7a46f4fa627f90558ed345a9e2a4aa842316dcff878da5fdef5d",
+    "wd.tif": "9de94a2972d73670abf3786a596f6929ac5c046f37ba85c8e948a172c2576570",
+    "ws.tif": "4183d295eeaa7badd79e122ca537674e50cfe2830569607d60a5ccc90c21380a"
+  },
+  "arrival_summary": {
+    "file": "time_of_arrival_0000001_0019800.tif",
+    "sha256": "b62af3209a40312e152c090bad5f2f0d683262bede08bfc085e3c90b3de484e0",
+    "shape": [
+      400,
+      400
+    ],
+    "crs": "EPSG:32610",
+    "cellsize_m": [
+      30.0,
+      30.0
+    ],
+    "reached_cells": 44169,
+    "total_cells": 160000,
+    "min_arrival_seconds": 0.0,
+    "max_arrival_seconds": 19774.279296875,
+    "meaning": "Synthetic fire arrival time, not real-world risk probability"
+  },
+  "finished_at": "2026-10-31T16:21:28.520521+00:00"
+}

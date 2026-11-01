@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "fields": {
+    "UGRD": {
+      "shape": [
+        37,
+        37
+      ],
+      "valid": 1369,
+      "min": -7.263818264007568,
+      "max": 7.896181583404541,
+      "unit": "[m/s]",
+      "raw_sha256": "b781de29edb49a9bbff97fc2903527227e345de11b96240ca1dc65256b7eb71a",
+      "crs": {
+        "proj": "longlat",
+        "R": 6371229,
+        "no_defs": true
+      },
+      "metadata_checked": true
+    },
+    "VGRD": {
+      "shape": [
+        37,
+        37
+      ],
+      "valid": 1369,
+      "min": -4.087099552154541,
+      "max": 14.672900199890137,
+      "unit": "[m/s]",
+      "raw_sha256": "1f645c2e8ef78d10e56030238a04881c808ca4c4694c0dcd58d08b712b37581c",
+      "crs": {
+        "proj": "longlat",
+        "R": 6371229,
+        "no_defs": true
+      },
+      "metadata_checked": true
+    },
+    "TMP": {
+      "shape": [
+        37,
+        37
+      ],
+      "valid": 1369,
+      "min": 269.8478698730469,
+      "max": 287.0478820800781,
+      "unit": "[K]",
+      "raw_sha256": "bcb8149f9a19756061902fa6e67dcec87dbda5d67e5997ce2a7c0e7414cfe470",
+      "crs": {
+        "proj": "longlat",
+        "R": 6371229,
+        "no_defs": true
+      },
+      "metadata_checked": true
+    },
+    "RH": {
+      "shape": [
+        37,
+        37
+      ],
+      "valid": 1369,
+      "min": 19.0,
+      "max": 93.80000305175781,
+      "unit": "[%]",
+      "raw_sha256": "9dfbb8ea9f8a4fb6d54d5e3ce3b1a44ba1e698c40c0560826d04f0b2cea17806",
+      "crs": {
+        "proj": "longlat",
+        "R": 6371229,
+        "no_defs": true
+      },
+      "metadata_checked": true
+    }
+  },
+  "local_rasterio": "1.5.2",
+  "local_gdal": "3.12.2",
+  "server_attempt": {
+    "status": "decoder_unavailable",
+    "reason": "ELMFIRE rasterio 1.4.4 environment has no gdal_GRIB.so plugin; no package installed",
+    "raw_files_modified": false
+  }
+}

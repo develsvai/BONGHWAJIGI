@@ -28,7 +28,7 @@ jobs:
       - run: uv run --no-sync alembic upgrade head
         env:
           BONGHWA_DATABASE_URL: postgresql+psycopg://bonghwajigi:ci-only@127.0.0.1:5432/bonghwajigi_analysis
-      - run: uv run --no-sync pytest
+      - run: uv run --no-sync python -m pytest
         env:
           BONGHWA_TEST_DATABASE_URL: postgresql+psycopg://bonghwajigi:ci-only@127.0.0.1:5432/bonghwajigi_analysis
       - run: uv run --no-sync python tools/validate_app_api.py

@@ -1,0 +1,19 @@
+{
+  "id": "checkpoint-20261031-084522-task-completed-ssh-7cffcee6",
+  "created_at": "2026-10-31T08:45:22+00:00",
+  "reason": "Task completed: 두 서버 SSH 별칭 설정과 실제 관리 접속 확인",
+  "summary": "두 서버 SSH 별칭 설정과 실제 관리 접속 확인 -> DONE @ develop/3fcb4548166b",
+  "job_id": "job-20261031-002017-v2-fe3bfad0",
+  "task_id": "task-20261031-084138-ssh-b8d79a00",
+  "commit_sha": "3fcb4548166bc604decef152927e149af6689a4c",
+  "branch_name": "develop",
+  "dirty": true,
+  "staged_files": [],
+  "modified_files": [
+    ".loom/job-runs/job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02/job-run.json",
+    ".loom/task-definitions/task-def-20261031-084138-ssh-27c1f8be/task-definition.json"
+  ],
+  "untracked_files": [],
+  "snapshot_captured_at": "2026-10-31T08:45:22+00:00",
+  "rollback_strategy": "revert-or-branch"
+}

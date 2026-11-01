@@ -1,0 +1,284 @@
+{
+  "simulation_only": true,
+  "operational_use": false,
+  "probability": null,
+  "retrospective_proxy_only": true,
+  "source_asof_verified": false,
+  "final_evaluation": false,
+  "split": "train",
+  "baseline": {
+    "name": "initial_perimeter_persistence",
+    "horizons": {
+      "1h": {
+        "status": "evaluated",
+        "metrics": {
+          "new_growth_iou": 0.0,
+          "new_growth_precision": null,
+          "new_growth_recall": 0.0,
+          "undefined": {
+            "new_growth_iou": null,
+            "new_growth_precision": "no_predicted_growth",
+            "new_growth_recall": null
+          },
+          "new_growth_tp_cells": 0,
+          "new_growth_fp_cells": 0,
+          "new_growth_fn_cells": 366,
+          "predicted_new_area_ha": 0,
+          "observed_new_area_ha": 366,
+          "signed_new_area_error_ha": -366,
+          "total_iou_secondary": 0.2766798418972332,
+          "grid_cell_area_ha": 1
+        }
+      },
+      "3h": {
+        "status": "evaluated",
+        "metrics": {
+          "new_growth_iou": 0.0,
+          "new_growth_precision": null,
+          "new_growth_recall": 0.0,
+          "undefined": {
+            "new_growth_iou": null,
+            "new_growth_precision": "no_predicted_growth",
+            "new_growth_recall": null
+          },
+          "new_growth_tp_cells": 0,
+          "new_growth_fp_cells": 0,
+          "new_growth_fn_cells": 1072,
+          "predicted_new_area_ha": 0,
+          "observed_new_area_ha": 1072,
+          "signed_new_area_error_ha": -1072,
+          "total_iou_secondary": 0.11551155115511551,
+          "grid_cell_area_ha": 1
+        }
+      },
+      "6h": {
+        "status": "evaluated",
+        "metrics": {
+          "new_growth_iou": 0.0,
+          "new_growth_precision": null,
+          "new_growth_recall": 0.0,
+          "undefined": {
+            "new_growth_iou": null,
+            "new_growth_precision": "no_predicted_growth",
+            "new_growth_recall": null
+          },
+          "new_growth_tp_cells": 0,
+          "new_growth_fp_cells": 0,
+          "new_growth_fn_cells": 1294,
+          "predicted_new_area_ha": 0,
+          "observed_new_area_ha": 1294,
+          "signed_new_area_error_ha": -1294,
+          "total_iou_secondary": 0.09762900976290098,
+          "grid_cell_area_ha": 1
+        }
+      }
+    }
+  },
+  "cases": {
+    "moisture_3_4_5": {
+      "1h": {
+        "status": "evaluated",
+        "metrics": {
+          "new_growth_iou": 0.03278688524590164,
+          "new_growth_precision": 1.0,
+          "new_growth_recall": 0.03278688524590164,
+          "undefined": {
+            "new_growth_iou": null,
+            "new_growth_precision": null,
+            "new_growth_recall": null
+          },
+          "new_growth_tp_cells": 12,
+          "new_growth_fp_cells": 0,
+          "new_growth_fn_cells": 354,
+          "predicted_new_area_ha": 12,
+          "observed_new_area_ha": 366,
+          "signed_new_area_error_ha": -354,
+          "total_iou_secondary": 0.30039525691699603,
+          "grid_cell_area_ha": 1
+        }
+      },
+      "3h": {
+        "status": "evaluated",
+        "metrics": {
+          "new_growth_iou": 0.07462686567164178,
+          "new_growth_precision": 1.0,
+          "new_growth_recall": 0.07462686567164178,
+          "undefined": {
+            "new_growth_iou": null,
+            "new_growth_precision": null,
+            "new_growth_recall": null
+          },
+          "new_growth_tp_cells": 80,
+          "new_growth_fp_cells": 0,
+          "new_growth_fn_cells": 992,
+          "predicted_new_area_ha": 80,
+          "observed_new_area_ha": 1072,
+          "signed_new_area_error_ha": -992,
+          "total_iou_secondary": 0.18151815181518152,
+          "grid_cell_area_ha": 1
+        }
+      },
+      "6h": {
+        "status": "evaluated",
+        "metrics": {
+          "new_growth_iou": 0.10664605873261206,
+          "new_growth_precision": 1.0,
+          "new_growth_recall": 0.10664605873261206,
+          "undefined": {
+            "new_growth_iou": null,
+            "new_growth_precision": null,
+            "new_growth_recall": null
+          },
+          "new_growth_tp_cells": 138,
+          "new_growth_fp_cells": 0,
+          "new_growth_fn_cells": 1156,
+          "predicted_new_area_ha": 138,
+          "observed_new_area_ha": 1294,
+          "signed_new_area_error_ha": -1156,
+          "total_iou_secondary": 0.19386331938633194,
+          "grid_cell_area_ha": 1
+        }
+      }
+    },
+    "moisture_6_7_8": {
+      "1h": {
+        "status": "evaluated",
+        "metrics": {
+          "new_growth_iou": 0.0273224043715847,
+          "new_growth_precision": 1.0,
+          "new_growth_recall": 0.0273224043715847,
+          "undefined": {
+            "new_growth_iou": null,
+            "new_growth_precision": null,
+            "new_growth_recall": null
+          },
+          "new_growth_tp_cells": 10,
+          "new_growth_fp_cells": 0,
+          "new_growth_fn_cells": 356,
+          "predicted_new_area_ha": 10,
+          "observed_new_area_ha": 366,
+          "signed_new_area_error_ha": -356,
+          "total_iou_secondary": 0.2964426877470356,
+          "grid_cell_area_ha": 1
+        }
+      },
+      "3h": {
+        "status": "evaluated",
+        "metrics": {
+          "new_growth_iou": 0.05503731343283582,
+          "new_growth_precision": 1.0,
+          "new_growth_recall": 0.05503731343283582,
+          "undefined": {
+            "new_growth_iou": null,
+            "new_growth_precision": null,
+            "new_growth_recall": null
+          },
+          "new_growth_tp_cells": 59,
+          "new_growth_fp_cells": 0,
+          "new_growth_fn_cells": 1013,
+          "predicted_new_area_ha": 59,
+          "observed_new_area_ha": 1072,
+          "signed_new_area_error_ha": -1013,
+          "total_iou_secondary": 0.16419141914191418,
+          "grid_cell_area_ha": 1
+        }
+      },
+      "6h": {
+        "status": "evaluated",
+        "metrics": {
+          "new_growth_iou": 0.08268933539412673,
+          "new_growth_precision": 1.0,
+          "new_growth_recall": 0.08268933539412673,
+          "undefined": {
+            "new_growth_iou": null,
+            "new_growth_precision": null,
+            "new_growth_recall": null
+          },
+          "new_growth_tp_cells": 107,
+          "new_growth_fp_cells": 0,
+          "new_growth_fn_cells": 1187,
+          "predicted_new_area_ha": 107,
+          "observed_new_area_ha": 1294,
+          "signed_new_area_error_ha": -1187,
+          "total_iou_secondary": 0.17224546722454673,
+          "grid_cell_area_ha": 1
+        }
+      }
+    },
+    "moisture_9_10_11": {
+      "1h": {
+        "status": "evaluated",
+        "metrics": {
+          "new_growth_iou": 0.02185792349726776,
+          "new_growth_precision": 1.0,
+          "new_growth_recall": 0.02185792349726776,
+          "undefined": {
+            "new_growth_iou": null,
+            "new_growth_precision": null,
+            "new_growth_recall": null
+          },
+          "new_growth_tp_cells": 8,
+          "new_growth_fp_cells": 0,
+          "new_growth_fn_cells": 358,
+          "predicted_new_area_ha": 8,
+          "observed_new_area_ha": 366,
+          "signed_new_area_error_ha": -358,
+          "total_iou_secondary": 0.2924901185770751,
+          "grid_cell_area_ha": 1
+        }
+      },
+      "3h": {
+        "status": "evaluated",
+        "metrics": {
+          "new_growth_iou": 0.04757462686567164,
+          "new_growth_precision": 1.0,
+          "new_growth_recall": 0.04757462686567164,
+          "undefined": {
+            "new_growth_iou": null,
+            "new_growth_precision": null,
+            "new_growth_recall": null
+          },
+          "new_growth_tp_cells": 51,
+          "new_growth_fp_cells": 0,
+          "new_growth_fn_cells": 1021,
+          "predicted_new_area_ha": 51,
+          "observed_new_area_ha": 1072,
+          "signed_new_area_error_ha": -1021,
+          "total_iou_secondary": 0.15759075907590758,
+          "grid_cell_area_ha": 1
+        }
+      },
+      "6h": {
+        "status": "evaluated",
+        "metrics": {
+          "new_growth_iou": 0.07341576506955177,
+          "new_growth_precision": 1.0,
+          "new_growth_recall": 0.07341576506955177,
+          "undefined": {
+            "new_growth_iou": null,
+            "new_growth_precision": null,
+            "new_growth_recall": null
+          },
+          "new_growth_tp_cells": 95,
+          "new_growth_fp_cells": 0,
+          "new_growth_fn_cells": 1199,
+          "predicted_new_area_ha": 95,
+          "observed_new_area_ha": 1294,
+          "signed_new_area_error_ha": -1199,
+          "total_iou_secondary": 0.16387726638772665,
+          "grid_cell_area_ha": 1
+        }
+      }
+    }
+  },
+  "primary_metrics": "new growth outside initial perimeter",
+  "interpretation": "Development comparison against retrospective GOFER reconstruction; no forecast skill certification",
+  "truth_manifest_sha256": "d6409dbc200bfa879c83e971e78ac6c1cc9c2985df899eabdc684182c82d5fc1",
+  "fit_receipt_sha256": "a1429aa4f83a981619716eb3cd456a4618b43ea0e31925783d446e25470bb4bb",
+  "original_evaluation_sha256": "2152930cebf49e08c598d325289cf7a762e3004cfe3624721f9a6e23390f3b29",
+  "diagnostic_report_sha256": "cf59a5ddd4d0d32e0c3e7bf6106b6bc4729304f8c931553f2e374a4730b51d6b",
+  "reconciliation": "Only endpoint coverage for the three audited fixed-input cases",
+  "parameters_changed": false,
+  "simulated_values_changed": false,
+  "short_horizon_metrics_exactly_preserved": true
+}

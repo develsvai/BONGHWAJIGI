@@ -1,0 +1,127 @@
+{
+  "event": {
+    "id": "hapcheon_2022",
+    "split": "train",
+    "start_utc": "2022-02-28T06:00:00Z",
+    "hours": 12,
+    "bbox": [
+      127.8,
+      35.2,
+      128.7,
+      35.9
+    ],
+    "source": "https://www.hccl.go.kr/CLRecords/Files/FileAppendix/a9/A006406.pdf"
+  },
+  "anchors": 16,
+  "rows": 24600,
+  "original_v4_rows": 6657,
+  "matched_v4_rows": 6657,
+  "base_feature_max_abs_difference": 0.0,
+  "horizons": {
+    "1": {
+      "all_candidates": {
+        "rows": 8200,
+        "positive": 4,
+        "negative": 5163,
+        "unknown": 3033,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 0
+      },
+      "primary_clear60": {
+        "rows": 4599,
+        "positive": 0,
+        "negative": 2980,
+        "unknown": 1619,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 0
+      },
+      "sensitivity_clear120": {
+        "rows": 2407,
+        "positive": 0,
+        "negative": 1246,
+        "unknown": 1161,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 0
+      },
+      "prior_fire_120m": {
+        "rows": 16,
+        "positive": 1,
+        "negative": 0,
+        "unknown": 15,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 0
+      }
+    },
+    "3": {
+      "all_candidates": {
+        "rows": 8200,
+        "positive": 11,
+        "negative": 1440,
+        "unknown": 6749,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 0
+      },
+      "primary_clear60": {
+        "rows": 4599,
+        "positive": 0,
+        "negative": 473,
+        "unknown": 4126,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 0
+      },
+      "sensitivity_clear120": {
+        "rows": 2407,
+        "positive": 0,
+        "negative": 91,
+        "unknown": 2316,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 0
+      },
+      "prior_fire_120m": {
+        "rows": 16,
+        "positive": 7,
+        "negative": 0,
+        "unknown": 9,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 0
+      }
+    },
+    "6": {
+      "all_candidates": {
+        "rows": 8200,
+        "positive": 11,
+        "negative": 28,
+        "unknown": 8161,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 0
+      },
+      "primary_clear60": {
+        "rows": 4599,
+        "positive": 0,
+        "negative": 19,
+        "unknown": 4580,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 0
+      },
+      "sensitivity_clear120": {
+        "rows": 2407,
+        "positive": 0,
+        "negative": 8,
+        "unknown": 2399,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 0
+      },
+      "prior_fire_120m": {
+        "rows": 16,
+        "positive": 7,
+        "negative": 0,
+        "unknown": 9,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 0
+      }
+    }
+  },
+  "sha256": "3b7fd3eec38e8f0053c275bfda91f5b01216b6b8da5d37f4db459291d12d3830",
+  "survival_training_eligible": false,
+  "operational_use": false
+}

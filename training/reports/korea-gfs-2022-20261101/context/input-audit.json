@@ -1,0 +1,71 @@
+{
+  "profile": "korea_gfs_context_2022_primary_v1",
+  "rows": 79612,
+  "events": 10,
+  "plan_sha256": "f9aad36dbb4437424524ba9a03befc23903dee1fde951729a94b6a5284ab52ff",
+  "report_sha256": "63cf122fa327b15820e3b57e7638a56c487f4fbfdf6ea1afaafa6f40930d6350",
+  "source_files_rechecked": 385,
+  "all_sample_valid": true,
+  "native_unique_cells": 67,
+  "fields": {
+    "gfs_temperature_c": {
+      "min": -10.793463134765602,
+      "max": 30.038934326171898,
+      "missing": 0,
+      "nunique": 632
+    },
+    "gfs_humidity_pct": {
+      "min": 15.699999809265137,
+      "max": 89.30000305175781,
+      "missing": 0,
+      "nunique": 372
+    },
+    "gfs_wind_u_ms": {
+      "min": -1.6879247426986694,
+      "max": 12.675827026367188,
+      "missing": 0,
+      "nunique": 655
+    },
+    "gfs_wind_v_ms": {
+      "min": -5.461838245391846,
+      "max": 8.3351411819458,
+      "missing": 0,
+      "nunique": 654
+    },
+    "gfs_grid_distance_km": {
+      "min": 0.2972337031325082,
+      "max": 17.73059245507986,
+      "missing": 0,
+      "nunique": 4568
+    },
+    "gfs_reference_age_hours": {
+      "min": 6.25,
+      "max": 11.916666666666666,
+      "missing": 0,
+      "nunique": 18
+    },
+    "gfs_valid_age_hours": {
+      "min": 0.25,
+      "max": 0.9166666666666666,
+      "missing": 0,
+      "nunique": 3
+    },
+    "gfs_grid_lon": {
+      "min": 127.75,
+      "max": 129.5,
+      "missing": 0,
+      "nunique": 8
+    },
+    "gfs_grid_lat": {
+      "min": 35.25,
+      "max": 38.5,
+      "missing": 0,
+      "nunique": 14
+    }
+  },
+  "future_outcome_or_audit_columns_read": false,
+  "validation_read": false,
+  "calibration_read": false,
+  "test_read": false,
+  "operational_use": false
+}

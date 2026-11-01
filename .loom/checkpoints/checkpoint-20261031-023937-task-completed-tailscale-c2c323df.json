@@ -1,0 +1,19 @@
+{
+  "id": "checkpoint-20261031-023937-task-completed-tailscale-c2c323df",
+  "created_at": "2026-10-31T02:39:37+00:00",
+  "reason": "Task completed: 두 제공 서버를 기존 Tailscale 망에 연결하고 클러스터 통신 검증",
+  "summary": "두 제공 서버를 기존 Tailscale 망에 연결하고 클러스터 통신 검증 -> DONE @ develop/439a9df4bcef",
+  "job_id": "job-20261031-002017-v2-fe3bfad0",
+  "task_id": "task-20261031-022438-tailscale-6dc57118",
+  "commit_sha": "439a9df4bcef5717ee344e6f45a5e53100f9e117",
+  "branch_name": "develop",
+  "dirty": true,
+  "staged_files": [],
+  "modified_files": [
+    ".loom/job-runs/job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02/job-run.json",
+    ".loom/task-definitions/task-def-20261031-022438-tailscale-946bd75d/task-definition.json"
+  ],
+  "untracked_files": [],
+  "snapshot_captured_at": "2026-10-31T02:39:37+00:00",
+  "rollback_strategy": "revert-or-branch"
+}

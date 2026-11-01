@@ -366,13 +366,31 @@
       "size_bytes": 106645
     },
     {
+      "id": "docs/V2/delivery/api/mobile-interaction-live-evidence.json",
+      "title": "{",
+      "path": "docs/V2/delivery/api/mobile-interaction-live-evidence.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T03:55:03+09:00",
+      "size_bytes": 1910
+    },
+    {
+      "id": "docs/V2/delivery/api/mvp-interaction-fixtures.json",
+      "title": "{",
+      "path": "docs/V2/delivery/api/mvp-interaction-fixtures.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T03:40:27+09:00",
+      "size_bytes": 4407
+    },
+    {
       "id": "docs/V2/delivery/api/mvp-openapi.json",
       "title": "{",
       "path": "docs/V2/delivery/api/mvp-openapi.json",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-11-01T01:39:02+09:00",
-      "size_bytes": 138778
+      "updated_at": "2026-11-01T04:57:00+09:00",
+      "size_bytes": 165754
     },
     {
       "id": "docs/V2/delivery/api/openapi.yaml",
@@ -429,6 +447,33 @@
       "size_bytes": 6067
     },
     {
+      "id": "docs/V2/delivery/architecture-slides/source/original-style-prompt.txt",
+      "title": "Use case: precise-object-edit / infographic-diagram.",
+      "path": "docs/V2/delivery/architecture-slides/source/original-style-prompt.txt",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T02:04:51+09:00",
+      "size_bytes": 4811
+    },
+    {
+      "id": "docs/V2/delivery/architecture-slides/source/original-style-refinement-prompt.txt",
+      "title": "연결선 수정 1",
+      "path": "docs/V2/delivery/architecture-slides/source/original-style-refinement-prompt.txt",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T02:15:05+09:00",
+      "size_bytes": 6050
+    },
+    {
+      "id": "docs/V2/delivery/architecture-slides/source/provenance.json",
+      "title": "{",
+      "path": "docs/V2/delivery/architecture-slides/source/provenance.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T01:49:40+09:00",
+      "size_bytes": 2918
+    },
+    {
       "id": "docs/V2/delivery/environment-readiness-evidence.json",
       "title": "{",
       "path": "docs/V2/delivery/environment-readiness-evidence.json",
@@ -447,13 +492,13 @@
       "size_bytes": 15193
     },
     {
-      "id": "docs/V2/delivery/external-resources-and-licenses.md",
-      "title": "봉화지기 외부 자원 활용 내역과 라이선스",
-      "path": "docs/V2/delivery/external-resources-and-licenses.md",
+      "id": "docs/V2/delivery/external-resources/android-voice-resources-20261101.json",
+      "title": "{",
+      "path": "docs/V2/delivery/external-resources/android-voice-resources-20261101.json",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-11-01T04:16:31+09:00",
-      "size_bytes": 126230
+      "updated_at": "2026-11-01T04:22:44+09:00",
+      "size_bytes": 3063
     },
     {
       "id": "docs/V2/delivery/external-resources/data-and-content-sources.json",
@@ -501,6 +546,42 @@
       "size_bytes": 266117
     },
     {
+      "id": "docs/V2/delivery/filming-model-metadata.json",
+      "title": "{",
+      "path": "docs/V2/delivery/filming-model-metadata.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T05:11:27+09:00",
+      "size_bytes": 1341
+    },
+    {
+      "id": "docs/V2/delivery/filming-pipeline-verification.json",
+      "title": "{",
+      "path": "docs/V2/delivery/filming-pipeline-verification.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T05:09:32+09:00",
+      "size_bytes": 14290
+    },
+    {
+      "id": "docs/V2/delivery/filming-scenario-pipeline.md",
+      "title": "A·B 촬영 시나리오와 지역 안내 파이프라인",
+      "path": "docs/V2/delivery/filming-scenario-pipeline.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T05:12:08+09:00",
+      "size_bytes": 9073
+    },
+    {
+      "id": "docs/V2/delivery/filming-sources.md",
+      "title": "촬영용 영덕 산불 자료와 출처",
+      "path": "docs/V2/delivery/filming-sources.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T04:38:04+09:00",
+      "size_bytes": 8059
+    },
+    {
       "id": "docs/V2/delivery/gpu-model-evidence.json",
       "title": "{",
       "path": "docs/V2/delivery/gpu-model-evidence.json",
@@ -533,8 +614,8 @@
       "path": "docs/V2/delivery/korea-wildfire-improvement.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T23:38:06+09:00",
-      "size_bytes": 31804
+      "updated_at": "2026-11-01T03:59:37+09:00",
+      "size_bytes": 102880
     },
     {
       "id": "docs/V2/delivery/mobile-dialogue-and-route.md",
@@ -546,6 +627,15 @@
       "size_bytes": 9038
     },
     {
+      "id": "docs/V2/delivery/mobile-location-clock-skew.md",
+      "title": "실기기 위치·현재 상태의 시계 오차 보정",
+      "path": "docs/V2/delivery/mobile-location-clock-skew.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T02:42:16+09:00",
+      "size_bytes": 2459
+    },
+    {
       "id": "docs/V2/delivery/mobile-server-deployment.md",
       "title": "앱 실연동 서버 배포",
       "path": "docs/V2/delivery/mobile-server-deployment.md",
@@ -555,6 +645,15 @@
       "size_bytes": 6188
     },
     {
+      "id": "docs/V2/delivery/mobile-server-evidence.json",
+      "title": "{",
+      "path": "docs/V2/delivery/mobile-server-evidence.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T02:01:45+09:00",
+      "size_bytes": 3229
+    },
+    {
       "id": "docs/V2/delivery/mobile-submodule-deployment.md",
       "title": "앱 서브모듈과 배포 소스 확인",
       "path": "docs/V2/delivery/mobile-submodule-deployment.md",
@@ -562,6 +661,15 @@
       "document_type": "docs",
       "updated_at": "2026-11-01T04:25:42+09:00",
       "size_bytes": 12097
+    },
+    {
+      "id": "docs/V2/delivery/mobile-voice-device-evidence.json",
+      "title": "{",
+      "path": "docs/V2/delivery/mobile-voice-device-evidence.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T04:21:33+09:00",
+      "size_bytes": 1640
     },
     {
       "id": "docs/V2/delivery/mvp-app-api.md",
@@ -591,6 +699,15 @@
       "size_bytes": 9654
     },
     {
+      "id": "docs/V2/delivery/original-style-architecture.md",
+      "title": "원본 스타일의 현행 아키텍처",
+      "path": "docs/V2/delivery/original-style-architecture.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T02:13:06+09:00",
+      "size_bytes": 2576
+    },
+    {
       "id": "docs/V2/delivery/personal-policy-loop-evidence.json",
       "title": "{",
       "path": "docs/V2/delivery/personal-policy-loop-evidence.json",
@@ -607,6 +724,15 @@
       "document_type": "docs",
       "updated_at": "2026-10-31T22:41:13+09:00",
       "size_bytes": 13749
+    },
+    {
+      "id": "docs/V2/delivery/presentation-architecture.md",
+      "title": "봉화지기 발표용 아키텍처",
+      "path": "docs/V2/delivery/presentation-architecture.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T01:48:00+09:00",
+      "size_bytes": 9518
     },
     {
       "id": "docs/V2/delivery/presentation-v1-design.md",
@@ -733,6 +859,15 @@
       "document_type": "docs",
       "updated_at": "2026-10-31T11:37:55+09:00",
       "size_bytes": 7797
+    },
+    {
+      "id": "docs/V2/delivery/tech-stack-slide.md",
+      "title": "기술 스택 발표 페이지",
+      "path": "docs/V2/delivery/tech-stack-slide.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T03:10:42+09:00",
+      "size_bytes": 1302
     },
     {
       "id": "docs/V2/delivery/xgboost-training-data.md",

@@ -1,0 +1,19 @@
+{
+  "id": "checkpoint-20261031-145840-task-completed-api-06a2fbd7",
+  "created_at": "2026-10-31T14:58:40+00:00",
+  "reason": "Task completed: 발표용 외부 API·모델·데이터·오픈소스와 라이선스 전수 정리",
+  "summary": "발표용 외부 API·모델·데이터·오픈소스와 라이선스 전수 정리 -> DONE @ develop/fd5fc48afc0c",
+  "job_id": "job-20261031-002017-v2-fe3bfad0",
+  "task_id": "task-20261031-144549-api-066d6981",
+  "commit_sha": "fd5fc48afc0c6912e4fafe6e7bf752b1ba88ee4e",
+  "branch_name": "develop",
+  "dirty": true,
+  "staged_files": [],
+  "modified_files": [
+    ".loom/job-runs/job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02/job-run.json",
+    ".loom/task-definitions/task-def-20261031-144549-api-8b9b7722/task-definition.json"
+  ],
+  "untracked_files": [],
+  "snapshot_captured_at": "2026-10-31T14:58:40+00:00",
+  "rollback_strategy": "revert-or-branch"
+}

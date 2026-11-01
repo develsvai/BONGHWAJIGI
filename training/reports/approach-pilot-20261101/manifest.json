@@ -1,0 +1,81 @@
+{
+  "purpose": "research-evidence-bundle",
+  "operational_use": false,
+  "files": [
+    {
+      "path": "elmfire/dependency-licenses.json",
+      "bytes": 18209,
+      "sha256": "cf0734f43b4e8e697b01eb4ff3ef238836b4dbc1347c92cae248a502eb71336c"
+    },
+    {
+      "path": "elmfire/environment.explicit.txt",
+      "bytes": 9303,
+      "sha256": "2c44b4cb48f84e1de466c5a06bff419b2a1605be9c9dea940e29c22a439732a3"
+    },
+    {
+      "path": "elmfire/ignition-cell-audit.json",
+      "bytes": 1507,
+      "sha256": "043da38983c21e6bf240b7d331fc189feae61647c3d0de2075fb69e1b9552637"
+    },
+    {
+      "path": "elmfire/plan.json",
+      "bytes": 3806,
+      "sha256": "a82af9f25bda16f6bcdb304ce0a278d2264c5c4b48e92b685ea5563ad694eeb9"
+    },
+    {
+      "path": "elmfire/report.json",
+      "bytes": 29517,
+      "sha256": "2a9b2279b5284629fd062f53db636b1f4f00b23dc582f2f190ea0f42d90b53af"
+    },
+    {
+      "path": "elmfire/synthetic-report.json",
+      "bytes": 4834,
+      "sha256": "c43e9140c1976df69ce5034e77656af81b6111e2a88dd18a3407cdca4aea3336"
+    },
+    {
+      "path": "gofer/aft_distance.ubj",
+      "bytes": 99934,
+      "sha256": "5d42ad5850ce34dbc6074301c1e510333806109b5192b758e1a57ceef5a74138"
+    },
+    {
+      "path": "gofer/aft_history.ubj",
+      "bytes": 110345,
+      "sha256": "9c5054cc0a2d5dad9f79f9045fad472e3fe4ec847d5a7d34c7987ded80375a4d"
+    },
+    {
+      "path": "gofer/dataset-config.json",
+      "bytes": 7984,
+      "sha256": "dd38c6f831009cac18f3d5854c7846284f92a2e82aa2f6ae34ce0f5ba8191722"
+    },
+    {
+      "path": "gofer/dataset-report.json",
+      "bytes": 11288,
+      "sha256": "848b47b84c24b98c4576fe8f6d8a0d376504f4705ba9776bac2c0de1a406eaf4"
+    },
+    {
+      "path": "gofer/fit-receipt.json",
+      "bytes": 9244,
+      "sha256": "eff19668f852f46be32c70a53e8039729ab05dfa12fe12aefd5cc53d67a0b243"
+    },
+    {
+      "path": "gofer/plan.json",
+      "bytes": 2578,
+      "sha256": "d68da698451897e121c1c9bd547a3b1c5f45ba844b56e472342c89c1ea40648a"
+    },
+    {
+      "path": "gofer/report.json",
+      "bytes": 60173,
+      "sha256": "f0b1ca082e1ccf6bf1af56da8b95c92ea6e078566b8ff4f80dee8f875ff83ea5"
+    },
+    {
+      "path": "weather/gfs-probe-report.json",
+      "bytes": 5919,
+      "sha256": "6034105ada8ccfc29663140e9955fc7594dee8a430d80aa9ee16050edc6be6f5"
+    },
+    {
+      "path": "weather/kma-probe-report.json",
+      "bytes": 1678,
+      "sha256": "d391f41aca6511950d25569e2b783765a5d8faf4e9e41f13a5cab76352c1d62c"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "checkpoint-20261031-025327-task-completed-heoney-heoney-develop-1be4996e",
+  "created_at": "2026-10-31T02:53:27+00:00",
+  "reason": "Task completed: HeoNey 브랜치의 HeoNey 폴더를 develop으로 가져오기",
+  "summary": "HeoNey 브랜치의 HeoNey 폴더를 develop으로 가져오기 -> DONE @ develop/9f594dbf957d",
+  "job_id": "job-20261030-113757-bonghwajigi-4841f0bc",
+  "task_id": "task-20261031-025219-heoney-heoney-develop-76fc6e2b",
+  "commit_sha": "9f594dbf957d003f749e91a57a532d6b5a8ac244",
+  "branch_name": "develop",
+  "dirty": true,
+  "staged_files": [],
+  "modified_files": [
+    ".loom/job-runs/job-run-20261030-121237-job-20261030-113757-bonghwajigi-4841f0bc-5c75bb16/job-run.json",
+    ".loom/task-definitions/task-def-20261031-025219-heoney-heoney-develop-f78351dd/task-definition.json"
+  ],
+  "untracked_files": [],
+  "snapshot_captured_at": "2026-10-31T02:53:27+00:00",
+  "rollback_strategy": "revert-or-branch"
+}

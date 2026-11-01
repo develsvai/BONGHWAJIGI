@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "purpose": "kma_small_area_axis_and_historical_access_metadata_research",
+  "started_at_utc": "2026-10-31T16:52:53.020819+00:00",
+  "source_code_sha256": "ec028862d991c32f22f8690c0c0b0e5bef130a87ba4b961b65373cbf9af8be04",
+  "plan_sha256": "2c103a87d8a6e9316adc57aa53191195425fe9119bb726c08d1e3d0aedb6b1ad",
+  "operational_use": false,
+  "holdout_2025_accessed": false,
+  "wind_basis_validated": false,
+  "max_http_attempts": 3,
+  "actual_http_requests": 2,
+  "records": [
+    {
+      "id": "kiml-20261031T12Z-u10-h5-nc",
+      "branch": "kiml_netcdf",
+      "format": "netcdf",
+      "endpoint": "https://apihub.kma.go.kr/api/typ06/url/nwp_nc_vars_down.php",
+      "parameters_without_auth": {
+        "group": "KIML",
+        "data": "U",
+        "vars": "U10",
+        "tmfc": "2026103112",
+        "hf": "5",
+        "lon1": "129.29",
+        "lat1": "36.98",
+        "lon2": "129.31",
+        "lat2": "37.01",
+        "dataType": "NC"
+      },
+      "requested_reference_time_utc": "2026-10-31T12:00:00+00:00",
+      "requested_valid_time_utc": "2026-10-31T17:00:00+00:00",
+      "max_bytes": 4194304,
+      "transport": {
+        "status": "http_error",
+        "http_status": 403,
+        "started_at_utc": "2026-10-31T16:52:53.053255+00:00",
+        "retry_after_seconds": null
+      },
+      "status": "http_error"
+    },
+    {
+      "id": "kiml-20261031T12Z-v10-h5-nc",
+      "branch": "kiml_netcdf",
+      "format": "netcdf",
+      "endpoint": "https://apihub.kma.go.kr/api/typ06/url/nwp_nc_vars_down.php",
+      "parameters_without_auth": {
+        "group": "KIML",
+        "data": "U",
+        "vars": "V10",
+        "tmfc": "2026103112",
+        "hf": "5",
+        "lon1": "129.29",
+        "lat1": "36.98",
+        "lon2": "129.31",
+        "lat2": "37.01",
+        "dataType": "NC"
+      },
+      "requested_reference_time_utc": "2026-10-31T12:00:00+00:00",
+      "requested_valid_time_utc": "2026-10-31T17:00:00+00:00",
+      "max_bytes": 4194304,
+      "status": "skipped_after_branch_access_failure"
+    },
+    {
+      "id": "umkr-20220304T00Z-point-h1",
+      "branch": "historical_um",
+      "format": "text",
+      "endpoint": "https://apihub.kma.go.kr/api/typ06/cgi-bin/url/nph-um_grib_pt_txt1",
+      "parameters_without_auth": {
+        "group": "UMKR",
+        "nwp": "N512",
+        "data": "U",
+        "varn": "2002,2003,0,1001",
+        "tmfc": "2022030400",
+        "hf": "1",
+        "lon": "129.3",
+        "lat": "37.0",
+        "disp": "A",
+        "mode": "1",
+        "help": "1"
+      },
+      "requested_reference_time_utc": "2022-03-04T00:00:00+00:00",
+      "requested_valid_time_utc": "2022-03-04T01:00:00+00:00",
+      "max_bytes": 131072,
+      "transport": {
+        "status": "http_error",
+        "http_status": 403,
+        "started_at_utc": "2026-10-31T16:52:54.188645+00:00",
+        "retry_after_seconds": null
+      },
+      "status": "http_error"
+    }
+  ],
+  "finished_at_utc": "2026-10-31T16:52:55.321590+00:00",
+  "metadata_records": 0,
+  "complete": false
+}

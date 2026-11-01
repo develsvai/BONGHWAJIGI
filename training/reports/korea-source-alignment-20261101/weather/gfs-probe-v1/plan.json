@@ -1,0 +1,62 @@
+{
+  "experiment": "uljin_train_gfs_access_probe_v1",
+  "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20220303/18/atmos/gfs.t18z.pgrb2.0p25.f007",
+  "max_requests": 3,
+  "max_total_response_bytes": 16777216,
+  "event": "uljin_2022",
+  "cycle_utc": "2022-03-03T18:00:00Z",
+  "valid_time_utc": "2022-03-04T01:00:00Z",
+  "lead_hours": 7,
+  "fields": {
+    "UGRD": [
+      "10 m above ground",
+      2,
+      2,
+      10,
+      "m/s"
+    ],
+    "VGRD": [
+      "10 m above ground",
+      2,
+      3,
+      10,
+      "m/s"
+    ],
+    "TMP": [
+      "2 m above ground",
+      0,
+      0,
+      2,
+      "K"
+    ],
+    "RH": [
+      "2 m above ground",
+      1,
+      1,
+      2,
+      "%"
+    ]
+  },
+  "bbox": [
+    128.8,
+    36.7,
+    129.8,
+    37.7
+  ],
+  "sequence": [
+    "GET index",
+    "HEAD global file",
+    "GET combined exact field range"
+  ],
+  "spatial_subsetting": "local only; HTTP Range selects fields, not geographic pixels",
+  "stop_if_404": true,
+  "no_retries": true,
+  "operational_use": false,
+  "historical_publication_time_verified": false,
+  "documentation": [
+    "https://registry.opendata.aws/noaa-gfs-bdp-pds/",
+    "https://www.ncei.noaa.gov/products/weather-climate-models/global-forecast",
+    "https://www.nco.ncep.noaa.gov/pmb/docs/grib2/grib2_doc/grib2_table3-3.shtml"
+  ],
+  "license": "NOAA NODD open use; attribution requested; no implied NOAA endorsement; label derived products"
+}

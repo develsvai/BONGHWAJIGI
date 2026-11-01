@@ -1,0 +1,85 @@
+{
+  "verified": true,
+  "verification_scope": "Provider wind direction convention for research adapter; not a check of live deployment version or NOAA raw forecast fields",
+  "method": "Official Open-Meteo pinned source review: GFS regular latitude-longitude grid and 10m UGRD/VGRD mapping; DerivedMapping windDirection; MeteorologyTests cardinal FROM-direction examples. API units and ordered times are separately checked on each response.",
+  "retrieved_at_utc": "2026-10-31T17:02:06.716595+00:00",
+  "wind_direction_basis": "true_north_clockwise_from",
+  "wind_height_m": 10,
+  "wind_speed_unit": "m/s",
+  "wind_direction_unit": "degree",
+  "source_url": "https://github.com/open-meteo/open-meteo/tree/2060d804a65d584ad546cfa246020c64f34695bd",
+  "source_revision": "2060d804a65d584ad546cfa246020c64f34695bd",
+  "sources": [
+    {
+      "path": "GfsDomainVariable.swift",
+      "url": "https://raw.githubusercontent.com/open-meteo/open-meteo/2060d804a65d584ad546cfa246020c64f34695bd/Sources/App/Gfs/GfsDomainVariable.swift",
+      "sha256": "a7cadcd6f3f17a4a1261ac35fbfb4a856acfa363813f1576871d70f1f0879b3d",
+      "retrieved_at_utc": "2026-10-31T17:00:22.867283+00:00"
+    },
+    {
+      "path": "GfsVariableDownloadable.swift",
+      "url": "https://raw.githubusercontent.com/open-meteo/open-meteo/2060d804a65d584ad546cfa246020c64f34695bd/Sources/App/Gfs/GfsVariableDownloadable.swift",
+      "sha256": "fd86c0154dbdf0c7d634d6ca87b752b6d138765dac6f24171fd9afbdcbf97125",
+      "retrieved_at_utc": "2026-10-31T17:00:23.141012+00:00"
+    },
+    {
+      "path": "GfsDomain.swift",
+      "url": "https://raw.githubusercontent.com/open-meteo/open-meteo/2060d804a65d584ad546cfa246020c64f34695bd/Sources/App/Gfs/GfsDomain.swift",
+      "sha256": "292ecc0bd9c360a3b3512375163a2bb6f498dc8a48afbf2db5b266d848efab8f",
+      "retrieved_at_utc": "2026-10-31T17:00:23.419042+00:00"
+    },
+    {
+      "path": "Meteorology.swift",
+      "url": "https://raw.githubusercontent.com/open-meteo/open-meteo/2060d804a65d584ad546cfa246020c64f34695bd/Sources/App/Helper/Meteorology.swift",
+      "sha256": "950933fe276398a60ad825d586a930b0e351db474232ea3c7e905f3ac5fb5f9b",
+      "retrieved_at_utc": "2026-10-31T17:00:23.983584+00:00"
+    },
+    {
+      "path": "MeteorologyTests.swift",
+      "url": "https://raw.githubusercontent.com/open-meteo/open-meteo/2060d804a65d584ad546cfa246020c64f34695bd/Tests/AppTests/MeteorologyTests.swift",
+      "sha256": "bf271487088577fc2dc9adca74c1e7a7383c7b3c36377bb3ee7b717ee705ed70",
+      "retrieved_at_utc": "2026-10-31T17:00:24.238691+00:00"
+    },
+    {
+      "path": "DerivedMapping.swift",
+      "url": "https://raw.githubusercontent.com/open-meteo/open-meteo/2060d804a65d584ad546cfa246020c64f34695bd/Sources/App/Helper/Reader/DerivedMapping.swift",
+      "sha256": "9f4aa6c5f152458b99f7e5e7570c3fd134d03e954281017c3e7c5a591567c025",
+      "retrieved_at_utc": "2026-10-31T17:01:34.873744+00:00"
+    },
+    {
+      "path": "VariableHourlyDeriverHighLevel.swift",
+      "url": "https://raw.githubusercontent.com/open-meteo/open-meteo/2060d804a65d584ad546cfa246020c64f34695bd/Sources/App/Helper/Reader/VariableHourlyDeriverHighLevel.swift",
+      "sha256": "2a5c8c8f921813d977ed970969e964d48d51e1a2d384d905c2f4262f4a450db8",
+      "retrieved_at_utc": "2026-10-31T17:01:35.126320+00:00"
+    },
+    {
+      "path": "GfsDownload.swift",
+      "url": "https://raw.githubusercontent.com/open-meteo/open-meteo/2060d804a65d584ad546cfa246020c64f34695bd/Sources/App/Gfs/GfsDownload.swift",
+      "sha256": "f5a6c48de615c4f1c14cde0615df63260f931314055d786a7d3c41f1f8a3d8b4",
+      "retrieved_at_utc": "2026-10-31T17:01:35.385388+00:00"
+    }
+  ],
+  "documentation_urls": [
+    "https://open-meteo.com/en/docs/gfs-api",
+    "https://open-meteo.com/en/licence",
+    "https://open-meteo.com/en/terms"
+  ],
+  "review_findings": [
+    "GfsDomain.gfs013 is a regular geographic latitude/longitude grid; gfs025 is also regular geographic.",
+    "GfsVariableDownloadable explicitly maps 10m U/V to UGRD/VGRD 10 m above ground.",
+    "DerivedMapping.windDirection uses Meteorology.windirectionFast and optionally corrects projected HRRR/NAM directions to true north.",
+    "Official cardinal examples: westward U=-4,V=0 gives90deg FROM east; eastward gives270deg; southward V=-4 gives360deg FROM north; northward gives180deg.",
+    "Reading these definitions supports use of the explicit GFS wind_direction_10m response as true-north clockwise FROM; this is a source-based inference."
+  ],
+  "limitations": [
+    "The live API does not disclose its software revision or original forecast issuance cycle.",
+    "No live NOAA original U/V or GRIB rotation flags were compared in this fallback.",
+    "Public GFS spatial resolution cannot resolve local terrain/fire-induced winds; one point is treated as uniform over the scenario domain.",
+    "This evidence does not establish the wind axes of KMA KIML; KMA component direction remains unverified.",
+    "Non-commercial research use of the free API only. Data CC-BY-4.0; underlying NOAA GFS. No provider endorsement.",
+    "This convention check is not wildfire accuracy validation."
+  ],
+  "simulation_only": true,
+  "operational_use": false,
+  "probability": null
+}

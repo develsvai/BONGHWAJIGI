@@ -1,0 +1,127 @@
+{
+  "event": {
+    "id": "andong_2021",
+    "split": "train",
+    "start_utc": "2021-02-21T08:00:00Z",
+    "hours": 12,
+    "bbox": [
+      128.1,
+      36.2,
+      129.1,
+      37.0
+    ],
+    "source": "https://forest.go.kr/kfs/images/data/down/sb_3_09.pdf"
+  },
+  "anchors": 33,
+  "rows": 98829,
+  "original_v4_rows": 91892,
+  "matched_v4_rows": 91892,
+  "base_feature_max_abs_difference": 0.0,
+  "horizons": {
+    "1": {
+      "all_candidates": {
+        "rows": 32943,
+        "positive": 52,
+        "negative": 32410,
+        "unknown": 481,
+        "blind_gap_fire_observed": 10,
+        "source120_incomplete": 3354
+      },
+      "primary_clear60": {
+        "rows": 32453,
+        "positive": 17,
+        "negative": 32034,
+        "unknown": 402,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 3327
+      },
+      "sensitivity_clear120": {
+        "rows": 29009,
+        "positive": 4,
+        "negative": 28630,
+        "unknown": 375,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 0
+      },
+      "prior_fire_120m": {
+        "rows": 117,
+        "positive": 24,
+        "negative": 71,
+        "unknown": 22,
+        "blind_gap_fire_observed": 10,
+        "source120_incomplete": 0
+      }
+    },
+    "3": {
+      "all_candidates": {
+        "rows": 32943,
+        "positive": 78,
+        "negative": 31256,
+        "unknown": 1609,
+        "blind_gap_fire_observed": 10,
+        "source120_incomplete": 3354
+      },
+      "primary_clear60": {
+        "rows": 32453,
+        "positive": 24,
+        "negative": 30926,
+        "unknown": 1503,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 3327
+      },
+      "sensitivity_clear120": {
+        "rows": 29009,
+        "positive": 10,
+        "negative": 27545,
+        "unknown": 1454,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 0
+      },
+      "prior_fire_120m": {
+        "rows": 117,
+        "positive": 41,
+        "negative": 55,
+        "unknown": 21,
+        "blind_gap_fire_observed": 10,
+        "source120_incomplete": 0
+      }
+    },
+    "6": {
+      "all_candidates": {
+        "rows": 32943,
+        "positive": 87,
+        "negative": 28009,
+        "unknown": 4847,
+        "blind_gap_fire_observed": 10,
+        "source120_incomplete": 3354
+      },
+      "primary_clear60": {
+        "rows": 32453,
+        "positive": 26,
+        "negative": 27904,
+        "unknown": 4523,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 3327
+      },
+      "sensitivity_clear120": {
+        "rows": 29009,
+        "positive": 12,
+        "negative": 24552,
+        "unknown": 4445,
+        "blind_gap_fire_observed": 0,
+        "source120_incomplete": 0
+      },
+      "prior_fire_120m": {
+        "rows": 117,
+        "positive": 48,
+        "negative": 41,
+        "unknown": 28,
+        "blind_gap_fire_observed": 10,
+        "source120_incomplete": 0
+      }
+    }
+  },
+  "sha256": "03423a5a5b31cd13c9aea32d3ba949c2dcd9d18ec7c6ffd3406327dd27bd32a0",
+  "survival_training_eligible": false,
+  "operational_use": false
+}

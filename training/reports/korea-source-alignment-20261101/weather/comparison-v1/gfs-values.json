@@ -1,0 +1,360 @@
+{
+  "fields": {
+    "UGRD": {
+      "source_sha256": "b781de29edb49a9bbff97fc2903527227e345de11b96240ca1dc65256b7eb71a",
+      "gdal_tags": {
+        "GRIB_UNIT": "[m/s]",
+        "GRIB_COMMENT": "u-component of wind [m/s]",
+        "GRIB_ELEMENT": "UGRD",
+        "GRIB_SHORT_NAME": "10-HTGL",
+        "GRIB_REF_TIME": "1646330400",
+        "GRIB_VALID_TIME": "1646355600",
+        "GRIB_FORECAST_SECONDS": "25200",
+        "GRIB_DISCIPLINE": "0(Meteorological)",
+        "GRIB_IDS": "CENTER=7(US-NCEP) SUBCENTER=0 MASTER_TABLE=2 LOCAL_TABLE=1 SIGNF_REF_TIME=1(Start_of_Forecast) REF_TIME=2022-03-03T18:00:00Z PROD_STATUS=0(Operational) TYPE=1(Forecast)",
+        "GRIB_PDS_PDTN": "0",
+        "GRIB_PDS_TEMPLATE_NUMBERS": "2 2 2 0 96 0 0 0 1 0 0 0 7 103 0 0 0 0 10 255 0 0 0 0 0",
+        "GRIB_PDS_TEMPLATE_ASSEMBLED_VALUES": "2 2 2 0 96 0 0 1 7 103 0 10 255 0 0"
+      },
+      "source_crs_wkt": "GEOGCS[\"Coordinate System imported from GRIB file\",DATUM[\"unnamed\",SPHEROID[\"Sphere\",6371229,0]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST]]",
+      "source_shape": [
+        721,
+        1440
+      ],
+      "source_transform": [
+        0.25,
+        0.0,
+        -0.125,
+        0.0,
+        -0.25,
+        90.125
+      ],
+      "bbox_shape": [
+        4,
+        4
+      ],
+      "bbox_rows": [
+        210,
+        211,
+        212,
+        213
+      ],
+      "bbox_cols": [
+        516,
+        517,
+        518,
+        519
+      ],
+      "source_grid_longitudes": [
+        129.0,
+        129.25,
+        129.5,
+        129.75
+      ],
+      "source_grid_latitudes": [
+        37.5,
+        37.25,
+        37.0,
+        36.75
+      ],
+      "values": [
+        [
+          3.1261816024780273,
+          0.1761816293001175,
+          0.2761816382408142,
+          1.5261815786361694
+        ],
+        [
+          2.4361815452575684,
+          1.646181583404541,
+          0.8661816120147705,
+          1.8861815929412842
+        ],
+        [
+          1.9161815643310547,
+          3.636181592941284,
+          1.0361815690994263,
+          2.8761816024780273
+        ],
+        [
+          1.746181607246399,
+          3.3161816596984863,
+          2.026181697845459,
+          3.7861814498901367
+        ]
+      ],
+      "minimum": 0.1761816293001175,
+      "maximum": 3.7861814498901367,
+      "finite_count": 16,
+      "unit": "m/s"
+    },
+    "VGRD": {
+      "source_sha256": "1f645c2e8ef78d10e56030238a04881c808ca4c4694c0dcd58d08b712b37581c",
+      "gdal_tags": {
+        "GRIB_UNIT": "[m/s]",
+        "GRIB_COMMENT": "v-component of wind [m/s]",
+        "GRIB_ELEMENT": "VGRD",
+        "GRIB_SHORT_NAME": "10-HTGL",
+        "GRIB_REF_TIME": "1646330400",
+        "GRIB_VALID_TIME": "1646355600",
+        "GRIB_FORECAST_SECONDS": "25200",
+        "GRIB_DISCIPLINE": "0(Meteorological)",
+        "GRIB_IDS": "CENTER=7(US-NCEP) SUBCENTER=0 MASTER_TABLE=2 LOCAL_TABLE=1 SIGNF_REF_TIME=1(Start_of_Forecast) REF_TIME=2022-03-03T18:00:00Z PROD_STATUS=0(Operational) TYPE=1(Forecast)",
+        "GRIB_PDS_PDTN": "0",
+        "GRIB_PDS_TEMPLATE_NUMBERS": "2 3 2 0 96 0 0 0 1 0 0 0 7 103 0 0 0 0 10 255 0 0 0 0 0",
+        "GRIB_PDS_TEMPLATE_ASSEMBLED_VALUES": "2 3 2 0 96 0 0 1 7 103 0 10 255 0 0"
+      },
+      "source_crs_wkt": "GEOGCS[\"Coordinate System imported from GRIB file\",DATUM[\"unnamed\",SPHEROID[\"Sphere\",6371229,0]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST]]",
+      "source_shape": [
+        721,
+        1440
+      ],
+      "source_transform": [
+        0.25,
+        0.0,
+        -0.125,
+        0.0,
+        -0.25,
+        90.125
+      ],
+      "bbox_shape": [
+        4,
+        4
+      ],
+      "bbox_rows": [
+        210,
+        211,
+        212,
+        213
+      ],
+      "bbox_cols": [
+        516,
+        517,
+        518,
+        519
+      ],
+      "source_grid_longitudes": [
+        129.0,
+        129.25,
+        129.5,
+        129.75
+      ],
+      "source_grid_latitudes": [
+        37.5,
+        37.25,
+        37.0,
+        36.75
+      ],
+      "values": [
+        [
+          2.5729002952575684,
+          2.772900342941284,
+          4.912900447845459,
+          7.272900104522705
+        ],
+        [
+          2.412900447845459,
+          1.9629004001617432,
+          5.792900085449219,
+          7.262900352478027
+        ],
+        [
+          1.8529003858566284,
+          1.5929003953933716,
+          4.252900123596191,
+          6.982900142669678
+        ],
+        [
+          0.8429003953933716,
+          1.2129004001617432,
+          4.012900352478027,
+          6.832900047302246
+        ]
+      ],
+      "minimum": 0.8429003953933716,
+      "maximum": 7.272900104522705,
+      "finite_count": 16,
+      "unit": "m/s"
+    },
+    "TMP": {
+      "source_sha256": "bcb8149f9a19756061902fa6e67dcec87dbda5d67e5997ce2a7c0e7414cfe470",
+      "gdal_tags": {
+        "GRIB_UNIT": "[K]",
+        "GRIB_COMMENT": "Temperature [K]",
+        "GRIB_ELEMENT": "TMP",
+        "GRIB_SHORT_NAME": "2-HTGL",
+        "GRIB_REF_TIME": "1646330400",
+        "GRIB_VALID_TIME": "1646355600",
+        "GRIB_FORECAST_SECONDS": "25200",
+        "GRIB_DISCIPLINE": "0(Meteorological)",
+        "GRIB_IDS": "CENTER=7(US-NCEP) SUBCENTER=0 MASTER_TABLE=2 LOCAL_TABLE=1 SIGNF_REF_TIME=1(Start_of_Forecast) REF_TIME=2022-03-03T18:00:00Z PROD_STATUS=0(Operational) TYPE=1(Forecast)",
+        "GRIB_PDS_PDTN": "0",
+        "GRIB_PDS_TEMPLATE_NUMBERS": "0 0 2 0 96 0 0 0 1 0 0 0 7 103 0 0 0 0 2 255 0 0 0 0 0",
+        "GRIB_PDS_TEMPLATE_ASSEMBLED_VALUES": "0 0 2 0 96 0 0 1 7 103 0 2 255 0 0"
+      },
+      "source_crs_wkt": "GEOGCS[\"Coordinate System imported from GRIB file\",DATUM[\"unnamed\",SPHEROID[\"Sphere\",6371229,0]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST]]",
+      "source_shape": [
+        721,
+        1440
+      ],
+      "source_transform": [
+        0.25,
+        0.0,
+        -0.125,
+        0.0,
+        -0.25,
+        90.125
+      ],
+      "bbox_shape": [
+        4,
+        4
+      ],
+      "bbox_rows": [
+        210,
+        211,
+        212,
+        213
+      ],
+      "bbox_cols": [
+        516,
+        517,
+        518,
+        519
+      ],
+      "source_grid_longitudes": [
+        129.0,
+        129.25,
+        129.5,
+        129.75
+      ],
+      "source_grid_latitudes": [
+        37.5,
+        37.25,
+        37.0,
+        36.75
+      ],
+      "values": [
+        [
+          281.64788818359375,
+          282.8478698730469,
+          282.2478942871094,
+          282.4478759765625
+        ],
+        [
+          279.9478759765625,
+          283.14788818359375,
+          282.8478698730469,
+          282.3478698730469
+        ],
+        [
+          278.4478759765625,
+          281.2478942871094,
+          282.7478942871094,
+          281.9478759765625
+        ],
+        [
+          279.2478942871094,
+          280.3478698730469,
+          283.0478820800781,
+          281.9478759765625
+        ]
+      ],
+      "minimum": 278.4478759765625,
+      "maximum": 283.14788818359375,
+      "finite_count": 16,
+      "unit": "K"
+    },
+    "RH": {
+      "source_sha256": "9dfbb8ea9f8a4fb6d54d5e3ce3b1a44ba1e698c40c0560826d04f0b2cea17806",
+      "gdal_tags": {
+        "GRIB_UNIT": "[%]",
+        "GRIB_COMMENT": "Relative humidity [%]",
+        "GRIB_ELEMENT": "RH",
+        "GRIB_SHORT_NAME": "2-HTGL",
+        "GRIB_REF_TIME": "1646330400",
+        "GRIB_VALID_TIME": "1646355600",
+        "GRIB_FORECAST_SECONDS": "25200",
+        "GRIB_DISCIPLINE": "0(Meteorological)",
+        "GRIB_IDS": "CENTER=7(US-NCEP) SUBCENTER=0 MASTER_TABLE=2 LOCAL_TABLE=1 SIGNF_REF_TIME=1(Start_of_Forecast) REF_TIME=2022-03-03T18:00:00Z PROD_STATUS=0(Operational) TYPE=1(Forecast)",
+        "GRIB_PDS_PDTN": "0",
+        "GRIB_PDS_TEMPLATE_NUMBERS": "1 1 2 0 96 0 0 0 1 0 0 0 7 103 0 0 0 0 2 255 0 0 0 0 0",
+        "GRIB_PDS_TEMPLATE_ASSEMBLED_VALUES": "1 1 2 0 96 0 0 1 7 103 0 2 255 0 0"
+      },
+      "source_crs_wkt": "GEOGCS[\"Coordinate System imported from GRIB file\",DATUM[\"unnamed\",SPHEROID[\"Sphere\",6371229,0]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST]]",
+      "source_shape": [
+        721,
+        1440
+      ],
+      "source_transform": [
+        0.25,
+        0.0,
+        -0.125,
+        0.0,
+        -0.25,
+        90.125
+      ],
+      "bbox_shape": [
+        4,
+        4
+      ],
+      "bbox_rows": [
+        210,
+        211,
+        212,
+        213
+      ],
+      "bbox_cols": [
+        516,
+        517,
+        518,
+        519
+      ],
+      "source_grid_longitudes": [
+        129.0,
+        129.25,
+        129.5,
+        129.75
+      ],
+      "source_grid_latitudes": [
+        37.5,
+        37.25,
+        37.0,
+        36.75
+      ],
+      "values": [
+        [
+          20.30000114440918,
+          34.79999923706055,
+          43.400001525878906,
+          49.29999923706055
+        ],
+        [
+          19.0,
+          23.700000762939453,
+          40.5,
+          49.900001525878906
+        ],
+        [
+          29.80000114440918,
+          23.30000114440918,
+          40.60000228881836,
+          52.29999923706055
+        ],
+        [
+          36.29999923706055,
+          28.5,
+          33.29999923706055,
+          52.5
+        ]
+      ],
+      "minimum": 19.0,
+      "maximum": 52.5,
+      "finite_count": 16,
+      "unit": "%"
+    }
+  },
+  "unit_conversion_for_comparison": "TMP source K minus273.15 exactly once",
+  "native_geographic_crs": "GRIB sphere radius6371229m; not relabelled EPSG4326",
+  "bbox_selection": "native grid-center lon/lat within [128.8,36.7,129.8,37.7]",
+  "operational_use": false
+}

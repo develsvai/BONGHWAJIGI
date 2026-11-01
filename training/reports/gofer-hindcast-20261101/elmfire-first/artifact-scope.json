@@ -1,0 +1,5 @@
+{
+  "source_server_directory": "/home1/ncloud/bonghwajigi/data/artifacts/elmfire/walker2019-hindcast-v1",
+  "scope": "Unmodified manifests, fit receipt, evaluation, logs, namelists, fuel table, output GeoTIFF and CSV. Full inputs/scratch/BIL retained only on server; not needed in versioned review copy.",
+  "copied_file_bytes": 271115
+}
