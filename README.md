@@ -1,8 +1,18 @@
 # 봉화지기 BONGHWAJIGI
 
-**같은 산불이라도 위치, 이동 능력, 현재 동행자에 따라 필요한 행동은 다릅니다.** 봉화지기는 공식 경보와 관련 자료를 사용자 위치·프로필·현재 상태에 연결해, 지금 확인할 정보와 개인별 행동 안내를 제공하는 서비스입니다.
+**봉화지기는 공식 산불 경보와 사용자 위치·프로필·현재 상태를 연결해 개인별 행동 안내를 제공하는 재난 대응 서비스입니다.**
+
+같은 산불이라도 위치, 이동 능력, 현재 동행자에 따라 필요한 행동은 다릅니다. 공식 원문은 우선 전달하고, 개인별 안내는 새로운 자료와 사용자 상태에 맞춰 갱신합니다.
 
 이 저장소는 **서버 API, 자료 수신·분석, 근거 검색, 개인별 정책, 알림 전달, AI 모델 인터페이스와 학습 연구**를 관리합니다. 모바일 앱은 `apps/mobile` 서브모듈로 검증된 커밋을 고정합니다.
+
+### 서비스 화면
+
+| 내정보 설정 | 일상 홈 | 재난 대응 |
+| --- | --- | --- |
+| <img src="docs/assets/readme/mobile-profile.jpg" width="280" alt="이동 능력·계단 이용·선호 안내·시청각 지원을 설정하는 내정보 화면"> | <img src="docs/assets/readme/mobile-home.jpg" width="280" alt="오늘의 행동요령과 사용자별 사전 준비를 보여 주는 홈 화면"> | <img src="docs/assets/readme/mobile-response.jpg" width="280" alt="상황 질문·확인된 현재 상태·개인별 행동요령을 보여 주는 재난 대응 화면"> |
+
+발표자료에 수록한 모바일 화면 예시입니다. 화면 속 날씨·상태·경로 문구는 예시이며, 실제 연결·검증 범위는 아래 구현 표를 기준으로 합니다.
 
 > **실행 환경: Tailscale Tailnet 내부의 사설망 MVP입니다.** 승인된 기기·접근 정책이 있어야 현재 서버에 접속할 수 있습니다. 일반 공개 웹 서비스가 아니며, Tailscale Funnel로 인터넷에 공개하지 않습니다. 재난 입력은 확보한 공식 자료의 과거 기록과 합성 시나리오를 재생합니다. **현재 K8s 자동 수집, 실제 예측 모델의 개인 정책 연결, FCM 원격 푸시는 실행하지 않습니다.**
 
@@ -10,7 +20,8 @@
 
 ## 목차
 
-- [현재 구현 범위](#현재-구현-범위)
+- [서비스 화면](#서비스-화면)
+- [주요 기능과 현재 구현 범위](#주요-기능과-현재-구현-범위)
 - [아키텍처](#아키텍처)
 - [처리 흐름과 AI 역할](#처리-흐름과-ai-역할)
 - [현재 데이터를 가져오는 곳](#현재-데이터를-가져오는-곳)
@@ -20,9 +31,11 @@
 - [설치와 실행](#설치와-실행)
 - [시나리오 재생과 모델 사용](#시나리오-재생과-모델-사용)
 - [검증과 장애 확인](#검증과-장애-확인)
+- [사용한 모델·데이터·외부 자원과 라이선스](#사용한-모델데이터외부-자원과-라이선스)
+- [팀원과 역할](#팀원과-역할)
 - [코드 구조와 관련 문서](#코드-구조와-관련-문서)
 
-## 현재 구현 범위
+## 주요 기능과 현재 구현 범위
 
 | 기능 | 현재 동작 |
 | --- | --- |
@@ -229,7 +242,27 @@ test -e .env || cp .env.example .env
 
 루트의 CPU 개발 설치는 GPU 모델 가중치를 내려받지 않습니다. 앱 소스가 필요한 경우에만 `git submodule update --init --recursive apps/mobile`을 실행합니다. 앱 빌드·키 설정은 [서브모듈·빌드 안내](docs/V2/delivery/mobile-submodule-deployment.md)를 따릅니다.
 
-### 2. 로컬 API 틀 확인
+### 2. 환경설정 (.env)
+
+로컬 Python 실행은 루트 `.env`를 읽습니다. 예시 파일의 값을 환경에 맞게 바꾸고, 다른 파일을 쓰려면 `BONGHWA_ENV_FILE=/절대/경로/설정파일`로 지정합니다. OS 환경변수가 파일보다 우선합니다. 설정 정의는 [`Settings`](src/bonghwajigi/common/config.py), 배포 시 적용값은 [`mvp.yaml`](deploy/compose/mvp.yaml)을 확인합니다.
+
+| 설정 | 로컬 예시·기본값 | 전체 MVP에서의 설정·용도 |
+| --- | --- | --- |
+| `BONGHWA_ENVIRONMENT`, `BONGHWA_MODE` | `local`, `simulation` | Compose는 `staging`, `simulation`. 과거·합성 입력을 실제 발령과 구분 |
+| `BONGHWA_DATABASE_URL`, `BONGHWA_BROKER_URL` | 로컬 PostgreSQL `5432`, Redis `6379` | Compose 내부 서비스는 호스트 loopback의 `15432`, `16379` 사용 |
+| `BONGHWA_SERVICE_TOKEN` | 비어 있음 | 내부 수신·모델 API 인증. 사용자 JWT와 별개이며 무작위 비밀값 필요 |
+| `BONGHWA_ANALYSIS_ENABLED`, `BONGHWA_POLICY_ENABLED`, `BONGHWA_APP_ENABLED` | 모두 `false` | DB migration·브로커·인증 준비 후 활성화. MVP Compose는 `true` |
+| `BONGHWA_GPU_BASE_URL`, `BONGHWA_EMBEDDING_SERVICE_TOKEN` | `http://127.0.0.1:8001`, 빈 토큰 | 일반 서버에서는 GPU SSH 터널 `http://127.0.0.1:18001`과 관리자 제공 토큰 사용 |
+| `BONGHWA_GPU_ENABLED`, `BONGHWA_QWEN_REVISION`, `BONGHWA_EMBEDDING_REVISION` | `false`, 빈 revision | GPU 프로세스만 모델·캐시·고정 revision 준비 후 활성화. 일반 서버가 모델을 로딩하는 설정은 아님 |
+| `BONGHWA_POLICY_QWEN_ENABLED`, `BONGHWA_WEB_SEARCH_ENABLED` | `false`, `true` | Qwen 자료 정리와 인터넷 뉴스 검색 사용 여부. 전체 Compose는 둘 다 `true` |
+| `BONGHWA_JWT_SECRET` | 비어 있음 | 사용자 세션 서명용 32바이트 이상 무작위 키. 내부 서비스 토큰과 다른 값 사용 |
+| `BONGHWA_APP_REGISTRATION_ENABLED` | `false` | 사설망 simulation 설치 계정의 신규 등록 허용 여부. 기존 관리자 발급 경로와 구분 |
+| `BONGHWA_NOTIFICATIONS_ENABLED`, `BONGHWA_PUSH_PROVIDER` | `false`, `disabled` | MVP Compose는 `true`, `simulation`. Firebase 자격 파일·기기 토큰을 준비해 별도 검증한 뒤 실제 FCM 연결 |
+| `POSTGRES_PASSWORD`, `BONGHWA_PRIVATE_DIR`, `BONGHWA_RELEASE` | Compose용 별도 설정 | 새 DB 비밀번호, 비공개 계정 자료 볼륨의 절대경로, 이미지 태그. 아래 `secrets/mvp.env`에서 관리 |
+
+**로컬 `.env`와 Compose의 `--env-file`은 별도 경로입니다.** 전체 MVP는 아래에서 생성하는 `secrets/mvp.env`의 변수를 Compose가 읽어 컨테이너에 전달합니다. `.env`의 기능 스위치를 바꾸는 것만으로 배포 컨테이너 설정이 바뀌지는 않습니다. 실제 키·토큰·자격 파일은 Git에서 제외하고 권한을 제한합니다.
+
+### 3. 로컬 API 틀 확인
 
 `.env.example`은 분석·정책·앱·GPU 실행을 기본 비활성화합니다. 이 상태는 코드·API 경계 확인용이며 전체 시연 서버가 아닙니다.
 
@@ -252,7 +285,7 @@ uv run --no-sync uvicorn bonghwajigi.gpu_api.app:create_app \
   --factory --host 127.0.0.1 --port 8001 --no-access-log
 ```
 
-### 3. Linux에서 전체 MVP 실행
+### 4. Linux에서 전체 MVP 실행
 
 실제 배포 구성은 [`deploy/compose/mvp.yaml`](deploy/compose/mvp.yaml)입니다. **Linux host network 전용**이며 macOS의 로컬 API 틀과 구분합니다. PostgreSQL·Redis, migration, API, 긴급·분석·전달 워커, outbox, 정책, 통합 프로세스를 실행합니다.
 
@@ -392,6 +425,53 @@ sudo docker compose --env-file /home1/ncloud/.config/bonghwajigi/general.env \
   -f deploy/compose/mvp.yaml logs --tail 50 outbox urgent analysis policy integration delivery
 ```
 
+## 사용한 모델·데이터·외부 자원과 라이선스
+
+서비스에 연결된 자원과 별도 학습·확산 연구 자원을 함께 표기합니다. 모델의 입출력은 [AI 역할](#처리-흐름과-ai-역할), 데이터 확보 경로와 실제·합성 구분은 [데이터 출처](#현재-데이터를-가져오는-곳)를 참고하세요. Python 패키지의 정확한 판본과 설치·라이선스 증거는 [패키지 조사 기록](docs/V2/delivery/external-resources/python-inventory.json), [배포 메타데이터 보완](docs/V2/delivery/external-resources/supplemental-verification-20261101.json)에 있습니다. 이 기록은 조사 시점의 자료이며 현재 모든 전이 의존성의 완전한 SBOM을 뜻하지 않습니다.
+
+| 구분 | 명칭 | 용도 | 라이선스·이용 조건 |
+| --- | --- | --- | --- |
+| 모델 | [Qwen3-4B-Instruct-2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507) | 사건 자료 정리·출처 인용·상태 제안 | Apache-2.0 |
+| 모델 | [Qwen3-Embedding-0.6B](https://huggingface.co/Qwen/Qwen3-Embedding-0.6B) | 검색용 1024차원 벡터 생성 | Apache-2.0 |
+| 오픈소스 | XGBoost | 산불 관측·접근 예측 연구. 실제 개인 정책 미연결 | Apache-2.0 |
+| 오픈소스 | PyTorch · Transformers · Sentence Transformers | GPU 추론·모델 로딩·임베딩 | PyTorch: BSD-3-Clause / 나머지 두 라이브러리: Apache-2.0. 동봉된 제3자 고지는 별도 유지 |
+| 오픈소스 | FastAPI · Pydantic · SQLAlchemy · Alembic | 서버 API·설정 검증·DB·migration | MIT |
+| 오픈소스 | Celery · Uvicorn · HTTPX | 처리 큐·워커·ASGI 서버·HTTP 통신 | BSD-3-Clause |
+| 오픈소스 | PostgreSQL 16 · pgvector | 사건·프로필·정책·벡터 보관과 검색 | [PostgreSQL License](https://www.postgresql.org/about/licence/), [pgvector LICENSE](https://github.com/pgvector/pgvector/blob/master/LICENSE) |
+| 소스 공개 소프트웨어 | Redis 7.4 | Celery broker·큐·AOF 영속화 | [RSALv2 또는 SSPLv1](https://redis.io/legal/licenses/). Redis 8의 라이선스 선택지를 7.4에 적용하지 않음 |
+| 오픈소스 | Docker Engine/Moby · Docker Compose | 일반 서버 컨테이너 배포 | Apache-2.0. Docker Desktop 제품 이용조건은 별도 |
+| 네트워크·인프라 | Tailscale · NAVER Cloud · NVIDIA L4/CUDA | Tailnet 사설망·일반/GPU 서버·GPU 실행 | Tailscale·Ncloud 서비스 약관, NVIDIA CUDA EULA 및 구성 요소별 고지 |
+| 외부 검색 | Google News RSS | 산불 기사 제목·짧은 설명·URL·매체·시각 검색 | Google 이용약관 및 언론사별 저작권. 기사 전문·이미지 재배포 권한을 뜻하지 않음 |
+| 외부 API·데이터 | 기상청 API Hub · GK2A FF | 국내 위성 화재 관측·학습 자료 확보 | 인증·활용 승인 필요. 제품·판본별 재이용 조건 확인 |
+| 데이터 | NOAA GOES · ISD Lite · GFS · HRRR | 위성 화재·과거 기상·예보 연구 | NOAA/NCEI·NODD의 제품별 이용조건·출처 고지. 관측과 예보·가공 여부 구분 |
+| 데이터 | Next Day Wildfire Spread v2 | 초기 일별 확산 학습·전처리 | CC BY 4.0. [Fantine Huot 외 원저자·원본·가공 내역](training/README.md#출처와-변경) 표시 |
+| 데이터 | [GOFER v0.2](https://zenodo.org/records/14642378) | 시간별 화재 경계·접근 시간 연구 | 데이터: CC BY 4.0. Liu 외 저자·DOI·판본·가공 사실 표시. 코드 라이선스와 구분 |
+| 외부 API | [Open-Meteo GFS Forecast API](https://open-meteo.com/en/terms) | 국내 지형 확산 시나리오의 기상예보 | 데이터: CC BY 4.0 / 무료 API: 비상업 이용 조건·호출 제한 |
+| 데이터·호스팅 | Microsoft Planetary Computer의 MODIS · ESA CCI · Copernicus DEM | 보조 화재 관측·토지피복·고도·경사 | 호스팅 서비스 약관과 원제품 조건 별도. STAC의 `other`를 단일 오픈 라이선스로 해석하지 않음 |
+| 데이터 | NASA FIRMS · geoBoundaries/Natural Earth · LANDFIRE | 보조 화재·국가 경계·연료/수관 연구 입력 | FIRMS 인용·사용조건, 경계의 제품별 조건 적용. 확보한 Natural Earth 경계·LANDFIRE 공개 래스터는 Public Domain 근거 보존 |
+| 연구 소프트웨어 | ELMFIRE 1.1 | 바람·지형 기반 확산 시뮬레이션 연구. 서비스 미연결 | 확보 판본은 [AGPL-3.0 + Commons Clause](training/reports/gofer-hindcast-20261101/endpoint-diagnostic/source/LICENSE.md), [상업 이용 별도 계약](training/reports/gofer-hindcast-20261101/endpoint-diagnostic/source/COMMERCIAL_LICENSE.md) |
+| 공식 자료 | 정책브리핑 · 기상청 PDF · 국민안전24 · 지자체 행동요령 | 과거 경보·기상 맥락·기본/개인 준비 지침 | 정책브리핑 해당 텍스트: 공공누리 1유형. 나머지는 [자료별 출처·조건](docs/V2/delivery/filming-sources.md) 적용. 재이용 유형 미확인 자료는 짧은 자체 요약 |
+| 공식 자료 | 안전한TV 산불 행동요령 | 이전 검색·정책 근거 자료 | 해당 자료의 공공누리 4유형(출처표시·상업적 이용금지·변경금지). 별도 저작물 조건 확인 |
+| 앱 외부 자원 | NAVER Maps Android SDK · React Native 연결 라이브러리 | 앱 배경 지도 표시 | NAVER Maps 약관·SDK 고지 / `@mj-studio/react-native-naver-map`: MIT |
+| 앱 외부 자원 | expo-speech-recognition · expo-font · Android SpeechRecognizer | 단말 음성 인식·서체 로딩. 서버에는 텍스트 전달 | 연결 라이브러리: MIT / 단말 음성 서비스 제공자 조건 별도. [확인 기록](docs/V2/delivery/external-resources/android-voice-resources-20261101.json) |
+| 서체 | 대한민국정부상징체 R | 앱 로고 서체 | [문화체육관광부](https://www.mcst.go.kr/site/s_about/intro/symbol.jsp) 공공누리 4유형. 영리 목적 이용은 별도 협의 |
+| 사전 보유 코드 | 해당 없음 | 행사 개회식 전 보유 코드 반입 없음 | 사용자 확인. 외부 모델·데이터·라이브러리 이용과 별도 항목 |
+
+각 자원의 저작권·라이선스·출처 고지를 보존합니다. 데이터 다운로드나 API 호출이 가능하다는 사실만으로 재배포·상업 이용이 허용되는 것은 아닙니다. 출처 URL과 제공자 메타데이터는 [데이터·콘텐츠 조사 기록](docs/V2/delivery/external-resources/data-and-content-sources.json), 연구의 추가 자료·가공 범위는 [학습 README](training/README.md)와 개별 보고서에 남깁니다. 앱 관련 항목은 발표자료와 저장된 확인 기록을 기준으로 기재했습니다.
+
+## 팀원과 역할
+
+팀 **Hello, World!**의 구성과 담당 역할입니다.
+
+| 팀원 | 담당 역할 | 주요 기여 |
+| --- | --- | --- |
+| 허연진 | UI/UX · 프론트엔드 | 앱 디자인과 React 기반 프론트엔드 화면 구현 |
+| 김현래 | 기획 · PM | 아이디어 제시·종합, 서비스 기획 구체화와 방향 정리 |
+| 강소연 | PM · 데이터 엔지니어링 | 모델 학습 데이터 수집·라벨링, 팀 활동 기록과 발표자료 구체화 |
+| 홍용재 | 백엔드 · 인프라 · 시스템 통합 | 시스템·로직 설계, 서버·인프라 구현, 동작 검증과 전체 통합 |
+
+업무를 공유하고 코드·화면을 통합한 뒤 모의 시나리오로 함께 검증합니다.
+
 ## 코드 구조와 관련 문서
 
 ```text
@@ -429,11 +509,9 @@ apps/mobile               별도 앱 저장소의 고정 서브모듈
 | [모바일 소스·검증](docs/V2/delivery/mobile-submodule-deployment.md) | 서브모듈 초기화·검증 버전·빌드 재현 |
 | [문서 안내](docs/README.md) · [구현 스택](docs/V2/delivery/implementation-stack.md) | 상세 설계와 이전 결정의 배경 |
 
-### 멘토링 피드백 반영
+### 비공개 설정과 작업 기록
 
-2026-10-31 1차 멘토링 전사의 **00:01:59–00:03:59**(멱등성·재시도·누락 방지), **00:25:57–00:26:57**(출처·전처리·지연·실패 사례), **00:29:56–00:31:56**(출처·비밀 설정·README 실행법), **00:31:56–00:32:56**(기술과 실행 방법의 체계적 구성)을 반영했습니다. 발표자료 v3의 두 처리 경로·AI 역할·서비스 미연결 연구도 현재 코드와 대조했습니다. 전사의 초기 논의나 제안을 현재 구현 완료 사실로 옮기지 않았습니다.
-
-전체 전사·회의 녹음·개인 발언은 저장소에 복제하지 않습니다. `.env`, API 키, SSH 개인키, 사용자 JWT, 원시 위치·발화는 비공개 설정과 권한이 제한된 파일로 관리합니다. Tailnet 사용만으로 저장 데이터 암호화·동의·접근 제어가 모두 해결됐다고 주장하지 않습니다. 사용자의 자료는 인증·소유권 검사와 별도 동의 범위 안에서 처리합니다.
+`.env`, API 키, SSH 개인키, 사용자 JWT, 원시 위치·발화는 비공개 설정과 권한이 제한된 파일로 관리합니다. 사용자의 자료는 인증·소유권 검사와 별도 동의 범위 안에서 처리합니다.
 
 개발 작업의 결정과 검증은 Loom에 기록합니다. 에이전트 규칙은 [AGENTS.md](AGENTS.md)를 따릅니다.
 

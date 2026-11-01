@@ -1,0 +1,3 @@
+[2026-11-01T01:38:58+00:00] agent=foreground task=task-20261101-013854-readme-pdf-f324c400 Foreground task session started.
+2026-11-01 KST: 사용자 직접 README수정 지시. PDF11쪽 텍스트 추출 및4/9/10쪽 렌더링 검토. 화면3개 nativeJPEG추출·바이트일치. README필수5항목·멘토링절삭제·환경변수22개·shell16블록·표열수·로컬링크·앵커·공백검증 통과. 공식 모델/Redis/Open-Meteo와 기존 조사자료 대조. 앱·서비스·학습 변경없음.
+2026-11-01 KST: 설치메타데이터 최종대조에서 HTTPX는 BSD-3-Clause임을 확인해 해당 행으로 분리. 최종 링크·앵커·멘토링절삭제·shell구문·공백 검사 재통과.

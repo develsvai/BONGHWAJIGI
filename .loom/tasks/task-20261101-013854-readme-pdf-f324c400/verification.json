@@ -1,0 +1,71 @@
+{
+  "기준일": "2026-11-01 KST",
+  "필수_다섯_항목": "확인",
+  "멘토링_절_삭제": "확인",
+  "깨진_로컬링크": [],
+  "표_오류": [],
+  "shell_구문_확인": 16,
+  "환경변수_정의_대조": [
+    "BONGHWA_ANALYSIS_ENABLED",
+    "BONGHWA_APP_ENABLED",
+    "BONGHWA_APP_REGISTRATION_ENABLED",
+    "BONGHWA_BROKER_URL",
+    "BONGHWA_DATABASE_URL",
+    "BONGHWA_EMBEDDING_REVISION",
+    "BONGHWA_EMBEDDING_SERVICE_TOKEN",
+    "BONGHWA_ENVIRONMENT",
+    "BONGHWA_ENV_FILE",
+    "BONGHWA_GPU_BASE_URL",
+    "BONGHWA_GPU_ENABLED",
+    "BONGHWA_JWT_SECRET",
+    "BONGHWA_MODE",
+    "BONGHWA_NOTIFICATIONS_ENABLED",
+    "BONGHWA_POLICY_ENABLED",
+    "BONGHWA_POLICY_QWEN_ENABLED",
+    "BONGHWA_PRIVATE_DIR",
+    "BONGHWA_PUSH_PROVIDER",
+    "BONGHWA_QWEN_REVISION",
+    "BONGHWA_RELEASE",
+    "BONGHWA_SERVICE_TOKEN",
+    "BONGHWA_WEB_SEARCH_ENABLED"
+  ],
+  "이미지": [
+    {
+      "path": "docs/assets/readme/mobile-profile.jpg",
+      "sha256": "20586e08a9598572387d16e55acfc81e290a55bbfbf70f0d4be17b73a7d80a49",
+      "bytes": 120045
+    },
+    {
+      "path": "docs/assets/readme/mobile-home.jpg",
+      "sha256": "81c65c1993adabea21ebd4c046c95030a79c51031ed369ba8f10ff35baec4e3c",
+      "bytes": 142594
+    },
+    {
+      "path": "docs/assets/readme/mobile-response.jpg",
+      "sha256": "cc263e12a3d7f0423ea1c99e67522826f4a496e4cdf4d367309dba16966e3dd9",
+      "bytes": 186730
+    },
+    {
+      "path": "docs/V2/delivery/architecture-slides/output/original-style-current.png",
+      "sha256": "ce85970809093b937d694ec3a298f7981e5b0057462b87904689aca827a8dba2",
+      "bytes": 1451133
+    }
+  ],
+  "화면_원문_일치": "PDF4쪽 native JPEG 3개 바이트 동일",
+  "PDF_확인": "전체11쪽 텍스트 및4·9·10쪽 렌더링 확인",
+  "팀_역할": "PDF9쪽과 이름·역할 대조",
+  "런타임_검증": "문서·이미지만 변경하여 서버·학습을 실행하지 않음",
+  "공백_검사": "통과",
+  "README_SHA256": "5e7e444ff2617ae0dc57eb8bb62bcfa4fdfd9af7d8bf5792db44e0e94c0e4fda",
+  "PDF_SHA256": "1fe92ee2a6bd8ad5760605791b4c2db0ed5fabd57f66a991ebe43a0fd8c10033",
+  "공식_웹_확인": [
+    "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507",
+    "https://huggingface.co/Qwen/Qwen3-Embedding-0.6B",
+    "https://redis.io/legal/licenses/",
+    "https://open-meteo.com/en/terms",
+    "https://zenodo.org/records/14642378",
+    "https://github.com/tianjialiu/GOFER"
+  ],
+  "라이선스_표_데이터행": 25,
+  "라이브러리_조건_대조": "기록된 배포 메타데이터10종 대조; HTTPX를BSD-3-Clause로 표기"
+}

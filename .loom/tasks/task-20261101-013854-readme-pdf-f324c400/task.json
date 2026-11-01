@@ -1,0 +1,34 @@
+{
+  "id": "task-20261101-013854-readme-pdf-f324c400",
+  "job_id": "job-20261031-002017-v2-fe3bfad0",
+  "title": "README 필수 다섯 항목과 발표 PDF의 화면·팀 역할 반영",
+  "description": "사용자가 README에 한 줄 소개와 스크린샷, 주요 기능과 아키텍처, 설치·환경설정·실행, 모델·데이터·외부 자원·라이선스, 팀원·역할을 보완하고 멘토링 피드백 반영 절을 삭제하도록 직접 지시했다. 제공 PDF의 화면과 팀 역할을 확인하고 기존 상세 운영 설명은 유지한다.",
+  "status": "RUNNING",
+  "created_at": "2026-11-01T01:38:54+00:00",
+  "updated_at": "2026-11-01T01:38:58+00:00",
+  "order_index": 32,
+  "assigned_agent": "foreground",
+  "depends_on": [],
+  "expected_output": "README 보완과 저장소 내 화면 이미지; 출처와 현재 실행 범위에 맞는 라이선스·팀 역할; 검증과 Loom 기록",
+  "done_condition": "README에서 다섯 필수 항목을 찾을 수 있고 멘토링 피드백 반영 절이 없다. 화면 링크·로컬 문서 링크·환경변수·실행 명령은 저장소와 일치하며 연구와 실제 서비스를 구분한다.",
+  "in_scope": "README 및 필요한 화면 이미지; PDF와 저장소의 사실 확인; 공식 라이선스 출처 확인; 문서 검증과 작업 기록·커밋",
+  "out_of_scope": "앱 코드 열람·수정; 런타임·서버배포·학습 변경; 삭제된 이전자료 복원; 다른 Task 상태 변경",
+  "validation_hint": "PDF 관련 페이지 시각확인, README 로컬링크·다섯 항목·삭제 절 검사, 환경변수와 명령 대조, whitespace와 Loom strict",
+  "required_docs": [],
+  "memory_refs": [],
+  "document_outputs": [],
+  "document_output_exceptions": [
+    "README.md"
+  ],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [
+    "027442da815210220620035b23b2b6b52bb6c4d6"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-11-01T01:38:58+00:00",
+  "artifacts": [],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}
