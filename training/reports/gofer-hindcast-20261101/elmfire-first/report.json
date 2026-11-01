@@ -1,0 +1,382 @@
+{
+  "simulation_only": true,
+  "operational_use": false,
+  "probability": null,
+  "retrospective_proxy_only": true,
+  "source_asof_verified": false,
+  "final_evaluation": false,
+  "split": "train",
+  "event_id": "walker_2019",
+  "status": "censored",
+  "stage": "evaluate_retrospective_labels",
+  "cases": [
+    {
+      "id": "moisture_3_4_5",
+      "dead_moisture_percent": [
+        3,
+        4,
+        5
+      ],
+      "simulation_only": true,
+      "operational_use": false,
+      "probability": null,
+      "retrospective_proxy_only": true,
+      "source_asof_verified": false,
+      "final_evaluation": false,
+      "split": "train",
+      "status": "censored",
+      "input_sha256": {
+        "adj.tif": "996ecbb0d085f272e3cee5100cb057875fa4f2f59aa4dfb79574082f85bb834b",
+        "elmfire.data": "8fd76081ac52a9d1bb43f3e97706a2b5169fe03fc54fc8ed2e9e0be6164ed58d",
+        "landscape.tif": "b946796df51149d56d1eebf9ddb496635089f9e34e2ece73fc27a05a285a5105",
+        "m1.tif": "d8060d12a0df9e7dae6a7a77d2bcb3143b3bc455c4bc5fe0bff135e1ae48ca0d",
+        "m10.tif": "f98aa59ac6fe75e7a7b677a5be94459823847739a1ad4005115c7754de8c420b",
+        "m100.tif": "dd7b5cf7183f69ca872ea23f4056eaa2e561076c40299d99d83042824cdd97d1",
+        "phi.tif": "340da12bfb68b17471b4044d351781675fd65a51b034e72d29a28145e657f66f",
+        "wd.tif": "fd689e38ef7e146fa3f3f4828f74e9712705c17297b351f772ce1f2618a787c3",
+        "ws.tif": "3ddf032b7181bd5511a8c96883b86c4ca29464e93106a7f0908b2db177feb45c"
+      },
+      "coverage": {
+        "full_horizon_completed": false,
+        "early_stop_detected": true,
+        "early_stop_reason": "STOPPING: FIRE FRONT PROPAGATION STALLED",
+        "stats_tstop_seconds_rounded": 21600.0,
+        "logged_stop_step_seconds_rounded": 21595.0,
+        "covered_until_seconds_lower_bound": 21594.95,
+        "coverage_time_method": "last solver step before STOPPING;0.1s log lower bound",
+        "horizon_completed": {
+          "1h": true,
+          "3h": true,
+          "6h": false
+        },
+        "stats_sha256": "8801a42ebe9c016b851ed734a06e43b8475085ca552e8b97ca10f639c798154c",
+        "run_log_sha256": "93b204747f495490237f576405efd9be7dc7823605d9686931064799862c340e",
+        "note": "Early solver termination does not evaluate later weather or establish no later spread"
+      },
+      "arrival_path": "/home1/ncloud/bonghwajigi/data/artifacts/elmfire/walker2019-hindcast-v1/moisture_3_4_5/outputs/time_of_arrival_0000001_0025195.tif",
+      "arrival_sha256": "beef0d8883eae8d7c88327aea7d9a731db4d20806909d5157a3ef8bc1e3492c6",
+      "arrival_unit": "seconds_since_initial_reconstructed_perimeter",
+      "initial_cells": 140,
+      "reached_cells": 278,
+      "simulated_future_reached_area_ha": {
+        "1h": 12,
+        "3h": 80,
+        "6h": 138
+      },
+      "future_reached_area_ha": {
+        "1h": 12,
+        "3h": 80,
+        "6h": null
+      },
+      "boundary_reached_cells": {
+        "1h": 0,
+        "3h": 0,
+        "6h": 0
+      },
+      "horizon_available": {
+        "1h": true,
+        "3h": true,
+        "6h": false
+      },
+      "maximum_arrival_seconds": 21235.0,
+      "initial_nonburnable_cells": 1,
+      "elapsed_seconds": 1.853
+    },
+    {
+      "id": "moisture_6_7_8",
+      "dead_moisture_percent": [
+        6,
+        7,
+        8
+      ],
+      "simulation_only": true,
+      "operational_use": false,
+      "probability": null,
+      "retrospective_proxy_only": true,
+      "source_asof_verified": false,
+      "final_evaluation": false,
+      "split": "train",
+      "status": "censored",
+      "input_sha256": {
+        "adj.tif": "996ecbb0d085f272e3cee5100cb057875fa4f2f59aa4dfb79574082f85bb834b",
+        "elmfire.data": "8fd76081ac52a9d1bb43f3e97706a2b5169fe03fc54fc8ed2e9e0be6164ed58d",
+        "landscape.tif": "b946796df51149d56d1eebf9ddb496635089f9e34e2ece73fc27a05a285a5105",
+        "m1.tif": "1e3d9b637d5383074499e9e3677121b2f9c4b67f095195c806919a0dc25c67a1",
+        "m10.tif": "c0298d3717576c6b9cbd7ffcd098b663f39d5a203e891b9e76fc1b551a403843",
+        "m100.tif": "8c7d9963ac8b40f9816d593e711c4b9891651b5008d5fb7336c3e13f18b6da92",
+        "phi.tif": "340da12bfb68b17471b4044d351781675fd65a51b034e72d29a28145e657f66f",
+        "wd.tif": "fd689e38ef7e146fa3f3f4828f74e9712705c17297b351f772ce1f2618a787c3",
+        "ws.tif": "3ddf032b7181bd5511a8c96883b86c4ca29464e93106a7f0908b2db177feb45c"
+      },
+      "coverage": {
+        "full_horizon_completed": false,
+        "early_stop_detected": true,
+        "early_stop_reason": "STOPPING: FIRE FRONT PROPAGATION STALLED",
+        "stats_tstop_seconds_rounded": 21600.0,
+        "logged_stop_step_seconds_rounded": 21595.0,
+        "covered_until_seconds_lower_bound": 21594.95,
+        "coverage_time_method": "last solver step before STOPPING;0.1s log lower bound",
+        "horizon_completed": {
+          "1h": true,
+          "3h": true,
+          "6h": false
+        },
+        "stats_sha256": "6c29744e1f47230b9093daab42d26295331ce0b2c1df0e7abaa3decdf12ec937",
+        "run_log_sha256": "a184e0481b9ae509ca4d99900f085a7e12832eda9d7613c2e5b6c392a3f9c098",
+        "note": "Early solver termination does not evaluate later weather or establish no later spread"
+      },
+      "arrival_path": "/home1/ncloud/bonghwajigi/data/artifacts/elmfire/walker2019-hindcast-v1/moisture_6_7_8/outputs/time_of_arrival_0000001_0025195.tif",
+      "arrival_sha256": "cfc6e3a8b235a6e5ec10c5feb56434932181e49b2037e6cb7138889d00fa8c87",
+      "arrival_unit": "seconds_since_initial_reconstructed_perimeter",
+      "initial_cells": 140,
+      "reached_cells": 247,
+      "simulated_future_reached_area_ha": {
+        "1h": 10,
+        "3h": 59,
+        "6h": 107
+      },
+      "future_reached_area_ha": {
+        "1h": 10,
+        "3h": 59,
+        "6h": null
+      },
+      "boundary_reached_cells": {
+        "1h": 0,
+        "3h": 0,
+        "6h": 0
+      },
+      "horizon_available": {
+        "1h": true,
+        "3h": true,
+        "6h": false
+      },
+      "maximum_arrival_seconds": 20875.0,
+      "initial_nonburnable_cells": 1,
+      "elapsed_seconds": 1.853
+    },
+    {
+      "id": "moisture_9_10_11",
+      "dead_moisture_percent": [
+        9,
+        10,
+        11
+      ],
+      "simulation_only": true,
+      "operational_use": false,
+      "probability": null,
+      "retrospective_proxy_only": true,
+      "source_asof_verified": false,
+      "final_evaluation": false,
+      "split": "train",
+      "status": "censored",
+      "input_sha256": {
+        "adj.tif": "996ecbb0d085f272e3cee5100cb057875fa4f2f59aa4dfb79574082f85bb834b",
+        "elmfire.data": "8fd76081ac52a9d1bb43f3e97706a2b5169fe03fc54fc8ed2e9e0be6164ed58d",
+        "landscape.tif": "b946796df51149d56d1eebf9ddb496635089f9e34e2ece73fc27a05a285a5105",
+        "m1.tif": "6f60c4286be5fd1a63f2dce98c671c59f6d267c40d40d24f5ffb51c27bb9ff90",
+        "m10.tif": "ec0909d92f0c4543f1accc3d3e68a7828624d29eda09a9953f5242bccaccfd76",
+        "m100.tif": "3537950c8767d94bf70d2b038c37ecd445067f1ff9ceb8de6663e05f329fe7ea",
+        "phi.tif": "340da12bfb68b17471b4044d351781675fd65a51b034e72d29a28145e657f66f",
+        "wd.tif": "fd689e38ef7e146fa3f3f4828f74e9712705c17297b351f772ce1f2618a787c3",
+        "ws.tif": "3ddf032b7181bd5511a8c96883b86c4ca29464e93106a7f0908b2db177feb45c"
+      },
+      "coverage": {
+        "full_horizon_completed": false,
+        "early_stop_detected": true,
+        "early_stop_reason": "STOPPING: FIRE FRONT PROPAGATION STALLED",
+        "stats_tstop_seconds_rounded": 21600.0,
+        "logged_stop_step_seconds_rounded": 21595.0,
+        "covered_until_seconds_lower_bound": 21594.95,
+        "coverage_time_method": "last solver step before STOPPING;0.1s log lower bound",
+        "horizon_completed": {
+          "1h": true,
+          "3h": true,
+          "6h": false
+        },
+        "stats_sha256": "cc677a60090d34d3cee0325eb8d3302ada27d2bab1c7b04bac356a5a716afaca",
+        "run_log_sha256": "e78caba9cfecba3159cefb2e32260f98d40f31b2d24bec43307e813cf7182e13",
+        "note": "Early solver termination does not evaluate later weather or establish no later spread"
+      },
+      "arrival_path": "/home1/ncloud/bonghwajigi/data/artifacts/elmfire/walker2019-hindcast-v1/moisture_9_10_11/outputs/time_of_arrival_0000001_0025195.tif",
+      "arrival_sha256": "784f7ad5869a6af2203975300d94b6b7fccd17207561e1ee9c0d49cf7426da71",
+      "arrival_unit": "seconds_since_initial_reconstructed_perimeter",
+      "initial_cells": 140,
+      "reached_cells": 235,
+      "simulated_future_reached_area_ha": {
+        "1h": 8,
+        "3h": 51,
+        "6h": 95
+      },
+      "future_reached_area_ha": {
+        "1h": 8,
+        "3h": 51,
+        "6h": null
+      },
+      "boundary_reached_cells": {
+        "1h": 0,
+        "3h": 0,
+        "6h": 0
+      },
+      "horizon_available": {
+        "1h": true,
+        "3h": true,
+        "6h": false
+      },
+      "maximum_arrival_seconds": 21415.0,
+      "initial_nonburnable_cells": 1,
+      "elapsed_seconds": 1.855
+    }
+  ],
+  "future_labels_read": true,
+  "plan": {
+    "simulation_only": true,
+    "operational_use": false,
+    "probability": null,
+    "retrospective_proxy_only": true,
+    "source_asof_verified": false,
+    "final_evaluation": false,
+    "split": "train",
+    "study": "walker2019_fixed_moisture_perimeter_hindcast_v1",
+    "event_id": "walker_2019",
+    "initial_time_utc": "2019-09-04T22:00:00Z",
+    "forecast_issue_time_utc": "2019-09-04T20:00:00Z",
+    "created_at_utc": "2026-10-31T17:31:38.845725+00:00",
+    "source_commit": "f4927b7ce68cb74eb0eb117085cc920782c8644e",
+    "binary_sha256": "f57750977084080f692cc51498f16f21197ee34de767e11d6407749bb52f947b",
+    "license": "AGPL-3.0 with Commons Clause; commercial use requires separate terms",
+    "license_scope": "Private research evaluation only; no hosted/API/product integration",
+    "references": {
+      "probe": {
+        "path": "/home1/ncloud/bonghwajigi/data/artifacts/elmfire/synthetic-20261101-first/report.json",
+        "sha256": "c43e9140c1976df69ce5034e77656af81b6111e2a88dd18a3407cdca4aea3336"
+      },
+      "terrain": {
+        "path": "/home1/ncloud/bonghwajigi/data/processed/gofer-hindcast-walker-v1/manifest.json",
+        "sha256": "15f27e8a805fb1f4d167603ecd17ad80e013c6cc0775bac134fc81cbbdf1abbb"
+      },
+      "weather": {
+        "path": "/home1/ncloud/bonghwajigi/data/processed/gofer-hindcast-walker-weather-v1/weather.json",
+        "sha256": "0f0eb6edd39c550c177842d4ef514077f18445dc5b420a654a83d4a7b999b0b1"
+      },
+      "runner": {
+        "path": "/home1/ncloud/bonghwajigi/training/tools/elmfire_gofer_hindcast.py",
+        "sha256": "30a1e5c04ecadef8a78e2f8de73f2bf61d2c4368ab85ddb888c8d6899a257ac9"
+      },
+      "shared_engine_helpers": {
+        "path": "/home1/ncloud/bonghwajigi/training/tools/elmfire_korea_scenario.py",
+        "sha256": "1305e48e88ceba54692ab4f6c9793bb9b0c55a6134d048253971605c5ff543f0"
+      }
+    },
+    "truth_manifest_path_not_yet_opened": "/home1/ncloud/bonghwajigi/data/processed/gofer-hindcast-walker-v1/truth-manifest.json",
+    "case_plan": [
+      {
+        "id": "moisture_3_4_5",
+        "dead_moisture_percent": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "id": "moisture_6_7_8",
+        "dead_moisture_percent": [
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "id": "moisture_9_10_11",
+        "dead_moisture_percent": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "grid": {
+      "crs": "EPSG:32610",
+      "shape": [
+        419,
+        411
+      ],
+      "transform": [
+        100.0,
+        0.0,
+        677100.0,
+        0.0,
+        -100.0,
+        4456400.0
+      ],
+      "pixel_size_m": 100
+    },
+    "initialization": "PHI=-1 inside reconstructed initial cumulative perimeter, +1 elsewhere; no point ignitions",
+    "assumptions": {
+      "entire_boundary_active": true,
+      "surface_only": true,
+      "canopy": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "live_herb_woody_foliar_moisture_percent": [
+        60,
+        90,
+        90
+      ],
+      "spotting": false,
+      "suppression": false,
+      "historical_fuel_and_moisture_field_verified": false
+    },
+    "numerics": {
+      "initial_dt_seconds": 5,
+      "maximum_dt_seconds": 30,
+      "target_cfl": 0.2,
+      "weather_knots": 7,
+      "weather_interval_seconds": 3600,
+      "stop_seconds": 21600,
+      "nodata": -9999,
+      "cpu_threads": 1,
+      "case_timeout_seconds": 300
+    },
+    "domain_initial_cells": 140,
+    "domain_cells": 135009,
+    "outside_domain_is_safe": false,
+    "wind_rotation_range_deg": [
+      -1.656673550605774,
+      -1.327816367149353
+    ],
+    "source_terrain_limitations": [
+      "GOFER is hourly retrospective cumulative satellite reconstruction, not ground arrival",
+      "GOES native resolution is about 2km at equator; 100m rasterization adds no observed detail",
+      "GOFER final FRAP references and other hindsight preprocessing prevent as-of validation",
+      "Initial cumulative perimeter is not an observed active fire front everywhere",
+      "Copernicus GLO90 is surface DSM, not bare-earth DTM; later release does not prove 2019 availability",
+      "LF2016 depicts 2016 ground conditions but capable fuels may refer to 2019/2020; 2019 as-of unverified",
+      "Nearest 30m-to-100m fuel resampling loses subcell fuel mixtures and does not estimate moisture",
+      "Canopy structure is absent; canopy zeros in a surface-fire scenario are explicit assumptions",
+      "Nonburnable model categories or outside-domain cells do not imply personal safety",
+      "Future geometries are stored separately and excluded from input-domain construction"
+    ],
+    "source_weather_limitations": [
+      "Two-hour model-cycle lag is a fixed assumption, not historical release proof",
+      "3km wind resampled to100m does not resolve100m atmospheric processes",
+      "Archived operational forecast, not observed future weather",
+      "This US development case does not validate Korean personal risk"
+    ],
+    "label_boundary": "Freeze three cases and write fit receipt before opening future reconstructed labels",
+    "limitations": [
+      "GOFER source uses retrospective final-perimeter filtering; not operational as-of input",
+      "100m regridding does not create100m observation truth",
+      "One train event, no held-out model selection or Korean transfer validation",
+      "Fuel model, zero canopy and moisture assumptions cannot establish actual fire behavior",
+      "Negative/zero-union metrics stay undefined; no calibrated probability is computed"
+    ]
+  },
+  "plan_sha256": "48a91aa2fa1ee81c1d94607cf7b274695890899a733c01b47563064dff184553",
+  "fit_receipt_sha256": "a1429aa4f83a981619716eb3cd456a4618b43ea0e31925783d446e25470bb4bb",
+  "evaluation_path": "/home1/ncloud/bonghwajigi/data/artifacts/elmfire/walker2019-hindcast-v1/evaluation.json",
+  "elapsed_seconds": 6.16,
+  "finished_at_utc": "2026-10-31T17:31:44.622396+00:00"
+}

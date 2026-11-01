@@ -1,0 +1,80 @@
+{
+  "simulation_only": true,
+  "operational_use": false,
+  "purpose": "Read-only audit of existing outputs, no simulation rerun or plan change",
+  "explanation": "Engine CEILING chooses center (-15,2985); Rasterio floor at boundary (0,3000) samples adjacent center (15,2985).",
+  "initial_cell_checks": [
+    {
+      "case": "ws10_wd340",
+      "sampled_xy_m": [
+        -15.0,
+        2985.0
+      ],
+      "arrival_seconds": 0.0
+    },
+    {
+      "case": "ws10_wd000",
+      "sampled_xy_m": [
+        -15.0,
+        2985.0
+      ],
+      "arrival_seconds": 0.0
+    },
+    {
+      "case": "ws10_wd020",
+      "sampled_xy_m": [
+        -15.0,
+        2985.0
+      ],
+      "arrival_seconds": 0.0
+    },
+    {
+      "case": "ws15_wd340",
+      "sampled_xy_m": [
+        -15.0,
+        2985.0
+      ],
+      "arrival_seconds": 0.0
+    },
+    {
+      "case": "ws15_wd000",
+      "sampled_xy_m": [
+        -15.0,
+        2985.0
+      ],
+      "arrival_seconds": 0.0
+    },
+    {
+      "case": "ws15_wd020",
+      "sampled_xy_m": [
+        -15.0,
+        2985.0
+      ],
+      "arrival_seconds": 0.0
+    },
+    {
+      "case": "ws20_wd340",
+      "sampled_xy_m": [
+        -15.0,
+        2985.0
+      ],
+      "arrival_seconds": 0.0
+    },
+    {
+      "case": "ws20_wd000",
+      "sampled_xy_m": [
+        -15.0,
+        2985.0
+      ],
+      "arrival_seconds": 0.0
+    },
+    {
+      "case": "ws20_wd020",
+      "sampled_xy_m": [
+        -15.0,
+        2985.0
+      ],
+      "arrival_seconds": 0.0
+    }
+  ]
+}

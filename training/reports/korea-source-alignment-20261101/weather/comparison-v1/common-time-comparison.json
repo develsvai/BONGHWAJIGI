@@ -1,0 +1,56 @@
+{
+  "case": "uljin_2022",
+  "source_parquet_sha256": "b6ca014e075d845717277aa4dab6a0ffb9b0dae82573befc189463047c90fa99",
+  "target_read": false,
+  "horizon_duplicates_removed": true,
+  "unique_points": 459,
+  "snapshot_issue_time_utc": "2022-03-04T02:35:00+00:00",
+  "common_gfs_valid_isd_observation_time_utc": "2022-03-04T01:00:00+00:00",
+  "gfs_cycle_utc": "2022-03-03T18:00:00Z",
+  "gfs_lead_hours": 7,
+  "historical_publication_time_verified": false,
+  "operational_use": false,
+  "location_comparison_assumption": "Use stored point numerical lon/lat on GRIB native sphere for nearest-cell lookup; no precision geodetic equivalence claimed",
+  "metrics_are_not_forecast_skill": "Different station and grid locations; repeated station values across points; one valid time, no independent validation",
+  "isd_station_distance_km_p05_p50_p95": [
+    8.642917251586915,
+    25.2979679107666,
+    38.81616020202637
+  ],
+  "gfs_nearest_grid_center_distance_km_p05_p50_p95": [
+    3.0654233268069917,
+    9.94117086979897,
+    15.053200664580203
+  ],
+  "mean_wind_vector_difference_ms": 3.368295500891966,
+  "variables": {
+    "UGRD": {
+      "finite_pairs": 459,
+      "missing_pairs": 0,
+      "mean_forecast_minus_station": 3.1085318841186225,
+      "mean_absolute_difference": 3.1085318841186225,
+      "unit": "m/s"
+    },
+    "VGRD": {
+      "finite_pairs": 459,
+      "missing_pairs": 0,
+      "mean_forecast_minus_station": 0.7462104780913043,
+      "mean_absolute_difference": 0.8240230188562064,
+      "unit": "m/s"
+    },
+    "TMP": {
+      "finite_pairs": 459,
+      "missing_pairs": 0,
+      "mean_forecast_minus_station": -4.218020216000602,
+      "mean_absolute_difference": 4.218020216000602,
+      "unit": "C"
+    },
+    "RH": {
+      "finite_pairs": 459,
+      "missing_pairs": 0,
+      "mean_forecast_minus_station": 1.9630001874271301,
+      "mean_absolute_difference": 4.2395512117539615,
+      "unit": "%"
+    }
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "plan_sha256": "f3cc836c09b94258acb97d94b898de8f2b80912602190b541ca83da9d56ad591",
+  "requests": [
+    {
+      "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20220303/18/atmos/gfs.t18z.pgrb2.0p25.f007.idx",
+      "method": "GET",
+      "http_status": 200,
+      "bytes_read": 40494,
+      "content_length": "40494",
+      "content_range": null,
+      "last_modified": "Thu, 03 Mar 2022 21:42:24 GMT",
+      "retrieved_at_utc": "2026-10-31T18:27:24.534699+00:00"
+    },
+    {
+      "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20220303/18/atmos/gfs.t18z.pgrb2.0p25.f007",
+      "method": "HEAD",
+      "http_status": 200,
+      "bytes_read": 0,
+      "content_length": "535297839",
+      "content_range": null,
+      "last_modified": "Thu, 03 Mar 2022 21:43:34 GMT",
+      "retrieved_at_utc": "2026-10-31T18:27:25.146530+00:00"
+    },
+    {
+      "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20220303/18/atmos/gfs.t18z.pgrb2.0p25.f007",
+      "method": "GET",
+      "http_status": 206,
+      "bytes_read": 6838049,
+      "content_length": "6838049",
+      "content_range": "bytes 413814229-420652277/535297839",
+      "last_modified": "Thu, 03 Mar 2022 21:43:34 GMT",
+      "retrieved_at_utc": "2026-10-31T18:27:27.355978+00:00"
+    }
+  ],
+  "source_code_sha256": "8dfc29978a68431e4454a443c8f3105fd4746f5771787bba75c0e3534f06ac08",
+  "operational_use": false,
+  "historical_publication_time_verified": false,
+  "index_sha256": "84bc4f5ed1dfeccf17619d7f0538f367b42da9e3ff2e51c406836455ac81aa36",
+  "ranges": {
+    "UGRD": [
+      418751845,
+      419713444
+    ],
+    "VGRD": [
+      419713445,
+      420652277
+    ],
+    "TMP": [
+      413814229,
+      414323581
+    ],
+    "RH": [
+      416043845,
+      416819969
+    ]
+  },
+  "combined_range": [
+    413814229,
+    420652277
+  ],
+  "full_global_file_bytes": 535297839,
+  "fields": {
+    "UGRD": {
+      "forecast_reference_time_utc": "2022-03-03T18:00:00+00:00",
+      "valid_time_utc": "2022-03-04T01:00:00+00:00",
+      "forecast_lead_hours": 7,
+      "height_m": 10,
+      "variable": "UGRD",
+      "canonical_unit_from_grib_parameter_table": "m/s",
+      "grid_template": 0,
+      "resolution_component_flags": 48,
+      "wind_axis_basis": "true_east_north",
+      "wind_axis_verified": true,
+      "ni": 1440,
+      "nj": 721,
+      "di_microdegrees": 250000,
+      "dj_microdegrees": 250000,
+      "grid_sha256": "2f05f13897b18b42bb2790905e2476fce9a2e07b89f63499a12da9e202f3367f",
+      "historical_publication_time_verified": false,
+      "path": "UGRD.grib2",
+      "bytes": 961600,
+      "sha256": "b781de29edb49a9bbff97fc2903527227e345de11b96240ca1dc65256b7eb71a"
+    },
+    "VGRD": {
+      "forecast_reference_time_utc": "2022-03-03T18:00:00+00:00",
+      "valid_time_utc": "2022-03-04T01:00:00+00:00",
+      "forecast_lead_hours": 7,
+      "height_m": 10,
+      "variable": "VGRD",
+      "canonical_unit_from_grib_parameter_table": "m/s",
+      "grid_template": 0,
+      "resolution_component_flags": 48,
+      "wind_axis_basis": "true_east_north",
+      "wind_axis_verified": true,
+      "ni": 1440,
+      "nj": 721,
+      "di_microdegrees": 250000,
+      "dj_microdegrees": 250000,
+      "grid_sha256": "2f05f13897b18b42bb2790905e2476fce9a2e07b89f63499a12da9e202f3367f",
+      "historical_publication_time_verified": false,
+      "path": "VGRD.grib2",
+      "bytes": 938833,
+      "sha256": "1f645c2e8ef78d10e56030238a04881c808ca4c4694c0dcd58d08b712b37581c"
+    },
+    "TMP": {
+      "forecast_reference_time_utc": "2022-03-03T18:00:00+00:00",
+      "valid_time_utc": "2022-03-04T01:00:00+00:00",
+      "forecast_lead_hours": 7,
+      "height_m": 2,
+      "variable": "TMP",
+      "canonical_unit_from_grib_parameter_table": "K",
+      "grid_template": 0,
+      "resolution_component_flags": 48,
+      "wind_axis_basis": "true_east_north",
+      "wind_axis_verified": true,
+      "ni": 1440,
+      "nj": 721,
+      "di_microdegrees": 250000,
+      "dj_microdegrees": 250000,
+      "grid_sha256": "2f05f13897b18b42bb2790905e2476fce9a2e07b89f63499a12da9e202f3367f",
+      "historical_publication_time_verified": false,
+      "path": "TMP.grib2",
+      "bytes": 509353,
+      "sha256": "bcb8149f9a19756061902fa6e67dcec87dbda5d67e5997ce2a7c0e7414cfe470"
+    },
+    "RH": {
+      "forecast_reference_time_utc": "2022-03-03T18:00:00+00:00",
+      "valid_time_utc": "2022-03-04T01:00:00+00:00",
+      "forecast_lead_hours": 7,
+      "height_m": 2,
+      "variable": "RH",
+      "canonical_unit_from_grib_parameter_table": "%",
+      "grid_template": 0,
+      "resolution_component_flags": 48,
+      "wind_axis_basis": "true_east_north",
+      "wind_axis_verified": true,
+      "ni": 1440,
+      "nj": 721,
+      "di_microdegrees": 250000,
+      "dj_microdegrees": 250000,
+      "grid_sha256": "2f05f13897b18b42bb2790905e2476fce9a2e07b89f63499a12da9e202f3367f",
+      "historical_publication_time_verified": false,
+      "path": "RH.grib2",
+      "bytes": 776125,
+      "sha256": "9dfbb8ea9f8a4fb6d54d5e3ce3b1a44ba1e698c40c0560826d04f0b2cea17806"
+    }
+  },
+  "status": "four_field_metadata_verified",
+  "actual_requests": 3,
+  "response_bytes_read": 6878543
+}

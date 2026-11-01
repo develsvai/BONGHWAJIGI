@@ -1,0 +1,211 @@
+{
+  "schema_version": "elmfire_hrrr_gridded_weather_v1",
+  "source": "NOAA_HRRR",
+  "forecast_issue_time_utc": "2019-09-04T20:00:00+00:00",
+  "simulation_start_time_utc": "2019-09-04T22:00:00+00:00",
+  "historical_forecast_cycle_verified": true,
+  "operational_availability_verified": false,
+  "wind_axis_basis_verified": true,
+  "wind_direction_basis": "true_north_clockwise_from",
+  "wind_height_m": 10,
+  "wind_speed_unit": "m/s",
+  "wind_direction_unit": "degree",
+  "hours": [
+    {
+      "valid_time_utc": "2019-09-04T22:00:00+00:00"
+    },
+    {
+      "valid_time_utc": "2019-09-04T23:00:00+00:00"
+    },
+    {
+      "valid_time_utc": "2019-09-05T00:00:00+00:00"
+    },
+    {
+      "valid_time_utc": "2019-09-05T01:00:00+00:00"
+    },
+    {
+      "valid_time_utc": "2019-09-05T02:00:00+00:00"
+    },
+    {
+      "valid_time_utc": "2019-09-05T03:00:00+00:00"
+    },
+    {
+      "valid_time_utc": "2019-09-05T04:00:00+00:00"
+    }
+  ],
+  "outputs": {
+    "wind_speed_m_s.tif": {
+      "path": "wind_speed_m_s.tif",
+      "sha256": "9a81676eaa1bcebd970f40e438ce2fe72a8dd5e7fd59c4c0d955408b079a0a90"
+    },
+    "wind_direction_true_deg.tif": {
+      "path": "wind_direction_true_deg.tif",
+      "sha256": "29e8fb8fd7e8d5f2e819b6fe6d9c62fa4d03eedb1d69b0f8cb080d37c0774e05"
+    }
+  },
+  "axis_verification": {
+    "artifact_path": "axis-verification.json",
+    "sha256": "bf5500cec78ddd02e7357b944a645853d780ce7d9bee654fc400c6cabd8c3056",
+    "method": "Raw GRIB2 templates3.30/4.0 and GDAL cross-check; source-grid U/V rotated to true east/north before bilinear reprojection; direction derived afterwards"
+  },
+  "provenance": [
+    {
+      "artifact_path": "../../raw/gofer-hindcast/walker-2019/hrrr-v1/h02.idx",
+      "sha256": "51ee2d40c63b6bf397f2ececfb60722d70c438fd99e48f4567837d96784de71b",
+      "role": "index",
+      "retrieved_at_utc": "2026-10-31T17:19:07.784976+00:00"
+    },
+    {
+      "artifact_path": "../../raw/gofer-hindcast/walker-2019/hrrr-v1/h02-ugrd.grib2",
+      "sha256": "09bd887402717f16b48aec28e8b87010a23d335bd5bbaeb8ed0151a198fb498c",
+      "role": "wind_grib",
+      "retrieved_at_utc": "2026-10-31T17:22:00.400315+00:00"
+    },
+    {
+      "artifact_path": "../../raw/gofer-hindcast/walker-2019/hrrr-v1/h02-vgrd.grib2",
+      "sha256": "e039a0fbac37b01e634bfd807614e463fc1c7d74b3e8fb8c78a7a93722210872",
+      "role": "wind_grib",
+      "retrieved_at_utc": "2026-10-31T17:22:02.030679+00:00"
+    },
+    {
+      "artifact_path": "../../raw/gofer-hindcast/walker-2019/hrrr-v1/h03.idx",
+      "sha256": "347dd4f52526e087deb0863c598463d8bd3e37dd3b5343ad026312274859d7b0",
+      "role": "index",
+      "retrieved_at_utc": "2026-10-31T17:26:45.647161+00:00"
+    },
+    {
+      "artifact_path": "../../raw/gofer-hindcast/walker-2019/hrrr-v1/h03-ugrd.grib2",
+      "sha256": "3a667d59edf89be71fdf88d0381e7902043f58b0a0f821b3fb88923db3341a97",
+      "role": "wind_grib",
+      "retrieved_at_utc": "2026-10-31T17:26:48.393317+00:00"
+    },
+    {
+      "artifact_path": "../../raw/gofer-hindcast/walker-2019/hrrr-v1/h03-vgrd.grib2",
+      "sha256": "c85b499ff73ca0917fb545ce3240be9bca7d684ba1cfc9a01215723ccbdd8d4c",
+      "role": "wind_grib",
+      "retrieved_at_utc": "2026-10-31T17:26:51.153442+00:00"
+    },
+    {
+      "artifact_path": "../../raw/gofer-hindcast/walker-2019/hrrr-v1/h04.idx",
+      "sha256": "19126068f48c267890d7b69a50777916b19cd8965a98e514f689275148886e68",
+      "role": "index",
+      "retrieved_at_utc": "2026-10-31T17:26:52.820991+00:00"
+    },
+    {
+      "artifact_path": "../../raw/gofer-hindcast/walker-2019/hrrr-v1/h04-ugrd.grib2",
+      "sha256": "774c19c78065df3fc243d2cf4fbbab6abcf77f22a737fc1579ea00014a758b50",
+      "role": "wind_grib",
+      "retrieved_at_utc": "2026-10-31T17:26:55.727409+00:00"
+    },
+    {
+      "artifact_path": "../../raw/gofer-hindcast/walker-2019/hrrr-v1/h04-vgrd.grib2",
+      "sha256": "d8f28b8b8fafd45a83ed78d323b6ae5965bfc09f8fe4b0b33c03c4e5aab5308f",
+      "role": "wind_grib",
+      "retrieved_at_utc": "2026-10-31T17:26:58.440719+00:00"
+    },
+    {
+      "artifact_path": "../../raw/gofer-hindcast/walker-2019/hrrr-v1/h05.idx",
+      "sha256": "8cd6825efe7ec2c67e9cef91acd5c2ea9ed0ebee4e02c88beb303102841182ec",
+      "role": "index",
+      "retrieved_at_utc": "2026-10-31T17:27:00.180082+00:00"
+    },
+    {
+      "artifact_path": "../../raw/gofer-hindcast/walker-2019/hrrr-v1/h05-ugrd.grib2",
+      "sha256": "9ea5cb376e2f469eb607bf1ce13f08915bddac23e862213dc070ae4e6dbb4ef7",
+      "role": "wind_grib",
+      "retrieved_at_utc": "2026-10-31T17:27:03.086180+00:00"
+    },
+    {
+      "artifact_path": "../../raw/gofer-hindcast/walker-2019/hrrr-v1/h05-vgrd.grib2",
+      "sha256": "61e374df6bfa162aeb6a5ec34aea72ceeb3d0d775166019df4f1a9fc8c50233e",
+      "role": "wind_grib",
+      "retrieved_at_utc": "2026-10-31T17:27:05.782232+00:00"
+    },
+    {
+      "artifact_path": "../../raw/gofer-hindcast/walker-2019/hrrr-v1/h06.idx",
+      "sha256": "7d9693f369e8bf4e04a9359553c91044d035742c6714babde0babc0b6e36f12d",
+      "role": "index",
+      "retrieved_at_utc": "2026-10-31T17:27:07.426592+00:00"
+    },
+    {
+      "artifact_path": "../../raw/gofer-hindcast/walker-2019/hrrr-v1/h06-ugrd.grib2",
+      "sha256": "fd830b30c0367796468f470b07f70273ebfb1b0683208c8a6b4772164cb93872",
+      "role": "wind_grib",
+      "retrieved_at_utc": "2026-10-31T17:27:10.315128+00:00"
+    },
+    {
+      "artifact_path": "../../raw/gofer-hindcast/walker-2019/hrrr-v1/h06-vgrd.grib2",
+      "sha256": "adc2214d0ecc3c285056f060f43bca9edd14d541695bcf342e7624ff45f7796a",
+      "role": "wind_grib",
+      "retrieved_at_utc": "2026-10-31T17:27:14.023568+00:00"
+    },
+    {
+      "artifact_path": "../../raw/gofer-hindcast/walker-2019/hrrr-v1/h07.idx",
+      "sha256": "294bdfbdb3b57e69828a028c448c0b953a07f2d13057115cb35431f7f32740ac",
+      "role": "index",
+      "retrieved_at_utc": "2026-10-31T17:27:15.801155+00:00"
+    },
+    {
+      "artifact_path": "../../raw/gofer-hindcast/walker-2019/hrrr-v1/h07-ugrd.grib2",
+      "sha256": "126a78a1fa998b6f2dbc99a440c5f3fb87e4e396cf0e645e984c5905820214b8",
+      "role": "wind_grib",
+      "retrieved_at_utc": "2026-10-31T17:27:18.793577+00:00"
+    },
+    {
+      "artifact_path": "../../raw/gofer-hindcast/walker-2019/hrrr-v1/h07-vgrd.grib2",
+      "sha256": "a169a1852a6447b5c42b52a067a6e09f51c1fcc2fc59938c806b34ef63bd9676",
+      "role": "wind_grib",
+      "retrieved_at_utc": "2026-10-31T17:27:21.638010+00:00"
+    },
+    {
+      "artifact_path": "../../raw/gofer-hindcast/walker-2019/hrrr-v1/h08.idx",
+      "sha256": "9ec20dd529e76e10b7998010ca7c63506b23fbe208c2464a8363ed20bef5b14d",
+      "role": "index",
+      "retrieved_at_utc": "2026-10-31T17:27:23.281847+00:00"
+    },
+    {
+      "artifact_path": "../../raw/gofer-hindcast/walker-2019/hrrr-v1/h08-ugrd.grib2",
+      "sha256": "5815e1c04199b36fa26923f48c2f3af5dd345f148e317e75ea4f920b2a20451c",
+      "role": "wind_grib",
+      "retrieved_at_utc": "2026-10-31T17:27:25.957561+00:00"
+    },
+    {
+      "artifact_path": "../../raw/gofer-hindcast/walker-2019/hrrr-v1/h08-vgrd.grib2",
+      "sha256": "1aee0db33be9d8c410cecaf6286655f864cc572aa72042ade6eea2e9972b4d1e",
+      "role": "wind_grib",
+      "retrieved_at_utc": "2026-10-31T17:27:28.662913+00:00"
+    },
+    {
+      "artifact_path": "axis-verification.json",
+      "sha256": "bf5500cec78ddd02e7357b944a645853d780ce7d9bee654fc400c6cabd8c3056",
+      "role": "axis_verification",
+      "retrieved_at_utc": "2026-10-31T17:27:38.536157+00:00"
+    }
+  ],
+  "source_code_sha256": "09305dddc1f0e089b89164c8b762f7820b5301b32551307990c41af39bfcb160",
+  "grid": {
+    "crs": "EPSG:32610",
+    "shape": [
+      419,
+      411
+    ],
+    "transform": [
+      100.0,
+      0.0,
+      677100.0,
+      0.0,
+      -100.0,
+      4456400.0
+    ]
+  },
+  "operational_use": false,
+  "probability": null,
+  "limitations": [
+    "Two-hour model-cycle lag is a fixed assumption, not historical release proof",
+    "3km wind resampled to100m does not resolve100m atmospheric processes",
+    "Archived operational forecast, not observed future weather",
+    "This US development case does not validate Korean personal risk"
+  ],
+  "attribution": "NOAA HRRR via NOAA Open Data Dissemination on AWS; modified/reprojected",
+  "license_url": "https://registry.opendata.aws/noaa-hrrr-pds/"
+}

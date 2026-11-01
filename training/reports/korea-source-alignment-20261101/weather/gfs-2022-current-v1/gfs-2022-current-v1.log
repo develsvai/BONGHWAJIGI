@@ -1,0 +1,80 @@
+{"stage": "indexes", "verified": 10, "total": 71}
+{"stage": "indexes", "verified": 20, "total": 71}
+{"stage": "indexes", "verified": 30, "total": 71}
+{"stage": "indexes", "verified": 40, "total": 71}
+{"stage": "indexes", "verified": 50, "total": 71}
+{"stage": "indexes", "verified": 60, "total": 71}
+{"stage": "indexes", "verified": 70, "total": 71}
+{"stage": "indexes", "verified": 71, "total": 71}
+{"stage": "fields", "verified": 1, "total": 71, "requests": 75, "bytes": 6435770}
+{"stage": "fields", "verified": 2, "total": 71, "requests": 79, "bytes": 9983425}
+{"stage": "fields", "verified": 3, "total": 71, "requests": 83, "bytes": 13537029}
+{"stage": "fields", "verified": 4, "total": 71, "requests": 87, "bytes": 17087479}
+{"stage": "fields", "verified": 5, "total": 71, "requests": 91, "bytes": 20642962}
+{"stage": "fields", "verified": 6, "total": 71, "requests": 95, "bytes": 24198804}
+{"stage": "fields", "verified": 7, "total": 71, "requests": 99, "bytes": 27759423}
+{"stage": "fields", "verified": 8, "total": 71, "requests": 103, "bytes": 31319978}
+{"stage": "fields", "verified": 9, "total": 71, "requests": 107, "bytes": 34877563}
+{"stage": "fields", "verified": 10, "total": 71, "requests": 111, "bytes": 38440646}
+{"stage": "fields", "verified": 11, "total": 71, "requests": 115, "bytes": 42011469}
+{"stage": "fields", "verified": 12, "total": 71, "requests": 119, "bytes": 45585213}
+{"stage": "fields", "verified": 13, "total": 71, "requests": 123, "bytes": 49156851}
+{"stage": "fields", "verified": 14, "total": 71, "requests": 127, "bytes": 52740970}
+{"stage": "fields", "verified": 15, "total": 71, "requests": 131, "bytes": 56332445}
+{"stage": "fields", "verified": 16, "total": 71, "requests": 135, "bytes": 59925922}
+{"stage": "fields", "verified": 17, "total": 71, "requests": 139, "bytes": 63519600}
+{"stage": "fields", "verified": 18, "total": 71, "requests": 143, "bytes": 66744614}
+{"stage": "fields", "verified": 19, "total": 71, "requests": 147, "bytes": 69936908}
+{"stage": "fields", "verified": 20, "total": 71, "requests": 151, "bytes": 73124629}
+{"stage": "fields", "verified": 21, "total": 71, "requests": 155, "bytes": 76316164}
+{"stage": "fields", "verified": 22, "total": 71, "requests": 159, "bytes": 79863478}
+{"stage": "fields", "verified": 23, "total": 71, "requests": 163, "bytes": 83410670}
+{"stage": "fields", "verified": 24, "total": 71, "requests": 167, "bytes": 86961921}
+{"stage": "fields", "verified": 25, "total": 71, "requests": 171, "bytes": 90513736}
+{"stage": "fields", "verified": 26, "total": 71, "requests": 175, "bytes": 94068241}
+{"stage": "fields", "verified": 27, "total": 71, "requests": 179, "bytes": 97620125}
+{"stage": "fields", "verified": 28, "total": 71, "requests": 183, "bytes": 101170286}
+{"stage": "fields", "verified": 29, "total": 71, "requests": 187, "bytes": 104717352}
+{"stage": "fields", "verified": 30, "total": 71, "requests": 191, "bytes": 108272921}
+{"stage": "fields", "verified": 31, "total": 71, "requests": 195, "bytes": 111833590}
+{"stage": "fields", "verified": 32, "total": 71, "requests": 199, "bytes": 115394260}
+{"stage": "fields", "verified": 33, "total": 71, "requests": 203, "bytes": 118956637}
+{"stage": "fields", "verified": 34, "total": 71, "requests": 207, "bytes": 122505618}
+{"stage": "fields", "verified": 35, "total": 71, "requests": 211, "bytes": 126050184}
+{"stage": "fields", "verified": 36, "total": 71, "requests": 215, "bytes": 129232560}
+{"stage": "fields", "verified": 37, "total": 71, "requests": 219, "bytes": 132778676}
+{"stage": "fields", "verified": 38, "total": 71, "requests": 223, "bytes": 136325648}
+{"stage": "fields", "verified": 39, "total": 71, "requests": 227, "bytes": 139872411}
+{"stage": "fields", "verified": 40, "total": 71, "requests": 231, "bytes": 143418219}
+{"stage": "fields", "verified": 41, "total": 71, "requests": 235, "bytes": 146964803}
+{"stage": "fields", "verified": 42, "total": 71, "requests": 239, "bytes": 150513579}
+{"stage": "fields", "verified": 43, "total": 71, "requests": 243, "bytes": 153701617}
+{"stage": "fields", "verified": 44, "total": 71, "requests": 247, "bytes": 156888007}
+{"stage": "fields", "verified": 45, "total": 71, "requests": 251, "bytes": 160078905}
+{"stage": "fields", "verified": 46, "total": 71, "requests": 255, "bytes": 163270552}
+{"stage": "fields", "verified": 47, "total": 71, "requests": 259, "bytes": 166469246}
+{"stage": "fields", "verified": 48, "total": 71, "requests": 263, "bytes": 169670985}
+{"stage": "fields", "verified": 49, "total": 71, "requests": 267, "bytes": 172880602}
+{"stage": "fields", "verified": 50, "total": 71, "requests": 271, "bytes": 176092043}
+{"stage": "fields", "verified": 51, "total": 71, "requests": 275, "bytes": 179303029}
+{"stage": "fields", "verified": 52, "total": 71, "requests": 279, "bytes": 182518975}
+{"stage": "fields", "verified": 53, "total": 71, "requests": 283, "bytes": 185734468}
+{"stage": "fields", "verified": 54, "total": 71, "requests": 287, "bytes": 188959523}
+{"stage": "fields", "verified": 55, "total": 71, "requests": 291, "bytes": 192179171}
+{"stage": "fields", "verified": 56, "total": 71, "requests": 295, "bytes": 195393399}
+{"stage": "fields", "verified": 57, "total": 71, "requests": 299, "bytes": 198608126}
+{"stage": "fields", "verified": 58, "total": 71, "requests": 303, "bytes": 201825857}
+{"stage": "fields", "verified": 59, "total": 71, "requests": 307, "bytes": 205081054}
+{"stage": "fields", "verified": 60, "total": 71, "requests": 311, "bytes": 208336661}
+{"stage": "fields", "verified": 61, "total": 71, "requests": 315, "bytes": 211593254}
+{"stage": "fields", "verified": 62, "total": 71, "requests": 319, "bytes": 214849075}
+{"stage": "fields", "verified": 63, "total": 71, "requests": 323, "bytes": 218107824}
+{"stage": "fields", "verified": 64, "total": 71, "requests": 327, "bytes": 221367330}
+{"stage": "fields", "verified": 65, "total": 71, "requests": 331, "bytes": 224628250}
+{"stage": "fields", "verified": 66, "total": 71, "requests": 335, "bytes": 227889556}
+{"stage": "fields", "verified": 67, "total": 71, "requests": 339, "bytes": 231152179}
+{"stage": "fields", "verified": 68, "total": 71, "requests": 343, "bytes": 234417240}
+{"stage": "fields", "verified": 69, "total": 71, "requests": 347, "bytes": 237684197}
+{"stage": "fields", "verified": 70, "total": 71, "requests": 351, "bytes": 240959090}
+{"stage": "fields", "verified": 71, "total": 71, "requests": 355, "bytes": 244226387}
+{"status": "completed", "requests": 355, "bytes": 244226387}

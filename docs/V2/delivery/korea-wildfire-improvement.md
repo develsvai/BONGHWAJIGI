@@ -4,6 +4,14 @@
 
 **국내 사용자 대응 판단에 사용할 수준은 아직 검증되지 않았다.** v4는 21개 지역 창의 수집·구축과 GPU/CPU 비교를 완료했다. 같은 검증 행에서 사건·기간별 평균 AP는 기존 v3의 0.356335에서 v4 기간그룹 선택 모델의 0.432810으로 높아졌다. 그러나 최근 화재 거리 기준 0.471403에 못 미치고, 상위10% 검토 탐지율도 기존보다 낮아 운영 모델로 승격하지 않았다. 모든 산출물의 `operational_use`는 `false`다.
 
+후속으로 GOFER 접근 시간 AFT 2개, ELMFIRE 공식 예제와 9개 합성 풍향·풍속 시나리오, 국내 위치의 공개 GFS 예보 수신을 실제 완료했다. 이력 AFT의 사건×기간 평균 AP 0.2595는 단순 거리 0.2622보다 낮아 운영 후보로 승격하지 않았다. 이 절차와 결과는 아래 「접근 시간 모델·확산 시뮬레이터 첫 실행」에 기록했다.
+
+추가 보강에서는 GOFER 입력을7→35개로 늘린 분류기의101회 적합을 완료했다. 기간제외 nested AP는거리0.1792→모델0.2569,동일2021개발검증의사건균등AP는기존AFT0.2595→새모델0.3311로올랐다. 그러나2021전체행합산AP는기존AFT보다떨어졌고,6h후보정밀도8.9%·KNP사건재현율38.1%에그쳐포괄적인우월성이나개인대응적합성을입증하지못했다. [전체비교·실행위치·재현명령](../../../training/reports/gofer-history-20261101/README.md)을보존한다. 실제수관자료를넣은Walker6조건도기존대비악화돼성공으로채택하지않았다.
+
+최신 단계에서는 국내 후보466,710행을 재구축하고, 과거60분 명확 비화재 집단의57회 비교 학습을 완료했다. 미래 관측 불명확 후보도 평가 예산에 포함했다. 새 이력·바람 선택 절차의 사건×기간 AP0.22588과 상위10% 재현율35.45%는 현재 거리의0.23178·38.07%보다 낮았다. 최종 선택도 기존34개 입력으로 돌아와 이번 보강을 개선으로 채택하지 않았다. 알려진 정답만의 선택 정밀도는 약1.4%이고6시간 정답 불명확 비중46.13%가 남는다. 이는 이전v4와 다른 후보 집단의 결과다. [자료·모델 결과와506개 테스트](../../../training/reports/korea-first-observation-20261101/README.md), [실제 과거 GFS 접근 검증](../../../training/reports/korea-source-alignment-20261101/weather/README.md), [시간별 국내 화선 원자료 조사](../../../training/reports/korea-source-alignment-20261101/public-label-sources.md)를 기록했다.
+
+이어 실제 NOAA GFS2022 예보284필드를 취득하고10개 train 창·7기간 그룹의 같은238,836행에서45회 비교 학습을 완료했다. 기상 입력을 GFS로 바꾼 고정 모델은 기존 입력보다 AP0.09136→0.08411, 상위10% 관측 양성 재현율23.36%→19.91%로 낮아졌다. 현재 거리 기준의 재현율27.70%에도 못 미쳐 교체하지 않았고 최종 선택은 A34였다. 이전57회와 모집단이 달라 위 숫자는 이번 두 후보 사이에서만 비교한다. [전체 결과·독립 감사·542개 테스트·저장 위치](../../../training/reports/korea-gfs-2022-20261101/README.md)를 보존한다. 이번57+45회 학습은 모두 종료됐으며 개인 대응 판단 목표가 달성됐다는 뜻은 아니다.
+
 ## 목표와 역할
 
 - 사용자 확정 목표: 국내 사용자의 앞으로 1~6시간 산불 영향·접근 위험.
@@ -216,7 +224,7 @@ journalctl --user -u bonghwajigi-kma-groupcv-v4 -f
 
 ### 학습 OOF 점수의 보정 실험
 
-위 결과를 읽기 전에 단일 전역 sigmoid 방법을 Loom에 고정했다. 선택 후보의11기간그룹 OOF 예측을 같은 코드·자료·가중치로 재현하고315,490개 학습 행 각각에 한 번의 예측을 만들었다. `logit(raw)` 한 입력에 `LogisticRegression(C=1, class_weight=None, solver=lbfgs)`을 한 번 적합했다. 기울기0.763743, 절편−2.581772이며 검증 파일을 열기 전에 계수를 저장했다. 실행29.988초, 기존fold AP/Brier/logloss 재현, 저장자료SHA, 기간단조성을 확인했다.
+위 결과를 읽기 전에 단일 전역 sigmoid 방법을 Loom에 고정했다. 선택 후보의 11기간그룹 OOF 예측을 같은 코드·자료·가중치로 재현하고 315,490개 학습 행 각각에 한 번의 예측을 만들었다. `logit(raw)` 한 입력에 `LogisticRegression(C=1, class_weight=None, solver=lbfgs)`을 한 번 적합했다. 기울기 0.763743, 절편 −2.581772이며 검증 파일을 열기 전에 계수를 저장했다. 실행 29.988초, 기존 fold AP/Brier/logloss 재현, 저장 자료 SHA, 기간 단조성을 확인했다.
 
 | 같은217,604개 검증 행의 오차 | 원점수 | OOF sigmoid | 학습기간별 상수 prior |
 | --- | ---: | ---: | ---: |
@@ -227,6 +235,23 @@ journalctl --user -u bonghwajigi-kma-groupcv-v4 -f
 AP 변화는 모든 정의 가능한 셀에서0이다. 행 가중 오차는 줄었지만 **함평3/6시간에서 악화되고 사건·기간 균등 Brier도 나빠졌다.** 함평6시간은16개 양성만 남은 검열 표본이므로 이 손실을 숨기거나 반대로 국내 전체 성능으로 일반화하지 않는다. 보정기 적합 완료와 보정 신뢰성 확보는 다르며 운영에 채택하지 않았다.
 
 [보정 보고서](../../../training/reports/kma-expanded-audit-20261101/oof-calibration/report.json), [검증 전에 저장한 계수](../../../training/reports/kma-expanded-audit-20261101/oof-calibration/calibrator.json). OOF는 보정 학습에 썼고 후보 선택에도 같은 학습 사건을 사용했으므로 독립 보정 평가가 아니다. fold 모델의 점수 변환을 전체 학습 모델에 적용하는 가정도 남는다. 2023년은 이전 탐색에 노출돼 있으며 `probability_calibrated=false`, `operational_use=false`를 유지한다.
+
+### 거리 제약 추가 실험 — 교체하지 않음
+
+마지막으로 현재·30분 전·60분 전·최근 60분 화재 거리가 늘수록 점수가 증가하지 않게 제한한 후보를 비교했다. 기간이 길어질수록 점수가 감소하지 않는 기존 제약도 유지했다. 이는 나머지 입력을 고정한 모델의 가정이며, 실제 산불의 이동 법칙을 입증하는 제약은 아니다. 3개 신규 후보와 이전 선택 후보를 같은 11기간그룹 CV로 비교하고, 선택 기록을 저장한 뒤 선택 후보만 검증했다. 이전 CV 기준 결과는 SHA 확인 후 재사용했으며 신규 학습은 3×11+최종 1회, 총 34회·64.618초였다.
+
+| 후보 | 학습 기간그룹 CV 평균 AP |
+| --- | ---: |
+| 이전 선택 `depth4_positive_sqrt` | 0.394303 |
+| 전체 34개 피처 + 거리 단조 제약 — 이번 실험 선택 | 0.397664 |
+| 환경·시각 피처를 제외한 19개 피처 + 거리 단조 제약 | 0.375914 |
+| 현재·최근 거리와 예측 기간의 3개 피처 | 0.330408 |
+
+학습 CV에서는 소폭 상승했지만 같은 검증 표본의 평균 AP는 **0.405077로 이전 선택 모델의 0.432810보다 낮았다.** 상위 10% 검토 탐지율은 708/1,079=65.62%로 이전 선택 모델보다 높지만, 기존 v3의 66.17%와 최근 거리 기준의 67.10%에 못 미쳤다. 이번 후보로 교체하지 않으며 실패 결과도 보존한다. 재로딩 점수 차이 0, 87,756행의 기간 단조성 및 유효 거리 피처별 단조성 검사를 통과했다. 이 검사는 구현 일관성 검사이며 예측 성능 검증과 구분한다.
+
+[거리 제약 보고서](../../../training/reports/kma-expanded-audit-20261101/kma-v4-distance-prior-20261031-final-v1/report.json), [검증 전 선택 기록](../../../training/reports/kma-expanded-audit-20261101/kma-v4-distance-prior-20261031-final-v1/selection.json). GPU 서버 결과 경로는 `data/artifacts/xgboost/kma-v4-distance-prior-20261031-final-v1/`, 모델 SHA256은 `b4dc8b43fab7c18a828ed0059ba7b7ba2fb8fe5235e9f6dde559166e22f50a2f`다. 2025년 시험 자료는 읽지 않았다.
+
+이번 연구 실행은 모두 종료됐다. 훈련 전용 테스트 146개, 변경 Python의 Ruff, 실행 스크립트 구문 검사, 보고서 해시·모델 재로딩 검사를 통과했다. GPU 학습 뒤 Qwen 생성·임베딩 서비스를 복구했고 두 모델의 ready 상태를 확인했다. 새 모델을 운영에 배포하지 않았다.
 
 ### 별도로 확인한 시간 이력 한계
 
@@ -276,7 +301,7 @@ training/.venv/bin/python -m bonghwa_training.prediction_evidence \
 
 모델 순서는 같은 검토량의 무작위 선택 기대값보다 약 2.7~3.6배의 양성을 찾았지만, 최근 화재 거리 기준보다 확실히 우수하지 않다. 모델 순서로 살펴본 표본의 precision은 1.45%/2.14%/3.01%다. 이 결과를 경보 정확도나 사용자의 위험 확률로 제시하지 않는다. 이미 모델 선택에 사용한 홍성 검증 표본이며 미래 구름으로 검열된 행이 제외돼 있다. 사건별로 모델·현재 거리·최근 거리 기준을 계속 비교한다.
 
-v4 수집→구축→학습 뒤 `bonghwajigi-kma-utility-v4.service`가 자동으로 사건별 순위 진단과 같은 규칙의 재생 자료를 만든다. 재생 시각은 각 검증 창 시작+4시간+가정 지연으로 고정했다. 관측이 없으면 예측 불가로 남긴다. 결과 경로는 `data/artifacts/xgboost/kma-utility-v4/`이며 완료 시 `completion.json`이 생긴다. 학습 성공·Qwen 복구 후 남긴 완료 영수증과 모델/설정 SHA를 확인한 경우에만 실행한다. transient systemd unit이 사라졌다는 사실만으로 성공 처리하지 않는다.
+v4 수집→구축→학습 뒤 `bonghwajigi-kma-utility-v4.service`가 사건별 순위 진단과 6개 검증 창의 재생 자료 생성을 완료했다. 재생 시각은 각 검증 창 시작+4시간+가정 지연으로 고정했다. 홍성 739개·합천 705개·대전 602개·함평 0개·순천 565개·영주 611개 격자에 연구 점수를 생성했다. 함평은 해당 시각 957개 격자 중 933개가 관측 불가여서 점수를 억지로 채우지 않았다. 결과 경로는 `data/artifacts/xgboost/kma-utility-v4/`이며 [완료 영수증](../../../training/reports/kma-expanded-audit-20261101/utility/completion.json)과 [순위 진단](../../../training/reports/kma-expanded-audit-20261101/utility/ranking-audit.json)을 보존했다. 학습 성공·Qwen 복구 후 남긴 완료 영수증과 모델/설정 SHA를 확인한 뒤 실행했으며, transient unit 소멸만으로 성공 처리하지 않는다. 이 재생은 v4 GPU 탐색 선택 모델의 출력이며 후속 기간그룹 모델로 자동 교체하지 않았다.
 
 ```bash
 journalctl --user -u bonghwajigi-kma-utility-v4 -f
@@ -315,6 +340,256 @@ GPU 학습 스크립트는 자료 계약과 SHA를 먼저 검사하고, Qwen이 
 4. 실제 화선·현장 피해·연기 노출처럼 사용자 영향과 연결할 별도 정답. 위성 탐지 모델을 곧바로 개인 피해 모델로 명명하지 않음.
 5. 검토자가 정한 누락/오경보 허용 조건과 사건별 평가, 확률 보정의 독립 평가. 별도 정책 계약의 대응 단계 결정을 모델 연구자가 대신하지 않음.
 
+## 모델 교체를 포함한 개인 위치 영향 예측 검토 — 2026-11-01
+
+사용자의 요청은 현재 모델에 한정하지 않고 개인에게 영향을 미칠 확률을 예측할 방법을 넓게 검토하는 것이다. 아래는 공식 문서·논문을 확인한 **후보 설계와 도입 판단**이며, 후보를 설치하거나 국내에서 새 성능을 측정한 결과는 아니다. 현재 모델의 운영 사용 불가 판단은 유지한다.
+
+### 우선 예측할 사건
+
+첫 연구 목표는 **현재 진행 중인 특정 산불이 앞으로 1·3·6시간 안에 사용자 위치 주변의 정해진 영역에 처음 접근할 확률**로 제안한다. `P(T_approach ≤ h | issue_time까지 이용 가능했던 정보)`를 예측한다. `T_approach`는 발행 시각 이후의 시간이며 아직 대상 영역에 진입하지 않은 위치를 대상으로 한다. 이미 진입한 위치는 미래 접근 확률 대신 현재 접근/노출 관측 상태로 분리한다. 반경·위치 오차·관측 해상도·현재 위치에 머무르는 가정을 함께 명시한다. 반경은 데이터와 사용 목적에 맞춰 사전에 정하며 다른 연구의 5km를 안전 기준으로 가져오지 않는다. 이동 중인 사용자는 시각별 위치/경로를 별도로 평가해야 한다.
+
+| 영향 | 예측 사건 | 별도로 필요한 정답/조건 |
+| --- | --- | --- |
+| 화재 접근 | 특정 산불 화선이 위치 주변 영역에 기간 내 처음 진입 | 시간별 화재 경계·현장 관측과 오차, 산불 식별·연결 |
+| 연기 노출 | 지정 위치의 지상 PM2.5가 명시한 평균 시간·농도 기준을 초과 | 지상 농도, 배출량·상승고도·배경 오염, 기상 예보 |
+| 이동 경로 노출 | 사용자가 해당 도로에 도착할 때 화재/연기가 경로와 겹침 | 시간별 경로·통제·교통·대피소 가용성; 노출과 실제 도로 폐쇄를 구분 |
+| 개인 신체 피해 | 노출 조건에서 특정 피해가 발생 | 개인 노출량·실내외/건물 보호·건강·대응 행동과 실제 결과; 현재 미확보 |
+
+나이·거동·보호자 필요 같은 프로필은 같은 위치에서의 화재 전파 자체를 바꾸지 않는다. 위치·이동 경로는 노출 평가에, 프로필은 대응에 필요한 시간과 검토된 행동 지침 적용에 사용한다. 공식 경보 대상 여부는 사실 확인 경로로 따로 유지한다. 여러 영향 확률을 독립으로 가정해 하나의 피해 확률로 합치지 않는다. 위험을 발생 가능성과 노출·취약성으로 구분하는 근거는 [USFS 위험 설명](https://www.fs.usda.gov/rm/pubs_journals/rmrs/sycu/2024/sycu101_2024_wildfire_risk.pdf)이며, 해당 자료의 연간 위험 정의를 우리 1~6시간 수치에 그대로 적용하지 않는다.
+
+### 방법 비교와 우선순위
+
+| 방법 | 얻을 수 있는 것 | 현 시스템에서의 판단 |
+| --- | --- | --- |
+| 준경험 확산 모델 + 앙상블 | 초기 화선·연료·지형·기상으로 도달시간/확산 경계의 여러 시나리오 생성 | **주요 연구 후보.** ELMFIRE가 Linux 실행·도달시간 출력에 적합. 국내 입력과 확률 보정이 전제 |
+| 위치별 최초 접근 시간 모델 | 이산시간 hazard, AFT 등으로 기간별 누적 접근 확률 추정 | **작은 비교 모델로 우선 구현할 가치.** XGBoost도 목적함수를 바꿔 사용할 수 있음. 정답 재구축 필요 |
+| 작은 U-Net + ConvLSTM/UTAE | 화선 모양·방향과 최근 관측 시퀀스의 공간·시간 변화 학습 | **다음 비교 후보.** 현재 평탄화 피처가 잃은 정보를 보존할 가능성. 국내 개선은 아직 미측정 |
+| 물리 시뮬레이션의 AI 대리모델 | 시뮬레이터를 빠르게 근사해 많은 경로를 계산 | 중기 후보. 합성 데이터 예측력과 실제 한국 사건 예측력을 별도로 검증 |
+| 대형 Transformer/GNN/생성모델 | 넓은 공간 상호작용·미래 경로 분포 학습 | 현재 실질 11개 학습 기간그룹에서 처음부터 학습하는 우선순위는 낮음 |
+| WRF-Fire/WRF-SFIRE | 대기-화재 상호작용을 결합한 계산 | 중장기 연구 후보. 기상 전처리·CPU/MPI 자원과 운영 전문성 필요 |
+| 기관/상용 확산 예측 연계 | 외부 예측 경계를 받아 사용자 위치와 대조 | 접근 권한·한국 지원이 확보되면 빠른 경로. 공개 제품 존재와 우리 이용 가능성을 구분 |
+
+**기술적 권고는 물리 확산 앙상블과 접근 시간 모델을 같은 국내 정답으로 비교하고, 필요하면 국내 자료로 보정·결합하는 것이다.** 모델을 하나 바꾸는 것보다 예측 사건과 입력·검증을 함께 바꾸는 작업이다. 현재 서버의 L4는 작은 시공간 신경망 실험 후보에 사용할 수 있으나, 실제 메모리·실행 시간은 입력 크기로 측정해야 한다. ELMFIRE/WRF 계열은 CPU/MPI 성능이 중요하므로 GPU 사양만으로 실시간 가능하다고 판단하지 않는다.
+
+### 확산 시뮬레이션에서 위치별 확률까지
+
+[ELMFIRE 공식 문서](https://elmfire.io/)는 연료·지형·기상·수분 격자를 받아 도달시간, 강도, 확산속도 등을 내보내며 Linux와 MPI를 지원한다고 설명한다. 화재 주변의 제한된 영역에서 다음 흐름을 시험하는 것이 합리적이다.
+
+```mermaid
+flowchart LR
+  A[현재 화재 관측과 위치 오차] --> C[확산 시나리오 계산]
+  B[발행 당시 기상 예보와 지형·연료] --> C
+  C --> D[위치별 1·3·6시간 접근과 도달시간]
+  D --> E[국내 사건 검증·보정]
+  E --> F[검증된 접근 확률과 자료 품질]
+  F --> G[프로필·공식 지침을 적용하는 정책]
+  H[공식 경보] --> G
+```
+
+초기 화선·바람·연료 수분·비화 등의 불확실성을 변화시키고, 새 관측이 들어오면 상태와 시나리오 가중치를 갱신한다. GK2A 핫스폿을 정밀한 화선으로 간주하지 않는다. **임의로 만든 100개 경로 중 30개가 접근했다는 것은 우선 시나리오 접근 비율이다.** 입력의 확률분포와 모델 오차가 현실을 대표하는지 별도 검증해야 실제 접근 확률로 해석할 수 있다. 인명 피해 확률은 추가 노출·취약성 정답이 필요하다.
+
+ELMFIRE의 연간 연소 확률 기능을 1~6시간 사건 예측에 그대로 쓰지 않고 현재 산불 상태에서 시작하는 조건부 실행으로 설계한다. [FARSITE/FlamMap](https://research.fs.usda.gov/firelab/products/dataandtools/flammap)은 비교 시뮬레이터 후보지만 공식 배포는 Windows 전용이며 지형·연료·수관 자료가 필요하다. [WRF-SFIRE](https://github.com/openwfm/WRF-SFIRE)는 더 복잡한 대기 결합 연구 경로로 둔다.
+
+### 접근 시간 모델과 공개 AI 후보
+
+[XGBoost AFT](https://xgboost.readthedocs.io/en/stable/tutorials/aft_survival_analysis.html)는 우측·좌측·구간 검열을 지원한다. 국내 사건×위치×발행시각별로 마지막 비접근 관측과 최초 접근 관측 사이의 시간 구간을 정답으로 만들 수 있다. 출력 시점 추정치 하나가 바로 확률은 아니므로 분포 가정·생존함수 또는 별도 이산시간 hazard와 보정을 검증한다. 구름으로 안 보이는 것을 비접근으로 취급하지 않으며, 구름/화세에 연관된 관측 누락을 독립 검열로 가정해도 되는지 확인해야 한다. 같은 관측 시퀀스의 격자·발행시각을 무작위로 학습/검증에 나누지 않는다.
+
+[WiDS 2026 공식 과제](https://www.kaggle.com/competitions/WiDSWorldWide_GlobalDathon26/data)는 화재의 대피구역 주변 접근 시간을 생존분석으로 다룬 실제 선례다. 다만 시간 범위와 지역이 다르고, [규칙](https://www.kaggle.com/competitions/WiDSWorldWide_GlobalDathon26/rules)은 데이터 사용을 대회용으로 제한한다. 방법 참고 대상으로만 분류하며 우리 서비스 학습 자료로 가져오지 않는다.
+
+| 자료/모델 | 확인한 내용 | 적용 경계 |
+| --- | --- | --- |
+| [WildfireSpreadTS](https://zenodo.org/records/8006177) | 미국 607개 산불의 375m 일별 시퀀스; 데이터 CC BY 4.0 | 공간 표현 사전학습 후보. 1~6시간 도달 정답을 제공하지 않음 |
+| [WSTS+](https://zenodo.org/records/17584629), [공개 모델](https://huggingface.co/saadlahrichi/WSTSPlus) | 확장 데이터 및 U-Net/UTAE 가중치 공개 | 일별 관측용; 확장 자료·가중치의 별도 이용조건은 추가 확인 필요 |
+| [GOFER](https://essd.copernicus.org/articles/16/1395/2024/), [자료](https://zenodo.org/records/14642378) | 캘리포니아 대형 산불의 시간별 재구성 경계·화선 | 시간 목표가 더 가까운 국외 비교 후보. 위성 기반 재구성 오차와 자료 이용조건 확인 필요 |
+| [Google Research ConvLSTM](https://github.com/google-research/google-research/blob/master/wildfire_conv_lstm/README.md) | FARSITE 합성 시뮬레이션, 자료·가중치 경로 공개; 15분·30m 연구 | 비화와 시간변화 기상 표현의 한계. 합성 자료 성능을 실제 위험 성능으로 해석하지 않음 |
+| [확산 생성모델, GMD 2026](https://gmd.copernicus.org/articles/19/1027/2026/) | 확률적 cellular automata 합성 자료로 학습한 diffusion 시나리오 | 합성 분포 근사 연구; 한국 검증·즉시 사용 모델의 증거가 아님 |
+| [Conditional Flow Matching, 2026 사전논문](https://arxiv.org/abs/2603.26975) | WRF-SFIRE 기반 3시간 도달시간 분포의 대리모델 | 목표는 가깝지만 시뮬레이션 평가이며 국내 운영 준비가 입증된 것은 아님 |
+
+GOFER의 사후 화선, 최종 소실면적, 최종 사건 크기를 예측 당시 입력으로 쓰지 않는다. WSTS+의 [저자 비교](https://arxiv.org/abs/2502.12003)도 Transformer가 CNN보다 자동으로 우월하다는 근거가 아니므로 작은 시공간 모델부터 비교한다. D-Fire 같은 사진의 불/연기 탐지 자료와 NDWS의 다음 날 관측 정답은 최초 위치 접근 시간의 대체 정답이 아니다.
+
+### 국내 입력과 외부 예측 연결의 현실성
+
+1. **미래 기상:** [기상청 수치모델 API](https://apihub.kma.go.kr/apiList.do?seqApi=9)에 KIML/KIMR 격자·지점 예보와 발행 기준시각, 예측 선행시간이 있다. 현재 문서는 UM 국지/지역 경로를 2026-03-31까지로 표시한다. 과거 사건의 UM 예보와 현행 KIM 예보의 차이도 검증해야 한다. 보유한 typ05 FF 권한이 수치모델에도 유효한지는 미확인이다. 미래 실황을 당시 예보 대신 학습에 넣지 않는다.
+2. **연료:** [국내 임상도 메타데이터](https://www.data.go.kr/catalog/15093362/fileData.json)의 수종·영급·경급·수관 정보는 후보 입력이다. 임상도나 산림 비율은 연료량·낙엽층·연료 수분을 포함한 확산용 연료 등급과 같지 않다. 국내 변환·검증 및 가공/배포 이용조건 확인이 필요하다.
+3. **정답:** 국내 시간별 상황도·드론 열영상·현장 기록이 가장 중요한 보강 대상이다. 최종 피해 면적이나 며칠 뒤 촬영 영상만으로 시간별 도달을 확정할 수 없다. 현재 확보한 GK2A 자료는 관측 기반 연구에 재사용하되 정밀 화선과 구분한다.
+4. **기관 예측:** [산림청 2026 공식 설명](https://m.korea.kr/news/policyNewsView.do?newsId=156744521)은 산불 확산·대피 지원 체계를 다룬다. 협력으로 시간대별 확산 결과와 실제 경계를 받을 수 있다면 우선 검토할 경로다. 이번 조사에서 공개 무인 확산 API/시간별 경계 아카이브의 이용 명세는 확인하지 못했다. 발생 위험지수는 활동 중인 화재의 위치별 접근 확률이 아니다.
+5. **상용 API:** [OroraTech Fire Spread](https://app.ororatech.com/docs/guides/fire-spread/)는 화재 경계·기상 입력에 대한 시간별 예측 경계를 GeoJSON으로 제공하며, [Technosylva FireCast](https://helpcenter.technosylva.com/wfa-firecast/active-fires)도 후보이다. 한국 연료·기상 지원, 접근 권한, 비용, 확률 검증 여부는 별도 확인 사항이다. 제품의 예측 경계가 존재한다는 사실만으로 사용자 피해 확률이 제공된다고 표현하지 않는다.
+
+### 연기·경로 위험의 별도 확장
+
+[NOAA HYSPLIT](https://www.arl.noaa.gov/hysplit/)은 연기 이동·확산 및 앙상블 농도 계산 후보이며, [공식 출력 문서](https://ready.arl.noaa.gov/hysplitusersguide/S334.htm)는 농도 초과 가능성 출력을 설명한다. 한국의 3차원 기상, 시간별 배출량과 상승고도, 배경 오염을 구성하고 [에어코리아](https://www.data.go.kr/data/15073861/openapi.do)의 지상 관측으로 검증하는 경로가 가능하다. 앙상블 농도 초과 비율도 국내 관측 검증·보정 전에는 시나리오 비율이며 개인 건강 피해 확률이 아니다. 총 PM2.5를 모두 산불 기원이라고 가정하지 않는다. [HRRR/RRFS 연기 예보](https://gsl.noaa.gov/rrfs/smoke/)를 한국용 완성 예보처럼 사용할 수는 없다.
+
+화재와 연기를 따로 예측하면 이동 경로의 시각별 노출도 계산할 수 있다. 그러나 도로 통제·정체·사면·대피소 가용성 없이 안전한 경로나 대피 성공 확률을 보장할 수 없다. 신체 피해 정답이 없는 현재는 개인 피해 확률 대신 정의된 환경 노출 사건과 자료 품질을 출력하는 설계가 타당하다.
+
+### 이용조건 확인 결과 — 이번 검토 후보이며 아직 미도입
+
+| 후보 | 확인 사항 |
+| --- | --- |
+| ELMFIRE | 공식 문서에 AGPLv3 + Commons Clause, 상업사용 별도 계약 명시. 단순 Apache/MIT 오픈소스로 기록하지 않음 |
+| FARSITE/FlamMap | 공식 배포 이용조건과 번들별 권리 확인 필요. 공개 다운로드만으로 허용형 라이선스를 추정하지 않음 |
+| WRF-SFIRE | 개발자 저장소의 WRF public-domain 고지와 구성 요소별 조건 확인 대상 |
+| [Spark Research](https://sparkresearch.sparkweb.io/) | 평가용 이용조건; 운영·상업·위험평가 사용 경로는 Research와 별도이므로 현재 서비스 도입 후보에서 제외 |
+| XGBoost AFT | 기존 XGBoost의 Apache-2.0 코드 범위. 국내 정답 자료의 이용 권리는 별도 |
+| WildfireSpreadTS | 자료 CC BY 4.0, 제작자 코드 MIT. 가공·출처 표기 유지 |
+| WSTS+/GOFER/Google ConvLSTM | 코드 공개와 데이터·가중치의 개별 권리를 구분. 미확인 항목을 확인 완료로 적지 않음 |
+| WiDS 2026 자료 | 대회용 사용 제한. 우리 서비스 학습용으로 미채택 |
+| HYSPLIT | NOAA 배포·등록 조건 확인 필요. 공식 안내상 미등록 버전의 예보 기상을 이용한 농도 계산에 제한이 있음 |
+| 상용 확산 API | 제공자 계약·한국 적용 범위·출력 재사용 권한 확인 전 미도입 |
+
+### 다음 실행 순서와 채택 기준
+
+1. 산불 식별·대상 위치 영역·1/3/6시간 최초 접근 사건·구름/누락/검열 규칙을 고정한다. 사용할 수 있는 국내 시간별 정답을 먼저 확인한다.
+2. 실제 발행 당시의 기상 예보와 초기 화재 상태·국내 연료를 결합한다. 자료가 모자라면 계산 불가/시나리오 상태로 남긴다.
+3. 같은 사건 분할에서 최근 거리/바람 방향 기준, 접근 시간 모델, 소규모 물리 앙상블을 비교한다. 기존 v4 자료와 결과는 덮어쓰지 않는다.
+4. 정답과 입력이 확보된 뒤 작은 시공간 CNN 및 물리 모델의 보정/결합을 비교한다. 큰 모델 학습부터 시작하지 않는다.
+5. 채택은 독립 국내 사건에서 기간별 Brier/logloss·보정도, 오경보 부담을 맞춘 탐지율, 경고 선행시간·도달시간 오차, 자료 부족 시 보류율로 판단한다. 동일 사건의 반복 격자를 독립 표본으로 세지 않고 사건 단위 불확실성을 보고한다. 수치 허용 기준은 목표 사용과 누락/오경보 비용을 정한 뒤 사전에 고정한다.
+6. 기존 2025 위성 관측 시험 구획은 그대로 잠근다. 새 화선 접근 목표에는 별도의 실제 접근 정답과 독립 사건 시험 구획을 마련하며, 모델·보정·판정 기준을 고정하기 전에는 시험 평가에 사용하지 않는다. 기존 위성 시험 통과를 실제 접근 검증 통과로 간주하지 않는다. 검증을 통과한 노출 예측만 공식 경보·사용자 상태·검토된 매뉴얼을 조합하는 정책의 보조 입력 후보로 삼는다. Qwen은 근거를 정리하며 확률을 만들어 내거나 품질 부족을 감추지 않는다.
+
+판단: **특정 위치에 대한 화재 접근·연기 노출 예측은 개발 가능한 방향이다. 현재 바로 쓸 수 있는 국내 개인 피해 확률 모델을 확인한 것은 아니다.** 우선순위는 접근 시간 정답과 미래 기상을 확보한 뒤, 물리 앙상블 및 작은 시간 모델을 같은 기준으로 비교하는 것이다.
+
+## 접근 시간 모델·확산 시뮬레이터 첫 실행 — 2026-11-01
+
+사용자의 즉시 실행 승인에 따라 세 경로를 실제 준비·실행했다. **새 모델과 확산 도구가 실행 가능해졌으나 국내 개인 위험 확률의 운영 성능을 입증한 것은 아니다.** 모든 산출물은 연구용이며 기존 국내 모델·2025 시험 자료·사용자 정책 경로를 변경하지 않았다.
+
+### GOFER 접근 시간 학습
+
+[GOFER v0.2 공식 자료](https://zenodo.org/records/14642378)의 CC BY 4.0 조건을 확인하고 원본 75,711,678 bytes를 확보했다. 원본 SHA256은 `96eca2e18529eb274ca94af9a730bcf1c9c6da597fb04a9b5cf9167aada451c2`다. 로컬·GPU 프로젝트의 `data/raw/gofer/zenodo-14642378/`에 원본·metadata·취득 영수증·제작 코드 감사를 보관한다.
+
+목표는 **현재 미접근 위치의 반경 2km 안으로 재구성 화재 경계가 처음 접근하는 시간**이다. 2km는 연구 정의이며 안전 거리가 아니다. 매 시점의 현재 경계로부터 20km 이내 후보 격자를 만들고, 사건 첫 72시간 동안 6시간마다 다음 6시간을 관측한다. 현재 이미 접근한 위치는 분리하며, 관측 구간과 우측 검열을 보존한다. 미래 최종 경계로 후보 위치를 선정하지 않는다.
+
+| 분할 | 사건 수 | 행 수 | 관측된 접근 구간 |
+| --- | ---: | ---: | ---: |
+| 2019·2020 학습 | 17 | 106,739 | 1,816 |
+| 2021 검증 | 11 | 46,586 | 294 |
+
+가공본은 `data/processed/gofer-approach-v1/`다. [자료 설정](../../../training/reports/approach-pilot-20261101/gofer/dataset-config.json), [구축 보고서](../../../training/reports/approach-pilot-20261101/gofer/dataset-report.json)를 보존했다. GOFER 발행 연도는 2025이지만 이 실험의 관측 사건은 2019~2021이며 잠긴 국내 2025 자료와 무관하다.
+
+학습 전에 100라운드·깊이 3·lognormal AFT scale 1·seed 47을 고정했다. 거리 하나만 사용하는 모델과 거리·과거 거리·실제 시간차 기반 접근 속도·시간차·사건 경과시간·현재 면적·면적 증가율 7개를 사용하는 모델 두 개를 CPU로 학습했다. 학습 영수증 저장 후 trainer가 검증 parquet를 읽었다. builder 단계의 라벨 집계는 이미 알려져 있었으므로 완전 미노출 최종 시험이라고 표현하지 않는다. 검증으로 후보를 튜닝하지 않았다.
+
+| 검증 기준 | 거리 AFT | 이력 AFT | 단순 현재 거리 순위 |
+| --- | ---: | ---: | ---: |
+| 1시간 pooled AP | 0.0721 | 0.2224 | 0.0891 |
+| 3시간 pooled AP | 0.1039 | 0.2704 | 0.1218 |
+| 6시간 pooled AP | 0.1381 | 0.2910 | 0.1537 |
+| 적격 사건×기간 평균 AP | 0.1598 | 0.2595 | **0.2622** |
+| 사건×기간 평균 Brier | 0.003599 | 0.003106 | 순위 점수라 계산하지 않음 |
+
+상수 학습 빈도 기준의 평균 Brier는 0.003669, 등속 접근 기준은 0.005478이다. 등속 기준은 화선 자체가 아닌 연구 반경까지의 남은 거리 `(distance − 2km) / speed`를 사용한다. 실제 두 모델 학습·검증은 6.124초였고 모델 저장/재로딩 차이는 0이다. [고정 계획](../../../training/reports/approach-pilot-20261101/gofer/plan.json), [학습 영수증](../../../training/reports/approach-pilot-20261101/gofer/fit-receipt.json), [전체 성능](../../../training/reports/approach-pilot-20261101/gofer/report.json)에 사건별·기간별 결과를 남겼다.
+
+해석: 이력 정보는 거리 AFT보다 유용했지만, 사건을 균등하게 평가한 평균 AP에서는 단순 거리보다 낮았다. AP는 정확도 백분율이 아니다. 6시간 검증 양성률은 약 0.63%이므로 작은 Brier만으로 확률 품질을 판단하지 않는다. 기존 GK2A 모델과 데이터·정답이 달라 이 수치를 직접 성능 향상으로 비교하지 않는다.
+
+원 제작 코드 감사에서 **최종 FRAP 경계에 의한 과거 다각형 필터링, 2020 최종 MTBS 경계로 정한 파라미터, 마지막 성장 이후 시계열 절단**을 확인했다. 과거 타임스탬프만 사용해도 실제 당시 입력이라고 입증되지 않는다. `retrospective_proxy_only=true`, `source_asof_verified=false`, `probability_calibrated=false`를 유지한다. lognormal AFT는 영원히 미접근하는 경우를 별도로 표현하지 않으므로 연구한 1~6시간 밖으로 외삽하지 않는다.
+
+### ELMFIRE 설치와 9개 합성 시나리오
+
+GPU 서버의 `data/artifacts/research-tools/elmfire/`에 ELMFIRE 1.1, 소스 commit `f4927b7ce68cb74eb0eb117085cc920782c8644e`를 격리 설치했다. 공식 12km×12km·30m 격자·5.5시간 일정풍 예제를 실제 빌드/실행했다. 160,000셀 중 44,169셀에 도달시간이 생성됐고 최대 19,774.28초로 시뮬레이션 범위 안이었다. 이는 설치와 출력 정합성 검사이며 국내 물리 검증은 아니다. [설치 보고서](../../../training/reports/approach-pilot-20261101/elmfire/synthetic-report.json), [환경 잠금 목록](../../../training/reports/approach-pilot-20261101/elmfire/environment.explicit.txt)을 보관한다.
+
+그다음 공식 합성 입력의 사본으로 풍속 10/15/20 mph × 풍향 340/0/20도, 6시간의 9개 시나리오를 사전에 고정해 실행했다. 모두 성공했고 총 22.944초가 걸렸다. 입력·실행파일 SHA를 전후 검증했고 CPU 1개만 사용했다.
+
+| 합성 대상 위치 | 1시간 내 도달 조합 | 3시간 내 도달 조합 | 6시간 내 도달 조합 |
+| --- | ---: | ---: | ---: |
+| 점화점 남쪽 1.5km | 4/9 | 9/9 | 9/9 |
+| 남서쪽 사선 위치 | 0/9 | 5/9 | 9/9 |
+| 남동쪽 사선 위치 | 0/9 | 3/9 | 9/9 |
+| 북쪽 1.5km | 0/9 | 0/9 | 0/9 |
+
+이는 **정해 놓은 합성 조건에서 도달한 조합 수**이며 실제 불확실성 분포에서 표본을 뽑은 확률이 아니다. 산출물은 `scenario_fraction`과 `probability=null`을 구분한다. 실제 사용자 위치·국내 지형·국내 연료는 넣지 않았다. [시나리오 계획](../../../training/reports/approach-pilot-20261101/elmfire/plan.json), [계산 결과](../../../training/reports/approach-pilot-20261101/elmfire/report.json)를 보존한다. ELMFIRE는 AGPLv3 + Commons Clause, 상업 사용 별도 조건이므로 현재 격리된 비공개 연구 평가 범위로만 사용한다.
+
+원 입력의 점화 좌표가 셀 경계에 있어 엔진의 CEILING 계산은 중심 `(-15,2985)`를, Rasterio의 같은 좌표 표본은 `(15,2985)`를 선택한다. 기존 출력만 별도 읽어 실제 점화 셀의 도달시간이 9개 모두 0초임을 [진단](../../../training/reports/approach-pilot-20261101/elmfire/ignition-cell-audit.json)했다. `ignition_neighborhood`의 90~211초는 동쪽 인접 셀의 시간이다. 남서/남동 지점도 점화 셀에 정확히 대칭이 아니므로 5/9 대 3/9를 물리적 비대칭의 증거로 해석하지 않는다.
+
+### 미래 기상 입력 연결
+
+기존 서버 키로 `nwp_nc_pnt_down.php`, `group=KIML`, `vars=U10`을 소량 요청했으나 HTTP 403으로 거부되어 즉시 중단했다. 권한 부족이 유력한 가설이지만 응답 코드만으로 정확한 원인을 단정하지 않는다. [요청 결과](../../../training/reports/approach-pilot-20261101/weather/kma-probe-report.json)에 키·인증 URL·오류 본문을 저장하지 않았다.
+
+지금 필요한 신청 항목은 [수치모델 공식 화면](https://apihub.kma.go.kr/apiList.do?seqApi=9)의 **1.5.2 「(임의 위경도 지점자료) 국지 단일면 · 서울 부근CSV 다운로드」 → API 활용신청**이다. 서울은 샘플 좌표이며 실제 lon/lat를 지정한다. U10·V10·T2·RH2는 같은 API의 요청 변수다. 로그인 후 신청 권한의 묶음 단위는 공개 화면만으로 확인하지 못했다. 승인 후 기존 키로 재확인하며 과거 UM 조회는 이후 별도로 확인한다.
+
+후속으로 사용자가 해당 API 주소를 전달한 뒤 **2026-11-01 01:34:47 KST에 같은 서버 키로 HTTP 200**을 확인했다. 제공된 샘플 그대로 `KIML/T2`, `tmfc=2026091912`, `hf=0`, `lon=127.5`, `lat=37.5`를 요청해 108bytes CSV 1행을 받았다. [성공 보고서](../../../training/reports/kiml-forecast-access-20261101/sample-report.json)와 [인증정보 없는 원 응답](../../../training/reports/kiml-forecast-access-20261101/sample-response.csv)을 보존했다. 실제 열은 `req_lon,req_lat,lvl,ix,iy,lon,lat,value`이며 값은 `293.03`, 층 marker는 `-1`이다. 이 응답은 과거 분석시각의 샘플이며 최신 미래 예보를 확보한 증거와 구분한다. CSV 자체에 변수명·단위·모델 발행시각이 없으므로 요청 metadata와 공식 변수 정의에 따른 해석임을 명시한다. 기존403 기록은 덮어쓰지 않았다.
+
+그다음 **01:41 KST에 최근 KIML의 6개 미래 시각 × 4개 변수, 총24개를 실제 수신·검증했다.** 요청 cycle은 2026-10-31 12 UTC, 대상은 129.3E·37N, 요청 유효시각은 2026-11-01 **02~07시 KST**다. 수집 기준시각 이후 약 **0.31~5.31시간**에 해당하며 정확히 수집 후1~6시간이라고 부르지 않는다. 24개 모두 HTTP200·동일 격자(ix873/iy664, 129.293854E/36.991207N)·유효한8열CSV를 확인했고, 실제 수신 시점에도 모두 미래였다. [수집 계획](../../../training/reports/kiml-forecast-access-20261101/current-forecast/plan.json), [24개 원본과 검증 결과](../../../training/reports/kiml-forecast-access-20261101/current-forecast/report.json)를 보존했다.
+
+| 요청 변수 | 공식 정의에 따른 해석 | 이번6시각 값 범위 |
+| --- | --- | --- |
+| T2 | 2m 기온 K, 섭씨는273.15 차감 | 7.16~9.59°C |
+| RH2 | 2m 상대습도 % | 17.34~22.54% |
+| U10·V10 | 10m 바람 성분 m/s | 벡터 크기0.40~1.63m/s |
+
+높이·단위는 [공식 변수 문서](https://apihub.kma.go.kr/getAttachFile.do?fileName=%ED%95%9C%EA%B5%AD%ED%98%95%20%EC%88%98%EC%B9%98%EB%AA%A8%EB%8D%B8%28KIM%29%20%EB%B3%80%EC%88%98%EC%A0%95%EB%B3%B4.pdf)에 따른 요청 변수의 해석이며, CSV 자체가 시각·변수명·단위·실제 고도를 확인해 주는 구조는 아니다. `source_reference_time_utc=null`, `source_reference_confirmed=false`와 요청 시각을 분리했다. 풍향은 U/V 좌표축 회전 처리를 확인하지 못해 `wind_direction_from_degrees=null`, `basis_unverified`로 유지한다. 원 성분과 회전에 불변인 벡터 크기는 보존한다. 이 값을 실제 관측·과거 당시 가용성·개인 위험 확률로 취급하지 않는다.
+
+첫 최신자료 요청은129.3이 응답에서129.300003으로 표시돼 좌표 검사에서 중단됐다. [최초 응답](../../../training/reports/kiml-forecast-access-20261101/coordinate-precision-first-attempt/report.json)을 보존하고, 요청 원값 또는 정확한IEEE-754 float32 표현 각각에0.00000051도 이내인 경우만 허용하도록 수정했다. 두 값 사이의 임의 좌표나 큰 오차는 계속 거부한다. 실제 응답 회귀검사를 포함해 신규42개·전체273개 테스트, Ruff/format 검사를 통과했다.
+
+수집기는 `training/src/bonghwa_training/kiml_point_forecast.py`이며 서버 원본은 `data/raw/korea-wildfire/kiml-point-forecast-20261031T164111Z/`다. 매 실행 전에24개 계획을 저장하고1초 간격으로 요청한다. 403·429·파싱/좌표/결측 오류가 발생하면 즉시 중단하며 성공하지 않은 값을0으로 만들지 않는다. 이 경로는 연구 입력 수집기이며 기존 과거 모델을 재학습하거나 서비스 정책에 자동 연결하지 않았다.
+
+동시에 [Open-Meteo GFS](https://open-meteo.com/en/docs/gfs-api)를 실제 한 번 호출해 국내 샘플 위치 129.3E·37N의 미래 정시 6개에 대한 온도·습도·풍속·풍향·강수를 확보했다. 수신은 2026-10-31 16:23:13 UTC, 예보 유효시각은 17~22 UTC이며 실제 리드는 0.61~5.61시간이다. 응답에 모델 발행시각이 없어 `forecast_reference_time_utc=null`로 남겼다. 정확히 수신 후 1~6시간이거나 과거 당시 가용 예보라고 표현하지 않는다. [기상 수신 보고서](../../../training/reports/approach-pilot-20261101/weather/gfs-probe-report.json)를 보존했다. 이 현재 예보는 위 GOFER 과거 학습이나 합성 시뮬레이션에 넣지 않았다. 무료 API의 비상업 조건과 데이터 CC BY 4.0을 구분한다.
+
+### 재현과 다음 단계
+
+GPU 프로젝트 `/home1/ncloud/bonghwajigi`에서 실행한다. 각 실행은 기존 출력 덮어쓰기를 거부하므로 새로운 출력 폴더명을 사용한다.
+
+```bash
+training/.venv/bin/python -m bonghwa_training.approach_train \
+  --dataset data/processed/gofer-approach-v1 \
+  --output data/artifacts/xgboost/gofer-approach-new-run
+
+data/artifacts/research-tools/elmfire/env/bin/python training/tools/elmfire_ensemble.py \
+  --probe-report data/artifacts/elmfire/synthetic-20261101-first/report.json \
+  --output data/artifacts/elmfire/ensemble-new-run
+
+training/.venv/bin/python -m bonghwa_training.public_forecast_probe \
+  --output data/raw/korea-wildfire/public-gfs-new-probe
+```
+
+실제 첫 AFT 모델·검증 예측은 `data/artifacts/xgboost/gofer-approach-v1-20261101-first/`, 확산 raster는 `data/artifacts/elmfire/ensemble-20261101-first/`에 있다. 전체 학습 도구 테스트 **231개 통과**, 변경 Python Ruff·shell 구문 검사 통과. GOFER 변환은 pyshp 2.4.2를 사용하며 `training/uv.lock`에 고정했다.
+
+KIML 지점 예보 접근과 현재24개 값의 수집 검증은 완료했다. 다음 실질 과제는 바람 성분의 좌표축 기준 확인, 국내 실제 초기 화선과 연료·지형 격자의 확보·변환, 과거 예보의 발행시각 검증, 국내 접근 정답이 있는 사건에서 동일 조건 비교다. 현 AFT 검증 점수를 보고 후보를 반복 튜닝하거나 합성 시나리오 비율을 개인 대응 정책의 확률로 전달하지 않는다.
+
+## 국내 지형·미래 예보 확산 시나리오 실행 — 2026-11-01
+
+**국내 10×10km 지형에 미래 기상과 가정 발화를 넣어 6시간 도달시간을 계산하는 연구 경로를 실제 실행했다.** 기존 XGBoost의 정확도가 개선됐거나 개인 위험 확률이 검증된 결과는 아니다. 세 연료 조건 모두 전체21,600초를 계산했으며 실행·입출력 정합성만 확인했다. 이번 조건을 실제 산불 재현으로 표시하지 않는다.
+
+### 국내 지형과 입력의 의미
+
+129.3E·37N 중심의 UTM52(EPSG:32652),100×100셀,100m 격자를 만들었다. 기존 Copernicus GLO-90 DSM 두 타일을 경계가 끊기지 않게 합친 뒤 재투영해 고도·경사·격자북 기준 사면향을 계산했다. 고도는16.94~797.25m, 경사는0.193~36.876도다. 원 파일명의 `COG_30`과 달리 실제 자료는 약90m DSM이며 맨땅 DTM이 아니다. ESA CCI2015의300m 토지피복을 최근접으로 옮겼고100m 재격자화로 새로운 상세정보가 생기지 않는다. 유효 고도100%, 토지피복 미상0셀, 명시적 산림8,083셀이다. [가공 보고서](../../../training/reports/korea-scenario-20261101/terrain/report.json), [원본·가공 해시](../../../training/reports/korea-scenario-20261101/terrain/manifest.json)를 보존했다.
+
+가정 점화는 중심500m 이내에서 가장 가까운 산림 셀의 중심으로 사전에 정했다. 실제 선택은 row49/col49,129.299439826E/37.000452134N이다. 실제 관측 발화나 사용자 위치가 아니다. 각 실험에서 모든 산림에 연료181(TL1),183(TL3),185(TL5) 중 하나를 가정했다. 한국 연료 분류에 보정한 코드가 아니며 세 코드를 낮음·중간·높음 위험등급으로 해석하지 않는다. 죽은 연료 수분6/7/8%, 살아 있는 초본/목질 수분60/90%, 수관0, 지표화만, 비화·진압 없음은 고정 가정이다. 비산림·수역은 연구 범위에서 제외하며 안전한 위치라고 판단하지 않는다.
+
+### 기상청 접근 상태와 독립 공개 예보 입력
+
+KIML 기존24값에 hf11/12×4변수8값을 추가해 총32값을 보존했다. [추가 수집 계획·결과](../../../training/reports/korea-scenario-20261101/weather/kiml-scenario-extension-20261101-v1/report.json)는 성공했다. 그러나 바람 좌표축을 확인할 `nwp_nc_vars_down.php`의 작은 NC 요청은403이었다. 사용자의1.1.3 신청 완료 답변 후 다시 확인하고 같은 endpoint의T2/TEXT도 진단했으나, 응답은 계속 활용신청이 필요하다고 명시했다. 사용자는 같은 계정의 활용현황에 아직 등록되지 않았다고 확인했다. [첫 확인](../../../training/reports/korea-scenario-20261101/weather/kma-wind-metadata-20261101-v1/report.json), [신청 후 확인](../../../training/reports/korea-scenario-20261101/weather/kma-wind-metadata-20261101-v2/report.json), [NC/TEXT 제한 진단](../../../training/reports/korea-scenario-20261101/weather/kma-113-diagnostic/report.json)을 남기고 추가 호출을 중단했다. UM 과거 지점 요청도 두 번403이며 자료를 확보하지 못했다.
+
+이번 확산에는 별도로 받은 **Open-Meteo GFS 7개 정시 예보만** 사용했다. 02:03:28 KST 수신, 대상03~09시 KST(t0~t6), 실제 수신 대비0.942~6.942시간이다. 첫 시각을 가정 발화 시각으로 잡아6시간 구간을 계산했다. 풍속2.42~3.42m/s, FROM 풍향257~277도이며 반환 지점은129.25781E/36.960625N이다. [원본·수신 기록](../../../training/reports/korea-scenario-20261101/weather/public-gfs-scenario-20261101-v1/receipt.json), [정규화 입력](../../../training/reports/korea-scenario-20261101/weather/public-gfs-scenario-20261101-v1/weather.json)을 보존했다. 기상청 성분을 섞거나 GFS로 기상청 축을 확인했다고 표현하지 않는다.
+
+발행 cycle은 응답에 없어 `forecast_issue_time_utc=null`이다. 수신 시각을 발행 시각으로 바꾸지 않는다. 공식 Open-Meteo 코드·변수·풍향 기준 예제로 진북 기준 시계방향 FROM 의미를 확인한 [근거](../../../training/reports/korea-scenario-20261101/weather/open-meteo-axis/axis-evidence.json)를 보존했으며, 이는 공개 소스에 근거한 해석으로 실제 배포 버전이나 원 NOAA GRIB 대조를 증명하지 않는다. 10m 풍속m/s를km/h로 바꾸고, ELMFIRE의10m 입력 옵션과 진북→UTM 격자북 회전을 적용했다. 점 기상을 영역 전체에 동일하게 적용하므로 국지 지형풍을 해결한 것은 아니다. 기온·습도·강수는 보조 기록으로 보존하고 상대습도를 연료 수분으로 사용하지 않았다. 기상 출처는 [Weather data by Open-Meteo.com](https://open-meteo.com/), NOAA GFS이며 가공 사실·CC BY4.0·무료 API 비상업 조건은 [자원 문서](external-resources-and-licenses.md)에 기록했다.
+
+### 실제 계산 결과와 수정한 오류
+
+첫 실행에서 TIFF의 결측값 metadata가 비어 있어 엔진이 미도달을0으로 출력했다. 초기 점화0초와 충돌해 검증이 실패했다. [실패 기록](../../../training/reports/korea-scenario-20261101/elmfire/first-failed/report.json)은 보존하고 입력 TIFF에 `nodata=-9999`를 명시했다. 기존 실패 raster의0을 임의로 재해석하지 않았다. 추가로 엔진이 조기에 멈춘 경우 최종 파일명의6시간을 믿지 않고 실제 로그·CSV 종료 시각을 검사해 이후 구간을 `null/censored`로 처리하도록 보강했다. 이번 재실행은 세 경우 모두 조기 종료 없이6시간 전체를 완료했다. 연료·수분·바람·점화 조건은 수정하지 않았다.
+
+| 고정 연료 가정 | 초기 점화 셀 | 1시간 추가 도달 | 3시간 추가 도달 | 6시간 추가 도달 |
+| --- | ---: | ---: | ---: | ---: |
+| 181 / TL1 | 1 | 0셀 | 0셀 | 0셀 |
+| 183 / TL3 | 1 | 0셀 | 0셀 | 0셀 |
+| 185 / TL5 | 1 | 0셀 | 1셀 | 3셀 |
+
+셀 하나는1ha다. 이는 그리드 중심 도달의 면적 환산이며 실제 정밀 화재 피해 면적이 아니다.185의 인접 셀 도달시간은8,425/19,225/20,425초였다.181/183에서 다른 셀 중심에 도달하지 않았다고 해서 셀 내부의 확산까지0이라고 결론내리지 않는다. 동쪽1km 표본은 비산림이라 평가에서 제외했고, 북·남·서1km 표본은 이 세 가정 모두6시간 내 도달하지 않았다. 이를 실제1km 안전거리나 영향확률0%로 전달하지 않는다.
+
+총 실행2.873초, CPU1개로 세 조건을 순차 실행했다. [고정 계획](../../../training/reports/korea-scenario-20261101/elmfire/validated/plan.json), [결과](../../../training/reports/korea-scenario-20261101/elmfire/validated/report.json), [표본 위치 GeoJSON](../../../training/reports/korea-scenario-20261101/elmfire/validated/probes.geojson), 각 조건의 도달시간GeoTIFF·실행 로그·종료 통계를 보관했다. `probability=null`, `simulation_only=true`, `operational_use=false`를 유지한다. 3개 연료 조건의 `scenario_fraction`은 통계적으로 보정된 접근확률이 아니다.
+
+GPU 서버 원본 출력은 `/home1/ncloud/bonghwajigi/data/artifacts/elmfire/korea-100m-20261101-nodata-fix/`, 지형은 `data/processed/korea-terrain-100m-v1/`, 예보는 `data/raw/korea-wildfire/public-gfs-scenario-20261101-v1/`다. 보존된 동일 조건 재실행은 프로젝트 디렉터리에서 다음과 같이 한다. 새 출력 이름을 쓰며 기존 폴더를 덮어쓰지 않는다.
+
+```bash
+data/artifacts/research-tools/elmfire/env/bin/python training/tools/elmfire_korea_scenario.py \
+  --probe-report data/artifacts/elmfire/synthetic-20261101-first/report.json \
+  --terrain-manifest data/processed/korea-terrain-100m-v1/manifest.json \
+  --weather data/raw/korea-wildfire/public-gfs-scenario-20261101-v1/weather.json \
+  --output data/artifacts/elmfire/korea-100m-replay-new
+```
+
+이 명령은 보존한 예보의 재생이다. 수집기는 이번 미래시각을 고정한 연구 도구이므로 지난 시각을 새 실시간 예보처럼 다시 수집하지 않는다. 새로운 현재예보 실험은 별도 시각·계획을 고정해 진행해야 한다.
+
+현재 판단은 **국내 지형→미래 기상→조건별 도달시간의 실행 경로 확보**다. 실제 화선·국내 연료/수분·독립 사건 정답과 대조하지 않았으므로 예측 정확도 상승이나 개인 대응 정책의 입력 자격은 입증되지 않았다. 다음 평가는 과거 실제 초기 화선과 당시 발행 예보를 맞춘 독립 사건에서 거리 기준·AFT·확산 계산의 경고 선행시간과 접근 오차를 비교하는 것이다. 국내2025 시험 자료와 정책·알림 경로는 열거나 변경하지 않았다.
+
+최종 훈련 도구 테스트 **365개 통과, 실패·오류·건너뛰기0**. 변경10개 Python 파일의 Ruff/format, 문서 로컬 링크, diff 검사와 서버·로컬 코드 해시 대조를 통과했다. 출력 raster·로그·종료 통계·입력 예보의 SHA도 다시 확인했다. [검증 기록](../../../training/reports/korea-scenario-20261101/verification.json), [JUnit 결과](../../../training/reports/korea-scenario-20261101/tests.xml)를 보관했다. Affine 연산의 향후 사용 중단 예고 경고는 남아 있으며 실패는 아니다. 연구 실행 후 Qwen 생성·임베딩 서비스는 모두ready였다. 테스트 통과는 물리 정확도나 개인 안전성 검증을 대체하지 않는다.
+
 ## 공식 출처
 
 - [기상청 API허브 — 천리안2A 자료](https://apihub.kma.go.kr/apiList.do?seqApi=6&seqApiSub=271), [국가기상위성센터 FF 정의](https://api.nmsc.kma.go.kr/homepage/html/base/cmm/selectPage.do?page=static.convergence.utilizationProducts).
@@ -325,3 +600,114 @@ GPU 학습 스크립트는 자료 계약과 SHA를 먼저 검사하고, Qwen이 
 - [NOAA ISD 관측소 등록부](https://noaa-isd-pds.s3.amazonaws.com/isd-history.csv), [ISD-Lite 형식](https://noaa-isd-pds.s3.amazonaws.com/isd-lite/isd-lite-format.txt), [공개 국가 경계 출처](https://www.geoboundaries.org/api/current/gbOpen/KOR/ADM0/).
 - [키 없는 NOAA JPSS](https://registry.opendata.aws/noaa-jpss/)의 EFIRE 실제 샘플도 확보했다. 화재 없는 위치의 판별에는 전체 geolocation과 유효 관측 마스크가 추가로 필요하다. 극궤도 통과 간격으로 6시간 연속 음성을 만들지 않는다.
 - [키 없는 GK2A 공개 영상](https://registry.opendata.aws/noaa-gk2a-pds/)의 목록을 확인했다. 공개 L1B 영상 자체를 화재 정답이라고 부르지 않는다. [JAXA P-Tree](https://www.eorc.jaxa.jp/ptree/registration_top.html)는 별도 등록·자료 이용조건이 있어 인증 없는 대안으로 사용하지 않았다.
+
+
+## Walker 2019 실제 사건·당시 예보 기반 재현 — 2026-11-01
+
+가정 점화 실행에 이어 **실제 초기 경계·실제 연료 지도·당시 발행 HRRR 예보를 결합한 1·3·6시간 확산 비교**를 실행했다. 이번 사건은 기존 학습용 2019/2020 사건 중 GOES 발화 metadata가 가장 이른 Walker2019로 결과 확인 전에 고정했다. 검증 사건에서 좋은 결과를 골라 보고한 것이 아니며, 국내 2025 잠금 정답을 사용하지 않았다.
+
+### 입력과 재현 범위
+
+GOFER의 `GOESIg_UTC=2019-09-04T07Z`는 공개 경계가 없는 시각이다. 실제 공개된 첫 Combined 경계인 **2019-09-04 22UTC**를 초기 시각으로 사용했다. 초기 경계의 bounding box에 20km를 더해 100m·UTM10(EPSG:32610),419×411 격자를 고정하고, 초기 polygon에서20km 이내인135,009셀을 평가 영역으로 정했다. 미래 경계로 격자나 후보 위치를 좁히지 않았다. 초기140셀을 모두 보존했으며 LANDFIRE 비가연 분류와 겹치는1셀도 삭제하지 않았다.
+
+[지형 manifest](../../../training/reports/gofer-hindcast-20261101/terrain/manifest.json)의 입력은 Copernicus GLO90 DSM N39/W121·N40/W121, 실제 LF2016 FBFM40 코드다. DEM 유효100%, 연료 미상0셀. 수관0, 지표화만, 비화·진압 없음은 가정이고 실제 측정이 아니다. 사전에 고정한 죽은 연료 수분 M1/M10/M100은3/4/5%,6/7/8%,9/10/11%의 세 조건이며 살아 있는 초본/목질/엽 수분은60/90/90%다. 지표화만으로 실제 비화·수관화까지 설명했다고 해석하지 않는다.
+
+[기상 수집 기록](../../../training/reports/gofer-hindcast-20261101/weather/acquisition/report.json)은 NOAA HRRR **2019-09-04 20UTC cycle**, h2~h8의10m U/V 14개 원본 필드를 포함한다. 시각22UTC~다음날04UTC의7개 knot로6시간을 계산한다. 이력 예보 cycle은 원시 GRIB2와 GDAL 양쪽에서 확인했으나, 당시 실제 공개 지연은 확인되지 않았다. 자료를2026년에 내려받았다고2019년 당시 이용 가능했음을 증명하는 것은 아니다. HRRR 원본은3km이며100m 보간을 국지100m 기상 관측으로 표시하지 않는다.
+
+원본 Lambert 격자 기준 바람을 진북 기준 east/north로 회전한 뒤 성분을 보간하고 풍속·FROM 풍향을 계산했다. 이후 지도용 UTM 격자 기준으로 한 번 더 회전해 사면향과 맞췄다. [원본 축 검증](../../../training/reports/gofer-hindcast-20261101/weather/axis-verification.json), [독립 h2 수치 검토](../../../training/reports/gofer-hindcast-20261101/weather/independent-h2-review.json)를 보존했다. 별도 PROJ 회전각 차이는0.000001763도,25개 직접 보간점과의 최대 풍속차0.001212m/s·풍향차0.054563도였다. 이 독립 수치 검토는 h2 대상이며, 전체 h3~h8 원본 metadata 검사는 본 수집·정규화 경로에서 수행했다.
+
+초기 누적 경계의 모든 셀을 PHI=-1/도달0초로 넣고 외부는 PHI=+1로 넣었다. 추가 점화는 없으며 경계 전체가 활성 화선이라는 가정이다. 세 실행을 마치고 입력·계획·출력 SHA를 고정한 `fit-receipt.json`을 쓴 다음 미래 정답 raster를 읽었다. 초기 manifest/GOFER archive와 정답의 SHA 연결, 입력 불변, 음수 도달시간 오류, 격자·종료시각·연구 영역 경계 도달을 검사했다.
+
+### 첫 결과와 해석
+
+최초 원본 바이너리 실행은 CPU1개·세 조건 순차로6.160초가 걸렸다. [실행 기록](../../../training/reports/gofer-hindcast-20261101/elmfire-first/report.json), [고정 계획](../../../training/reports/gofer-hindcast-20261101/elmfire-first/plan.json), [평가](../../../training/reports/gofer-hindcast-20261101/elmfire-first/evaluation.json)를 남겼다. 초기140ha를 제외한 신규 확장만 비교한 결과는 다음과 같다.
+
+| 수분 M1/M10/M100 | 1h 예측 신규 면적 / GOFER | 1h 신규 재현율 | 3h 예측 신규 면적 / GOFER | 3h 신규 재현율 |
+| --- | ---: | ---: | ---: | ---: |
+| 3/4/5% | 12 / 366ha | 3.28% | 80 / 1,072ha | 7.46% |
+| 6/7/8% | 10 / 366ha | 2.73% | 59 / 1,072ha | 5.50% |
+| 9/10/11% | 8 / 366ha | 2.19% | 51 / 1,072ha | 4.76% |
+
+세 조건에서 예측한 작은 확장 영역은 GOFER 안에 들어 있어 신규 정밀도는1.0이지만, 관측 재구성 확장의92.5% 이상을3시간에서 놓쳤다. 따라서 정밀도1.0을 정확도100%로 표시하면 안 된다. 초기 경계 유지(persistence)의 신규 재현율은0이며, 이것을 조금 넘은 사실만으로 쓸 만한 모델로 승격하지 않는다. 이번 검사는 단순 거리·AFT와 동일 표본의 충분한 사건별 비교를 대신하지 않는다.
+
+[독립 경계 검토](../../../training/reports/gofer-hindcast-20261101/independent-geometry-review.json)에서 CRS·격자·초기 경계·ha 환산은 모두 일치했다.3h 예측 확장은 초기 경계에서 최대179~300m, GOFER 신규 영역은 중앙값780m·최대2,132m였다. 다만 초기1.4km²와1h 증가3.66km²는 원 GOES 약2km 센서의 공간 규모와 겹친다. 사후 탐지·평활·재구성의 변화가 큰 겉보기 확장을 만들었을 가능성을 실제 화선 확산과 구분해야 한다. 이 결과만으로 과소예측 원인을 연료 수분·바람·수관 생략 중 하나로 확정하지 않는다.
+
+6시간 지표는 최초 실행에서 보류했다. 엔진 로그가21,595초에서 stall을 표시하고 종료 통계는6.00시간으로 반올림해 기록했다. 마지막 출력 파일 이름은25,195초지만 이를 실제 적분 시간으로 믿지 않는다. 이 차이를 확인하기 위해 원본을 보존하고 시간 진단 출력만 추가한 별도 빌드로 같은 입력을 대조했다. 마지막 RK2 적분은 세 조건 모두 `T=21595, DT=5, T+DT=21600`이었다. 적분 후의 PHI 최대 변화량0.00058556~0.00065106이 엔진 임계값0.001보다 작아 stall 메시지가 나온 것이다. 원본과 진단 출력의 도달시간·mask·metadata는 전부 같았고 BIL 파일 SHA도 동일했다. 최초 보수적 판정의 오분류임을 확인했지만, 다른 조기 종료 사례까지 허용하도록 일반 검사를 완화하지 않았다. 이 세 사례만 증거를 연결해 별도 평가하며 최초 보고서를 덮어쓰지 않는다.
+
+### 진단 증거를 반영한 6시간 확정 평가
+
+[출력 전용 진단](../../../training/reports/gofer-hindcast-20261101/endpoint-diagnostic/report.json)은61.047초, [검증·평가 재계산](../../../training/reports/gofer-hindcast-20261101/endpoint-reconciled/report.json)은0.621초였다. 별도 재계산은 원본·진단 소스/바이너리/patch/로그/전체 입력/출력 SHA와 실제 endpoint를 다시 검증한다. 모델 수식·파라미터·도달시간 값은 변경하지 않았으며 기존1h/3h 지표와 persistence 지표가 정확히 일치함을 검사했다.
+
+| 수분 M1/M10/M100 | 6h 예측 신규 면적 | GOFER 신규 면적 | 신규 재현율 / IoU | 신규 정밀도 |
+| --- | ---: | ---: | ---: | ---: |
+| 3/4/5% | 138ha | 1,294ha | 10.66% | 100% |
+| 6/7/8% | 107ha | 1,294ha | 8.27% | 100% |
+| 9/10/11% | 95ha | 1,294ha | 7.34% | 100% |
+
+[확정 평가 JSON](../../../training/reports/gofer-hindcast-20261101/endpoint-reconciled/evaluation.json)의 SHA256은 `11d2aff42fec774c4906b9af7577bd5ea7732c64b73ca8c204effd66576276b3`이다. 이는 동일 출력의 평가 가능 시점을 확인한 것이며 모델 정확도를 개선한 결과가 아니다. **6시간에도 재구성 신규 영역의89.3~92.7%를 놓쳐 국내 개인 대응 판단용 근거로 사용할 수준을 입증하지 못했다.** 낮은 민감도와 정답 자체의 해상도·회고성 한계를 함께 남긴다.
+
+서버 경로는 `/home1/ncloud/bonghwajigi/` 아래 다음과 같다.
+
+- 원본 기상·지형: `data/raw/gofer-hindcast/walker-2019/`
+- 가공 지형/정답: `data/processed/gofer-hindcast-walker-v1/`
+- 바람 입력: `data/processed/gofer-hindcast-walker-weather-v1/weather.json`
+- 최초 실행: `data/artifacts/elmfire/walker2019-hindcast-v1/`
+- 출력 전용 진단: `data/artifacts/elmfire/walker2019-endpoint-diagnostic-v1/`
+- 근거 연결 후 확정 평가: `data/artifacts/elmfire/walker2019-endpoint-reconciled-v1/`
+
+원본·진단을 그대로 보존한 상태에서 별도 평가를 재검산하는 명령은 아래와 같다. 기존 출력 폴더를 덮어쓰지 않는다.
+
+```bash
+data/artifacts/research-tools/elmfire/env/bin/python training/tools/reconcile_elmfire_endpoint.py \
+  --original data/artifacts/elmfire/walker2019-hindcast-v1 \
+  --diagnostic data/artifacts/elmfire/walker2019-endpoint-diagnostic-v1 \
+  --diagnostic-report-sha256 cf59a5ddd4d0d32e0c3e7bf6106b6bc4729304f8c931553f2e374a4730b51d6b \
+  --output data/artifacts/elmfire/walker2019-endpoint-recheck-new
+```
+
+### 국내 정답 자료의 다음 확보 경로
+
+[국내 정답 출처 조사](../../../training/reports/gofer-hindcast-20261101/domestic-label-sources.md)에서2019 공식 PDF2개와2023 산림청 백서1개를 실제 확보했다. 홍성2023 상황도에는2~5시간 간격 지도10개가 있지만, 원본 GIS·CRS·관측 정확도·명시 개방 조건이 없어 정밀 정답으로 바로 사용하지 않았다. NIFOS의2023 사건4개 연구에는 비영 면적 경계31개가 표에 있고 원자료는 저자 요청 방식이다. 아직 기관·저자에게 연락하지 않았다.
+
+다음 개선은 실제 화선 시계열과 지형·연료·수관·수분·돌풍의 부족을 분리해 확인하고, 사전에 고정한 여러 사건에서 단순 거리·과거 경계 이동·학습 모델·확산 모델을 비교하는 것이다. 이번 단일 학습 사건의 사후 비교로 한국 사용자 접근확률이나 개인 대응 메뉴얼의 근거 자격이 생기지 않는다. `probability=null`, `simulation_only=true`, `operational_use=false`를 유지한다.
+
+
+이번 단계 최종 확인은 **훈련 도구418개 테스트 통과, 실패·오류·건너뛰기0**, 변경8개 Python 파일 Ruff/format 통과다. 기존 Affine 사용 중단 예고54건은 남아 있다. 서버·로컬 코드/입력/진단/평가9개 SHA 일치, 보관 근거44개 해시, 로컬 문서 링크와 인증값 비노출 검사를 완료했다. [검증 기록](../../../training/reports/gofer-hindcast-20261101/verification.json), [테스트 결과](../../../training/reports/gofer-hindcast-20261101/tests.xml)를 보관한다. CPU 연구 실행 후 Qwen 생성·임베딩은 모두ready, GPU9,080MiB/사용률0%였다. 이번 고정 연구 실행은 종료됐고 백그라운드 학습을 뜻하지 않는다. 앱·운영 정책·알림 경로를 수정하거나 commit/push하지 않았다.
+
+## 추가 보강의 결과와 채택 판단 — 2026-11-01
+
+사용자 추가 승인으로 **GOFER101회 + 국내53회 =154회 적합**, 실제 수관을 넣은 **확산6조건**을 실행했다. 이번 고정 실험은 모두 종료됐으며 국내 대응 판단이라는 장기 목표는 아직 달성하지 못했다. [종합 보고서](../../../training/reports/model-strengthening-20261101/README.md), [GOFER 상세 비교](../../../training/reports/gofer-history-20261101/README.md), [독립 재계산](../../../training/reports/gofer-history-20261101/independent-review.md)을 참조한다.
+
+### 국내 최근 화재 기준 바람·건조도
+
+기존 v4의14개 학습 창,315,490개 후보×시점×기간 행만 사용했다. 원래34개 입력은 유지하고 최근60분 화재에서 대상 위치를 향하는 바람·가로 바람·방향 정렬·현재/최근 화재 간격4개를 추가했다. 별도 후보에는 과거 기온·상대습도에서 계산한 공기 건조도VPD와 바람 상호작용2개를 더했다. 원래 GK2A 미래 관측 정답과 행을 바꾸지 않았다. 실제 화선 접근·같은 화재의 확산·개인 피해라는 새로운 정답이 생긴 것은 아니다.
+
+11기간그룹의 outer4/inner3 중첩검증으로 3후보를 비교했다. 미래/검증/보정/2025시험 파일을 열지 않았으며, 후보의 양성 가중치는 매번 해당 훈련 fold에서만 정했다. [동결 계획](../../../training/reports/korea-recent-wind-20261101/plan.json), [전체 결과](../../../training/reports/korea-recent-wind-20261101/report.json).
+
+| 국내 학습기간 제외 평가 | 새 선택 절차 | 최근 화재 거리 기준 |
+| --- | ---: | ---: |
+| 사건×기간 평균 AP | 0.359895 | 0.369650 |
+| 각 시점 상위10% 검토 시 포착률 | 54.33% | 49.86% |
+| 같은 검토량의 정밀도 | 3.01% | 2.76% |
+| 검토 후보 수 | 31,932 | 31,932 |
+| 그중 양성 정답 수 | 960 | 881 |
+
+총 양성1,767개는 기간별 중복을 포함하는 후보 관측 수이며 독립 산불이나 사용자 수가 아니다. AP 대상35개 사건×기간은 동일하다. 각 시점의 ceil(10%)와 row/col 동점 규칙을 동일하게 적용했다. 행별 점수와 [독립 재계산](../../../training/reports/korea-recent-wind-20261101/independent-review.md)을 보존한다.
+
+최종 전체train 내부CV에서는 기존34개0.365054,바람38개0.363008,바람+VPD40개0.372036으로40개 후보가 선택됐다. 그러나 outer에서는 기존후보1회·바람후보3회가 선택됐고40개 후보는0회다. 위 표는 중첩 선택 절차의 평가이며 최종40개 모델의 독립 성능 개선을 입증한 값이 아니다. 동일 검토량에서 포착이 좋아진 신호는 있지만 주 지표에서 거리 기준을 넘지 못했고 정밀도도3% 수준이라 개인 대응 판단용 확률로 연결하지 않는다.
+
+53회 적합은100.767초였다. 저장/재로딩 차이0,315,490행의 기간 단조성 위반0,원자료·보고서·설정·코드37개 SHA 재대조가 통과했다. 서버 `/home1/ncloud/bonghwajigi/data/artifacts/xgboost/korea-recent-wind-nested-20261101/`에 `model.ubj`, `outer-predictions.parquet`, 모든fold평가를 보존했다. 모델 SHA256은 `e094808a6f5ce111eda37e10c929cfdb086ce87fa872a1a0971f265da0f80a5e`다.
+
+### 실제 수관을 넣은 확산 결과
+
+USGS의 LF2016 CC/CH/CBH/CBD를 실제 수집하고 ELMFIRE encoding과 공식 단위를 맞췄다. 4개 제품별 metadata·TIFF·단위 문서, 총12요청이었다. 기존 Walker의 지형·연료·기상·초기경계는 유지했고 crown model0/1 × 기존수분3조건을 평가 전에 고정했다. 원자료에서 CC/CH/CBH가0인데CBD>0인7,331셀(초기1셀)은 임의 수정하지 않고 QC 경고로 기록했다.
+
+| 6h 신규 영역 재현율/IoU | 건조3/4/5% | 중간6/7/8% | 습윤9/10/11% |
+| --- | ---: | ---: | ---: |
+| 기존 수관없음 | 10.66% | 8.27% | 7.34% |
+| 실제수관·지표화만 | 6.26% | 5.41% | 4.71% |
+| 실제수관·수관화 사용 | 8.73% | 6.57% | 5.95% |
+
+수관화는 같은 수관의 지표화만 사용한 경우보다 확산을 늘렸으나, 수관의 바람 차폐 효과를 상쇄하지 못해 기존 결과보다 낮았다. 입력을 현실화했다고 성능도 올라간다고 주장하지 않는다. 작은 예측영역이 GOFER 안에 있어 정밀도가1이어도 대부분의 신규영역을 놓친다. 이 사건은 이미 본 미국 학습사건 하나이고 사후 재구성 정답이므로 국내 확률 검증이 아니다. [모든1/3/6h 평가](../../../training/reports/gofer-hindcast-20261101/canopy-ablation/evaluation.json), [계획·실행기록](../../../training/reports/gofer-hindcast-20261101/canopy-ablation/report.json), [입력·단위·QC](../../../training/reports/gofer-hindcast-20261101/canopy-inputs/manifest.json).
+
+실제 RK2 종료21,600초를 6조건 모두 확인했고 실행시간은11.242초였다. dry crown1의 마지막 적분은21,583.59005+16.40995초여서 기존 고정5초 가정을 사용하지 않는다. 출력 전용 진단 바이너리를 재사용했으며 계산식과 기존 조기종료 검사는 바꾸지 않았다. 결과를 보고 ROS 배율이나 수분을 더 조정하지 않았다.

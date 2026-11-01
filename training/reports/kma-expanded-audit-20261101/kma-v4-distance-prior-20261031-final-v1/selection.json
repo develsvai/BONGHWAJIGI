@@ -1,0 +1,12 @@
+{
+  "selected": "distance_monotone_all",
+  "selected_at_utc": "2026-10-31T15:47:01.893944+00:00",
+  "plan_sha256": "a5c1e77b72595ca6b786c607b97167e7252575ac7d53107a94a3c53cc5c155e5",
+  "cv_result_sha256": {
+    "depth4_positive_sqrt": "613c13de741a88491f160e64d74180ae9bfb813e01da16cf19737fc8c843c187",
+    "distance_monotone_all": "6e9c616b7b3bd8a262d70f1a8cdb04fd3c0849984d52edcd99768181855cb186",
+    "distance_monotone_observations": "0863a5c6500b384e08f19c5127f80bd292959b981273b64558d7b3bee49ca377",
+    "distance_only_depth3": "1941cbc42432b7cb0d038eaecd76196c0018a5d6ed38d9a19c48aa6c097c53b2"
+  },
+  "validation_event_data_read_before_selection": false
+}

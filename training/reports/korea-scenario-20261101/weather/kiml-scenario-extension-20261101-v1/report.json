@@ -1,0 +1,620 @@
+{
+  "purpose": "two_additional_hours_for_seven_endpoint_scenario",
+  "plan_sha256": "94ebb8da1171eb1474cc1699f2cc01f98fb4dfa4cd4153ca370a13ee22c020d8",
+  "base_report_sha256": "d85ae991eb369a7981b0a843ddde544a22631467913d5f7011d5a0dd7bd36a91",
+  "operational_use": false,
+  "source_reference_confirmed": false,
+  "wind_axis_basis_verified": false,
+  "records": [
+    {
+      "id": "kiml-20261031T12Z-u10-h11",
+      "endpoint": "https://apihub.kma.go.kr/api/typ06/url/nwp_nc_pnt_down.php",
+      "parameters_without_auth": {
+        "group": "KIML",
+        "data": "U",
+        "vars": "U10",
+        "tmfc": "2026103112",
+        "hf": "11",
+        "lon": "129.300000",
+        "lat": "37.000000",
+        "dataType": "CSV"
+      },
+      "forecast_reference_time_utc": "2026-10-31T12:00:00+00:00",
+      "reference_time_basis": "requested_parameter_only",
+      "requested_valid_time_utc": "2026-10-31T23:00:00+00:00",
+      "requested_lead_from_cycle_hours": 11,
+      "requested_lead_from_asof_hours": 6.3133393572222225,
+      "requested_variable": "U10",
+      "documented_unit": "m/s",
+      "documented_height_m": 10,
+      "unit_and_height_documentation": "https://apihub.kma.go.kr/getAttachFile.do?fileName=%ED%95%9C%EA%B5%AD%ED%98%95%20%EC%88%98%EC%B9%98%EB%AA%A8%EB%8D%B8%28KIM%29%20%EB%B3%80%EC%88%98%EC%A0%95%EB%B3%B4.pdf",
+      "source_kind": "numerical_weather_forecast",
+      "observed": false,
+      "transport": {
+        "status": "response_received",
+        "attempts": [
+          {
+            "attempt": 1,
+            "started_at_utc": "2026-10-31T16:51:14.127543+00:00",
+            "http_status": 200
+          }
+        ],
+        "retrieved_at_utc": "2026-10-31T16:51:14.415403+00:00",
+        "bytes": 108,
+        "source_sha256": "0f5ed3ced1ba5c9e7144c2f3cb1df8b446f7347c2307b2bd7e2e4ba50b995070",
+        "content_status": "numeric_candidate_requires_schema_review",
+        "schema_verified": false,
+        "numeric_row_count": 1,
+        "reference_stamp_seen": false,
+        "valid_stamp_seen": false,
+        "interpretation": "HTTP success/numeric text alone does not prove meteorological values"
+      },
+      "status": "validated_point_csv",
+      "raw_file": "kiml-20261031T12Z-u10-h11.csv",
+      "source_sha256": "0f5ed3ced1ba5c9e7144c2f3cb1df8b446f7347c2307b2bd7e2e4ba50b995070",
+      "parsed": {
+        "value": 2.01,
+        "request_coordinate_echo": {
+          "req_lon": 129.300003,
+          "req_lat": 37.0
+        },
+        "request_coordinate_echo_precision": {
+          "req_lon": "requested_float32_six_decimal_echo",
+          "req_lat": "requested_float64_six_decimal_echo"
+        },
+        "grid": {
+          "ix": 873,
+          "iy": 664,
+          "lon": 129.293854,
+          "lat": 36.991207
+        },
+        "level_marker": -1,
+        "level_marker_semantics": "response marker, not verified physical height",
+        "csv_schema_verified": true,
+        "source_reference_time_utc": null,
+        "source_valid_time_utc": null,
+        "source_reference_confirmed": false,
+        "source_valid_time_confirmed": false,
+        "source_variable_confirmed": false,
+        "source_unit_confirmed": false,
+        "source_height_confirmed": false,
+        "interpretation_basis": "requested variable and official variable definitions only"
+      },
+      "retrieved_at_utc": "2026-10-31T16:51:14.415403+00:00"
+    },
+    {
+      "id": "kiml-20261031T12Z-v10-h11",
+      "endpoint": "https://apihub.kma.go.kr/api/typ06/url/nwp_nc_pnt_down.php",
+      "parameters_without_auth": {
+        "group": "KIML",
+        "data": "U",
+        "vars": "V10",
+        "tmfc": "2026103112",
+        "hf": "11",
+        "lon": "129.300000",
+        "lat": "37.000000",
+        "dataType": "CSV"
+      },
+      "forecast_reference_time_utc": "2026-10-31T12:00:00+00:00",
+      "reference_time_basis": "requested_parameter_only",
+      "requested_valid_time_utc": "2026-10-31T23:00:00+00:00",
+      "requested_lead_from_cycle_hours": 11,
+      "requested_lead_from_asof_hours": 6.3133393572222225,
+      "requested_variable": "V10",
+      "documented_unit": "m/s",
+      "documented_height_m": 10,
+      "unit_and_height_documentation": "https://apihub.kma.go.kr/getAttachFile.do?fileName=%ED%95%9C%EA%B5%AD%ED%98%95%20%EC%88%98%EC%B9%98%EB%AA%A8%EB%8D%B8%28KIM%29%20%EB%B3%80%EC%88%98%EC%A0%95%EB%B3%B4.pdf",
+      "source_kind": "numerical_weather_forecast",
+      "observed": false,
+      "transport": {
+        "status": "response_received",
+        "attempts": [
+          {
+            "attempt": 1,
+            "started_at_utc": "2026-10-31T16:51:15.448222+00:00",
+            "http_status": 200
+          }
+        ],
+        "retrieved_at_utc": "2026-10-31T16:51:15.546998+00:00",
+        "bytes": 109,
+        "source_sha256": "716b0747667af5bab30fd04039d839373d56e10acac31a88e9a9942f8a783905",
+        "content_status": "numeric_candidate_requires_schema_review",
+        "schema_verified": false,
+        "numeric_row_count": 1,
+        "reference_stamp_seen": false,
+        "valid_stamp_seen": false,
+        "interpretation": "HTTP success/numeric text alone does not prove meteorological values"
+      },
+      "status": "validated_point_csv",
+      "raw_file": "kiml-20261031T12Z-v10-h11.csv",
+      "source_sha256": "716b0747667af5bab30fd04039d839373d56e10acac31a88e9a9942f8a783905",
+      "parsed": {
+        "value": -1.5,
+        "request_coordinate_echo": {
+          "req_lon": 129.300003,
+          "req_lat": 37.0
+        },
+        "request_coordinate_echo_precision": {
+          "req_lon": "requested_float32_six_decimal_echo",
+          "req_lat": "requested_float64_six_decimal_echo"
+        },
+        "grid": {
+          "ix": 873,
+          "iy": 664,
+          "lon": 129.293854,
+          "lat": 36.991207
+        },
+        "level_marker": -1,
+        "level_marker_semantics": "response marker, not verified physical height",
+        "csv_schema_verified": true,
+        "source_reference_time_utc": null,
+        "source_valid_time_utc": null,
+        "source_reference_confirmed": false,
+        "source_valid_time_confirmed": false,
+        "source_variable_confirmed": false,
+        "source_unit_confirmed": false,
+        "source_height_confirmed": false,
+        "interpretation_basis": "requested variable and official variable definitions only"
+      },
+      "retrieved_at_utc": "2026-10-31T16:51:15.546998+00:00"
+    },
+    {
+      "id": "kiml-20261031T12Z-t2-h11",
+      "endpoint": "https://apihub.kma.go.kr/api/typ06/url/nwp_nc_pnt_down.php",
+      "parameters_without_auth": {
+        "group": "KIML",
+        "data": "U",
+        "vars": "T2",
+        "tmfc": "2026103112",
+        "hf": "11",
+        "lon": "129.300000",
+        "lat": "37.000000",
+        "dataType": "CSV"
+      },
+      "forecast_reference_time_utc": "2026-10-31T12:00:00+00:00",
+      "reference_time_basis": "requested_parameter_only",
+      "requested_valid_time_utc": "2026-10-31T23:00:00+00:00",
+      "requested_lead_from_cycle_hours": 11,
+      "requested_lead_from_asof_hours": 6.3133393572222225,
+      "requested_variable": "T2",
+      "documented_unit": "K",
+      "documented_height_m": 2,
+      "unit_and_height_documentation": "https://apihub.kma.go.kr/getAttachFile.do?fileName=%ED%95%9C%EA%B5%AD%ED%98%95%20%EC%88%98%EC%B9%98%EB%AA%A8%EB%8D%B8%28KIM%29%20%EB%B3%80%EC%88%98%EC%A0%95%EB%B3%B4.pdf",
+      "source_kind": "numerical_weather_forecast",
+      "observed": false,
+      "transport": {
+        "status": "response_received",
+        "attempts": [
+          {
+            "attempt": 1,
+            "started_at_utc": "2026-10-31T16:51:16.579758+00:00",
+            "http_status": 200
+          }
+        ],
+        "retrieved_at_utc": "2026-10-31T16:51:16.662052+00:00",
+        "bytes": 108,
+        "source_sha256": "377a2c150c9664bfefd19cb0612153d06abf45381e491386b83aa73fec281b7d",
+        "content_status": "numeric_candidate_requires_schema_review",
+        "schema_verified": false,
+        "numeric_row_count": 1,
+        "reference_stamp_seen": false,
+        "valid_stamp_seen": false,
+        "interpretation": "HTTP success/numeric text alone does not prove meteorological values"
+      },
+      "status": "validated_point_csv",
+      "raw_file": "kiml-20261031T12Z-t2-h11.csv",
+      "source_sha256": "377a2c150c9664bfefd19cb0612153d06abf45381e491386b83aa73fec281b7d",
+      "parsed": {
+        "value": 283.57,
+        "request_coordinate_echo": {
+          "req_lon": 129.300003,
+          "req_lat": 37.0
+        },
+        "request_coordinate_echo_precision": {
+          "req_lon": "requested_float32_six_decimal_echo",
+          "req_lat": "requested_float64_six_decimal_echo"
+        },
+        "grid": {
+          "ix": 873,
+          "iy": 664,
+          "lon": 129.293854,
+          "lat": 36.991207
+        },
+        "level_marker": -1,
+        "level_marker_semantics": "response marker, not verified physical height",
+        "csv_schema_verified": true,
+        "source_reference_time_utc": null,
+        "source_valid_time_utc": null,
+        "source_reference_confirmed": false,
+        "source_valid_time_confirmed": false,
+        "source_variable_confirmed": false,
+        "source_unit_confirmed": false,
+        "source_height_confirmed": false,
+        "interpretation_basis": "requested variable and official variable definitions only"
+      },
+      "retrieved_at_utc": "2026-10-31T16:51:16.662052+00:00"
+    },
+    {
+      "id": "kiml-20261031T12Z-rh2-h11",
+      "endpoint": "https://apihub.kma.go.kr/api/typ06/url/nwp_nc_pnt_down.php",
+      "parameters_without_auth": {
+        "group": "KIML",
+        "data": "U",
+        "vars": "RH2",
+        "tmfc": "2026103112",
+        "hf": "11",
+        "lon": "129.300000",
+        "lat": "37.000000",
+        "dataType": "CSV"
+      },
+      "forecast_reference_time_utc": "2026-10-31T12:00:00+00:00",
+      "reference_time_basis": "requested_parameter_only",
+      "requested_valid_time_utc": "2026-10-31T23:00:00+00:00",
+      "requested_lead_from_cycle_hours": 11,
+      "requested_lead_from_asof_hours": 6.3133393572222225,
+      "requested_variable": "RH2",
+      "documented_unit": "%",
+      "documented_height_m": 2,
+      "unit_and_height_documentation": "https://apihub.kma.go.kr/getAttachFile.do?fileName=%ED%95%9C%EA%B5%AD%ED%98%95%20%EC%88%98%EC%B9%98%EB%AA%A8%EB%8D%B8%28KIM%29%20%EB%B3%80%EC%88%98%EC%A0%95%EB%B3%B4.pdf",
+      "source_kind": "numerical_weather_forecast",
+      "observed": false,
+      "transport": {
+        "status": "response_received",
+        "attempts": [
+          {
+            "attempt": 1,
+            "started_at_utc": "2026-10-31T16:51:17.694852+00:00",
+            "http_status": 200
+          }
+        ],
+        "retrieved_at_utc": "2026-10-31T16:51:17.770598+00:00",
+        "bytes": 108,
+        "source_sha256": "ceefaba32eedd67ac8199933ef0258c53af65db1d09d28f7a0247f640ec18802",
+        "content_status": "numeric_candidate_requires_schema_review",
+        "schema_verified": false,
+        "numeric_row_count": 1,
+        "reference_stamp_seen": false,
+        "valid_stamp_seen": false,
+        "interpretation": "HTTP success/numeric text alone does not prove meteorological values"
+      },
+      "status": "validated_point_csv",
+      "raw_file": "kiml-20261031T12Z-rh2-h11.csv",
+      "source_sha256": "ceefaba32eedd67ac8199933ef0258c53af65db1d09d28f7a0247f640ec18802",
+      "parsed": {
+        "value": 20.66,
+        "request_coordinate_echo": {
+          "req_lon": 129.300003,
+          "req_lat": 37.0
+        },
+        "request_coordinate_echo_precision": {
+          "req_lon": "requested_float32_six_decimal_echo",
+          "req_lat": "requested_float64_six_decimal_echo"
+        },
+        "grid": {
+          "ix": 873,
+          "iy": 664,
+          "lon": 129.293854,
+          "lat": 36.991207
+        },
+        "level_marker": -1,
+        "level_marker_semantics": "response marker, not verified physical height",
+        "csv_schema_verified": true,
+        "source_reference_time_utc": null,
+        "source_valid_time_utc": null,
+        "source_reference_confirmed": false,
+        "source_valid_time_confirmed": false,
+        "source_variable_confirmed": false,
+        "source_unit_confirmed": false,
+        "source_height_confirmed": false,
+        "interpretation_basis": "requested variable and official variable definitions only"
+      },
+      "retrieved_at_utc": "2026-10-31T16:51:17.770598+00:00"
+    },
+    {
+      "id": "kiml-20261031T12Z-u10-h12",
+      "endpoint": "https://apihub.kma.go.kr/api/typ06/url/nwp_nc_pnt_down.php",
+      "parameters_without_auth": {
+        "group": "KIML",
+        "data": "U",
+        "vars": "U10",
+        "tmfc": "2026103112",
+        "hf": "12",
+        "lon": "129.300000",
+        "lat": "37.000000",
+        "dataType": "CSV"
+      },
+      "forecast_reference_time_utc": "2026-10-31T12:00:00+00:00",
+      "reference_time_basis": "requested_parameter_only",
+      "requested_valid_time_utc": "2026-11-01T00:00:00+00:00",
+      "requested_lead_from_cycle_hours": 12,
+      "requested_lead_from_asof_hours": 7.3133393572222225,
+      "requested_variable": "U10",
+      "documented_unit": "m/s",
+      "documented_height_m": 10,
+      "unit_and_height_documentation": "https://apihub.kma.go.kr/getAttachFile.do?fileName=%ED%95%9C%EA%B5%AD%ED%98%95%20%EC%88%98%EC%B9%98%EB%AA%A8%EB%8D%B8%28KIM%29%20%EB%B3%80%EC%88%98%EC%A0%95%EB%B3%B4.pdf",
+      "source_kind": "numerical_weather_forecast",
+      "observed": false,
+      "transport": {
+        "status": "response_received",
+        "attempts": [
+          {
+            "attempt": 1,
+            "started_at_utc": "2026-10-31T16:51:18.803389+00:00",
+            "http_status": 200
+          }
+        ],
+        "retrieved_at_utc": "2026-10-31T16:51:18.894702+00:00",
+        "bytes": 108,
+        "source_sha256": "19fa7f5a5b3c24612dc97743d8e48927630fd68f015376d5e0b19caea55815d1",
+        "content_status": "numeric_candidate_requires_schema_review",
+        "schema_verified": false,
+        "numeric_row_count": 1,
+        "reference_stamp_seen": false,
+        "valid_stamp_seen": false,
+        "interpretation": "HTTP success/numeric text alone does not prove meteorological values"
+      },
+      "status": "validated_point_csv",
+      "raw_file": "kiml-20261031T12Z-u10-h12.csv",
+      "source_sha256": "19fa7f5a5b3c24612dc97743d8e48927630fd68f015376d5e0b19caea55815d1",
+      "parsed": {
+        "value": 1.15,
+        "request_coordinate_echo": {
+          "req_lon": 129.300003,
+          "req_lat": 37.0
+        },
+        "request_coordinate_echo_precision": {
+          "req_lon": "requested_float32_six_decimal_echo",
+          "req_lat": "requested_float64_six_decimal_echo"
+        },
+        "grid": {
+          "ix": 873,
+          "iy": 664,
+          "lon": 129.293854,
+          "lat": 36.991207
+        },
+        "level_marker": -1,
+        "level_marker_semantics": "response marker, not verified physical height",
+        "csv_schema_verified": true,
+        "source_reference_time_utc": null,
+        "source_valid_time_utc": null,
+        "source_reference_confirmed": false,
+        "source_valid_time_confirmed": false,
+        "source_variable_confirmed": false,
+        "source_unit_confirmed": false,
+        "source_height_confirmed": false,
+        "interpretation_basis": "requested variable and official variable definitions only"
+      },
+      "retrieved_at_utc": "2026-10-31T16:51:18.894702+00:00"
+    },
+    {
+      "id": "kiml-20261031T12Z-v10-h12",
+      "endpoint": "https://apihub.kma.go.kr/api/typ06/url/nwp_nc_pnt_down.php",
+      "parameters_without_auth": {
+        "group": "KIML",
+        "data": "U",
+        "vars": "V10",
+        "tmfc": "2026103112",
+        "hf": "12",
+        "lon": "129.300000",
+        "lat": "37.000000",
+        "dataType": "CSV"
+      },
+      "forecast_reference_time_utc": "2026-10-31T12:00:00+00:00",
+      "reference_time_basis": "requested_parameter_only",
+      "requested_valid_time_utc": "2026-11-01T00:00:00+00:00",
+      "requested_lead_from_cycle_hours": 12,
+      "requested_lead_from_asof_hours": 7.3133393572222225,
+      "requested_variable": "V10",
+      "documented_unit": "m/s",
+      "documented_height_m": 10,
+      "unit_and_height_documentation": "https://apihub.kma.go.kr/getAttachFile.do?fileName=%ED%95%9C%EA%B5%AD%ED%98%95%20%EC%88%98%EC%B9%98%EB%AA%A8%EB%8D%B8%28KIM%29%20%EB%B3%80%EC%88%98%EC%A0%95%EB%B3%B4.pdf",
+      "source_kind": "numerical_weather_forecast",
+      "observed": false,
+      "transport": {
+        "status": "response_received",
+        "attempts": [
+          {
+            "attempt": 1,
+            "started_at_utc": "2026-10-31T16:51:19.927414+00:00",
+            "http_status": 200
+          }
+        ],
+        "retrieved_at_utc": "2026-10-31T16:51:20.001586+00:00",
+        "bytes": 109,
+        "source_sha256": "04935873f2bb513d39a977dd911c1754f64e44a7c09e4e44ca15955f3633dda0",
+        "content_status": "numeric_candidate_requires_schema_review",
+        "schema_verified": false,
+        "numeric_row_count": 1,
+        "reference_stamp_seen": false,
+        "valid_stamp_seen": false,
+        "interpretation": "HTTP success/numeric text alone does not prove meteorological values"
+      },
+      "status": "validated_point_csv",
+      "raw_file": "kiml-20261031T12Z-v10-h12.csv",
+      "source_sha256": "04935873f2bb513d39a977dd911c1754f64e44a7c09e4e44ca15955f3633dda0",
+      "parsed": {
+        "value": -1.1,
+        "request_coordinate_echo": {
+          "req_lon": 129.300003,
+          "req_lat": 37.0
+        },
+        "request_coordinate_echo_precision": {
+          "req_lon": "requested_float32_six_decimal_echo",
+          "req_lat": "requested_float64_six_decimal_echo"
+        },
+        "grid": {
+          "ix": 873,
+          "iy": 664,
+          "lon": 129.293854,
+          "lat": 36.991207
+        },
+        "level_marker": -1,
+        "level_marker_semantics": "response marker, not verified physical height",
+        "csv_schema_verified": true,
+        "source_reference_time_utc": null,
+        "source_valid_time_utc": null,
+        "source_reference_confirmed": false,
+        "source_valid_time_confirmed": false,
+        "source_variable_confirmed": false,
+        "source_unit_confirmed": false,
+        "source_height_confirmed": false,
+        "interpretation_basis": "requested variable and official variable definitions only"
+      },
+      "retrieved_at_utc": "2026-10-31T16:51:20.001586+00:00"
+    },
+    {
+      "id": "kiml-20261031T12Z-t2-h12",
+      "endpoint": "https://apihub.kma.go.kr/api/typ06/url/nwp_nc_pnt_down.php",
+      "parameters_without_auth": {
+        "group": "KIML",
+        "data": "U",
+        "vars": "T2",
+        "tmfc": "2026103112",
+        "hf": "12",
+        "lon": "129.300000",
+        "lat": "37.000000",
+        "dataType": "CSV"
+      },
+      "forecast_reference_time_utc": "2026-10-31T12:00:00+00:00",
+      "reference_time_basis": "requested_parameter_only",
+      "requested_valid_time_utc": "2026-11-01T00:00:00+00:00",
+      "requested_lead_from_cycle_hours": 12,
+      "requested_lead_from_asof_hours": 7.3133393572222225,
+      "requested_variable": "T2",
+      "documented_unit": "K",
+      "documented_height_m": 2,
+      "unit_and_height_documentation": "https://apihub.kma.go.kr/getAttachFile.do?fileName=%ED%95%9C%EA%B5%AD%ED%98%95%20%EC%88%98%EC%B9%98%EB%AA%A8%EB%8D%B8%28KIM%29%20%EB%B3%80%EC%88%98%EC%A0%95%EB%B3%B4.pdf",
+      "source_kind": "numerical_weather_forecast",
+      "observed": false,
+      "transport": {
+        "status": "response_received",
+        "attempts": [
+          {
+            "attempt": 1,
+            "started_at_utc": "2026-10-31T16:51:21.034232+00:00",
+            "http_status": 200
+          }
+        ],
+        "retrieved_at_utc": "2026-10-31T16:51:21.134858+00:00",
+        "bytes": 108,
+        "source_sha256": "27b37b298076ff6c4f2c1b2707aa7fbcf6056f5f87c213ba32c848c93057884e",
+        "content_status": "numeric_candidate_requires_schema_review",
+        "schema_verified": false,
+        "numeric_row_count": 1,
+        "reference_stamp_seen": false,
+        "valid_stamp_seen": false,
+        "interpretation": "HTTP success/numeric text alone does not prove meteorological values"
+      },
+      "status": "validated_point_csv",
+      "raw_file": "kiml-20261031T12Z-t2-h12.csv",
+      "source_sha256": "27b37b298076ff6c4f2c1b2707aa7fbcf6056f5f87c213ba32c848c93057884e",
+      "parsed": {
+        "value": 284.6,
+        "request_coordinate_echo": {
+          "req_lon": 129.300003,
+          "req_lat": 37.0
+        },
+        "request_coordinate_echo_precision": {
+          "req_lon": "requested_float32_six_decimal_echo",
+          "req_lat": "requested_float64_six_decimal_echo"
+        },
+        "grid": {
+          "ix": 873,
+          "iy": 664,
+          "lon": 129.293854,
+          "lat": 36.991207
+        },
+        "level_marker": -1,
+        "level_marker_semantics": "response marker, not verified physical height",
+        "csv_schema_verified": true,
+        "source_reference_time_utc": null,
+        "source_valid_time_utc": null,
+        "source_reference_confirmed": false,
+        "source_valid_time_confirmed": false,
+        "source_variable_confirmed": false,
+        "source_unit_confirmed": false,
+        "source_height_confirmed": false,
+        "interpretation_basis": "requested variable and official variable definitions only"
+      },
+      "retrieved_at_utc": "2026-10-31T16:51:21.134858+00:00"
+    },
+    {
+      "id": "kiml-20261031T12Z-rh2-h12",
+      "endpoint": "https://apihub.kma.go.kr/api/typ06/url/nwp_nc_pnt_down.php",
+      "parameters_without_auth": {
+        "group": "KIML",
+        "data": "U",
+        "vars": "RH2",
+        "tmfc": "2026103112",
+        "hf": "12",
+        "lon": "129.300000",
+        "lat": "37.000000",
+        "dataType": "CSV"
+      },
+      "forecast_reference_time_utc": "2026-10-31T12:00:00+00:00",
+      "reference_time_basis": "requested_parameter_only",
+      "requested_valid_time_utc": "2026-11-01T00:00:00+00:00",
+      "requested_lead_from_cycle_hours": 12,
+      "requested_lead_from_asof_hours": 7.3133393572222225,
+      "requested_variable": "RH2",
+      "documented_unit": "%",
+      "documented_height_m": 2,
+      "unit_and_height_documentation": "https://apihub.kma.go.kr/getAttachFile.do?fileName=%ED%95%9C%EA%B5%AD%ED%98%95%20%EC%88%98%EC%B9%98%EB%AA%A8%EB%8D%B8%28KIM%29%20%EB%B3%80%EC%88%98%EC%A0%95%EB%B3%B4.pdf",
+      "source_kind": "numerical_weather_forecast",
+      "observed": false,
+      "transport": {
+        "status": "response_received",
+        "attempts": [
+          {
+            "attempt": 1,
+            "started_at_utc": "2026-10-31T16:51:22.168193+00:00",
+            "http_status": 200
+          }
+        ],
+        "retrieved_at_utc": "2026-10-31T16:51:22.263423+00:00",
+        "bytes": 108,
+        "source_sha256": "fa25a3cdc4b8364824645c5de06d78f1d89aa5a424968a78191c96338f454e52",
+        "content_status": "numeric_candidate_requires_schema_review",
+        "schema_verified": false,
+        "numeric_row_count": 1,
+        "reference_stamp_seen": false,
+        "valid_stamp_seen": false,
+        "interpretation": "HTTP success/numeric text alone does not prove meteorological values"
+      },
+      "status": "validated_point_csv",
+      "raw_file": "kiml-20261031T12Z-rh2-h12.csv",
+      "source_sha256": "fa25a3cdc4b8364824645c5de06d78f1d89aa5a424968a78191c96338f454e52",
+      "parsed": {
+        "value": 19.48,
+        "request_coordinate_echo": {
+          "req_lon": 129.300003,
+          "req_lat": 37.0
+        },
+        "request_coordinate_echo_precision": {
+          "req_lon": "requested_float32_six_decimal_echo",
+          "req_lat": "requested_float64_six_decimal_echo"
+        },
+        "grid": {
+          "ix": 873,
+          "iy": 664,
+          "lon": 129.293854,
+          "lat": 36.991207
+        },
+        "level_marker": -1,
+        "level_marker_semantics": "response marker, not verified physical height",
+        "csv_schema_verified": true,
+        "source_reference_time_utc": null,
+        "source_valid_time_utc": null,
+        "source_reference_confirmed": false,
+        "source_valid_time_confirmed": false,
+        "source_variable_confirmed": false,
+        "source_unit_confirmed": false,
+        "source_height_confirmed": false,
+        "interpretation_basis": "requested variable and official variable definitions only"
+      },
+      "retrieved_at_utc": "2026-10-31T16:51:22.263423+00:00"
+    }
+  ],
+  "complete": true,
+  "finished_at_utc": "2026-10-31T16:51:22.263829+00:00"
+}

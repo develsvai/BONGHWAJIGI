@@ -1,0 +1,136 @@
+{
+  "folds": [
+    {
+      "train": [
+        "bobcat_2020",
+        "creek_2020",
+        "glass_2020",
+        "july_complex_2020",
+        "kincade_2019",
+        "red_salmon_complex_2020",
+        "slater_and_devil_2020",
+        "walker_2019",
+        "zogg_2020"
+      ],
+      "held": [
+        "august_complex_2020",
+        "czu_lightning_complex_2020",
+        "dolan_2020",
+        "lnu_lightning_complex_2020",
+        "north_complex_2020",
+        "scu_lightning_complex_2020",
+        "sqf_complex_2020",
+        "w_5_cold_springs_2020"
+      ]
+    },
+    {
+      "train": [
+        "august_complex_2020",
+        "czu_lightning_complex_2020",
+        "dolan_2020",
+        "glass_2020",
+        "july_complex_2020",
+        "kincade_2019",
+        "lnu_lightning_complex_2020",
+        "north_complex_2020",
+        "red_salmon_complex_2020",
+        "scu_lightning_complex_2020",
+        "sqf_complex_2020",
+        "w_5_cold_springs_2020",
+        "walker_2019",
+        "zogg_2020"
+      ],
+      "held": [
+        "bobcat_2020",
+        "creek_2020",
+        "slater_and_devil_2020"
+      ]
+    },
+    {
+      "train": [
+        "august_complex_2020",
+        "bobcat_2020",
+        "creek_2020",
+        "czu_lightning_complex_2020",
+        "dolan_2020",
+        "kincade_2019",
+        "lnu_lightning_complex_2020",
+        "north_complex_2020",
+        "red_salmon_complex_2020",
+        "scu_lightning_complex_2020",
+        "slater_and_devil_2020",
+        "sqf_complex_2020",
+        "w_5_cold_springs_2020",
+        "walker_2019"
+      ],
+      "held": [
+        "glass_2020",
+        "july_complex_2020",
+        "zogg_2020"
+      ]
+    },
+    {
+      "train": [
+        "august_complex_2020",
+        "bobcat_2020",
+        "creek_2020",
+        "czu_lightning_complex_2020",
+        "dolan_2020",
+        "glass_2020",
+        "july_complex_2020",
+        "lnu_lightning_complex_2020",
+        "north_complex_2020",
+        "scu_lightning_complex_2020",
+        "slater_and_devil_2020",
+        "sqf_complex_2020",
+        "w_5_cold_springs_2020",
+        "zogg_2020"
+      ],
+      "held": [
+        "kincade_2019",
+        "red_salmon_complex_2020",
+        "walker_2019"
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "candidate": "distance_d2",
+      "macro_ap": 0.1342029593881001,
+      "macro_brier": 0.0072770077416256145,
+      "eligible_event_horizons": 48
+    },
+    {
+      "candidate": "legacy_d2",
+      "macro_ap": 0.2539055354898095,
+      "macro_brier": 0.006867077927987945,
+      "eligible_event_horizons": 48
+    },
+    {
+      "candidate": "legacy_d3",
+      "macro_ap": 0.230499059482145,
+      "macro_brier": 0.007130614192326046,
+      "eligible_event_horizons": 48
+    },
+    {
+      "candidate": "history_d2",
+      "macro_ap": 0.2745996277942531,
+      "macro_brier": 0.00676597231251756,
+      "eligible_event_horizons": 48
+    },
+    {
+      "candidate": "history_d3",
+      "macro_ap": 0.2578143521587592,
+      "macro_brier": 0.006911827951947036,
+      "eligible_event_horizons": 48
+    },
+    {
+      "candidate": "history_d4",
+      "macro_ap": 0.2297144987292742,
+      "macro_brier": 0.00702154368692016,
+      "eligible_event_horizons": 48
+    }
+  ],
+  "selected": "history_d2",
+  "selection_metric": "eligible_event_horizon_macro_AP"
+}

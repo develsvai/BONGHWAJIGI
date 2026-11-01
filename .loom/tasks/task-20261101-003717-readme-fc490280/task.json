@@ -1,0 +1,47 @@
+{
+  "id": "task-20261101-003717-readme-fc490280",
+  "job_id": "job-20261031-002017-v2-fe3bfad0",
+  "title": "멘토링 피드백과 실제 구현을 반영해 상세 README 작성",
+  "description": "사용자가 제공한 멘토링 전사·발표자료·아키텍처 이미지를 확인하고 README를 재구성한다. 서비스 소개, 아키텍처, Tailnet 사설망, 실제 수집 출처, 멱등성과 재시도·누락 방지, 설치·실행·검증·시연 방법을 코드와 대조해 설명한다.",
+  "status": "DONE",
+  "created_at": "2026-11-01T00:37:17+00:00",
+  "updated_at": "2026-11-01T00:50:29+00:00",
+  "order_index": 30,
+  "assigned_agent": "foreground",
+  "depends_on": [],
+  "expected_output": "제공 아키텍처 이미지를 포함한 상세 루트 README, 피드백·구현 대조 및 링크/실행 예시 검증 기록",
+  "done_condition": "README만으로 현재 구현과 연구/미연결 범위, Tailnet 접속 조건, 실제·모의 데이터 출처, 중복/재시도 처리, 서버와 로컬 실행을 구분해 재현할 수 있다. 요청 이미지를 원본대로 포함하고 인증정보를 노출하지 않는다.",
+  "in_scope": "전사/발표자료 읽기; README와 이미지 자산 작성; 코드·운영문서 대조; 문서 링크/명령 검증; Loom 기록",
+  "out_of_scope": "앱 구현 조회·수정; 진행 중 학습 코드/보고서 변경; 서비스 배포·중단; 사용자/다른 채팅의 삭제 복원; 발표자료 변경; 비밀정보 기록",
+  "validation_hint": "본문의 중복/재시도 설명과 소스 일치, 현재 CLI와 옵션/접속범위 검증, 이미지 원본 SHA, Markdown 링크·비밀정보·git diff·Loom strict 검사",
+  "required_docs": [],
+  "memory_refs": [],
+  "document_outputs": [],
+  "document_output_exceptions": [
+    "README.md"
+  ],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [
+    "80d1f9172226b43c98c0066199ce2e61bd17f498",
+    "405b4f122dc15e48522b0ada32b7060e62a521aa"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-11-01T00:50:29+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261101-003717-readme-fc490280/agent-events.jsonl",
+    ".loom/tasks/task-20261101-003717-readme-fc490280/artifacts.json",
+    ".loom/tasks/task-20261101-003717-readme-fc490280/context.md",
+    ".loom/tasks/task-20261101-003717-readme-fc490280/decision.md",
+    ".loom/tasks/task-20261101-003717-readme-fc490280/git-snapshot.json",
+    ".loom/tasks/task-20261101-003717-readme-fc490280/logs.txt",
+    ".loom/tasks/task-20261101-003717-readme-fc490280/previous-results.md",
+    ".loom/tasks/task-20261101-003717-readme-fc490280/prompt.md",
+    ".loom/tasks/task-20261101-003717-readme-fc490280/result.md",
+    ".loom/tasks/task-20261101-003717-readme-fc490280/troubleshooting.md",
+    "README.md"
+  ],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

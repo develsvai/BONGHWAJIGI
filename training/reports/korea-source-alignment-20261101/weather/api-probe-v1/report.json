@@ -1,0 +1,238 @@
+{
+  "plan_sha256": "27acdbb90c5f3e48dc8bac920f63cf04e1e3897a5477dae6523d36c57c23a1aa",
+  "source_code_sha256": "546eb5732d8e742a4d794002e837f22d88cdb8dc22677795ec2b57b161b451d6",
+  "actual_http_requests": 6,
+  "total_response_bytes_read": 894,
+  "operational_use": false,
+  "validation_read": false,
+  "calibration_read": false,
+  "test_read": false,
+  "historical_release_time_verified": false,
+  "records": [
+    {
+      "id": "kiml-axis-registration-recheck",
+      "kind": "netcdf",
+      "endpoint": "https://apihub.kma.go.kr/api/typ06/url/nwp_nc_vars_down.php",
+      "parameters_without_auth": {
+        "group": "KIML",
+        "data": "U",
+        "vars": "U10",
+        "tmfc": "2026103112",
+        "hf": "5",
+        "lon1": "129.29",
+        "lat1": "36.98",
+        "lon2": "129.31",
+        "lat2": "37.01",
+        "dataType": "NC"
+      },
+      "requested_reference_time_utc": "2026-10-31T12:00:00Z",
+      "requested_valid_time_utc": "2026-10-31T17:00:00Z",
+      "max_bytes": 4194304,
+      "note": "One registration recheck only; contemporary metadata, not train input",
+      "started_at_utc": "2026-10-31T18:23:13.261144+00:00",
+      "retrieved_at_utc": "2026-10-31T18:23:13.393651+00:00",
+      "http_status": 403,
+      "bytes_read": 149,
+      "content_type": "application/json",
+      "source_sha256": "ff23610cc2da35ed934d17aac7ee0a101e2ff906e0a0d3e740fb0003eb623db0",
+      "provider_status": 403,
+      "status": "access_error",
+      "safe_body_excerpt": "{\n  \"result\" : {\n    \"status\" : 403,\n    \"message\" : \"활용신청이 필요한 API 입니다. 활용신청 후 다시 시도해 주십시오.\"\n  }\n}"
+    },
+    {
+      "id": "uljin_2022-umkr-point",
+      "kind": "um_point",
+      "endpoint": "https://apihub.kma.go.kr/api/typ06/cgi-bin/url/nph-um_grib_pt_txt1",
+      "parameters_without_auth": {
+        "group": "UMKR",
+        "nwp": "N512",
+        "data": "U",
+        "varn": "2002,2003,0,1001",
+        "tmfc": "2022030400",
+        "hf": "1",
+        "lon": "129.3",
+        "lat": "37.2",
+        "disp": "A",
+        "mode": "1",
+        "help": "1"
+      },
+      "max_bytes": 1048576,
+      "note": "Archived forecast reference time is not verified release time",
+      "started_at_utc": "2026-10-31T18:23:14.426099+00:00",
+      "retrieved_at_utc": "2026-10-31T18:23:14.567810+00:00",
+      "http_status": 403,
+      "bytes_read": 149,
+      "content_type": "application/json",
+      "source_sha256": "ff23610cc2da35ed934d17aac7ee0a101e2ff906e0a0d3e740fb0003eb623db0",
+      "provider_status": 403,
+      "status": "access_error",
+      "safe_body_excerpt": "{\n  \"result\" : {\n    \"status\" : 403,\n    \"message\" : \"활용신청이 필요한 API 입니다. 활용신청 후 다시 시도해 주십시오.\"\n  }\n}"
+    },
+    {
+      "id": "uljin_2022-ldaps-header",
+      "kind": "grib_header",
+      "endpoint": "https://apihub.kma.go.kr/api/typ06/cgi-bin/url/nph-nwp_header",
+      "parameters_without_auth": {
+        "model": "um",
+        "nwp": "l015",
+        "sub": "unis",
+        "tmfc": "202203040000",
+        "ef": "1",
+        "help": "1"
+      },
+      "max_bytes": 1048576,
+      "note": "Header/variable access probe, no full grid or guessed variable download",
+      "started_at_utc": "2026-10-31T18:23:15.600203+00:00",
+      "retrieved_at_utc": "2026-10-31T18:23:15.748196+00:00",
+      "http_status": 403,
+      "bytes_read": 149,
+      "content_type": "application/json",
+      "source_sha256": "ff23610cc2da35ed934d17aac7ee0a101e2ff906e0a0d3e740fb0003eb623db0",
+      "provider_status": 403,
+      "status": "access_error",
+      "safe_body_excerpt": "{\n  \"result\" : {\n    \"status\" : 403,\n    \"message\" : \"활용신청이 필요한 API 입니다. 활용신청 후 다시 시도해 주십시오.\"\n  }\n}"
+    },
+    {
+      "id": "uljin_2022-asos",
+      "event_id": "uljin_2022",
+      "kind": "asos",
+      "endpoint": "https://apihub.kma.go.kr/api/typ01/url/kma_sfctm2.php",
+      "parameters_without_auth": {
+        "tm": "202203041000",
+        "stn": "0",
+        "help": "1"
+      },
+      "observation_time_utc": "2022-03-04T01:00:00Z",
+      "max_bytes": 2097152,
+      "started_at_utc": "2026-10-31T18:23:16.780641+00:00",
+      "retrieved_at_utc": "2026-10-31T18:23:16.922742+00:00",
+      "http_status": 403,
+      "bytes_read": 149,
+      "content_type": "application/json",
+      "source_sha256": "ff23610cc2da35ed934d17aac7ee0a101e2ff906e0a0d3e740fb0003eb623db0",
+      "provider_status": 403,
+      "status": "access_error",
+      "safe_body_excerpt": "{\n  \"result\" : {\n    \"status\" : 403,\n    \"message\" : \"활용신청이 필요한 API 입니다. 활용신청 후 다시 시도해 주십시오.\"\n  }\n}"
+    },
+    {
+      "id": "uljin_2022-aws",
+      "event_id": "uljin_2022",
+      "kind": "aws",
+      "endpoint": "https://apihub.kma.go.kr/api/typ01/cgi-bin/url/nph-aws2_min",
+      "parameters_without_auth": {
+        "tm2": "202203041000",
+        "stn": "0",
+        "disp": "0",
+        "help": "1"
+      },
+      "observation_time_utc": "2022-03-04T01:00:00Z",
+      "max_bytes": 2097152,
+      "started_at_utc": "2026-10-31T18:23:17.955302+00:00",
+      "retrieved_at_utc": "2026-10-31T18:23:18.085329+00:00",
+      "http_status": 403,
+      "bytes_read": 149,
+      "content_type": "application/json",
+      "source_sha256": "ff23610cc2da35ed934d17aac7ee0a101e2ff906e0a0d3e740fb0003eb623db0",
+      "provider_status": 403,
+      "status": "access_error",
+      "safe_body_excerpt": "{\n  \"result\" : {\n    \"status\" : 403,\n    \"message\" : \"활용신청이 필요한 API 입니다. 활용신청 후 다시 시도해 주십시오.\"\n  }\n}"
+    },
+    {
+      "id": "uljin_2022-station_sfc",
+      "event_id": "uljin_2022",
+      "kind": "station_sfc",
+      "endpoint": "https://apihub.kma.go.kr/api/typ01/url/stn_inf.php",
+      "parameters_without_auth": {
+        "inf": "SFC",
+        "tm": "202203041000",
+        "stn": "0",
+        "help": "1"
+      },
+      "observation_time_utc": "2022-03-04T01:00:00Z",
+      "max_bytes": 2097152,
+      "started_at_utc": "2026-10-31T18:23:19.117518+00:00",
+      "retrieved_at_utc": "2026-10-31T18:23:19.270868+00:00",
+      "http_status": 403,
+      "bytes_read": 149,
+      "content_type": "application/json",
+      "source_sha256": "ff23610cc2da35ed934d17aac7ee0a101e2ff906e0a0d3e740fb0003eb623db0",
+      "provider_status": 403,
+      "status": "access_error",
+      "safe_body_excerpt": "{\n  \"result\" : {\n    \"status\" : 403,\n    \"message\" : \"활용신청이 필요한 API 입니다. 활용신청 후 다시 시도해 주십시오.\"\n  }\n}"
+    },
+    {
+      "id": "uljin_2022-station_aws",
+      "event_id": "uljin_2022",
+      "kind": "station_aws",
+      "endpoint": "https://apihub.kma.go.kr/api/typ01/url/stn_inf.php",
+      "parameters_without_auth": {
+        "inf": "AWS",
+        "tm": "202203041000",
+        "stn": "0",
+        "help": "1"
+      },
+      "observation_time_utc": "2022-03-04T01:00:00Z",
+      "max_bytes": 2097152,
+      "status": "skipped_after_access_or_rate_failure"
+    },
+    {
+      "id": "ulju_2020-asos",
+      "event_id": "ulju_2020",
+      "kind": "asos",
+      "endpoint": "https://apihub.kma.go.kr/api/typ01/url/kma_sfctm2.php",
+      "parameters_without_auth": {
+        "tm": "202003191400",
+        "stn": "0",
+        "help": "1"
+      },
+      "observation_time_utc": "2020-03-19T05:00:00Z",
+      "max_bytes": 2097152,
+      "status": "skipped_after_access_or_rate_failure"
+    },
+    {
+      "id": "ulju_2020-aws",
+      "event_id": "ulju_2020",
+      "kind": "aws",
+      "endpoint": "https://apihub.kma.go.kr/api/typ01/cgi-bin/url/nph-aws2_min",
+      "parameters_without_auth": {
+        "tm2": "202003191400",
+        "stn": "0",
+        "disp": "0",
+        "help": "1"
+      },
+      "observation_time_utc": "2020-03-19T05:00:00Z",
+      "max_bytes": 2097152,
+      "status": "skipped_after_access_or_rate_failure"
+    },
+    {
+      "id": "ulju_2020-station_sfc",
+      "event_id": "ulju_2020",
+      "kind": "station_sfc",
+      "endpoint": "https://apihub.kma.go.kr/api/typ01/url/stn_inf.php",
+      "parameters_without_auth": {
+        "inf": "SFC",
+        "tm": "202003191400",
+        "stn": "0",
+        "help": "1"
+      },
+      "observation_time_utc": "2020-03-19T05:00:00Z",
+      "max_bytes": 2097152,
+      "status": "skipped_after_access_or_rate_failure"
+    },
+    {
+      "id": "ulju_2020-station_aws",
+      "event_id": "ulju_2020",
+      "kind": "station_aws",
+      "endpoint": "https://apihub.kma.go.kr/api/typ01/url/stn_inf.php",
+      "parameters_without_auth": {
+        "inf": "AWS",
+        "tm": "202003191400",
+        "stn": "0",
+        "help": "1"
+      },
+      "observation_time_utc": "2020-03-19T05:00:00Z",
+      "max_bytes": 2097152,
+      "status": "skipped_after_access_or_rate_failure"
+    }
+  ]
+}

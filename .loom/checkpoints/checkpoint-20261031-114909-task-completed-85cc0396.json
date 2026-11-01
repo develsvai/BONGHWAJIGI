@@ -1,0 +1,34 @@
+{
+  "id": "checkpoint-20261031-114909-task-completed-85cc0396",
+  "created_at": "2026-10-31T11:49:09+00:00",
+  "reason": "Task completed: 새 관측·사용자 변경과 주기 점검을 개인별 대응 계획 갱신 루프로 연결",
+  "summary": "새 관측·사용자 변경과 주기 점검을 개인별 대응 계획 갱신 루프로 연결 -> DONE @ develop/29a41d6596d6",
+  "job_id": "job-20261031-002626-job-97436430",
+  "task_id": "task-20261031-112704-task-7e315021",
+  "commit_sha": "29a41d6596d62aef567cfa3beedcf715acc65eed",
+  "branch_name": "develop",
+  "dirty": true,
+  "staged_files": [],
+  "modified_files": [
+    ".loom/events.jsonl",
+    ".loom/job-runs/job-run-20261031-100136-job-20261031-002626-job-c9f9ff0d-1370d387/job-run.json",
+    ".loom/job-runs/job-run-20261031-112708-job-20261031-002626-job-97436430-40a6fc29/job-run.json",
+    ".loom/jobs/job-20261031-002626-job-c9f9ff0d/job.json",
+    ".loom/task-definitions/task-def-20261031-112704-task-def-87cfa7a1/task-definition.json",
+    "training/pyproject.toml",
+    "training/uv.lock"
+  ],
+  "untracked_files": [
+    ".loom/task-definitions/task-def-20261031-111807-task-def-2cdadd42/",
+    ".loom/task-runs/task-run-20261031-111820-task-def-20261031-111807-task-def-2cdadd42-fa01fa3a/",
+    ".loom/tasks/task-20261031-111807-task-9a960503/",
+    "training/configs/",
+    "training/reports/threshold-diagnosis.json",
+    "training/src/bonghwa_training/korea_build.py",
+    "training/src/bonghwa_training/korea_download.py",
+    "training/src/bonghwa_training/korea_train.py",
+    "training/tests/test_korea.py"
+  ],
+  "snapshot_captured_at": "2026-10-31T11:49:09+00:00",
+  "rollback_strategy": "revert-or-branch"
+}

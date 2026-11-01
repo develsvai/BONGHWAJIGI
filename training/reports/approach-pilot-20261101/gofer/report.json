@@ -1,0 +1,1963 @@
+{
+  "created_at_utc": "2026-10-31T16:25:32.270796+00:00",
+  "dataset_config_sha256": "dd38c6f831009cac18f3d5854c7846284f92a2e82aa2f6ae34ce0f5ba8191722",
+  "source_sha256": "d2013815132975c7bd83d329d18a6183d332d07b7e044eda5f7a709c83f370d3",
+  "target": "GOFER reconstructed-perimeter first approach, not personal harm",
+  "radius_km": 2,
+  "retrospective_proxy_only": true,
+  "source_asof_verified": false,
+  "personal_harm_probability": false,
+  "dataset_source": {
+    "record_url": "https://zenodo.org/records/14642378",
+    "license": "CC-BY-4.0",
+    "version": "0.2",
+    "archive_bytes": 75711678,
+    "archive_sha256": "96eca2e18529eb274ca94af9a730bcf1c9c6da597fb04a9b5cf9167aada451c2",
+    "record_sha256": "8d12b0ff647965e9b434e8197537b29fd06ea3a0417e038a7d5bcf6f11b60d93",
+    "attribution": "Liu et al. (2025), GOFER v0.2, doi:10.5281/zenodo.14642378"
+  },
+  "dataset_settings": {
+    "radius_km": 2,
+    "max_distance_km": 20,
+    "spacing_km": 2,
+    "issue_interval_hours": 6,
+    "max_issue_hours": 72,
+    "horizon_hours": 6
+  },
+  "horizons_hours": [
+    1,
+    3,
+    6
+  ],
+  "candidates": [
+    {
+      "name": "aft_distance",
+      "features": [
+        "distance_km"
+      ],
+      "parameters": {
+        "objective": "survival:aft",
+        "eval_metric": "aft-nloglik",
+        "aft_loss_distribution": "normal",
+        "aft_loss_distribution_scale": 1.0,
+        "tree_method": "hist",
+        "device": "cpu",
+        "nthread": 2,
+        "seed": 47,
+        "max_depth": 3,
+        "eta": 0.05,
+        "min_child_weight": 5,
+        "lambda": 20,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0
+      }
+    },
+    {
+      "name": "aft_history",
+      "features": [
+        "distance_km",
+        "prior_distance_km",
+        "closing_speed_kmh",
+        "history_elapsed_hours",
+        "elapsed_event_hours",
+        "perimeter_area_km2",
+        "perimeter_growth_km2_per_h"
+      ],
+      "parameters": {
+        "objective": "survival:aft",
+        "eval_metric": "aft-nloglik",
+        "aft_loss_distribution": "normal",
+        "aft_loss_distribution_scale": 1.0,
+        "tree_method": "hist",
+        "device": "cpu",
+        "nthread": 2,
+        "seed": 47,
+        "max_depth": 3,
+        "eta": 0.05,
+        "min_child_weight": 5,
+        "lambda": 20,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0
+      }
+    }
+  ],
+  "rounds": 100,
+  "selection": "None; two fixed models are compared without validation-based tuning",
+  "probability_calibrated": false,
+  "operational_use": false,
+  "test_evaluated": false,
+  "completed_at_utc": "2026-10-31T16:25:38.393768+00:00",
+  "xgboost": "3.4.1",
+  "plan_sha256": "d68da698451897e121c1c9bd547a3b1c5f45ba844b56e472342c89c1ea40648a",
+  "fit_receipt_sha256": "eff19668f852f46be32c70a53e8039729ab05dfa12fe12aefd5cc53d67a0b243",
+  "prediction_sha256": "3a21859cf1e303841c08fa7ac0418959eb210c9bb0cde78ca70a124f927248a1",
+  "training_rows": 106739,
+  "validation_rows": 46586,
+  "training_events": [
+    "august_complex_2020",
+    "bobcat_2020",
+    "creek_2020",
+    "czu_lightning_complex_2020",
+    "dolan_2020",
+    "glass_2020",
+    "july_complex_2020",
+    "kincade_2019",
+    "lnu_lightning_complex_2020",
+    "north_complex_2020",
+    "red_salmon_complex_2020",
+    "scu_lightning_complex_2020",
+    "slater_and_devil_2020",
+    "sqf_complex_2020",
+    "w_5_cold_springs_2020",
+    "walker_2019",
+    "zogg_2020"
+  ],
+  "validation_events": [
+    "antelope_2021",
+    "beckwourth_complex_2021",
+    "caldor_2021",
+    "dixie_2021",
+    "knp_complex_2021",
+    "mccash_2021",
+    "mcfarland_2021",
+    "monument_2021",
+    "river_complex_2021",
+    "tamarack_2021",
+    "windy_2021"
+  ],
+  "validation_hashes": {
+    "antelope_2021": "43127bbf02321e36ce56cf856df31b7e0fccd67f2d4bbbc13d1213e87feafad5",
+    "beckwourth_complex_2021": "737c811835f9a00a7c3595ff72d30f51b1caf47977a1ead5b927ecb681b40cb5",
+    "caldor_2021": "4606cd352f60b7d8af120416b1d8c15c62e0ab5c43ab6ea5d3f65afb519be076",
+    "dixie_2021": "4a8f149616902067050e85736df3154816fff6d3660949d6cdc3a540f9913e2b",
+    "knp_complex_2021": "eb89d2988576ce79819a3232aad0e123cfeb13b0374155e9ff1e839f8a9ba4f7",
+    "mccash_2021": "dcba4cb267f637cf58e2506781779747f617b4df53dcc03d4c3c0eb4cdbf83d7",
+    "mcfarland_2021": "b79c939170887f40f9f7fcc5086d6f930891d88f4554b56c80c6e10852c6b9d2",
+    "monument_2021": "0cf0ba3b1d31e2eb5639f06f28a6810e22dc2dd1a03908afc16ed6769014bbd4",
+    "river_complex_2021": "25f0cd975400f0131ce0d669960ea7cc2ce022ffac04387a0eb815b0adbdf330",
+    "tamarack_2021": "805d0e985fa269cc972070d17b00bc58b963c637ca055bb2136000f6198897df",
+    "windy_2021": "b753798a3d9d9bf02ce911feaca602095a25492b2f62bf7f6d94f10bc40b27eb"
+  },
+  "models": {
+    "aft_distance": {
+      "model_sha256": "5d42ad5850ce34dbc6074301c1e510333806109b5192b758e1a57ceef5a74138",
+      "reload_margin_max_abs_difference": 0.0,
+      "history": {
+        "train": {
+          "aft-nloglik": [
+            4.591151841617892,
+            4.213178375964929,
+            3.869176116949899,
+            3.555927604731189,
+            3.270530590805574,
+            3.0103650906124435,
+            2.773068295020528,
+            2.55650628732654,
+            2.3587474105777178,
+            2.1780614041152924,
+            2.012861640018312,
+            1.8617402934775795,
+            1.7234199026322035,
+            1.5967315700646891,
+            1.4806218417942523,
+            1.3741557608816262,
+            1.276465607596693,
+            1.18678009335728,
+            1.1043924941570453,
+            1.0286661788143336,
+            0.9590159473533362,
+            0.8949235974140733,
+            0.8359058489366312,
+            0.7815364356900203,
+            0.7314218323240701,
+            0.6852015332914403,
+            0.6425512273705962,
+            0.6031694359880565,
+            0.566792781997663,
+            0.5331769595400104,
+            0.5020931742470456,
+            0.47333958958917516,
+            0.4467259820420429,
+            0.42208367816918485,
+            0.3992547310884548,
+            0.3780982386068718,
+            0.35848331512965603,
+            0.34029061683732886,
+            0.32341045491767484,
+            0.30774214466525895,
+            0.29319348808734225,
+            0.27968014588097934,
+            0.26712284623244476,
+            0.2554503508024323,
+            0.24459740178151657,
+            0.23450386367206558,
+            0.2251127487252827,
+            0.2163733082421958,
+            0.20823810513539018,
+            0.2006628489420253,
+            0.19360690657402202,
+            0.18703453982566884,
+            0.1809097683696699,
+            0.17520150031906312,
+            0.16987953242536166,
+            0.16491679659626693,
+            0.16028998062764596,
+            0.1559728485284633,
+            0.15194538201297575,
+            0.14818666889386692,
+            0.1446794573268297,
+            0.14140543913821566,
+            0.1383496633984192,
+            0.13549718143207526,
+            0.13283345125207252,
+            0.1303459685887858,
+            0.1280230436875703,
+            0.1258535277099702,
+            0.12382649081876515,
+            0.12193308134555597,
+            0.12016339187519125,
+            0.11850987484290383,
+            0.11696501163447709,
+            0.11552137499900256,
+            0.11417252362550895,
+            0.11291214018704966,
+            0.11173414387431505,
+            0.11063352781326813,
+            0.10960498145209048,
+            0.1086436337365107,
+            0.10774552344897245,
+            0.10690627632339265,
+            0.10612149162775626,
+            0.10538873285531603,
+            0.10470410948449907,
+            0.10406444548400555,
+            0.1034668360450109,
+            0.10290844345490989,
+            0.10238687482652535,
+            0.10189973935557946,
+            0.10144479989106125,
+            0.10101982143893774,
+            0.10062284810676467,
+            0.1002520212591699,
+            0.09990569512395146,
+            0.0995822694897606,
+            0.099280262395581,
+            0.09899830918905984,
+            0.09873510606248065,
+            0.09848953982741797
+          ]
+        }
+      },
+      "saved_trees": 100
+    },
+    "aft_history": {
+      "model_sha256": "9c5054cc0a2d5dad9f79f9045fad472e3fe4ec847d5a7d34c7987ded80375a4d",
+      "reload_margin_max_abs_difference": 0.0,
+      "history": {
+        "train": {
+          "aft-nloglik": [
+            4.591105692491985,
+            4.2130743449570325,
+            3.869007500962272,
+            3.5556843291542877,
+            3.270197025199743,
+            3.0099455263199357,
+            2.7725398454422647,
+            2.555866526406207,
+            2.358011730196934,
+            2.1772082689954053,
+            2.0118957206325545,
+            1.8606639782494383,
+            1.72222648139514,
+            1.5954140372475747,
+            1.4792013023213084,
+            1.3726161728328448,
+            1.2748160932253996,
+            1.1850002572609424,
+            1.1025115347117953,
+            1.026669431579387,
+            0.956897193303067,
+            0.8926808631984913,
+            0.8335506165667832,
+            0.7790615761666191,
+            0.7288192503010346,
+            0.6824710884190336,
+            0.6396919853814361,
+            0.6001822118448574,
+            0.5636800624800641,
+            0.5299203348487996,
+            0.4986987998121219,
+            0.46981313321541535,
+            0.4430646812402278,
+            0.41829261612901086,
+            0.3953320778497185,
+            0.37404761445961265,
+            0.35430019298984766,
+            0.33598304802096424,
+            0.3189718147987952,
+            0.3031760371720251,
+            0.2885071370570767,
+            0.2748681174327597,
+            0.2621903960051091,
+            0.2503992306597847,
+            0.23942508552522368,
+            0.22921291487192413,
+            0.21970383279180747,
+            0.21085059701394987,
+            0.20259264345471242,
+            0.19490644575004645,
+            0.1877435132242983,
+            0.18105885015363424,
+            0.17482538583262425,
+            0.16901031159879398,
+            0.16358601587963537,
+            0.15851046429080326,
+            0.15377458363539118,
+            0.14933309430257807,
+            0.1451821300986813,
+            0.14131303540883616,
+            0.137705520156489,
+            0.13432498675381782,
+            0.13117336845681538,
+            0.1282269901184701,
+            0.1254581315971753,
+            0.12287784102224483,
+            0.12044287201349228,
+            0.11816456880839317,
+            0.11604328071930489,
+            0.11403611750287561,
+            0.11216855145488223,
+            0.11042835188502086,
+            0.10877494340374248,
+            0.10722554175304794,
+            0.10579296562572832,
+            0.10441751014219443,
+            0.10313163115360754,
+            0.1019206095377841,
+            0.10080482372677599,
+            0.0997374042748911,
+            0.09875499713588681,
+            0.09779520933761637,
+            0.09690560121859627,
+            0.09609085333362022,
+            0.09530622860457355,
+            0.09454820039818267,
+            0.09384631274500047,
+            0.09318780273383888,
+            0.09257145089196762,
+            0.0919869790193242,
+            0.0914223323904614,
+            0.09090786251824737,
+            0.09038810302676716,
+            0.0899236837549069,
+            0.08948196608462747,
+            0.08907523799705788,
+            0.08866517822711519,
+            0.08830322019814534,
+            0.08794360074794491,
+            0.08761894071656712
+          ]
+        }
+      },
+      "saved_trees": 100
+    }
+  },
+  "validation": {
+    "aft_distance": {
+      "events": {
+        "antelope_2021": {
+          "1": {
+            "rows": 4389,
+            "positives": 6,
+            "average_precision": 0.09302464523615173,
+            "brier": 0.0013413413414606686,
+            "logloss": 0.006871312498124189,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4389,
+            "positives": 12,
+            "average_precision": 0.11904346424404681,
+            "brier": 0.0024979324705528853,
+            "logloss": 0.011396894976403926,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4389,
+            "positives": 30,
+            "average_precision": 0.15827598725484474,
+            "brier": 0.006606006901227988,
+            "logloss": 0.03507207830416412,
+            "unknown_rows": 0
+          }
+        },
+        "beckwourth_complex_2021": {
+          "1": {
+            "rows": 4380,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 2.563394392316586e-06,
+            "logloss": 0.00027645419336092317,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4380,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 0.0002779929126686726,
+            "logloss": 0.004901275308324029,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4380,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 0.002338311538618169,
+            "logloss": 0.02269473172264,
+            "unknown_rows": 0
+          }
+        },
+        "caldor_2021": {
+          "1": {
+            "rows": 4565,
+            "positives": 19,
+            "average_precision": 0.2505267853156634,
+            "brier": 0.004060422379984148,
+            "logloss": 0.01930528800650703,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4565,
+            "positives": 67,
+            "average_precision": 0.2941641386652148,
+            "brier": 0.012877375805912937,
+            "logloss": 0.04863369597549519,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4565,
+            "positives": 119,
+            "average_precision": 0.31188717922038695,
+            "brier": 0.020754338034937446,
+            "logloss": 0.07812432296729353,
+            "unknown_rows": 0
+          }
+        },
+        "dixie_2021": {
+          "1": {
+            "rows": 4649,
+            "positives": 6,
+            "average_precision": 0.02272226704102763,
+            "brier": 0.0012838474965152764,
+            "logloss": 0.00786014881724096,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4649,
+            "positives": 22,
+            "average_precision": 0.10339482554996916,
+            "brier": 0.004385067173861783,
+            "logloss": 0.01883163893548989,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4649,
+            "positives": 39,
+            "average_precision": 0.2138247205064989,
+            "brier": 0.007705854398696756,
+            "logloss": 0.03832131721973674,
+            "unknown_rows": 0
+          }
+        },
+        "knp_complex_2021": {
+          "1": {
+            "rows": 4826,
+            "positives": 4,
+            "average_precision": 0.03147653000594177,
+            "brier": 0.0008157631311614867,
+            "logloss": 0.004484583950561049,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4826,
+            "positives": 17,
+            "average_precision": 0.023972039379526733,
+            "brier": 0.0036995314126432085,
+            "logloss": 0.021096368605476867,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4826,
+            "positives": 21,
+            "average_precision": 0.03711194385176829,
+            "brier": 0.0065771408312270095,
+            "logloss": 0.037050720131970014,
+            "unknown_rows": 0
+          }
+        },
+        "mccash_2021": {
+          "1": {
+            "rows": 3939,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 2.8079070540620344e-06,
+            "logloss": 0.0003015925365418499,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 3939,
+            "positives": 4,
+            "average_precision": 0.0889423076923077,
+            "brier": 0.001113852499038361,
+            "logloss": 0.007355116678692669,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 3939,
+            "positives": 9,
+            "average_precision": 0.11275502103675478,
+            "brier": 0.003645233176336701,
+            "logloss": 0.02564868329703211,
+            "unknown_rows": 0
+          }
+        },
+        "mcfarland_2021": {
+          "1": {
+            "rows": 4114,
+            "positives": 9,
+            "average_precision": 0.12698868034496263,
+            "brier": 0.00213877905200958,
+            "logloss": 0.010298533507118176,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4114,
+            "positives": 18,
+            "average_precision": 0.20979140357602283,
+            "brier": 0.003768693181614869,
+            "logloss": 0.015202220322753259,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4114,
+            "positives": 20,
+            "average_precision": 0.2732859087538614,
+            "brier": 0.004673799291867559,
+            "logloss": 0.028419082073314766,
+            "unknown_rows": 0
+          }
+        },
+        "monument_2021": {
+          "1": {
+            "rows": 4538,
+            "positives": 4,
+            "average_precision": 0.09109730848861283,
+            "brier": 0.0008626759351911511,
+            "logloss": 0.004263523084507649,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4538,
+            "positives": 13,
+            "average_precision": 0.17752980049340344,
+            "brier": 0.0025622181572396746,
+            "logloss": 0.011786967860726551,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4538,
+            "positives": 32,
+            "average_precision": 0.31649811912638304,
+            "brier": 0.005886737626846528,
+            "logloss": 0.03160673005991305,
+            "unknown_rows": 0
+          }
+        },
+        "river_complex_2021": {
+          "1": {
+            "rows": 2763,
+            "positives": 4,
+            "average_precision": 0.07418414918414919,
+            "brier": 0.0014135198264766543,
+            "logloss": 0.006846717328852386,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 2763,
+            "positives": 12,
+            "average_precision": 0.08244032026605316,
+            "brier": 0.004068305978680612,
+            "logloss": 0.022407592584339095,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 2763,
+            "positives": 17,
+            "average_precision": 0.09854024326776005,
+            "brier": 0.006804203148467107,
+            "logloss": 0.0386969196308185,
+            "unknown_rows": 0
+          }
+        },
+        "tamarack_2021": {
+          "1": {
+            "rows": 4272,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 2.1317484092649278e-06,
+            "logloss": 0.00023194109047807191,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4272,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 0.00022854016748371424,
+            "logloss": 0.004311134381177367,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4272,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 0.0019486979888874996,
+            "logloss": 0.020723783459865912,
+            "unknown_rows": 0
+          }
+        },
+        "windy_2021": {
+          "1": {
+            "rows": 4151,
+            "positives": 3,
+            "average_precision": 0.23076923076923078,
+            "brier": 0.0006994909672347513,
+            "logloss": 0.0031612992375488753,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4151,
+            "positives": 5,
+            "average_precision": 0.27179487179487183,
+            "brier": 0.0010994358185436302,
+            "logloss": 0.006798424300503967,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4151,
+            "positives": 7,
+            "average_precision": 0.34118262689691264,
+            "brier": 0.0026098406938310646,
+            "logloss": 0.022768805969792905,
+            "unknown_rows": 0
+          }
+        }
+      },
+      "pooled_horizons": {
+        "1": {
+          "rows": 46586,
+          "positives": 55,
+          "average_precision": 0.0720679360335845,
+          "brier": 0.001156629732892357,
+          "logloss": 0.005873374548750234
+        },
+        "3": {
+          "rows": 46586,
+          "positives": 170,
+          "average_precision": 0.10394656890291934,
+          "brier": 0.0033809813431336963,
+          "logloss": 0.015807610594312037
+        },
+        "6": {
+          "rows": 46586,
+          "positives": 294,
+          "average_precision": 0.13808425925387757,
+          "brier": 0.006435491771261047,
+          "logloss": 0.03473740831384748
+        }
+      },
+      "macro_eligible_event_horizon_ap": 0.1598163276139357,
+      "eligible_ap_cells": 26,
+      "macro_nonempty_event_horizon_brier": 0.0035985591633052585,
+      "evaluation_note": "Known labels only; interval/censoring selection may bias metrics"
+    },
+    "aft_history": {
+      "events": {
+        "antelope_2021": {
+          "1": {
+            "rows": 4389,
+            "positives": 6,
+            "average_precision": 0.33345410628019323,
+            "brier": 0.0013314777193587115,
+            "logloss": 0.006410026955062695,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4389,
+            "positives": 12,
+            "average_precision": 0.2538322469222215,
+            "brier": 0.002403680490271167,
+            "logloss": 0.010239310459204214,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4389,
+            "positives": 30,
+            "average_precision": 0.2155820560074812,
+            "brier": 0.006039032548788558,
+            "logloss": 0.03179305939955012,
+            "unknown_rows": 0
+          }
+        },
+        "beckwourth_complex_2021": {
+          "1": {
+            "rows": 4380,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 1.0255274127273965e-07,
+            "logloss": 5.68951368647865e-05,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4380,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 2.975631321311517e-05,
+            "logloss": 0.0018946789160724082,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4380,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 0.00046759811151192193,
+            "logloss": 0.011946928101258934,
+            "unknown_rows": 0
+          }
+        },
+        "caldor_2021": {
+          "1": {
+            "rows": 4565,
+            "positives": 19,
+            "average_precision": 0.4604514982428833,
+            "brier": 0.0038316402117947413,
+            "logloss": 0.0168669490376247,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4565,
+            "positives": 67,
+            "average_precision": 0.549609685950534,
+            "brier": 0.011064070862602676,
+            "logloss": 0.03817507238517003,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4565,
+            "positives": 119,
+            "average_precision": 0.5516431023013275,
+            "brier": 0.01716541072904549,
+            "logloss": 0.06348385839151958,
+            "unknown_rows": 0
+          }
+        },
+        "dixie_2021": {
+          "1": {
+            "rows": 4649,
+            "positives": 6,
+            "average_precision": 0.138769649566751,
+            "brier": 0.0012602804337073445,
+            "logloss": 0.006235447206665472,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4649,
+            "positives": 22,
+            "average_precision": 0.23652968412825578,
+            "brier": 0.004120823464847922,
+            "logloss": 0.017194984259747383,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4649,
+            "positives": 39,
+            "average_precision": 0.3222947259679019,
+            "brier": 0.006862286754099638,
+            "logloss": 0.03422374714396245,
+            "unknown_rows": 0
+          }
+        },
+        "knp_complex_2021": {
+          "1": {
+            "rows": 4826,
+            "positives": 4,
+            "average_precision": 0.020063746322327557,
+            "brier": 0.0008299829344986578,
+            "logloss": 0.005874983805764234,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4826,
+            "positives": 17,
+            "average_precision": 0.018406182357500286,
+            "brier": 0.0036359581353959617,
+            "logloss": 0.022383531917898335,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4826,
+            "positives": 21,
+            "average_precision": 0.028617306551420137,
+            "brier": 0.0052582517127725365,
+            "logloss": 0.030950082188535153,
+            "unknown_rows": 0
+          }
+        },
+        "mccash_2021": {
+          "1": {
+            "rows": 3939,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 7.542004072414202e-07,
+            "logloss": 0.00011162378873639194,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 3939,
+            "positives": 4,
+            "average_precision": 0.07764116575591985,
+            "brier": 0.0010052419016198385,
+            "logloss": 0.005817975304288741,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 3939,
+            "positives": 9,
+            "average_precision": 0.18971182534552886,
+            "brier": 0.0023300005945642395,
+            "logloss": 0.01784963971552653,
+            "unknown_rows": 0
+          }
+        },
+        "mcfarland_2021": {
+          "1": {
+            "rows": 4114,
+            "positives": 9,
+            "average_precision": 0.25624994880993335,
+            "brier": 0.0021257555215814187,
+            "logloss": 0.011350339922074173,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4114,
+            "positives": 18,
+            "average_precision": 0.28824049748756875,
+            "brier": 0.0037806505212622165,
+            "logloss": 0.01495005283097156,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4114,
+            "positives": 20,
+            "average_precision": 0.32822498618176693,
+            "brier": 0.003944061514605703,
+            "logloss": 0.0225960633807697,
+            "unknown_rows": 0
+          }
+        },
+        "monument_2021": {
+          "1": {
+            "rows": 4538,
+            "positives": 4,
+            "average_precision": 0.15165852351207043,
+            "brier": 0.0008379455722239207,
+            "logloss": 0.0037595907375031754,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4538,
+            "positives": 13,
+            "average_precision": 0.10648450490556134,
+            "brier": 0.0028794455158075594,
+            "logloss": 0.013475709238554774,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4538,
+            "positives": 32,
+            "average_precision": 0.17830165374202067,
+            "brier": 0.007058927959432177,
+            "logloss": 0.03312513714409263,
+            "unknown_rows": 0
+          }
+        },
+        "river_complex_2021": {
+          "1": {
+            "rows": 2763,
+            "positives": 4,
+            "average_precision": 0.39215686274509803,
+            "brier": 0.0013146484312198906,
+            "logloss": 0.004795085533926104,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 2763,
+            "positives": 12,
+            "average_precision": 0.4640555519310416,
+            "brier": 0.0033201921893697903,
+            "logloss": 0.018594676632618625,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 2763,
+            "positives": 17,
+            "average_precision": 0.3967208582372722,
+            "brier": 0.005520329849512799,
+            "logloss": 0.03280140001646585,
+            "unknown_rows": 0
+          }
+        },
+        "tamarack_2021": {
+          "1": {
+            "rows": 4272,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 3.7437664910095983e-07,
+            "logloss": 6.080580102060808e-05,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4272,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 4.1580866938532544e-05,
+            "logloss": 0.0018474151776889719,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4272,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 0.0004801223812798914,
+            "logloss": 0.011642173419683143,
+            "unknown_rows": 0
+          }
+        },
+        "windy_2021": {
+          "1": {
+            "rows": 4151,
+            "positives": 3,
+            "average_precision": 0.33535353535353535,
+            "brier": 0.0007090569925939739,
+            "logloss": 0.0035488979823801985,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4151,
+            "positives": 5,
+            "average_precision": 0.23511893124796351,
+            "brier": 0.0010876901427774302,
+            "logloss": 0.005615417573049137,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4151,
+            "positives": 7,
+            "average_precision": 0.21750963363866588,
+            "brier": 0.001754430965857029,
+            "logloss": 0.016167892741028103,
+            "unknown_rows": 0
+          }
+        }
+      },
+      "pooled_horizons": {
+        "1": {
+          "rows": 46586,
+          "positives": 55,
+          "average_precision": 0.22240090999935988,
+          "brier": 0.0011232661826088622,
+          "logloss": 0.0054771339848773025
+        },
+        "3": {
+          "rows": 46586,
+          "positives": 170,
+          "average_precision": 0.27043823987334586,
+          "brier": 0.0030983322494333274,
+          "logloss": 0.013815819724187524
+        },
+        "6": {
+          "rows": 46586,
+          "positives": 294,
+          "average_precision": 0.2909691206776807,
+          "brier": 0.005285196004552463,
+          "logloss": 0.028146068717421667
+        }
+      },
+      "macro_eligible_event_horizon_ap": 0.25948778728818245,
+      "eligible_ap_cells": 26,
+      "macro_nonempty_event_horizon_brier": 0.0031058049234046203,
+      "evaluation_note": "Known labels only; interval/censoring selection may bias metrics"
+    },
+    "constant_training_known_prior": {
+      "events": {
+        "antelope_2021": {
+          "1": {
+            "rows": 4389,
+            "positives": 6,
+            "average_precision": 0.001367053998632946,
+            "brier": 0.001366429808864605,
+            "logloss": 0.010682533405976066,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4389,
+            "positives": 12,
+            "average_precision": 0.002734107997265892,
+            "brier": 0.0027612664305435193,
+            "logloss": 0.021630162717854243,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4389,
+            "positives": 30,
+            "average_precision": 0.00683526999316473,
+            "brier": 0.006894257600005969,
+            "logloss": 0.04495072776394765,
+            "unknown_rows": 0
+          }
+        },
+        "beckwourth_complex_2021": {
+          "1": {
+            "rows": 4380,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 6.163756711160295e-06,
+            "logloss": 0.0024857784136519947,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4380,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 7.42898352485023e-05,
+            "logloss": 0.00865651488091389,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4380,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 0.0002929826171166919,
+            "logloss": 0.017264919703293732,
+            "unknown_rows": 0
+          }
+        },
+        "caldor_2021": {
+          "1": {
+            "rows": 4565,
+            "positives": 19,
+            "average_precision": 0.00416210295728368,
+            "brier": 0.004147600279351829,
+            "logloss": 0.027441440902330225,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4565,
+            "positives": 67,
+            "average_precision": 0.014676889375684557,
+            "brier": 0.014498174438064107,
+            "logloss": 0.07829999432367023,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4565,
+            "positives": 119,
+            "average_precision": 0.02606790799561884,
+            "brier": 0.025468495666318765,
+            "logloss": 0.12285125323967193,
+            "unknown_rows": 0
+          }
+        },
+        "dixie_2021": {
+          "1": {
+            "rows": 4649,
+            "positives": 6,
+            "average_precision": 0.001290600129060013,
+            "brier": 0.0012903555620244467,
+            "logloss": 0.010224121640434174,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4649,
+            "positives": 22,
+            "average_precision": 0.004732200473220047,
+            "brier": 0.004724915168447331,
+            "logloss": 0.031111334695915094,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4649,
+            "positives": 39,
+            "average_precision": 0.008388900838890084,
+            "brier": 0.008394702270777987,
+            "logloss": 0.05124360652877729,
+            "unknown_rows": 0
+          }
+        },
+        "knp_complex_2021": {
+          "1": {
+            "rows": 4826,
+            "positives": 4,
+            "average_precision": 0.0008288437629506838,
+            "brier": 0.0008308919930561623,
+            "logloss": 0.007455464511360291,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4826,
+            "positives": 17,
+            "average_precision": 0.003522585992540406,
+            "brier": 0.0035361523974937557,
+            "logloss": 0.025371578875554565,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4826,
+            "positives": 21,
+            "average_precision": 0.00435142975549109,
+            "brier": 0.004495447832601717,
+            "logloss": 0.034890097511985615,
+            "unknown_rows": 0
+          }
+        },
+        "mccash_2021": {
+          "1": {
+            "rows": 3939,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 6.163756711160296e-06,
+            "logloss": 0.0024857784136519947,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 3939,
+            "positives": 4,
+            "average_precision": 0.0010154861640010156,
+            "brier": 0.0010722707336787154,
+            "logloss": 0.013475110155207805,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 3939,
+            "positives": 9,
+            "average_precision": 0.002284843869002285,
+            "brier": 0.002499608352067267,
+            "logloss": 0.0265195283535763,
+            "unknown_rows": 0
+          }
+        },
+        "mcfarland_2021": {
+          "1": {
+            "rows": 4114,
+            "positives": 9,
+            "average_precision": 0.0021876519202722413,
+            "brier": 0.002182953147657247,
+            "logloss": 0.015602778047090383,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4114,
+            "positives": 18,
+            "average_precision": 0.004375303840544483,
+            "brier": 0.0043741708306604486,
+            "logloss": 0.02941782030981444,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4114,
+            "positives": 20,
+            "average_precision": 0.004861448711716091,
+            "brier": 0.004988007070187678,
+            "logloss": 0.03695589548974813,
+            "unknown_rows": 0
+          }
+        },
+        "monument_2021": {
+          "1": {
+            "rows": 4538,
+            "positives": 4,
+            "average_precision": 0.0008814455707360071,
+            "brier": 0.0008832326127272422,
+            "logloss": 0.007770861072871968,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4538,
+            "positives": 13,
+            "average_precision": 0.0028646981048920227,
+            "brier": 0.0028896053853760873,
+            "logloss": 0.022249827364980036,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4538,
+            "positives": 32,
+            "average_precision": 0.007051564565888057,
+            "brier": 0.007103147658962097,
+            "logloss": 0.0458268145946021,
+            "unknown_rows": 0
+          }
+        },
+        "river_complex_2021": {
+          "1": {
+            "rows": 2763,
+            "positives": 4,
+            "average_precision": 0.0014477017734346724,
+            "brier": 0.00144667713658846,
+            "logloss": 0.011166091518082047,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 2763,
+            "positives": 12,
+            "average_precision": 0.004343105320304018,
+            "brier": 0.0043425273585021495,
+            "logloss": 0.029265034734815887,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 2763,
+            "positives": 17,
+            "average_precision": 0.006152732537097358,
+            "brier": 0.006235085769467009,
+            "logloss": 0.0421861550372251,
+            "unknown_rows": 0
+          }
+        },
+        "tamarack_2021": {
+          "1": {
+            "rows": 4272,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 6.163756711160296e-06,
+            "logloss": 0.0024857784136519947,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4272,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 7.428983524850229e-05,
+            "logloss": 0.008656514880913888,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4272,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 0.0002929826171166919,
+            "logloss": 0.017264919703293732,
+            "unknown_rows": 0
+          }
+        },
+        "windy_2021": {
+          "1": {
+            "rows": 4151,
+            "positives": 3,
+            "average_precision": 0.0007227174174897615,
+            "brier": 0.0007252926055308987,
+            "logloss": 0.006819138767941366,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4151,
+            "positives": 5,
+            "average_precision": 0.0012045290291496024,
+            "brier": 0.0012580548192633809,
+            "logloss": 0.014372139665737952,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4151,
+            "positives": 7,
+            "average_precision": 0.0016863406408094434,
+            "brier": 0.001921593966183642,
+            "logloss": 0.024095330697009875,
+            "unknown_rows": 0
+          }
+        }
+      },
+      "pooled_horizons": {
+        "1": {
+          "rows": 46586,
+          "positives": 55,
+          "average_precision": 0.0011806122010904563,
+          "brier": 0.0011809137662261104,
+          "logloss": 0.00956464213298137
+        },
+        "3": {
+          "rows": 46586,
+          "positives": 170,
+          "average_precision": 0.003649164985188683,
+          "brier": 0.0036605493821929903,
+          "logloss": 0.025972210334083493
+        },
+        "6": {
+          "rows": 46586,
+          "positives": 294,
+          "average_precision": 0.006310908856738076,
+          "brier": 0.006387847164814074,
+          "logloss": 0.042826837735888475
+        }
+      },
+      "macro_eligible_event_horizon_ap": 0.004616825489813078,
+      "eligible_ap_cells": 26,
+      "macro_nonempty_event_horizon_brier": 0.003669210699068679,
+      "evaluation_note": "Known labels only; interval/censoring selection may bias metrics"
+    },
+    "negative_current_distance": {
+      "events": {
+        "antelope_2021": {
+          "1": {
+            "rows": 4389,
+            "positives": 6,
+            "average_precision": 0.11290438740529485,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4389,
+            "positives": 12,
+            "average_precision": 0.13596582041894428,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4389,
+            "positives": 30,
+            "average_precision": 0.16229054409003163,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          }
+        },
+        "beckwourth_complex_2021": {
+          "1": {
+            "rows": 4380,
+            "positives": 0,
+            "average_precision": null,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4380,
+            "positives": 0,
+            "average_precision": null,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4380,
+            "positives": 0,
+            "average_precision": null,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          }
+        },
+        "caldor_2021": {
+          "1": {
+            "rows": 4565,
+            "positives": 19,
+            "average_precision": 0.32899773342282723,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4565,
+            "positives": 67,
+            "average_precision": 0.3164076476781857,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4565,
+            "positives": 119,
+            "average_precision": 0.33250149554470054,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          }
+        },
+        "dixie_2021": {
+          "1": {
+            "rows": 4649,
+            "positives": 6,
+            "average_precision": 0.027460916578050804,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4649,
+            "positives": 22,
+            "average_precision": 0.17532394984745198,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4649,
+            "positives": 39,
+            "average_precision": 0.30913083763853727,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          }
+        },
+        "knp_complex_2021": {
+          "1": {
+            "rows": 4826,
+            "positives": 4,
+            "average_precision": 0.043671502827914745,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4826,
+            "positives": 17,
+            "average_precision": 0.028138787113492197,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4826,
+            "positives": 21,
+            "average_precision": 0.04082896925856731,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          }
+        },
+        "mccash_2021": {
+          "1": {
+            "rows": 3939,
+            "positives": 0,
+            "average_precision": null,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 3939,
+            "positives": 4,
+            "average_precision": 0.0864353245988827,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 3939,
+            "positives": 9,
+            "average_precision": 0.10544343183338475,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          }
+        },
+        "mcfarland_2021": {
+          "1": {
+            "rows": 4114,
+            "positives": 9,
+            "average_precision": 0.2574611854997354,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4114,
+            "positives": 18,
+            "average_precision": 0.2608665631905322,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4114,
+            "positives": 20,
+            "average_precision": 0.3327243342592597,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          }
+        },
+        "monument_2021": {
+          "1": {
+            "rows": 4538,
+            "positives": 4,
+            "average_precision": 0.3959112959112959,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4538,
+            "positives": 13,
+            "average_precision": 0.28565264882096725,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4538,
+            "positives": 32,
+            "average_precision": 0.3836764013164496,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          }
+        },
+        "river_complex_2021": {
+          "1": {
+            "rows": 2763,
+            "positives": 4,
+            "average_precision": 0.08339416533009666,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 2763,
+            "positives": 12,
+            "average_precision": 0.176986054828189,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 2763,
+            "positives": 17,
+            "average_precision": 0.16885022025214874,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          }
+        },
+        "tamarack_2021": {
+          "1": {
+            "rows": 4272,
+            "positives": 0,
+            "average_precision": null,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4272,
+            "positives": 0,
+            "average_precision": null,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4272,
+            "positives": 0,
+            "average_precision": null,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          }
+        },
+        "windy_2021": {
+          "1": {
+            "rows": 4151,
+            "positives": 3,
+            "average_precision": 0.8666666666666667,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4151,
+            "positives": 5,
+            "average_precision": 0.7534782608695652,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4151,
+            "positives": 7,
+            "average_precision": 0.6463824994880896,
+            "brier": null,
+            "logloss": null,
+            "unknown_rows": 0
+          }
+        }
+      },
+      "pooled_horizons": {
+        "1": {
+          "rows": 46586,
+          "positives": 55,
+          "average_precision": 0.08911510555734393,
+          "brier": null,
+          "logloss": null
+        },
+        "3": {
+          "rows": 46586,
+          "positives": 170,
+          "average_precision": 0.12180829306239613,
+          "brier": null,
+          "logloss": null
+        },
+        "6": {
+          "rows": 46586,
+          "positives": 294,
+          "average_precision": 0.1536984497255524,
+          "brier": null,
+          "logloss": null
+        }
+      },
+      "macro_eligible_event_horizon_ap": 0.26221352479574084,
+      "eligible_ap_cells": 26,
+      "macro_nonempty_event_horizon_brier": null,
+      "evaluation_note": "Known labels only; interval/censoring selection may bias metrics"
+    },
+    "constant_closing_speed_projection": {
+      "events": {
+        "antelope_2021": {
+          "1": {
+            "rows": 4389,
+            "positives": 6,
+            "average_precision": 0.21496924128503075,
+            "brier": 0.001594896331738437,
+            "logloss": 0.025706791469317695,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4389,
+            "positives": 12,
+            "average_precision": 0.11293384977595504,
+            "brier": 0.003645477329687856,
+            "logloss": 0.05875825192972559,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4389,
+            "positives": 30,
+            "average_precision": 0.08120300751879699,
+            "brier": 0.009569377990430622,
+            "logloss": 0.1542402488154017,
+            "unknown_rows": 0
+          }
+        },
+        "beckwourth_complex_2021": {
+          "1": {
+            "rows": 4380,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 0.0,
+            "logloss": 1.0000000494736474e-07,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4380,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 0.0,
+            "logloss": 1.0000000494736474e-07,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4380,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 0.0006849315068493151,
+            "logloss": 0.011039891473624585,
+            "unknown_rows": 0
+          }
+        },
+        "caldor_2021": {
+          "1": {
+            "rows": 4565,
+            "positives": 19,
+            "average_precision": 0.22656731180577255,
+            "brier": 0.004381161007667032,
+            "logloss": 0.070616071746868,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4565,
+            "positives": 67,
+            "average_precision": 0.23199989578394992,
+            "brier": 0.01511500547645126,
+            "logloss": 0.24362520252650954,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4565,
+            "positives": 119,
+            "average_precision": 0.18948693168395508,
+            "brier": 0.0343921139101862,
+            "logloss": 0.5543354782146672,
+            "unknown_rows": 0
+          }
+        },
+        "dixie_2021": {
+          "1": {
+            "rows": 4649,
+            "positives": 6,
+            "average_precision": 0.001290600129060013,
+            "brier": 0.002796300279630028,
+            "logloss": 0.045071135097045724,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4649,
+            "positives": 22,
+            "average_precision": 0.08277195486810458,
+            "brier": 0.007743600774360078,
+            "logloss": 0.12481219719199306,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4649,
+            "positives": 39,
+            "average_precision": 0.12650475538551825,
+            "brier": 0.01312110131211013,
+            "logloss": 0.21148726468670287,
+            "unknown_rows": 0
+          }
+        },
+        "knp_complex_2021": {
+          "1": {
+            "rows": 4826,
+            "positives": 4,
+            "average_precision": 0.0008288437629506838,
+            "brier": 0.0014504765851636966,
+            "logloss": 0.02337902019442834,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4826,
+            "positives": 17,
+            "average_precision": 0.003522585992540406,
+            "brier": 0.005387484459179445,
+            "logloss": 0.08683608929334381,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4826,
+            "positives": 21,
+            "average_precision": 0.00435142975549109,
+            "brier": 0.007666804807293825,
+            "logloss": 0.12357439245625845,
+            "unknown_rows": 0
+          }
+        },
+        "mccash_2021": {
+          "1": {
+            "rows": 3939,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 0.0005077430820005078,
+            "logloss": 0.008183951511294448,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 3939,
+            "positives": 4,
+            "average_precision": 0.0010154861640010156,
+            "brier": 0.0030464584920030465,
+            "logloss": 0.04910320906720746,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 3939,
+            "positives": 9,
+            "average_precision": 0.027920891636674976,
+            "brier": 0.005585173902005585,
+            "logloss": 0.09002246662325407,
+            "unknown_rows": 0
+          }
+        },
+        "mcfarland_2021": {
+          "1": {
+            "rows": 4114,
+            "positives": 9,
+            "average_precision": 0.11305569059579754,
+            "brier": 0.0019445794846864365,
+            "logloss": 0.031343017940614205,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4114,
+            "positives": 18,
+            "average_precision": 0.1515511622463494,
+            "brier": 0.003889158969372873,
+            "logloss": 0.06268593588147936,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4114,
+            "positives": 20,
+            "average_precision": 0.20340301409820125,
+            "brier": 0.004132231404958678,
+            "logloss": 0.06660380062418347,
+            "unknown_rows": 0
+          }
+        },
+        "monument_2021": {
+          "1": {
+            "rows": 4538,
+            "positives": 4,
+            "average_precision": 0.5,
+            "brier": 0.0008814455707360071,
+            "logloss": 0.01420732393256085,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4538,
+            "positives": 13,
+            "average_precision": 0.09333798271656359,
+            "brier": 0.005288673424416042,
+            "logloss": 0.08524344359441245,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4538,
+            "positives": 32,
+            "average_precision": 0.09256363575799195,
+            "brier": 0.011679153812252093,
+            "logloss": 0.1882458171039349,
+            "unknown_rows": 0
+          }
+        },
+        "river_complex_2021": {
+          "1": {
+            "rows": 2763,
+            "positives": 4,
+            "average_precision": 0.0014477017734346724,
+            "brier": 0.003257328990228013,
+            "logloss": 0.05250203990635914,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 2763,
+            "positives": 12,
+            "average_precision": 0.16006628950225726,
+            "brier": 0.006876583423814694,
+            "logloss": 0.11083752869166277,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 2763,
+            "positives": 17,
+            "average_precision": 0.08597219561005727,
+            "brier": 0.013753166847629388,
+            "logloss": 0.22167495738370166,
+            "unknown_rows": 0
+          }
+        },
+        "tamarack_2021": {
+          "1": {
+            "rows": 4272,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 0.00023408239700374532,
+            "logloss": 0.003773062441831883,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4272,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 0.0011704119850187266,
+            "logloss": 0.01886491220913963,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4272,
+            "positives": 0,
+            "average_precision": null,
+            "brier": 0.003043071161048689,
+            "logloss": 0.04904861174375511,
+            "unknown_rows": 0
+          }
+        },
+        "windy_2021": {
+          "1": {
+            "rows": 4151,
+            "positives": 3,
+            "average_precision": 0.0007227174174897615,
+            "brier": 0.000963623223319682,
+            "logloss": 0.015531871188720826,
+            "unknown_rows": 0
+          },
+          "3": {
+            "rows": 4151,
+            "positives": 5,
+            "average_precision": 0.03429695655665301,
+            "brier": 0.0021681522524692846,
+            "logloss": 0.03494658517496438,
+            "unknown_rows": 0
+          },
+          "6": {
+            "rows": 4151,
+            "positives": 7,
+            "average_precision": 0.010969244358789047,
+            "brier": 0.00481811611659841,
+            "logloss": 0.07765895594472558,
+            "unknown_rows": 0
+          }
+        }
+      },
+      "pooled_horizons": {
+        "1": {
+          "rows": 46586,
+          "positives": 55,
+          "average_precision": 0.0981220930089689,
+          "brier": 0.0016099257287597133,
+          "logloss": 0.025949036726518247
+        },
+        "3": {
+          "rows": 46586,
+          "positives": 170,
+          "average_precision": 0.11357401695785599,
+          "brier": 0.0049800369209633795,
+          "logloss": 0.08026881094074878
+        },
+        "6": {
+          "rows": 46586,
+          "positives": 294,
+          "average_precision": 0.10569078349610521,
+          "brier": 0.009938608165543296,
+          "logloss": 0.16019153605888478
+        }
+      },
+      "macro_eligible_event_horizon_ap": 0.10587512985313025,
+      "eligible_ap_cells": 26,
+      "macro_nonempty_event_horizon_brier": 0.005478420797282116,
+      "evaluation_note": "Known labels only; interval/censoring selection may bias metrics"
+    }
+  },
+  "elapsed_seconds": 6.124,
+  "limitations": [
+    "US reconstructed perimeters; not ground-truth arrival or Korea validation",
+    "Past timestamps do not resolve GOFER retrospective processing or input availability",
+    "No future weather or fuel inputs in this geometry-only pilot",
+    "Fixed lognormal residual scale; no independent calibration validation",
+    "AFT has no never-arrival component; do not extrapolate beyond studied 1-6h horizons",
+    "Repeated locations/issues are dependent; event-level evidence remains limited",
+    "Only known labels evaluated; unknown interval/censored rows reported separately",
+    "Radius and grid are research definitions, not user safety thresholds"
+  ]
+}

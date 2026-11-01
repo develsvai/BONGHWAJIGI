@@ -1,0 +1,83 @@
+{
+  "checked_at_utc": "2026-10-31T19:03:48.832017+00:00",
+  "status": "passed",
+  "fits_executed": 45,
+  "earlier_separate_population_fits": 57,
+  "total_this_stage_fits": 102,
+  "selected": "A_original34",
+  "remote_source_recheck": {
+    "status": "passed",
+    "source_files": 35,
+    "code_files": 10,
+    "plan_files": 1,
+    "sha256": {
+      "plan.json": "61541be3acd13c2df17f82dec40e2ebc4cf04d9abe78adaa2bc7998e300cd6f0",
+      "report.json": "1e818c6db093e43762cb895f28bf0ba5c50352f9cd46576e412017bf619b0578",
+      "model.ubj": "7d04c587c748aa3e6927e47f1d81fc28fb5d708e79153fb727ee418193101aa9",
+      "outer-predictions.parquet": "eda0f572aec7b9835234f8a4f64f856186974bd24e98621237d87e21ebf19a4e"
+    }
+  },
+  "local_model_receipts_match_remote": true,
+  "local_frozen_code_files_match": 10,
+  "tests": {
+    "tests": 542,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "ruff": "passed for12 new or changed Python files",
+  "independent_metric_comparisons": 6522,
+  "maximum_absolute_metric_difference": 1.1102230246251565e-16,
+  "context_independent_checks": {
+    "raw_grib_hashes": 284,
+    "raw_index_hashes": 71,
+    "npz_hashes": 71,
+    "parquet_hashes": 10,
+    "weather_values_identical": 318448,
+    "independent_nearest_coordinate_checks": 5581
+  },
+  "relative_document_links_checked": 135,
+  "link_scope": "new GFS reports, training README, domestic improvement document, own resource sections19/20; unrelated concurrent app edits excluded",
+  "credential_pattern_scan": {
+    "files": 114,
+    "unexpected_matches": 0,
+    "excluded_example_test_case_tokens": 2,
+    "scope": "new three research report trees; pattern check, not a general secret detection guarantee"
+  },
+  "loom": {
+    "strict": "passed",
+    "jobs_checked": 6,
+    "tasks_checked": 58,
+    "task_boundary": "passed",
+    "job_id": "job-20261031-002626-job-c9f9ff0d",
+    "task_id": "task-20261031-111807-task-9a960503",
+    "task_status": "RUNNING",
+    "reason": "domestic operational objective not achieved; fixed research runs completed"
+  },
+  "gpu_service_probe": {
+    "generation": "ready",
+    "embedding": "ready",
+    "gpu": "NVIDIA L4",
+    "memory_used_mib": 9406,
+    "utilization_percent": 0
+  },
+  "artifacts": {
+    "training/reports/korea-gfs-2022-20261101/model/plan.json": "61541be3acd13c2df17f82dec40e2ebc4cf04d9abe78adaa2bc7998e300cd6f0",
+    "training/reports/korea-gfs-2022-20261101/model/report.json": "1e818c6db093e43762cb895f28bf0ba5c50352f9cd46576e412017bf619b0578",
+    "training/reports/korea-gfs-2022-20261101/context/plan.json": "f9aad36dbb4437424524ba9a03befc23903dee1fde951729a94b6a5284ab52ff",
+    "training/reports/korea-gfs-2022-20261101/context/report.json": "63cf122fa327b15820e3b57e7638a56c487f4fbfdf6ea1afaafa6f40930d6350",
+    "training/reports/korea-gfs-2022-20261101/independent-review.md": "700e80b5fc2eb10a89d0add65edaadbff0d6fb34b53bd88f99736ce85558b61e",
+    "training/reports/korea-gfs-2022-20261101/independent-review.json": "1e406bc95caefd828bf8abfd4032a795639de1e13b7cb9ff20cf627d4047572e",
+    "training/reports/korea-gfs-2022-20261101/context-review.md": "09feabb26f492cf069b55b5465a56eb7e045ced49bb9f0bffb0498f6d814d83c",
+    "training/reports/korea-gfs-2022-20261101/tests.xml": "f3d78f7c96f6c4d091bc0360627c825970b5f8064fc66e12834d3382834860c8",
+    "training/reports/korea-gfs-2022-20261101/README.md": "91a13897cd6175fc7d423314673b459947ce79ce336d80cd70b7333dc833517c",
+    "training/reports/korea-gfs-2022-20261101/README-context.md": "fe8854385b680bce18185262cf84956031d9c7390ebbb42fa73cafaa03dfd0b3",
+    "training/reports/korea-gfs-2022-20261101/server-final-audit.json": "fe28580fd6609c4391ad5593b00ee8b21af923ea82266eff471312472cf98875"
+  },
+  "validation_read": false,
+  "calibration_read": false,
+  "test_evaluated": false,
+  "operational_use": false,
+  "probability_calibrated": false,
+  "background_training_running": false
+}

@@ -1,0 +1,472 @@
+{
+  "method": "Raw GRIB2 templates3.30/4.0 and GDAL cross-check; source-grid U/V rotated to true east/north before bilinear reprojection; direction derived afterwards",
+  "checks": [
+    {
+      "raw_metadata": [
+        {
+          "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+          "valid_time_utc": "2019-09-04T22:00:00+00:00",
+          "height_m": 10,
+          "grid_definition_template": 30,
+          "resolution_component_flags": 8,
+          "grid_relative": true,
+          "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+          "product_template": 0,
+          "variable": "UGRD"
+        },
+        {
+          "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+          "valid_time_utc": "2019-09-04T22:00:00+00:00",
+          "height_m": 10,
+          "grid_definition_template": 30,
+          "resolution_component_flags": 8,
+          "grid_relative": true,
+          "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+          "product_template": 0,
+          "variable": "VGRD"
+        }
+      ],
+      "decoded_metadata": [
+        {
+          "GRIB_UNIT": "[m/s]",
+          "GRIB_COMMENT": "u-component of wind [m/s]",
+          "GRIB_ELEMENT": "UGRD",
+          "GRIB_SHORT_NAME": "10-HTGL",
+          "GRIB_REF_TIME": "1567627200",
+          "GRIB_VALID_TIME": "1567634400",
+          "GRIB_FORECAST_SECONDS": "7200",
+          "GRIB_DISCIPLINE": "0(Meteorological)",
+          "GRIB_IDS": "CENTER=7(US-NCEP) SUBCENTER=0 MASTER_TABLE=2 LOCAL_TABLE=1 SIGNF_REF_TIME=1(Start_of_Forecast) REF_TIME=2019-09-04T20:00:00Z PROD_STATUS=0(Operational) TYPE=1(Forecast)",
+          "GRIB_PDS_PDTN": "0",
+          "GRIB_PDS_TEMPLATE_NUMBERS": "2 2 2 0 83 0 0 0 1 0 0 0 2 103 0 0 0 0 10 255 0 0 0 0 0",
+          "GRIB_PDS_TEMPLATE_ASSEMBLED_VALUES": "2 2 2 0 83 0 0 1 2 103 0 10 255 0 0"
+        },
+        {
+          "GRIB_UNIT": "[m/s]",
+          "GRIB_COMMENT": "v-component of wind [m/s]",
+          "GRIB_ELEMENT": "VGRD",
+          "GRIB_SHORT_NAME": "10-HTGL",
+          "GRIB_REF_TIME": "1567627200",
+          "GRIB_VALID_TIME": "1567634400",
+          "GRIB_FORECAST_SECONDS": "7200",
+          "GRIB_DISCIPLINE": "0(Meteorological)",
+          "GRIB_IDS": "CENTER=7(US-NCEP) SUBCENTER=0 MASTER_TABLE=2 LOCAL_TABLE=1 SIGNF_REF_TIME=1(Start_of_Forecast) REF_TIME=2019-09-04T20:00:00Z PROD_STATUS=0(Operational) TYPE=1(Forecast)",
+          "GRIB_PDS_PDTN": "0",
+          "GRIB_PDS_TEMPLATE_NUMBERS": "2 3 2 0 83 0 0 0 1 0 0 0 2 103 0 0 0 0 10 255 0 0 0 0 0",
+          "GRIB_PDS_TEMPLATE_ASSEMBLED_VALUES": "2 3 2 0 83 0 0 1 2 103 0 10 255 0 0"
+        }
+      ],
+      "grid_north_true_bearing_range_deg": [
+        -14.701285831266924,
+        -14.140613224470082
+      ],
+      "speed_range_m_s": [
+        0.021527094766497612,
+        4.824307441711426
+      ],
+      "calm_cells": 0,
+      "hour": 2
+    },
+    {
+      "raw_metadata": [
+        {
+          "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+          "valid_time_utc": "2019-09-04T23:00:00+00:00",
+          "height_m": 10,
+          "grid_definition_template": 30,
+          "resolution_component_flags": 8,
+          "grid_relative": true,
+          "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+          "product_template": 0,
+          "variable": "UGRD"
+        },
+        {
+          "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+          "valid_time_utc": "2019-09-04T23:00:00+00:00",
+          "height_m": 10,
+          "grid_definition_template": 30,
+          "resolution_component_flags": 8,
+          "grid_relative": true,
+          "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+          "product_template": 0,
+          "variable": "VGRD"
+        }
+      ],
+      "decoded_metadata": [
+        {
+          "GRIB_UNIT": "[m/s]",
+          "GRIB_COMMENT": "u-component of wind [m/s]",
+          "GRIB_ELEMENT": "UGRD",
+          "GRIB_SHORT_NAME": "10-HTGL",
+          "GRIB_REF_TIME": "1567627200",
+          "GRIB_VALID_TIME": "1567638000",
+          "GRIB_FORECAST_SECONDS": "10800",
+          "GRIB_DISCIPLINE": "0(Meteorological)",
+          "GRIB_IDS": "CENTER=7(US-NCEP) SUBCENTER=0 MASTER_TABLE=2 LOCAL_TABLE=1 SIGNF_REF_TIME=1(Start_of_Forecast) REF_TIME=2019-09-04T20:00:00Z PROD_STATUS=0(Operational) TYPE=1(Forecast)",
+          "GRIB_PDS_PDTN": "0",
+          "GRIB_PDS_TEMPLATE_NUMBERS": "2 2 2 0 83 0 0 0 1 0 0 0 3 103 0 0 0 0 10 255 0 0 0 0 0",
+          "GRIB_PDS_TEMPLATE_ASSEMBLED_VALUES": "2 2 2 0 83 0 0 1 3 103 0 10 255 0 0"
+        },
+        {
+          "GRIB_UNIT": "[m/s]",
+          "GRIB_COMMENT": "v-component of wind [m/s]",
+          "GRIB_ELEMENT": "VGRD",
+          "GRIB_SHORT_NAME": "10-HTGL",
+          "GRIB_REF_TIME": "1567627200",
+          "GRIB_VALID_TIME": "1567638000",
+          "GRIB_FORECAST_SECONDS": "10800",
+          "GRIB_DISCIPLINE": "0(Meteorological)",
+          "GRIB_IDS": "CENTER=7(US-NCEP) SUBCENTER=0 MASTER_TABLE=2 LOCAL_TABLE=1 SIGNF_REF_TIME=1(Start_of_Forecast) REF_TIME=2019-09-04T20:00:00Z PROD_STATUS=0(Operational) TYPE=1(Forecast)",
+          "GRIB_PDS_PDTN": "0",
+          "GRIB_PDS_TEMPLATE_NUMBERS": "2 3 2 0 83 0 0 0 1 0 0 0 3 103 0 0 0 0 10 255 0 0 0 0 0",
+          "GRIB_PDS_TEMPLATE_ASSEMBLED_VALUES": "2 3 2 0 83 0 0 1 3 103 0 10 255 0 0"
+        }
+      ],
+      "grid_north_true_bearing_range_deg": [
+        -14.701285831266924,
+        -14.140613224470082
+      ],
+      "speed_range_m_s": [
+        0.008267024531960487,
+        8.117036819458008
+      ],
+      "calm_cells": 0,
+      "hour": 3
+    },
+    {
+      "raw_metadata": [
+        {
+          "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+          "valid_time_utc": "2019-09-05T00:00:00+00:00",
+          "height_m": 10,
+          "grid_definition_template": 30,
+          "resolution_component_flags": 8,
+          "grid_relative": true,
+          "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+          "product_template": 0,
+          "variable": "UGRD"
+        },
+        {
+          "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+          "valid_time_utc": "2019-09-05T00:00:00+00:00",
+          "height_m": 10,
+          "grid_definition_template": 30,
+          "resolution_component_flags": 8,
+          "grid_relative": true,
+          "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+          "product_template": 0,
+          "variable": "VGRD"
+        }
+      ],
+      "decoded_metadata": [
+        {
+          "GRIB_UNIT": "[m/s]",
+          "GRIB_COMMENT": "u-component of wind [m/s]",
+          "GRIB_ELEMENT": "UGRD",
+          "GRIB_SHORT_NAME": "10-HTGL",
+          "GRIB_REF_TIME": "1567627200",
+          "GRIB_VALID_TIME": "1567641600",
+          "GRIB_FORECAST_SECONDS": "14400",
+          "GRIB_DISCIPLINE": "0(Meteorological)",
+          "GRIB_IDS": "CENTER=7(US-NCEP) SUBCENTER=0 MASTER_TABLE=2 LOCAL_TABLE=1 SIGNF_REF_TIME=1(Start_of_Forecast) REF_TIME=2019-09-04T20:00:00Z PROD_STATUS=0(Operational) TYPE=1(Forecast)",
+          "GRIB_PDS_PDTN": "0",
+          "GRIB_PDS_TEMPLATE_NUMBERS": "2 2 2 0 83 0 0 0 1 0 0 0 4 103 0 0 0 0 10 255 0 0 0 0 0",
+          "GRIB_PDS_TEMPLATE_ASSEMBLED_VALUES": "2 2 2 0 83 0 0 1 4 103 0 10 255 0 0"
+        },
+        {
+          "GRIB_UNIT": "[m/s]",
+          "GRIB_COMMENT": "v-component of wind [m/s]",
+          "GRIB_ELEMENT": "VGRD",
+          "GRIB_SHORT_NAME": "10-HTGL",
+          "GRIB_REF_TIME": "1567627200",
+          "GRIB_VALID_TIME": "1567641600",
+          "GRIB_FORECAST_SECONDS": "14400",
+          "GRIB_DISCIPLINE": "0(Meteorological)",
+          "GRIB_IDS": "CENTER=7(US-NCEP) SUBCENTER=0 MASTER_TABLE=2 LOCAL_TABLE=1 SIGNF_REF_TIME=1(Start_of_Forecast) REF_TIME=2019-09-04T20:00:00Z PROD_STATUS=0(Operational) TYPE=1(Forecast)",
+          "GRIB_PDS_PDTN": "0",
+          "GRIB_PDS_TEMPLATE_NUMBERS": "2 3 2 0 83 0 0 0 1 0 0 0 4 103 0 0 0 0 10 255 0 0 0 0 0",
+          "GRIB_PDS_TEMPLATE_ASSEMBLED_VALUES": "2 3 2 0 83 0 0 1 4 103 0 10 255 0 0"
+        }
+      ],
+      "grid_north_true_bearing_range_deg": [
+        -14.701285831266924,
+        -14.140613224470082
+      ],
+      "speed_range_m_s": [
+        0.018075594678521156,
+        6.162575721740723
+      ],
+      "calm_cells": 0,
+      "hour": 4
+    },
+    {
+      "raw_metadata": [
+        {
+          "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+          "valid_time_utc": "2019-09-05T01:00:00+00:00",
+          "height_m": 10,
+          "grid_definition_template": 30,
+          "resolution_component_flags": 8,
+          "grid_relative": true,
+          "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+          "product_template": 0,
+          "variable": "UGRD"
+        },
+        {
+          "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+          "valid_time_utc": "2019-09-05T01:00:00+00:00",
+          "height_m": 10,
+          "grid_definition_template": 30,
+          "resolution_component_flags": 8,
+          "grid_relative": true,
+          "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+          "product_template": 0,
+          "variable": "VGRD"
+        }
+      ],
+      "decoded_metadata": [
+        {
+          "GRIB_UNIT": "[m/s]",
+          "GRIB_COMMENT": "u-component of wind [m/s]",
+          "GRIB_ELEMENT": "UGRD",
+          "GRIB_SHORT_NAME": "10-HTGL",
+          "GRIB_REF_TIME": "1567627200",
+          "GRIB_VALID_TIME": "1567645200",
+          "GRIB_FORECAST_SECONDS": "18000",
+          "GRIB_DISCIPLINE": "0(Meteorological)",
+          "GRIB_IDS": "CENTER=7(US-NCEP) SUBCENTER=0 MASTER_TABLE=2 LOCAL_TABLE=1 SIGNF_REF_TIME=1(Start_of_Forecast) REF_TIME=2019-09-04T20:00:00Z PROD_STATUS=0(Operational) TYPE=1(Forecast)",
+          "GRIB_PDS_PDTN": "0",
+          "GRIB_PDS_TEMPLATE_NUMBERS": "2 2 2 0 83 0 0 0 1 0 0 0 5 103 0 0 0 0 10 255 0 0 0 0 0",
+          "GRIB_PDS_TEMPLATE_ASSEMBLED_VALUES": "2 2 2 0 83 0 0 1 5 103 0 10 255 0 0"
+        },
+        {
+          "GRIB_UNIT": "[m/s]",
+          "GRIB_COMMENT": "v-component of wind [m/s]",
+          "GRIB_ELEMENT": "VGRD",
+          "GRIB_SHORT_NAME": "10-HTGL",
+          "GRIB_REF_TIME": "1567627200",
+          "GRIB_VALID_TIME": "1567645200",
+          "GRIB_FORECAST_SECONDS": "18000",
+          "GRIB_DISCIPLINE": "0(Meteorological)",
+          "GRIB_IDS": "CENTER=7(US-NCEP) SUBCENTER=0 MASTER_TABLE=2 LOCAL_TABLE=1 SIGNF_REF_TIME=1(Start_of_Forecast) REF_TIME=2019-09-04T20:00:00Z PROD_STATUS=0(Operational) TYPE=1(Forecast)",
+          "GRIB_PDS_PDTN": "0",
+          "GRIB_PDS_TEMPLATE_NUMBERS": "2 3 2 0 83 0 0 0 1 0 0 0 5 103 0 0 0 0 10 255 0 0 0 0 0",
+          "GRIB_PDS_TEMPLATE_ASSEMBLED_VALUES": "2 3 2 0 83 0 0 1 5 103 0 10 255 0 0"
+        }
+      ],
+      "grid_north_true_bearing_range_deg": [
+        -14.701285831266924,
+        -14.140613224470082
+      ],
+      "speed_range_m_s": [
+        1.913387417793274,
+        5.77122163772583
+      ],
+      "calm_cells": 0,
+      "hour": 5
+    },
+    {
+      "raw_metadata": [
+        {
+          "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+          "valid_time_utc": "2019-09-05T02:00:00+00:00",
+          "height_m": 10,
+          "grid_definition_template": 30,
+          "resolution_component_flags": 8,
+          "grid_relative": true,
+          "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+          "product_template": 0,
+          "variable": "UGRD"
+        },
+        {
+          "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+          "valid_time_utc": "2019-09-05T02:00:00+00:00",
+          "height_m": 10,
+          "grid_definition_template": 30,
+          "resolution_component_flags": 8,
+          "grid_relative": true,
+          "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+          "product_template": 0,
+          "variable": "VGRD"
+        }
+      ],
+      "decoded_metadata": [
+        {
+          "GRIB_UNIT": "[m/s]",
+          "GRIB_COMMENT": "u-component of wind [m/s]",
+          "GRIB_ELEMENT": "UGRD",
+          "GRIB_SHORT_NAME": "10-HTGL",
+          "GRIB_REF_TIME": "1567627200",
+          "GRIB_VALID_TIME": "1567648800",
+          "GRIB_FORECAST_SECONDS": "21600",
+          "GRIB_DISCIPLINE": "0(Meteorological)",
+          "GRIB_IDS": "CENTER=7(US-NCEP) SUBCENTER=0 MASTER_TABLE=2 LOCAL_TABLE=1 SIGNF_REF_TIME=1(Start_of_Forecast) REF_TIME=2019-09-04T20:00:00Z PROD_STATUS=0(Operational) TYPE=1(Forecast)",
+          "GRIB_PDS_PDTN": "0",
+          "GRIB_PDS_TEMPLATE_NUMBERS": "2 2 2 0 83 0 0 0 1 0 0 0 6 103 0 0 0 0 10 255 0 0 0 0 0",
+          "GRIB_PDS_TEMPLATE_ASSEMBLED_VALUES": "2 2 2 0 83 0 0 1 6 103 0 10 255 0 0"
+        },
+        {
+          "GRIB_UNIT": "[m/s]",
+          "GRIB_COMMENT": "v-component of wind [m/s]",
+          "GRIB_ELEMENT": "VGRD",
+          "GRIB_SHORT_NAME": "10-HTGL",
+          "GRIB_REF_TIME": "1567627200",
+          "GRIB_VALID_TIME": "1567648800",
+          "GRIB_FORECAST_SECONDS": "21600",
+          "GRIB_DISCIPLINE": "0(Meteorological)",
+          "GRIB_IDS": "CENTER=7(US-NCEP) SUBCENTER=0 MASTER_TABLE=2 LOCAL_TABLE=1 SIGNF_REF_TIME=1(Start_of_Forecast) REF_TIME=2019-09-04T20:00:00Z PROD_STATUS=0(Operational) TYPE=1(Forecast)",
+          "GRIB_PDS_PDTN": "0",
+          "GRIB_PDS_TEMPLATE_NUMBERS": "2 3 2 0 83 0 0 0 1 0 0 0 6 103 0 0 0 0 10 255 0 0 0 0 0",
+          "GRIB_PDS_TEMPLATE_ASSEMBLED_VALUES": "2 3 2 0 83 0 0 1 6 103 0 10 255 0 0"
+        }
+      ],
+      "grid_north_true_bearing_range_deg": [
+        -14.701285831266924,
+        -14.140613224470082
+      ],
+      "speed_range_m_s": [
+        0.6180525422096252,
+        6.838234901428223
+      ],
+      "calm_cells": 0,
+      "hour": 6
+    },
+    {
+      "raw_metadata": [
+        {
+          "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+          "valid_time_utc": "2019-09-05T03:00:00+00:00",
+          "height_m": 10,
+          "grid_definition_template": 30,
+          "resolution_component_flags": 8,
+          "grid_relative": true,
+          "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+          "product_template": 0,
+          "variable": "UGRD"
+        },
+        {
+          "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+          "valid_time_utc": "2019-09-05T03:00:00+00:00",
+          "height_m": 10,
+          "grid_definition_template": 30,
+          "resolution_component_flags": 8,
+          "grid_relative": true,
+          "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+          "product_template": 0,
+          "variable": "VGRD"
+        }
+      ],
+      "decoded_metadata": [
+        {
+          "GRIB_UNIT": "[m/s]",
+          "GRIB_COMMENT": "u-component of wind [m/s]",
+          "GRIB_ELEMENT": "UGRD",
+          "GRIB_SHORT_NAME": "10-HTGL",
+          "GRIB_REF_TIME": "1567627200",
+          "GRIB_VALID_TIME": "1567652400",
+          "GRIB_FORECAST_SECONDS": "25200",
+          "GRIB_DISCIPLINE": "0(Meteorological)",
+          "GRIB_IDS": "CENTER=7(US-NCEP) SUBCENTER=0 MASTER_TABLE=2 LOCAL_TABLE=1 SIGNF_REF_TIME=1(Start_of_Forecast) REF_TIME=2019-09-04T20:00:00Z PROD_STATUS=0(Operational) TYPE=1(Forecast)",
+          "GRIB_PDS_PDTN": "0",
+          "GRIB_PDS_TEMPLATE_NUMBERS": "2 2 2 0 83 0 0 0 1 0 0 0 7 103 0 0 0 0 10 255 0 0 0 0 0",
+          "GRIB_PDS_TEMPLATE_ASSEMBLED_VALUES": "2 2 2 0 83 0 0 1 7 103 0 10 255 0 0"
+        },
+        {
+          "GRIB_UNIT": "[m/s]",
+          "GRIB_COMMENT": "v-component of wind [m/s]",
+          "GRIB_ELEMENT": "VGRD",
+          "GRIB_SHORT_NAME": "10-HTGL",
+          "GRIB_REF_TIME": "1567627200",
+          "GRIB_VALID_TIME": "1567652400",
+          "GRIB_FORECAST_SECONDS": "25200",
+          "GRIB_DISCIPLINE": "0(Meteorological)",
+          "GRIB_IDS": "CENTER=7(US-NCEP) SUBCENTER=0 MASTER_TABLE=2 LOCAL_TABLE=1 SIGNF_REF_TIME=1(Start_of_Forecast) REF_TIME=2019-09-04T20:00:00Z PROD_STATUS=0(Operational) TYPE=1(Forecast)",
+          "GRIB_PDS_PDTN": "0",
+          "GRIB_PDS_TEMPLATE_NUMBERS": "2 3 2 0 83 0 0 0 1 0 0 0 7 103 0 0 0 0 10 255 0 0 0 0 0",
+          "GRIB_PDS_TEMPLATE_ASSEMBLED_VALUES": "2 3 2 0 83 0 0 1 7 103 0 10 255 0 0"
+        }
+      ],
+      "grid_north_true_bearing_range_deg": [
+        -14.701285831266924,
+        -14.140613224470082
+      ],
+      "speed_range_m_s": [
+        0.014310592785477638,
+        8.197455406188965
+      ],
+      "calm_cells": 0,
+      "hour": 7
+    },
+    {
+      "raw_metadata": [
+        {
+          "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+          "valid_time_utc": "2019-09-05T04:00:00+00:00",
+          "height_m": 10,
+          "grid_definition_template": 30,
+          "resolution_component_flags": 8,
+          "grid_relative": true,
+          "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+          "product_template": 0,
+          "variable": "UGRD"
+        },
+        {
+          "forecast_reference_time_utc": "2019-09-04T20:00:00+00:00",
+          "valid_time_utc": "2019-09-05T04:00:00+00:00",
+          "height_m": 10,
+          "grid_definition_template": 30,
+          "resolution_component_flags": 8,
+          "grid_relative": true,
+          "grid_definition_sha256": "a3d66291c0a46d57625377318f0404bc2cea9837bf49ae59e28a23a1f8884558",
+          "product_template": 0,
+          "variable": "VGRD"
+        }
+      ],
+      "decoded_metadata": [
+        {
+          "GRIB_UNIT": "[m/s]",
+          "GRIB_COMMENT": "u-component of wind [m/s]",
+          "GRIB_ELEMENT": "UGRD",
+          "GRIB_SHORT_NAME": "10-HTGL",
+          "GRIB_REF_TIME": "1567627200",
+          "GRIB_VALID_TIME": "1567656000",
+          "GRIB_FORECAST_SECONDS": "28800",
+          "GRIB_DISCIPLINE": "0(Meteorological)",
+          "GRIB_IDS": "CENTER=7(US-NCEP) SUBCENTER=0 MASTER_TABLE=2 LOCAL_TABLE=1 SIGNF_REF_TIME=1(Start_of_Forecast) REF_TIME=2019-09-04T20:00:00Z PROD_STATUS=0(Operational) TYPE=1(Forecast)",
+          "GRIB_PDS_PDTN": "0",
+          "GRIB_PDS_TEMPLATE_NUMBERS": "2 2 2 0 83 0 0 0 1 0 0 0 8 103 0 0 0 0 10 255 0 0 0 0 0",
+          "GRIB_PDS_TEMPLATE_ASSEMBLED_VALUES": "2 2 2 0 83 0 0 1 8 103 0 10 255 0 0"
+        },
+        {
+          "GRIB_UNIT": "[m/s]",
+          "GRIB_COMMENT": "v-component of wind [m/s]",
+          "GRIB_ELEMENT": "VGRD",
+          "GRIB_SHORT_NAME": "10-HTGL",
+          "GRIB_REF_TIME": "1567627200",
+          "GRIB_VALID_TIME": "1567656000",
+          "GRIB_FORECAST_SECONDS": "28800",
+          "GRIB_DISCIPLINE": "0(Meteorological)",
+          "GRIB_IDS": "CENTER=7(US-NCEP) SUBCENTER=0 MASTER_TABLE=2 LOCAL_TABLE=1 SIGNF_REF_TIME=1(Start_of_Forecast) REF_TIME=2019-09-04T20:00:00Z PROD_STATUS=0(Operational) TYPE=1(Forecast)",
+          "GRIB_PDS_PDTN": "0",
+          "GRIB_PDS_TEMPLATE_NUMBERS": "2 3 2 0 83 0 0 0 1 0 0 0 8 103 0 0 0 0 10 255 0 0 0 0 0",
+          "GRIB_PDS_TEMPLATE_ASSEMBLED_VALUES": "2 3 2 0 83 0 0 1 8 103 0 10 255 0 0"
+        }
+      ],
+      "grid_north_true_bearing_range_deg": [
+        -14.701285831266924,
+        -14.140613224470082
+      ],
+      "speed_range_m_s": [
+        0.003250744892284274,
+        8.256681442260742
+      ],
+      "calm_cells": 0,
+      "hour": 8
+    }
+  ],
+  "source_grid_angle_method": "Projected +1m north vector transformed to geographic; atan2(dlon*cos(latitude),dlat)",
+  "calm_direction_convention": "0 degrees where both vector components are zero",
+  "raw_report_sha256": "cdba38dab96f50c6cd71d000f76f030841d8e34674be160614776387cb93d0a5",
+  "historical_release_time_verified": false,
+  "operational_use": false
+}

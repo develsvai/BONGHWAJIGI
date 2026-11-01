@@ -1,0 +1,42 @@
+{
+  "id": "task-run-20261101-003726-task-def-20261101-003717-readme-a55cbe4f-54279fa5",
+  "job_run_id": "job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02",
+  "task_definition_id": "task-def-20261101-003717-readme-a55cbe4f",
+  "status": "DONE",
+  "created_at": "2026-11-01T00:37:26+00:00",
+  "updated_at": "2026-11-01T00:50:29+00:00",
+  "legacy_task_id": "task-20261101-003717-readme-fc490280",
+  "attempt": 1,
+  "assigned_agent": "foreground",
+  "worker_id": "",
+  "heartbeat_at": "",
+  "lease_expires_at": "",
+  "queued_at": "",
+  "started_at": "2026-11-01T00:37:26+00:00",
+  "completed_at": "2026-11-01T00:50:29+00:00",
+  "last_error": "",
+  "commit_refs": [
+    "405b4f122dc15e48522b0ada32b7060e62a521aa",
+    "80d1f9172226b43c98c0066199ce2e61bd17f498"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-11-01T00:50:29+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261101-003717-readme-fc490280/agent-events.jsonl",
+    ".loom/tasks/task-20261101-003717-readme-fc490280/artifacts.json",
+    ".loom/tasks/task-20261101-003717-readme-fc490280/context.md",
+    ".loom/tasks/task-20261101-003717-readme-fc490280/decision.md",
+    ".loom/tasks/task-20261101-003717-readme-fc490280/git-snapshot.json",
+    ".loom/tasks/task-20261101-003717-readme-fc490280/logs.txt",
+    ".loom/tasks/task-20261101-003717-readme-fc490280/previous-results.md",
+    ".loom/tasks/task-20261101-003717-readme-fc490280/prompt.md",
+    ".loom/tasks/task-20261101-003717-readme-fc490280/result.md",
+    ".loom/tasks/task-20261101-003717-readme-fc490280/troubleshooting.md",
+    "README.md"
+  ],
+  "checkpoint_ids": [
+    "checkpoint-20261101-005029-task-completed-readme-53143a2c"
+  ],
+  "review_required_reason": ""
+}

@@ -1,0 +1,145 @@
+{
+  "index": 1,
+  "held_ids": [
+    "hapcheon_2022",
+    "uljin_may_2022"
+  ],
+  "training_ids": [
+    "bonghwa_2022",
+    "gangneung_donghae_2022",
+    "gunwi_2022",
+    "miryang_2022",
+    "uljin_2022",
+    "yanggu_2022",
+    "yeongdeok_2022",
+    "yeongwol_2022"
+  ],
+  "selected": "A_original34",
+  "inner_macro_ap": {
+    "A_original34": 0.0934409246862858,
+    "D_gfs_weather34": 0.08445342092431535
+  },
+  "positive_weight": 13.19039998769456,
+  "training_event_shares": {
+    "bonghwa_2022": {
+      "rows": 230,
+      "row_share": 0.0014620533585908348,
+      "weight_sum": 230.0,
+      "weight_share": 0.0014620533585908348,
+      "positive_rows": 16,
+      "class_adjusted_weight_sum": 425.046399803113,
+      "class_adjusted_weight_share": 0.002525945917506352
+    },
+    "gangneung_donghae_2022": {
+      "rows": 21074,
+      "row_share": 0.1339622281693185,
+      "weight_sum": 21074.0,
+      "weight_share": 0.1339622281693185,
+      "positive_rows": 4,
+      "class_adjusted_weight_sum": 21122.76159995078,
+      "class_adjusted_weight_share": 0.12552736231755007
+    },
+    "gunwi_2022": {
+      "rows": 10,
+      "row_share": 6.35675373300363e-05,
+      "weight_sum": 10.0,
+      "weight_share": 6.35675373300363e-05,
+      "positive_rows": 2,
+      "class_adjusted_weight_sum": 34.380799975389124,
+      "class_adjusted_weight_share": 0.0002043166143241395
+    },
+    "miryang_2022": {
+      "rows": 39009,
+      "row_share": 0.2479706063707386,
+      "weight_sum": 39009.0,
+      "weight_share": 0.2479706063707386,
+      "positive_rows": 30,
+      "class_adjusted_weight_sum": 39374.71199963084,
+      "class_adjusted_weight_share": 0.233994201749565
+    },
+    "uljin_2022": {
+      "rows": 20980,
+      "row_share": 0.13336469331841616,
+      "weight_sum": 20980.0,
+      "weight_share": 0.13336469331841616,
+      "positive_rows": 456,
+      "class_adjusted_weight_sum": 26538.82239438872,
+      "class_adjusted_weight_share": 0.15771367576242054
+    },
+    "yanggu_2022": {
+      "rows": 30180,
+      "row_share": 0.19184682766204955,
+      "weight_sum": 30180.0,
+      "weight_share": 0.19184682766204955,
+      "positive_rows": 171,
+      "class_adjusted_weight_sum": 32264.55839789577,
+      "class_adjusted_weight_share": 0.19174031259425153
+    },
+    "yeongdeok_2022": {
+      "rows": 34722,
+      "row_share": 0.22071920311735202,
+      "weight_sum": 34722.0,
+      "weight_share": 0.22071920311735202,
+      "positive_rows": 220,
+      "class_adjusted_weight_sum": 37403.887997292804,
+      "class_adjusted_weight_share": 0.2222820808019808
+    },
+    "yeongwol_2022": {
+      "rows": 11108,
+      "row_share": 0.07061082046620432,
+      "weight_sum": 11108.0,
+      "weight_share": 0.07061082046620432,
+      "positive_rows": 0,
+      "class_adjusted_weight_sum": 11108.0,
+      "class_adjusted_weight_share": 0.06601210424240149
+    }
+  },
+  "training_label_audit": {
+    "positive_rows": 899,
+    "negative_rows": 156414,
+    "excluded_unknown_rows": 65122,
+    "positive_event_count": 7,
+    "per_event": {
+      "bonghwa_2022": {
+        "positive_rows": 16,
+        "negative_rows": 214,
+        "excluded_unknown_rows": 2950
+      },
+      "gangneung_donghae_2022": {
+        "positive_rows": 4,
+        "negative_rows": 21070,
+        "excluded_unknown_rows": 2821
+      },
+      "gunwi_2022": {
+        "positive_rows": 2,
+        "negative_rows": 8,
+        "excluded_unknown_rows": 977
+      },
+      "miryang_2022": {
+        "positive_rows": 30,
+        "negative_rows": 38979,
+        "excluded_unknown_rows": 18654
+      },
+      "uljin_2022": {
+        "positive_rows": 456,
+        "negative_rows": 20524,
+        "excluded_unknown_rows": 14402
+      },
+      "yanggu_2022": {
+        "positive_rows": 171,
+        "negative_rows": 30009,
+        "excluded_unknown_rows": 22836
+      },
+      "yeongdeok_2022": {
+        "positive_rows": 220,
+        "negative_rows": 34502,
+        "excluded_unknown_rows": 1467
+      },
+      "yeongwol_2022": {
+        "positive_rows": 0,
+        "negative_rows": 11108,
+        "excluded_unknown_rows": 1015
+      }
+    }
+  }
+}

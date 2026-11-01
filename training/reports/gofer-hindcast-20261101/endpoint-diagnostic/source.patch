@@ -1,0 +1,16 @@
+--- original/elmfire_level_set.f90
++++ diagnostic/elmfire_level_set.f90
+@@ -1103,6 +1103,13 @@
+ 
+       ENDDO !ISTEP=1,2
+ 
++      ! BONGHWA diagnostic only: report the completed RK2 step without mutation.
++      IF (T .GE. REAL(TSTOP,8) - 60.0_8) THEN
++         WRITE(*,'(A,5(ES24.16,1X))') 'BONGHWA_RK2_ENDPOINT ', T, REAL(DT,8), &
++            T + REAL(DT,8), REAL(TSTOP,8), REAL(MAXVAL(ABS(PHIP - phi_previous)),8)
++         CALL FLUSH(6)
++      ENDIF
++
+    ! Find newly-burned cells and call spotting:
+       N_TO_TAG = 0
+       N_SPOT_FIRES = 0

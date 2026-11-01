@@ -1,0 +1,33 @@
+{
+  "checked_at_utc": "2026-10-31T17:12:43.107431+00:00",
+  "tests": {
+    "tests": 365,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "source_sha256": {
+    "training/src/bonghwa_training/kiml_forecast_extend.py": "af21cbc232a93c2852c9d9e559338ab25ad9369e8df2617a33b8818ca670781d",
+    "training/src/bonghwa_training/kma_metadata_probe.py": "ec028862d991c32f22f8690c0c0b0e5bef130a87ba4b961b65373cbf9af8be04",
+    "training/src/bonghwa_training/korea_terrain.py": "e07ecbf1d6664a6b5e28b00de5edc33048f9ff3663af636718de7cb9576733c9",
+    "training/src/bonghwa_training/public_scenario_weather.py": "3ca4d8a006ce06850b2ca92905656602fa89cd5b4d7851cd7d157bc850fb29b9",
+    "training/tools/elmfire_korea_scenario.py": "1305e48e88ceba54692ab4f6c9793bb9b0c55a6134d048253971605c5ff543f0"
+  },
+  "output_plan_raster_log_stats_sha256": "verified_against_run_report",
+  "weather_contract_reverified": true,
+  "qwen_generation_embedding_ready": true,
+  "qwen_check_basis": "server gpu_client.py ready returned status=ready after scenarios",
+  "domestic_accuracy_evaluated": false,
+  "holdout_2025_accessed": false,
+  "operational_use": false,
+  "probability": null,
+  "server_source_sha256_matches_local": true,
+  "ruff_check": "passed",
+  "ruff_format_check": "passed",
+  "git_diff_check": "passed",
+  "local_document_links": "all_resolve",
+  "credential_scan": {
+    "actual_credentials_detected": false,
+    "known_false_positive": "JUnit parameter name uses example.test and literal other-unknown-secret from the credential-rejection fixture; no real key"
+  }
+}

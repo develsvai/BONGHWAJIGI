@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "purpose": "kiml_point_forecast_research_adapter_check",
+  "source_code_sha256": "ed7ece5c11e349f7f0d6e1590b447e287114d06a0c5a3e9a7b4a5f6aa5ca4973",
+  "unit_and_height_documentation": "https://apihub.kma.go.kr/getAttachFile.do?fileName=%ED%95%9C%EA%B5%AD%ED%98%95%20%EC%88%98%EC%B9%98%EB%AA%A8%EB%8D%B8%28KIM%29%20%EB%B3%80%EC%88%98%EC%A0%95%EB%B3%B4.pdf",
+  "plan_sha256": "c32c353b118504be8c2c35ae6d2c37e4573c928922bdc68f347ec57119d4c078",
+  "asof_utc": "2026-10-31T16:39:29.498985+00:00",
+  "requested_reference_time_utc": "2026-10-31T12:00:00+00:00",
+  "source_reference_time_utc": null,
+  "source_reference_confirmed": false,
+  "observed": false,
+  "operational_use": false,
+  "personal_risk_probability": false,
+  "historical_input_availability_proven": false,
+  "fire_labels_requested": false,
+  "holdout_2025_accessed": false,
+  "planned_requests": 24,
+  "max_http_attempts": 24,
+  "records": [
+    {
+      "id": "kiml-20261031T12Z-u10-h5",
+      "endpoint": "https://apihub.kma.go.kr/api/typ06/url/nwp_nc_pnt_down.php",
+      "parameters_without_auth": {
+        "group": "KIML",
+        "data": "U",
+        "vars": "U10",
+        "tmfc": "2026103112",
+        "hf": "5",
+        "lon": "129.300000",
+        "lat": "37.000000",
+        "dataType": "CSV"
+      },
+      "forecast_reference_time_utc": "2026-10-31T12:00:00+00:00",
+      "reference_time_basis": "requested_parameter_only",
+      "requested_valid_time_utc": "2026-10-31T17:00:00+00:00",
+      "requested_lead_from_cycle_hours": 5,
+      "requested_lead_from_asof_hours": 0.3418058375,
+      "requested_variable": "U10",
+      "documented_unit": "m/s",
+      "documented_height_m": 10,
+      "unit_and_height_documentation": "https://apihub.kma.go.kr/getAttachFile.do?fileName=%ED%95%9C%EA%B5%AD%ED%98%95%20%EC%88%98%EC%B9%98%EB%AA%A8%EB%8D%B8%28KIM%29%20%EB%B3%80%EC%88%98%EC%A0%95%EB%B3%B4.pdf",
+      "source_kind": "numerical_weather_forecast",
+      "observed": false,
+      "transport": {
+        "status": "response_received",
+        "attempts": [
+          {
+            "attempt": 1,
+            "started_at_utc": "2026-10-31T16:39:29.536138+00:00",
+            "http_status": 200
+          }
+        ],
+        "retrieved_at_utc": "2026-10-31T16:39:29.640225+00:00",
+        "bytes": 109,
+        "source_sha256": "fcfbe8029fae86d8397572a65d3222b15edbc6e41907596ba7dd2124438d8105",
+        "content_status": "numeric_candidate_requires_schema_review",
+        "schema_verified": false,
+        "numeric_row_count": 1,
+        "reference_stamp_seen": false,
+        "valid_stamp_seen": false,
+        "interpretation": "HTTP success/numeric text alone does not prove meteorological values"
+      },
+      "status": "csv_or_grid_validation_failed",
+      "source_sha256": "fcfbe8029fae86d8397572a65d3222b15edbc6e41907596ba7dd2124438d8105",
+      "raw_file": "kiml-20261031T12Z-u10-h5.csv"
+    }
+  ],
+  "stopped_early": "csv_or_grid_validation_failed",
+  "limitations": [
+    "CSV does not echo run, valid time, variable, unit or physical height",
+    "Official variable definitions interpret requested values, not response confirmation",
+    "Wind coordinate-axis rotation is unverified; no geographic bearing is derived",
+    "Current forecast retrieval does not prove historical issue-time availability",
+    "Weather input research only; not a fire forecast or personal response decision"
+  ],
+  "hours": [
+    {
+      "requested_valid_time_utc": "2026-10-31T17:00:00+00:00",
+      "requested_lead_from_cycle_hours": 5,
+      "requested_lead_from_asof_hours": 0.3418058375,
+      "values_by_requested_variable": {
+        "U10": null,
+        "V10": null,
+        "T2": null,
+        "RH2": null
+      },
+      "temperature_celsius": null,
+      "wind_vector_magnitude_ms": null,
+      "wind_direction_from_degrees": null,
+      "wind_direction_status": "basis_unverified",
+      "wind_axis_basis_verified": false,
+      "missing_variables": [
+        "U10",
+        "V10",
+        "T2",
+        "RH2"
+      ],
+      "complete": false,
+      "source_time_variable_unit_confirmed": false,
+      "observed": false,
+      "operational_use": false
+    },
+    {
+      "requested_valid_time_utc": "2026-10-31T18:00:00+00:00",
+      "requested_lead_from_cycle_hours": 6,
+      "requested_lead_from_asof_hours": 1.3418058375,
+      "values_by_requested_variable": {
+        "U10": null,
+        "V10": null,
+        "T2": null,
+        "RH2": null
+      },
+      "temperature_celsius": null,
+      "wind_vector_magnitude_ms": null,
+      "wind_direction_from_degrees": null,
+      "wind_direction_status": "basis_unverified",
+      "wind_axis_basis_verified": false,
+      "missing_variables": [
+        "U10",
+        "V10",
+        "T2",
+        "RH2"
+      ],
+      "complete": false,
+      "source_time_variable_unit_confirmed": false,
+      "observed": false,
+      "operational_use": false
+    },
+    {
+      "requested_valid_time_utc": "2026-10-31T19:00:00+00:00",
+      "requested_lead_from_cycle_hours": 7,
+      "requested_lead_from_asof_hours": 2.3418058375,
+      "values_by_requested_variable": {
+        "U10": null,
+        "V10": null,
+        "T2": null,
+        "RH2": null
+      },
+      "temperature_celsius": null,
+      "wind_vector_magnitude_ms": null,
+      "wind_direction_from_degrees": null,
+      "wind_direction_status": "basis_unverified",
+      "wind_axis_basis_verified": false,
+      "missing_variables": [
+        "U10",
+        "V10",
+        "T2",
+        "RH2"
+      ],
+      "complete": false,
+      "source_time_variable_unit_confirmed": false,
+      "observed": false,
+      "operational_use": false
+    },
+    {
+      "requested_valid_time_utc": "2026-10-31T20:00:00+00:00",
+      "requested_lead_from_cycle_hours": 8,
+      "requested_lead_from_asof_hours": 3.3418058375,
+      "values_by_requested_variable": {
+        "U10": null,
+        "V10": null,
+        "T2": null,
+        "RH2": null
+      },
+      "temperature_celsius": null,
+      "wind_vector_magnitude_ms": null,
+      "wind_direction_from_degrees": null,
+      "wind_direction_status": "basis_unverified",
+      "wind_axis_basis_verified": false,
+      "missing_variables": [
+        "U10",
+        "V10",
+        "T2",
+        "RH2"
+      ],
+      "complete": false,
+      "source_time_variable_unit_confirmed": false,
+      "observed": false,
+      "operational_use": false
+    },
+    {
+      "requested_valid_time_utc": "2026-10-31T21:00:00+00:00",
+      "requested_lead_from_cycle_hours": 9,
+      "requested_lead_from_asof_hours": 4.3418058375,
+      "values_by_requested_variable": {
+        "U10": null,
+        "V10": null,
+        "T2": null,
+        "RH2": null
+      },
+      "temperature_celsius": null,
+      "wind_vector_magnitude_ms": null,
+      "wind_direction_from_degrees": null,
+      "wind_direction_status": "basis_unverified",
+      "wind_axis_basis_verified": false,
+      "missing_variables": [
+        "U10",
+        "V10",
+        "T2",
+        "RH2"
+      ],
+      "complete": false,
+      "source_time_variable_unit_confirmed": false,
+      "observed": false,
+      "operational_use": false
+    },
+    {
+      "requested_valid_time_utc": "2026-10-31T22:00:00+00:00",
+      "requested_lead_from_cycle_hours": 10,
+      "requested_lead_from_asof_hours": 5.341805837500001,
+      "values_by_requested_variable": {
+        "U10": null,
+        "V10": null,
+        "T2": null,
+        "RH2": null
+      },
+      "temperature_celsius": null,
+      "wind_vector_magnitude_ms": null,
+      "wind_direction_from_degrees": null,
+      "wind_direction_status": "basis_unverified",
+      "wind_axis_basis_verified": false,
+      "missing_variables": [
+        "U10",
+        "V10",
+        "T2",
+        "RH2"
+      ],
+      "complete": false,
+      "source_time_variable_unit_confirmed": false,
+      "observed": false,
+      "operational_use": false
+    }
+  ],
+  "retrieved_requests": 1,
+  "validated_requests": 0,
+  "complete": false,
+  "all_future_at_retrieval": false,
+  "grid": null,
+  "finished_at_utc": "2026-10-31T16:39:29.640600+00:00",
+  "status": "partial_forecast"
+}

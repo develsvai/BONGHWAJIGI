@@ -1,0 +1,44 @@
+{
+  "scope": "Walker2019 training-event proxy geometry and area cross-check; not independent field truth",
+  "event_id": "walker_2019",
+  "initial_time_utc": "2019-09-04T22:00:00Z",
+  "observed_proxy_total_area_ha": {
+    "0h": 140,
+    "1h": 506,
+    "3h": 1212,
+    "6h": 1434
+  },
+  "observed_proxy_new_area_ha": {
+    "1h": 366,
+    "3h": 1072,
+    "6h": 1294
+  },
+  "original_polygon_total_area_ha_rounded": {
+    "0h": 140.366,
+    "1h": 502.571,
+    "3h": 1210.058,
+    "6h": 1432.36
+  },
+  "verified": [
+    "All three landscape/PHI/arrival grids use EPSG32610,100m,419x411 and matching transform",
+    "All initial140cells equal PHI negative and arrival zero",
+    "UTC t0/horizons independently match source polygon records"
+  ],
+  "three_hour_predicted_new_area_ha": [
+    80,
+    59,
+    51
+  ],
+  "three_hour_max_distance_from_initial_m_rounded": [
+    300,
+    242,
+    179
+  ],
+  "three_hour_gofer_new_growth_distance_m_rounded": {
+    "median": 780,
+    "maximum": 2132
+  },
+  "interpretation": "No coordinate-shift or area-unit error found; substantial predicted/reconstructed expansion mismatch. Initial1.4km2 is smaller than nominal2km sensor footprint scale, so retrospective detection/smoothing changes can mimic growth. This comparison does not isolate actual physical spread error.",
+  "probability": null,
+  "operational_use": false
+}

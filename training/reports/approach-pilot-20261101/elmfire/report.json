@@ -1,0 +1,1006 @@
+{
+  "status": "complete",
+  "simulation_only": true,
+  "probability": null,
+  "operational_use": false,
+  "cases": [
+    {
+      "id": "ws10_wd340",
+      "wind_speed_mph": 10,
+      "wind_direction_deg": 340,
+      "status": "complete",
+      "input_sha256": {
+        "adj.tif": "ff88a903882d7a46f4fa627f90558ed345a9e2a4aa842316dcff878da5fdef5d",
+        "elmfire.data": "97fab1bcec86ec03dff0862a3c53cd9152e7ca3b327b32fb144841bab88bc7ff",
+        "fuel_models.csv": "22b50f3b3dc3b95d1372601a02ff998e197745aff8ee4f96f2c513865e724acb",
+        "landscape.tif": "3b162ee3911e173ab3c98b766083c645da066a29536282b3527144f0c5e9f3dc",
+        "m1.tif": "fa5c45c67ac61cb3495f408047d8f55fc1267992029d4eaa8e6ef293cc071c37",
+        "m10.tif": "1396140c25372948a8e2aa9f01a0739736465a85a01b110ceffc14911409f72b",
+        "m100.tif": "496df0b8bde56a9b0e9335d705956a07b265f3a657374267324a33b6218f65df",
+        "phi.tif": "ff88a903882d7a46f4fa627f90558ed345a9e2a4aa842316dcff878da5fdef5d",
+        "wd.tif": "2d798b9a37052603d6e16bd1728c424d965aa0f3f77d3d5aa76bc2a01299e545",
+        "ws.tif": "869432f94f1c61e912e728ab6f74d3423e308c31d3e02753459f340e46654cc5"
+      },
+      "probes": [
+        {
+          "id": "ignition_neighborhood",
+          "requested_xy_m": [
+            0.0,
+            3000.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            2985.0
+          ],
+          "row": 100,
+          "column": 200,
+          "arrival_seconds": 120.0,
+          "state": "future_arrival"
+        },
+        {
+          "id": "south_1500m",
+          "requested_xy_m": [
+            0.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 200,
+          "arrival_seconds": 6966.70556640625,
+          "state": "future_arrival"
+        },
+        {
+          "id": "southwest",
+          "requested_xy_m": [
+            -1500.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            -1485.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 150,
+          "arrival_seconds": 19854.421875,
+          "state": "future_arrival"
+        },
+        {
+          "id": "southeast",
+          "requested_xy_m": [
+            1500.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            1515.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 250,
+          "arrival_seconds": 10907.5771484375,
+          "state": "future_arrival"
+        },
+        {
+          "id": "north_1500m",
+          "requested_xy_m": [
+            0.0,
+            4500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            4485.0
+          ],
+          "row": 50,
+          "column": 200,
+          "arrival_seconds": null,
+          "state": "unreached_within_horizon"
+        }
+      ],
+      "arrival_sha256": "ce51a1ec28d617e10aa65a831b79a0534ff40107e5d81af3ef34474dffe5e829",
+      "elapsed_seconds": 1.644
+    },
+    {
+      "id": "ws10_wd000",
+      "wind_speed_mph": 10,
+      "wind_direction_deg": 0,
+      "status": "complete",
+      "input_sha256": {
+        "adj.tif": "ff88a903882d7a46f4fa627f90558ed345a9e2a4aa842316dcff878da5fdef5d",
+        "elmfire.data": "97fab1bcec86ec03dff0862a3c53cd9152e7ca3b327b32fb144841bab88bc7ff",
+        "fuel_models.csv": "22b50f3b3dc3b95d1372601a02ff998e197745aff8ee4f96f2c513865e724acb",
+        "landscape.tif": "3b162ee3911e173ab3c98b766083c645da066a29536282b3527144f0c5e9f3dc",
+        "m1.tif": "fa5c45c67ac61cb3495f408047d8f55fc1267992029d4eaa8e6ef293cc071c37",
+        "m10.tif": "1396140c25372948a8e2aa9f01a0739736465a85a01b110ceffc14911409f72b",
+        "m100.tif": "496df0b8bde56a9b0e9335d705956a07b265f3a657374267324a33b6218f65df",
+        "phi.tif": "ff88a903882d7a46f4fa627f90558ed345a9e2a4aa842316dcff878da5fdef5d",
+        "wd.tif": "f6577f28526209cee49a561e6dcadffb2af514958d5b3406245c1ba1a0e49db9",
+        "ws.tif": "869432f94f1c61e912e728ab6f74d3423e308c31d3e02753459f340e46654cc5"
+      },
+      "probes": [
+        {
+          "id": "ignition_neighborhood",
+          "requested_xy_m": [
+            0.0,
+            3000.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            2985.0
+          ],
+          "row": 100,
+          "column": 200,
+          "arrival_seconds": 150.0,
+          "state": "future_arrival"
+        },
+        {
+          "id": "south_1500m",
+          "requested_xy_m": [
+            0.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 200,
+          "arrival_seconds": 6225.60595703125,
+          "state": "future_arrival"
+        },
+        {
+          "id": "southwest",
+          "requested_xy_m": [
+            -1500.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            -1485.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 150,
+          "arrival_seconds": 14343.4326171875,
+          "state": "future_arrival"
+        },
+        {
+          "id": "southeast",
+          "requested_xy_m": [
+            1500.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            1515.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 250,
+          "arrival_seconds": 14905.04296875,
+          "state": "future_arrival"
+        },
+        {
+          "id": "north_1500m",
+          "requested_xy_m": [
+            0.0,
+            4500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            4485.0
+          ],
+          "row": 50,
+          "column": 200,
+          "arrival_seconds": null,
+          "state": "unreached_within_horizon"
+        }
+      ],
+      "arrival_sha256": "c51489d112861be134e5268f1caf8ce51379d36b92dc255745a276264ace0b73",
+      "elapsed_seconds": 1.659
+    },
+    {
+      "id": "ws10_wd020",
+      "wind_speed_mph": 10,
+      "wind_direction_deg": 20,
+      "status": "complete",
+      "input_sha256": {
+        "adj.tif": "ff88a903882d7a46f4fa627f90558ed345a9e2a4aa842316dcff878da5fdef5d",
+        "elmfire.data": "97fab1bcec86ec03dff0862a3c53cd9152e7ca3b327b32fb144841bab88bc7ff",
+        "fuel_models.csv": "22b50f3b3dc3b95d1372601a02ff998e197745aff8ee4f96f2c513865e724acb",
+        "landscape.tif": "3b162ee3911e173ab3c98b766083c645da066a29536282b3527144f0c5e9f3dc",
+        "m1.tif": "fa5c45c67ac61cb3495f408047d8f55fc1267992029d4eaa8e6ef293cc071c37",
+        "m10.tif": "1396140c25372948a8e2aa9f01a0739736465a85a01b110ceffc14911409f72b",
+        "m100.tif": "496df0b8bde56a9b0e9335d705956a07b265f3a657374267324a33b6218f65df",
+        "phi.tif": "ff88a903882d7a46f4fa627f90558ed345a9e2a4aa842316dcff878da5fdef5d",
+        "wd.tif": "6449ef328cee512ef1e4b4d17bfd00e31ddd2bf307bb8c3b403b95979cc10c35",
+        "ws.tif": "869432f94f1c61e912e728ab6f74d3423e308c31d3e02753459f340e46654cc5"
+      },
+      "probes": [
+        {
+          "id": "ignition_neighborhood",
+          "requested_xy_m": [
+            0.0,
+            3000.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            2985.0
+          ],
+          "row": 100,
+          "column": 200,
+          "arrival_seconds": 203.25503540039062,
+          "state": "future_arrival"
+        },
+        {
+          "id": "south_1500m",
+          "requested_xy_m": [
+            0.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 200,
+          "arrival_seconds": 7179.7236328125,
+          "state": "future_arrival"
+        },
+        {
+          "id": "southwest",
+          "requested_xy_m": [
+            -1500.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            -1485.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 150,
+          "arrival_seconds": 10534.7900390625,
+          "state": "future_arrival"
+        },
+        {
+          "id": "southeast",
+          "requested_xy_m": [
+            1500.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            1515.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 250,
+          "arrival_seconds": 20599.98828125,
+          "state": "future_arrival"
+        },
+        {
+          "id": "north_1500m",
+          "requested_xy_m": [
+            0.0,
+            4500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            4485.0
+          ],
+          "row": 50,
+          "column": 200,
+          "arrival_seconds": null,
+          "state": "unreached_within_horizon"
+        }
+      ],
+      "arrival_sha256": "622ab30f9c4c80f1c31642bc36a9173fbc0529527f05563e22da84264ee6f263",
+      "elapsed_seconds": 1.608
+    },
+    {
+      "id": "ws15_wd340",
+      "wind_speed_mph": 15,
+      "wind_direction_deg": 340,
+      "status": "complete",
+      "input_sha256": {
+        "adj.tif": "ff88a903882d7a46f4fa627f90558ed345a9e2a4aa842316dcff878da5fdef5d",
+        "elmfire.data": "97fab1bcec86ec03dff0862a3c53cd9152e7ca3b327b32fb144841bab88bc7ff",
+        "fuel_models.csv": "22b50f3b3dc3b95d1372601a02ff998e197745aff8ee4f96f2c513865e724acb",
+        "landscape.tif": "3b162ee3911e173ab3c98b766083c645da066a29536282b3527144f0c5e9f3dc",
+        "m1.tif": "fa5c45c67ac61cb3495f408047d8f55fc1267992029d4eaa8e6ef293cc071c37",
+        "m10.tif": "1396140c25372948a8e2aa9f01a0739736465a85a01b110ceffc14911409f72b",
+        "m100.tif": "496df0b8bde56a9b0e9335d705956a07b265f3a657374267324a33b6218f65df",
+        "phi.tif": "ff88a903882d7a46f4fa627f90558ed345a9e2a4aa842316dcff878da5fdef5d",
+        "wd.tif": "2d798b9a37052603d6e16bd1728c424d965aa0f3f77d3d5aa76bc2a01299e545",
+        "ws.tif": "bc5a8ac7fb7816c882e00fe1a1550fc2afc5bdfce04cced0f946185aee555237"
+      },
+      "probes": [
+        {
+          "id": "ignition_neighborhood",
+          "requested_xy_m": [
+            0.0,
+            3000.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            2985.0
+          ],
+          "row": 100,
+          "column": 200,
+          "arrival_seconds": 90.0,
+          "state": "future_arrival"
+        },
+        {
+          "id": "south_1500m",
+          "requested_xy_m": [
+            0.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 200,
+          "arrival_seconds": 4340.08056640625,
+          "state": "future_arrival"
+        },
+        {
+          "id": "southwest",
+          "requested_xy_m": [
+            -1500.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            -1485.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 150,
+          "arrival_seconds": 16298.470703125,
+          "state": "future_arrival"
+        },
+        {
+          "id": "southeast",
+          "requested_xy_m": [
+            1500.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            1515.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 250,
+          "arrival_seconds": 7062.0673828125,
+          "state": "future_arrival"
+        },
+        {
+          "id": "north_1500m",
+          "requested_xy_m": [
+            0.0,
+            4500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            4485.0
+          ],
+          "row": 50,
+          "column": 200,
+          "arrival_seconds": null,
+          "state": "unreached_within_horizon"
+        }
+      ],
+      "arrival_sha256": "340dde7cf37565784adfa578fcd5d10863cc91fb5822efa65d827c7cb4a3eaf5",
+      "elapsed_seconds": 2.51
+    },
+    {
+      "id": "ws15_wd000",
+      "wind_speed_mph": 15,
+      "wind_direction_deg": 0,
+      "status": "complete",
+      "input_sha256": {
+        "adj.tif": "ff88a903882d7a46f4fa627f90558ed345a9e2a4aa842316dcff878da5fdef5d",
+        "elmfire.data": "97fab1bcec86ec03dff0862a3c53cd9152e7ca3b327b32fb144841bab88bc7ff",
+        "fuel_models.csv": "22b50f3b3dc3b95d1372601a02ff998e197745aff8ee4f96f2c513865e724acb",
+        "landscape.tif": "3b162ee3911e173ab3c98b766083c645da066a29536282b3527144f0c5e9f3dc",
+        "m1.tif": "fa5c45c67ac61cb3495f408047d8f55fc1267992029d4eaa8e6ef293cc071c37",
+        "m10.tif": "1396140c25372948a8e2aa9f01a0739736465a85a01b110ceffc14911409f72b",
+        "m100.tif": "496df0b8bde56a9b0e9335d705956a07b265f3a657374267324a33b6218f65df",
+        "phi.tif": "ff88a903882d7a46f4fa627f90558ed345a9e2a4aa842316dcff878da5fdef5d",
+        "wd.tif": "f6577f28526209cee49a561e6dcadffb2af514958d5b3406245c1ba1a0e49db9",
+        "ws.tif": "bc5a8ac7fb7816c882e00fe1a1550fc2afc5bdfce04cced0f946185aee555237"
+      },
+      "probes": [
+        {
+          "id": "ignition_neighborhood",
+          "requested_xy_m": [
+            0.0,
+            3000.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            2985.0
+          ],
+          "row": 100,
+          "column": 200,
+          "arrival_seconds": 150.0,
+          "state": "future_arrival"
+        },
+        {
+          "id": "south_1500m",
+          "requested_xy_m": [
+            0.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 200,
+          "arrival_seconds": 3556.588623046875,
+          "state": "future_arrival"
+        },
+        {
+          "id": "southwest",
+          "requested_xy_m": [
+            -1500.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            -1485.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 150,
+          "arrival_seconds": 10602.6953125,
+          "state": "future_arrival"
+        },
+        {
+          "id": "southeast",
+          "requested_xy_m": [
+            1500.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            1515.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 250,
+          "arrival_seconds": 11097.669921875,
+          "state": "future_arrival"
+        },
+        {
+          "id": "north_1500m",
+          "requested_xy_m": [
+            0.0,
+            4500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            4485.0
+          ],
+          "row": 50,
+          "column": 200,
+          "arrival_seconds": null,
+          "state": "unreached_within_horizon"
+        }
+      ],
+      "arrival_sha256": "69436487740b5b4c202e56687c367fa18486dedb1892b997bd406b2a0d6fd405",
+      "elapsed_seconds": 2.516
+    },
+    {
+      "id": "ws15_wd020",
+      "wind_speed_mph": 15,
+      "wind_direction_deg": 20,
+      "status": "complete",
+      "input_sha256": {
+        "adj.tif": "ff88a903882d7a46f4fa627f90558ed345a9e2a4aa842316dcff878da5fdef5d",
+        "elmfire.data": "97fab1bcec86ec03dff0862a3c53cd9152e7ca3b327b32fb144841bab88bc7ff",
+        "fuel_models.csv": "22b50f3b3dc3b95d1372601a02ff998e197745aff8ee4f96f2c513865e724acb",
+        "landscape.tif": "3b162ee3911e173ab3c98b766083c645da066a29536282b3527144f0c5e9f3dc",
+        "m1.tif": "fa5c45c67ac61cb3495f408047d8f55fc1267992029d4eaa8e6ef293cc071c37",
+        "m10.tif": "1396140c25372948a8e2aa9f01a0739736465a85a01b110ceffc14911409f72b",
+        "m100.tif": "496df0b8bde56a9b0e9335d705956a07b265f3a657374267324a33b6218f65df",
+        "phi.tif": "ff88a903882d7a46f4fa627f90558ed345a9e2a4aa842316dcff878da5fdef5d",
+        "wd.tif": "6449ef328cee512ef1e4b4d17bfd00e31ddd2bf307bb8c3b403b95979cc10c35",
+        "ws.tif": "bc5a8ac7fb7816c882e00fe1a1550fc2afc5bdfce04cced0f946185aee555237"
+      },
+      "probes": [
+        {
+          "id": "ignition_neighborhood",
+          "requested_xy_m": [
+            0.0,
+            3000.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            2985.0
+          ],
+          "row": 100,
+          "column": 200,
+          "arrival_seconds": 211.1727294921875,
+          "state": "future_arrival"
+        },
+        {
+          "id": "south_1500m",
+          "requested_xy_m": [
+            0.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 200,
+          "arrival_seconds": 4523.6083984375,
+          "state": "future_arrival"
+        },
+        {
+          "id": "southwest",
+          "requested_xy_m": [
+            -1500.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            -1485.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 150,
+          "arrival_seconds": 6786.8330078125,
+          "state": "future_arrival"
+        },
+        {
+          "id": "southeast",
+          "requested_xy_m": [
+            1500.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            1515.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 250,
+          "arrival_seconds": 16971.34375,
+          "state": "future_arrival"
+        },
+        {
+          "id": "north_1500m",
+          "requested_xy_m": [
+            0.0,
+            4500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            4485.0
+          ],
+          "row": 50,
+          "column": 200,
+          "arrival_seconds": null,
+          "state": "unreached_within_horizon"
+        }
+      ],
+      "arrival_sha256": "898b3dcadea095add750b63c058802115b5813c598ee644c0efabdf7cd58d195",
+      "elapsed_seconds": 2.46
+    },
+    {
+      "id": "ws20_wd340",
+      "wind_speed_mph": 20,
+      "wind_direction_deg": 340,
+      "status": "complete",
+      "input_sha256": {
+        "adj.tif": "ff88a903882d7a46f4fa627f90558ed345a9e2a4aa842316dcff878da5fdef5d",
+        "elmfire.data": "97fab1bcec86ec03dff0862a3c53cd9152e7ca3b327b32fb144841bab88bc7ff",
+        "fuel_models.csv": "22b50f3b3dc3b95d1372601a02ff998e197745aff8ee4f96f2c513865e724acb",
+        "landscape.tif": "3b162ee3911e173ab3c98b766083c645da066a29536282b3527144f0c5e9f3dc",
+        "m1.tif": "fa5c45c67ac61cb3495f408047d8f55fc1267992029d4eaa8e6ef293cc071c37",
+        "m10.tif": "1396140c25372948a8e2aa9f01a0739736465a85a01b110ceffc14911409f72b",
+        "m100.tif": "496df0b8bde56a9b0e9335d705956a07b265f3a657374267324a33b6218f65df",
+        "phi.tif": "ff88a903882d7a46f4fa627f90558ed345a9e2a4aa842316dcff878da5fdef5d",
+        "wd.tif": "2d798b9a37052603d6e16bd1728c424d965aa0f3f77d3d5aa76bc2a01299e545",
+        "ws.tif": "6449ef328cee512ef1e4b4d17bfd00e31ddd2bf307bb8c3b403b95979cc10c35"
+      },
+      "probes": [
+        {
+          "id": "ignition_neighborhood",
+          "requested_xy_m": [
+            0.0,
+            3000.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            2985.0
+          ],
+          "row": 100,
+          "column": 200,
+          "arrival_seconds": 90.0,
+          "state": "future_arrival"
+        },
+        {
+          "id": "south_1500m",
+          "requested_xy_m": [
+            0.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 200,
+          "arrival_seconds": 3260.8203125,
+          "state": "future_arrival"
+        },
+        {
+          "id": "southwest",
+          "requested_xy_m": [
+            -1500.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            -1485.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 150,
+          "arrival_seconds": 15908.63671875,
+          "state": "future_arrival"
+        },
+        {
+          "id": "southeast",
+          "requested_xy_m": [
+            1500.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            1515.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 250,
+          "arrival_seconds": 5593.91259765625,
+          "state": "future_arrival"
+        },
+        {
+          "id": "north_1500m",
+          "requested_xy_m": [
+            0.0,
+            4500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            4485.0
+          ],
+          "row": 50,
+          "column": 200,
+          "arrival_seconds": null,
+          "state": "unreached_within_horizon"
+        }
+      ],
+      "arrival_sha256": "3fe2485cb92909007d83b9851d2ec6a9773b3fe4fde968af89af6316ad3869ea",
+      "elapsed_seconds": 3.511
+    },
+    {
+      "id": "ws20_wd000",
+      "wind_speed_mph": 20,
+      "wind_direction_deg": 0,
+      "status": "complete",
+      "input_sha256": {
+        "adj.tif": "ff88a903882d7a46f4fa627f90558ed345a9e2a4aa842316dcff878da5fdef5d",
+        "elmfire.data": "97fab1bcec86ec03dff0862a3c53cd9152e7ca3b327b32fb144841bab88bc7ff",
+        "fuel_models.csv": "22b50f3b3dc3b95d1372601a02ff998e197745aff8ee4f96f2c513865e724acb",
+        "landscape.tif": "3b162ee3911e173ab3c98b766083c645da066a29536282b3527144f0c5e9f3dc",
+        "m1.tif": "fa5c45c67ac61cb3495f408047d8f55fc1267992029d4eaa8e6ef293cc071c37",
+        "m10.tif": "1396140c25372948a8e2aa9f01a0739736465a85a01b110ceffc14911409f72b",
+        "m100.tif": "496df0b8bde56a9b0e9335d705956a07b265f3a657374267324a33b6218f65df",
+        "phi.tif": "ff88a903882d7a46f4fa627f90558ed345a9e2a4aa842316dcff878da5fdef5d",
+        "wd.tif": "f6577f28526209cee49a561e6dcadffb2af514958d5b3406245c1ba1a0e49db9",
+        "ws.tif": "6449ef328cee512ef1e4b4d17bfd00e31ddd2bf307bb8c3b403b95979cc10c35"
+      },
+      "probes": [
+        {
+          "id": "ignition_neighborhood",
+          "requested_xy_m": [
+            0.0,
+            3000.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            2985.0
+          ],
+          "row": 100,
+          "column": 200,
+          "arrival_seconds": 150.0,
+          "state": "future_arrival"
+        },
+        {
+          "id": "south_1500m",
+          "requested_xy_m": [
+            0.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 200,
+          "arrival_seconds": 2380.42041015625,
+          "state": "future_arrival"
+        },
+        {
+          "id": "southwest",
+          "requested_xy_m": [
+            -1500.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            -1485.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 150,
+          "arrival_seconds": 9595.345703125,
+          "state": "future_arrival"
+        },
+        {
+          "id": "southeast",
+          "requested_xy_m": [
+            1500.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            1515.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 250,
+          "arrival_seconds": 10138.404296875,
+          "state": "future_arrival"
+        },
+        {
+          "id": "north_1500m",
+          "requested_xy_m": [
+            0.0,
+            4500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            4485.0
+          ],
+          "row": 50,
+          "column": 200,
+          "arrival_seconds": null,
+          "state": "unreached_within_horizon"
+        }
+      ],
+      "arrival_sha256": "8255a4fb11b20f7131f7c2eee8c3775d487b84af2149c52188b49d28ebb5c0cf",
+      "elapsed_seconds": 3.512
+    },
+    {
+      "id": "ws20_wd020",
+      "wind_speed_mph": 20,
+      "wind_direction_deg": 20,
+      "status": "complete",
+      "input_sha256": {
+        "adj.tif": "ff88a903882d7a46f4fa627f90558ed345a9e2a4aa842316dcff878da5fdef5d",
+        "elmfire.data": "97fab1bcec86ec03dff0862a3c53cd9152e7ca3b327b32fb144841bab88bc7ff",
+        "fuel_models.csv": "22b50f3b3dc3b95d1372601a02ff998e197745aff8ee4f96f2c513865e724acb",
+        "landscape.tif": "3b162ee3911e173ab3c98b766083c645da066a29536282b3527144f0c5e9f3dc",
+        "m1.tif": "fa5c45c67ac61cb3495f408047d8f55fc1267992029d4eaa8e6ef293cc071c37",
+        "m10.tif": "1396140c25372948a8e2aa9f01a0739736465a85a01b110ceffc14911409f72b",
+        "m100.tif": "496df0b8bde56a9b0e9335d705956a07b265f3a657374267324a33b6218f65df",
+        "phi.tif": "ff88a903882d7a46f4fa627f90558ed345a9e2a4aa842316dcff878da5fdef5d",
+        "wd.tif": "6449ef328cee512ef1e4b4d17bfd00e31ddd2bf307bb8c3b403b95979cc10c35",
+        "ws.tif": "6449ef328cee512ef1e4b4d17bfd00e31ddd2bf307bb8c3b403b95979cc10c35"
+      },
+      "probes": [
+        {
+          "id": "ignition_neighborhood",
+          "requested_xy_m": [
+            0.0,
+            3000.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            2985.0
+          ],
+          "row": 100,
+          "column": 200,
+          "arrival_seconds": 211.40065002441406,
+          "state": "future_arrival"
+        },
+        {
+          "id": "south_1500m",
+          "requested_xy_m": [
+            0.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 200,
+          "arrival_seconds": 3465.48779296875,
+          "state": "future_arrival"
+        },
+        {
+          "id": "southwest",
+          "requested_xy_m": [
+            -1500.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            -1485.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 150,
+          "arrival_seconds": 5307.40234375,
+          "state": "future_arrival"
+        },
+        {
+          "id": "southeast",
+          "requested_xy_m": [
+            1500.0,
+            1500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            1515.0,
+            1485.0
+          ],
+          "row": 150,
+          "column": 250,
+          "arrival_seconds": 16645.53125,
+          "state": "future_arrival"
+        },
+        {
+          "id": "north_1500m",
+          "requested_xy_m": [
+            0.0,
+            4500.0
+          ],
+          "sampled_cell_center_xy_m": [
+            15.0,
+            4485.0
+          ],
+          "row": 50,
+          "column": 200,
+          "arrival_seconds": null,
+          "state": "unreached_within_horizon"
+        }
+      ],
+      "arrival_sha256": "610fe1ce1aefcfeb2b3e8b44011e36a84c51ca539760f252b92b35b4e700fe96",
+      "elapsed_seconds": 3.511
+    }
+  ],
+  "plan_sha256": "a82af9f25bda16f6bcdb304ce0a278d2264c5c4b48e92b685ea5563ad694eeb9",
+  "probes": [
+    {
+      "id": "ignition_neighborhood",
+      "synthetic_xy_m": [
+        0.0,
+        3000.0
+      ],
+      "simulation_only": true,
+      "probability": null,
+      "operational_use": false,
+      "completed_scenarios": 9,
+      "planned_scenarios": 9,
+      "initially_reached_scenarios": 0,
+      "future_arrival_counts": {
+        "1h": 9,
+        "3h": 9,
+        "6h": 9
+      },
+      "scenario_fraction": {
+        "1h": 1.0,
+        "3h": 1.0,
+        "6h": 1.0
+      },
+      "unavailable_reason": null
+    },
+    {
+      "id": "south_1500m",
+      "synthetic_xy_m": [
+        0.0,
+        1500.0
+      ],
+      "simulation_only": true,
+      "probability": null,
+      "operational_use": false,
+      "completed_scenarios": 9,
+      "planned_scenarios": 9,
+      "initially_reached_scenarios": 0,
+      "future_arrival_counts": {
+        "1h": 4,
+        "3h": 9,
+        "6h": 9
+      },
+      "scenario_fraction": {
+        "1h": 0.4444444444444444,
+        "3h": 1.0,
+        "6h": 1.0
+      },
+      "unavailable_reason": null
+    },
+    {
+      "id": "southwest",
+      "synthetic_xy_m": [
+        -1500.0,
+        1500.0
+      ],
+      "simulation_only": true,
+      "probability": null,
+      "operational_use": false,
+      "completed_scenarios": 9,
+      "planned_scenarios": 9,
+      "initially_reached_scenarios": 0,
+      "future_arrival_counts": {
+        "1h": 0,
+        "3h": 5,
+        "6h": 9
+      },
+      "scenario_fraction": {
+        "1h": 0.0,
+        "3h": 0.5555555555555556,
+        "6h": 1.0
+      },
+      "unavailable_reason": null
+    },
+    {
+      "id": "southeast",
+      "synthetic_xy_m": [
+        1500.0,
+        1500.0
+      ],
+      "simulation_only": true,
+      "probability": null,
+      "operational_use": false,
+      "completed_scenarios": 9,
+      "planned_scenarios": 9,
+      "initially_reached_scenarios": 0,
+      "future_arrival_counts": {
+        "1h": 0,
+        "3h": 3,
+        "6h": 9
+      },
+      "scenario_fraction": {
+        "1h": 0.0,
+        "3h": 0.3333333333333333,
+        "6h": 1.0
+      },
+      "unavailable_reason": null
+    },
+    {
+      "id": "north_1500m",
+      "synthetic_xy_m": [
+        0.0,
+        4500.0
+      ],
+      "simulation_only": true,
+      "probability": null,
+      "operational_use": false,
+      "completed_scenarios": 9,
+      "planned_scenarios": 9,
+      "initially_reached_scenarios": 0,
+      "future_arrival_counts": {
+        "1h": 0,
+        "3h": 0,
+        "6h": 0
+      },
+      "scenario_fraction": {
+        "1h": 0.0,
+        "3h": 0.0,
+        "6h": 0.0
+      },
+      "unavailable_reason": null
+    }
+  ],
+  "elapsed_seconds": 22.944,
+  "finished_at": "2026-10-31T16:25:30.279076+00:00"
+}

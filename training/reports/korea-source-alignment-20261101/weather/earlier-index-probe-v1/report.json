@@ -1,0 +1,51 @@
+{
+  "plan_sha256": "dc2879e914f506d742173cbdc4f4dffc626ae8187dc4c2f5e74bf245da925394",
+  "records": [
+    {
+      "event": "andong_2020",
+      "cycle_utc": "2020-04-24T18:00:00+00:00",
+      "lead_hours": 11,
+      "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20200424/18/gfs.t18z.pgrb2.0p25.f011.idx",
+      "http_status": 404,
+      "bytes_read": 0,
+      "retrieved_at_utc": "2026-10-31T18:39:07.925926+00:00",
+      "status": "index_unavailable"
+    },
+    {
+      "event": "andong_2021",
+      "cycle_utc": "2021-02-21T00:00:00+00:00",
+      "lead_hours": 8,
+      "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20210221/00/gfs.t00z.pgrb2.0p25.f008.idx",
+      "http_status": 404,
+      "bytes_read": 0,
+      "retrieved_at_utc": "2026-10-31T18:39:08.545559+00:00",
+      "status": "index_unavailable"
+    },
+    {
+      "event": "goseong_2020",
+      "cycle_utc": "2020-05-01T06:00:00+00:00",
+      "lead_hours": 6,
+      "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20200501/06/gfs.t06z.pgrb2.0p25.f006.idx",
+      "http_status": 404,
+      "bytes_read": 0,
+      "retrieved_at_utc": "2026-10-31T18:39:09.155053+00:00",
+      "status": "index_unavailable"
+    },
+    {
+      "event": "ulju_2020",
+      "cycle_utc": "2020-03-19T00:00:00+00:00",
+      "lead_hours": 6,
+      "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20200319/00/gfs.t00z.pgrb2.0p25.f006.idx",
+      "http_status": 404,
+      "bytes_read": 0,
+      "retrieved_at_utc": "2026-10-31T18:39:09.846894+00:00",
+      "status": "index_unavailable"
+    }
+  ],
+  "actual_requests": 4,
+  "total_response_bytes": 0,
+  "weather_grib_downloaded": false,
+  "wind_axis_verified": false,
+  "historical_publication_time_verified": false,
+  "operational_use": false
+}

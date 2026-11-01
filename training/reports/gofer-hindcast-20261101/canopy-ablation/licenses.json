@@ -1,0 +1,22 @@
+{
+  "landfire": {
+    "name": "Public domain USGS/LANDFIRE data; source attribution retained",
+    "scope": "Published LANDFIRE raster products; not a license for ELMFIRE software",
+    "provider_evidence_url": "https://landfire.gov/helpdesk",
+    "provider_evidence_record": "11081 (2024-02-28): LF data/maps/graphics are public domain",
+    "usgs_policy_url": "https://pubs.usgs.gov/documentation/faq",
+    "citation": "LANDFIRE 2016 Remap, Forest Canopy Cover/Height/Base Height/Bulk Density, USGS/USFS"
+  },
+  "elmfire": {
+    "license": "AGPL-3.0 with Commons Clause; private research evaluation only",
+    "urls": [
+      "https://github.com/lautenberger/elmfire/blob/f4927b7ce68cb74eb0eb117085cc920782c8644e/LICENSE.md",
+      "https://github.com/lautenberger/elmfire/blob/f4927b7ce68cb74eb0eb117085cc920782c8644e/COMMERCIAL_LICENSE.md"
+    ],
+    "sha256": {
+      "LICENSE.md": "55032df426cd4157e55c37ac34c9efb31fd6412e869a2e1f55e84f1a87e19dd6",
+      "COMMERCIAL_LICENSE.md": "d34d51903b386bb31253159788f13a2bf2579f3c8d1e34e69e8963da066a7236"
+    }
+  },
+  "scope": "Private research ablation; no hosted/API/product integration"
+}

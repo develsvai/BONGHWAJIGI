@@ -1,0 +1,61 @@
+{"argv": ["nice", "-n", "10", "/home1/ncloud/bonghwajigi/data/artifacts/research-tools/elmfire/bin/elmfire_1.1", "./inputs/elmfire.data"]}
+ ELMFIRE 1.1
+ Reading &MISCELLANEOUS namelist group
+ Auto-detected PATH_TO_GDAL: /home1/ncloud/bonghwajigi/data/artifacts/research-tools/elmfire/env/bin
+ Reading &INPUTS namelist group
+ Reading &OUTPUTS namelist group
+ Reading &TIME_CONTROL namelist group
+ Reading &SIMULATOR namelist group
+ Reading &WUI namelist group
+ Reading &CALIBRATION namelist group
+ Reading &SUPPRESSION namelist group
+ Reading &SPOTTING namelist group
+ Reading &SMOKE namelist group
+ Reading &MONTE_CARLO namelist group
+ Reading headers for fuels/topography and weather rasters
+/home1/ncloud/bonghwajigi/data/artifacts/research-tools/elmfire/env/bin/gdal_translate -q -of ENVI -co "INTERLEAVE=BSQ" ./inputs/landscape.tif ./scratch/landscape.bsq
+/home1/ncloud/bonghwajigi/data/artifacts/research-tools/elmfire/env/bin/gdal_translate -q -of ENVI -co "INTERLEAVE=BSQ" ./inputs/ws.tif ./scratch/ws.bsq
+ Setting up shared memory, part 1
+ Reading weather, fuel, and topography rasters
+ Reading fuel and topography rasters
+ Reading bsq header from landscape
+ Reading bsq header from landscape
+ Reading bsq header from landscape
+ Reading bsq header from landscape
+ Reading bsq header from landscape
+ Reading bsq header from landscape
+ Reading bsq header from landscape
+ Reading bsq header from landscape
+/home1/ncloud/bonghwajigi/data/artifacts/research-tools/elmfire/env/bin/gdal_translate -q -of ENVI -co "INTERLEAVE=BSQ" ./inputs/adj.tif ./scratch/adj.bsq
+ Reading bsq header from adj
+/home1/ncloud/bonghwajigi/data/artifacts/research-tools/elmfire/env/bin/gdal_translate -q -of ENVI -co "INTERLEAVE=BSQ" ./inputs/phi.tif ./scratch/phi.bsq
+ Reading bsq header from phi
+ Reading bsq header from ws
+/home1/ncloud/bonghwajigi/data/artifacts/research-tools/elmfire/env/bin/gdal_translate -q -of ENVI -co "INTERLEAVE=BSQ" ./inputs/wd.tif ./scratch/wd.bsq
+ Reading bsq header from wd
+/home1/ncloud/bonghwajigi/data/artifacts/research-tools/elmfire/env/bin/gdal_translate -q -of ENVI -co "INTERLEAVE=BSQ" ./inputs/m1.tif ./scratch/m1.bsq
+ Reading bsq header from m1
+/home1/ncloud/bonghwajigi/data/artifacts/research-tools/elmfire/env/bin/gdal_translate -q -of ENVI -co "INTERLEAVE=BSQ" ./inputs/m10.tif ./scratch/m10.bsq
+ Reading bsq header from m10
+/home1/ncloud/bonghwajigi/data/artifacts/research-tools/elmfire/env/bin/gdal_translate -q -of ENVI -co "INTERLEAVE=BSQ" ./inputs/m100.tif ./scratch/m100.bsq
+ Reading bsq header from m100
+ Using input Phi grid as ignition source
+ Determining number of cases to run
+ Allocating additional rasters
+ Setting up shared memory, part 2
+ Setting up statistics arrays
+ Shared memory (2) setup finished
+ ELMFIRE is running each ensemble member
+[1] STARTING LEVEL SET PROPAGATION, WEATHER BAND START: 1
+[1] INITIATING WEATHER SLICE FROM [1, 7]
+[1] INITIATED WEATHER SLICE TO [1, 7]
+[1] PRIOR TO MAIN LOOP. T:        0.0, Total Duration:    25200.0, Start:        0.0
+[1] LEVEL SET CASE INITIATING AT T =          0.0
+[1] INITIATION ENDED
+[1] Current Timestep: .0 of 21600.0, tracked nodes:       0. Weather bands 1 to 7[1] Current Timestep: 5.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 10.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 15.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 20.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 25.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 625.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 1225.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 1825.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 2425.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 3025.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 3625.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 4225.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 4825.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 5425.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 6025.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 6625.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 7225.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 7825.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 8425.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 9025.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 9625.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 10225.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 10825.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 11425.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 12025.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 12625.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 13225.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 13825.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 14425.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 15025.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 15625.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 16225.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 16825.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 17425.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 18025.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 18625.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 19225.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 19825.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 20425.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] Current Timestep: 21025.0 of 21600.0, tracked nodes:      25. Weather bands 1 to 7[1] LEVEL SET CASE OUTPUT STARTED AT T      21600.0
+[1] LEVEL SET CASE ENDED
+[1] Meteorology band      1: Case #       1 complete.  Fire area:      2.5 acres.
+ End of simulation reached successfully. Shutting down.
+{"argv": ["/home1/ncloud/bonghwajigi/data/artifacts/research-tools/elmfire/env/bin/gdal_translate", "-a_srs", "EPSG:32652", "-co", "COMPRESS=DEFLATE", "/home1/ncloud/bonghwajigi/data/artifacts/elmfire/korea-100m-20261101-nodata-fix/fuel_183/outputs/time_of_arrival_0000001_0021600.bil", "/home1/ncloud/bonghwajigi/data/artifacts/elmfire/korea-100m-20261101-nodata-fix/fuel_183/outputs/time_of_arrival_0000001_0021600.tif"]}
+Input file size is 100, 100
+0...10...20...30...40...50...60...70...80...90...100 - done.

@@ -1,0 +1,109 @@
+{
+  "기준일": "2026-11-01 KST",
+  "README_행수": 444,
+  "깨진_로컬링크": [],
+  "HTML_이미지_SHA256": {
+    "docs/V2/delivery/architecture-slides/output/original-style-current.png": "ce85970809093b937d694ec3a298f7981e5b0057462b87904689aca827a8dba2"
+  },
+  "첨부_원본과_동일": true,
+  "인증정보_패턴": {
+    "private_key": 0,
+    "jwt_value": 0,
+    "github_token": 0,
+    "signed_url_secret": 0
+  },
+  "표_오류_행": [],
+  "shell_구문": {
+    "개수": 16,
+    "실패": 0
+  },
+  "CLI_검증": [
+    {
+      "command": [
+        "/Users/hongyongjae/Desktop/helloworld/BONGHWAJIGI/.venv/bin/python",
+        "-m",
+        "bonghwajigi.ingestion.replay",
+        "data/scenarios/analysis-event.jsonl",
+        "--check"
+      ],
+      "exit_code": 0,
+      "output": "{\"mode\": \"simulation\", \"validated_events\": 1, \"submitted\": false}",
+      "error": ""
+    },
+    {
+      "command": [
+        "/Users/hongyongjae/Desktop/helloworld/BONGHWAJIGI/.venv/bin/python",
+        "tools/mvp_demo.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "output": "usage: mvp_demo.py [-h] [--base-url BASE_URL] [--output-dir OUTPUT_DIR]\n\n일반 서버의 실제 큐·API·정책·모의 전달을 합성 시나리오로 점검한다.\n\noptions:\n  -h, --help            show this help message and exit\n  --base-url BASE_URL\n  --output-dir OUTPUT_DIR",
+      "error": ""
+    },
+    {
+      "command": [
+        "/Users/hongyongjae/Desktop/helloworld/BONGHWAJIGI/.venv/bin/python",
+        "tools/mvp_analysis_demo.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "output": "usage: mvp_analysis_demo.py [-h] [--output-dir OUTPUT_DIR]\n\n기존 GPU를 통해 임베딩·인터넷 검색·Qwen 통합까지 실제 작업 큐를 점검한다.\n\noptions:\n  -h, --help            show this help message and exit\n  --output-dir OUTPUT_DIR",
+      "error": ""
+    },
+    {
+      "command": [
+        "/Users/hongyongjae/Desktop/helloworld/BONGHWAJIGI/.venv/bin/python",
+        "tools/filming_scenario.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "output": "usage: filming_scenario.py [-h] --state STATE [--bundle BUNDLE]\n                           [--base-url BASE_URL] [--scenario SCENARIO]\n                           [--phone-user PHONE_USER] [--phone-role {A,B}]\n                           {prepare,trigger,verify,all}\n\n공개 기록과 분리된 A/B 설정을 실제 큐·모델·정책으로 재생한다. 자격정보는 권한 600 상태 파일에만 보관한다. 실제\n푸시·GPS·119·예측은 호출하지 않는다.\n\npositional arguments:\n  {prepare,trigger,verify,all}\n\noptions:\n  -h, --help            show this help message and exit\n  --state STATE\n  --b",
+      "error": ""
+    },
+    {
+      "command": [
+        "/Users/hongyongjae/Desktop/helloworld/BONGHWAJIGI/.venv/bin/python",
+        "tools/gpu_client.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "output": "usage: gpu_client.py [-h] [--text TEXT] [--input-type {document,query}]\n                     [--env-file ENV_FILE]\n                     {generate,embed,ready}\n\n서버에 보관된 토큰을 출력하지 않고 localhost 모델 API를 호출한다.\n\npositional arguments:\n  {generate,embed,ready}\n\noptions:\n  -h, --help            show this help message and exit\n  --text TEXT\n  --input-type {document,query}\n  --env-file ENV_FILE",
+      "error": ""
+    }
+  ],
+  "새_설정_검증": {
+    "generation_exit_code": 0,
+    "mode": "0o600",
+    "distinct_private_keys": true,
+    "repeat_refuses_overwrite": true,
+    "compose_config_exit_code": 0,
+    "compose_error": ""
+  },
+  "기본_API_상태": {
+    "live": 200,
+    "ready": 503,
+    "gpu_live": 200,
+    "gpu_ready": 503
+  },
+  "실제_Tailnet_읽기_확인": {
+    "HTTPS_인증서_검증": "유지",
+    "readiness": 200,
+    "checks": [
+      "database connected",
+      "broker connected",
+      "prediction excluded",
+      "gpu optional_not_in_readiness"
+    ],
+    "무인증_app_config": 401
+  },
+  "전사_확인_범위": "전체227행, README 피드백00:30:56~00:32:56 및 출처·멱등성·실패·비밀설정 구간",
+  "발표자료_확인_범위": "사용자 제공 v3 PPTX의 전체11장 텍스트와 모델·흐름·외부자원·기대효과 내용 대조. PPTX 변경 없음.",
+  "원본_이미지_경로_변경": "최초 열람 시 원본 SHA 확인. 이후 Downloads 원본이 없어져 동일 SHA의 저장소 기존 PNG를 재사용.",
+  "서비스_변경": "없음. DB·큐·GPU·학습 재시작 및 실제 시나리오 주입은 수행하지 않음.",
+  "통과": true,
+  "공용_이력_안전성_대조": {
+    "proposed_commit_removed_lines": 0,
+    "all_head_bytes_preserved": true,
+    "all_additions_belong_to_this_task": true
+  }
+}

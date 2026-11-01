@@ -1,0 +1,146 @@
+{
+  "simulation_only": true,
+  "operational_use": false,
+  "probability": null,
+  "retrospective_proxy_only": true,
+  "source_asof_verified": false,
+  "final_evaluation": false,
+  "split": "train",
+  "study": "walker2019_fixed_moisture_perimeter_hindcast_v1",
+  "event_id": "walker_2019",
+  "initial_time_utc": "2019-09-04T22:00:00Z",
+  "forecast_issue_time_utc": "2019-09-04T20:00:00Z",
+  "created_at_utc": "2026-10-31T17:31:38.845725+00:00",
+  "source_commit": "f4927b7ce68cb74eb0eb117085cc920782c8644e",
+  "binary_sha256": "f57750977084080f692cc51498f16f21197ee34de767e11d6407749bb52f947b",
+  "license": "AGPL-3.0 with Commons Clause; commercial use requires separate terms",
+  "license_scope": "Private research evaluation only; no hosted/API/product integration",
+  "references": {
+    "probe": {
+      "path": "/home1/ncloud/bonghwajigi/data/artifacts/elmfire/synthetic-20261101-first/report.json",
+      "sha256": "c43e9140c1976df69ce5034e77656af81b6111e2a88dd18a3407cdca4aea3336"
+    },
+    "terrain": {
+      "path": "/home1/ncloud/bonghwajigi/data/processed/gofer-hindcast-walker-v1/manifest.json",
+      "sha256": "15f27e8a805fb1f4d167603ecd17ad80e013c6cc0775bac134fc81cbbdf1abbb"
+    },
+    "weather": {
+      "path": "/home1/ncloud/bonghwajigi/data/processed/gofer-hindcast-walker-weather-v1/weather.json",
+      "sha256": "0f0eb6edd39c550c177842d4ef514077f18445dc5b420a654a83d4a7b999b0b1"
+    },
+    "runner": {
+      "path": "/home1/ncloud/bonghwajigi/training/tools/elmfire_gofer_hindcast.py",
+      "sha256": "30a1e5c04ecadef8a78e2f8de73f2bf61d2c4368ab85ddb888c8d6899a257ac9"
+    },
+    "shared_engine_helpers": {
+      "path": "/home1/ncloud/bonghwajigi/training/tools/elmfire_korea_scenario.py",
+      "sha256": "1305e48e88ceba54692ab4f6c9793bb9b0c55a6134d048253971605c5ff543f0"
+    }
+  },
+  "truth_manifest_path_not_yet_opened": "/home1/ncloud/bonghwajigi/data/processed/gofer-hindcast-walker-v1/truth-manifest.json",
+  "case_plan": [
+    {
+      "id": "moisture_3_4_5",
+      "dead_moisture_percent": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "moisture_6_7_8",
+      "dead_moisture_percent": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "id": "moisture_9_10_11",
+      "dead_moisture_percent": [
+        9,
+        10,
+        11
+      ]
+    }
+  ],
+  "grid": {
+    "crs": "EPSG:32610",
+    "shape": [
+      419,
+      411
+    ],
+    "transform": [
+      100.0,
+      0.0,
+      677100.0,
+      0.0,
+      -100.0,
+      4456400.0
+    ],
+    "pixel_size_m": 100
+  },
+  "initialization": "PHI=-1 inside reconstructed initial cumulative perimeter, +1 elsewhere; no point ignitions",
+  "assumptions": {
+    "entire_boundary_active": true,
+    "surface_only": true,
+    "canopy": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "live_herb_woody_foliar_moisture_percent": [
+      60,
+      90,
+      90
+    ],
+    "spotting": false,
+    "suppression": false,
+    "historical_fuel_and_moisture_field_verified": false
+  },
+  "numerics": {
+    "initial_dt_seconds": 5,
+    "maximum_dt_seconds": 30,
+    "target_cfl": 0.2,
+    "weather_knots": 7,
+    "weather_interval_seconds": 3600,
+    "stop_seconds": 21600,
+    "nodata": -9999,
+    "cpu_threads": 1,
+    "case_timeout_seconds": 300
+  },
+  "domain_initial_cells": 140,
+  "domain_cells": 135009,
+  "outside_domain_is_safe": false,
+  "wind_rotation_range_deg": [
+    -1.656673550605774,
+    -1.327816367149353
+  ],
+  "source_terrain_limitations": [
+    "GOFER is hourly retrospective cumulative satellite reconstruction, not ground arrival",
+    "GOES native resolution is about 2km at equator; 100m rasterization adds no observed detail",
+    "GOFER final FRAP references and other hindsight preprocessing prevent as-of validation",
+    "Initial cumulative perimeter is not an observed active fire front everywhere",
+    "Copernicus GLO90 is surface DSM, not bare-earth DTM; later release does not prove 2019 availability",
+    "LF2016 depicts 2016 ground conditions but capable fuels may refer to 2019/2020; 2019 as-of unverified",
+    "Nearest 30m-to-100m fuel resampling loses subcell fuel mixtures and does not estimate moisture",
+    "Canopy structure is absent; canopy zeros in a surface-fire scenario are explicit assumptions",
+    "Nonburnable model categories or outside-domain cells do not imply personal safety",
+    "Future geometries are stored separately and excluded from input-domain construction"
+  ],
+  "source_weather_limitations": [
+    "Two-hour model-cycle lag is a fixed assumption, not historical release proof",
+    "3km wind resampled to100m does not resolve100m atmospheric processes",
+    "Archived operational forecast, not observed future weather",
+    "This US development case does not validate Korean personal risk"
+  ],
+  "label_boundary": "Freeze three cases and write fit receipt before opening future reconstructed labels",
+  "limitations": [
+    "GOFER source uses retrospective final-perimeter filtering; not operational as-of input",
+    "100m regridding does not create100m observation truth",
+    "One train event, no held-out model selection or Korean transfer validation",
+    "Fuel model, zero canopy and moisture assumptions cannot establish actual fire behavior",
+    "Negative/zero-union metrics stay undefined; no calibrated probability is computed"
+  ]
+}

@@ -50,6 +50,7 @@ geo = [
     { name = "netcdf4" },
     { name = "planetary-computer" },
     { name = "pyproj" },
+    { name = "pyshp" },
     { name = "rasterio" },
     { name = "shapely" },
 ]
@@ -74,6 +75,7 @@ requires-dist = [
     { name = "protobuf", specifier = ">=6,<8" },
     { name = "pyarrow", specifier = ">=19,<30" },
     { name = "pyproj", marker = "extra == 'geo'", specifier = ">=3.7,<4" },
+    { name = "pyshp", marker = "extra == 'geo'", specifier = ">=2.3,<3" },
     { name = "rasterio", marker = "extra == 'geo'", specifier = ">=1.4,<2" },
     { name = "scikit-learn", marker = "extra == 'train'", specifier = ">=1.6,<2" },
     { name = "scipy", specifier = ">=1.15,<2" },
@@ -449,6 +451,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/9a/8c/010481b3629eb70f8c8c433d706207b1ec91fdb76fc10cf4ec1d92f51bdd/pyproj-3.8.0-cp312-cp312-win32.whl", hash = "sha256:7914e83760284e4d8d3b6b2a6845c21270a07f214bfd89344d45f9ab63e1b4b5", size = 6295859, upload-time = "2026-09-05T20:03:24.738Z" },
     { url = "https://files.pythonhosted.org/packages/b7/d7/2c861a429581577a441e03020d27274812d7969748f5951d972f6e34597f/pyproj-3.8.0-cp312-cp312-win_amd64.whl", hash = "sha256:0556ce011e1530aea2084a12e39dc9c6ccd25a16c1db5457f39bf83161e7c301", size = 6714045, upload-time = "2026-09-05T20:03:26.863Z" },
     { url = "https://files.pythonhosted.org/packages/09/bb/2d1ff197922cfe106f204041503fb8039d2cee9c34c2a61a0b65f4121b4c/pyproj-3.8.0-cp312-cp312-win_arm64.whl", hash = "sha256:a792112106471f97c3f74b51639068388c9ad0605cc1ca100f11fd0bf47a004e", size = 6663720, upload-time = "2026-09-05T20:03:28.625Z" },
+]
+
+[[package]]
+name = "pyshp"
+version = "2.4.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/66/dc/8d5c654580a7398702026b6e34fdbe622bfdaef3b50e7f3f4244a11a90a0/pyshp-2.4.2.tar.gz", hash = "sha256:50d56ca9301960b00da7158e8428f64054da504f3c507b54df878232c9902232", size = 1739226, upload-time = "2026-06-06T16:46:42.895Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/bd/22/ffcd94c7d57cb5dc0c45d0a158237f4c991ab3e187a75842e04ea3c94f6c/pyshp-2.4.2-py2.py3-none-any.whl", hash = "sha256:7a013b5e8333f5923a9eb012e2048ae15b3399f11abf2e0044b10176decbd68a", size = 49071, upload-time = "2026-06-06T16:46:41.37Z" },
 ]
 
 [[package]]

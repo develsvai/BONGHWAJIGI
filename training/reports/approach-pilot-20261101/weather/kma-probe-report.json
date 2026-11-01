@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "purpose": "forecast_access_and_schema_probe",
+  "operational_use": false,
+  "fire_labels_requested": false,
+  "holdout_2025_accessed": false,
+  "records": [
+    {
+      "id": "kiml-20261031T06Z-u10-h1",
+      "model": "KIML",
+      "endpoint": "https://apihub.kma.go.kr/api/typ06/url/nwp_nc_pnt_down.php",
+      "parameters_without_auth": {
+        "group": "KIML",
+        "data": "U",
+        "tmfc": "2026103106",
+        "hf": "1",
+        "lon": "129.3",
+        "lat": "37.0",
+        "help": "1",
+        "vars": "U10",
+        "dataType": "CSV"
+      },
+      "source_kind": "numerical_weather_forecast",
+      "observed": false,
+      "forecast_reference_time_utc": "2026-10-31T06:00:00+00:00",
+      "issue_time_semantics": "model cycle, not proof of publication/availability",
+      "requested_valid_time_utc": "2026-10-31T07:00:00+00:00",
+      "lead_hours": 1,
+      "variable": "U10",
+      "meaning": "eastward_wind",
+      "documented_unit": "m/s",
+      "documented_height_m": 10,
+      "height_note": "KIM standard variable definition",
+      "documentation": "https://apihub.kma.go.kr/apiList.do?seqApi=9",
+      "status": "http_error",
+      "http_status": 403,
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at_utc": "2026-10-31T16:19:51.744404+00:00",
+          "http_status": 403
+        }
+      ],
+      "retry_after_seconds": null
+    }
+  ],
+  "availability_note": "current retrieval does not prove historical issue-time availability",
+  "compatibility_note": "UM and KIM grids/heights/bias require separate reconciliation",
+  "max_requests_including_retries": 36,
+  "stopped_early": "http_error"
+}

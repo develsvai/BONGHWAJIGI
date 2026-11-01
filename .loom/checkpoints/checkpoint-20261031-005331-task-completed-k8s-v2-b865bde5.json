@@ -1,0 +1,26 @@
+{
+  "id": "checkpoint-20261031-005331-task-completed-k8s-v2-b865bde5",
+  "created_at": "2026-10-31T00:53:31+00:00",
+  "reason": "Task completed: 두 서버와 K8s 상태 점검 및 V2 실행 작업 등록",
+  "summary": "두 서버와 K8s 상태 점검 및 V2 실행 작업 등록 -> DONE @ HeoNey/cb8f40e5cedf",
+  "job_id": "job-20261031-002017-v2-fe3bfad0",
+  "task_id": "task-20261031-002027-k8s-v2-a251b54e",
+  "commit_sha": "cb8f40e5cedf7b8726352c53abb58ba0bd6694d9",
+  "branch_name": "HeoNey",
+  "dirty": true,
+  "staged_files": [],
+  "modified_files": [
+    ".loom/job-runs/job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02/job-run.json",
+    ".loom/task-definitions/task-def-20261031-002027-k8s-v2-e8ee4c90/task-definition.json",
+    "docs/ai-and-infrastructure.md",
+    "docs/architecture-and-data-flow.md",
+    "docs/decisions-and-meeting-review.md",
+    "docs/product-and-scenarios.md",
+    "docs/ui-ux-handoff.md"
+  ],
+  "untracked_files": [
+    "docs/V1/"
+  ],
+  "snapshot_captured_at": "2026-10-31T00:53:31+00:00",
+  "rollback_strategy": "revert-or-branch"
+}

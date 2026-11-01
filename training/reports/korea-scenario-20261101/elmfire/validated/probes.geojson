@@ -1,0 +1,244 @@
+{
+  "type": "FeatureCollection",
+  "simulation_only": true,
+  "operational_use": false,
+  "probability": null,
+  "interpretation": "Fixed assumed-fuel scenario sensitivity; not calibrated risk",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.29943982628814,
+          37.000452134228375
+        ]
+      },
+      "properties": {
+        "id": "assumed_ignition",
+        "row": 49,
+        "column": 49,
+        "xy_m": [
+          526642.8540702973,
+          4094964.4265484256
+        ],
+        "longitude_latitude": [
+          129.29943982628814,
+          37.000452134228375
+        ],
+        "eligibility": "included_forest",
+        "actual_user_location": false,
+        "simulation_only": true,
+        "operational_use": false,
+        "probability": null,
+        "completed_scenarios": 3,
+        "planned_scenarios": 3,
+        "initially_reached_scenarios": 3,
+        "future_arrival_counts": {
+          "1h": 0,
+          "3h": 0,
+          "6h": 0
+        },
+        "scenario_fraction": {
+          "1h": null,
+          "3h": null,
+          "6h": null
+        },
+        "horizon_unavailable_reason": {
+          "1h": "initial_exposure_not_future_arrival",
+          "3h": "initial_exposure_not_future_arrival",
+          "6h": "initial_exposure_not_future_arrival"
+        },
+        "unavailable_reason": "initial_exposure_not_future_arrival"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.2994751835412,
+          37.00946643297297
+        ]
+      },
+      "properties": {
+        "id": "north_1000m",
+        "row": 39,
+        "column": 49,
+        "xy_m": [
+          526642.8540702973,
+          4095964.4265484256
+        ],
+        "longitude_latitude": [
+          129.2994751835412,
+          37.00946643297297
+        ],
+        "eligibility": "included_forest",
+        "actual_user_location": false,
+        "simulation_only": true,
+        "operational_use": false,
+        "probability": null,
+        "completed_scenarios": 3,
+        "planned_scenarios": 3,
+        "initially_reached_scenarios": 0,
+        "future_arrival_counts": {
+          "1h": 0,
+          "3h": 0,
+          "6h": 0
+        },
+        "scenario_fraction": {
+          "1h": 0.0,
+          "3h": 0.0,
+          "6h": 0.0
+        },
+        "horizon_unavailable_reason": {
+          "1h": null,
+          "3h": null,
+          "6h": null
+        },
+        "unavailable_reason": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3106787082889,
+          37.00042324970466
+        ]
+      },
+      "properties": {
+        "id": "east_1000m",
+        "row": 49,
+        "column": 59,
+        "xy_m": [
+          527642.8540702973,
+          4094964.4265484256
+        ],
+        "longitude_latitude": [
+          129.3106787082889,
+          37.00042324970466
+        ],
+        "eligibility": "excluded_nonforest",
+        "actual_user_location": false,
+        "simulation_only": true,
+        "operational_use": false,
+        "probability": null,
+        "completed_scenarios": 3,
+        "planned_scenarios": 3,
+        "initially_reached_scenarios": 0,
+        "future_arrival_counts": {
+          "1h": 0,
+          "3h": 0,
+          "6h": 0
+        },
+        "scenario_fraction": {
+          "1h": null,
+          "3h": null,
+          "6h": null
+        },
+        "horizon_unavailable_reason": {
+          "1h": "excluded_nonforest",
+          "3h": "excluded_nonforest",
+          "6h": "excluded_nonforest"
+        },
+        "unavailable_reason": "excluded_nonforest"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.2994044847613,
+          36.99143782173205
+        ]
+      },
+      "properties": {
+        "id": "south_1000m",
+        "row": 59,
+        "column": 49,
+        "xy_m": [
+          526642.8540702973,
+          4093964.4265484256
+        ],
+        "longitude_latitude": [
+          129.2994044847613,
+          36.99143782173205
+        ],
+        "eligibility": "included_forest",
+        "actual_user_location": false,
+        "simulation_only": true,
+        "operational_use": false,
+        "probability": null,
+        "completed_scenarios": 3,
+        "planned_scenarios": 3,
+        "initially_reached_scenarios": 0,
+        "future_arrival_counts": {
+          "1h": 0,
+          "3h": 0,
+          "6h": 0
+        },
+        "scenario_fraction": {
+          "1h": 0.0,
+          "3h": 0.0,
+          "6h": 0.0
+        },
+        "horizon_unavailable_reason": {
+          "1h": null,
+          "3h": null,
+          "6h": null
+        },
+        "unavailable_reason": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.28820092856108,
+          37.00047995462585
+        ]
+      },
+      "properties": {
+        "id": "west_1000m",
+        "row": 49,
+        "column": 39,
+        "xy_m": [
+          525642.8540702973,
+          4094964.4265484256
+        ],
+        "longitude_latitude": [
+          129.28820092856108,
+          37.00047995462585
+        ],
+        "eligibility": "included_forest",
+        "actual_user_location": false,
+        "simulation_only": true,
+        "operational_use": false,
+        "probability": null,
+        "completed_scenarios": 3,
+        "planned_scenarios": 3,
+        "initially_reached_scenarios": 0,
+        "future_arrival_counts": {
+          "1h": 0,
+          "3h": 0,
+          "6h": 0
+        },
+        "scenario_fraction": {
+          "1h": 0.0,
+          "3h": 0.0,
+          "6h": 0.0
+        },
+        "horizon_unavailable_reason": {
+          "1h": null,
+          "3h": null,
+          "6h": null
+        },
+        "unavailable_reason": null
+      }
+    }
+  ]
+}

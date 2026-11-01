@@ -1,0 +1,202 @@
+{
+  "simulation_only": true,
+  "operational_use": false,
+  "probability": null,
+  "retrospective_proxy_only": true,
+  "source_asof_verified": false,
+  "final_evaluation": false,
+  "split": "train",
+  "status": "complete",
+  "stage": "complete",
+  "cases": [
+    {
+      "id": "moisture_3_4_5",
+      "original_coverage": {
+        "full_horizon_completed": false,
+        "early_stop_detected": true,
+        "early_stop_reason": "STOPPING: FIRE FRONT PROPAGATION STALLED",
+        "stats_tstop_seconds_rounded": 21600.0,
+        "logged_stop_step_seconds_rounded": 21595.0,
+        "covered_until_seconds_lower_bound": 21594.95,
+        "coverage_time_method": "last solver step before STOPPING;0.1s log lower bound",
+        "horizon_completed": {
+          "1h": true,
+          "3h": true,
+          "6h": false
+        },
+        "stats_sha256": "8801a42ebe9c016b851ed734a06e43b8475085ca552e8b97ca10f639c798154c",
+        "run_log_sha256": "93b204747f495490237f576405efd9be7dc7823605d9686931064799862c340e",
+        "note": "Early solver termination does not evaluate later weather or establish no later spread"
+      },
+      "reconciled_coverage": {
+        "full_horizon_completed": true,
+        "early_stop_detected": false,
+        "early_stop_reason": null,
+        "stats_tstop_seconds_rounded": 21600.0,
+        "logged_stop_step_seconds_rounded": 21595.0,
+        "covered_until_seconds_lower_bound": 21600.0,
+        "coverage_time_method": "Post-RK2 endpoint trace plus byte-identical original arrival",
+        "horizon_completed": {
+          "1h": true,
+          "3h": true,
+          "6h": true
+        },
+        "stats_sha256": "8801a42ebe9c016b851ed734a06e43b8475085ca552e8b97ca10f639c798154c",
+        "run_log_sha256": "93b204747f495490237f576405efd9be7dc7823605d9686931064799862c340e",
+        "note": "This case reached TSTOP before the stall check; no generic guard exception",
+        "engine_stall_warning_present": true,
+        "diagnostic_report_sha256": "cf59a5ddd4d0d32e0c3e7bf6106b6bc4729304f8c931553f2e374a4730b51d6b"
+      },
+      "endpoint_records": [
+        {
+          "start_seconds": 21565.0,
+          "dt_seconds": 30.0,
+          "integrated_until_seconds": 21595.0,
+          "tstop_seconds": 21600.0,
+          "maximum_phi_change": 0.0038897544145584106
+        },
+        {
+          "start_seconds": 21595.0,
+          "dt_seconds": 5.0,
+          "integrated_until_seconds": 21600.0,
+          "tstop_seconds": 21600.0,
+          "maximum_phi_change": 0.0006487816572189331
+        }
+      ],
+      "arrival_identity": {
+        "all_cells_identical": true,
+        "raw_bil_sha256": "6f9de91cf15d7522f8b484c8ea743ebd2b66ecf1b5b9ad1fe5dc51354aa27e25"
+      }
+    },
+    {
+      "id": "moisture_6_7_8",
+      "original_coverage": {
+        "full_horizon_completed": false,
+        "early_stop_detected": true,
+        "early_stop_reason": "STOPPING: FIRE FRONT PROPAGATION STALLED",
+        "stats_tstop_seconds_rounded": 21600.0,
+        "logged_stop_step_seconds_rounded": 21595.0,
+        "covered_until_seconds_lower_bound": 21594.95,
+        "coverage_time_method": "last solver step before STOPPING;0.1s log lower bound",
+        "horizon_completed": {
+          "1h": true,
+          "3h": true,
+          "6h": false
+        },
+        "stats_sha256": "6c29744e1f47230b9093daab42d26295331ce0b2c1df0e7abaa3decdf12ec937",
+        "run_log_sha256": "a184e0481b9ae509ca4d99900f085a7e12832eda9d7613c2e5b6c392a3f9c098",
+        "note": "Early solver termination does not evaluate later weather or establish no later spread"
+      },
+      "reconciled_coverage": {
+        "full_horizon_completed": true,
+        "early_stop_detected": false,
+        "early_stop_reason": null,
+        "stats_tstop_seconds_rounded": 21600.0,
+        "logged_stop_step_seconds_rounded": 21595.0,
+        "covered_until_seconds_lower_bound": 21600.0,
+        "coverage_time_method": "Post-RK2 endpoint trace plus byte-identical original arrival",
+        "horizon_completed": {
+          "1h": true,
+          "3h": true,
+          "6h": true
+        },
+        "stats_sha256": "6c29744e1f47230b9093daab42d26295331ce0b2c1df0e7abaa3decdf12ec937",
+        "run_log_sha256": "a184e0481b9ae509ca4d99900f085a7e12832eda9d7613c2e5b6c392a3f9c098",
+        "note": "This case reached TSTOP before the stall check; no generic guard exception",
+        "engine_stall_warning_present": true,
+        "diagnostic_report_sha256": "cf59a5ddd4d0d32e0c3e7bf6106b6bc4729304f8c931553f2e374a4730b51d6b"
+      },
+      "endpoint_records": [
+        {
+          "start_seconds": 21565.0,
+          "dt_seconds": 30.0,
+          "integrated_until_seconds": 21595.0,
+          "tstop_seconds": 21600.0,
+          "maximum_phi_change": 0.003919422626495361
+        },
+        {
+          "start_seconds": 21595.0,
+          "dt_seconds": 5.0,
+          "integrated_until_seconds": 21600.0,
+          "tstop_seconds": 21600.0,
+          "maximum_phi_change": 0.0006510615348815918
+        }
+      ],
+      "arrival_identity": {
+        "all_cells_identical": true,
+        "raw_bil_sha256": "a820024f234c3acdb156830abcb4ce73f737d9594a383f58651a696a7a615f72"
+      }
+    },
+    {
+      "id": "moisture_9_10_11",
+      "original_coverage": {
+        "full_horizon_completed": false,
+        "early_stop_detected": true,
+        "early_stop_reason": "STOPPING: FIRE FRONT PROPAGATION STALLED",
+        "stats_tstop_seconds_rounded": 21600.0,
+        "logged_stop_step_seconds_rounded": 21595.0,
+        "covered_until_seconds_lower_bound": 21594.95,
+        "coverage_time_method": "last solver step before STOPPING;0.1s log lower bound",
+        "horizon_completed": {
+          "1h": true,
+          "3h": true,
+          "6h": false
+        },
+        "stats_sha256": "cc677a60090d34d3cee0325eb8d3302ada27d2bab1c7b04bac356a5a716afaca",
+        "run_log_sha256": "e78caba9cfecba3159cefb2e32260f98d40f31b2d24bec43307e813cf7182e13",
+        "note": "Early solver termination does not evaluate later weather or establish no later spread"
+      },
+      "reconciled_coverage": {
+        "full_horizon_completed": true,
+        "early_stop_detected": false,
+        "early_stop_reason": null,
+        "stats_tstop_seconds_rounded": 21600.0,
+        "logged_stop_step_seconds_rounded": 21595.0,
+        "covered_until_seconds_lower_bound": 21600.0,
+        "coverage_time_method": "Post-RK2 endpoint trace plus byte-identical original arrival",
+        "horizon_completed": {
+          "1h": true,
+          "3h": true,
+          "6h": true
+        },
+        "stats_sha256": "cc677a60090d34d3cee0325eb8d3302ada27d2bab1c7b04bac356a5a716afaca",
+        "run_log_sha256": "e78caba9cfecba3159cefb2e32260f98d40f31b2d24bec43307e813cf7182e13",
+        "note": "This case reached TSTOP before the stall check; no generic guard exception",
+        "engine_stall_warning_present": true,
+        "diagnostic_report_sha256": "cf59a5ddd4d0d32e0c3e7bf6106b6bc4729304f8c931553f2e374a4730b51d6b"
+      },
+      "endpoint_records": [
+        {
+          "start_seconds": 21565.0,
+          "dt_seconds": 30.0,
+          "integrated_until_seconds": 21595.0,
+          "tstop_seconds": 21600.0,
+          "maximum_phi_change": 0.003518044948577881
+        },
+        {
+          "start_seconds": 21595.0,
+          "dt_seconds": 5.0,
+          "integrated_until_seconds": 21600.0,
+          "tstop_seconds": 21600.0,
+          "maximum_phi_change": 0.0005855560302734375
+        }
+      ],
+      "arrival_identity": {
+        "all_cells_identical": true,
+        "raw_bil_sha256": "4c94807700b1a84a734ac38914322c110a5b4b2603a1dc8a0a8364914826ed8e"
+      }
+    }
+  ],
+  "original_artifact": "/home1/ncloud/bonghwajigi/data/artifacts/elmfire/walker2019-hindcast-v1",
+  "diagnostic_artifact": "/home1/ncloud/bonghwajigi/data/artifacts/elmfire/walker2019-endpoint-diagnostic-v1",
+  "diagnostic_report_sha256": "cf59a5ddd4d0d32e0c3e7bf6106b6bc4729304f8c931553f2e374a4730b51d6b",
+  "parameters_changed": false,
+  "simulated_values_changed": false,
+  "shared_coverage_guard_changed": false,
+  "reconciliation_runner_sha256": "09f13a6512d16ed36883c6d70b00816e497cdd7adbc6dcc90caca03bcd99d05e",
+  "evaluation_sha256": "11d2aff42fec774c4906b9af7577bd5ea7732c64b73ca8c204effd66576276b3",
+  "short_horizon_metrics_exactly_preserved": true,
+  "original_artifacts_preserved": true,
+  "interpretation": "One retrospective training event; no calibrated probability or Korean validation",
+  "elapsed_seconds": 0.621
+}

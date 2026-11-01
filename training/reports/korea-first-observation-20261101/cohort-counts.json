@@ -1,0 +1,138 @@
+{
+  "report_sha256": "d067bb9491faeacbe1cece1a9ba615f89a0882aae90760941bfbe749c76fffa8",
+  "counts_are_repeated_event_issue_cell_horizon_rows_not_unique_fires": true,
+  "horizons": {
+    "1": {
+      "all_candidates": {
+        "rows": 155570,
+        "positive": 250,
+        "negative": 130497,
+        "unknown": 24823,
+        "blind_gap_fire_observed": 33,
+        "source120_incomplete": 14721,
+        "unknown_fraction": 0.15956161213601594
+      },
+      "primary_clear60": {
+        "rows": 134710,
+        "positive": 117,
+        "negative": 118374,
+        "unknown": 16219,
+        "blind_gap_fire_observed": 15,
+        "source120_incomplete": 11814,
+        "unknown_fraction": 0.12039937643827481
+      },
+      "sensitivity_clear120": {
+        "rows": 111505,
+        "positive": 89,
+        "negative": 98593,
+        "unknown": 12823,
+        "blind_gap_fire_observed": 14,
+        "source120_incomplete": 0,
+        "unknown_fraction": 0.11499932738442223
+      },
+      "prior_fire_120m": {
+        "rows": 454,
+        "positive": 64,
+        "negative": 242,
+        "unknown": 148,
+        "blind_gap_fire_observed": 18,
+        "source120_incomplete": 17,
+        "unknown_fraction": 0.32599118942731276
+      },
+      "positive_exclusion_decomposition": {
+        "original_positive_rows": 250,
+        "primary_positive_rows": 117,
+        "observed_fire_last120m_excluded": 64,
+        "insufficient_clear60_without_observed_fire120_excluded": 69
+      }
+    },
+    "3": {
+      "all_candidates": {
+        "rows": 155570,
+        "positive": 603,
+        "negative": 105293,
+        "unknown": 49674,
+        "blind_gap_fire_observed": 33,
+        "source120_incomplete": 14721,
+        "unknown_fraction": 0.3193032075592981
+      },
+      "primary_clear60": {
+        "rows": 134710,
+        "positive": 376,
+        "negative": 96387,
+        "unknown": 37947,
+        "blind_gap_fire_observed": 15,
+        "source120_incomplete": 11814,
+        "unknown_fraction": 0.28169400935342587
+      },
+      "sensitivity_clear120": {
+        "rows": 111505,
+        "positive": 287,
+        "negative": 80242,
+        "unknown": 30976,
+        "blind_gap_fire_observed": 14,
+        "source120_incomplete": 0,
+        "unknown_fraction": 0.2777992018295144
+      },
+      "prior_fire_120m": {
+        "rows": 454,
+        "positive": 98,
+        "negative": 157,
+        "unknown": 199,
+        "blind_gap_fire_observed": 18,
+        "source120_incomplete": 17,
+        "unknown_fraction": 0.43832599118942733
+      },
+      "positive_exclusion_decomposition": {
+        "original_positive_rows": 603,
+        "primary_positive_rows": 376,
+        "observed_fire_last120m_excluded": 98,
+        "insufficient_clear60_without_observed_fire120_excluded": 129
+      }
+    },
+    "6": {
+      "all_candidates": {
+        "rows": 155570,
+        "positive": 914,
+        "negative": 77933,
+        "unknown": 76723,
+        "blind_gap_fire_observed": 33,
+        "source120_incomplete": 14721,
+        "unknown_fraction": 0.49317349103297553
+      },
+      "primary_clear60": {
+        "rows": 134710,
+        "positive": 576,
+        "negative": 71994,
+        "unknown": 62140,
+        "blind_gap_fire_observed": 15,
+        "source120_incomplete": 11814,
+        "unknown_fraction": 0.4612872095612798
+      },
+      "sensitivity_clear120": {
+        "rows": 111505,
+        "positive": 404,
+        "negative": 59092,
+        "unknown": 52009,
+        "blind_gap_fire_observed": 14,
+        "source120_incomplete": 0,
+        "unknown_fraction": 0.4664275144612349
+      },
+      "prior_fire_120m": {
+        "rows": 454,
+        "positive": 110,
+        "negative": 125,
+        "unknown": 219,
+        "blind_gap_fire_observed": 18,
+        "source120_incomplete": 17,
+        "unknown_fraction": 0.48237885462555063
+      },
+      "positive_exclusion_decomposition": {
+        "original_positive_rows": 914,
+        "primary_positive_rows": 576,
+        "observed_fire_last120m_excluded": 110,
+        "insufficient_clear60_without_observed_fire120_excluded": 228
+      }
+    }
+  }
+}

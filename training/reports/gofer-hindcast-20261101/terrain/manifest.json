@@ -1,0 +1,331 @@
+{
+  "event_id": "walker_2019",
+  "initial_time_utc": "2019-09-04T22:00:00+00:00",
+  "split": "train",
+  "retrospective_proxy_only": true,
+  "source_asof_verified": false,
+  "operational_use": false,
+  "crs": "EPSG:32610",
+  "shape": [
+    419,
+    411
+  ],
+  "pixel_size_m": 100,
+  "transform": [
+    100.0,
+    0.0,
+    677100.0,
+    0.0,
+    -100.0,
+    4456400.0
+  ],
+  "bounds_m": [
+    677100,
+    4414500,
+    718200,
+    4456400
+  ],
+  "status": "ready",
+  "schema_version": "gofer_hindcast_inputs_v1",
+  "created_at_utc": "2026-10-31T17:25:23.877769+00:00",
+  "event_selection": "Earliest GOESIg_UTC among preassigned 2019/2020 train events; no score selection",
+  "initial_layer": {
+    "event_id": "walker_2019",
+    "valid_time_utc": "2019-09-04T22:00:00+00:00",
+    "timestep": 15.0,
+    "shape_index": 134,
+    "archive_layer": "GOFER/GOFER_Combined/GOFERC_fireProg",
+    "source_crs": "EPSG:4326"
+  },
+  "initial_geometry": {
+    "path": "initial_perimeter.geojson",
+    "sha256": "ca8617da530e1d034b0600af6686c64916046826a54b721f3570e1e18f611537",
+    "source_archive_sha256": "96eca2e18529eb274ca94af9a730bcf1c9c6da597fb04a9b5cf9167aada451c2",
+    "area_m2_projected": 1403657.2805940653
+  },
+  "aspect_reference": "grid_north_clockwise_downslope",
+  "flat_aspect_convention": "0 numeric convention; direction undefined where flat_mask=1",
+  "rasterization": {
+    "all_touched": false,
+    "membership": "cell_center",
+    "initial_cells_are_all_preserved": true
+  },
+  "domain_definition": {
+    "rectangle": "t0 perimeter bounding box expanded by 20km and snapped outward to 100m",
+    "rectangle_corners": "Outside strict 20km distance: excluded by study_domain_mask",
+    "active_mask": "Cell center Euclidean distance from t0 polygon <= 20000m",
+    "future_geometry_used": false
+  },
+  "sources": {
+    "gofer": {
+      "record_url": "https://zenodo.org/records/14642378",
+      "license": "CC-BY-4.0",
+      "version": "0.2",
+      "archive_bytes": 75711678,
+      "archive_sha256": "96eca2e18529eb274ca94af9a730bcf1c9c6da597fb04a9b5cf9167aada451c2",
+      "record_sha256": "8d12b0ff647965e9b434e8197537b29fd06ea3a0417e038a7d5bcf6f11b60d93",
+      "attribution": "Liu et al. (2025), GOFER v0.2, doi:10.5281/zenodo.14642378"
+    },
+    "static": {
+      "Copernicus_DSM_COG_30_N39_00_W121_00_DEM.tif": {
+        "url": "https://elevationeuwest.blob.core.windows.net/copernicus-dem/COP90_hh/Copernicus_DSM_COG_30_N39_00_W121_00_DEM.tif",
+        "sha256": "9ad4922548b2aedaafc8b2bc3be922e26a4ed3fe66b9709a3f15f72cbca6b5cb",
+        "bytes": 4914095,
+        "retrieved_at_utc": "2026-10-31T17:21:51.402026+00:00",
+        "http_status": 200,
+        "collection": "cop-dem-glo-90",
+        "gsd": 90,
+        "stac_item_id": "Copernicus_DSM_COG_30_N39_00_W121_00_DEM",
+        "path": "data/raw/gofer-hindcast/walker-2019/static/Copernicus_DSM_COG_30_N39_00_W121_00_DEM.tif",
+        "sidecar_sha256": "1e0ad688e37c71cc5b4db40a936e3da928338aff280ee7888ff88047f3205b91"
+      },
+      "Copernicus_DSM_COG_30_N40_00_W121_00_DEM.tif": {
+        "url": "https://elevationeuwest.blob.core.windows.net/copernicus-dem/COP90_hh/Copernicus_DSM_COG_30_N40_00_W121_00_DEM.tif",
+        "sha256": "b9bd925804e370642a0a89cdaff096629bdc18a6b65e524d22f8faf0ff7e6df2",
+        "bytes": 4654768,
+        "retrieved_at_utc": "2026-10-31T17:21:47.610402+00:00",
+        "http_status": 200,
+        "collection": "cop-dem-glo-90",
+        "gsd": 90,
+        "stac_item_id": "Copernicus_DSM_COG_30_N40_00_W121_00_DEM",
+        "path": "data/raw/gofer-hindcast/walker-2019/static/Copernicus_DSM_COG_30_N40_00_W121_00_DEM.tif",
+        "sidecar_sha256": "c55bd800ac117f9d156c7bae95ed7e2788cf680c30201273ad1790b7b5ed0e80"
+      },
+      "dem-stac.json": {
+        "url": "https://planetarycomputer.microsoft.com/api/stac/v1/search?collections=cop-dem-glo-90&bbox=-120.94,39.84,-120.42,40.25&limit=5",
+        "sha256": "a370631d262d968224dbdbdbf1d1aa0012c54410743b76a204aa016961b92592",
+        "bytes": 5336,
+        "retrieved_at_utc": "2026-10-31T17:20:41.009527+00:00",
+        "http_status": 200,
+        "path": "data/raw/gofer-hindcast/walker-2019/static/dem-stac.json",
+        "sidecar_sha256": "2ad4cbf3275a1c92929a0fcf9a7d04fdfdd526b6e51c5e63648f49225fa5fbf7"
+      },
+      "landfire-service.json": {
+        "url": "https://edcintl.cr.usgs.gov/arcgis/rest/services/Landfire_LF2016/LF2016_FBFM40_CONUS/ImageServer?f=pjson",
+        "sha256": "0ff4d071fe382caf4aec1a486d7395809f30df4e389acdda19257eb317ae8c29",
+        "bytes": 5668,
+        "retrieved_at_utc": "2026-10-31T17:20:40.203259+00:00",
+        "http_status": 200,
+        "path": "data/raw/gofer-hindcast/walker-2019/static/landfire-service.json",
+        "sidecar_sha256": "9acda9e68d7b339ac8449e4db9876036810b55c75cadea91bbaac530debeb8be"
+      },
+      "landfire-fbfm40-100m.tif": {
+        "url": "https://edcintl.cr.usgs.gov/arcgis/rest/services/Landfire_LF2016/LF2016_FBFM40_CONUS/ImageServer/exportImage?bbox=677100%2C4414500%2C718200%2C4456400&bboxSR=32610&imageSR=32610&size=411%2C419&format=tiff&pixelType=S16&interpolation=RSP_NearestNeighbor&renderingRule=%7B%22rasterFunction%22%3A%22None%22%7D&f=image",
+        "sha256": "3487d504a56faf41f3a08fcc3a121a2950b0f88e286d7651a2ca8c9aff042ec6",
+        "bytes": 525515,
+        "retrieved_at_utc": "2026-10-31T17:21:42.310776+00:00",
+        "http_status": 200,
+        "request_parameters": {
+          "bbox": "677100,4414500,718200,4456400",
+          "bboxSR": "32610",
+          "imageSR": "32610",
+          "size": "411,419",
+          "format": "tiff",
+          "pixelType": "S16",
+          "interpolation": "RSP_NearestNeighbor",
+          "renderingRule": "{\"rasterFunction\":\"None\"}",
+          "f": "image"
+        },
+        "path": "data/raw/gofer-hindcast/walker-2019/static/landfire-fbfm40-100m.tif",
+        "sidecar_sha256": "0d1f47f0ec51e2340755498ececc71c282771bd26d2c9de4de39fa5bd2900410"
+      }
+    }
+  },
+  "outputs": {
+    "elevation_m.tif": {
+      "path": "elevation_m.tif",
+      "sha256": "c768bece935a4510627ce8b4d469a938ce316c31d7ab9795fd8f9410bc04c16c",
+      "bytes": 586471,
+      "dtype": "float32",
+      "nodata": null
+    },
+    "slope_deg.tif": {
+      "path": "slope_deg.tif",
+      "sha256": "33d67b1bd18aa8665c2044dc1efc2d15fe72178786228e47dc7f3bf3e5c19ae8",
+      "bytes": 615916,
+      "dtype": "float32",
+      "nodata": null
+    },
+    "aspect_deg.tif": {
+      "path": "aspect_deg.tif",
+      "sha256": "2255f9d4d683eca5f39dd9142c9073dbfd73d34c7dd598ad76e3342b1f948ac6",
+      "bytes": 614609,
+      "dtype": "float32",
+      "nodata": null
+    },
+    "flat_mask.tif": {
+      "path": "flat_mask.tif",
+      "sha256": "b8b16b2cff2673c99369e2e65581b91ba8f8c3947d1a46bf47fc765dcdfa8e87",
+      "bytes": 1577,
+      "dtype": "uint8",
+      "nodata": null
+    },
+    "fuel_model.tif": {
+      "path": "fuel_model.tif",
+      "sha256": "e42d7187e9175111f872f21b4bd91ce14dda7e07960264429b7d2bbd41d8cf96",
+      "bytes": 72336,
+      "dtype": "int16",
+      "nodata": -9999
+    },
+    "unknown_mask.tif": {
+      "path": "unknown_mask.tif",
+      "sha256": "9ae6f10ea8485c4c1e76b0d0416f1c822886094ef7ce2022aa17d1a54d0de2ff",
+      "bytes": 1230,
+      "dtype": "uint8",
+      "nodata": null
+    },
+    "initial_perimeter_mask.tif": {
+      "path": "initial_perimeter_mask.tif",
+      "sha256": "0fcaa7cb4b5987d1c3ee091d0d40eda4ff2149e0c1640cdfc4b5868289692b7f",
+      "bytes": 1289,
+      "dtype": "uint8",
+      "nodata": null
+    },
+    "study_domain_mask.tif": {
+      "path": "study_domain_mask.tif",
+      "sha256": "ae47841c60f06e169fec618b44c5e25d081a9832776c04885851d6708760ad17",
+      "bytes": 2723,
+      "dtype": "uint8",
+      "nodata": null
+    },
+    "water_mask.tif": {
+      "path": "water_mask.tif",
+      "sha256": "034ea195a4c11e5700da8c8dcf715e4f7f0efc920308f791e992ce3fb77422fc",
+      "bytes": 2299,
+      "dtype": "uint8",
+      "nodata": null
+    },
+    "nonburnable_mask.tif": {
+      "path": "nonburnable_mask.tif",
+      "sha256": "acb16d76771a3c5e1f9a91eee73dff766a2a9b23038fc5b6fb4bc93c73979416",
+      "bytes": 8370,
+      "dtype": "uint8",
+      "nodata": null
+    }
+  },
+  "qc": {
+    "dem": {
+      "mosaic_shape": [
+        2400,
+        1200
+      ],
+      "resampling": "bilinear",
+      "valid_target_pixels_including_halo": 173873,
+      "target_pixels_including_halo": 173873,
+      "valid_coverage_fraction": 1.0,
+      "source_zero_elevation_preserved": true,
+      "source_nodata_reassigned": false,
+      "footprint_and_interpolation_support_complete": true
+    },
+    "fuel": {
+      "tiff_nodata": null,
+      "service_nodata": -9999,
+      "source_dtype": "int16",
+      "raw_codes_preserved": true,
+      "missing_not_replaced": true
+    },
+    "fuel_code_counts": {
+      "91": 959,
+      "93": 251,
+      "98": 2072,
+      "99": 3855,
+      "101": 466,
+      "102": 8285,
+      "121": 738,
+      "122": 47118,
+      "141": 5,
+      "142": 1629,
+      "143": 11,
+      "144": 50,
+      "145": 4413,
+      "147": 113,
+      "161": 2382,
+      "165": 39277,
+      "181": 91,
+      "182": 728,
+      "183": 3255,
+      "184": 1298,
+      "185": 740,
+      "186": 47968,
+      "187": 408,
+      "188": 596,
+      "189": 5493,
+      "202": 8
+    },
+    "initial_cells": 140,
+    "study_domain_cells": 135009,
+    "unknown_cells": 0,
+    "initial_nonburnable_cells": 1
+  },
+  "fuel": {
+    "source_product": "LANDFIRE LF2016 Remap FBFM40 CONUS",
+    "nominal_source_resolution_m": 30,
+    "export_resolution_m": 100,
+    "interpolation": "nearest",
+    "raster_function": "None",
+    "fuel_codes_are_actual_source": true,
+    "canopy_parameters": "not acquired",
+    "burnable_codes": [
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      121,
+      122,
+      123,
+      124,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      161,
+      162,
+      163,
+      164,
+      165,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      201,
+      202,
+      203,
+      204
+    ],
+    "nonburnable_codes": [
+      91,
+      92,
+      93,
+      98,
+      99
+    ],
+    "official_information_url": "https://www.landfire.gov/data/lf2016"
+  },
+  "limitations": [
+    "GOFER is hourly retrospective cumulative satellite reconstruction, not ground arrival",
+    "GOES native resolution is about 2km at equator; 100m rasterization adds no observed detail",
+    "GOFER final FRAP references and other hindsight preprocessing prevent as-of validation",
+    "Initial cumulative perimeter is not an observed active fire front everywhere",
+    "Copernicus GLO90 is surface DSM, not bare-earth DTM; later release does not prove 2019 availability",
+    "LF2016 depicts 2016 ground conditions but capable fuels may refer to 2019/2020; 2019 as-of unverified",
+    "Nearest 30m-to-100m fuel resampling loses subcell fuel mixtures and does not estimate moisture",
+    "Canopy structure is absent; canopy zeros in a surface-fire scenario are explicit assumptions",
+    "Nonburnable model categories or outside-domain cells do not imply personal safety",
+    "Future geometries are stored separately and excluded from input-domain construction"
+  ]
+}

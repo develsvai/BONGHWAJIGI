@@ -1,0 +1,43 @@
+{
+  "experiment": "four_earlier_train_indexes_v1",
+  "source_cohort_plan_sha256": "f2151caddeee300b8c1a16c2e82bd6e2f6410bc21b04c0f4acbfaebb6a5e0c6b",
+  "selection_rule": "Earliest input-defined primary issue per each of four previously unverified 2020/2021 train events; no outcomes used",
+  "max_requests": 4,
+  "max_total_bytes": 524288,
+  "max_read_bytes_per_request": 131072,
+  "no_retries": true,
+  "no_alternate_paths": true,
+  "requests": [
+    {
+      "event": "andong_2020",
+      "cycle_utc": "2020-04-24T18:00:00+00:00",
+      "lead_hours": 11,
+      "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20200424/18/gfs.t18z.pgrb2.0p25.f011.idx"
+    },
+    {
+      "event": "andong_2021",
+      "cycle_utc": "2021-02-21T00:00:00+00:00",
+      "lead_hours": 8,
+      "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20210221/00/gfs.t00z.pgrb2.0p25.f008.idx"
+    },
+    {
+      "event": "goseong_2020",
+      "cycle_utc": "2020-05-01T06:00:00+00:00",
+      "lead_hours": 6,
+      "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20200501/06/gfs.t06z.pgrb2.0p25.f006.idx"
+    },
+    {
+      "event": "ulju_2020",
+      "cycle_utc": "2020-03-19T00:00:00+00:00",
+      "lead_hours": 6,
+      "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20200319/00/gfs.t00z.pgrb2.0p25.f006.idx"
+    }
+  ],
+  "source_code_sha256": "7c50826fce9da786f7efeafec8870f561932da51c6c8db9aca345012f598e201",
+  "license": "NOAA NODD open use; source attribution requested; no implied endorsement; derived products labelled",
+  "documentation": "https://registry.opendata.aws/noaa-gfs-bdp-pds/",
+  "historical_path_basis": {
+    "rule": "Pre-2021-03-22 12UTC files use the pre-v16 path without atmos; no alternate path attempted",
+    "source": "https://www.weather.gov/media/notification/pdf2/scn21-20gfs_v16.0_aac.pdf"
+  }
+}

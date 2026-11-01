@@ -1,0 +1,34 @@
+{
+  "endpoint": "https://apihub.kma.go.kr/api/typ06/url/nwp_nc_vars_down.php",
+  "max_http_attempts": 2,
+  "retry_count": 0,
+  "purpose": "requested_product_error_body_diagnostic",
+  "parameters_without_auth": [
+    {
+      "group": "KIML",
+      "data": "U",
+      "tmfc": "2026103112",
+      "hf": "5",
+      "lon1": "129.29",
+      "lat1": "36.98",
+      "lon2": "129.31",
+      "lat2": "37.01",
+      "vars": "U10",
+      "dataType": "NC"
+    },
+    {
+      "group": "KIML",
+      "data": "U",
+      "tmfc": "2026103112",
+      "hf": "5",
+      "lon1": "129.29",
+      "lat1": "36.98",
+      "lon2": "129.31",
+      "lat2": "37.01",
+      "vars": "T2",
+      "dataType": "TEXT"
+    }
+  ],
+  "second_request_condition": "first HTTP status 403 only; same endpoint and bbox; no credential change",
+  "operational_use": false
+}

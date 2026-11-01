@@ -1,0 +1,27 @@
+{
+  "status": "verified_local_evidence_copy",
+  "raw_grib_copied_into_report": false,
+  "canonical_server_raw": "/home1/ncloud/bonghwajigi/data/raw/korea-source-alignment-20261101/weather/gfs-2022-current-v1",
+  "canonical_local_raw": "data/raw/korea-source-alignment-20261101/weather/gfs-2022-current-v1 (copied by context builder)",
+  "files": {
+    "gfs-2022-current-v1.log": {
+      "sha256": "0363b813476f02ed510ae6d77b8f2f8ef29073432e27057fe8d2332176e996b2",
+      "bytes": 6522
+    },
+    "plan.json": {
+      "sha256": "f82c3c23458d85e2e61375ee90e132ec1e1ca5da621451f3adc8cedb8664a508",
+      "bytes": 28318
+    },
+    "report.json": {
+      "sha256": "af8b3f281df1509d325ced02cc7070589684f7c9d7c46a9d69b732ebc649caa1",
+      "bytes": 566946
+    },
+    "source.py": {
+      "sha256": "c00908a10fe95110c920aba010cccace53827fd7ed9a1cb0786431299aa1b4e8",
+      "bytes": 68447
+    }
+  },
+  "operational_use": false,
+  "historical_publication_time_verified": false,
+  "local_raw_copy_not_verified_by_this_receipt": true
+}

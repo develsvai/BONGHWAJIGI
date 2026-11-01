@@ -1,0 +1,288 @@
+{
+  "profile": "korea_gfs_context_2022_primary_v1",
+  "rows": 79612,
+  "input_columns_decoded": [
+    "cohort_primary_clear60",
+    "issue_epoch_seconds",
+    "row",
+    "col",
+    "latitude",
+    "longitude"
+  ],
+  "future_outcome_or_audit_columns_read": false,
+  "source_cohort_config_sha256": "5b89472738b19e88ee5683ef31ed79191e4f559d58ae71b59d917afcbdfe5107",
+  "source_cohort_plan_sha256": "170a1f4008de6160d0c7e514895daa78fcd568ca7fb12c0502d7316b024f3a38",
+  "source_acquisition_report_sha256": "af8b3f281df1509d325ced02cc7070589684f7c9d7c46a9d69b732ebc649caa1",
+  "source_acquisition_plan_sha256": "f82c3c23458d85e2e61375ee90e132ec1e1ca5da621451f3adc8cedb8664a508",
+  "source_decoded_report_sha256": "2680de18111531cc6f27273a1ab38762431063eccf27bc04ece41515e7a0af03",
+  "source_decoded_plan_sha256": "28f6e0972d081e9eb5f243e7781acc5b8adbd0bc3afe5ac118c5ab4e23325293",
+  "wind_basis": "earth_relative_east_north",
+  "assumed_release_delay_hours": 6,
+  "historical_publication_time_verified": false,
+  "time_contract": "reference=floor((issue-6h)/6h)*6h; valid=floor(issue/1h)*1h",
+  "native_sphere_radius_m": 6371229.0,
+  "coordinate_sampling": "Numeric WGS84 lon/lat sampled as native spherical angular coordinates; four bracketing cell centers, minimum spherical great-circle distance. No datum transformation, interpolation, resampling or EPSG4326 relabelling. GFS winds are true east/north. Downstream WGS84 fire bearing is a separate approximation.",
+  "missing_policy": "invalid native values remain NaN with sample_valid=false; no zero fill",
+  "not_fine_scale_weather": "0.25 degree forecast; repeated nearby target cells share values",
+  "documentation": [
+    "https://gdal.org/en/stable/drivers/raster/grib.html",
+    "https://www.nco.ncep.noaa.gov/pmb/docs/grib2/grib2_doc/grib2_table3-2.shtml",
+    "https://www.nco.ncep.noaa.gov/pmb/docs/grib2/grib2_doc/grib2_table3-3.shtml",
+    "https://registry.opendata.aws/noaa-gfs-bdp-pds/"
+  ],
+  "documentation_checked_kst": "2026-11-01",
+  "validation_read": false,
+  "calibration_read": false,
+  "test_read": false,
+  "operational_use": false,
+  "probability": null,
+  "status": "completed",
+  "plan_sha256": "f9aad36dbb4437424524ba9a03befc23903dee1fde951729a94b6a5284ab52ff",
+  "events": {
+    "hapcheon_2022": {
+      "event": {
+        "id": "hapcheon_2022",
+        "split": "train",
+        "start_utc": "2022-02-28T06:00:00Z",
+        "hours": 12,
+        "bbox": [
+          127.8,
+          35.2,
+          128.7,
+          35.9
+        ],
+        "source": "https://www.hccl.go.kr/CLRecords/Files/FileAppendix/a9/A006406.pdf"
+      },
+      "rows": 4599,
+      "source_primary_rows": 13797,
+      "source_cohort_parquet_sha256": "3b7fd3eec38e8f0053c275bfda91f5b01216b6b8da5d37f4db459291d12d3830",
+      "sha256": "1d263c806fbf198202074f83f4c72d5857df9530189a9ac1ff53a53c296e623d",
+      "invalid_samples": 0,
+      "native_grid_distance_km_min": 0.3621466357233916,
+      "native_grid_distance_km_max": 17.6634116209229,
+      "unique_native_cells": 13
+    },
+    "uljin_2022": {
+      "event": {
+        "id": "uljin_2022",
+        "split": "train",
+        "start_utc": "2022-03-04T01:00:00Z",
+        "hours": 12,
+        "bbox": [
+          128.8,
+          36.7,
+          129.8,
+          37.7
+        ],
+        "source": "https://forest.go.kr/kfs/images/data/down/sb_3_09.pdf"
+      },
+      "rows": 11794,
+      "source_primary_rows": 35382,
+      "source_cohort_parquet_sha256": "3b31f4a3b588e46ae278cbce0326b0ce79537aef0d6514ecf38401abd5201f60",
+      "sha256": "bf2fb1be3c6eeb8d47a9fdf457831044b32be4dbd514c43c3c71e4dc1a0ddab7",
+      "invalid_samples": 0,
+      "native_grid_distance_km_min": 0.4366932451039773,
+      "native_grid_distance_km_max": 17.43979666059133,
+      "unique_native_cells": 17
+    },
+    "yeongdeok_2022": {
+      "event": {
+        "id": "yeongdeok_2022",
+        "split": "train",
+        "start_utc": "2022-02-16T02:00:00Z",
+        "hours": 12,
+        "bbox": [
+          129.1,
+          36.2,
+          129.7,
+          36.8
+        ],
+        "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003737",
+        "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+      },
+      "rows": 12063,
+      "source_primary_rows": 36189,
+      "source_cohort_parquet_sha256": "1524c6424c1f1f0e38fb512c2bf0ba58134c3ca7e04f77d695ab0928d03b765e",
+      "sha256": "106c68cf2e7c0ff2bb88ede83c3d1c2339bbc228a351d28b4960ea2e6e46901e",
+      "invalid_samples": 0,
+      "native_grid_distance_km_min": 0.5323377636854967,
+      "native_grid_distance_km_max": 17.55306816133679,
+      "unique_native_cells": 9
+    },
+    "yeongwol_2022": {
+      "event": {
+        "id": "yeongwol_2022",
+        "split": "train",
+        "start_utc": "2022-03-04T05:00:00Z",
+        "hours": 12,
+        "bbox": [
+          128.0,
+          36.9,
+          128.65,
+          37.5
+        ],
+        "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003737",
+        "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+      },
+      "rows": 4041,
+      "source_primary_rows": 12123,
+      "source_cohort_parquet_sha256": "d8b7715c64f473d902f1a87bee143326faecca167c4ef7e04ced264c7266883f",
+      "sha256": "4a2975e17afe3f9bf2cf952573f24ce1707c19158a06a744b35e97c18fb00089",
+      "invalid_samples": 0,
+      "native_grid_distance_km_min": 0.2972337031325082,
+      "native_grid_distance_km_max": 17.357153056259826,
+      "unique_native_cells": 10
+    },
+    "gangneung_donghae_2022": {
+      "event": {
+        "id": "gangneung_donghae_2022",
+        "split": "train",
+        "start_utc": "2022-03-05T00:00:00Z",
+        "hours": 12,
+        "bbox": [
+          128.65,
+          37.35,
+          129.4,
+          37.95
+        ],
+        "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003737",
+        "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+      },
+      "rows": 7965,
+      "source_primary_rows": 23895,
+      "source_cohort_parquet_sha256": "f14bb4af81aee46cb6129ef788bbdf09027fecc6e2421ca597c01375f7cda22f",
+      "sha256": "3548af8f4304146209b7ce9fc2ff9da95d03e6525e9335ac98a3925d306532ad",
+      "invalid_samples": 0,
+      "native_grid_distance_km_min": 0.4366932451039773,
+      "native_grid_distance_km_max": 17.233533706279328,
+      "unique_native_cells": 8
+    },
+    "bonghwa_2022": {
+      "event": {
+        "id": "bonghwa_2022",
+        "split": "train",
+        "start_utc": "2022-04-05T04:00:00Z",
+        "hours": 12,
+        "bbox": [
+          128.5,
+          36.65,
+          129.1,
+          37.2
+        ],
+        "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003737",
+        "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+      },
+      "rows": 1060,
+      "source_primary_rows": 3180,
+      "source_cohort_parquet_sha256": "fcbebcec3a87a3c72b527ab55ff7abea722b17395c58a0909d5bdba7bbeac910",
+      "sha256": "633663c0f4c351facd38cb2eda349f6ecbff7795ce8f9541c68be0d090a3de6e",
+      "invalid_samples": 0,
+      "native_grid_distance_km_min": 0.8862570041456896,
+      "native_grid_distance_km_max": 17.357153056259826,
+      "unique_native_cells": 7
+    },
+    "yanggu_2022": {
+      "event": {
+        "id": "yanggu_2022",
+        "split": "train",
+        "start_utc": "2022-04-10T07:00:00Z",
+        "hours": 12,
+        "bbox": [
+          127.65,
+          37.85,
+          128.25,
+          38.4
+        ],
+        "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003737",
+        "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+      },
+      "rows": 17672,
+      "source_primary_rows": 53016,
+      "source_cohort_parquet_sha256": "cd5cae6f786516a20e215211b038fac53f93f12387bb873608c7319917f6ddb4",
+      "sha256": "e6dba80c81512d873a306040ef10fa720c37032d8646daa2f920386fbafb41ae",
+      "invalid_samples": 0,
+      "native_grid_distance_km_min": 0.37934562797861127,
+      "native_grid_distance_km_max": 17.4300774668212,
+      "unique_native_cells": 12
+    },
+    "gunwi_2022": {
+      "event": {
+        "id": "gunwi_2022",
+        "split": "train",
+        "start_utc": "2022-04-10T04:00:00Z",
+        "hours": 12,
+        "bbox": [
+          128.25,
+          35.9,
+          128.85,
+          36.4
+        ],
+        "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003737",
+        "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+      },
+      "rows": 329,
+      "source_primary_rows": 987,
+      "source_cohort_parquet_sha256": "fdd8dbaa7b2a634ff11cbf4954a5f1397a7bc7fa01d9bb5e6ee0590de01afcc0",
+      "sha256": "3b40bbd87e7b76090ec31c5a06b26993827090b5c58b35373c1f36e91c626709",
+      "invalid_samples": 0,
+      "native_grid_distance_km_min": 0.8919818344477526,
+      "native_grid_distance_km_max": 16.815144935870002,
+      "unique_native_cells": 6
+    },
+    "uljin_may_2022": {
+      "event": {
+        "id": "uljin_may_2022",
+        "split": "train",
+        "start_utc": "2022-05-28T04:00:00Z",
+        "hours": 12,
+        "bbox": [
+          128.9,
+          36.75,
+          129.65,
+          37.25
+        ],
+        "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91004062",
+        "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+      },
+      "rows": 868,
+      "source_primary_rows": 2604,
+      "source_cohort_parquet_sha256": "2be216310dd8f2270adc33601451693ccee3a458c28cb2440694469823f2250f",
+      "sha256": "d4baa5f855b32959f91fa2b261c24068e5b01c78ce280862a9b14835eb7dc0ea",
+      "invalid_samples": 0,
+      "native_grid_distance_km_min": 0.4912106981264279,
+      "native_grid_distance_km_max": 17.43979666059133,
+      "unique_native_cells": 9
+    },
+    "miryang_2022": {
+      "event": {
+        "id": "miryang_2022",
+        "split": "train",
+        "start_utc": "2022-05-31T01:00:00Z",
+        "hours": 12,
+        "bbox": [
+          128.4,
+          35.3,
+          129.0,
+          35.8
+        ],
+        "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003815",
+        "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+      },
+      "rows": 19221,
+      "source_primary_rows": 57663,
+      "source_cohort_parquet_sha256": "a2b24b1fc0019f550de8a944160b2ff6cded733bc9260800c429a51f8ea46de3",
+      "sha256": "6a2daceaa0ac3284560dc4fa1fffaef358f06711895db1eda7d9354771335e7e",
+      "invalid_samples": 0,
+      "native_grid_distance_km_min": 0.4661640878329729,
+      "native_grid_distance_km_max": 17.73059245507986,
+      "unique_native_cells": 9
+    }
+  },
+  "source_files_rechecked": 385,
+  "completed_at_utc": "2026-10-31T18:55:06.607996+00:00",
+  "invalid_samples": 0,
+  "versions": {
+    "numpy": "2.5.4",
+    "pyarrow": "26.0.0"
+  }
+}

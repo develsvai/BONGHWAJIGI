@@ -1,0 +1,195 @@
+{
+  "schema": "kma_weather_alignment_probe_v1",
+  "max_http_requests": 20,
+  "max_bytes_per_file": 104857600,
+  "max_total_bytes": 104857600,
+  "planned_max_total_bytes": 23068672,
+  "planned_request_count": 11,
+  "no_retries": true,
+  "stop_same_endpoint_after_403": true,
+  "stop_all_after_401_or_429": true,
+  "redirects_allowed": false,
+  "request_spacing_seconds": 1,
+  "timeout_seconds": 30,
+  "samples_selected_before_response": "Two fixed train cases spanning 2020/2022, not representative",
+  "documentation": {
+    "numerical": "https://apihub.kma.go.kr/apiList.do?seqApi=9",
+    "asos": "https://apihub.kma.go.kr/apiList.do?seqApi=2",
+    "aws": "https://apihub.kma.go.kr/apiList.do?seqApi=2&seqApiSub=239",
+    "station": "https://apihub.kma.go.kr/apiList.do?seqApi=2&seqApiSub=317"
+  },
+  "requests": [
+    {
+      "id": "kiml-axis-registration-recheck",
+      "kind": "netcdf",
+      "endpoint": "https://apihub.kma.go.kr/api/typ06/url/nwp_nc_vars_down.php",
+      "parameters_without_auth": {
+        "group": "KIML",
+        "data": "U",
+        "vars": "U10",
+        "tmfc": "2026103112",
+        "hf": "5",
+        "lon1": "129.29",
+        "lat1": "36.98",
+        "lon2": "129.31",
+        "lat2": "37.01",
+        "dataType": "NC"
+      },
+      "requested_reference_time_utc": "2026-10-31T12:00:00Z",
+      "requested_valid_time_utc": "2026-10-31T17:00:00Z",
+      "max_bytes": 4194304,
+      "note": "One registration recheck only; contemporary metadata, not train input"
+    },
+    {
+      "id": "uljin_2022-umkr-point",
+      "kind": "um_point",
+      "endpoint": "https://apihub.kma.go.kr/api/typ06/cgi-bin/url/nph-um_grib_pt_txt1",
+      "parameters_without_auth": {
+        "group": "UMKR",
+        "nwp": "N512",
+        "data": "U",
+        "varn": "2002,2003,0,1001",
+        "tmfc": "2022030400",
+        "hf": "1",
+        "lon": "129.3",
+        "lat": "37.2",
+        "disp": "A",
+        "mode": "1",
+        "help": "1"
+      },
+      "max_bytes": 1048576,
+      "note": "Archived forecast reference time is not verified release time"
+    },
+    {
+      "id": "uljin_2022-ldaps-header",
+      "kind": "grib_header",
+      "endpoint": "https://apihub.kma.go.kr/api/typ06/cgi-bin/url/nph-nwp_header",
+      "parameters_without_auth": {
+        "model": "um",
+        "nwp": "l015",
+        "sub": "unis",
+        "tmfc": "202203040000",
+        "ef": "1",
+        "help": "1"
+      },
+      "max_bytes": 1048576,
+      "note": "Header/variable access probe, no full grid or guessed variable download"
+    },
+    {
+      "id": "uljin_2022-asos",
+      "event_id": "uljin_2022",
+      "kind": "asos",
+      "endpoint": "https://apihub.kma.go.kr/api/typ01/url/kma_sfctm2.php",
+      "parameters_without_auth": {
+        "tm": "202203041000",
+        "stn": "0",
+        "help": "1"
+      },
+      "observation_time_utc": "2022-03-04T01:00:00Z",
+      "max_bytes": 2097152
+    },
+    {
+      "id": "uljin_2022-aws",
+      "event_id": "uljin_2022",
+      "kind": "aws",
+      "endpoint": "https://apihub.kma.go.kr/api/typ01/cgi-bin/url/nph-aws2_min",
+      "parameters_without_auth": {
+        "tm2": "202203041000",
+        "stn": "0",
+        "disp": "0",
+        "help": "1"
+      },
+      "observation_time_utc": "2022-03-04T01:00:00Z",
+      "max_bytes": 2097152
+    },
+    {
+      "id": "uljin_2022-station_sfc",
+      "event_id": "uljin_2022",
+      "kind": "station_sfc",
+      "endpoint": "https://apihub.kma.go.kr/api/typ01/url/stn_inf.php",
+      "parameters_without_auth": {
+        "inf": "SFC",
+        "tm": "202203041000",
+        "stn": "0",
+        "help": "1"
+      },
+      "observation_time_utc": "2022-03-04T01:00:00Z",
+      "max_bytes": 2097152
+    },
+    {
+      "id": "uljin_2022-station_aws",
+      "event_id": "uljin_2022",
+      "kind": "station_aws",
+      "endpoint": "https://apihub.kma.go.kr/api/typ01/url/stn_inf.php",
+      "parameters_without_auth": {
+        "inf": "AWS",
+        "tm": "202203041000",
+        "stn": "0",
+        "help": "1"
+      },
+      "observation_time_utc": "2022-03-04T01:00:00Z",
+      "max_bytes": 2097152
+    },
+    {
+      "id": "ulju_2020-asos",
+      "event_id": "ulju_2020",
+      "kind": "asos",
+      "endpoint": "https://apihub.kma.go.kr/api/typ01/url/kma_sfctm2.php",
+      "parameters_without_auth": {
+        "tm": "202003191400",
+        "stn": "0",
+        "help": "1"
+      },
+      "observation_time_utc": "2020-03-19T05:00:00Z",
+      "max_bytes": 2097152
+    },
+    {
+      "id": "ulju_2020-aws",
+      "event_id": "ulju_2020",
+      "kind": "aws",
+      "endpoint": "https://apihub.kma.go.kr/api/typ01/cgi-bin/url/nph-aws2_min",
+      "parameters_without_auth": {
+        "tm2": "202003191400",
+        "stn": "0",
+        "disp": "0",
+        "help": "1"
+      },
+      "observation_time_utc": "2020-03-19T05:00:00Z",
+      "max_bytes": 2097152
+    },
+    {
+      "id": "ulju_2020-station_sfc",
+      "event_id": "ulju_2020",
+      "kind": "station_sfc",
+      "endpoint": "https://apihub.kma.go.kr/api/typ01/url/stn_inf.php",
+      "parameters_without_auth": {
+        "inf": "SFC",
+        "tm": "202003191400",
+        "stn": "0",
+        "help": "1"
+      },
+      "observation_time_utc": "2020-03-19T05:00:00Z",
+      "max_bytes": 2097152
+    },
+    {
+      "id": "ulju_2020-station_aws",
+      "event_id": "ulju_2020",
+      "kind": "station_aws",
+      "endpoint": "https://apihub.kma.go.kr/api/typ01/url/stn_inf.php",
+      "parameters_without_auth": {
+        "inf": "AWS",
+        "tm": "202003191400",
+        "stn": "0",
+        "help": "1"
+      },
+      "observation_time_utc": "2020-03-19T05:00:00Z",
+      "max_bytes": 2097152
+    }
+  ],
+  "validation_read": false,
+  "calibration_read": false,
+  "test_read": false,
+  "operational_use": false,
+  "historical_release_time_verified": false,
+  "license": "KMA API service terms and source attribution apply; no open-source software license inferred"
+}

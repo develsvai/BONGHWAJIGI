@@ -21,6 +21,7 @@ geo = [
     "rasterio>=1.4,<2",
     "pyproj>=3.7,<4",
     "shapely>=2,<3",
+    "pyshp>=2.3,<3",
     "planetary-computer>=1,<2",
     "h5py>=3.12,<4",
     "netcdf4>=1.7,<2",
