@@ -106,7 +106,7 @@
 - Document outputs: -
 - Document output exceptions: `README.md`
 - Source proposal: `-`
-- Status: PENDING
+- Status: REVIEW_REQUIRED
 - Assigned agent: foreground
 
 ## Advisor Source Prompt

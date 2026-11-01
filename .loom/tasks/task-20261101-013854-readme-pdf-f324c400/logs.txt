@@ -1,3 +1,6 @@
 [2026-11-01T01:38:58+00:00] agent=foreground task=task-20261101-013854-readme-pdf-f324c400 Foreground task session started.
 2026-11-01 KST: 사용자 직접 README수정 지시. PDF11쪽 텍스트 추출 및4/9/10쪽 렌더링 검토. 화면3개 nativeJPEG추출·바이트일치. README필수5항목·멘토링절삭제·환경변수22개·shell16블록·표열수·로컬링크·앵커·공백검증 통과. 공식 모델/Redis/Open-Meteo와 기존 조사자료 대조. 앱·서비스·학습 변경없음.
 2026-11-01 KST: 설치메타데이터 최종대조에서 HTTPX는 BSD-3-Clause임을 확인해 해당 행으로 분리. 최종 링크·앵커·멘토링절삭제·shell구문·공백 검사 재통과.
+[2026-11-01T01:43:31+00:00] agent=foreground task=task-20261101-013854-readme-pdf-f324c400 README 필수 다섯 항목·화면 3개·환경설정·라이선스·팀 역할을 보완하고 멘토링 절을 삭제했다. PDF·링크·앵커·환경변수·shell·공백 검증 후 ff1c7c3로 로컬 커밋했다.
+[2026-11-01T01:43:56+00:00] agent=foreground task=task-20261101-013854-readme-pdf-f324c400 Foreground task session started.
+검증 결과: git diff --check 및 git diff --cached --check 통과, loom validate --strict: 6jobs·63tasks 정상. 링크·앵커0오류, shell16블록·환경변수22개 대조 통과. 첫finish의 검증근거 표식 불일치를 표준 검증 절과 명령 기록으로 보완했다.
