@@ -1,0 +1,55 @@
+{
+  "verified_at_utc": "2026-10-30T11:11:11.056358+00:00",
+  "platform": "Windows",
+  "python": "3.12.14",
+  "native_macos_tested": false,
+  "live_authenticated_requests_tested": false,
+  "tests": [
+    {
+      "name": "보관본 기본조회",
+      "result": "pass",
+      "case_rows": 0,
+      "control_rows": 379,
+      "sources": 4
+    },
+    {
+      "name": "positive_bbox",
+      "result": "pass",
+      "case_rows": 379,
+      "statuses": [
+        "수집완료",
+        "수집완료",
+        "수집완료",
+        "수집완료"
+      ]
+    },
+    {
+      "name": "outside_period",
+      "result": "pass",
+      "case_rows": 0,
+      "statuses": [
+        "미검증",
+        "미검증",
+        "미검증",
+        "미검증"
+      ]
+    },
+    {
+      "name": "asos-sample 키 없음",
+      "result": "pass",
+      "request_sent": false,
+      "status": "미수집"
+    },
+    {
+      "name": "messages-sample 키 없음",
+      "result": "pass",
+      "request_sent": false,
+      "status": "미수집"
+    },
+    {
+      "name": "원본15개 SHA256 일치",
+      "result": "pass"
+    }
+  ],
+  "document_visual_review": "8 pages rendered with Microsoft Word and visually inspected; no blank pages, clipped text or title borders."
+}

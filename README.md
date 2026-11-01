@@ -513,10 +513,5 @@ apps/mobile               별도 앱 저장소의 고정 서브모듈
 
 `.env`, API 키, SSH 개인키, 사용자 JWT, 원시 위치·발화는 비공개 설정과 권한이 제한된 파일로 관리합니다. 사용자의 자료는 인증·소유권 검사와 별도 동의 범위 안에서 처리합니다.
 
-개발 작업의 결정과 검증은 Loom에 기록합니다. 에이전트 규칙은 [AGENTS.md](AGENTS.md)를 따릅니다.
 
-```sh
-loom status --json
-loom resume --json
-loom validate --strict
-```
+
