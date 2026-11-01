@@ -1,0 +1,138 @@
+[
+  {
+    "source_id": "safety",
+    "url": "https://www.safetydata.go.kr/disaster-data/view?dataSn=228",
+    "checked_at_utc": "2026-10-31T06:31:54.173285+00:00",
+    "note": "긴급재난문자 메타데이터 갱신주기 1분. 실제 발송→API 수신 지연 아님",
+    "scope": "공식 문서 재조회; 승인키 데이터와 연속 갱신 측정 아님",
+    "http": 200,
+    "final_url": "https://www.safetydata.go.kr/disaster-data/view?dataSn=228",
+    "content_type": "text/html;charset=UTF-8",
+    "bytes": 68166,
+    "sha256": "a64b7685ad1b1dfd19c0beb7df495a91aa5443c5654cf39d5d54285a9eaa2128",
+    "result": "문서 HTTP 응답 확보; 아래 내용 검토와 구분",
+    "text_checks": {
+      "갱신주기": false,
+      "1분": false
+    }
+  },
+  {
+    "source_id": "aws",
+    "url": "https://apihub.kma.go.kr/apiList.do?seqApi=2&seqApiSub=239",
+    "checked_at_utc": "2026-10-31T06:31:54.174213+00:00",
+    "note": "AWS 매분자료 조회와 생산주기 분. API 공개 지연 상한은 확인하지 못함",
+    "scope": "공식 문서 재조회; 승인키 데이터와 연속 갱신 측정 아님",
+    "http": 200,
+    "final_url": "https://apihub.kma.go.kr/apiList.do?seqApi=2&seqApiSub=239",
+    "content_type": "text/html;charset=UTF-8",
+    "bytes": 334150,
+    "sha256": "acce1b3b84bd922115575f411805811e5151640a3face236d399b14481069912",
+    "result": "문서 HTTP 응답 확보; 아래 내용 검토와 구분",
+    "text_checks": {
+      "AWS 매분": true,
+      "nph-aws2_min": true
+    }
+  },
+  {
+    "source_id": "sat",
+    "url": "https://apihub.kma.go.kr/apiList.do?seqApi=6&seqApiSub=271",
+    "checked_at_utc": "2026-10-31T06:31:54.174213+00:00",
+    "note": "산불탐지 ff 10분 간격; 위험도 fr 하루 1회. 파일 다운로드와 텍스트 tm 시간대 표기 다름",
+    "scope": "공식 문서 재조회; 승인키 데이터와 연속 갱신 측정 아님",
+    "http": 200,
+    "final_url": "https://apihub.kma.go.kr/apiList.do?seqApi=6&seqApiSub=271",
+    "content_type": "text/html;charset=UTF-8",
+    "bytes": 392601,
+    "sha256": "830783c99b092f1dfe999efcb68f3d6f3c1726eda24cdfe55d4edbf911956059",
+    "result": "문서 HTTP 응답 확보; 아래 내용 검토와 구분",
+    "text_checks": {
+      "ff(10분": true,
+      "산불탐지": true
+    }
+  },
+  {
+    "source_id": "forecast",
+    "url": "https://apihub.kma.go.kr/apiList.do?seqApi=10&seqApiSub=286",
+    "checked_at_utc": "2026-10-31T06:31:54.175216+00:00",
+    "note": "초단기실황/초단기예보/단기예보 별도 기능. 응답 버전·공개 지연 미검증",
+    "scope": "공식 문서 재조회; 승인키 데이터와 연속 갱신 측정 아님",
+    "http": 200,
+    "final_url": "https://apihub.kma.go.kr/apiList.do?seqApi=10&seqApiSub=286",
+    "content_type": "text/html;charset=UTF-8",
+    "bytes": 193559,
+    "sha256": "5855d761dd10d10f8e70c5f6724a9ca5c039c9b2b1216012a6db4672093b4b1d",
+    "result": "문서 HTTP 응답 확보; 아래 내용 검토와 구분",
+    "text_checks": {}
+  },
+  {
+    "source_id": "rule",
+    "url": "https://data.kma.go.kr/resources/images/publication/%EC%98%88%EB%B3%B4%EC%97%85%EB%AC%B4%EA%B7%9C%EC%A0%95%282025.6.13.%29.pdf",
+    "checked_at_utc": "2026-10-31T06:31:54.176224+00:00",
+    "note": "기상청 공개 규정 2025.6.13 제9조 초단기예보 매10분 발표. 특정 API 실갱신 보장과 구분",
+    "scope": "공식 문서 재조회; 승인키 데이터와 연속 갱신 측정 아님",
+    "http": 200,
+    "final_url": "https://data.kma.go.kr/resources/images/publication/%EC%98%88%EB%B3%B4%EC%97%85%EB%AC%B4%EA%B7%9C%EC%A0%95%282025.6.13.%29.pdf",
+    "content_type": "application/pdf;charset=UTF-8",
+    "bytes": 501623,
+    "sha256": "aadab7ad8bcd93306b2aa1ab537909e284f7d48a2a3ac2c2179cb543c45d060b",
+    "result": "문서 HTTP 응답 확보; 아래 내용 검토와 구분",
+    "text_checks": {}
+  },
+  {
+    "source_id": "forest",
+    "url": "https://www.data.go.kr/catalog/3070842/openapi.json",
+    "checked_at_utc": "2026-10-31T06:31:54.176224+00:00",
+    "note": "산불발생통계 설명 분기별 집계. 포털 실시간 표기만으로 현장 갱신 인정 불가",
+    "scope": "공식 문서 재조회; 승인키 데이터와 연속 갱신 측정 아님",
+    "http": 200,
+    "final_url": "https://www.data.go.kr/catalog/3070842/openapi.json",
+    "content_type": "text/html;charset=UTF-8",
+    "bytes": 2024,
+    "sha256": "d26f039917f47cce262aca287d84b56e0296889c12d254bfa5fd5b95a0209475",
+    "result": "문서 HTTP 응답 확보; 아래 내용 검토와 구분",
+    "text_checks": {
+      "분기별": true
+    }
+  },
+  {
+    "source_id": "firms",
+    "url": "https://firms.modaps.eosdis.nasa.gov/",
+    "checked_at_utc": "2026-10-31T06:31:54.503751+00:00",
+    "note": "전지구 NRT 관측 후 3시간 이내. 미국·캐나다 RT와 한국을 구분",
+    "scope": "공식 문서 재조회; 승인키 데이터와 연속 갱신 측정 아님",
+    "http": 200,
+    "final_url": "https://firms.modaps.eosdis.nasa.gov/",
+    "content_type": "text/html",
+    "bytes": 20380,
+    "sha256": "c07285f50bd5a8cf4fcd5d7715dbcc9a22135677e5823f2c33866e6c546d7f30",
+    "result": "문서 HTTP 응답 확보; 아래 내용 검토와 구분",
+    "text_checks": {
+      "3 hours": true
+    }
+  },
+  {
+    "source_id": "gdacs",
+    "url": "https://data.gdacs.org/feed_reference.aspx",
+    "checked_at_utc": "2026-10-31T06:31:54.595066+00:00",
+    "note": "대표 피드 6분 갱신. 국내 산불 포괄성·발생→탐지 지연 보장 아님",
+    "scope": "공식 문서 재조회; 승인키 데이터와 연속 갱신 측정 아님",
+    "http": 200,
+    "final_url": "https://data.gdacs.org/feed_reference.aspx",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 49403,
+    "sha256": "df78dee67b49f49747c7fb19eb2fe424d50b2469acae19bf719d9e6f1972c6ac",
+    "result": "문서 HTTP 응답 확보; 아래 내용 검토와 구분",
+    "text_checks": {
+      "6 minutes": true
+    }
+  },
+  {
+    "source_id": "ecmwf",
+    "url": "https://www.ecmwf.int/en/forecasts/datasets/open-data",
+    "checked_at_utc": "2026-10-31T06:31:54.953402+00:00",
+    "note": "예보 00/06/12/18 UTC 4회/일. 유효시각 간격과 발행주기 구분",
+    "scope": "공식 문서 재조회; 승인키 데이터와 연속 갱신 측정 아님",
+    "result": "로컬 직접 요청 실패; 웹 열람 근거와 분리",
+    "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+  }
+]

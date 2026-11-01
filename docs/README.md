@@ -21,11 +21,14 @@
 
 | 문서 | 확인할 내용 |
 | --- | --- |
-| [서비스 목표와 사용자 시나리오](V1/product-and-scenarios.md) | 공공성, 대상 사용자, 개인별 대응, 해커톤 범위 |
-| [데이터 수집과 대응 흐름](V1/architecture-and-data-flow.md) | 평상시 수집부터 주변 사건 평가, 알림, 재안내까지 |
-| [AI 역할과 서버 구성](V1/ai-and-infrastructure.md) | GPU 활용, 모델 후보, 확률 검증, 역할 제한 |
-| [결정 사항과 회의 대조](V1/decisions-and-meeting-review.md) | 회의와 대화의 공통점, 변경점, 미결정 사항 |
-| [UI/UX 인계와 확인 항목](V1/ui-ux-handoff.md) | 화면별 필요한 정보와 예외 상태, 다음 검토 순서 |
+
+| [서비스 목표와 사용자 시나리오](product-and-scenarios.md) | 공공성, 대상 사용자, 개인별 대응, 해커톤 범위 |
+| [데이터 수집과 대응 흐름](architecture-and-data-flow.md) | 평상시 수집부터 주변 사건 평가, 알림, 재안내까지 |
+| [AI 역할과 서버 구성](ai-and-infrastructure.md) | GPU 활용, 모델 후보, 확률 검증, 역할 제한 |
+| [결정 사항과 회의 대조](decisions-and-meeting-review.md) | 회의와 대화의 공통점, 변경점, 미결정 사항 |
+| [UI/UX 인계와 확인 항목](ui-ux-handoff.md) | 화면별 필요한 정보와 예외 상태, 다음 검토 순서 |
+| [재난 데이터 수집 자료](data-collection/README.md) | [산불MVP·10분 갱신 검수](data-collection/reviews/20261031/산불MVP_10분갱신_검수가이드.md), 국내외 카탈로그, 실제 표본, Mac 수집 예제, 검증 상태 |
+| [발표자료와 PPT 템플릿](presentations/README.md) | 발표용 PPTX 6개를 `slides`에 통합, 원본 템플릿 1개는 `templates`에 보관, 발표 순서는 이후 정리 (2026-10-31) |
 
 ## 상태 표기
 
