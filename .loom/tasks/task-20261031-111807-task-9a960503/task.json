@@ -3,9 +3,9 @@
   "job_id": "job-20261031-002626-job-c9f9ff0d",
   "title": "국내 산불 적용을 위한 원인 분석과 공개 정답·입력 확보 및 개선 실험",
   "description": "사용자가 쓸만한 수준까지 계속 개선하라고 직접 지시했고 최종 목표를 국내 사용자 대응 판단에 연결할 수준으로 명시했다. 기존 모델의 임계값·희소 양성·표본·시공간·확률 보정 문제를 측정하고, 국내 시각/좌표가 있는 공개 관측 정답과 일치하는 기상/지형 입력을 실제 확보한다. 사용 가능성이 검증되지 않은 미국 점수 개선을 국내 적용 성공으로 보고하지 않는다.",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-10-31T11:18:07+00:00",
-  "updated_at": "2026-11-01T05:28:05+00:00",
+  "updated_at": "2026-11-01T05:37:17+00:00",
   "order_index": 9,
   "assigned_agent": "foreground",
   "depends_on": [
@@ -28,12 +28,25 @@
   "run_attempts": 0,
   "last_error": "",
   "commit_refs": [
-    "b35e0538bdd8d738566f7938c87315f62c86b7ab"
+    "b35e0538bdd8d738566f7938c87315f62c86b7ab",
+    "fa6a7402e4b7a1fa2edac30ddda36e502cd7c34e"
   ],
   "branch_name": "develop",
   "git_dirty": true,
-  "git_snapshot_captured_at": "2026-10-31T11:18:20+00:00",
-  "artifacts": [],
+  "git_snapshot_captured_at": "2026-11-01T05:37:17+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-111807-task-9a960503/agent-events.jsonl",
+    ".loom/tasks/task-20261031-111807-task-9a960503/artifacts.json",
+    ".loom/tasks/task-20261031-111807-task-9a960503/context.md",
+    ".loom/tasks/task-20261031-111807-task-9a960503/decision.md",
+    ".loom/tasks/task-20261031-111807-task-9a960503/git-snapshot.json",
+    ".loom/tasks/task-20261031-111807-task-9a960503/logs.txt",
+    ".loom/tasks/task-20261031-111807-task-9a960503/previous-results.md",
+    ".loom/tasks/task-20261031-111807-task-9a960503/prompt.md",
+    ".loom/tasks/task-20261031-111807-task-9a960503/result.md",
+    ".loom/tasks/task-20261031-111807-task-9a960503/troubleshooting.md",
+    "docs/V2/delivery/korea-wildfire-improvement.md"
+  ],
   "source_proposal_id": "",
   "source_prompt": ""
 }

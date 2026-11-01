@@ -1,0 +1,19 @@
+{
+  "id": "checkpoint-20261101-053713-task-completed-mvp-639c34f2",
+  "created_at": "2026-11-01T05:37:13+00:00",
+  "reason": "Task completed: 산불 MVP의 지역·재생 사례·실제 및 모의 범위와 수용 기준 고정",
+  "summary": "산불 MVP의 지역·재생 사례·실제 및 모의 범위와 수용 기준 고정 -> DONE @ develop/fa6a7402e4b7",
+  "job_id": "job-20261031-002017-v2-fe3bfad0",
+  "task_id": "task-20261031-002627-mvp-e821b0f7",
+  "commit_sha": "fa6a7402e4b7a1fa2edac30ddda36e502cd7c34e",
+  "branch_name": "develop",
+  "dirty": true,
+  "staged_files": [],
+  "modified_files": [
+    ".loom/job-runs/job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02/job-run.json",
+    ".loom/task-definitions/task-def-20261031-002627-mvp-7a7e3902/task-definition.json"
+  ],
+  "untracked_files": [],
+  "snapshot_captured_at": "2026-11-01T05:37:13+00:00",
+  "rollback_strategy": "revert-or-branch"
+}

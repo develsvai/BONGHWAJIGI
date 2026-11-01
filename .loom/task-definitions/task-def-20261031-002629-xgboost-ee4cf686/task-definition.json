@@ -4,7 +4,7 @@
   "title": "GPU 서버에 XGBoost 설치 후 기준선·학습·추론 연결 검증",
   "description": "2026-10-31 KST 사용자 재고정: 오늘 MVP는 산불 한 종류이며 3D와 서버 STT/TTS·오디오 스트리밍을 제외하고 서버는 텍스트를 제공한다. 공식 경보는 출처·원문·발령 대상을 확인해 개인별 정책 계산과 GPU를 기다리지 않고 우선 전달한다. 일반 분석은 정형 파싱 또는 필요한 Qwen 문서 추출·저장 문서의 임베딩 검색, 사건 통합·위치 관련성·입력 검사, 영향 확률 또는 예측 불가, 검토된 개인별 정책 순서다. 공식 등급·환경 영향 확률·개인 대응 단계를 분리하고 정책은 검토·버전 관리하며 입력 변경 때 재적용한다. 실제 자료·과거 재생·합성 시나리오를 구분하고 실제 정답이 없으면 학습·추론 연결은 simulation으로 검증하며 실제 예측은 unavailable로 둔다. 이 지시는 작업 계약 재고정만 승인하며 구현 실행·Queue 등록·서버 설치·원격 push를 지금 승인한 것으로 취급하지 않는다. 오늘 범위는 이 계약과 Job 재고정 노트를 우선하고 기존 V2 문서는 배경 설계로 참조한다. \n\n개별 작업: GPU 서버의 격리된 환경에 XGBoost와 학습 의존성을 준비하고 CUDA 학습 사용 여부를 실제 실행으로 확인한다. 같은 분할로 단순 기준선과 첫 모델을 학습하고 시드·설정·데이터/모델 버전·환경·원시 확률 출력을 기록한다. 실제 데이터가 없으면 simulation 데이터로 학습·저장·재로딩·추론 경로만 검증한다. Qwen/Embedding 상주 추론과 학습의 GPU 사용 시간을 분리하고 운영 성능·확률 타당성은 C4 판정 전 주장하지 않는다.",
   "created_at": "2026-10-31T00:26:29+00:00",
-  "updated_at": "2026-11-01T05:33:38+00:00",
+  "updated_at": "2026-11-01T05:37:14+00:00",
   "order_index": 3,
   "legacy_task_id": "task-20261031-002629-xgboost-c44c6d79",
   "depends_on": [
@@ -26,7 +26,7 @@
     "docs/V2/delivery/training-run.md"
   ],
   "document_output_exceptions": [],
-  "default_agent": "unassigned",
+  "default_agent": "foreground",
   "context_policy_id": "",
   "executor_policy_id": "",
   "review_policy": "",

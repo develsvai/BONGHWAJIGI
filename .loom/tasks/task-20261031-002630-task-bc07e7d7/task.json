@@ -3,9 +3,9 @@
   "job_id": "job-20261031-002626-job-97436430",
   "title": "산불 사건·위치·사용자 상태·정책 버전 변경에 따른 안내와 화면 갱신 연결",
   "description": "2026-10-31 KST 사용자 재고정: 오늘 MVP는 산불 한 종류이며 3D와 서버 STT/TTS·오디오 스트리밍을 제외하고 서버는 텍스트를 제공한다. 공식 경보는 출처·원문·발령 대상을 확인해 개인별 정책 계산과 GPU를 기다리지 않고 우선 전달한다. 일반 분석은 정형 파싱 또는 필요한 Qwen 문서 추출·저장 문서의 임베딩 검색, 사건 통합·위치 관련성·입력 검사, 영향 확률 또는 예측 불가, 검토된 개인별 정책 순서다. 공식 등급·환경 영향 확률·개인 대응 단계를 분리하고 정책은 검토·버전 관리하며 입력 변경 때 재적용한다. 실제 자료·과거 재생·합성 시나리오를 구분하고 실제 정답이 없으면 학습·추론 연결은 simulation으로 검증하며 실제 예측은 unavailable로 둔다. 이 지시는 작업 계약 재고정만 승인하며 구현 실행·Queue 등록·서버 설치·원격 push를 지금 승인한 것으로 취급하지 않는다. 오늘 범위는 이 계약과 Job 재고정 노트를 우선하고 기존 V2 문서는 배경 설계로 참조한다. \n\n개별 작업: 일반 분석을 파싱/필요한 문서 추출·검색, 사건 통합·위치 관련성·입력 검사, 환경 영향 또는 예측 불가, 개인 정책 순서로 연결한다. 새 사건·관측·수정/해제·위치·프로필·확인 상태와 검토된 정책 버전 변경 때 필요한 단계부터 재평가한다. 정책 자체는 문서 수집으로 자동 변경하지 않는다. 공식 원문은 D4가 먼저 전달하고 대응 단계·행동·텍스트 설명은 준비되는 대로 버전 있는 전체 응답으로 갱신한다. 백그라운드 푸시와 전경 getUpdates long polling, 커서·역순/중복 억제·유효시간·재동기화를 연결한다. 모델 보류 또는 Qwen 오류에서도 공식 정보와 템플릿 안내를 유지하고 실제/모의 모드를 전달한다.",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-10-31T00:26:30+00:00",
-  "updated_at": "2026-11-01T05:33:41+00:00",
+  "updated_at": "2026-11-01T05:37:16+00:00",
   "order_index": 5,
   "assigned_agent": "foreground",
   "depends_on": [
@@ -34,12 +34,25 @@
   "run_attempts": 0,
   "last_error": "",
   "commit_refs": [
-    "c68f678fbffeb6b4aad10d1269e625df7ebe789d"
+    "c68f678fbffeb6b4aad10d1269e625df7ebe789d",
+    "fa6a7402e4b7a1fa2edac30ddda36e502cd7c34e"
   ],
   "branch_name": "develop",
   "git_dirty": true,
-  "git_snapshot_captured_at": "2026-11-01T05:33:41+00:00",
-  "artifacts": [],
+  "git_snapshot_captured_at": "2026-11-01T05:37:16+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-002630-task-bc07e7d7/agent-events.jsonl",
+    ".loom/tasks/task-20261031-002630-task-bc07e7d7/artifacts.json",
+    ".loom/tasks/task-20261031-002630-task-bc07e7d7/context.md",
+    ".loom/tasks/task-20261031-002630-task-bc07e7d7/decision.md",
+    ".loom/tasks/task-20261031-002630-task-bc07e7d7/git-snapshot.json",
+    ".loom/tasks/task-20261031-002630-task-bc07e7d7/logs.txt",
+    ".loom/tasks/task-20261031-002630-task-bc07e7d7/previous-results.md",
+    ".loom/tasks/task-20261031-002630-task-bc07e7d7/prompt.md",
+    ".loom/tasks/task-20261031-002630-task-bc07e7d7/result.md",
+    ".loom/tasks/task-20261031-002630-task-bc07e7d7/troubleshooting.md",
+    "docs/V2/delivery/decision-orchestration.md"
+  ],
   "source_proposal_id": "",
   "source_prompt": "오케 우선은 그거대로 loom에 타스크를 재고정 해"
 }

@@ -1,0 +1,89 @@
+{
+  "기준일": "2026-11-01 KST",
+  "기존태스크": 64,
+  "삭제": 5,
+  "기존_대기에서_완료": 15,
+  "기존_실행에서_완료": 2,
+  "기존완료_보존": 39,
+  "새대기": 2,
+  "현재_본정리제외": {
+    "DONE": 56,
+    "PENDING": 5,
+    "RUNNING": 0
+  },
+  "본정리완료후_예상": {
+    "DONE": 57,
+    "PENDING": 5,
+    "RUNNING": 0
+  },
+  "jobs": [
+    {
+      "id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "V2 실행 기반과 통합 검증",
+      "status": "RUNNING"
+    },
+    {
+      "id": "job-20261030-113757-bonghwajigi-4841f0bc",
+      "title": "BONGHWAJIGI 초기 설계 문서 정리",
+      "status": "DONE"
+    },
+    {
+      "id": "job-20261031-002626-api-18805e8a",
+      "title": "앱 연동 API 계약과 인계",
+      "status": "DONE"
+    },
+    {
+      "id": "job-20261031-002626-job-97436430",
+      "title": "개인별 대응 정책과 알림 서버",
+      "status": "PENDING"
+    },
+    {
+      "id": "job-20261031-002626-job-a46f69a4",
+      "title": "기관 데이터와 위치 관련성 파이프라인",
+      "status": "PENDING"
+    },
+    {
+      "id": "job-20261031-002626-job-c9f9ff0d",
+      "title": "영향 확률 데이터셋과 모델",
+      "status": "PENDING"
+    }
+  ],
+  "대기_계약": [
+    {
+      "id": "task-20261031-002628-task-79e4938c",
+      "job": "job-20261031-002626-job-a46f69a4",
+      "title": "산불 발령 구역과 사용자 위치·풍향·주변 영향 관련성 구현"
+    },
+    {
+      "id": "task-20261031-002628-task-52ce54a6",
+      "job": "job-20261031-002626-job-a46f69a4",
+      "title": "산불 사건의 근거 연결과 수정·해제·상충 정보 이력 구현"
+    },
+    {
+      "id": "task-20261101-052704-firebase-fcm-e1dd92a3",
+      "job": "job-20261031-002626-job-97436430",
+      "title": "Firebase 준비 후 실제 단말 FCM 수신과 백그라운드 알림 검증"
+    },
+    {
+      "id": "task-20261101-052704-task-529e034e",
+      "job": "job-20261031-002626-job-c9f9ff0d",
+      "title": "국내 실제 화선·당시 예보·연료와 독립 접근 정답 확보 후 모델 채택 재평가"
+    },
+    {
+      "id": "task-20261031-002629-cpu-0d28f70c",
+      "job": "job-20261031-002626-job-c9f9ff0d",
+      "title": "일반 서버의 XGBoost CPU 추론과 예측 불가·모의 모드 및 모델 복구 구현"
+    }
+  ],
+  "검사": {
+    "전체_판정대조": "통과",
+    "태스크_중복/원소속": "정상",
+    "의존성_누락": "0",
+    "삭제_항목": "5개정상삭제",
+    "선행실행_완료기록": "17개DONE·선행커밋참조·출력존재",
+    "활성_TaskRun": "본정리외0",
+    "Loom_strict": "Workspace metadata validation: [OK]\nChecked: 6 jobs, 62 tasks, 62 task definitions\nNo metadata consistency issues found.",
+    "새_기능실행": "없음"
+  },
+  "내부JobRun설명": "미완료후속을가진잡의과거실행묶음은도구집계상RUNNING일수있으나실제Job/Task상태와활성TaskRun으로실행여부를판정한다. 내부이력상태를허위로수정하지않았다."
+}

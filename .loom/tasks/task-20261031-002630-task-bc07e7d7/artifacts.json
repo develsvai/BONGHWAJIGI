@@ -1,40 +1,43 @@
 {
-  "status": "RUNNING",
+  "status": "DONE",
   "agent": "foreground",
   "mode": "foreground",
   "execution_surface": "foreground",
   "task_run_id": "task-run-20261101-053341-task-def-20261031-002630-task-def-6bd5826c-285cedb4",
-  "generated_at": "2026-11-01T05:33:41+00:00",
+  "generated_at": "2026-11-01T05:37:16+00:00",
   "artifacts": [
-    ".loom/tasks/task-20261031-002630-task-bc07e7d7/prompt.md",
-    ".loom/tasks/task-20261031-002630-task-bc07e7d7/context.md",
-    ".loom/tasks/task-20261031-002630-task-bc07e7d7/previous-results.md",
-    ".loom/tasks/task-20261031-002630-task-bc07e7d7/git-snapshot.json",
-    ".loom/tasks/task-20261031-002630-task-bc07e7d7/result.md",
-    ".loom/tasks/task-20261031-002630-task-bc07e7d7/decision.md",
-    ".loom/tasks/task-20261031-002630-task-bc07e7d7/troubleshooting.md",
-    ".loom/tasks/task-20261031-002630-task-bc07e7d7/logs.txt",
     ".loom/tasks/task-20261031-002630-task-bc07e7d7/agent-events.jsonl",
-    ".loom/tasks/task-20261031-002630-task-bc07e7d7/artifacts.json"
+    ".loom/tasks/task-20261031-002630-task-bc07e7d7/artifacts.json",
+    ".loom/tasks/task-20261031-002630-task-bc07e7d7/context.md",
+    ".loom/tasks/task-20261031-002630-task-bc07e7d7/decision.md",
+    ".loom/tasks/task-20261031-002630-task-bc07e7d7/git-snapshot.json",
+    ".loom/tasks/task-20261031-002630-task-bc07e7d7/logs.txt",
+    ".loom/tasks/task-20261031-002630-task-bc07e7d7/previous-results.md",
+    ".loom/tasks/task-20261031-002630-task-bc07e7d7/prompt.md",
+    ".loom/tasks/task-20261031-002630-task-bc07e7d7/result.md",
+    ".loom/tasks/task-20261031-002630-task-bc07e7d7/troubleshooting.md",
+    "docs/V2/delivery/decision-orchestration.md"
   ],
   "artifact_groups": {
     "user_outputs": [
-      ".loom/tasks/task-20261031-002630-task-bc07e7d7/result.md",
       ".loom/tasks/task-20261031-002630-task-bc07e7d7/decision.md",
+      ".loom/tasks/task-20261031-002630-task-bc07e7d7/result.md",
       ".loom/tasks/task-20261031-002630-task-bc07e7d7/troubleshooting.md"
     ],
     "execution_inputs": [
-      ".loom/tasks/task-20261031-002630-task-bc07e7d7/prompt.md",
       ".loom/tasks/task-20261031-002630-task-bc07e7d7/context.md",
-      ".loom/tasks/task-20261031-002630-task-bc07e7d7/previous-results.md"
+      ".loom/tasks/task-20261031-002630-task-bc07e7d7/previous-results.md",
+      ".loom/tasks/task-20261031-002630-task-bc07e7d7/prompt.md"
     ],
     "execution_audit": [
-      ".loom/tasks/task-20261031-002630-task-bc07e7d7/git-snapshot.json",
-      ".loom/tasks/task-20261031-002630-task-bc07e7d7/logs.txt",
       ".loom/tasks/task-20261031-002630-task-bc07e7d7/agent-events.jsonl",
-      ".loom/tasks/task-20261031-002630-task-bc07e7d7/artifacts.json"
+      ".loom/tasks/task-20261031-002630-task-bc07e7d7/artifacts.json",
+      ".loom/tasks/task-20261031-002630-task-bc07e7d7/git-snapshot.json",
+      ".loom/tasks/task-20261031-002630-task-bc07e7d7/logs.txt"
     ],
-    "work_products": []
+    "work_products": [
+      "docs/V2/delivery/decision-orchestration.md"
+    ]
   },
   "contract_snapshot": {
     "schema_version": 1,
@@ -59,5 +62,8 @@
         ]
       }
     ]
-  }
+  },
+  "document_outputs": [
+    "docs/V2/delivery/decision-orchestration.md"
+  ]
 }

@@ -1,1 +1,2 @@
 {"id": "event-fae2bed68a7b", "type": "foreground_session_started", "message": "Foreground task session started.", "created_at": "2026-11-01T05:33:43+00:00", "agent": "foreground", "task_id": "task-20261031-002631-api-0f38b4c1"}
+{"id": "event-3670692ca27f", "type": "foreground_session_done", "message": "사용자의 전체 Loom 정리 지시에 따라 현행 구현·후속 실행 근거를 대조해 완료한다. 실제서버/DB시험과 촬영검증에서 사용자격리·세션·공식경보·개인정책·확인상태·변경API를 대조했고 단말/모의/실제FCM 경계를 기록했다. 검증·근거 문서는 fa6a740에 보존했다.", "created_at": "2026-11-01T05:37:17+00:00", "agent": "foreground", "task_id": "task-20261031-002631-api-0f38b4c1"}
