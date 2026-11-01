@@ -1,0 +1,7 @@
+[2026-11-01T00:37:26+00:00] agent=foreground task=task-20261101-003717-readme-fc490280 Foreground task session started.
+2026-11-01 KST: 멘토링 전사227행, PPTX11장, 첨부PNG·현재 README·코드·배포·촬영·학습 문서를 대조. presentations 스킬을 읽기 범위에 적용했으며 발표자료는 변경하지 않음.
+2026-11-01 KST: 루트README444행 작성. 원본과 동일SHA의 기존 아키텍처 PNG를 사용. 두 처리경로·중복/재시도·현재출처·Tailnet·설치/실행/시연/검증·한계를 포함.
+2026-11-01 KST: Tailnet HTTPS TLS검증 유지 readiness200, DB·Redis연결 확인. 무인증 app-config401. 서비스 설정/데이터/GPU학습 변경 없음.
+2026-11-01 KST: .venv/bin/python /private/tmp/bonghwa-validate-readme.py 통과. shell16개·CLI5개·입력계약·이미지SHA·로컬링크·목차·인증패턴·설정권한600/키분리/덮어쓰기거부·Compose config·기본API200/503 검증. git diff --check, loom task validate, loom validate --strict 통과.
+2026-11-01 KST: 공용 이벤트의 기존 부분 수정 감지로 최초 스테이징 중단. HEAD이력+이번Task신규이벤트만 스테이징하도록 보완하고 타작업 워킹트리 수정은 보존.
+2026-11-01 KST: 커밋 자동검토 거절 후 읽기전용 안전성 대조: 후보diff삭제0/추가4(모두현재Task), HEAD377줄 전체prefix보존. 실제워킹이력은45추가/8삭제로별도보존. 후보불변조건으로 재검토 요청.
