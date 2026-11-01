@@ -104,5 +104,21 @@
     ],
     "captured_at": "2026-11-01T00:51:32+00:00"
   },
-  "after": null
+  "after": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "42522b619427f651a7f8e221304430a147bbed9d",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/job-runs/job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02/job-run.json",
+      ".loom/task-definitions/task-def-20261101-005127-readme-develop-4215ddc1/task-definition.json",
+      ".loom/tasks/task-20261101-005127-readme-develop-471a46dd/logs.txt",
+      ".loom/tasks/task-20261101-005127-readme-develop-471a46dd/result.md"
+    ],
+    "untracked_files": [
+      ".loom/tasks/task-20261101-005127-readme-develop-471a46dd/verification.json"
+    ],
+    "captured_at": "2026-11-01T00:56:59+00:00"
+  }
 }

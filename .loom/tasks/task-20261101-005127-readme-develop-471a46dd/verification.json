@@ -1,0 +1,72 @@
+{
+  "staged_non_deleted_files": 443,
+  "staged_bytes": 14974278,
+  "deleted_paths": [
+    "docs/V2/delivery/architecture-slides/output/bonghwajigi-architecture.zip",
+    "docs/V2/delivery/architecture-slides/output/bonghwajigi-tech-stack.pptx",
+    "docs/V2/delivery/external-resources-and-licenses.md",
+    "docs/V2/delivery/presentation-v1/output/봉화지기_발표자료_디자인통일_v2.pptx"
+  ],
+  "credential_findings": [],
+  "verified_synthetic_fixture_matches": [
+    {
+      "path": "training/reports/gofer-hindcast-20261101/tests.xml",
+      "line": 1,
+      "kind": "url_auth"
+    },
+    {
+      "path": "training/reports/korea-first-observation-20261101/tests.xml",
+      "line": 1,
+      "kind": "url_auth"
+    },
+    {
+      "path": "training/reports/korea-gfs-2022-20261101/tests.xml",
+      "line": 1,
+      "kind": "url_auth"
+    },
+    {
+      "path": "training/reports/korea-scenario-20261101/tests.xml",
+      "line": 1,
+      "kind": "url_auth"
+    },
+    {
+      "path": "training/reports/model-strengthening-20261101/tests.xml",
+      "line": 1,
+      "kind": "url_auth"
+    },
+    {
+      "path": "training/tests/test_kma_forecast_probe.py",
+      "line": 70,
+      "kind": "url_auth"
+    }
+  ],
+  "synthetic_fixture_sha256": "eedf8ee91f511eee516f954ab388a666076bafcfac62c55ff338fb7e8bc547df",
+  "large_files": [],
+  "python_syntax_errors": [],
+  "whitespace_check": "코드·설정·문서 통과; 원문 HTML 4개와 보존된 patch 1개는 SHA 검증 후 원래 공백 보존",
+  "preserved_raw_evidence_sha256": {
+    "training/reports/gofer-hindcast-20261101/canopy-inputs/CBD-units.html": "6f46c1197463666f49d41dce9c91f63b661317c6df34e420c02c6121f256d367",
+    "training/reports/gofer-hindcast-20261101/canopy-inputs/CBH-units.html": "1bf5eacc39db5648e951bf093a347101ba210e51952d6b579f4cdcecfca2e095",
+    "training/reports/gofer-hindcast-20261101/canopy-inputs/CC-units.html": "6a472ace5a1496246889a27b3a4c6f0cb8a82e8807cc5f160c1f6f415f357810",
+    "training/reports/gofer-hindcast-20261101/canopy-inputs/CH-units.html": "5c63dd6aa839974cd4d98132765077ab718d9e4bb7c1d80f665718b96d0066e1",
+    "training/reports/gofer-hindcast-20261101/endpoint-diagnostic/source.patch": "299a154edc25b92dbdeb47a5a1f16c1da2cb75a9173946cb8e0b4c2fec7f10ba"
+  },
+  "training_tests": {
+    "passed": 542,
+    "warnings": 54
+  },
+  "server_tests": {
+    "passed": 58,
+    "skipped": 83,
+    "warnings": 1,
+    "skip_reason": "테스트 DB 미설정"
+  },
+  "ruff": "서버 91파일·학습 98파일 check/format 통과",
+  "shell_syntax": "통과",
+  "loom_validation": "6 jobs, 62 tasks, 62 definitions 정상",
+  "content_commit": "17d7c6f",
+  "merge_commit": "42522b619427f651a7f8e221304430a147bbed9d",
+  "remote_sha_verified": "42522b619427f651a7f8e221304430a147bbed9d",
+  "working_tree_after_initial_push": "clean",
+  "remote_changes": "V3 문서 2개 정상 병합; 원격 3커밋과 로컬 이력 보존"
+}
