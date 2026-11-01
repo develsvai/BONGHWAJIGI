@@ -1,0 +1,14 @@
+{
+  "정상_병합": "충돌없음",
+  "merge_commit": "7645e86cfbf9ec66ddcd50753a68cc19e918c2e0",
+  "README_필수항목": "5항목보존",
+  "멘토링절_삭제": "유지",
+  "원격_Loom푸터_삭제": "유지",
+  "양쪽_이력": "로컬3커밋과origin/develop이HEAD의조상",
+  "인증정보_패턴": [],
+  "공백_검사": "통과",
+  "Loom": "6jobs64tasks정상",
+  "push": "성공",
+  "원격_SHA": "7645e86cfbf9ec66ddcd50753a68cc19e918c2e0",
+  "초기push후_작업트리": "clean"
+}
