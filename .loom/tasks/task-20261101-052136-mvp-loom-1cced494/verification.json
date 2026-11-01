@@ -20,32 +20,44 @@
     {
       "id": "job-20261031-002017-v2-fe3bfad0",
       "title": "V2 실행 기반과 통합 검증",
-      "status": "RUNNING"
+      "status": "DONE",
+      "done": 31,
+      "pending": 0
     },
     {
       "id": "job-20261030-113757-bonghwajigi-4841f0bc",
       "title": "BONGHWAJIGI 초기 설계 문서 정리",
-      "status": "DONE"
+      "status": "DONE",
+      "done": 3,
+      "pending": 0
     },
     {
       "id": "job-20261031-002626-api-18805e8a",
       "title": "앱 연동 API 계약과 인계",
-      "status": "DONE"
+      "status": "DONE",
+      "done": 5,
+      "pending": 0
     },
     {
       "id": "job-20261031-002626-job-97436430",
       "title": "개인별 대응 정책과 알림 서버",
-      "status": "PENDING"
+      "status": "PENDING",
+      "done": 8,
+      "pending": 1
     },
     {
       "id": "job-20261031-002626-job-a46f69a4",
       "title": "기관 데이터와 위치 관련성 파이프라인",
-      "status": "PENDING"
+      "status": "PENDING",
+      "done": 2,
+      "pending": 2
     },
     {
       "id": "job-20261031-002626-job-c9f9ff0d",
       "title": "영향 확률 데이터셋과 모델",
-      "status": "PENDING"
+      "status": "PENDING",
+      "done": 8,
+      "pending": 2
     }
   ],
   "대기_계약": [
@@ -85,5 +97,14 @@
     "Loom_strict": "Workspace metadata validation: [OK]\nChecked: 6 jobs, 62 tasks, 62 task definitions\nNo metadata consistency issues found.",
     "새_기능실행": "없음"
   },
-  "내부JobRun설명": "미완료후속을가진잡의과거실행묶음은도구집계상RUNNING일수있으나실제Job/Task상태와활성TaskRun으로실행여부를판정한다. 내부이력상태를허위로수정하지않았다."
+  "내부JobRun설명": "미완료후속을가진잡의과거실행묶음은도구집계상RUNNING일수있으나실제Job/Task상태와활성TaskRun으로실행여부를판정한다. 내부이력상태를허위로수정하지않았다.",
+  "최종_태스크_상태": {
+    "DONE": 57,
+    "PENDING": 5
+  },
+  "최종_잡_상태": {
+    "DONE": 3,
+    "PENDING": 3
+  },
+  "최종_활성_TaskRun": 0
 }

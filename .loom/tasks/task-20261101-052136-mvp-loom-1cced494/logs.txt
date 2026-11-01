@@ -1,3 +1,4 @@
 [2026-11-01T05:21:43+00:00] agent=foreground task=task-20261101-052136-mvp-loom-1cced494 Foreground task session started.
 검증 결과: 기존64태스크 전수판정, DONE39결과/커밋존재, 공유대화56SHA/길이일치, 연구45fits/542시험종료기록확인. 삭제5·새대기2·기존대기3·완료대상17의 근거문서와출력준비. 근거문서12로컬링크0오류, 생성입력30의원문공백보존, 나머지git diff --check와loom validate --strict통과. 상태변경은CLI만사용.
 검증 결과: 기존17개실제DONE확인, 기존39개보존·삭제5개부재·새대기2개·총62개. 본정리외RUNNING/활성TaskRun0, 남은5개PENDING. 소속·양방향잡참조·의존성·필수산출물·완료commit_refs·원문생성입력SHA검사 및loom validate --strict 통과. 내부JobRun은미완료후속집계이므로 실제실행과구분.
+[2026-11-01T05:40:00+00:00] agent=foreground task=task-20261101-052136-mvp-loom-1cced494 전체6잡/기존64태스크를현행산불MVP와대조했다. 기존완료39보존·대기15/실행2완료·구계약5제거·새대기2분리로최종62태스크중57완료/5대기다. 필수근거문서·소속·의존성·Loom검증을통과했고fa6a740/19f5868에근거와상태를커밋했다.

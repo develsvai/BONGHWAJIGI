@@ -1,1 +1,2 @@
 {"id": "event-5a2bf79a6503", "type": "foreground_session_started", "message": "Foreground task session started.", "created_at": "2026-11-01T05:21:43+00:00", "agent": "foreground", "task_id": "task-20261101-052136-mvp-loom-1cced494"}
+{"id": "event-80e795c717e2", "type": "foreground_session_done", "message": "전체6잡/기존64태스크를현행산불MVP와대조했다. 기존완료39보존·대기15/실행2완료·구계약5제거·새대기2분리로최종62태스크중57완료/5대기다. 필수근거문서·소속·의존성·Loom검증을통과했고fa6a740/19f5868에근거와상태를커밋했다.", "created_at": "2026-11-01T05:40:00+00:00", "agent": "foreground", "task_id": "task-20261101-052136-mvp-loom-1cced494"}
