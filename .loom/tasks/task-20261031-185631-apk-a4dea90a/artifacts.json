@@ -1,0 +1,72 @@
+{
+  "status": "DONE",
+  "agent": "foreground",
+  "mode": "foreground",
+  "execution_surface": "foreground",
+  "task_run_id": "task-run-20261031-185639-task-def-20261031-185631-apk-eac14685-011e5c02",
+  "generated_at": "2026-10-31T19:25:52+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-185631-apk-a4dea90a/agent-events.jsonl",
+    ".loom/tasks/task-20261031-185631-apk-a4dea90a/artifacts.json",
+    ".loom/tasks/task-20261031-185631-apk-a4dea90a/context.md",
+    ".loom/tasks/task-20261031-185631-apk-a4dea90a/decision.md",
+    ".loom/tasks/task-20261031-185631-apk-a4dea90a/git-snapshot.json",
+    ".loom/tasks/task-20261031-185631-apk-a4dea90a/logs.txt",
+    ".loom/tasks/task-20261031-185631-apk-a4dea90a/previous-results.md",
+    ".loom/tasks/task-20261031-185631-apk-a4dea90a/prompt.md",
+    ".loom/tasks/task-20261031-185631-apk-a4dea90a/result.md",
+    ".loom/tasks/task-20261031-185631-apk-a4dea90a/troubleshooting.md",
+    "docs/V2/delivery/external-resources-and-licenses.md",
+    "docs/V2/delivery/mobile-submodule-deployment.md"
+  ],
+  "artifact_groups": {
+    "user_outputs": [
+      ".loom/tasks/task-20261031-185631-apk-a4dea90a/decision.md",
+      ".loom/tasks/task-20261031-185631-apk-a4dea90a/result.md",
+      ".loom/tasks/task-20261031-185631-apk-a4dea90a/troubleshooting.md"
+    ],
+    "execution_inputs": [
+      ".loom/tasks/task-20261031-185631-apk-a4dea90a/context.md",
+      ".loom/tasks/task-20261031-185631-apk-a4dea90a/previous-results.md",
+      ".loom/tasks/task-20261031-185631-apk-a4dea90a/prompt.md"
+    ],
+    "execution_audit": [
+      ".loom/tasks/task-20261031-185631-apk-a4dea90a/agent-events.jsonl",
+      ".loom/tasks/task-20261031-185631-apk-a4dea90a/artifacts.json",
+      ".loom/tasks/task-20261031-185631-apk-a4dea90a/git-snapshot.json",
+      ".loom/tasks/task-20261031-185631-apk-a4dea90a/logs.txt"
+    ],
+    "work_products": [
+      "docs/V2/delivery/external-resources-and-licenses.md",
+      "docs/V2/delivery/mobile-submodule-deployment.md"
+    ]
+  },
+  "contract_snapshot": {
+    "schema_version": 1,
+    "contract_ids": [
+      "task-execution",
+      "done-guardrail"
+    ],
+    "contracts": [
+      {
+        "id": "task-execution",
+        "title": "Task Execution Context Contract",
+        "source_paths": [
+          "loom/application/context_pack.py",
+          "loom/application/team_policy.py"
+        ]
+      },
+      {
+        "id": "done-guardrail",
+        "title": "Task Completion Guardrail Contract",
+        "source_paths": [
+          "loom/application/services.py"
+        ]
+      }
+    ]
+  },
+  "document_outputs": [
+    "docs/V2/delivery/mobile-submodule-deployment.md",
+    "docs/V2/delivery/external-resources-and-licenses.md"
+  ]
+}

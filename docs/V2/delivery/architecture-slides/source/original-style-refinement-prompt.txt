@@ -1,0 +1,38 @@
+# 연결선 수정 1
+
+Edit this diagram with surgical precision. Keep ALL node rectangles, colors, background pattern, Korean text, overall portrait layout, sizes and positions unchanged. Only repair connectors. This is a technical architecture diagram, so arrows must represent the exact graph below.
+
+1. The RED box "긴급 전용 큐·워커" must connect directly to the RED box "발령 대상 확인 / 공식 원문 보존". Its downward elbow connector must end with an arrowhead at the top of the official-original red box. It must NOT end at the purple "사건 자료 정리" box. Keep the existing red-box-to-notification vertical path.
+2. Remove the entire vertical connector between the purple "개인별 대응 정책" box and the mint "자료 정리 API / Qwen3-4B" box, including the bottom duplicate label "사건 참고 설명" on that removed connector. There must be NO direct line between personal policy and the Qwen model.
+3. Qwen must have exactly these two distinct connections:
+   A. FROM the bottom of "분석 큐·워커" TO the top of the mint "자료 정리 API / Qwen3-4B" box. Downward arrowhead only at Qwen. Route in an empty vertical lane to the right of the personal-policy nodes. Label "자료 정리 요청".
+   B. FROM the top-right of the mint Qwen box UP through the empty vertical lane immediately to the right of the personal-policy box, TO the RIGHT edge of the purple "사건 자료 정리 / 위치 관련성·입력 검사" box. Arrowhead only at the central incident box, pointing left. Label this returning line "사건 참고 설명". Do not put an arrowhead back into Qwen on this returning line.
+4. Keep the embedding API connection to the analysis worker, label "벡터 생성". Keep it clearly separate from Qwen's lines.
+5. The dashed XGBoost future connector should point only FROM the XGBoost box TO the personal-policy box, arrowhead at personal policy only. Keep "검증 후 연결 예정". No solid arrow to or from XGBoost.
+6. Keep the solid central-incident-to-personal-policy route labeled "현재: 공식 근거·고정 규칙", user input routes, DB, policy reevaluation loop, notification to mobile, and everything else unchanged.
+
+Use the original thin gray orthogonal elbow lines, small dark arrowheads and bridges at crossing lines. Crossings must NOT appear as joins. Do not add new boxes or paragraphs, do not change any words or model names. Output one final high resolution portrait diagram in exactly the same style.
+
+# 연결선 수정 2
+
+Make ONLY these precise connector edits to the supplied portrait diagram. Preserve every box, all box text, colors, layout, dotted background and all other lines exactly.
+
+1. DELETE the stray elbow connector that starts at the RIGHT edge of the central purple "사건 자료 정리 / 위치 관련성·입력 검사" box (around x590,y889 in the 991x1588 reference), runs right to x760 and then down through the "입력 변경·만료 확인 / 주기적 재평가" box to y1320. Delete both labels on that stray connector: "사건 참고 설명" near x715,y872 and "자료 정리 요청" near x760,y1068. Restore the plain pale-yellow background behind the removed line. It is essential that no vertical line runs through the periodic-reevaluation box.
+
+2. KEEP the already-existing clean model connection from the top of the mint Qwen box at approximately (620,1430), up to (620,1320), right to (823,1320), then up to the bottom of the analysis-worker box at (823,765). This is ONE two-way request/response link with an arrowhead at each end, linking ONLY "분석 큐·워커" and "자료 정리 API / Qwen3-4B". Add its small label "자료 정리·응답" in the white strip below the large server region, near (625,1355). The analysis-worker already links to the central incident-data box, so no separate Qwen-to-incident line is needed.
+
+3. On the DASHED link between XGBoost and personal policy, erase ONLY the upward arrowhead touching the bottom of XGBoost, preserving the dashed stroke and the downward arrowhead at the policy box. It is a planned ONE-WAY XGBoost-to-policy connection.
+
+Do not move any nodes. Do not add any new lines or extra annotations. Especially preserve the direct urgent-red-box to official-original-red-box route and the current solid fixed-rule route. Keep this visually identical to the supplied diagram except for the three connector fixes.
+
+# 연결선 수정 3
+
+Use case: precise-object-edit.
+Edit target: this current architecture diagram. Keep the whole image visually identical: portrait layout, all node positions, fills, shadows, fonts, background and all other text/lines.
+
+Fix exactly three details:
+1. ADD the missing solid analysis-result connector: from bottom edge of the purple "분석 큐·워커 / 저장·웹 자료 검색" box at approximately (780,765), descend to y805, turn left to x545, descend to the TOP of the "사건 자료 정리 / 위치 관련성·입력 검사" purple box at (545,854). Put one downward arrowhead ONLY where it enters the incident box. Thin gray orthogonal line. Use small bridge humps where it crosses existing vertical connectors so crossing wires do not look joined. This connection means the analysis worker delivers the summarized incident material.
+2. REPLACE the entire dashed elbow connector between the XGBoost box and the personal-policy box with one simple vertical dashed gray arrow from (534,1018) straight down to (534,1110), downward arrowhead only at the policy box. Keep the existing "검증 후 연결 예정" label just to the right. Absolutely no upward arrowhead at XGBoost.
+3. In the TOPMOST box change only "공식 정보" to "공식 경보", keeping "·기상" and "관측·뉴스". In the left source box underneath it change only "공식 정보 자료" to "공식 경보 자료", keeping "과거 재생·합성".
+
+No other edits. Do not modify any other boxes or connector routes. In particular preserve Qwen↔analysis and embedding↔analysis separate connections, fixed-rule bypass, red urgent path, and periodic reevaluation.

@@ -1,0 +1,252 @@
+{
+  "screens": {
+    "S1": "평상시 홈",
+    "S2": "긴급 재난 대응",
+    "S3": "3D 대피로",
+    "S4": "프로필 설정",
+    "S5": "재난별 기본 수칙",
+    "COMMON": "공통 초기화·알림·갱신"
+  },
+  "operations": [
+    {
+      "operation_id": "getAppConfig",
+      "method": "GET",
+      "path": "/v1/app-config",
+      "screens": [
+        "COMMON"
+      ],
+      "stage": "core-draft"
+    },
+    {
+      "operation_id": "getProfile",
+      "method": "GET",
+      "path": "/v1/me/profile",
+      "screens": [
+        "S4",
+        "S2"
+      ],
+      "stage": "core-draft"
+    },
+    {
+      "operation_id": "replaceProfile",
+      "method": "PUT",
+      "path": "/v1/me/profile",
+      "screens": [
+        "S4"
+      ],
+      "stage": "core-draft"
+    },
+    {
+      "operation_id": "deleteProfile",
+      "method": "DELETE",
+      "path": "/v1/me/profile",
+      "screens": [
+        "S4"
+      ],
+      "stage": "core-draft"
+    },
+    {
+      "operation_id": "getPreferences",
+      "method": "GET",
+      "path": "/v1/me/preferences",
+      "screens": [
+        "S4",
+        "COMMON"
+      ],
+      "stage": "core-draft"
+    },
+    {
+      "operation_id": "replacePreferences",
+      "method": "PUT",
+      "path": "/v1/me/preferences",
+      "screens": [
+        "S4"
+      ],
+      "stage": "core-draft"
+    },
+    {
+      "operation_id": "getLocation",
+      "method": "GET",
+      "path": "/v1/me/location",
+      "screens": [
+        "COMMON",
+        "S1",
+        "S2"
+      ],
+      "stage": "core-draft"
+    },
+    {
+      "operation_id": "putLocation",
+      "method": "PUT",
+      "path": "/v1/me/location",
+      "screens": [
+        "COMMON",
+        "S1",
+        "S2"
+      ],
+      "stage": "core-draft"
+    },
+    {
+      "operation_id": "deleteLocation",
+      "method": "DELETE",
+      "path": "/v1/me/location",
+      "screens": [
+        "COMMON",
+        "S4"
+      ],
+      "stage": "core-draft"
+    },
+    {
+      "operation_id": "putDevice",
+      "method": "PUT",
+      "path": "/v1/me/devices/{installation_id}",
+      "screens": [
+        "COMMON",
+        "S4"
+      ],
+      "stage": "core-draft"
+    },
+    {
+      "operation_id": "deleteDevice",
+      "method": "DELETE",
+      "path": "/v1/me/devices/{installation_id}",
+      "screens": [
+        "COMMON",
+        "S4"
+      ],
+      "stage": "core-draft"
+    },
+    {
+      "operation_id": "getHome",
+      "method": "GET",
+      "path": "/v1/home",
+      "screens": [
+        "S1",
+        "COMMON"
+      ],
+      "stage": "core-draft"
+    },
+    {
+      "operation_id": "listDisasters",
+      "method": "GET",
+      "path": "/v1/disasters",
+      "screens": [
+        "S1"
+      ],
+      "stage": "core-draft"
+    },
+    {
+      "operation_id": "listAlerts",
+      "method": "GET",
+      "path": "/v1/me/alerts",
+      "screens": [
+        "COMMON",
+        "S2"
+      ],
+      "stage": "core-draft"
+    },
+    {
+      "operation_id": "getAlert",
+      "method": "GET",
+      "path": "/v1/me/alerts/{alert_id}",
+      "screens": [
+        "S2"
+      ],
+      "stage": "core-draft"
+    },
+    {
+      "operation_id": "postAlertReceipt",
+      "method": "POST",
+      "path": "/v1/me/alerts/{alert_id}/receipts",
+      "screens": [
+        "COMMON",
+        "S2"
+      ],
+      "stage": "core-draft"
+    },
+    {
+      "operation_id": "getResponse",
+      "method": "GET",
+      "path": "/v1/me/responses/{response_id}",
+      "screens": [
+        "S2"
+      ],
+      "stage": "core-draft"
+    },
+    {
+      "operation_id": "putCurrentContext",
+      "method": "PUT",
+      "path": "/v1/me/responses/{response_id}/context",
+      "screens": [
+        "S2"
+      ],
+      "stage": "core-draft"
+    },
+    {
+      "operation_id": "getUpdates",
+      "method": "GET",
+      "path": "/v1/me/updates",
+      "screens": [
+        "COMMON",
+        "S1",
+        "S2"
+      ],
+      "stage": "core-draft"
+    },
+    {
+      "operation_id": "getSafetyRules",
+      "method": "GET",
+      "path": "/v1/safety-rules/{disaster_type}",
+      "screens": [
+        "S5"
+      ],
+      "stage": "core-draft"
+    },
+    {
+      "operation_id": "createSupportDraft",
+      "method": "POST",
+      "path": "/v1/me/responses/{response_id}/support-drafts",
+      "screens": [
+        "S2"
+      ],
+      "stage": "core-draft"
+    },
+    {
+      "operation_id": "getRoute",
+      "method": "GET",
+      "path": "/v1/me/responses/{response_id}/route",
+      "screens": [
+        "S2",
+        "S3"
+      ],
+      "stage": "conditional"
+    },
+    {
+      "operation_id": "createVoiceTurn",
+      "method": "POST",
+      "path": "/v1/me/responses/{response_id}/voice-turns",
+      "screens": [
+        "S2"
+      ],
+      "stage": "conditional"
+    },
+    {
+      "operation_id": "getVoiceTurn",
+      "method": "GET",
+      "path": "/v1/me/responses/{response_id}/voice-turns/{turn_id}",
+      "screens": [
+        "S2"
+      ],
+      "stage": "conditional"
+    },
+    {
+      "operation_id": "cancelVoiceTurn",
+      "method": "DELETE",
+      "path": "/v1/me/responses/{response_id}/voice-turns/{turn_id}",
+      "screens": [
+        "S2"
+      ],
+      "stage": "conditional"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+{"id": "event-4766d55e2729", "type": "foreground_session_started", "message": "Foreground task session started.", "created_at": "2026-10-31T16:38:14+00:00", "agent": "foreground", "task_id": "task-20261031-163810-api-36540350"}
+{"id": "event-cbca31503338", "type": "foreground_session_done", "message": "일반 서버 dcbc62e 배포·실제 HTTPS 등록/3단계/세션 검증·93개 회귀 완료. 단말 UI/APK 작업으로 인계.", "created_at": "2026-10-31T17:01:47+00:00", "agent": "foreground", "task_id": "task-20261031-163810-api-36540350"}

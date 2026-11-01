@@ -1,0 +1,562 @@
+{
+  "rows": 80403,
+  "positives": 6,
+  "days": 85,
+  "new_observation_positives": 4,
+  "daily": [
+    {
+      "date": "2024-02-10",
+      "rows": 1502,
+      "positives": 0,
+      "candidate_cells": 1503
+    },
+    {
+      "date": "2024-02-13",
+      "rows": 59,
+      "positives": 0,
+      "candidate_cells": 60
+    },
+    {
+      "date": "2024-02-16",
+      "rows": 686,
+      "positives": 0,
+      "candidate_cells": 686
+    },
+    {
+      "date": "2024-02-17",
+      "rows": 298,
+      "positives": 0,
+      "candidate_cells": 302
+    },
+    {
+      "date": "2024-03-08",
+      "rows": 982,
+      "positives": 0,
+      "candidate_cells": 991
+    },
+    {
+      "date": "2024-03-10",
+      "rows": 470,
+      "positives": 0,
+      "candidate_cells": 480
+    },
+    {
+      "date": "2024-03-13",
+      "rows": 761,
+      "positives": 0,
+      "candidate_cells": 761
+    },
+    {
+      "date": "2024-03-14",
+      "rows": 2997,
+      "positives": 0,
+      "candidate_cells": 3001
+    },
+    {
+      "date": "2024-03-16",
+      "rows": 3467,
+      "positives": 0,
+      "candidate_cells": 3476
+    },
+    {
+      "date": "2024-03-17",
+      "rows": 650,
+      "positives": 0,
+      "candidate_cells": 653
+    },
+    {
+      "date": "2024-03-18",
+      "rows": 2485,
+      "positives": 0,
+      "candidate_cells": 2525
+    },
+    {
+      "date": "2024-03-19",
+      "rows": 790,
+      "positives": 0,
+      "candidate_cells": 792
+    },
+    {
+      "date": "2024-03-20",
+      "rows": 710,
+      "positives": 0,
+      "candidate_cells": 725
+    },
+    {
+      "date": "2024-03-23",
+      "rows": 603,
+      "positives": 0,
+      "candidate_cells": 612
+    },
+    {
+      "date": "2024-03-31",
+      "rows": 1938,
+      "positives": 0,
+      "candidate_cells": 1938
+    },
+    {
+      "date": "2024-04-01",
+      "rows": 669,
+      "positives": 0,
+      "candidate_cells": 672
+    },
+    {
+      "date": "2024-04-02",
+      "rows": 1437,
+      "positives": 0,
+      "candidate_cells": 1606
+    },
+    {
+      "date": "2024-04-05",
+      "rows": 789,
+      "positives": 0,
+      "candidate_cells": 797
+    },
+    {
+      "date": "2024-04-09",
+      "rows": 902,
+      "positives": 0,
+      "candidate_cells": 1167
+    },
+    {
+      "date": "2024-04-13",
+      "rows": 1057,
+      "positives": 0,
+      "candidate_cells": 1058
+    },
+    {
+      "date": "2024-04-14",
+      "rows": 561,
+      "positives": 0,
+      "candidate_cells": 562
+    },
+    {
+      "date": "2024-04-16",
+      "rows": 2425,
+      "positives": 0,
+      "candidate_cells": 2426
+    },
+    {
+      "date": "2024-04-19",
+      "rows": 352,
+      "positives": 0,
+      "candidate_cells": 612
+    },
+    {
+      "date": "2024-04-25",
+      "rows": 688,
+      "positives": 0,
+      "candidate_cells": 688
+    },
+    {
+      "date": "2024-04-27",
+      "rows": 945,
+      "positives": 0,
+      "candidate_cells": 946
+    },
+    {
+      "date": "2024-05-03",
+      "rows": 1526,
+      "positives": 0,
+      "candidate_cells": 1538
+    },
+    {
+      "date": "2024-05-13",
+      "rows": 873,
+      "positives": 0,
+      "candidate_cells": 874
+    },
+    {
+      "date": "2024-05-15",
+      "rows": 476,
+      "positives": 0,
+      "candidate_cells": 478
+    },
+    {
+      "date": "2024-05-16",
+      "rows": 904,
+      "positives": 0,
+      "candidate_cells": 904
+    },
+    {
+      "date": "2024-05-18",
+      "rows": 1485,
+      "positives": 0,
+      "candidate_cells": 1488
+    },
+    {
+      "date": "2024-05-19",
+      "rows": 972,
+      "positives": 0,
+      "candidate_cells": 974
+    },
+    {
+      "date": "2024-05-24",
+      "rows": 541,
+      "positives": 0,
+      "candidate_cells": 544
+    },
+    {
+      "date": "2024-05-25",
+      "rows": 646,
+      "positives": 0,
+      "candidate_cells": 658
+    },
+    {
+      "date": "2024-05-28",
+      "rows": 1233,
+      "positives": 0,
+      "candidate_cells": 1235
+    },
+    {
+      "date": "2024-05-29",
+      "rows": 160,
+      "positives": 0,
+      "candidate_cells": 891
+    },
+    {
+      "date": "2024-06-03",
+      "rows": 946,
+      "positives": 0,
+      "candidate_cells": 946
+    },
+    {
+      "date": "2024-06-06",
+      "rows": 474,
+      "positives": 0,
+      "candidate_cells": 1095
+    },
+    {
+      "date": "2024-06-10",
+      "rows": 30,
+      "positives": 0,
+      "candidate_cells": 33
+    },
+    {
+      "date": "2024-06-12",
+      "rows": 2661,
+      "positives": 1,
+      "candidate_cells": 2679
+    },
+    {
+      "date": "2024-06-13",
+      "rows": 1462,
+      "positives": 0,
+      "candidate_cells": 1462
+    },
+    {
+      "date": "2024-06-18",
+      "rows": 2064,
+      "positives": 0,
+      "candidate_cells": 2064
+    },
+    {
+      "date": "2024-06-20",
+      "rows": 946,
+      "positives": 0,
+      "candidate_cells": 946
+    },
+    {
+      "date": "2024-06-23",
+      "rows": 421,
+      "positives": 0,
+      "candidate_cells": 423
+    },
+    {
+      "date": "2024-07-12",
+      "rows": 472,
+      "positives": 0,
+      "candidate_cells": 478
+    },
+    {
+      "date": "2024-07-27",
+      "rows": 248,
+      "positives": 0,
+      "candidate_cells": 258
+    },
+    {
+      "date": "2024-07-31",
+      "rows": 413,
+      "positives": 1,
+      "candidate_cells": 413
+    },
+    {
+      "date": "2024-08-01",
+      "rows": 1025,
+      "positives": 0,
+      "candidate_cells": 1025
+    },
+    {
+      "date": "2024-08-04",
+      "rows": 1241,
+      "positives": 0,
+      "candidate_cells": 1260
+    },
+    {
+      "date": "2024-08-05",
+      "rows": 611,
+      "positives": 1,
+      "candidate_cells": 612
+    },
+    {
+      "date": "2024-08-06",
+      "rows": 611,
+      "positives": 0,
+      "candidate_cells": 612
+    },
+    {
+      "date": "2024-08-11",
+      "rows": 904,
+      "positives": 1,
+      "candidate_cells": 904
+    },
+    {
+      "date": "2024-08-12",
+      "rows": 877,
+      "positives": 1,
+      "candidate_cells": 877
+    },
+    {
+      "date": "2024-08-13",
+      "rows": 2973,
+      "positives": 0,
+      "candidate_cells": 3011
+    },
+    {
+      "date": "2024-08-18",
+      "rows": 566,
+      "positives": 0,
+      "candidate_cells": 566
+    },
+    {
+      "date": "2024-08-20",
+      "rows": 377,
+      "positives": 0,
+      "candidate_cells": 383
+    },
+    {
+      "date": "2024-08-23",
+      "rows": 1945,
+      "positives": 0,
+      "candidate_cells": 1947
+    },
+    {
+      "date": "2024-08-25",
+      "rows": 408,
+      "positives": 0,
+      "candidate_cells": 421
+    },
+    {
+      "date": "2024-08-28",
+      "rows": 642,
+      "positives": 0,
+      "candidate_cells": 650
+    },
+    {
+      "date": "2024-09-03",
+      "rows": 893,
+      "positives": 0,
+      "candidate_cells": 893
+    },
+    {
+      "date": "2024-09-04",
+      "rows": 1033,
+      "positives": 0,
+      "candidate_cells": 1033
+    },
+    {
+      "date": "2024-09-07",
+      "rows": 444,
+      "positives": 0,
+      "candidate_cells": 444
+    },
+    {
+      "date": "2024-09-13",
+      "rows": 717,
+      "positives": 0,
+      "candidate_cells": 720
+    },
+    {
+      "date": "2024-09-14",
+      "rows": 618,
+      "positives": 0,
+      "candidate_cells": 619
+    },
+    {
+      "date": "2024-09-18",
+      "rows": 132,
+      "positives": 0,
+      "candidate_cells": 549
+    },
+    {
+      "date": "2024-09-19",
+      "rows": 462,
+      "positives": 0,
+      "candidate_cells": 517
+    },
+    {
+      "date": "2024-09-23",
+      "rows": 1841,
+      "positives": 0,
+      "candidate_cells": 1864
+    },
+    {
+      "date": "2024-09-24",
+      "rows": 766,
+      "positives": 0,
+      "candidate_cells": 769
+    },
+    {
+      "date": "2024-09-29",
+      "rows": 1236,
+      "positives": 0,
+      "candidate_cells": 1246
+    },
+    {
+      "date": "2024-10-02",
+      "rows": 145,
+      "positives": 0,
+      "candidate_cells": 145
+    },
+    {
+      "date": "2024-10-08",
+      "rows": 725,
+      "positives": 0,
+      "candidate_cells": 726
+    },
+    {
+      "date": "2024-10-10",
+      "rows": 965,
+      "positives": 0,
+      "candidate_cells": 980
+    },
+    {
+      "date": "2024-10-11",
+      "rows": 1432,
+      "positives": 0,
+      "candidate_cells": 1436
+    },
+    {
+      "date": "2024-10-25",
+      "rows": 952,
+      "positives": 0,
+      "candidate_cells": 954
+    },
+    {
+      "date": "2024-10-29",
+      "rows": 413,
+      "positives": 0,
+      "candidate_cells": 413
+    },
+    {
+      "date": "2024-10-30",
+      "rows": 1539,
+      "positives": 0,
+      "candidate_cells": 1571
+    },
+    {
+      "date": "2024-11-02",
+      "rows": 788,
+      "positives": 0,
+      "candidate_cells": 791
+    },
+    {
+      "date": "2024-11-03",
+      "rows": 302,
+      "positives": 0,
+      "candidate_cells": 302
+    },
+    {
+      "date": "2024-11-05",
+      "rows": 1071,
+      "positives": 0,
+      "candidate_cells": 1072
+    },
+    {
+      "date": "2024-11-06",
+      "rows": 893,
+      "positives": 1,
+      "candidate_cells": 893
+    },
+    {
+      "date": "2024-11-07",
+      "rows": 946,
+      "positives": 0,
+      "candidate_cells": 946
+    },
+    {
+      "date": "2024-11-10",
+      "rows": 371,
+      "positives": 0,
+      "candidate_cells": 379
+    },
+    {
+      "date": "2024-11-12",
+      "rows": 766,
+      "positives": 0,
+      "candidate_cells": 770
+    },
+    {
+      "date": "2024-11-19",
+      "rows": 777,
+      "positives": 0,
+      "candidate_cells": 777
+    },
+    {
+      "date": "2024-11-27",
+      "rows": 407,
+      "positives": 0,
+      "candidate_cells": 413
+    },
+    {
+      "date": "2024-12-01",
+      "rows": 413,
+      "positives": 0,
+      "candidate_cells": 413
+    }
+  ],
+  "sha256": "e932f55b40005b9d68edf8db7a62fc5901c29549fefda496fa5a923771dc40fb",
+  "config_sha256": "1afb133860e3aa4afb34907c456002ba59e39651545f3fe5193d9256c6373b22",
+  "build_source_sha256": "4675b3c6834fa876ee4ac441a2e90b8226b16f7ca3bc4971eb36af79ef7c48f7",
+  "source_duplicate_days_replaced": 18,
+  "archive_production_delay_days_min": 2,
+  "archive_production_delay_days_max": 17,
+  "firms_counts": {
+    "raw_rows": 13812,
+    "accepted_rows": 1450,
+    "duplicate_rows": 0
+  },
+  "positive_dates": 6,
+  "missing_fraction": {
+    "previous_fire": 0.00447744487146002,
+    "previous_unknown": 0.0,
+    "fire_neighbors_3": 0.0,
+    "fire_neighbors_11": 0.0,
+    "observed_fraction_11": 0.0,
+    "distance_to_previous_fire_km": 0.0,
+    "nearest_fire_dx_km": 0.0,
+    "nearest_fire_dy_km": 0.0,
+    "previous_frp_mw": 0.00447744487146002,
+    "nearby_frp_mw": 0.0,
+    "fire_days_last_7": 0.0,
+    "observed_days_last_7": 0.0,
+    "forest_fraction": 0.0,
+    "landcover_class": 0.0,
+    "elevation_m": 0.0,
+    "slope_degrees": 0.0,
+    "day_of_year_sin": 0.0,
+    "day_of_year_cos": 0.0,
+    "station_distance_km": 0.0,
+    "temperature_mean_c": 0.18011765730134446,
+    "temperature_max_c": 0.18011765730134446,
+    "temperature_min_c": 0.18011765730134446,
+    "humidity_min_pct": 0.18011765730134446,
+    "wind_speed_mean_ms": 0.18011765730134446,
+    "wind_speed_max_ms": 0.18011765730134446,
+    "wind_u_mean_ms": 0.18011765730134446,
+    "wind_v_mean_ms": 0.18011765730134446,
+    "observed_precipitation_sum_mm": 0.9217690882181013,
+    "weather_hours": 0.18011765730134446,
+    "precipitation_hours": 0.18011765730134446
+  }
+}

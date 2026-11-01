@@ -1,0 +1,154 @@
+{
+  "verified_at_utc": "2026-10-31T10:55:45.444930+00:00",
+  "model_sha256": "14a988b3b8e2755c54bc89f82a00d4babee2c3c24970df57df10973112809cb5",
+  "original_report_sha256": "e1ac6ee1b1c09cd4ea9f36ac4cb406dd4d1cb044f64395ac6f23d71cf6f990bb",
+  "dataset_report_sha256": "fc862d80731ec27d85540dc90b4b5be39a1984c23ff481e67b4c4c4c4b5c969c",
+  "saved_trees": 34,
+  "rounds_executed": 64,
+  "best_iteration_zero_based": 33,
+  "rounds_after_best": 30,
+  "best_validation_aucpr": 0.14471228293604,
+  "original_training_device": "cuda:0",
+  "reevaluation_device": "cpu",
+  "original_elapsed_seconds": 24.869,
+  "test_evaluated_during_training": false,
+  "test_evaluated_in_this_audit": true,
+  "model_parameters_changed_or_retrained": false,
+  "probability_calibrated": false,
+  "operational_use": false,
+  "limitations": [
+    "United States historical satellite observations; not validated for South Korea",
+    "Next daily observed fire presence; not hourly arrival, personal harm or response level",
+    "Masks -1 are unobserved; target -1 excluded, previous -1 becomes NaN with flag",
+    "No dates, event IDs or coordinates in downloaded records; event/time audit unavailable",
+    "Official week split is inherited; spatial/event separation cannot be guaranteed",
+    "Distance is within each nominal 1km patch grid, not global nearest fire distance",
+    "Daily aggregated covariates are retrospective; operational availability is not proven",
+    "Observation non-detection and cloud exclusion may bias satellite target coverage",
+    "Source resolution differs across features; 1km grid does not add source detail",
+    "Physical QC masks negative rain/speed/ERC/population, invalid humidity/direction, nonpositive or reversed Kelvin temperatures; no learned imputation or clipping",
+    "Only first shard per split by default; selected subset is not a representative full corpus"
+  ],
+  "original_validation_metrics_reproduced": true,
+  "validation": {
+    "model_all_rows": {
+      "rows": 3978515,
+      "positives": 45096,
+      "average_precision": 0.14492530846878188,
+      "roc_auc": 0.8403504224495065,
+      "brier": 0.010346297174692154,
+      "logloss": 0.04981018975377083,
+      "precision_at_0_5": 0.39065420560747666,
+      "recall_at_0_5": 0.004634557388681923
+    },
+    "constant_train_prior_all_rows": {
+      "rows": 3978515,
+      "positives": 45096,
+      "average_precision": 0.011334882487561313,
+      "roc_auc": 0.5,
+      "brier": 0.011208433537224526,
+      "logloss": 0.062132940254241084,
+      "precision_at_0_5": 0.0,
+      "recall_at_0_5": 0.0
+    },
+    "persistence_observed_previous_only": {
+      "rows": 3922548,
+      "positives": 44836,
+      "average_precision": 0.046245804296796464,
+      "roc_auc": 0.5758492438713961,
+      "brier": 0.01559037622064352,
+      "logloss": 0.24854789674282074,
+      "precision_at_0_5": 0.23215809861466746,
+      "recall_at_0_5": 0.1577303952181283
+    },
+    "model_on_same_persistence_rows": {
+      "rows": 3922548,
+      "positives": 44836,
+      "average_precision": 0.14537823158924815,
+      "roc_auc": 0.8408493760747506,
+      "brier": 0.01043045986443758,
+      "logloss": 0.050152093172073364,
+      "precision_at_0_5": 0.39065420560747666,
+      "recall_at_0_5": 0.004661432777232581
+    },
+    "persistence_unknown_previous_excluded": 55967,
+    "threshold_note": "0.5 is a diagnostic only; not a response-level threshold"
+  },
+  "validation_diagnostics": {
+    "threshold": 0.5,
+    "threshold_purpose": "diagnostic only; not an approved alert threshold",
+    "true_positive": 209,
+    "false_positive": 326,
+    "false_negative": 44887,
+    "true_negative": 3933093,
+    "probability_quantiles": {
+      "0": 0.0026259268634021282,
+      "0.5": 0.003230684669688344,
+      "0.9": 0.009422042407095432,
+      "0.99": 0.16464024782180786,
+      "0.999": 0.42798560857772827,
+      "1": 0.6527816653251648
+    }
+  },
+  "test": {
+    "model_all_rows": {
+      "rows": 3817137,
+      "positives": 51540,
+      "average_precision": 0.2372731788825363,
+      "roc_auc": 0.8828560426406582,
+      "brier": 0.011376841925084591,
+      "logloss": 0.05075870826840401,
+      "precision_at_0_5": 0.1791044776119403,
+      "recall_at_0_5": 0.00023282887077997672
+    },
+    "constant_train_prior_all_rows": {
+      "rows": 3817137,
+      "positives": 51540,
+      "average_precision": 0.013502266227279765,
+      "roc_auc": 0.5,
+      "brier": 0.013320506175089957,
+      "logloss": 0.07155804170178467,
+      "precision_at_0_5": 0.0,
+      "recall_at_0_5": 0.0
+    },
+    "persistence_observed_previous_only": {
+      "rows": 3784611,
+      "positives": 51282,
+      "average_precision": 0.11254206826004706,
+      "roc_auc": 0.6373813868413863,
+      "brier": 0.01636495813727379,
+      "logloss": 0.26089656352996826,
+      "precision_at_0_5": 0.36523037218834603,
+      "recall_at_0_5": 0.2814827814827815
+    },
+    "model_on_same_persistence_rows": {
+      "rows": 3784611,
+      "positives": 51282,
+      "average_precision": 0.2379158913953029,
+      "roc_auc": 0.8830507045616135,
+      "brier": 0.011410186067223549,
+      "logloss": 0.050874318927526474,
+      "precision_at_0_5": 0.1791044776119403,
+      "recall_at_0_5": 0.000234000234000234
+    },
+    "persistence_unknown_previous_excluded": 32526,
+    "threshold_note": "0.5 is a diagnostic only; not a response-level threshold"
+  },
+  "test_diagnostics": {
+    "threshold": 0.5,
+    "threshold_purpose": "diagnostic only; not an approved alert threshold",
+    "true_positive": 12,
+    "false_positive": 55,
+    "false_negative": 51528,
+    "true_negative": 3765542,
+    "probability_quantiles": {
+      "0": 0.0026023162063211203,
+      "0.5": 0.0032480438239872456,
+      "0.9": 0.014740090817213058,
+      "0.99": 0.21571257710456848,
+      "0.999": 0.42439162731170654,
+      "1": 0.5589298605918884
+    }
+  },
+  "model_unchanged_after_audit": true
+}

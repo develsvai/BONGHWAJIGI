@@ -1,0 +1,629 @@
+{
+  "profile": "ndws_v2_us_next_daily_fire_observation_1km_bootstrap",
+  "build_version": 2,
+  "source_manifest": {
+    "dataset": "fantineh/next-day-wildfire-spread",
+    "version": 2,
+    "license": "Attribution 4.0 International (CC BY 4.0)",
+    "publisher_url": "https://www.kaggle.com/datasets/fantineh/next-day-wildfire-spread",
+    "downloaded_at_utc": "2026-10-31T10:35:42.392927+00:00",
+    "available_files": 19,
+    "full_dataset_bytes": 3955889585,
+    "selection": "first_1_shards_per_official_split",
+    "complete_dataset": false,
+    "files": [
+      {
+        "filename": "next_day_wildfire_spread_train_00.tfrecord",
+        "official_split": "train",
+        "source_url": "https://www.kaggle.com/api/v1/datasets/download/fantineh/next-day-wildfire-spread/next_day_wildfire_spread_train_00.tfrecord?datasetVersionNumber=2",
+        "bytes": 213313000,
+        "sha256": "c67274eb55c44511188eceddf4915c579985025db3fb4e9558459167c11ebaa8"
+      },
+      {
+        "filename": "next_day_wildfire_spread_eval_00.tfrecord",
+        "official_split": "eval",
+        "source_url": "https://www.kaggle.com/api/v1/datasets/download/fantineh/next-day-wildfire-spread/next_day_wildfire_spread_eval_00.tfrecord?datasetVersionNumber=2",
+        "bytes": 213313000,
+        "sha256": "85522369187adc7e0f76f7cb9e45ad55c47cc8351304ce726bee27de20c32d7b"
+      },
+      {
+        "filename": "next_day_wildfire_spread_test_00.tfrecord",
+        "official_split": "test",
+        "source_url": "https://www.kaggle.com/api/v1/datasets/download/fantineh/next-day-wildfire-spread/next_day_wildfire_spread_test_00.tfrecord?datasetVersionNumber=2",
+        "bytes": 213313000,
+        "sha256": "d2e156708b478206f55816447825c076479dc7ee1a7b940991ac2577f10f2bf0"
+      }
+    ]
+  },
+  "source_manifest_sha256": "4d0d901af43eb0681d37b5e7d659e84636b1eb48fab1b6ed8b96c19a6301484d",
+  "feature_names": [
+    "elevation",
+    "pdsi",
+    "NDVI",
+    "pr",
+    "sph",
+    "th",
+    "tmmn",
+    "tmmx",
+    "vs",
+    "erc",
+    "population",
+    "PrevFireMask",
+    "previous_fire_unknown",
+    "previous_fire_neighbors_8",
+    "observed_neighbors_8",
+    "distance_to_observed_fire_within_patch_km",
+    "patch_has_observed_fire",
+    "wind_direction_sin",
+    "wind_direction_cos",
+    "physical_qc_invalid_count"
+  ],
+  "target": "fire_next_day",
+  "official_split_mapping": {
+    "train": "train",
+    "eval": "validation",
+    "test": "test"
+  },
+  "negative_sampling": "none; all observed target pixels retained",
+  "duplicate_audit": {
+    "fingerprint": "sha256 of ordered 12 raw input float32 arrays; label excluded",
+    "cross_split_duplicate_groups": 0,
+    "cross_split_patches_quarantined": 0,
+    "within_split_duplicate_patches_removed": 46,
+    "same_input_different_target_groups": 0,
+    "event_or_near_duplicate_independence_verified": false
+  },
+  "raw_patch_count": 3000,
+  "splits": {
+    "train": {
+      "rows": 3957875,
+      "raw_patches": 1000,
+      "kept_patches": 994,
+      "excluded_unknown_target_pixels": 113549,
+      "quarantined_or_duplicate_pixels": 24576,
+      "labels": {
+        "0": 3907373,
+        "1": 50502
+      },
+      "features": {
+        "elevation": {
+          "missing": 0,
+          "min": -3.0,
+          "max": 4127.0
+        },
+        "pdsi": {
+          "missing": 0,
+          "min": -15.301631927490234,
+          "max": 15.825785636901855
+        },
+        "NDVI": {
+          "missing": 0,
+          "min": -8151.0,
+          "max": 9951.0
+        },
+        "pr": {
+          "missing": 387726,
+          "min": 0.0,
+          "max": 42.94994354248047
+        },
+        "sph": {
+          "missing": 29,
+          "min": 0.0,
+          "max": 0.02060846984386444
+        },
+        "th": {
+          "missing": 16276,
+          "min": 0.0,
+          "max": 357.9298400878906
+        },
+        "tmmn": {
+          "missing": 10377,
+          "min": 211.8292236328125,
+          "max": 304.5938720703125
+        },
+        "tmmx": {
+          "missing": 10377,
+          "min": 247.14956665039062,
+          "max": 321.23175048828125
+        },
+        "vs": {
+          "missing": 1,
+          "min": 0.0,
+          "max": 21.560829162597656
+        },
+        "erc": {
+          "missing": 356,
+          "min": 0.0,
+          "max": 294.8354797363281
+        },
+        "population": {
+          "missing": 0,
+          "min": 0.0,
+          "max": 14087.419921875
+        },
+        "PrevFireMask": {
+          "missing": 43007,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "previous_fire_unknown": {
+          "missing": 0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "previous_fire_neighbors_8": {
+          "missing": 0,
+          "min": 0.0,
+          "max": 8.0
+        },
+        "observed_neighbors_8": {
+          "missing": 0,
+          "min": 0.0,
+          "max": 8.0
+        },
+        "distance_to_observed_fire_within_patch_km": {
+          "missing": 0,
+          "min": 0.0,
+          "max": 89.09545135498047
+        },
+        "patch_has_observed_fire": {
+          "missing": 0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "wind_direction_sin": {
+          "missing": 16276,
+          "min": -1.0,
+          "max": 1.0
+        },
+        "wind_direction_cos": {
+          "missing": 16276,
+          "min": -1.0,
+          "max": 1.0
+        },
+        "physical_qc_invalid_count": {
+          "missing": 0,
+          "min": 0.0,
+          "max": 4.0
+        }
+      },
+      "raw_input_qc": {
+        "elevation": {
+          "invalid": 0,
+          "min": -3.0,
+          "max": 4127.0
+        },
+        "pdsi": {
+          "invalid": 0,
+          "min": -15.301631927490234,
+          "max": 15.825785636901855
+        },
+        "NDVI": {
+          "invalid": 0,
+          "min": -8151.0,
+          "max": 9951.0
+        },
+        "pr": {
+          "invalid": 395503,
+          "min": -5.713395118713379,
+          "max": 42.94994354248047
+        },
+        "sph": {
+          "invalid": 29,
+          "min": -0.02130552940070629,
+          "max": 0.02060846984386444
+        },
+        "th": {
+          "invalid": 16330,
+          "min": -505870.0625,
+          "max": 37735.62890625
+        },
+        "tmmn": {
+          "invalid": 10452,
+          "min": 0.0,
+          "max": 331.5255126953125
+        },
+        "tmmx": {
+          "invalid": 10452,
+          "min": 0.0,
+          "max": 321.23175048828125
+        },
+        "vs": {
+          "invalid": 1,
+          "min": -4.5741424560546875,
+          "max": 21.560829162597656
+        },
+        "erc": {
+          "invalid": 356,
+          "min": -64.82405090332031,
+          "max": 294.8354797363281
+        },
+        "population": {
+          "invalid": 0,
+          "min": 0.0,
+          "max": 14087.419921875
+        },
+        "PrevFireMask": {
+          "invalid": 0,
+          "min": -1.0,
+          "max": 1.0
+        }
+      },
+      "positive_fraction": 0.01275987745949531,
+      "file": "train.parquet",
+      "bytes": 218508410,
+      "sha256": "ecb81cb2a45b55ed5b2c9207a7a7ee0fad47e34d7fe2273ab32583b65698b436"
+    },
+    "validation": {
+      "rows": 3978515,
+      "raw_patches": 1000,
+      "kept_patches": 1000,
+      "excluded_unknown_target_pixels": 117485,
+      "quarantined_or_duplicate_pixels": 0,
+      "labels": {
+        "0": 3933419,
+        "1": 45096
+      },
+      "features": {
+        "elevation": {
+          "missing": 0,
+          "min": -6.0,
+          "max": 4203.0
+        },
+        "pdsi": {
+          "missing": 0,
+          "min": -18.913002014160156,
+          "max": 17.89398765563965
+        },
+        "NDVI": {
+          "missing": 0,
+          "min": -9476.0,
+          "max": 9946.0
+        },
+        "pr": {
+          "missing": 425537,
+          "min": 0.0,
+          "max": 136.81561279296875
+        },
+        "sph": {
+          "missing": 4,
+          "min": 0.0,
+          "max": 0.021471677348017693
+        },
+        "th": {
+          "missing": 112,
+          "min": 0.0,
+          "max": 359.9859313964844
+        },
+        "tmmn": {
+          "missing": 15089,
+          "min": 227.40463256835938,
+          "max": 314.3367004394531
+        },
+        "tmmx": {
+          "missing": 15089,
+          "min": 256.4824523925781,
+          "max": 330.03472900390625
+        },
+        "vs": {
+          "missing": 9,
+          "min": 0.0,
+          "max": 28.240966796875
+        },
+        "erc": {
+          "missing": 1023,
+          "min": 0.0,
+          "max": 149.6217498779297
+        },
+        "population": {
+          "missing": 0,
+          "min": 0.0,
+          "max": 27103.60546875
+        },
+        "PrevFireMask": {
+          "missing": 55967,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "previous_fire_unknown": {
+          "missing": 0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "previous_fire_neighbors_8": {
+          "missing": 0,
+          "min": 0.0,
+          "max": 8.0
+        },
+        "observed_neighbors_8": {
+          "missing": 0,
+          "min": 0.0,
+          "max": 8.0
+        },
+        "distance_to_observed_fire_within_patch_km": {
+          "missing": 0,
+          "min": 0.0,
+          "max": 89.09545135498047
+        },
+        "patch_has_observed_fire": {
+          "missing": 0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "wind_direction_sin": {
+          "missing": 112,
+          "min": -1.0,
+          "max": 1.0
+        },
+        "wind_direction_cos": {
+          "missing": 112,
+          "min": -1.0,
+          "max": 1.0
+        },
+        "physical_qc_invalid_count": {
+          "missing": 0,
+          "min": 0.0,
+          "max": 5.0
+        }
+      },
+      "raw_input_qc": {
+        "elevation": {
+          "invalid": 0,
+          "min": -6.0,
+          "max": 4203.0
+        },
+        "pdsi": {
+          "invalid": 0,
+          "min": -18.913002014160156,
+          "max": 17.89398765563965
+        },
+        "NDVI": {
+          "invalid": 0,
+          "min": -9476.0,
+          "max": 9946.0
+        },
+        "pr": {
+          "invalid": 439080,
+          "min": -14.73047161102295,
+          "max": 136.81561279296875
+        },
+        "sph": {
+          "invalid": 5,
+          "min": -0.028482690453529358,
+          "max": 0.021471677348017693
+        },
+        "th": {
+          "invalid": 113,
+          "min": -935.3038940429688,
+          "max": 3767.94580078125
+        },
+        "tmmn": {
+          "invalid": 16107,
+          "min": 0.0,
+          "max": 400.5621643066406
+        },
+        "tmmx": {
+          "invalid": 16107,
+          "min": 0.0,
+          "max": 393.2530822753906
+        },
+        "vs": {
+          "invalid": 10,
+          "min": -34.628944396972656,
+          "max": 28.240966796875
+        },
+        "erc": {
+          "invalid": 1787,
+          "min": -187.06329345703125,
+          "max": 149.6217498779297
+        },
+        "population": {
+          "invalid": 0,
+          "min": 0.0,
+          "max": 27103.60546875
+        },
+        "PrevFireMask": {
+          "invalid": 0,
+          "min": -1.0,
+          "max": 1.0
+        }
+      },
+      "positive_fraction": 0.011334882487561313,
+      "file": "validation.parquet",
+      "bytes": 197760369,
+      "sha256": "186333f4c626f0bc6a497a9739dc28637e140de02d8d63af5bcf03d4d568dbcc"
+    },
+    "test": {
+      "rows": 3817137,
+      "raw_patches": 1000,
+      "kept_patches": 960,
+      "excluded_unknown_target_pixels": 115023,
+      "quarantined_or_duplicate_pixels": 163840,
+      "labels": {
+        "0": 3765597,
+        "1": 51540
+      },
+      "features": {
+        "elevation": {
+          "missing": 0,
+          "min": -5.0,
+          "max": 4118.0
+        },
+        "pdsi": {
+          "missing": 0,
+          "min": -21.846181869506836,
+          "max": 24.51881980895996
+        },
+        "NDVI": {
+          "missing": 0,
+          "min": -9373.0,
+          "max": 9907.0
+        },
+        "pr": {
+          "missing": 400670,
+          "min": 0.0,
+          "max": 27.755634307861328
+        },
+        "sph": {
+          "missing": 0,
+          "min": 0.0,
+          "max": 0.018356449902057648
+        },
+        "th": {
+          "missing": 9900,
+          "min": 0.0,
+          "max": 359.9999084472656
+        },
+        "tmmn": {
+          "missing": 5729,
+          "min": 258.853759765625,
+          "max": 298.9614562988281
+        },
+        "tmmx": {
+          "missing": 5729,
+          "min": 270.974365234375,
+          "max": 321.01361083984375
+        },
+        "vs": {
+          "missing": 12,
+          "min": 0.0,
+          "max": 9.914793014526367
+        },
+        "erc": {
+          "missing": 2290,
+          "min": 0.0,
+          "max": 114.8827133178711
+        },
+        "population": {
+          "missing": 0,
+          "min": 0.0,
+          "max": 23854.3125
+        },
+        "PrevFireMask": {
+          "missing": 32526,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "previous_fire_unknown": {
+          "missing": 0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "previous_fire_neighbors_8": {
+          "missing": 0,
+          "min": 0.0,
+          "max": 8.0
+        },
+        "observed_neighbors_8": {
+          "missing": 0,
+          "min": 0.0,
+          "max": 8.0
+        },
+        "distance_to_observed_fire_within_patch_km": {
+          "missing": 0,
+          "min": 0.0,
+          "max": 87.69264221191406
+        },
+        "patch_has_observed_fire": {
+          "missing": 0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "wind_direction_sin": {
+          "missing": 9900,
+          "min": -1.0,
+          "max": 1.0
+        },
+        "wind_direction_cos": {
+          "missing": 9900,
+          "min": -1.0,
+          "max": 1.0
+        },
+        "physical_qc_invalid_count": {
+          "missing": 0,
+          "min": 0.0,
+          "max": 3.0
+        }
+      },
+      "raw_input_qc": {
+        "elevation": {
+          "invalid": 0,
+          "min": -5.0,
+          "max": 4118.0
+        },
+        "pdsi": {
+          "invalid": 0,
+          "min": -21.846181869506836,
+          "max": 24.51881980895996
+        },
+        "NDVI": {
+          "invalid": 0,
+          "min": -9373.0,
+          "max": 9907.0
+        },
+        "pr": {
+          "invalid": 410462,
+          "min": -20.23297119140625,
+          "max": 27.755634307861328
+        },
+        "sph": {
+          "invalid": 0,
+          "min": 0.0,
+          "max": 0.018356449902057648
+        },
+        "th": {
+          "invalid": 10216,
+          "min": -340878.15625,
+          "max": 25395.009765625
+        },
+        "tmmn": {
+          "invalid": 5729,
+          "min": 0.0,
+          "max": 298.9614562988281
+        },
+        "tmmx": {
+          "invalid": 5729,
+          "min": 0.0,
+          "max": 321.01361083984375
+        },
+        "vs": {
+          "invalid": 12,
+          "min": -20.773344039916992,
+          "max": 9.914793014526367
+        },
+        "erc": {
+          "invalid": 2544,
+          "min": -8.778491020202637,
+          "max": 114.8827133178711
+        },
+        "population": {
+          "invalid": 0,
+          "min": 0.0,
+          "max": 23854.3125
+        },
+        "PrevFireMask": {
+          "invalid": 0,
+          "min": -1.0,
+          "max": 1.0
+        }
+      },
+      "positive_fraction": 0.013502266227279765,
+      "file": "test.parquet",
+      "bytes": 195634528,
+      "sha256": "2d23f7c7f5aa90d2059e67c357329f762855f923dc941dfd9575e81248fd4ac2"
+    }
+  },
+  "limitations": [
+    "United States historical satellite observations; not validated for South Korea",
+    "Next daily observed fire presence; not hourly arrival, personal harm or response level",
+    "Masks -1 are unobserved; target -1 excluded, previous -1 becomes NaN with flag",
+    "No dates, event IDs or coordinates in downloaded records; event/time audit unavailable",
+    "Official week split is inherited; spatial/event separation cannot be guaranteed",
+    "Distance is within each nominal 1km patch grid, not global nearest fire distance",
+    "Daily aggregated covariates are retrospective; operational availability is not proven",
+    "Observation non-detection and cloud exclusion may bias satellite target coverage",
+    "Source resolution differs across features; 1km grid does not add source detail",
+    "Physical QC masks negative rain/speed/ERC/population, invalid humidity/direction, nonpositive or reversed Kelvin temperatures; no learned imputation or clipping",
+    "Only first shard per split by default; selected subset is not a representative full corpus"
+  ]
+}

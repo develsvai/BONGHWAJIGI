@@ -1,0 +1,724 @@
+{
+  "rows": 123664,
+  "positives": 114,
+  "days": 112,
+  "new_observation_positives": 69,
+  "daily": [
+    {
+      "date": "2020-02-10",
+      "rows": 1034,
+      "positives": 0,
+      "candidate_cells": 1043
+    },
+    {
+      "date": "2020-02-14",
+      "rows": 288,
+      "positives": 0,
+      "candidate_cells": 302
+    },
+    {
+      "date": "2020-02-17",
+      "rows": 301,
+      "positives": 0,
+      "candidate_cells": 302
+    },
+    {
+      "date": "2020-02-19",
+      "rows": 302,
+      "positives": 0,
+      "candidate_cells": 302
+    },
+    {
+      "date": "2020-02-22",
+      "rows": 302,
+      "positives": 0,
+      "candidate_cells": 302
+    },
+    {
+      "date": "2020-02-23",
+      "rows": 1243,
+      "positives": 0,
+      "candidate_cells": 1243
+    },
+    {
+      "date": "2020-03-04",
+      "rows": 413,
+      "positives": 0,
+      "candidate_cells": 413
+    },
+    {
+      "date": "2020-03-05",
+      "rows": 2682,
+      "positives": 0,
+      "candidate_cells": 2720
+    },
+    {
+      "date": "2020-03-06",
+      "rows": 519,
+      "positives": 0,
+      "candidate_cells": 521
+    },
+    {
+      "date": "2020-03-08",
+      "rows": 2414,
+      "positives": 0,
+      "candidate_cells": 4709
+    },
+    {
+      "date": "2020-03-14",
+      "rows": 772,
+      "positives": 0,
+      "candidate_cells": 776
+    },
+    {
+      "date": "2020-03-16",
+      "rows": 4326,
+      "positives": 1,
+      "candidate_cells": 4404
+    },
+    {
+      "date": "2020-03-17",
+      "rows": 1035,
+      "positives": 0,
+      "candidate_cells": 1035
+    },
+    {
+      "date": "2020-03-18",
+      "rows": 3658,
+      "positives": 0,
+      "candidate_cells": 3659
+    },
+    {
+      "date": "2020-03-19",
+      "rows": 491,
+      "positives": 0,
+      "candidate_cells": 491
+    },
+    {
+      "date": "2020-03-20",
+      "rows": 1982,
+      "positives": 0,
+      "candidate_cells": 1982
+    },
+    {
+      "date": "2020-03-21",
+      "rows": 2410,
+      "positives": 0,
+      "candidate_cells": 2417
+    },
+    {
+      "date": "2020-03-22",
+      "rows": 1309,
+      "positives": 0,
+      "candidate_cells": 1313
+    },
+    {
+      "date": "2020-03-23",
+      "rows": 855,
+      "positives": 0,
+      "candidate_cells": 855
+    },
+    {
+      "date": "2020-03-24",
+      "rows": 4452,
+      "positives": 0,
+      "candidate_cells": 4492
+    },
+    {
+      "date": "2020-03-25",
+      "rows": 250,
+      "positives": 0,
+      "candidate_cells": 914
+    },
+    {
+      "date": "2020-03-27",
+      "rows": 855,
+      "positives": 18,
+      "candidate_cells": 865
+    },
+    {
+      "date": "2020-03-28",
+      "rows": 778,
+      "positives": 5,
+      "candidate_cells": 778
+    },
+    {
+      "date": "2020-03-29",
+      "rows": 1267,
+      "positives": 13,
+      "candidate_cells": 1272
+    },
+    {
+      "date": "2020-03-30",
+      "rows": 2051,
+      "positives": 17,
+      "candidate_cells": 2066
+    },
+    {
+      "date": "2020-03-31",
+      "rows": 863,
+      "positives": 23,
+      "candidate_cells": 864
+    },
+    {
+      "date": "2020-04-01",
+      "rows": 1429,
+      "positives": 0,
+      "candidate_cells": 1432
+    },
+    {
+      "date": "2020-04-04",
+      "rows": 1104,
+      "positives": 0,
+      "candidate_cells": 1106
+    },
+    {
+      "date": "2020-04-05",
+      "rows": 482,
+      "positives": 0,
+      "candidate_cells": 482
+    },
+    {
+      "date": "2020-04-06",
+      "rows": 1214,
+      "positives": 0,
+      "candidate_cells": 1216
+    },
+    {
+      "date": "2020-04-07",
+      "rows": 1200,
+      "positives": 3,
+      "candidate_cells": 1212
+    },
+    {
+      "date": "2020-04-08",
+      "rows": 4062,
+      "positives": 1,
+      "candidate_cells": 4081
+    },
+    {
+      "date": "2020-04-09",
+      "rows": 931,
+      "positives": 0,
+      "candidate_cells": 1217
+    },
+    {
+      "date": "2020-04-11",
+      "rows": 1180,
+      "positives": 0,
+      "candidate_cells": 1195
+    },
+    {
+      "date": "2020-04-12",
+      "rows": 63,
+      "positives": 0,
+      "candidate_cells": 69
+    },
+    {
+      "date": "2020-04-14",
+      "rows": 4106,
+      "positives": 5,
+      "candidate_cells": 4134
+    },
+    {
+      "date": "2020-04-15",
+      "rows": 437,
+      "positives": 6,
+      "candidate_cells": 439
+    },
+    {
+      "date": "2020-04-16",
+      "rows": 2201,
+      "positives": 0,
+      "candidate_cells": 2210
+    },
+    {
+      "date": "2020-04-20",
+      "rows": 573,
+      "positives": 0,
+      "candidate_cells": 575
+    },
+    {
+      "date": "2020-04-22",
+      "rows": 370,
+      "positives": 0,
+      "candidate_cells": 370
+    },
+    {
+      "date": "2020-04-23",
+      "rows": 583,
+      "positives": 0,
+      "candidate_cells": 585
+    },
+    {
+      "date": "2020-04-24",
+      "rows": 1637,
+      "positives": 14,
+      "candidate_cells": 1651
+    },
+    {
+      "date": "2020-04-25",
+      "rows": 1081,
+      "positives": 0,
+      "candidate_cells": 1085
+    },
+    {
+      "date": "2020-04-26",
+      "rows": 1006,
+      "positives": 0,
+      "candidate_cells": 1006
+    },
+    {
+      "date": "2020-04-28",
+      "rows": 2632,
+      "positives": 0,
+      "candidate_cells": 2638
+    },
+    {
+      "date": "2020-04-29",
+      "rows": 1633,
+      "positives": 0,
+      "candidate_cells": 1633
+    },
+    {
+      "date": "2020-04-30",
+      "rows": 1935,
+      "positives": 1,
+      "candidate_cells": 1935
+    },
+    {
+      "date": "2020-05-01",
+      "rows": 2150,
+      "positives": 0,
+      "candidate_cells": 2430
+    },
+    {
+      "date": "2020-05-06",
+      "rows": 1636,
+      "positives": 0,
+      "candidate_cells": 1692
+    },
+    {
+      "date": "2020-05-12",
+      "rows": 1072,
+      "positives": 1,
+      "candidate_cells": 1073
+    },
+    {
+      "date": "2020-05-13",
+      "rows": 898,
+      "positives": 0,
+      "candidate_cells": 904
+    },
+    {
+      "date": "2020-05-16",
+      "rows": 198,
+      "positives": 0,
+      "candidate_cells": 270
+    },
+    {
+      "date": "2020-05-17",
+      "rows": 612,
+      "positives": 0,
+      "candidate_cells": 612
+    },
+    {
+      "date": "2020-05-20",
+      "rows": 610,
+      "positives": 0,
+      "candidate_cells": 612
+    },
+    {
+      "date": "2020-05-28",
+      "rows": 122,
+      "positives": 0,
+      "candidate_cells": 138
+    },
+    {
+      "date": "2020-05-29",
+      "rows": 596,
+      "positives": 0,
+      "candidate_cells": 612
+    },
+    {
+      "date": "2020-06-01",
+      "rows": 1603,
+      "positives": 0,
+      "candidate_cells": 1606
+    },
+    {
+      "date": "2020-06-03",
+      "rows": 654,
+      "positives": 0,
+      "candidate_cells": 655
+    },
+    {
+      "date": "2020-06-07",
+      "rows": 376,
+      "positives": 0,
+      "candidate_cells": 377
+    },
+    {
+      "date": "2020-06-08",
+      "rows": 162,
+      "positives": 0,
+      "candidate_cells": 162
+    },
+    {
+      "date": "2020-06-09",
+      "rows": 853,
+      "positives": 0,
+      "candidate_cells": 1105
+    },
+    {
+      "date": "2020-06-10",
+      "rows": 654,
+      "positives": 0,
+      "candidate_cells": 655
+    },
+    {
+      "date": "2020-06-16",
+      "rows": 1185,
+      "positives": 0,
+      "candidate_cells": 1221
+    },
+    {
+      "date": "2020-06-19",
+      "rows": 946,
+      "positives": 0,
+      "candidate_cells": 946
+    },
+    {
+      "date": "2020-06-20",
+      "rows": 413,
+      "positives": 0,
+      "candidate_cells": 413
+    },
+    {
+      "date": "2020-06-21",
+      "rows": 869,
+      "positives": 0,
+      "candidate_cells": 869
+    },
+    {
+      "date": "2020-06-26",
+      "rows": 607,
+      "positives": 0,
+      "candidate_cells": 612
+    },
+    {
+      "date": "2020-07-02",
+      "rows": 1208,
+      "positives": 0,
+      "candidate_cells": 1221
+    },
+    {
+      "date": "2020-07-04",
+      "rows": 412,
+      "positives": 0,
+      "candidate_cells": 413
+    },
+    {
+      "date": "2020-07-07",
+      "rows": 780,
+      "positives": 0,
+      "candidate_cells": 792
+    },
+    {
+      "date": "2020-07-08",
+      "rows": 596,
+      "positives": 0,
+      "candidate_cells": 598
+    },
+    {
+      "date": "2020-07-30",
+      "rows": 164,
+      "positives": 0,
+      "candidate_cells": 180
+    },
+    {
+      "date": "2020-08-15",
+      "rows": 411,
+      "positives": 0,
+      "candidate_cells": 413
+    },
+    {
+      "date": "2020-08-17",
+      "rows": 479,
+      "positives": 0,
+      "candidate_cells": 480
+    },
+    {
+      "date": "2020-08-20",
+      "rows": 1031,
+      "positives": 0,
+      "candidate_cells": 1031
+    },
+    {
+      "date": "2020-08-23",
+      "rows": 563,
+      "positives": 0,
+      "candidate_cells": 565
+    },
+    {
+      "date": "2020-08-24",
+      "rows": 612,
+      "positives": 3,
+      "candidate_cells": 612
+    },
+    {
+      "date": "2020-08-25",
+      "rows": 592,
+      "positives": 1,
+      "candidate_cells": 647
+    },
+    {
+      "date": "2020-08-26",
+      "rows": 461,
+      "positives": 0,
+      "candidate_cells": 612
+    },
+    {
+      "date": "2020-08-28",
+      "rows": 266,
+      "positives": 0,
+      "candidate_cells": 841
+    },
+    {
+      "date": "2020-08-29",
+      "rows": 412,
+      "positives": 0,
+      "candidate_cells": 413
+    },
+    {
+      "date": "2020-09-03",
+      "rows": 1358,
+      "positives": 0,
+      "candidate_cells": 1358
+    },
+    {
+      "date": "2020-09-08",
+      "rows": 1301,
+      "positives": 0,
+      "candidate_cells": 1303
+    },
+    {
+      "date": "2020-09-09",
+      "rows": 227,
+      "positives": 0,
+      "candidate_cells": 612
+    },
+    {
+      "date": "2020-09-19",
+      "rows": 1643,
+      "positives": 0,
+      "candidate_cells": 1643
+    },
+    {
+      "date": "2020-09-26",
+      "rows": 1139,
+      "positives": 0,
+      "candidate_cells": 1145
+    },
+    {
+      "date": "2020-09-27",
+      "rows": 2849,
+      "positives": 0,
+      "candidate_cells": 2860
+    },
+    {
+      "date": "2020-09-28",
+      "rows": 969,
+      "positives": 0,
+      "candidate_cells": 973
+    },
+    {
+      "date": "2020-10-02",
+      "rows": 236,
+      "positives": 0,
+      "candidate_cells": 1163
+    },
+    {
+      "date": "2020-10-05",
+      "rows": 1941,
+      "positives": 0,
+      "candidate_cells": 1943
+    },
+    {
+      "date": "2020-10-09",
+      "rows": 1231,
+      "positives": 0,
+      "candidate_cells": 1238
+    },
+    {
+      "date": "2020-10-10",
+      "rows": 2552,
+      "positives": 0,
+      "candidate_cells": 2648
+    },
+    {
+      "date": "2020-10-13",
+      "rows": 841,
+      "positives": 0,
+      "candidate_cells": 841
+    },
+    {
+      "date": "2020-10-15",
+      "rows": 655,
+      "positives": 0,
+      "candidate_cells": 655
+    },
+    {
+      "date": "2020-10-18",
+      "rows": 1758,
+      "positives": 0,
+      "candidate_cells": 1763
+    },
+    {
+      "date": "2020-10-20",
+      "rows": 46,
+      "positives": 0,
+      "candidate_cells": 567
+    },
+    {
+      "date": "2020-10-25",
+      "rows": 414,
+      "positives": 0,
+      "candidate_cells": 415
+    },
+    {
+      "date": "2020-10-26",
+      "rows": 638,
+      "positives": 0,
+      "candidate_cells": 639
+    },
+    {
+      "date": "2020-10-27",
+      "rows": 410,
+      "positives": 0,
+      "candidate_cells": 413
+    },
+    {
+      "date": "2020-10-29",
+      "rows": 1971,
+      "positives": 0,
+      "candidate_cells": 1974
+    },
+    {
+      "date": "2020-10-30",
+      "rows": 404,
+      "positives": 0,
+      "candidate_cells": 404
+    },
+    {
+      "date": "2020-11-03",
+      "rows": 522,
+      "positives": 0,
+      "candidate_cells": 524
+    },
+    {
+      "date": "2020-11-04",
+      "rows": 411,
+      "positives": 1,
+      "candidate_cells": 413
+    },
+    {
+      "date": "2020-11-05",
+      "rows": 410,
+      "positives": 0,
+      "candidate_cells": 413
+    },
+    {
+      "date": "2020-11-07",
+      "rows": 1444,
+      "positives": 1,
+      "candidate_cells": 1445
+    },
+    {
+      "date": "2020-11-08",
+      "rows": 1325,
+      "positives": 0,
+      "candidate_cells": 1345
+    },
+    {
+      "date": "2020-11-10",
+      "rows": 1528,
+      "positives": 0,
+      "candidate_cells": 1538
+    },
+    {
+      "date": "2020-11-11",
+      "rows": 827,
+      "positives": 0,
+      "candidate_cells": 833
+    },
+    {
+      "date": "2020-11-12",
+      "rows": 702,
+      "positives": 0,
+      "candidate_cells": 702
+    },
+    {
+      "date": "2020-11-14",
+      "rows": 1387,
+      "positives": 0,
+      "candidate_cells": 1401
+    },
+    {
+      "date": "2020-11-16",
+      "rows": 579,
+      "positives": 0,
+      "candidate_cells": 580
+    },
+    {
+      "date": "2020-11-29",
+      "rows": 1032,
+      "positives": 0,
+      "candidate_cells": 1033
+    }
+  ],
+  "sha256": "cb797968dedb81c7b4b09bb9a7799c392337351be06ba441378deb011a36a1e3",
+  "config_sha256": "1afb133860e3aa4afb34907c456002ba59e39651545f3fe5193d9256c6373b22",
+  "build_source_sha256": "4675b3c6834fa876ee4ac441a2e90b8226b16f7ca3bc4971eb36af79ef7c48f7",
+  "source_duplicate_days_replaced": 18,
+  "archive_production_delay_days_min": 10,
+  "archive_production_delay_days_max": 328,
+  "firms_counts": {
+    "raw_rows": 17120,
+    "accepted_rows": 2365,
+    "duplicate_rows": 0
+  },
+  "positive_dates": 17,
+  "missing_fraction": {
+    "previous_fire": 0.0035742010609393195,
+    "previous_unknown": 0.0,
+    "fire_neighbors_3": 0.0,
+    "fire_neighbors_11": 0.0,
+    "observed_fraction_11": 0.0,
+    "distance_to_previous_fire_km": 0.0,
+    "nearest_fire_dx_km": 0.0,
+    "nearest_fire_dy_km": 0.0,
+    "previous_frp_mw": 0.0035742010609393195,
+    "nearby_frp_mw": 0.0,
+    "fire_days_last_7": 0.0,
+    "observed_days_last_7": 0.0,
+    "forest_fraction": 0.0,
+    "landcover_class": 0.0,
+    "elevation_m": 0.0,
+    "slope_degrees": 0.0,
+    "day_of_year_sin": 0.0,
+    "day_of_year_cos": 0.0,
+    "station_distance_km": 0.0,
+    "temperature_mean_c": 0.03624336912925346,
+    "temperature_max_c": 0.03624336912925346,
+    "temperature_min_c": 0.03624336912925346,
+    "humidity_min_pct": 0.03624336912925346,
+    "wind_speed_mean_ms": 0.03624336912925346,
+    "wind_speed_max_ms": 0.03624336912925346,
+    "wind_u_mean_ms": 0.03624336912925346,
+    "wind_v_mean_ms": 0.03624336912925346,
+    "observed_precipitation_sum_mm": 0.9992398757924699,
+    "weather_hours": 0.03624336912925346,
+    "precipitation_hours": 0.03624336912925346
+  }
+}

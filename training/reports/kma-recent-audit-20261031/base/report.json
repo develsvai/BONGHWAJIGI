@@ -1,0 +1,297 @@
+{
+  "profile": "kor_gk2a_10min_approach_hindcast_1_3_6h_v3",
+  "features": [
+    "distance_fire_km",
+    "nearest_fire_dx_km",
+    "nearest_fire_dy_km",
+    "neighbors_3",
+    "neighbors_7",
+    "nearby_frp_mw",
+    "nearby_temperature_k",
+    "distance_fire_30m_km",
+    "distance_fire_60m_km",
+    "closing_speed_30m_kmh",
+    "closing_speed_60m_kmh",
+    "fire_frames_last_hour",
+    "clear_frames_last_hour",
+    "utc_hour_sin",
+    "utc_hour_cos",
+    "horizon_hours",
+    "distance_recent_fire_60m_km",
+    "nearest_recent_fire_60m_dx_km",
+    "nearest_recent_fire_60m_dy_km",
+    "nearest_recent_fire_60m_age_minutes",
+    "own_last_fire_60m_age_minutes",
+    "recent_fire_60m_neighbors_3",
+    "recent_fire_60m_neighbors_7"
+  ],
+  "events": {
+    "andong_2020": {
+      "rows": 11540,
+      "positives": 103,
+      "anchors": 21,
+      "censored_rows": 20002,
+      "horizons": {
+        "1": {
+          "rows": 6699,
+          "positives": 11
+        },
+        "3": {
+          "rows": 4027,
+          "positives": 43
+        },
+        "6": {
+          "rows": 814,
+          "positives": 49
+        }
+      },
+      "sha256": "6f3fad4a9569185464d109ad6120998646d9be7fe70f7d80e80631523ee55e46",
+      "event": {
+        "id": "andong_2020",
+        "split": "train",
+        "start_utc": "2020-04-25T00:00:00Z",
+        "hours": 12,
+        "bbox": [
+          128.4,
+          36.25,
+          129.1,
+          36.8
+        ],
+        "source": "https://www.korea.kr/briefing/policyBriefingView.do?newsId=156393191"
+      },
+      "native_grid_crs": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"Unknown based on WGS 84 ellipsoid\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",7030]]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Lambert Conic Conformal (2SP)\",ID[\"EPSG\",9802]],PARAMETER[\"Latitude of false origin\",38,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8821]],PARAMETER[\"Longitude of false origin\",126,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8822]],PARAMETER[\"Latitude of 1st standard parallel\",30,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8823]],PARAMETER[\"Latitude of 2nd standard parallel\",60,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8824]],PARAMETER[\"Easting at false origin\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8826]],PARAMETER[\"Northing at false origin\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8827]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+      "native_grid_shape": [
+        31,
+        31
+      ],
+      "source_frames": 119,
+      "source_manifest_sha256": "0fdd62c1233e72bf178a6cb51dbe70c615d56221e95dec2bbfd0d3422ed08c1e",
+      "input_availability_note": "과거 재처리 FF를 쓰는 hindcast. 관측 시각+15분은 실험 가정이며 당시 공개/수신 시각이 아님. 원본 제작 시각은 별도로 기록하며 실시간 성능을 주장하지 않음"
+    },
+    "andong_2021": {
+      "rows": 91892,
+      "positives": 217,
+      "anchors": 33,
+      "censored_rows": 6937,
+      "horizons": {
+        "1": {
+          "rows": 32462,
+          "positives": 52
+        },
+        "3": {
+          "rows": 31334,
+          "positives": 78
+        },
+        "6": {
+          "rows": 28096,
+          "positives": 87
+        }
+      },
+      "sha256": "5d3ac1fe6252ba35e699ad1b65d1e6533e556334410cb0294401a048e8a8db51",
+      "event": {
+        "id": "andong_2021",
+        "split": "train",
+        "start_utc": "2021-02-21T08:00:00Z",
+        "hours": 12,
+        "bbox": [
+          128.1,
+          36.2,
+          129.1,
+          37.0
+        ],
+        "source": "https://forest.go.kr/kfs/images/data/down/sb_3_09.pdf"
+      },
+      "native_grid_crs": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"Unknown based on WGS 84 ellipsoid\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",7030]]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Lambert Conic Conformal (2SP)\",ID[\"EPSG\",9802]],PARAMETER[\"Latitude of false origin\",38,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8821]],PARAMETER[\"Longitude of false origin\",126,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8822]],PARAMETER[\"Latitude of 1st standard parallel\",30,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8823]],PARAMETER[\"Latitude of 2nd standard parallel\",60,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8824]],PARAMETER[\"Easting at false origin\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8826]],PARAMETER[\"Northing at false origin\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8827]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+      "native_grid_shape": [
+        44,
+        45
+      ],
+      "source_frames": 119,
+      "source_manifest_sha256": "3f72693f1afe343338d90c7f271c1ef7df87679379027731407cef3482aa3b95",
+      "input_availability_note": "과거 재처리 FF를 쓰는 hindcast. 관측 시각+15분은 실험 가정이며 당시 공개/수신 시각이 아님. 원본 제작 시각은 별도로 기록하며 실시간 성능을 주장하지 않음"
+    },
+    "hapcheon_2022": {
+      "rows": 6657,
+      "positives": 26,
+      "anchors": 16,
+      "censored_rows": 17943,
+      "horizons": {
+        "1": {
+          "rows": 5167,
+          "positives": 4
+        },
+        "3": {
+          "rows": 1451,
+          "positives": 11
+        },
+        "6": {
+          "rows": 39,
+          "positives": 11
+        }
+      },
+      "sha256": "25c1ab3e05f022c9cbe1343c6371cb9072a791f9d6ea2a8ab9460ff2a807210d",
+      "event": {
+        "id": "hapcheon_2022",
+        "split": "train",
+        "start_utc": "2022-02-28T06:00:00Z",
+        "hours": 12,
+        "bbox": [
+          127.8,
+          35.2,
+          128.7,
+          35.9
+        ],
+        "source": "https://www.hccl.go.kr/CLRecords/Files/FileAppendix/a9/A006406.pdf"
+      },
+      "native_grid_crs": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"Unknown based on WGS 84 ellipsoid\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",7030]]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Lambert Conic Conformal (2SP)\",ID[\"EPSG\",9802]],PARAMETER[\"Latitude of false origin\",38,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8821]],PARAMETER[\"Longitude of false origin\",126,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8822]],PARAMETER[\"Latitude of 1st standard parallel\",30,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8823]],PARAMETER[\"Latitude of 2nd standard parallel\",60,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8824]],PARAMETER[\"Easting at false origin\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8826]],PARAMETER[\"Northing at false origin\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8827]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+      "native_grid_shape": [
+        39,
+        41
+      ],
+      "source_frames": 119,
+      "source_manifest_sha256": "b15a4d0bb365bb6b0342da91578a05b63c20af4bef924db65f1fa15e03294dc1",
+      "input_availability_note": "과거 재처리 FF를 쓰는 hindcast. 관측 시각+15분은 실험 가정이며 당시 공개/수신 시각이 아님. 원본 제작 시각은 별도로 기록하며 실시간 성능을 주장하지 않음"
+    },
+    "uljin_2022": {
+      "rows": 25406,
+      "positives": 655,
+      "anchors": 31,
+      "censored_rows": 19306,
+      "horizons": {
+        "1": {
+          "rows": 11352,
+          "positives": 63
+        },
+        "3": {
+          "rows": 8029,
+          "positives": 215
+        },
+        "6": {
+          "rows": 6025,
+          "positives": 377
+        }
+      },
+      "sha256": "7b62d12f55318c274d8a864358b5e2f90f74f5221f25a3cc7d7be8c5784ea45b",
+      "event": {
+        "id": "uljin_2022",
+        "split": "train",
+        "start_utc": "2022-03-04T01:00:00Z",
+        "hours": 12,
+        "bbox": [
+          128.8,
+          36.7,
+          129.8,
+          37.7
+        ],
+        "source": "https://forest.go.kr/kfs/images/data/down/sb_3_09.pdf"
+      },
+      "native_grid_crs": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"Unknown based on WGS 84 ellipsoid\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",7030]]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Lambert Conic Conformal (2SP)\",ID[\"EPSG\",9802]],PARAMETER[\"Latitude of false origin\",38,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8821]],PARAMETER[\"Longitude of false origin\",126,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8822]],PARAMETER[\"Latitude of 1st standard parallel\",30,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8823]],PARAMETER[\"Latitude of 2nd standard parallel\",60,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8824]],PARAMETER[\"Easting at false origin\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8826]],PARAMETER[\"Northing at false origin\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8827]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+      "native_grid_shape": [
+        56,
+        46
+      ],
+      "source_frames": 119,
+      "source_manifest_sha256": "9997ad3b2f9fbbf8574e8e129dad97012efc7b416ab9fe05559431595543e3d8",
+      "input_availability_note": "과거 재처리 FF를 쓰는 hindcast. 관측 시각+15분은 실험 가정이며 당시 공개/수신 시각이 아님. 원본 제작 시각은 별도로 기록하며 실시간 성능을 주장하지 않음"
+    },
+    "gangneung_2023": {
+      "rows": 390,
+      "positives": 12,
+      "anchors": 9,
+      "censored_rows": 5346,
+      "horizons": {
+        "1": {
+          "rows": 377,
+          "positives": 4
+        },
+        "3": {
+          "rows": 9,
+          "positives": 4
+        },
+        "6": {
+          "rows": 4,
+          "positives": 4
+        }
+      },
+      "sha256": "d2ae4c975a2015dc1a55eb232b028e6aa45f3f52e3e28e39392c0c4d28ba7e80",
+      "event": {
+        "id": "gangneung_2023",
+        "split": "calibration",
+        "start_utc": "2023-04-10T23:00:00Z",
+        "hours": 12,
+        "bbox": [
+          128.5,
+          37.45,
+          129.3,
+          38.1
+        ],
+        "source": "https://www.mois.go.kr/frt/bbs/type010/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000008&nttId=99891"
+      },
+      "native_grid_crs": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"Unknown based on WGS 84 ellipsoid\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",7030]]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Lambert Conic Conformal (2SP)\",ID[\"EPSG\",9802]],PARAMETER[\"Latitude of false origin\",38,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8821]],PARAMETER[\"Longitude of false origin\",126,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8822]],PARAMETER[\"Latitude of 1st standard parallel\",30,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8823]],PARAMETER[\"Latitude of 2nd standard parallel\",60,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8824]],PARAMETER[\"Easting at false origin\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8826]],PARAMETER[\"Northing at false origin\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8827]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+      "native_grid_shape": [
+        36,
+        35
+      ],
+      "source_frames": 119,
+      "source_manifest_sha256": "6a962a234b93cefe92296479734002925b8fbfbbb33e16c99b9e72f1e99f1540",
+      "input_availability_note": "과거 재처리 FF를 쓰는 hindcast. 관측 시각+15분은 실험 가정이며 당시 공개/수신 시각이 아님. 원본 제작 시각은 별도로 기록하며 실시간 성능을 주장하지 않음"
+    },
+    "hongseong_2023": {
+      "rows": 65386,
+      "positives": 463,
+      "anchors": 35,
+      "censored_rows": 1319,
+      "horizons": {
+        "1": {
+          "rows": 21885,
+          "positives": 87
+        },
+        "3": {
+          "rows": 21749,
+          "positives": 172
+        },
+        "6": {
+          "rows": 21752,
+          "positives": 204
+        }
+      },
+      "sha256": "13a8458cbe9ee32571bf5b281795e83e44581329958e74190c88e37b724f433c",
+      "event": {
+        "id": "hongseong_2023",
+        "split": "validation",
+        "start_utc": "2023-04-02T02:00:00Z",
+        "hours": 12,
+        "bbox": [
+          126.2,
+          36.2,
+          127.0,
+          36.9
+        ],
+        "source": "https://www.opm.go.kr/opm/news/press-release.do?articleNo=153083&mode=view"
+      },
+      "native_grid_crs": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"Unknown based on WGS 84 ellipsoid\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",7030]]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Lambert Conic Conformal (2SP)\",ID[\"EPSG\",9802]],PARAMETER[\"Latitude of false origin\",38,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8821]],PARAMETER[\"Longitude of false origin\",126,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8822]],PARAMETER[\"Latitude of 1st standard parallel\",30,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8823]],PARAMETER[\"Latitude of 2nd standard parallel\",60,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8824]],PARAMETER[\"Easting at false origin\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8826]],PARAMETER[\"Northing at false origin\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8827]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+      "native_grid_shape": [
+        38,
+        35
+      ],
+      "source_frames": 120,
+      "source_manifest_sha256": "84234a7918bc0945a6d86ba58022ad43bc892c8509995dc489c25d783048cc4e",
+      "input_availability_note": "과거 재처리 FF를 쓰는 hindcast. 관측 시각+15분은 실험 가정이며 당시 공개/수신 시각이 아님. 원본 제작 시각은 별도로 기록하며 실시간 성능을 주장하지 않음"
+    }
+  },
+  "config_sha256": "2995b4e5921930850bd7e34a817a7bb1e1a6fdfb5793f10cb41a8416b6c1abc9",
+  "builder_sha256": "bba812d96b14492cbccc66672d78c5923d664955576f4f5253798d659bd1545a",
+  "frozen_release_sha256": null,
+  "operational_use": false,
+  "target": "현재 비화재 육지 관측 격자에서 향후 1·3·6시간 동안 FF=1 및 DQF_FF=8/9가 한 번 이상 관측되는지. 물리적 화선·개인 피해·대응 레벨이 아님",
+  "target_country": "Korea historical reprocessed observations",
+  "limitations": [
+    "국내 과거 재처리 위성 관측의 탐색 실험. 실시간 입력 가용성을 검증하지 않음",
+    "학습4/튜닝1/보정1 사건만으로 국내 일반화·안전성 판단 불가",
+    "화재 근처 30km의 현재 관측 비화재 육지만 평가. 신규 발화·구름 속 화재를 포괄하지 않음",
+    "기상·연료·지형·진화 활동 및 사용자 취약성 입력은 이 시간별 초안에 아직 없음",
+    "위성 화재 탐지의 누락·오탐이 정답에 남고 미래 구름 검열로 선택 편향이 있음",
+    "재처리 알고리즘 버전과 실시간 제품의 동등성 및 국내 독립 사건 검증이 필요함",
+    "강릉 보정 표본은 양성12/390행, 6h 음성0. 이 보정 구획으로 확률 신뢰도를 검증할 수 없음"
+  ]
+}

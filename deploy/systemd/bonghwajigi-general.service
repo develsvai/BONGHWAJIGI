@@ -1,0 +1,17 @@
+[Unit]
+Description=Bonghwajigi simulation MVP server
+After=docker.service network-online.target
+Requires=docker.service
+Wants=network-online.target bonghwajigi-general-gpu-tunnel.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=/home1/ncloud/bonghwajigi
+ExecStart=/usr/bin/docker compose --env-file /home1/ncloud/.config/bonghwajigi/general.env -f deploy/compose/mvp.yaml up -d --wait --wait-timeout 180
+ExecStop=/usr/bin/docker compose --env-file /home1/ncloud/.config/bonghwajigi/general.env -f deploy/compose/mvp.yaml stop
+TimeoutStartSec=300
+TimeoutStopSec=180
+
+[Install]
+WantedBy=multi-user.target

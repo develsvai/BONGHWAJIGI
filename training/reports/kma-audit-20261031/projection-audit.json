@@ -1,0 +1,10 @@
+{
+  "source_url": "https://nmsc.kma.go.kr/upload/resource/data/gk2a/gk2a_ami_ko020lc_latlon.nc",
+  "lookup_sha256": "3632d83513eb0093686fd2bf2053eff260d5d76b90475daf77fbc81eacefe47c",
+  "shape": [
+    900,
+    900
+  ],
+  "max_abs_latitude_difference_deg": 6.905303301607546e-06,
+  "max_abs_longitude_difference_deg": 1.2613461308319529e-05
+}

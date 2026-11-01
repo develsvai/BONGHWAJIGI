@@ -1,0 +1,30 @@
+{
+  "id": "task-def-20261031-152411-task-def-e2e26cad",
+  "job_definition_id": "job-20261031-002017-v2-fe3bfad0",
+  "title": "외부 자원 명세 중복을 제거하고 단일 정본으로 통합",
+  "description": "사용자가 지정한 외부 자원·API·라이선스 문서를 기준으로 현재 정리 자료의 중복을 비교한다. 항목별 고유 정보와 검증 근거를 보존하며 단일 Markdown을 만들고 대체된 이전 문서가 실제로 존재하면 삭제한다. 현재 지정 경로는 직전 작성 산출물과 동일하며 추가 비교 경로는 사용자에게 문의한 상태다.",
+  "created_at": "2026-10-31T15:24:11+00:00",
+  "updated_at": "2026-10-31T15:24:15+00:00",
+  "order_index": 17,
+  "legacy_task_id": "task-20261031-152411-task-f8241639",
+  "depends_on": [],
+  "expected_output": "중복 없는 외부 자원 통합 Markdown, 보존·통합·삭제 내역과 누락 검증",
+  "done_condition": "기존 174개 의존성 및 56개 API 동작과 고유 출처·이용조건이 남고 중복 설명이 통합된다. 삭제 대상은 통합본으로 대체된 문서에 한정하며 링크와 Loom 기록이 일치한다.",
+  "in_scope": "외부 자원 명세 비교·중복 통합; 명확히 대체된 이전 문서 삭제; 문서 링크·등록·검증·Loom 기록",
+  "out_of_scope": "앱 조회·수정; 진행 중인 학습 변경; 서비스·배포 변경; 검증 원본 증거 삭제; 관련 없는 설계·운영 문서 삭제; 확인되지 않은 라이선스 추가 판정",
+  "validation_hint": "기존 이름/버전174쌍·API56동작·출처URL·모델revision·라이선스조건 보존, 4열표·중복·로컬링크·비밀정보·git diff·Loom strict 검증",
+  "required_docs": [
+    "docs/V2/delivery/external-resources-and-licenses.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/external-resources-and-licenses.md"
+  ],
+  "document_output_exceptions": [],
+  "default_agent": "foreground",
+  "context_policy_id": "",
+  "executor_policy_id": "",
+  "review_policy": "",
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

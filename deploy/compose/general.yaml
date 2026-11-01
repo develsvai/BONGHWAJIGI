@@ -1,0 +1,89 @@
+name: bonghwajigi-general
+
+x-runtime: &runtime
+  build:
+    context: ../..
+    dockerfile: deploy/docker/Python.Dockerfile
+    args:
+      RUNTIME_EXTRA: server
+  environment: &environment
+    BONGHWA_ENVIRONMENT: local
+    BONGHWA_MODE: simulation
+    BONGHWA_DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-bonghwajigi}:${POSTGRES_PASSWORD:?로컬 .env에 POSTGRES_PASSWORD를 설정하세요}@postgres:5432/${POSTGRES_DB:-bonghwajigi}
+    BONGHWA_BROKER_URL: redis://redis:6379/0
+    BONGHWA_ANALYSIS_ENABLED: ${BONGHWA_ANALYSIS_ENABLED:-false}
+    BONGHWA_SERVICE_TOKEN: ${BONGHWA_SERVICE_TOKEN:-}
+    BONGHWA_GPU_BASE_URL: ${BONGHWA_GPU_BASE_URL:-http://gpu-api.invalid}
+    BONGHWA_EMBEDDING_SERVICE_TOKEN: ${BONGHWA_EMBEDDING_SERVICE_TOKEN:-}
+    BONGHWA_EMBEDDING_REVISION: ${BONGHWA_EMBEDDING_REVISION:-}
+    BONGHWA_WEB_SEARCH_ENABLED: ${BONGHWA_WEB_SEARCH_ENABLED:-true}
+    BONGHWA_POLICY_ENABLED: ${BONGHWA_POLICY_ENABLED:-false}
+    BONGHWA_POLICY_QWEN_ENABLED: ${BONGHWA_POLICY_QWEN_ENABLED:-false}
+    BONGHWA_QWEN_REVISION: ${BONGHWA_QWEN_REVISION:-}
+    BONGHWA_POLICY_CHECK_SECONDS: ${BONGHWA_POLICY_CHECK_SECONDS:-30}
+    BONGHWA_POLICY_POLL_SECONDS: ${BONGHWA_POLICY_POLL_SECONDS:-2}
+  depends_on:
+    postgres:
+      condition: service_healthy
+    redis:
+      condition: service_healthy
+
+services:
+  postgres:
+    build:
+      context: ../..
+      dockerfile: deploy/docker/Postgres.Dockerfile
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-bonghwajigi}
+      POSTGRES_DB: ${POSTGRES_DB:-bonghwajigi}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?로컬 .env에 POSTGRES_PASSWORD를 설정하세요}
+    ports: ["127.0.0.1:5432:5432"]
+    volumes: ["postgres-data:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+  redis:
+    image: redis:7.4-bookworm
+    command: ["redis-server", "--appendonly", "yes", "--maxmemory-policy", "noeviction"]
+    ports: ["127.0.0.1:6379:6379"]
+    volumes: ["redis-data:/data"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+  api:
+    <<: *runtime
+    ports: ["127.0.0.1:8000:8000"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health/live')"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+  urgent:
+    <<: *runtime
+    command: ["celery", "-A", "bonghwajigi.workers.urgent:app", "worker", "-Q", "urgent", "--concurrency=1", "--loglevel=INFO"]
+  analysis:
+    <<: *runtime
+    command: ["celery", "-A", "bonghwajigi.workers.analysis:app", "worker", "-Q", "analysis", "--concurrency=1", "--loglevel=INFO"]
+  analysis-outbox:
+    <<: *runtime
+    profiles: ["analysis"]
+    command: ["python", "-m", "bonghwajigi.workers.outbox"]
+  delivery:
+    <<: *runtime
+    command: ["celery", "-A", "bonghwajigi.workers.delivery:app", "worker", "-Q", "delivery", "--concurrency=1", "--loglevel=INFO"]
+  policy-plans:
+    <<: *runtime
+    profiles: ["policy"]
+    command: ["python", "-m", "bonghwajigi.workers.policy_loop", "--mode", "plans"]
+  policy-integrations:
+    <<: *runtime
+    profiles: ["policy-qwen"]
+    command: ["python", "-m", "bonghwajigi.workers.policy_loop", "--mode", "integrations"]
+
+volumes:
+  postgres-data:
+  redis-data:

@@ -1,0 +1,14 @@
+{
+  "id": "job-run-20261031-112708-job-20261031-002626-job-97436430-40a6fc29",
+  "job_definition_id": "job-20261031-002626-job-97436430",
+  "status": "RUNNING",
+  "created_at": "2026-10-31T11:27:08+00:00",
+  "updated_at": "2026-10-31T13:43:51+00:00",
+  "legacy_job_id": "job-20261031-002626-job-97436430",
+  "started_at": "2026-10-31T11:27:08+00:00",
+  "completed_at": "",
+  "trigger_mode": "manual",
+  "trigger_ref": "",
+  "worker_pool": "",
+  "last_error": ""
+}

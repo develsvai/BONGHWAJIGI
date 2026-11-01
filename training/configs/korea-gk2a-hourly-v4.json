@@ -1,0 +1,369 @@
+{
+  "profile": "kor_gk2a_10min_approach_hindcast_1_3_6h_v4_expanded",
+  "reader": "gk2a",
+  "domain": "Korea historical reprocessed observations",
+  "frozen_before_model_fit": true,
+  "horizons_hours": [
+    1,
+    3,
+    6
+  ],
+  "input_interval_minutes": 20,
+  "source_cadence_minutes": 10,
+  "history_minutes": 60,
+  "candidate_distance_km": 30,
+  "assumed_input_delay_minutes": 15,
+  "drop_features": [
+    "nearby_frp_mw",
+    "nearby_temperature_k"
+  ],
+  "earth_ellipsoid": "WGS84",
+  "projection_validation": "원본 LCC 속성 및 API 문서의 4개 모서리 위경도와 WGS84 LCC 계산을 대조. 참고 PDF의 구면 반경 표기는 이 모서리와 불일치하므로 쓰지 않음. 운영 전 공식 조견표 추가 대조 필요",
+  "input_availability": "과거 재처리 FF를 쓰는 hindcast. 관측 시각+15분은 실험 가정이며 당시 공개/수신 시각이 아님. 원본 제작 시각은 별도로 기록하며 실시간 성능을 주장하지 않음",
+  "target": "현재 비화재 육지 관측 격자에서 향후 1·3·6시간 동안 FF=1 및 DQF_FF=8/9가 한 번 이상 관측되는지. 물리적 화선·개인 피해·대응 레벨이 아님",
+  "negative_definition": "모든 10분 미래 관측이 있고 FF=0,DQF_FF=2인 경우만 음성. 관측 누락·구름·저신뢰·산업열 등은 검열. 확실한 양성 증거는 남김",
+  "model_selection": "2023년 6개 지역 구획을 합친 기간별 AP 평균. 사건별 진단도 함께 보고. 2025 미열람 유지",
+  "operational_use": false,
+  "limitations": [
+    "국내 과거 재처리 위성 관측의 탐색 실험. 실시간 입력 가용성을 검증하지 않음",
+    "화재 근처 30km의 현재 관측 비화재 육지만 평가. 신규 발화·구름 속 화재를 포괄하지 않음",
+    "기상·연료·지형·진화 활동 및 사용자 취약성 입력은 이 시간별 초안에 아직 없음",
+    "위성 화재 탐지의 누락·오탐이 정답에 남고 미래 구름 검열로 선택 편향이 있음",
+    "재처리 알고리즘 버전과 실시간 제품의 동등성 및 국내 독립 사건 검증이 필요함",
+    "강릉 보정 표본은 양성12/390행, 6h 음성0. 이 보정 구획으로 확률 신뢰도를 검증할 수 없음",
+    "요청 기준 학습14/튜닝6/보정1. 관측 불가 구획은 0행으로 남음. 같은 날짜 동시 산불은 기상 조건이 공유돼 21개 독립 표본으로 해석할 수 없음",
+    "사건명으로 고른 지역 창이며 모든 탐지점의 사건 귀속·실제 확산 경로는 별도 검증이 필요함"
+  ],
+  "events": [
+    {
+      "id": "andong_2020",
+      "split": "train",
+      "start_utc": "2020-04-25T00:00:00Z",
+      "hours": 12,
+      "bbox": [
+        128.4,
+        36.25,
+        129.1,
+        36.8
+      ],
+      "source": "https://www.korea.kr/briefing/policyBriefingView.do?newsId=156393191"
+    },
+    {
+      "id": "andong_2021",
+      "split": "train",
+      "start_utc": "2021-02-21T08:00:00Z",
+      "hours": 12,
+      "bbox": [
+        128.1,
+        36.2,
+        129.1,
+        37.0
+      ],
+      "source": "https://forest.go.kr/kfs/images/data/down/sb_3_09.pdf"
+    },
+    {
+      "id": "hapcheon_2022",
+      "split": "train",
+      "start_utc": "2022-02-28T06:00:00Z",
+      "hours": 12,
+      "bbox": [
+        127.8,
+        35.2,
+        128.7,
+        35.9
+      ],
+      "source": "https://www.hccl.go.kr/CLRecords/Files/FileAppendix/a9/A006406.pdf"
+    },
+    {
+      "id": "uljin_2022",
+      "split": "train",
+      "start_utc": "2022-03-04T01:00:00Z",
+      "hours": 12,
+      "bbox": [
+        128.8,
+        36.7,
+        129.8,
+        37.7
+      ],
+      "source": "https://forest.go.kr/kfs/images/data/down/sb_3_09.pdf"
+    },
+    {
+      "id": "ulju_2020",
+      "split": "train",
+      "start_utc": "2020-03-19T05:00:00Z",
+      "hours": 12,
+      "bbox": [
+        129.0,
+        35.3,
+        129.5,
+        35.8
+      ],
+      "source": "https://www.korea.kr/briefing/policyBriefingView.do?newsId=156393191",
+      "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+    },
+    {
+      "id": "goseong_2020",
+      "split": "train",
+      "start_utc": "2020-05-01T12:00:00Z",
+      "hours": 12,
+      "bbox": [
+        128.2,
+        38.1,
+        128.75,
+        38.55
+      ],
+      "source": "https://www.korea.kr/briefing/policyBriefingView.do?newsId=156393191",
+      "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+    },
+    {
+      "id": "yeongdeok_2022",
+      "split": "train",
+      "start_utc": "2022-02-16T02:00:00Z",
+      "hours": 12,
+      "bbox": [
+        129.1,
+        36.2,
+        129.7,
+        36.8
+      ],
+      "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003737",
+      "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+    },
+    {
+      "id": "yeongwol_2022",
+      "split": "train",
+      "start_utc": "2022-03-04T05:00:00Z",
+      "hours": 12,
+      "bbox": [
+        128.0,
+        36.9,
+        128.65,
+        37.5
+      ],
+      "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003737",
+      "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+    },
+    {
+      "id": "gangneung_donghae_2022",
+      "split": "train",
+      "start_utc": "2022-03-05T00:00:00Z",
+      "hours": 12,
+      "bbox": [
+        128.65,
+        37.35,
+        129.4,
+        37.95
+      ],
+      "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003737",
+      "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+    },
+    {
+      "id": "bonghwa_2022",
+      "split": "train",
+      "start_utc": "2022-04-05T04:00:00Z",
+      "hours": 12,
+      "bbox": [
+        128.5,
+        36.65,
+        129.1,
+        37.2
+      ],
+      "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003737",
+      "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+    },
+    {
+      "id": "yanggu_2022",
+      "split": "train",
+      "start_utc": "2022-04-10T07:00:00Z",
+      "hours": 12,
+      "bbox": [
+        127.65,
+        37.85,
+        128.25,
+        38.4
+      ],
+      "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003737",
+      "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+    },
+    {
+      "id": "gunwi_2022",
+      "split": "train",
+      "start_utc": "2022-04-10T04:00:00Z",
+      "hours": 12,
+      "bbox": [
+        128.25,
+        35.9,
+        128.85,
+        36.4
+      ],
+      "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003737",
+      "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+    },
+    {
+      "id": "uljin_may_2022",
+      "split": "train",
+      "start_utc": "2022-05-28T04:00:00Z",
+      "hours": 12,
+      "bbox": [
+        128.9,
+        36.75,
+        129.65,
+        37.25
+      ],
+      "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91004062",
+      "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+    },
+    {
+      "id": "miryang_2022",
+      "split": "train",
+      "start_utc": "2022-05-31T01:00:00Z",
+      "hours": 12,
+      "bbox": [
+        128.4,
+        35.3,
+        129.0,
+        35.8
+      ],
+      "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003815",
+      "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+    },
+    {
+      "id": "hongseong_2023",
+      "split": "validation",
+      "start_utc": "2023-04-02T02:00:00Z",
+      "hours": 12,
+      "bbox": [
+        126.2,
+        36.2,
+        127.0,
+        36.9
+      ],
+      "source": "https://www.opm.go.kr/opm/news/press-release.do?articleNo=153083&mode=view"
+    },
+    {
+      "id": "hapcheon_2023",
+      "split": "validation",
+      "start_utc": "2023-03-08T05:00:00Z",
+      "hours": 12,
+      "bbox": [
+        127.8,
+        35.2,
+        128.7,
+        35.9
+      ],
+      "source": "https://www.forest.go.kr/kfsweb/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_1009&nttId=3180876",
+      "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+    },
+    {
+      "id": "daejeon_geumsan_2023",
+      "split": "validation",
+      "start_utc": "2023-04-02T03:00:00Z",
+      "hours": 12,
+      "bbox": [
+        127.05,
+        35.9,
+        127.6,
+        36.5
+      ],
+      "source": "https://forest.go.kr/kfs/images/data/down/sb_3_09.pdf",
+      "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+    },
+    {
+      "id": "hampyeong_2023",
+      "split": "validation",
+      "start_utc": "2023-04-03T07:00:00Z",
+      "hours": 12,
+      "bbox": [
+        126.25,
+        34.85,
+        126.9,
+        35.45
+      ],
+      "source": "https://www.forest.go.kr/kfsweb/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_1036&nttId=3181783&mn=NKFS_04_02_01",
+      "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+    },
+    {
+      "id": "suncheon_2023",
+      "split": "validation",
+      "start_utc": "2023-04-03T07:00:00Z",
+      "hours": 12,
+      "bbox": [
+        127.0,
+        34.75,
+        127.7,
+        35.25
+      ],
+      "source": "https://www.forest.go.kr/kfsweb/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_1036&nttId=3181783&mn=NKFS_04_02_01",
+      "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+    },
+    {
+      "id": "yeongju_2023",
+      "split": "validation",
+      "start_utc": "2023-04-03T07:00:00Z",
+      "hours": 12,
+      "bbox": [
+        128.2,
+        36.6,
+        129.0,
+        37.15
+      ],
+      "source": "https://www.forest.go.kr/kfsweb/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_1036&nttId=3181783&mn=NKFS_04_02_01",
+      "window_note": "공식 발생일·지역으로 정한 탐색 창. 실제 발화 시각이나 화재 경계가 아님"
+    },
+    {
+      "id": "gangneung_2023",
+      "split": "calibration",
+      "start_utc": "2023-04-10T23:00:00Z",
+      "hours": 12,
+      "bbox": [
+        128.5,
+        37.45,
+        129.3,
+        38.1
+      ],
+      "source": "https://www.mois.go.kr/frt/bbs/type010/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000008&nttId=99891"
+    },
+    {
+      "id": "sancheong_2025",
+      "split": "test",
+      "start_utc": "2025-03-22T00:00:00Z",
+      "hours": 12,
+      "bbox": [
+        127.3,
+        34.9,
+        128.3,
+        35.8
+      ],
+      "locked": true
+    }
+  ],
+  "split_revision": "초기 구축 후 강릉 6h는 양성4/음성0으로 검증 불가. 모델 적합 전 홍성을 튜닝, 강릉을 보정 부족 진단으로 바꾼 탐색 재설계. 2025년은 미열람 유지",
+  "recent_fire_features": true,
+  "feature_names": [
+    "distance_fire_km",
+    "nearest_fire_dx_km",
+    "nearest_fire_dy_km",
+    "neighbors_3",
+    "neighbors_7",
+    "nearby_frp_mw",
+    "nearby_temperature_k",
+    "distance_fire_30m_km",
+    "distance_fire_60m_km",
+    "closing_speed_30m_kmh",
+    "closing_speed_60m_kmh",
+    "fire_frames_last_hour",
+    "clear_frames_last_hour",
+    "utc_hour_sin",
+    "utc_hour_cos",
+    "distance_recent_fire_60m_km",
+    "nearest_recent_fire_60m_dx_km",
+    "nearest_recent_fire_60m_dy_km",
+    "nearest_recent_fire_60m_age_minutes",
+    "own_last_fire_60m_age_minutes",
+    "recent_fire_60m_neighbors_3",
+    "recent_fire_60m_neighbors_7",
+    "horizon_hours"
+  ],
+  "feature_revision": "v2의 정답·후보 표본을 유지하고 과거60분 확정 화재 위치·마지막 관측 나이를 추가. 과거 관측이 현재 연소 중이라는 의미는 아님",
+  "expansion_plan": "v2/v3 홍성 튜닝을 확인한 뒤 공식 2020~2022 사례 10개와 2023 튜닝 사례5개를 추가. 2025 잠금 유지. 새 사건 표본을 보기 전 계획 저장. 실제 학습 가능한 사건 수는 QC 후 별도 집계"
+}

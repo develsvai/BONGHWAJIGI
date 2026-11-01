@@ -1,0 +1,12 @@
+{
+  "selected": "reference_depth4",
+  "selected_at_utc": "2026-10-31T14:34:58.632664+00:00",
+  "plan_sha256": "b7fa26734b9e1de7e4d5dd5df3538007d4671ea719bdd66cbe927a4681dfea9c",
+  "cv_result_sha256": {
+    "reference_depth4": "7ef9ce4bb9ee1c42923053c57f60faa25c4f93e7dfa0e344e13cedcf631ec968",
+    "shallow_depth2": "f907908f0bce170593489405b6e1a8e2dc6e0e3b16f788b18983da542317986c",
+    "shallow_equal_events": "56ae8255d3b576174fc2a951966512e90345f6b2ddfd95962511a2a40c558519",
+    "shallow_no_clock_station": "f6380433e734a97c4225844bd8be43d3faa9cb92c7fffe2eedfd3287c73824d0"
+  },
+  "validation_read_before_selection": false
+}

@@ -1,0 +1,2 @@
+{"id": "event-f52b4d95662b", "type": "foreground_session_started", "message": "Foreground task session started.", "created_at": "2026-10-31T18:15:31+00:00", "agent": "foreground", "task_id": "task-20261031-181512-task-edacb988"}
+{"id": "event-5b2557300245", "type": "foreground_session_done", "message": "지도 APK0.2.1 검증 앱 ced2446을 gitlink로 고정했다. 실제 APK 해시·실행 소스·API·공식 라이선스를 대조하고 원격 recursive clone/sourcechecker/clean 검증을 통과했다. 타 채팅 변경은 보존했다.", "created_at": "2026-10-31T18:28:39+00:00", "agent": "foreground", "task_id": "task-20261031-181512-task-edacb988"}

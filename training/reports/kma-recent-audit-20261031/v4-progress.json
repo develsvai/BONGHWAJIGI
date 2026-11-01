@@ -1,0 +1,62 @@
+{
+  "checked_at_utc": "2026-10-31T14:28:16.585686+00:00",
+  "requested_non_test_windows": 21,
+  "completed_manifests": [
+    {
+      "event": "andong_2020",
+      "files": 119,
+      "missing": 1
+    },
+    {
+      "event": "andong_2021",
+      "files": 119,
+      "missing": 1
+    },
+    {
+      "event": "hapcheon_2022",
+      "files": 119,
+      "missing": 1
+    },
+    {
+      "event": "uljin_2022",
+      "files": 119,
+      "missing": 1
+    },
+    {
+      "event": "ulju_2020",
+      "files": 118,
+      "missing": 2
+    },
+    {
+      "event": "goseong_2020",
+      "files": 119,
+      "missing": 1
+    },
+    {
+      "event": "hongseong_2023",
+      "files": 120,
+      "missing": 0
+    },
+    {
+      "event": "gangneung_2023",
+      "files": 119,
+      "missing": 1
+    }
+  ],
+  "units": {
+    "bonghwajigi-kma-profile-acquire-v4": {
+      "ActiveState": "active",
+      "SubState": "running"
+    },
+    "bonghwajigi-kma-research-v4": {
+      "ActiveState": "active",
+      "SubState": "running"
+    },
+    "bonghwajigi-kma-utility-v4": {
+      "ActiveState": "active",
+      "SubState": "running"
+    }
+  },
+  "operational_use": false,
+  "test_evaluated": false
+}

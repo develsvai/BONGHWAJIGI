@@ -1,0 +1,227 @@
+{
+  "exported_at_utc": "2026-10-31T12:58:26.028888+00:00",
+  "gpu_root": "/home1/ncloud/bonghwajigi",
+  "korea": {
+    "2018": {
+      "modis": {
+        "files": 846,
+        "missing_files": 0,
+        "bytes": 461532653,
+        "manifest_path": "data/raw/korea-wildfire/fire-manifest-2018.json",
+        "manifest_sha256": "7dcd71688f7d28249afd561c5e620433579c9a58b400371f5c23c3687436f937"
+      },
+      "weather": {
+        "files": 86,
+        "missing_files": 4,
+        "bytes": 2667677,
+        "manifest_path": "data/raw/korea-wildfire/weather-manifest-2018.json",
+        "manifest_sha256": "49afa55392b2d49bc100046809d1980ee7c7e1e7b52d1d54fbbb255a7a895c6f"
+      },
+      "firms": {
+        "files": 2,
+        "missing_files": 0,
+        "bytes": 1353492,
+        "manifest_path": "data/raw/korea-wildfire/firms/manifest-2018.json",
+        "manifest_sha256": "3f84200cff638993cdc06130da4cad397591ddb7950d785bd85d82452dbaa452"
+      }
+    },
+    "2019": {
+      "modis": {
+        "files": 846,
+        "missing_files": 0,
+        "bytes": 468632518,
+        "manifest_path": "data/raw/korea-wildfire/fire-manifest-2019.json",
+        "manifest_sha256": "851e43f29d4c836e5d555a09faef968b362fc2648ed564b2584552b7cf006c98"
+      },
+      "weather": {
+        "files": 87,
+        "missing_files": 3,
+        "bytes": 2945921,
+        "manifest_path": "data/raw/korea-wildfire/weather-manifest-2019.json",
+        "manifest_sha256": "3e8320077e019106772ba49752a062156d18fa2eb8845eb4aa2fd1f8f0d48f52"
+      },
+      "firms": {
+        "files": 2,
+        "missing_files": 0,
+        "bytes": 1495752,
+        "manifest_path": "data/raw/korea-wildfire/firms/manifest-2019.json",
+        "manifest_sha256": "54c04b0d1fa89461cb4ec0423971a96108b5a4e87b4fba80524c11c92f35a3c2"
+      }
+    },
+    "2020": {
+      "modis": {
+        "files": 840,
+        "missing_files": 0,
+        "bytes": 461885973,
+        "manifest_path": "data/raw/korea-wildfire/fire-manifest-2020.json",
+        "manifest_sha256": "c98080bf744708f15376e2d5ea7398ce42bb2ab5d9dfa299557be6af799f205d"
+      },
+      "weather": {
+        "files": 86,
+        "missing_files": 3,
+        "bytes": 4015030,
+        "manifest_path": "data/raw/korea-wildfire/weather-manifest-2020.json",
+        "manifest_sha256": "147a377d26a7b2ee00b22c693488bef76a07afea61923723c4f868a1544a2c5c"
+      },
+      "firms": {
+        "files": 2,
+        "missing_files": 0,
+        "bytes": 1373955,
+        "manifest_path": "data/raw/korea-wildfire/firms/manifest-2020.json",
+        "manifest_sha256": "a2126bd5d19645fb24090e7d42cac09d1fc4204eb82f603fe4470babdaff2715"
+      }
+    },
+    "2021": {
+      "modis": {
+        "files": 846,
+        "missing_files": 0,
+        "bytes": 469993177,
+        "manifest_path": "data/raw/korea-wildfire/fire-manifest-2021.json",
+        "manifest_sha256": "934f567e8ae63d12d52e6c81e3c9b37d1688955d17d0f87900b34b3b6932b6ab"
+      },
+      "weather": {
+        "files": 85,
+        "missing_files": 2,
+        "bytes": 4594427,
+        "manifest_path": "data/raw/korea-wildfire/weather-manifest-2021.json",
+        "manifest_sha256": "442dfacbb326082691fdb825a733a0293105a40f5082972926219e8d24f5281f"
+      },
+      "firms": {
+        "files": 2,
+        "missing_files": 0,
+        "bytes": 1313218,
+        "manifest_path": "data/raw/korea-wildfire/firms/manifest-2021.json",
+        "manifest_sha256": "fa56edaed6c139904f6826f00961187b0383d662a85d1aff1032157ec3d30ad9"
+      }
+    },
+    "2022": {
+      "modis": {
+        "files": 801,
+        "missing_files": 0,
+        "bytes": 431109818,
+        "manifest_path": "data/raw/korea-wildfire/fire-manifest-2022.json",
+        "manifest_sha256": "3c3ac618d413cc90fcfc711228373f7d305cacab9f2a7d8f9e8009e817dd64c6"
+      },
+      "weather": {
+        "files": 85,
+        "missing_files": 1,
+        "bytes": 6220230,
+        "manifest_path": "data/raw/korea-wildfire/weather-manifest-2022.json",
+        "manifest_sha256": "193c2a02bed99a3e9a385bfca141a3a9168937b0fc453f27dfde8969f7941f26"
+      },
+      "firms": {
+        "files": 2,
+        "missing_files": 0,
+        "bytes": 1615937,
+        "manifest_path": "data/raw/korea-wildfire/firms/manifest-2022.json",
+        "manifest_sha256": "8e95c97dd463562132d6ac327c1e643685a06d157715704a822cd28e97ebc0f6"
+      }
+    },
+    "2023": {
+      "modis": {
+        "files": 810,
+        "missing_files": 0,
+        "bytes": 435202963,
+        "manifest_path": "data/raw/korea-wildfire/fire-manifest-2023.json",
+        "manifest_sha256": "0c7a84a1a52c69b78c27c2c0e55bf9662d1457de956eaa08e8040a1e25853758"
+      },
+      "weather": {
+        "files": 84,
+        "missing_files": 1,
+        "bytes": 6710125,
+        "manifest_path": "data/raw/korea-wildfire/weather-manifest-2023.json",
+        "manifest_sha256": "3432ce6a93366c39b31e1acba30c52f8418edc8cd09cbea45796a701baa38742"
+      },
+      "firms": {
+        "files": 2,
+        "missing_files": 0,
+        "bytes": 1320525,
+        "manifest_path": "data/raw/korea-wildfire/firms/manifest-2023.json",
+        "manifest_sha256": "eb245a3af4ff54e15f94829fb453668091495954879d6f0d1a9829796dc52124"
+      }
+    },
+    "2024": {
+      "modis": {
+        "files": 837,
+        "missing_files": 0,
+        "bytes": 452699721,
+        "manifest_path": "data/raw/korea-wildfire/fire-manifest-2024.json",
+        "manifest_sha256": "81f8bff54e79b6f32f56ccfc145cb2270cfc3e06cc2469496871e4bce80e3063"
+      },
+      "weather": {
+        "files": 82,
+        "missing_files": 2,
+        "bytes": 5498346,
+        "manifest_path": "data/raw/korea-wildfire/weather-manifest-2024.json",
+        "manifest_sha256": "ecffa77e79205996b29fc8e9c76b0039b9cb27447634d0ea1012085b91ef3ab9"
+      },
+      "firms": {
+        "files": 2,
+        "missing_files": 0,
+        "bytes": 1109109,
+        "manifest_path": "data/raw/korea-wildfire/firms/manifest-2024.json",
+        "manifest_sha256": "0ac2fe5d7093cb41aae7dcf60c37326eb0bdac4c0ef409671382ce2bb773cf52"
+      }
+    },
+    "2025": {
+      "modis": {
+        "files": 513,
+        "missing_files": 0,
+        "bytes": 279812706,
+        "manifest_path": "data/raw/korea-wildfire/fire-manifest-2025.json",
+        "manifest_sha256": "2d9b4fd4c2fc1dc27b78f6b76bb2aee3fc5b7702aaddef47ae4a0665702fbd46"
+      },
+      "weather": {
+        "files": 82,
+        "missing_files": 1,
+        "bytes": 3631506,
+        "manifest_path": "data/raw/korea-wildfire/weather-manifest-2025.json",
+        "manifest_sha256": "b5b803b2265f216ede146532e7f3a5cbc897aa88b0ea6a738aae32862c2ee377"
+      }
+    }
+  },
+  "goes": {
+    "oak_2022": {
+      "files": 384,
+      "bytes": 165120518,
+      "manifest_sha256": "5be9bf018165c71a20a7374f0ed8d6410a305e78d82ff204b61f68e2505bce3d"
+    },
+    "dixie_2021": {
+      "files": 299,
+      "bytes": 126620932,
+      "manifest_sha256": "75176b813215578eb077973817d6ecf9230a0019498f714c03f9d9c879b69335"
+    },
+    "bootleg_2021": {
+      "files": 384,
+      "bytes": 152811324,
+      "manifest_sha256": "5aac107ca1aa22c0caa0b5169875aa3dfea595370756b5e0949a46a661387512"
+    },
+    "smith_river_2023": {
+      "files": 384,
+      "bytes": 161258075,
+      "manifest_sha256": "62ec42ad1f5cae43b7fa88e04b08c1cd6d433c1e6da95fd72c01128d7cdc427d"
+    },
+    "caldor_2021": {
+      "files": 300,
+      "bytes": 131568215,
+      "manifest_sha256": "871310b94baa7d3d08e3289bfeefa452cb38e4062e7034d57eecca09cc95815d"
+    },
+    "mosquito_2022": {
+      "files": 384,
+      "bytes": 165678919,
+      "manifest_sha256": "e635e8a62d5689b38dd1d771115c2cd806823825a2d739aded91b25fa879f1a8"
+    }
+  },
+  "source_archives": {
+    "/home1/ncloud/bonghwa-hourly-source.tgz": "8bc9af532a7c2c03e9f732583b084494af34b37bd761a2abbafe960e5b9c3692",
+    "/home1/ncloud/bonghwa-hourly-source-v2.tgz": "9658e17f8dcc1e8526a68199c1c1ad9a5a37dc95c5e5fdbd6a5845d56623507b",
+    "/home1/ncloud/bonghwa-korea-source-v4.tgz": "80b6aec6f15b5223915474f18a291bebcd5d63b6b5fe0fde0a750f8e29660cd2",
+    "/home1/ncloud/bonghwa-hourly-evaluation-v1.tgz": "fc5536625501ed9b34927a71823833caaddc4b14dfbed07ce8d49912b5aaddc6",
+    "/home1/ncloud/bonghwa-korea-source-v3.tgz": "30d4ab21bbcf661ba1c1ca4d26d9b17e0103532677b3b9548805f4ae5e8e856a",
+    "/home1/ncloud/bonghwa-korea-source-v5.tgz": "ccf2a828e746127cfef04cb81ce78069d4f647b3824973a6c03716ec3b90114c",
+    "/home1/ncloud/bonghwa-hourly-source-v3.tgz": "1d70555e48c0dd33a8703be0a6788b15d1eae734900a894bc30896e29866934a",
+    "/home1/ncloud/bonghwa-hourly-source-v4.tgz": "c60b628b9efbbc70854e6e4a80652a870b0a3f0cbc3186e4092bf8be029aedeb",
+    "/home1/ncloud/bonghwa-korea-source-v2.tgz": "1ee8d6fd7c8aed21c29c50d98ecbfae04ce60ee99cc791431206662cb56ec369",
+    "/home1/ncloud/bonghwa-korea-source.tgz": "6640739e0b4b9e450cec48b4dc5573322d6158debf448dfec5b7da0a365eb5e3"
+  }
+}

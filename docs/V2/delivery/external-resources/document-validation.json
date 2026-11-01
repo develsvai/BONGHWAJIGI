@@ -1,0 +1,53 @@
+{
+  "checked_at": "2026-10-31T15:19:55.867223+00:00",
+  "scope": "서버·GPU·학습 문서 및 보충 증빙; 앱 저장소 제외",
+  "document_sha256": "eb48d539c15fc53fe8baf183cc11b8ba2d3cef76d690f7c8b71741a8caaa474c",
+  "lock_sha256": {
+    "uv.lock": "8b0c3710815987ba0663ac1ffca139d7f4135673ec52cdb82c95c7d18a65a5de",
+    "training/uv.lock": "d32f342337527d3320c8dbf253304d1fbeba4794723cfbe86010a433d92aada7"
+  },
+  "expected_external_lock_pairs": 174,
+  "documented_external_pairs": 174,
+  "missing_packages": [],
+  "extra_packages": [],
+  "missing_direct_dependencies": [],
+  "hatchling_build_requirement_documented": true,
+  "general_api_operations": 52,
+  "general_api_missing": [],
+  "general_api_extra": [],
+  "gpu_api_operations": 4,
+  "gpu_api_missing": [],
+  "gpu_api_extra": [],
+  "wheel_name_versions_checked": 36,
+  "wheel_errors": [],
+  "wheel_without_license_files": [
+    {
+      "name": "cuda-toolkit",
+      "version": "12.8.1"
+    },
+    {
+      "name": "cuda-toolkit",
+      "version": "13.2.2"
+    }
+  ],
+  "source_url_rows": 54,
+  "malformed_table_lines": [],
+  "broken_local_links": [],
+  "credential_pattern_matches": {
+    "비공개 키": 0,
+    "실제 Bearer 값": 0,
+    "JWT 값": 0,
+    "URL 인증값": 0
+  },
+  "preserved_verified_data_and_api_sections": {
+    "## 5. 학습·연구": true,
+    "## 6. 조사했지만": true,
+    "## 7. API 접근": true
+  },
+  "preexisting_code_user_confirmation_exact": true,
+  "notes": [
+    "외부 URL 전체의 자동 가용성 검사·법적 적합성 보증은 아님.",
+    "36개는 같은 고정 버전의 공식 wheel이며 모든 ABI·OS의 동일성 검사를 뜻하지 않음."
+  ],
+  "passed": true
+}

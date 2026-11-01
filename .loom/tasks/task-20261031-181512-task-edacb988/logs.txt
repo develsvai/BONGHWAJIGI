@@ -1,0 +1,9 @@
+[2026-10-31T18:15:31+00:00] agent=foreground task=task-20261031-181512-task-edacb988 Foreground task session started.
+2026-10-31T18:15Z Task create/run, 이전 앱 pin과 배포 근거·외부자원 scope 확인. 지도SDK2.9.1 읽기 검토와 앱 코드리뷰 두 항목 전달/반영 확인. 최종 지도 QA/SHA 대기.
+
+2026-11-01 KST: wrapper MIT·실제 SDK3.23.2 AAR LICENSE/NOTICE·공식 서비스약관 확인. 네이버 지도 자원 문서 초안 추가. 최종 APK QA와 원격 SHA 대기.
+
+2026-10-31 18:23:43 UTC: 기존 단말 위치 revision2·유효기한과 mobile-fire bounds read-only 확인; projection error없음. 앱 담당자 타일/마커/카메라 QA 확인, 상세 사건 영역과 최종SHA 대기.
+
+2026-11-01 KST: ced2446 gitlink·문서·라이선스 좁은 부분 stage 후 main ad0d34d push. 새 원격 recursive clone clean; sourcechecker/API/hash 모두 통과. 재현 기록을 추가하고 Task finish 예정.
+[2026-10-31T18:28:39+00:00] agent=foreground task=task-20261031-181512-task-edacb988 지도 APK0.2.1 검증 앱 ced2446을 gitlink로 고정했다. 실제 APK 해시·실행 소스·API·공식 라이선스를 대조하고 원격 recursive clone/sourcechecker/clean 검증을 통과했다. 타 채팅 변경은 보존했다.

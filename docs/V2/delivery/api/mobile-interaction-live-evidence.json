@@ -1,0 +1,69 @@
+{
+  "base_url": "https://inno-server-011.tail2dac17.ts.net",
+  "tls_verification": true,
+  "mode": "simulation",
+  "synthetic_position_only": true,
+  "source_commit": "414482274f9252056ac350c69d4687e7a1429d8b",
+  "migration": "7c8e910ba402",
+  "openapi_sha256": "e9075d620d9d916d512328b380e35c9073f9e681fd8236a86cc083787a735671",
+  "checks": [
+    "registration",
+    "device",
+    "profile",
+    "location",
+    "authenticated_simulation_route",
+    "openapi_exact_match",
+    "real_qwen_stairs_proposal",
+    "real_qwen_trapped_proposal",
+    "no_context_write_before_confirmation",
+    "idempotent_turn_retry",
+    "turn_get",
+    "user_confirmed_context",
+    "stale_turn_rejected",
+    "policy_three_levels",
+    "outside_demo_start_route_unavailable",
+    "logout"
+  ],
+  "turns": [
+    {
+      "source": "qwen_grounded",
+      "elapsed_seconds": 2.15,
+      "proposed_field": "overrides.stairs",
+      "proposed_value": "difficult",
+      "context_revision_before": 0,
+      "context_revision_after": 1,
+      "stale_turn_status": 409
+    },
+    {
+      "source": "qwen_grounded",
+      "elapsed_seconds": 3.19,
+      "proposed_field": "state.can_move",
+      "proposed_value": false,
+      "context_revision_before": 1,
+      "context_revision_after": 2,
+      "stale_turn_status": 409
+    }
+  ],
+  "labels": [
+    "경고",
+    "대피",
+    "위급"
+  ],
+  "response_revisions": [
+    2,
+    3,
+    4
+  ],
+  "checked_at": "2026-10-31T18:53:39.222664+00:00",
+  "runtime_image": "bonghwajigi-mvp:4144822",
+  "dialogue_source_sha256": "e6bf50c910a4475306e4c03193499b2d829fc6d64e68f48ecc20d5854e96adf9",
+  "database_preservation": {
+    "non_mobile_accounts_before": 9,
+    "non_mobile_accounts_after": 9,
+    "non_mobile_entities_before": 87,
+    "non_mobile_entities_after": 87,
+    "backup_created": true,
+    "private_environment_mode": "0600",
+    "alembic_check": "no_new_upgrade_operations"
+  }
+}

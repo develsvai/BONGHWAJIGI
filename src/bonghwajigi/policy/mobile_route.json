@@ -1,0 +1,18 @@
+{
+  "id": "mobile-demo-route-v1",
+  "origin": "synthetic",
+  "operational_use": false,
+  "label": "합성 시연 경로 · 실제 이동에 사용하지 마세요",
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [[129.35, 36.4], [129.351, 36.401], [129.3525, 36.4015], [129.354, 36.403]]
+  },
+  "start": {"name": "합성 시연 시작점", "latitude": 36.4, "longitude": 129.35},
+  "destination": {"name": "합성 시연 목적지 · 지정 대피소 아님", "latitude": 36.403, "longitude": 129.354},
+  "steps": [
+    {"sequence": 1, "text": "시연 시작점과 경로 표시를 확인해요.", "point": {"latitude": 36.4, "longitude": 129.35}},
+    {"sequence": 2, "text": "중간 시연 지점이에요. 실제 도로 통행 가능 여부는 확인하지 않았어요.", "point": {"latitude": 36.4015, "longitude": 129.3525}},
+    {"sequence": 3, "text": "시연 목적지예요. 실제 이동은 공식 안내를 따라야 해요.", "point": {"latitude": 36.403, "longitude": 129.354}}
+  ],
+  "bounds": {"west": 129.349, "east": 129.355, "south": 36.399, "north": 36.404}
+}

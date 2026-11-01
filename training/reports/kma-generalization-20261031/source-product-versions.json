@@ -1,0 +1,71 @@
+{
+  "events": [
+    {
+      "event": "andong_2020",
+      "split": "train",
+      "products": [
+        {
+          "algorithm_version": "GK2A_FF_v1.6.2.3",
+          "processing_environment": "operation",
+          "files": 119
+        }
+      ]
+    },
+    {
+      "event": "andong_2021",
+      "split": "train",
+      "products": [
+        {
+          "algorithm_version": "GK2A_FF_v1.6.2.3",
+          "processing_environment": "operation",
+          "files": 119
+        }
+      ]
+    },
+    {
+      "event": "hapcheon_2022",
+      "split": "train",
+      "products": [
+        {
+          "algorithm_version": "GK2A_FF_v1.2022.02.3",
+          "processing_environment": "reprocess",
+          "files": 119
+        }
+      ]
+    },
+    {
+      "event": "uljin_2022",
+      "split": "train",
+      "products": [
+        {
+          "algorithm_version": "GK2A_FF_v1.2022.02.3",
+          "processing_environment": "reprocess",
+          "files": 119
+        }
+      ]
+    },
+    {
+      "event": "gangneung_2023",
+      "split": "calibration",
+      "products": [
+        {
+          "algorithm_version": "GK2A_FF_v1.2023.01.3",
+          "processing_environment": "operation",
+          "files": 119
+        }
+      ]
+    },
+    {
+      "event": "hongseong_2023",
+      "split": "validation",
+      "products": [
+        {
+          "algorithm_version": "GK2A_FF_v1.2023.01.3",
+          "processing_environment": "operation",
+          "files": 120
+        }
+      ]
+    }
+  ],
+  "interpretation": "Version/environment differences are observed; their causal performance effect is not isolated."
+}

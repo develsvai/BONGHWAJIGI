@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"><title>AI 모델별 역할</title><rect x="0" y="0" width="1600" height="900" rx="0" fill="#F7F8F5" stroke="none" stroke-width="1"/>
+<text x="72" y="93.6" font-family="Apple SD Gothic Neo, sans-serif" font-size="48" font-weight="700" fill="#172E2A" text-anchor="start">AI 모델별 역할</text>
+<text x="74" y="143.75" font-family="Apple SD Gothic Neo, sans-serif" font-size="25" font-weight="400" fill="#61736F" text-anchor="start">관련 근거를 찾고 정리하며, 최종 대응 단계는 서버의 고정 규칙이 결정합니다</text>
+<rect x="72" y="179" width="55" height="5" rx="0" fill="#1C7055" stroke="none" stroke-width="1"/>
+<text x="72" y="870.1" font-family="Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="400" fill="#61736F" text-anchor="start">봉화지기  /  산불 MVP 시연 구성  /  2026.11.01 기준</text>
+<text x="1528" y="866" font-family="Apple SD Gothic Neo, sans-serif" font-size="20" font-weight="400" fill="#61736F" text-anchor="end">2 / 3</text>
+<rect x="72" y="207" width="958" height="48" rx="12" fill="#E7F1E8" stroke="none" stroke-width="1"/>
+<text x="93" y="236.85" font-family="Apple SD Gothic Neo, sans-serif" font-size="23" font-weight="700" fill="#1C7055" text-anchor="start">현재 연결된 자료 분석 흐름  ·  GPU 서버</text>
+<rect x="1066" y="207" width="462" height="48" rx="12" fill="#EBEFEB" stroke="none" stroke-width="1"/>
+<text x="1087" y="236.85" font-family="Apple SD Gothic Neo, sans-serif" font-size="23" font-weight="700" fill="#71817D" text-anchor="start">별도 예측 연구  ·  서비스 미연결</text>
+<polyline points="1048,281 1048,653" fill="none" stroke="#DAE3DC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="101.4" cy="308.4" rx="18.72" ry="18.72" fill="none" stroke="#1C7055" stroke-width="3.9000000000000004"/>
+<polyline points="114.66,322.44 131.82,339.6" fill="none" stroke="#1C7055" stroke-width="4.68" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="95.16" cy="305.28" rx="2.34" ry="2.34" fill="#1C7055" stroke="none" stroke-width="1"/>
+<ellipse cx="105.3" cy="301.38" rx="2.34" ry="2.34" fill="#1C7055" stroke="none" stroke-width="1"/>
+<ellipse cx="105.3" cy="312.3" rx="2.34" ry="2.34" fill="#1C7055" stroke="none" stroke-width="1"/>
+<polyline points="95.16,305.28 105.3,301.38 105.3,312.3 95.16,305.28" fill="none" stroke="#1C7055" stroke-width="1.56" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="163" y="311.4" font-family="Apple SD Gothic Neo, sans-serif" font-size="32" font-weight="700" fill="#172E2A" text-anchor="start">근거 찾기</text>
+<text x="163" y="347.9" font-family="Apple SD Gothic Neo, sans-serif" font-size="22" font-weight="700" fill="#1C7055" text-anchor="start">Qwen3-Embedding-0.6B</text>
+<polyline points="498,313 533,313" fill="none" stroke="#1C7055" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="525,306 541,313 525,320" fill="none" stroke="#1C7055" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="574.2" y="289.2" width="44.279999999999994" height="44.279999999999994" rx="6.56" fill="#FFFFFF" stroke="#146C76" stroke-width="2.46"/>
+<polyline points="584.04,281 584.04,289.2" fill="none" stroke="#146C76" stroke-width="2.46" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="584.04,333.48 584.04,341.68" fill="none" stroke="#146C76" stroke-width="2.46" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="566,299.04 574.2,299.04" fill="none" stroke="#146C76" stroke-width="2.46" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="618.48,299.04 626.68,299.04" fill="none" stroke="#146C76" stroke-width="2.46" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="596.34,281 596.34,289.2" fill="none" stroke="#146C76" stroke-width="2.46" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="596.34,333.48 596.34,341.68" fill="none" stroke="#146C76" stroke-width="2.46" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="566,311.34 574.2,311.34" fill="none" stroke="#146C76" stroke-width="2.46" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="618.48,311.34 626.68,311.34" fill="none" stroke="#146C76" stroke-width="2.46" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="608.64,281 608.64,289.2" fill="none" stroke="#146C76" stroke-width="2.46" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="608.64,333.48 608.64,341.68" fill="none" stroke="#146C76" stroke-width="2.46" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="566,323.64 574.2,323.64" fill="none" stroke="#146C76" stroke-width="2.46" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="618.48,323.64 626.68,323.64" fill="none" stroke="#146C76" stroke-width="2.46" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="585.68,305.6 594.7,305.6 594.7,316.26 605.36,316.26" fill="none" stroke="#146C76" stroke-width="3.28" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="655" y="311.4" font-family="Apple SD Gothic Neo, sans-serif" font-size="32" font-weight="700" fill="#172E2A" text-anchor="start">자료 정리하기</text>
+<text x="655" y="347.9" font-family="Apple SD Gothic Neo, sans-serif" font-size="22" font-weight="700" fill="#146C76" text-anchor="start">Qwen3-4B-Instruct-2507</text>
+<polyline points="1082,282 1082,340.1 1152.55,340.1" fill="none" stroke="#71817D" stroke-width="2.4899999999999998" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1091.96,328.48 1106.9,321.01 1122.67,324.33 1137.61,303.58 1150.06,292.79" fill="none" stroke="#71817D" stroke-width="3.32" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="1091.96" cy="328.48" rx="3.32" ry="3.32" fill="#FFFFFF" stroke="#71817D" stroke-width="1.66"/>
+<ellipse cx="1106.9" cy="321.01" rx="3.32" ry="3.32" fill="#FFFFFF" stroke="#71817D" stroke-width="1.66"/>
+<ellipse cx="1122.67" cy="324.33" rx="3.32" ry="3.32" fill="#FFFFFF" stroke="#71817D" stroke-width="1.66"/>
+<ellipse cx="1137.61" cy="303.58" rx="3.32" ry="3.32" fill="#FFFFFF" stroke="#71817D" stroke-width="1.66"/>
+<ellipse cx="1150.06" cy="292.79" rx="3.32" ry="3.32" fill="#FFFFFF" stroke="#71817D" stroke-width="1.66"/>
+<text x="1180" y="310.45" font-family="Apple SD Gothic Neo, sans-serif" font-size="31" font-weight="700" fill="#172E2A" text-anchor="start">접근 가능성 연구</text>
+<text x="1180" y="349.8" font-family="Apple SD Gothic Neo, sans-serif" font-size="24" font-weight="700" fill="#71817D" text-anchor="start">XGBoost</text>
+<text x="72" y="404" font-family="Apple SD Gothic Neo, sans-serif" font-size="20" font-weight="700" fill="#61736F" text-anchor="start">왜 필요한가</text>
+<text x="72" y="446.75" font-family="Apple SD Gothic Neo, sans-serif" font-size="25" font-weight="400" fill="#172E2A" text-anchor="start">표현이 다른 자료에서도</text>
+<text x="72" y="480.75" font-family="Apple SD Gothic Neo, sans-serif" font-size="25" font-weight="400" fill="#172E2A" text-anchor="start">같은 사건의 근거를 찾기 위해</text>
+<polyline points="72,510 502,510" fill="none" stroke="#DAE3DC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="566" y="404" font-family="Apple SD Gothic Neo, sans-serif" font-size="20" font-weight="700" fill="#61736F" text-anchor="start">왜 필요한가</text>
+<text x="566" y="446.75" font-family="Apple SD Gothic Neo, sans-serif" font-size="25" font-weight="400" fill="#172E2A" text-anchor="start">여러 문서를 함께 읽고</text>
+<text x="566" y="480.75" font-family="Apple SD Gothic Neo, sans-serif" font-size="25" font-weight="400" fill="#172E2A" text-anchor="start">사건 내용을 짧게 정리하기 위해</text>
+<polyline points="566,510 996,510" fill="none" stroke="#DAE3DC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1080" y="404" font-family="Apple SD Gothic Neo, sans-serif" font-size="20" font-weight="700" fill="#61736F" text-anchor="start">왜 필요한가</text>
+<text x="1080" y="446.75" font-family="Apple SD Gothic Neo, sans-serif" font-size="25" font-weight="400" fill="#172E2A" text-anchor="start">관측 숫자의 변화로</text>
+<text x="1080" y="480.75" font-family="Apple SD Gothic Neo, sans-serif" font-size="25" font-weight="400" fill="#172E2A" text-anchor="start">화재 접근을 추정하기 위해</text>
+<polyline points="1080,510 1510,510" fill="none" stroke="#DAE3DC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="72" y="552.9" font-family="Apple SD Gothic Neo, sans-serif" font-size="22" font-weight="700" fill="#1C7055" text-anchor="start">입력  관측 내용과 문서</text>
+<text x="72" y="594.85" font-family="Apple SD Gothic Neo, sans-serif" font-size="23" font-weight="400" fill="#172E2A" text-anchor="start">출력  문서 벡터</text>
+<text x="72" y="628.85" font-family="Apple SD Gothic Neo, sans-serif" font-size="23" font-weight="400" fill="#172E2A" text-anchor="start">DB가 유사한 근거와 출처를 검색</text>
+<text x="72" y="672" font-family="Apple SD Gothic Neo, sans-serif" font-size="20" font-weight="400" fill="#61736F" text-anchor="start">인터넷 뉴스는 별도 검색으로 보강</text>
+<text x="566" y="552.9" font-family="Apple SD Gothic Neo, sans-serif" font-size="22" font-weight="700" fill="#146C76" text-anchor="start">입력  검색된 근거와 원문</text>
+<text x="566" y="594.85" font-family="Apple SD Gothic Neo, sans-serif" font-size="23" font-weight="400" fill="#172E2A" text-anchor="start">출력  사건 요약과 인용 출처</text>
+<text x="566" y="628.85" font-family="Apple SD Gothic Neo, sans-serif" font-size="23" font-weight="400" fill="#172E2A" text-anchor="start">참고 설명으로 보관</text>
+<text x="566" y="672" font-family="Apple SD Gothic Neo, sans-serif" font-size="20" font-weight="400" fill="#61736F" text-anchor="start">개인 단계·행동을 직접 생성하지 않음</text>
+<text x="1080" y="552.9" font-family="Apple SD Gothic Neo, sans-serif" font-size="22" font-weight="700" fill="#71817D" text-anchor="start">입력  정형 관측과 위치 자료</text>
+<text x="1080" y="594.85" font-family="Apple SD Gothic Neo, sans-serif" font-size="23" font-weight="400" fill="#172E2A" text-anchor="start">출력 후보  접근 시간·기간별 확률</text>
+<text x="1080" y="628.85" font-family="Apple SD Gothic Neo, sans-serif" font-size="23" font-weight="400" fill="#172E2A" text-anchor="start">현재 앱 제공값은 예측 불가</text>
+<text x="1080" y="672" font-family="Apple SD Gothic Neo, sans-serif" font-size="20" font-weight="400" fill="#61736F" text-anchor="start">국내 검증과 보정 후 연결할 후보</text>
+<rect x="72" y="716" width="1456" height="104" rx="18" fill="#172E2A" stroke="none" stroke-width="1"/>
+<text x="98" y="758.7" font-family="Apple SD Gothic Neo, sans-serif" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="start">최종 행동 안내는 일반 서버에서 결정</text>
+<text x="98" y="799.8" font-family="Apple SD Gothic Neo, sans-serif" font-size="24" font-weight="400" fill="#DBE8DD" text-anchor="start">공식 경보  +  사용자 위치·상태  +  DB의 기본 행동 지침과 대응 규칙</text></svg>

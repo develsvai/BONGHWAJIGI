@@ -1,0 +1,36 @@
+{
+  "id": "task-def-20261031-035154-v2-5-api-8ae5b0e1",
+  "job_definition_id": "job-20261031-002626-api-18805e8a",
+  "title": "V2와 최신 5개 화면을 대조해 앱 API 초안과 화면별 인계 패키지 작성",
+  "description": "사용자가 앱 연동 API 계약과 인계 Job을 다시 확인하고 최신 HeoNey 화면 및 V2 설계를 바탕으로 각 API 경로 사용법 대응 화면을 포함한 앱팀 전달 문서를 지금 작성하도록 지시했다. E1과 E2의 선행 데이터 및 정책이 미완료이므로 그것을 완료로 바꾸지 않고 검증 가능한 선행 계약 초안을 별도 Task로 작성한다.",
+  "created_at": "2026-10-31T03:51:54+00:00",
+  "updated_at": "2026-10-31T04:14:38+00:00",
+  "order_index": 3,
+  "legacy_task_id": "task-20261031-035154-v2-5-api-39004d37",
+  "depends_on": [],
+  "expected_output": "OpenAPI 3.1 명세, 정상 예외 모의 응답, API 사용법, 5개 화면 매핑과 호출 순서, Job 재검토 및 미결정 목록, 계약 검증 도구와 결과",
+  "done_condition": "최신 화면 요구와 V2 원칙이 추적되고 API별 경로 인증 입력 출력 오류 사용법과 화면 매핑이 문서화되며 OpenAPI 및 예제가 검사되고 배포 미완료와 조건부 기능이 구분되어 로컬 커밋된다.",
+  "in_scope": "V2 및 최신 HeoNey 화면 문서 검토; 기존 API Job 재검토; API 계약 초안과 모의 예제; 앱팀 인계 문서; 계약 검증; 관련 Loom 기록 및 로컬 커밋",
+  "out_of_scope": "모바일 앱 구현; 실제 서버 배포; 실제 재난 정책 임계값 확정; 실시간 음성 및 자동 신고 구현; 실제 긴급 연락; 원격 push; 다른 Task의 허위 완료 처리",
+  "validation_hint": "OpenAPI 3.1 유효성, 요청 응답 예제의 스키마 일치, 화면 경로 대응 누락, 수정 해제 예측 불가 위치 불명확 경로 비활성 시나리오, 문서 링크 및 Loom strict",
+  "required_docs": [
+    "docs/V2/01_서비스_핵심_정리.md",
+    "docs/V2/02_실시간_서버_배치도.md",
+    "docs/V2/03_학습_검증_흐름도.md",
+    "docs/HeoNey/봉화지기_모바일_화면_기획서.md",
+    "docs/V2/04-execution-backlog.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/app-api-contract.md",
+    "docs/V2/delivery/api-handoff.md",
+    "docs/V2/delivery/api-job-review.md"
+  ],
+  "document_output_exceptions": [],
+  "default_agent": "foreground",
+  "context_policy_id": "",
+  "executor_policy_id": "",
+  "review_policy": "",
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

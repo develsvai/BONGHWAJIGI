@@ -1,0 +1,14 @@
+{
+  "qwen_active": "active",
+  "ready": {
+    "service": "gpu_api",
+    "status": "ready",
+    "stage": "model_runtime",
+    "models": {
+      "generation": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "embedding": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3"
+    }
+  },
+  "gpu_processes": "528588, /home1/ncloud/bonghwajigi/.venv-gpu/bin/python, 9072 MiB",
+  "gpu_service_stopped_or_restarted_during_audit": false
+}

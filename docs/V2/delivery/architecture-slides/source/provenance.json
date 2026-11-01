@@ -1,0 +1,84 @@
+{
+  "basis": "2026-11-01 KST 작업 트리와 이전 배포 검증 기록. 신규 원격 점검 아님.",
+  "git_head": "c62c005b456d8168c98e24d7223ba9b6440b570b",
+  "sources": [
+    {
+      "path": "deploy/compose/mvp.yaml",
+      "sha256": "367c0235e76dc0f8f6a315e78d51b2bd15dbdb401eed5476d2d8d9270355ce97"
+    },
+    {
+      "path": "src/bonghwajigi/retrieval/pipeline.py",
+      "sha256": "d26b204c8b4eaa68665ec2f5f3fb1333fd0da62aef615d4c543f8ab620a6dd9c"
+    },
+    {
+      "path": "src/bonghwajigi/retrieval/web_search.py",
+      "sha256": "8d6766fe96a85e707fcb2041e8de40939481fd67563f5681c9114c99587a8476"
+    },
+    {
+      "path": "src/bonghwajigi/policy/integration.py",
+      "sha256": "e2ea90b0499f284353d9a4e12c68c0984c827b0e636002b4fbf85fb6873198b7"
+    },
+    {
+      "path": "src/bonghwajigi/policy/service.py",
+      "sha256": "436980d05cc8771db5015135cf9a6084c2996f1892eb3a9efe2e81b1c8042754"
+    },
+    {
+      "path": "src/bonghwajigi/policy/three_stage.py",
+      "sha256": "f87558556c6f72aed8562f0228796f073068e663fc63a7279bfcb0a2f207326d"
+    },
+    {
+      "path": "src/bonghwajigi/events/urgent.py",
+      "sha256": "54152760bc669bb59de991c07f6994faafccc54960a9d3e7feb97295a86ca285"
+    },
+    {
+      "path": "src/bonghwajigi/notifications/service.py",
+      "sha256": "a40cff5313f361d787cab8faa44b900cdfdfebc52872655d2b52d28bcbd873f3"
+    },
+    {
+      "path": "src/bonghwajigi/api/mobile.py",
+      "sha256": "28983807290954b83fd20037cba91de7af7710a67f0d4c19856df7f418749be5"
+    },
+    {
+      "path": "docs/V2/delivery/mvp-server-evidence.json",
+      "sha256": "a8c3811341e14b4507aeab7fe9bbd518901166bc346c9133055faec6a88d06c1"
+    },
+    {
+      "path": "docs/V2/delivery/korea-wildfire-improvement.md",
+      "sha256": "174204d3542d0bf556927898e729b3e32149d677b2adedc4dd8588cf0e11df02"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "01-overview.png",
+      "sha256": "43d1746a2d8d5d1dcbc0e05e37bb9af4e94ede386b884eda2f66932659b02a65"
+    },
+    {
+      "path": "01-overview.svg",
+      "sha256": "0db64e01b38694e5f691da216028876b124b705c3b59b372423c25a04ba2f488"
+    },
+    {
+      "path": "02-ai-roles.png",
+      "sha256": "4dd5a51827b2ea1830bc48df849a4499639c866922f6583c065341e70dcf552d"
+    },
+    {
+      "path": "02-ai-roles.svg",
+      "sha256": "0b2f8cc5272dae3e26f7cb8bce251a7959e87adc142393bfbf3fe09fb229cede"
+    },
+    {
+      "path": "03-alert-update.png",
+      "sha256": "3bf5dba4649e10a18eabe90a3a354352c52d6ca4aaeb0b30ebaad955271c00e6"
+    },
+    {
+      "path": "03-alert-update.svg",
+      "sha256": "71bc238355ff23cc0d1f099b098269baef8c2a9b6e05f20b5b7d30af9500f669"
+    },
+    {
+      "path": "bonghwajigi-architecture.pptx",
+      "sha256": "b50b7107153059f6e7b7fc1b097748f7c3b8ccca040664225c4be2b68c44af7f"
+    },
+    {
+      "path": "bonghwajigi-architecture.zip",
+      "sha256": "6cef9e3aa2332e8c398257136347ff5d46c27e86043aaaaa198cbf4602d12daa"
+    }
+  ]
+}

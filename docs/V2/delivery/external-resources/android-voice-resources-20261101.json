@@ -1,0 +1,69 @@
+{
+  "checked_at": "2026-11-01 KST",
+  "scope": "앱0.2.1→0.3.0 신규 음성인식·서체 의존성 증분 확인; 전체 앱 SBOM 아님",
+  "baseline_app_commit": "ced24463bb79a6ef5d3b532f6d2a48215ca84a56",
+  "implementation_source": "964d6f19c4e3b5a6b0420d42de5624b61eaa90f5",
+  "packages": [
+    {
+      "name": "expo-speech-recognition",
+      "version": "58.0.1",
+      "license": "MIT",
+      "license_path": "node_modules/expo-speech-recognition/LICENSE",
+      "license_sha256": "d3ee89fbcdb9592f396dcfe657aae382152ac50398f1261ff2ea215b7485ddc8",
+      "runtime_dependencies": {}
+    },
+    {
+      "name": "expo-font",
+      "version": "58.0.11",
+      "license": "MIT",
+      "license_path": "node_modules/expo-font/LICENSE",
+      "license_sha256": "fb3ca4a837f5779e83cef89b78253a8949cfb9429c340309f62d0465ec6610b4",
+      "runtime_dependencies": {}
+    }
+  ],
+  "font": {
+    "name": "대한민국정부상징체 R",
+    "provider": "문화체육관광부",
+    "license_notice": "공공누리 제4유형(출처표시·상업적이용금지·변경금지), 영리 목적 협의",
+    "official_source": "https://www.mcst.go.kr/site/s_about/intro/symbol.jsp",
+    "app_path": "public/prototype/ROKG_R.ttf",
+    "app_sha256": "849c61ec05c9b468266a6ee3e7020ddc7c1696c9b3b29469b4986cab5e243a50",
+    "repository_notice_path": "public/prototype/ROKG-SOURCE.txt",
+    "repository_notice_sha256": "cdcdfda4034133190e412ae6754fddc1bf09bb9efda7505f1dad7d0b4353552a",
+    "notice_is_official_license_file": false,
+    "official_zip_sha256": "594ca3048a20788eb94afa65bde06da99f56bc02731b49ae4e1acc3b9ffd2cef",
+    "official_zip_content": "Windows 설치파일1개; 실행하지 않음",
+    "official_font_binary_match": "미확인",
+    "apk_notice_presence": "ROKG 이름의 source/license/notice 파일은 없음; 다른 경로의 고지·접근 화면 전수 확인은 미수행",
+    "apk_font_entry": "res/wD.ttf",
+    "apk_font_sha256_matches_app": true
+  },
+  "speech_service": {
+    "source": "https://developer.android.com/reference/android/speech/SpeechRecognizer",
+    "separate_provider_terms": true,
+    "remote_audio_processing_possible": true,
+    "app_audio_file_persistence": false,
+    "bonghwajigi_server_input": "텍스트"
+  },
+  "lockfile_delta": {
+    "new_runtime_package_names": [
+      "expo-speech-recognition"
+    ],
+    "existing_transitive_promoted_to_direct": [
+      "expo-font"
+    ],
+    "new_paid_speech_sdk": false,
+    "junit_6": "Android 테스트 전용",
+    "android_test_declarations": {
+      "junit_jupiter_version": "6.1.2",
+      "junit_platform_launcher_version": "Gradle 파일에서 미지정",
+      "license": "EPL-2.0",
+      "source": "https://github.com/junit-team/junit-framework/blob/main/LICENSE.md",
+      "native_test_execution": "미확인"
+    }
+  },
+  "apk_sha256": "c30826365bc023074bdfdc86372e47e8ae780a431ed3ac2caadc5856d79312fe",
+  "latest_runtime_source": "c0b87ea2bab3ba769ebe3bfbbc91e140d0c12f0e",
+  "apk_version": "0.3.1",
+  "final_app_pin": "f54cae1c753054de0a8f2eb76166807019db8db4"
+}

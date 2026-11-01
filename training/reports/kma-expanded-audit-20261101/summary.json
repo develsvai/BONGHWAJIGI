@@ -1,0 +1,163 @@
+{
+  "derived_from_sha256": {
+    "matched_comparison": "753ae4e0e17bc1d374ded9965151613e62fe6f911cbdb8c4a101df7d917cc77e",
+    "oof_report": "c3fb2993846bd08571599275ac979be67a0c5dd347dabf75e8a84077907fd301"
+  },
+  "formulas": {
+    "micro": "sum(rows * metric) / sum(rows), all nonempty event-horizon cells",
+    "macro_error": "mean(metric), all 17 nonempty event-horizon cells including single-class",
+    "macro_ap": "mean AP over the same 14 event-horizon cells with both classes",
+    "pooled_top10": "sum true positives / sum positives; ceil 10% separately at each issue and horizon; repeated grid observations, not people"
+  },
+  "comparison": {
+    "negative_current_fire_distance": {
+      "rows": 217604,
+      "nonempty_cells": 17,
+      "ap_eligible_cells": 14,
+      "macro_ap": 0.45804177266323537,
+      "top10_per_issue": {
+        "tp": 664,
+        "positives": 1079,
+        "examined": 21951,
+        "recall": 0.6153846153846154,
+        "precision": 0.030249191380802697
+      }
+    },
+    "negative_recent_fire_distance": {
+      "rows": 217604,
+      "nonempty_cells": 17,
+      "ap_eligible_cells": 14,
+      "macro_ap": 0.4714029842550555,
+      "top10_per_issue": {
+        "tp": 724,
+        "positives": 1079,
+        "examined": 21951,
+        "recall": 0.6709916589434661,
+        "precision": 0.0329825520477427
+      }
+    },
+    "constant_training_prior": {
+      "rows": 217604,
+      "nonempty_cells": 17,
+      "ap_eligible_cells": 14,
+      "macro_ap": 0.0066857632564299874,
+      "micro_brier": 0.004930904777816185,
+      "macro_brier": 0.06293169315767842,
+      "micro_logloss": 0.030783679160638372,
+      "macro_logloss": 0.2950522130012501,
+      "top10_per_issue": {
+        "tp": 38,
+        "positives": 1079,
+        "examined": 21951,
+        "recall": 0.03521779425393883,
+        "precision": 0.001731128422395335
+      }
+    },
+    "previous_v3": {
+      "rows": 217604,
+      "nonempty_cells": 17,
+      "ap_eligible_cells": 14,
+      "macro_ap": 0.35633535981498315,
+      "micro_brier": 0.022883589568480012,
+      "macro_brier": 0.02536865520218549,
+      "micro_logloss": 0.12591189854917106,
+      "macro_logloss": 0.13293700455411778,
+      "top10_per_issue": {
+        "tp": 714,
+        "positives": 1079,
+        "examined": 21951,
+        "recall": 0.6617238183503243,
+        "precision": 0.03252699193658603
+      }
+    },
+    "expanded_v4_exploratory": {
+      "rows": 217604,
+      "nonempty_cells": 17,
+      "ap_eligible_cells": 14,
+      "macro_ap": 0.42315254074080455,
+      "micro_brier": 0.016291252998082376,
+      "macro_brier": 0.032139345723755104,
+      "micro_logloss": 0.12368719528597494,
+      "macro_logloss": 0.16134940480266996,
+      "top10_per_issue": {
+        "tp": 716,
+        "positives": 1079,
+        "examined": 21951,
+        "recall": 0.6635773864689527,
+        "precision": 0.03261810395881737
+      }
+    },
+    "expanded_v4_group_cv": {
+      "rows": 217604,
+      "nonempty_cells": 17,
+      "ap_eligible_cells": 14,
+      "macro_ap": 0.43280968300395334,
+      "micro_brier": 0.015086494659410705,
+      "macro_brier": 0.012696805450777646,
+      "micro_logloss": 0.07080144725351892,
+      "macro_logloss": 0.06602464888161395,
+      "top10_per_issue": {
+        "tp": 698,
+        "positives": 1079,
+        "examined": 21951,
+        "recall": 0.6468952734012975,
+        "precision": 0.031798095758735365
+      }
+    }
+  },
+  "oof": {
+    "raw": {
+      "rows": 217604,
+      "nonempty_cells": 17,
+      "ap_eligible_cells": 14,
+      "macro_ap": 0.43280968300395334,
+      "micro_brier": 0.015086494659410705,
+      "macro_brier": 0.012696805450777646,
+      "micro_logloss": 0.07080144725351892,
+      "macro_logloss": 0.06602464888161395,
+      "top10_per_issue": {
+        "tp": 698,
+        "positives": 1079,
+        "examined": 21951,
+        "recall": 0.6468952734012975,
+        "precision": 0.031798095758735365
+      }
+    },
+    "sigmoid": {
+      "rows": 217604,
+      "nonempty_cells": 17,
+      "ap_eligible_cells": 14,
+      "macro_ap": 0.43280968300395334,
+      "micro_brier": 0.004247954569692711,
+      "macro_brier": 0.030589381830304765,
+      "micro_logloss": 0.023141132002367143,
+      "macro_logloss": 0.08677312693326436,
+      "top10_per_issue": {
+        "tp": 698,
+        "positives": 1079,
+        "examined": 21951,
+        "recall": 0.6468952734012975,
+        "precision": 0.031798095758735365
+      }
+    },
+    "constant_training_prior": {
+      "rows": 217604,
+      "nonempty_cells": 17,
+      "ap_eligible_cells": 14,
+      "macro_ap": 0.0066857632564299874,
+      "micro_brier": 0.004930904777816185,
+      "macro_brier": 0.06293169315767842,
+      "micro_logloss": 0.030783679160638372,
+      "macro_logloss": 0.2950522130012501,
+      "top10_per_issue": {
+        "tp": 38,
+        "positives": 1079,
+        "examined": 21951,
+        "recall": 0.03521779425393883,
+        "precision": 0.001731128422395335
+      }
+    }
+  },
+  "operational_use": false,
+  "test_evaluated": false
+}

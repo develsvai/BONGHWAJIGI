@@ -1,0 +1,28 @@
+{
+  "id": "task-def-20261031-151017-api-3df60d19",
+  "job_definition_id": "job-20261031-002017-v2-fe3bfad0",
+  "title": "외부 자원 문서에 고정 배포물 라이선스와 전체 API·출처 부록 병합",
+  "description": "같은 발표 문서의 기존 조사 결과와 현재 추가 확보한 174개 공식 metadata 및 36개 NVIDIA wheel LICENSE를 대조한다. 완료된 기존 Task를 재실행하지 않고 확인된 콘텐츠 이용조건을 보존하며 전체 자체 API와 출처 경로 부록 및 새 기준일을 병합한다.",
+  "created_at": "2026-10-31T15:10:17+00:00",
+  "updated_at": "2026-10-31T15:20:36+00:00",
+  "order_index": 16,
+  "legacy_task_id": "task-20261031-151017-api-ae9488f7",
+  "depends_on": [],
+  "expected_output": "기존 확인 내용이 보존된 단일 Markdown 완성본, 추가 라이선스·전체 API 근거 JSON과 누락 검증",
+  "done_condition": "기존 174개 의존성 표와 공식 데이터/콘텐츠 권리 조건을 보존하고, 36개 wheel 확인·일반52/GPU4 API·원본URL 부록을 병합한다. 사전보유 코드는 사용자의 실제 답변 범위만 표시한다.",
+  "in_scope": "외부 자원 문서와 증빙 병합; 고정 라이선스 교차확인; API/출처 누락 검사; Loom 기록",
+  "out_of_scope": "앱 조회/수정; 학습/서비스/배포 변경; 완료 Task 재실행; 타 작업의 metadata/코드 덮어쓰기; 권리 승인 허위표시",
+  "validation_hint": "두 lock의 174개 이름/버전 및 직접 의존성, 일반52/GPU4 동작, 표4열·링크·비밀정보·원문 보존 검사와 Loom strict",
+  "required_docs": [],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/external-resources-and-licenses.md"
+  ],
+  "document_output_exceptions": [],
+  "default_agent": "foreground",
+  "context_policy_id": "",
+  "executor_policy_id": "",
+  "review_policy": "",
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

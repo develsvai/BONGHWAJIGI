@@ -1,0 +1,34 @@
+{
+  "before": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "8165fb9c1a275e82ac49002704d596a631bda9fb",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/events.jsonl",
+      ".loom/job-runs/job-run-20261030-121237-job-20261030-113757-bonghwajigi-4841f0bc-5c75bb16/job-run.json",
+      ".loom/jobs/job-20261030-113757-bonghwajigi-4841f0bc/job.json",
+      ".loom/jobs/job-20261030-113757-bonghwajigi-4841f0bc/notes.md"
+    ],
+    "untracked_files": [
+      ".loom/task-definitions/task-def-20261031-025219-heoney-heoney-develop-f78351dd/",
+      ".loom/task-runs/task-run-20261031-025226-task-def-20261031-025219-heoney-heoney-develop-f-d8b2df15/",
+      ".loom/tasks/task-20261031-025219-heoney-heoney-develop-76fc6e2b/"
+    ],
+    "captured_at": "2026-10-31T02:52:27+00:00"
+  },
+  "after": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "9f594dbf957d003f749e91a57a532d6b5a8ac244",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/job-runs/job-run-20261030-121237-job-20261030-113757-bonghwajigi-4841f0bc-5c75bb16/job-run.json",
+      ".loom/task-definitions/task-def-20261031-025219-heoney-heoney-develop-f78351dd/task-definition.json"
+    ],
+    "untracked_files": [],
+    "captured_at": "2026-10-31T02:53:27+00:00"
+  }
+}

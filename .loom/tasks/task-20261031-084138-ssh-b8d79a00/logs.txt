@@ -1,0 +1,7 @@
+[2026-10-31T08:41:41+00:00] agent=foreground task=task-20261031-084138-ssh-b8d79a00 Foreground task session started.
+[2026-10-31T08:42:37+00:00] 기존 SSH 설정과 known_hosts 백업 후 두 서버 별칭 설정. config 사용자 소유·600. 공개 키 대조 후 일반 서버 주소만 known_hosts 추가.
+[2026-10-31T08:43:08+00:00] GPU 별칭 SSH 로그인 성공(exit 0). hostname=inno-gpu-011, user=ncloud, CPU=4, RAM=47.05 GiB, NVIDIA L4=23034 MiB, driver=580.159.04. nvidia-smi exit 0.
+[2026-10-31T08:43:19+00:00] 일반 서버 별칭 SSH 로그인 성공(exit 0). hostname=inno-server-011, user=ncloud, CPU=2, RAM=7.76 GiB. 두 서버 Ubuntu 24.04.1, Python 3.12.3.
+[검증] ssh -G 기본·보조 별칭 4개와 기존 별칭 4개 보존, 설정·키·백업 권한 600 확인. 비밀번호 미보관. 서버 변경·설치·배포 없음.
+[검증] Task boundary strict OK, workspace strict OK(6 Jobs/31 Tasks/31 definitions), git diff --check 통과. 운영 문서 등록 완료.
+[2026-10-31T08:45:22+00:00] agent=foreground task=task-20261031-084138-ssh-b8d79a00 두 SSH 별칭 설정과 실제 로그인·호스트 키·자원 확인을 완료하고 검증 문서 및 실행 기록을 커밋했다. 비밀번호는 보관하지 않았으며 다른 구현은 실행하지 않았다.

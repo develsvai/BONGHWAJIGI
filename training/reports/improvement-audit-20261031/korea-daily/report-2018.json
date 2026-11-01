@@ -1,0 +1,748 @@
+{
+  "rows": 96128,
+  "positives": 59,
+  "days": 116,
+  "new_observation_positives": 29,
+  "daily": [
+    {
+      "date": "2018-02-08",
+      "rows": 301,
+      "positives": 0,
+      "candidate_cells": 302
+    },
+    {
+      "date": "2018-02-10",
+      "rows": 88,
+      "positives": 0,
+      "candidate_cells": 165
+    },
+    {
+      "date": "2018-02-11",
+      "rows": 1023,
+      "positives": 3,
+      "candidate_cells": 1276
+    },
+    {
+      "date": "2018-02-12",
+      "rows": 837,
+      "positives": 2,
+      "candidate_cells": 837
+    },
+    {
+      "date": "2018-02-13",
+      "rows": 1732,
+      "positives": 0,
+      "candidate_cells": 1876
+    },
+    {
+      "date": "2018-02-17",
+      "rows": 214,
+      "positives": 0,
+      "candidate_cells": 777
+    },
+    {
+      "date": "2018-02-22",
+      "rows": 613,
+      "positives": 0,
+      "candidate_cells": 613
+    },
+    {
+      "date": "2018-02-26",
+      "rows": 2097,
+      "positives": 0,
+      "candidate_cells": 2172
+    },
+    {
+      "date": "2018-02-27",
+      "rows": 113,
+      "positives": 0,
+      "candidate_cells": 113
+    },
+    {
+      "date": "2018-03-03",
+      "rows": 784,
+      "positives": 0,
+      "candidate_cells": 1584
+    },
+    {
+      "date": "2018-03-07",
+      "rows": 485,
+      "positives": 0,
+      "candidate_cells": 1039
+    },
+    {
+      "date": "2018-03-10",
+      "rows": 1112,
+      "positives": 0,
+      "candidate_cells": 1112
+    },
+    {
+      "date": "2018-03-11",
+      "rows": 843,
+      "positives": 0,
+      "candidate_cells": 844
+    },
+    {
+      "date": "2018-03-12",
+      "rows": 528,
+      "positives": 0,
+      "candidate_cells": 529
+    },
+    {
+      "date": "2018-03-13",
+      "rows": 1655,
+      "positives": 0,
+      "candidate_cells": 1658
+    },
+    {
+      "date": "2018-03-14",
+      "rows": 2,
+      "positives": 0,
+      "candidate_cells": 1670
+    },
+    {
+      "date": "2018-03-17",
+      "rows": 5,
+      "positives": 0,
+      "candidate_cells": 218
+    },
+    {
+      "date": "2018-03-22",
+      "rows": 743,
+      "positives": 0,
+      "candidate_cells": 743
+    },
+    {
+      "date": "2018-03-23",
+      "rows": 612,
+      "positives": 0,
+      "candidate_cells": 612
+    },
+    {
+      "date": "2018-03-24",
+      "rows": 340,
+      "positives": 0,
+      "candidate_cells": 361
+    },
+    {
+      "date": "2018-03-25",
+      "rows": 711,
+      "positives": 0,
+      "candidate_cells": 715
+    },
+    {
+      "date": "2018-03-26",
+      "rows": 672,
+      "positives": 0,
+      "candidate_cells": 672
+    },
+    {
+      "date": "2018-03-28",
+      "rows": 1108,
+      "positives": 0,
+      "candidate_cells": 1113
+    },
+    {
+      "date": "2018-03-30",
+      "rows": 2130,
+      "positives": 1,
+      "candidate_cells": 2133
+    },
+    {
+      "date": "2018-03-31",
+      "rows": 1044,
+      "positives": 0,
+      "candidate_cells": 1044
+    },
+    {
+      "date": "2018-04-02",
+      "rows": 1355,
+      "positives": 0,
+      "candidate_cells": 1359
+    },
+    {
+      "date": "2018-04-07",
+      "rows": 507,
+      "positives": 0,
+      "candidate_cells": 515
+    },
+    {
+      "date": "2018-04-08",
+      "rows": 591,
+      "positives": 0,
+      "candidate_cells": 594
+    },
+    {
+      "date": "2018-04-09",
+      "rows": 966,
+      "positives": 0,
+      "candidate_cells": 1022
+    },
+    {
+      "date": "2018-04-11",
+      "rows": 607,
+      "positives": 0,
+      "candidate_cells": 702
+    },
+    {
+      "date": "2018-04-15",
+      "rows": 304,
+      "positives": 0,
+      "candidate_cells": 461
+    },
+    {
+      "date": "2018-04-18",
+      "rows": 643,
+      "positives": 1,
+      "candidate_cells": 644
+    },
+    {
+      "date": "2018-04-19",
+      "rows": 2990,
+      "positives": 17,
+      "candidate_cells": 2994
+    },
+    {
+      "date": "2018-04-20",
+      "rows": 2698,
+      "positives": 24,
+      "candidate_cells": 2734
+    },
+    {
+      "date": "2018-04-21",
+      "rows": 944,
+      "positives": 0,
+      "candidate_cells": 3191
+    },
+    {
+      "date": "2018-04-25",
+      "rows": 1648,
+      "positives": 2,
+      "candidate_cells": 1658
+    },
+    {
+      "date": "2018-04-26",
+      "rows": 977,
+      "positives": 0,
+      "candidate_cells": 977
+    },
+    {
+      "date": "2018-04-27",
+      "rows": 606,
+      "positives": 0,
+      "candidate_cells": 607
+    },
+    {
+      "date": "2018-04-29",
+      "rows": 262,
+      "positives": 0,
+      "candidate_cells": 274
+    },
+    {
+      "date": "2018-04-30",
+      "rows": 954,
+      "positives": 0,
+      "candidate_cells": 992
+    },
+    {
+      "date": "2018-05-03",
+      "rows": 412,
+      "positives": 0,
+      "candidate_cells": 413
+    },
+    {
+      "date": "2018-05-04",
+      "rows": 406,
+      "positives": 0,
+      "candidate_cells": 639
+    },
+    {
+      "date": "2018-05-13",
+      "rows": 1261,
+      "positives": 0,
+      "candidate_cells": 1266
+    },
+    {
+      "date": "2018-05-19",
+      "rows": 916,
+      "positives": 0,
+      "candidate_cells": 929
+    },
+    {
+      "date": "2018-05-21",
+      "rows": 544,
+      "positives": 0,
+      "candidate_cells": 552
+    },
+    {
+      "date": "2018-05-23",
+      "rows": 125,
+      "positives": 0,
+      "candidate_cells": 138
+    },
+    {
+      "date": "2018-05-26",
+      "rows": 98,
+      "positives": 0,
+      "candidate_cells": 543
+    },
+    {
+      "date": "2018-05-31",
+      "rows": 611,
+      "positives": 0,
+      "candidate_cells": 612
+    },
+    {
+      "date": "2018-06-01",
+      "rows": 1065,
+      "positives": 0,
+      "candidate_cells": 1069
+    },
+    {
+      "date": "2018-06-02",
+      "rows": 1694,
+      "positives": 0,
+      "candidate_cells": 1694
+    },
+    {
+      "date": "2018-06-03",
+      "rows": 484,
+      "positives": 0,
+      "candidate_cells": 551
+    },
+    {
+      "date": "2018-06-07",
+      "rows": 1480,
+      "positives": 0,
+      "candidate_cells": 1482
+    },
+    {
+      "date": "2018-06-09",
+      "rows": 595,
+      "positives": 0,
+      "candidate_cells": 979
+    },
+    {
+      "date": "2018-06-15",
+      "rows": 419,
+      "positives": 0,
+      "candidate_cells": 424
+    },
+    {
+      "date": "2018-06-16",
+      "rows": 673,
+      "positives": 0,
+      "candidate_cells": 838
+    },
+    {
+      "date": "2018-06-24",
+      "rows": 1536,
+      "positives": 0,
+      "candidate_cells": 1551
+    },
+    {
+      "date": "2018-07-07",
+      "rows": 508,
+      "positives": 0,
+      "candidate_cells": 563
+    },
+    {
+      "date": "2018-07-14",
+      "rows": 727,
+      "positives": 0,
+      "candidate_cells": 727
+    },
+    {
+      "date": "2018-07-16",
+      "rows": 976,
+      "positives": 0,
+      "candidate_cells": 976
+    },
+    {
+      "date": "2018-07-20",
+      "rows": 785,
+      "positives": 0,
+      "candidate_cells": 785
+    },
+    {
+      "date": "2018-07-21",
+      "rows": 614,
+      "positives": 0,
+      "candidate_cells": 619
+    },
+    {
+      "date": "2018-07-23",
+      "rows": 478,
+      "positives": 0,
+      "candidate_cells": 480
+    },
+    {
+      "date": "2018-07-24",
+      "rows": 1059,
+      "positives": 0,
+      "candidate_cells": 1059
+    },
+    {
+      "date": "2018-07-25",
+      "rows": 748,
+      "positives": 0,
+      "candidate_cells": 774
+    },
+    {
+      "date": "2018-07-26",
+      "rows": 1052,
+      "positives": 0,
+      "candidate_cells": 1053
+    },
+    {
+      "date": "2018-07-27",
+      "rows": 1180,
+      "positives": 0,
+      "candidate_cells": 1184
+    },
+    {
+      "date": "2018-07-29",
+      "rows": 1148,
+      "positives": 0,
+      "candidate_cells": 1149
+    },
+    {
+      "date": "2018-08-01",
+      "rows": 750,
+      "positives": 0,
+      "candidate_cells": 750
+    },
+    {
+      "date": "2018-08-02",
+      "rows": 509,
+      "positives": 0,
+      "candidate_cells": 510
+    },
+    {
+      "date": "2018-08-03",
+      "rows": 2252,
+      "positives": 1,
+      "candidate_cells": 2265
+    },
+    {
+      "date": "2018-08-04",
+      "rows": 610,
+      "positives": 0,
+      "candidate_cells": 612
+    },
+    {
+      "date": "2018-08-05",
+      "rows": 610,
+      "positives": 0,
+      "candidate_cells": 655
+    },
+    {
+      "date": "2018-08-08",
+      "rows": 368,
+      "positives": 0,
+      "candidate_cells": 375
+    },
+    {
+      "date": "2018-08-09",
+      "rows": 608,
+      "positives": 0,
+      "candidate_cells": 612
+    },
+    {
+      "date": "2018-08-11",
+      "rows": 946,
+      "positives": 1,
+      "candidate_cells": 946
+    },
+    {
+      "date": "2018-08-12",
+      "rows": 904,
+      "positives": 0,
+      "candidate_cells": 904
+    },
+    {
+      "date": "2018-08-14",
+      "rows": 1767,
+      "positives": 0,
+      "candidate_cells": 1998
+    },
+    {
+      "date": "2018-08-15",
+      "rows": 1302,
+      "positives": 0,
+      "candidate_cells": 1313
+    },
+    {
+      "date": "2018-08-17",
+      "rows": 3127,
+      "positives": 0,
+      "candidate_cells": 3194
+    },
+    {
+      "date": "2018-08-19",
+      "rows": 1026,
+      "positives": 0,
+      "candidate_cells": 1026
+    },
+    {
+      "date": "2018-08-28",
+      "rows": 249,
+      "positives": 0,
+      "candidate_cells": 258
+    },
+    {
+      "date": "2018-09-04",
+      "rows": 1020,
+      "positives": 0,
+      "candidate_cells": 1021
+    },
+    {
+      "date": "2018-09-08",
+      "rows": 549,
+      "positives": 0,
+      "candidate_cells": 549
+    },
+    {
+      "date": "2018-09-18",
+      "rows": 664,
+      "positives": 0,
+      "candidate_cells": 672
+    },
+    {
+      "date": "2018-09-22",
+      "rows": 487,
+      "positives": 0,
+      "candidate_cells": 823
+    },
+    {
+      "date": "2018-09-25",
+      "rows": 300,
+      "positives": 0,
+      "candidate_cells": 302
+    },
+    {
+      "date": "2018-09-30",
+      "rows": 1413,
+      "positives": 0,
+      "candidate_cells": 1425
+    },
+    {
+      "date": "2018-10-01",
+      "rows": 411,
+      "positives": 0,
+      "candidate_cells": 413
+    },
+    {
+      "date": "2018-10-02",
+      "rows": 781,
+      "positives": 0,
+      "candidate_cells": 784
+    },
+    {
+      "date": "2018-10-10",
+      "rows": 858,
+      "positives": 0,
+      "candidate_cells": 861
+    },
+    {
+      "date": "2018-10-12",
+      "rows": 123,
+      "positives": 0,
+      "candidate_cells": 138
+    },
+    {
+      "date": "2018-10-13",
+      "rows": 999,
+      "positives": 0,
+      "candidate_cells": 1001
+    },
+    {
+      "date": "2018-10-17",
+      "rows": 412,
+      "positives": 0,
+      "candidate_cells": 414
+    },
+    {
+      "date": "2018-10-20",
+      "rows": 1512,
+      "positives": 0,
+      "candidate_cells": 1514
+    },
+    {
+      "date": "2018-10-21",
+      "rows": 786,
+      "positives": 0,
+      "candidate_cells": 789
+    },
+    {
+      "date": "2018-10-24",
+      "rows": 1427,
+      "positives": 0,
+      "candidate_cells": 1427
+    },
+    {
+      "date": "2018-10-27",
+      "rows": 178,
+      "positives": 0,
+      "candidate_cells": 180
+    },
+    {
+      "date": "2018-10-29",
+      "rows": 174,
+      "positives": 1,
+      "candidate_cells": 184
+    },
+    {
+      "date": "2018-10-30",
+      "rows": 480,
+      "positives": 1,
+      "candidate_cells": 482
+    },
+    {
+      "date": "2018-10-31",
+      "rows": 758,
+      "positives": 1,
+      "candidate_cells": 759
+    },
+    {
+      "date": "2018-11-01",
+      "rows": 2058,
+      "positives": 1,
+      "candidate_cells": 2060
+    },
+    {
+      "date": "2018-11-02",
+      "rows": 478,
+      "positives": 0,
+      "candidate_cells": 482
+    },
+    {
+      "date": "2018-11-04",
+      "rows": 946,
+      "positives": 0,
+      "candidate_cells": 946
+    },
+    {
+      "date": "2018-11-05",
+      "rows": 964,
+      "positives": 0,
+      "candidate_cells": 968
+    },
+    {
+      "date": "2018-11-10",
+      "rows": 279,
+      "positives": 0,
+      "candidate_cells": 302
+    },
+    {
+      "date": "2018-11-12",
+      "rows": 1051,
+      "positives": 0,
+      "candidate_cells": 1053
+    },
+    {
+      "date": "2018-11-18",
+      "rows": 177,
+      "positives": 1,
+      "candidate_cells": 180
+    },
+    {
+      "date": "2018-11-19",
+      "rows": 180,
+      "positives": 0,
+      "candidate_cells": 180
+    },
+    {
+      "date": "2018-11-20",
+      "rows": 324,
+      "positives": 0,
+      "candidate_cells": 413
+    },
+    {
+      "date": "2018-11-21",
+      "rows": 179,
+      "positives": 1,
+      "candidate_cells": 180
+    },
+    {
+      "date": "2018-11-22",
+      "rows": 968,
+      "positives": 1,
+      "candidate_cells": 972
+    },
+    {
+      "date": "2018-11-23",
+      "rows": 173,
+      "positives": 0,
+      "candidate_cells": 180
+    },
+    {
+      "date": "2018-11-25",
+      "rows": 182,
+      "positives": 0,
+      "candidate_cells": 184
+    },
+    {
+      "date": "2018-11-28",
+      "rows": 1252,
+      "positives": 0,
+      "candidate_cells": 1255
+    },
+    {
+      "date": "2018-11-29",
+      "rows": 946,
+      "positives": 0,
+      "candidate_cells": 946
+    },
+    {
+      "date": "2018-12-01",
+      "rows": 173,
+      "positives": 0,
+      "candidate_cells": 180
+    }
+  ],
+  "sha256": "0a0ecb0cc16119107bb95be8fff4d1a5170e17ed540b2ee7f83048255e1d6e5f",
+  "config_sha256": "1afb133860e3aa4afb34907c456002ba59e39651545f3fe5193d9256c6373b22",
+  "build_source_sha256": "4675b3c6834fa876ee4ac441a2e90b8226b16f7ca3bc4971eb36af79ef7c48f7",
+  "source_duplicate_days_replaced": 18,
+  "archive_production_delay_days_min": 1086,
+  "archive_production_delay_days_max": 1400,
+  "firms_counts": {
+    "raw_rows": 16881,
+    "accepted_rows": 2183,
+    "duplicate_rows": 0
+  },
+  "positive_dates": 16,
+  "missing_fraction": {
+    "previous_fire": 0.0044627996005326236,
+    "previous_unknown": 0.0,
+    "fire_neighbors_3": 0.0,
+    "fire_neighbors_11": 0.0,
+    "observed_fraction_11": 0.0,
+    "distance_to_previous_fire_km": 0.0,
+    "nearest_fire_dx_km": 0.0,
+    "nearest_fire_dy_km": 0.0,
+    "previous_frp_mw": 0.0044627996005326236,
+    "nearby_frp_mw": 0.0,
+    "fire_days_last_7": 0.0,
+    "observed_days_last_7": 0.0,
+    "forest_fraction": 0.0,
+    "landcover_class": 0.0,
+    "elevation_m": 0.0,
+    "slope_degrees": 0.0,
+    "day_of_year_sin": 0.0,
+    "day_of_year_cos": 0.0,
+    "station_distance_km": 0.0,
+    "temperature_mean_c": 0.1213694241011984,
+    "temperature_max_c": 0.1213694241011984,
+    "temperature_min_c": 0.1213694241011984,
+    "humidity_min_pct": 0.1213694241011984,
+    "wind_speed_mean_ms": 0.1213694241011984,
+    "wind_speed_max_ms": 0.1213694241011984,
+    "wind_u_mean_ms": 0.1213694241011984,
+    "wind_v_mean_ms": 0.1213694241011984,
+    "observed_precipitation_sum_mm": 0.9995734853528628,
+    "weather_hours": 0.1213694241011984,
+    "precipitation_hours": 0.1213694241011984
+  }
+}

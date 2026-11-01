@@ -1,0 +1,2862 @@
+{
+  "status": "completed",
+  "folds": {
+    "2020-03-19": {
+      "status": "completed",
+      "held_out_events": [
+        "ulju_2020"
+      ],
+      "training_events": [
+        "andong_2020",
+        "andong_2021",
+        "hapcheon_2022",
+        "uljin_2022",
+        "goseong_2020",
+        "yeongdeok_2022",
+        "yeongwol_2022",
+        "gangneung_donghae_2022",
+        "bonghwa_2022",
+        "yanggu_2022",
+        "gunwi_2022",
+        "uljin_may_2022",
+        "miryang_2022"
+      ],
+      "resolved_positive_weight": 3.0,
+      "training_positive_rows": 1690,
+      "training_negative_rows": 288206,
+      "training_event_shares": {
+        "andong_2020": {
+          "rows": 11540,
+          "row_share": 0.039807379198057234,
+          "weight_sum": 11540.0,
+          "weight_share": 0.039807379198057234,
+          "positive_rows": 103,
+          "class_adjusted_weight_sum": 11746.0,
+          "class_adjusted_weight_share": 0.04005100997013052
+        },
+        "andong_2021": {
+          "rows": 91892,
+          "row_share": 0.3169826420509424,
+          "weight_sum": 91892.0,
+          "weight_share": 0.3169826420509424,
+          "positive_rows": 217,
+          "class_adjusted_weight_sum": 92326.0,
+          "class_adjusted_weight_share": 0.3148092581731884
+        },
+        "hapcheon_2022": {
+          "rows": 6657,
+          "row_share": 0.02296340756685156,
+          "weight_sum": 6657.0,
+          "weight_share": 0.02296340756685156,
+          "positive_rows": 26,
+          "class_adjusted_weight_sum": 6709.0,
+          "class_adjusted_weight_share": 0.02287606213941816
+        },
+        "uljin_2022": {
+          "rows": 25406,
+          "row_share": 0.08763832546844386,
+          "weight_sum": 25406.0,
+          "weight_share": 0.08763832546844386,
+          "positive_rows": 655,
+          "class_adjusted_weight_sum": 26716.0,
+          "class_adjusted_weight_share": 0.0910950776742727
+        },
+        "goseong_2020": {
+          "rows": 4311,
+          "row_share": 0.014870850235946684,
+          "weight_sum": 4311.0,
+          "weight_share": 0.014870850235946684,
+          "positive_rows": 24,
+          "class_adjusted_weight_sum": 4359.0,
+          "class_adjusted_weight_share": 0.01486313233950272
+        },
+        "yeongdeok_2022": {
+          "rows": 35489,
+          "row_share": 0.1224197643292767,
+          "weight_sum": 35489.0,
+          "weight_share": 0.1224197643292767,
+          "positive_rows": 254,
+          "class_adjusted_weight_sum": 35997.0,
+          "class_adjusted_weight_share": 0.12274103574789617
+        },
+        "yeongwol_2022": {
+          "rows": 13205,
+          "row_share": 0.0455508182244667,
+          "weight_sum": 13205.0,
+          "weight_share": 0.0455508182244667,
+          "positive_rows": 27,
+          "class_adjusted_weight_sum": 13259.0,
+          "class_adjusted_weight_share": 0.0452099728583314
+        },
+        "gangneung_donghae_2022": {
+          "rows": 24417,
+          "row_share": 0.08422675718188592,
+          "weight_sum": 24417.0,
+          "weight_share": 0.08422675718188592,
+          "positive_rows": 39,
+          "class_adjusted_weight_sum": 24495.0,
+          "class_adjusted_weight_share": 0.0835220065740122
+        },
+        "bonghwa_2022": {
+          "rows": 255,
+          "row_share": 0.0008796257968374866,
+          "weight_sum": 255.0,
+          "weight_share": 0.0008796257968374866,
+          "positive_rows": 16,
+          "class_adjusted_weight_sum": 287.0,
+          "class_adjusted_weight_share": 0.0009786003627981832
+        },
+        "yanggu_2022": {
+          "rows": 34026,
+          "row_share": 0.11737312691447968,
+          "weight_sum": 34026.0,
+          "weight_share": 0.11737312691447968,
+          "positive_rows": 274,
+          "class_adjusted_weight_sum": 34574.0,
+          "class_adjusted_weight_share": 0.11788895102224525
+        },
+        "gunwi_2022": {
+          "rows": 105,
+          "row_share": 0.000362198857521318,
+          "weight_sum": 105.0,
+          "weight_share": 0.000362198857521318,
+          "positive_rows": 19,
+          "class_adjusted_weight_sum": 143.0,
+          "class_adjusted_weight_share": 0.00048759530271825856
+        },
+        "uljin_may_2022": {
+          "rows": 2700,
+          "row_share": 0.009313684907691034,
+          "weight_sum": 2700.0,
+          "weight_share": 0.009313684907691034,
+          "positive_rows": 0,
+          "class_adjusted_weight_sum": 2700.0,
+          "class_adjusted_weight_share": 0.009206344876498589
+        },
+        "miryang_2022": {
+          "rows": 39893,
+          "row_share": 0.13761141926759943,
+          "weight_sum": 39893.0,
+          "weight_share": 0.13761141926759943,
+          "positive_rows": 36,
+          "class_adjusted_weight_sum": 39965.0,
+          "class_adjusted_weight_share": 0.13627095295898745
+        }
+      },
+      "held_out": {
+        "ulju_2020": {
+          "1": {
+            "rows": 11583,
+            "positives": 21,
+            "positive_fraction": 0.001813001813001813,
+            "missing_score_candidates": 0,
+            "average_precision": 0.42418525031293397,
+            "roc_auc": 0.9965733395935783,
+            "brier": 0.0016347136175632333,
+            "logloss": 0.010845965316906302,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 27,
+              "eligible_candidates": 11583,
+              "examined_candidates": 1170,
+              "true_positives": 21,
+              "total_positives": 21,
+              "random_budget_expected_true_positives": 2.1251364994014716,
+              "issues_with_score_ties": 27,
+              "issues_with_boundary_ties": 10,
+              "boundary_tie_candidates": 30,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10101010101010101,
+              "precision": 0.017948717948717947,
+              "recall": 1.0,
+              "lift_over_random_budget": 9.88171818888551
+            }
+          },
+          "3": {
+            "rows": 8957,
+            "positives": 27,
+            "positive_fraction": 0.0030144021435748575,
+            "missing_score_candidates": 0,
+            "average_precision": 0.5291806315481573,
+            "roc_auc": 0.9975115092696278,
+            "brier": 0.003936060900488411,
+            "logloss": 0.02287256511276247,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 22,
+              "eligible_candidates": 8957,
+              "examined_candidates": 907,
+              "true_positives": 27,
+              "total_positives": 27,
+              "random_budget_expected_true_positives": 3.633499973143397,
+              "issues_with_score_ties": 21,
+              "issues_with_boundary_ties": 7,
+              "boundary_tie_candidates": 25,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10126158311934799,
+              "precision": 0.029768467475192944,
+              "recall": 1.0,
+              "lift_over_random_budget": 7.430851850713482
+            }
+          },
+          "6": {
+            "rows": 5054,
+            "positives": 29,
+            "positive_fraction": 0.005738029283735655,
+            "missing_score_candidates": 0,
+            "average_precision": 0.4768800049462459,
+            "roc_auc": 0.9958346200034311,
+            "brier": 0.013581060902309688,
+            "logloss": 0.0603461846268217,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 16,
+              "eligible_candidates": 5054,
+              "examined_candidates": 515,
+              "true_positives": 29,
+              "total_positives": 29,
+              "random_budget_expected_true_positives": 6.52736201857657,
+              "issues_with_score_ties": 12,
+              "issues_with_boundary_ties": 1,
+              "boundary_tie_candidates": 5,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10189948555599525,
+              "precision": 0.05631067961165048,
+              "recall": 1.0,
+              "lift_over_random_budget": 4.442836159150871
+            }
+          }
+        }
+      }
+    },
+    "2020-04-25": {
+      "status": "completed",
+      "held_out_events": [
+        "andong_2020"
+      ],
+      "training_events": [
+        "andong_2021",
+        "hapcheon_2022",
+        "uljin_2022",
+        "ulju_2020",
+        "goseong_2020",
+        "yeongdeok_2022",
+        "yeongwol_2022",
+        "gangneung_donghae_2022",
+        "bonghwa_2022",
+        "yanggu_2022",
+        "gunwi_2022",
+        "uljin_may_2022",
+        "miryang_2022"
+      ],
+      "resolved_positive_weight": 3.0,
+      "training_positive_rows": 1664,
+      "training_negative_rows": 302286,
+      "training_event_shares": {
+        "andong_2021": {
+          "rows": 91892,
+          "row_share": 0.3023260404671821,
+          "weight_sum": 91892.0,
+          "weight_share": 0.3023260404671821,
+          "positive_rows": 217,
+          "class_adjusted_weight_sum": 92326.0,
+          "class_adjusted_weight_share": 0.30046407487682164
+        },
+        "hapcheon_2022": {
+          "rows": 6657,
+          "row_share": 0.02190162855732851,
+          "weight_sum": 6657.0,
+          "weight_share": 0.02190162855732851,
+          "positive_rows": 26,
+          "class_adjusted_weight_sum": 6709.0,
+          "class_adjusted_weight_share": 0.021833649008389796
+        },
+        "uljin_2022": {
+          "rows": 25406,
+          "row_share": 0.08358611613752262,
+          "weight_sum": 25406.0,
+          "weight_share": 0.08358611613752262,
+          "positive_rows": 655,
+          "class_adjusted_weight_sum": 26716.0,
+          "class_adjusted_weight_share": 0.08694407019051152
+        },
+        "ulju_2020": {
+          "rows": 25594,
+          "row_share": 0.08420463892087514,
+          "weight_sum": 25594.0,
+          "weight_share": 0.08420463892087514,
+          "positive_rows": 77,
+          "class_adjusted_weight_sum": 25748.0,
+          "class_adjusted_weight_share": 0.08379382838992704
+        },
+        "goseong_2020": {
+          "rows": 4311,
+          "row_share": 0.01418325382464221,
+          "weight_sum": 4311.0,
+          "weight_share": 0.01418325382464221,
+          "positive_rows": 24,
+          "class_adjusted_weight_sum": 4359.0,
+          "class_adjusted_weight_share": 0.014185851248706383
+        },
+        "yeongdeok_2022": {
+          "rows": 35489,
+          "row_share": 0.11675933541700938,
+          "weight_sum": 35489.0,
+          "weight_share": 0.11675933541700938,
+          "positive_rows": 254,
+          "class_adjusted_weight_sum": 35997.0,
+          "class_adjusted_weight_share": 0.11714798976822291
+        },
+        "yeongwol_2022": {
+          "rows": 13205,
+          "row_share": 0.04344464550090475,
+          "weight_sum": 13205.0,
+          "weight_share": 0.04344464550090475,
+          "positive_rows": 27,
+          "class_adjusted_weight_sum": 13259.0,
+          "class_adjusted_weight_share": 0.04314985127474144
+        },
+        "gangneung_donghae_2022": {
+          "rows": 24417,
+          "row_share": 0.08033229149531172,
+          "weight_sum": 24417.0,
+          "weight_share": 0.08033229149531172,
+          "positive_rows": 39,
+          "class_adjusted_weight_sum": 24495.0,
+          "class_adjusted_weight_share": 0.07971608771210435
+        },
+        "bonghwa_2022": {
+          "rows": 255,
+          "row_share": 0.0008389537752919888,
+          "weight_sum": 255.0,
+          "weight_share": 0.0008389537752919888,
+          "positive_rows": 16,
+          "class_adjusted_weight_sum": 287.0,
+          "class_adjusted_weight_share": 0.0009340076412889956
+        },
+        "yanggu_2022": {
+          "rows": 34026,
+          "row_share": 0.11194604375719691,
+          "weight_sum": 34026.0,
+          "weight_share": 0.11194604375719691,
+          "positive_rows": 274,
+          "class_adjusted_weight_sum": 34574.0,
+          "class_adjusted_weight_share": 0.1125170041460827
+        },
+        "gunwi_2022": {
+          "rows": 105,
+          "row_share": 0.0003454515545319954,
+          "weight_sum": 105.0,
+          "weight_share": 0.0003454515545319954,
+          "positive_rows": 19,
+          "class_adjusted_weight_sum": 143.0,
+          "class_adjusted_weight_share": 0.0004653766296317992
+        },
+        "uljin_may_2022": {
+          "rows": 2700,
+          "row_share": 0.008883039973679882,
+          "weight_sum": 2700.0,
+          "weight_share": 0.008883039973679882,
+          "positive_rows": 0,
+          "class_adjusted_weight_sum": 2700.0,
+          "class_adjusted_weight_share": 0.008786831468572433
+        },
+        "miryang_2022": {
+          "rows": 39893,
+          "row_share": 0.13124856061852277,
+          "weight_sum": 39893.0,
+          "weight_share": 0.13124856061852277,
+          "positive_rows": 36,
+          "class_adjusted_weight_sum": 39965.0,
+          "class_adjusted_weight_share": 0.130061377644999
+        }
+      },
+      "held_out": {
+        "andong_2020": {
+          "1": {
+            "rows": 6699,
+            "positives": 11,
+            "positive_fraction": 0.0016420361247947454,
+            "missing_score_candidates": 0,
+            "average_precision": 0.34113745119622896,
+            "roc_auc": 0.9325182144410613,
+            "brier": 0.0014923436658869768,
+            "logloss": 0.010728324784994948,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 21,
+              "eligible_candidates": 6699,
+              "examined_candidates": 680,
+              "true_positives": 7,
+              "total_positives": 11,
+              "random_budget_expected_true_positives": 1.1663803646903106,
+              "issues_with_score_ties": 21,
+              "issues_with_boundary_ties": 5,
+              "boundary_tie_candidates": 14,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10150768771458427,
+              "precision": 0.010294117647058823,
+              "recall": 0.6363636363636364,
+              "lift_over_random_budget": 6.0014727715847584
+            }
+          },
+          "3": {
+            "rows": 4027,
+            "positives": 43,
+            "positive_fraction": 0.010677924012912838,
+            "missing_score_candidates": 0,
+            "average_precision": 0.33177089632584006,
+            "roc_auc": 0.9603588773699449,
+            "brier": 0.008807166444956356,
+            "logloss": 0.0381565705655345,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 21,
+              "eligible_candidates": 4027,
+              "examined_candidates": 413,
+              "true_positives": 25,
+              "total_positives": 43,
+              "random_budget_expected_true_positives": 4.9251443512791,
+              "issues_with_score_ties": 19,
+              "issues_with_boundary_ties": 0,
+              "boundary_tie_candidates": 0,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.102557735286814,
+              "precision": 0.06053268765133172,
+              "recall": 0.5813953488372093,
+              "lift_over_random_budget": 5.075993355099794
+            }
+          },
+          "6": {
+            "rows": 814,
+            "positives": 49,
+            "positive_fraction": 0.060196560196560195,
+            "missing_score_candidates": 0,
+            "average_precision": 0.67455179806391,
+            "roc_auc": 0.9699879951980792,
+            "brier": 0.04093992647504126,
+            "logloss": 0.14249479730123596,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 15,
+              "eligible_candidates": 814,
+              "examined_candidates": 88,
+              "true_positives": 20,
+              "total_positives": 49,
+              "random_budget_expected_true_positives": 7.511242490489943,
+              "issues_with_score_ties": 9,
+              "issues_with_boundary_ties": 1,
+              "boundary_tie_candidates": 2,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10810810810810811,
+              "precision": 0.22727272727272727,
+              "recall": 0.40816326530612246,
+              "lift_over_random_budget": 2.6626753197386708
+            }
+          }
+        }
+      }
+    },
+    "2020-05-01": {
+      "status": "completed",
+      "held_out_events": [
+        "goseong_2020"
+      ],
+      "training_events": [
+        "andong_2020",
+        "andong_2021",
+        "hapcheon_2022",
+        "uljin_2022",
+        "ulju_2020",
+        "yeongdeok_2022",
+        "yeongwol_2022",
+        "gangneung_donghae_2022",
+        "bonghwa_2022",
+        "yanggu_2022",
+        "gunwi_2022",
+        "uljin_may_2022",
+        "miryang_2022"
+      ],
+      "resolved_positive_weight": 3.0,
+      "training_positive_rows": 1743,
+      "training_negative_rows": 309436,
+      "training_event_shares": {
+        "andong_2020": {
+          "rows": 11540,
+          "row_share": 0.03708476471741345,
+          "weight_sum": 11540.0,
+          "weight_share": 0.03708476471741345,
+          "positive_rows": 103,
+          "class_adjusted_weight_sum": 11746.0,
+          "class_adjusted_weight_share": 0.03732858754548488
+        },
+        "andong_2021": {
+          "rows": 91892,
+          "row_share": 0.29530270358860977,
+          "weight_sum": 91892.0,
+          "weight_share": 0.29530270358860977,
+          "positive_rows": 217,
+          "class_adjusted_weight_sum": 92326.0,
+          "class_adjusted_weight_share": 0.2934104523858707
+        },
+        "hapcheon_2022": {
+          "rows": 6657,
+          "row_share": 0.02139283177849405,
+          "weight_sum": 6657.0,
+          "weight_share": 0.02139283177849405,
+          "positive_rows": 26,
+          "class_adjusted_weight_sum": 6709.0,
+          "class_adjusted_weight_share": 0.021321087505760093
+        },
+        "uljin_2022": {
+          "rows": 25406,
+          "row_share": 0.08164432689866605,
+          "weight_sum": 25406.0,
+          "weight_share": 0.08164432689866605,
+          "positive_rows": 655,
+          "class_adjusted_weight_sum": 26716.0,
+          "class_adjusted_weight_share": 0.08490299207093258
+        },
+        "ulju_2020": {
+          "rows": 25594,
+          "row_share": 0.08224848077794453,
+          "weight_sum": 25594.0,
+          "weight_share": 0.08224848077794453,
+          "positive_rows": 77,
+          "class_adjusted_weight_sum": 25748.0,
+          "class_adjusted_weight_share": 0.08182670459059635
+        },
+        "yeongdeok_2022": {
+          "rows": 35489,
+          "row_share": 0.11404689905167123,
+          "weight_sum": 35489.0,
+          "weight_share": 0.11404689905167123,
+          "positive_rows": 254,
+          "class_adjusted_weight_sum": 35997.0,
+          "class_adjusted_weight_share": 0.11439785168353646
+        },
+        "yeongwol_2022": {
+          "rows": 13205,
+          "row_share": 0.042435382850385145,
+          "weight_sum": 13205.0,
+          "weight_share": 0.042435382850385145,
+          "positive_rows": 27,
+          "class_adjusted_weight_sum": 13259.0,
+          "class_adjusted_weight_share": 0.04213687572497736
+        },
+        "gangneung_donghae_2022": {
+          "rows": 24417,
+          "row_share": 0.07846609186352549,
+          "weight_sum": 24417.0,
+          "weight_share": 0.07846609186352549,
+          "positive_rows": 39,
+          "class_adjusted_weight_sum": 24495.0,
+          "class_adjusted_weight_share": 0.0778446919740041
+        },
+        "bonghwa_2022": {
+          "rows": 255,
+          "row_share": 0.0008194640383830528,
+          "weight_sum": 255.0,
+          "weight_share": 0.0008194640383830528,
+          "positive_rows": 16,
+          "class_adjusted_weight_sum": 287.0,
+          "class_adjusted_weight_share": 0.0009120811021244816
+        },
+        "yanggu_2022": {
+          "rows": 34026,
+          "row_share": 0.10934542498047747,
+          "weight_sum": 34026.0,
+          "weight_share": 0.10934542498047747,
+          "positive_rows": 274,
+          "class_adjusted_weight_sum": 34574.0,
+          "class_adjusted_weight_share": 0.10987558196812483
+        },
+        "gunwi_2022": {
+          "rows": 105,
+          "row_share": 0.00033742636874596295,
+          "weight_sum": 105.0,
+          "weight_share": 0.00033742636874596295,
+          "positive_rows": 19,
+          "class_adjusted_weight_sum": 143.0,
+          "class_adjusted_weight_share": 0.000454451559595125
+        },
+        "uljin_may_2022": {
+          "rows": 2700,
+          "row_share": 0.008676678053467618,
+          "weight_sum": 2700.0,
+          "weight_share": 0.008676678053467618,
+          "positive_rows": 0,
+          "class_adjusted_weight_sum": 2700.0,
+          "class_adjusted_weight_share": 0.008580553922425436
+        },
+        "miryang_2022": {
+          "rows": 39893,
+          "row_share": 0.12819952503221618,
+          "weight_sum": 39893.0,
+          "weight_share": 0.12819952503221618,
+          "positive_rows": 36,
+          "class_adjusted_weight_sum": 39965.0,
+          "class_adjusted_weight_share": 0.12700808796656762
+        }
+      },
+      "held_out": {
+        "goseong_2020": {
+          "1": {
+            "rows": 2870,
+            "positives": 8,
+            "positive_fraction": 0.0027874564459930314,
+            "missing_score_candidates": 0,
+            "average_precision": 0.17974095150913855,
+            "roc_auc": 0.9888626834381551,
+            "brier": 0.0028819735830906564,
+            "logloss": 0.01263981079696317,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 9,
+              "eligible_candidates": 2870,
+              "examined_candidates": 293,
+              "true_positives": 8,
+              "total_positives": 8,
+              "random_budget_expected_true_positives": 0.8171977293496975,
+              "issues_with_score_ties": 9,
+              "issues_with_boundary_ties": 2,
+              "boundary_tie_candidates": 5,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10209059233449477,
+              "precision": 0.027303754266211604,
+              "recall": 1.0,
+              "lift_over_random_budget": 9.78955240901877
+            }
+          },
+          "3": {
+            "rows": 934,
+            "positives": 8,
+            "positive_fraction": 0.008565310492505354,
+            "missing_score_candidates": 0,
+            "average_precision": 0.2784702278916865,
+            "roc_auc": 0.9819114470842333,
+            "brier": 0.007932724889737798,
+            "logloss": 0.029314217961583833,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 5,
+              "eligible_candidates": 934,
+              "examined_candidates": 97,
+              "true_positives": 7,
+              "total_positives": 8,
+              "random_budget_expected_true_positives": 2.5128205128205128,
+              "issues_with_score_ties": 3,
+              "issues_with_boundary_ties": 0,
+              "boundary_tie_candidates": 0,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10385438972162742,
+              "precision": 0.07216494845360824,
+              "recall": 0.875,
+              "lift_over_random_budget": 2.7857142857142856
+            }
+          },
+          "6": {
+            "rows": 507,
+            "positives": 8,
+            "positive_fraction": 0.015779092702169626,
+            "missing_score_candidates": 0,
+            "average_precision": 0.3667355725475859,
+            "roc_auc": 0.9656813627254509,
+            "brier": 0.01808196089140264,
+            "logloss": 0.060242407534583445,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 5,
+              "eligible_candidates": 507,
+              "examined_candidates": 53,
+              "true_positives": 3,
+              "total_positives": 8,
+              "random_budget_expected_true_positives": 3.0,
+              "issues_with_score_ties": 2,
+              "issues_with_boundary_ties": 0,
+              "boundary_tie_candidates": 0,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10453648915187377,
+              "precision": 0.05660377358490566,
+              "recall": 0.375,
+              "lift_over_random_budget": 1.0
+            }
+          }
+        }
+      }
+    },
+    "2021-02-21": {
+      "status": "completed",
+      "held_out_events": [
+        "andong_2021"
+      ],
+      "training_events": [
+        "andong_2020",
+        "hapcheon_2022",
+        "uljin_2022",
+        "ulju_2020",
+        "goseong_2020",
+        "yeongdeok_2022",
+        "yeongwol_2022",
+        "gangneung_donghae_2022",
+        "bonghwa_2022",
+        "yanggu_2022",
+        "gunwi_2022",
+        "uljin_may_2022",
+        "miryang_2022"
+      ],
+      "resolved_positive_weight": 3.0,
+      "training_positive_rows": 1550,
+      "training_negative_rows": 222048,
+      "training_event_shares": {
+        "andong_2020": {
+          "rows": 11540,
+          "row_share": 0.05161047952128373,
+          "weight_sum": 11540.0,
+          "weight_share": 0.05161047952128373,
+          "positive_rows": 103,
+          "class_adjusted_weight_sum": 11746.0,
+          "class_adjusted_weight_share": 0.051813425791140635
+        },
+        "hapcheon_2022": {
+          "rows": 6657,
+          "row_share": 0.029772180430951978,
+          "weight_sum": 6657.0,
+          "weight_share": 0.029772180430951978,
+          "positive_rows": 26,
+          "class_adjusted_weight_sum": 6709.0,
+          "class_adjusted_weight_share": 0.029594438415866044
+        },
+        "uljin_2022": {
+          "rows": 25406,
+          "row_share": 0.11362355656132882,
+          "weight_sum": 25406.0,
+          "weight_share": 0.11362355656132882,
+          "positive_rows": 655,
+          "class_adjusted_weight_sum": 26716.0,
+          "class_adjusted_weight_share": 0.11784841507203415
+        },
+        "ulju_2020": {
+          "rows": 25594,
+          "row_share": 0.11446435120171021,
+          "weight_sum": 25594.0,
+          "weight_share": 0.11446435120171021,
+          "positive_rows": 77,
+          "class_adjusted_weight_sum": 25748.0,
+          "class_adjusted_weight_share": 0.11357841710116542
+        },
+        "goseong_2020": {
+          "rows": 4311,
+          "row_share": 0.019280136673852182,
+          "weight_sum": 4311.0,
+          "weight_share": 0.019280136673852182,
+          "positive_rows": 24,
+          "class_adjusted_weight_sum": 4359.0,
+          "class_adjusted_weight_share": 0.01922822433369505
+        },
+        "yeongdeok_2022": {
+          "rows": 35489,
+          "row_share": 0.1587178776196567,
+          "weight_sum": 35489.0,
+          "weight_share": 0.1587178776196567,
+          "positive_rows": 254,
+          "class_adjusted_weight_sum": 35997.0,
+          "class_adjusted_weight_share": 0.1587883439642167
+        },
+        "yeongwol_2022": {
+          "rows": 13205,
+          "row_share": 0.05905687886295942,
+          "weight_sum": 13205.0,
+          "weight_share": 0.05905687886295942,
+          "positive_rows": 27,
+          "class_adjusted_weight_sum": 13259.0,
+          "class_adjusted_weight_share": 0.05848750319808732
+        },
+        "gangneung_donghae_2022": {
+          "rows": 24417,
+          "row_share": 0.10920044007549262,
+          "weight_sum": 24417.0,
+          "weight_share": 0.10920044007549262,
+          "positive_rows": 39,
+          "class_adjusted_weight_sum": 24495.0,
+          "class_adjusted_weight_share": 0.10805123997565043
+        },
+        "bonghwa_2022": {
+          "rows": 255,
+          "row_share": 0.0011404395388151952,
+          "weight_sum": 255.0,
+          "weight_share": 0.0011404395388151952,
+          "positive_rows": 16,
+          "class_adjusted_weight_sum": 287.0,
+          "class_adjusted_weight_share": 0.0012660014645034363
+        },
+        "yanggu_2022": {
+          "rows": 34026,
+          "row_share": 0.15217488528519932,
+          "weight_sum": 34026.0,
+          "weight_share": 0.15217488528519932,
+          "positive_rows": 274,
+          "class_adjusted_weight_sum": 34574.0,
+          "class_adjusted_weight_share": 0.15251127050084254
+        },
+        "gunwi_2022": {
+          "rows": 105,
+          "row_share": 0.00046959275127684506,
+          "weight_sum": 105.0,
+          "weight_share": 0.00046959275127684506,
+          "positive_rows": 19,
+          "class_adjusted_weight_sum": 143.0,
+          "class_adjusted_weight_share": 0.0006307951547874264
+        },
+        "uljin_may_2022": {
+          "rows": 2700,
+          "row_share": 0.0120752421756903,
+          "weight_sum": 2700.0,
+          "weight_share": 0.0120752421756903,
+          "positive_rows": 0,
+          "class_adjusted_weight_sum": 2700.0,
+          "class_adjusted_weight_share": 0.011910118307175185
+        },
+        "miryang_2022": {
+          "rows": 39893,
+          "row_share": 0.17841393930178268,
+          "weight_sum": 39893.0,
+          "weight_share": 0.17841393930178268,
+          "positive_rows": 36,
+          "class_adjusted_weight_sum": 39965.0,
+          "class_adjusted_weight_share": 0.17629180672083564
+        }
+      },
+      "held_out": {
+        "andong_2021": {
+          "1": {
+            "rows": 32462,
+            "positives": 52,
+            "positive_fraction": 0.0016018729591522395,
+            "missing_score_candidates": 0,
+            "average_precision": 0.2051934360448085,
+            "roc_auc": 0.9869113877483208,
+            "brier": 0.0018140197274355045,
+            "logloss": 0.010185697879615183,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 33,
+              "eligible_candidates": 32462,
+              "examined_candidates": 3261,
+              "true_positives": 52,
+              "total_positives": 52,
+              "random_budget_expected_true_positives": 5.219505678714658,
+              "issues_with_score_ties": 33,
+              "issues_with_boundary_ties": 6,
+              "boundary_tie_candidates": 27,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.1004559176883741,
+              "precision": 0.015946028825513645,
+              "recall": 1.0,
+              "lift_over_random_budget": 9.9626292604792
+            }
+          },
+          "3": {
+            "rows": 31334,
+            "positives": 78,
+            "positive_fraction": 0.002489308738111955,
+            "missing_score_candidates": 0,
+            "average_precision": 0.2867483123646063,
+            "roc_auc": 0.9894073671188465,
+            "brier": 0.0031963282632340244,
+            "logloss": 0.016513779124469892,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 33,
+              "eligible_candidates": 31334,
+              "examined_candidates": 3148,
+              "true_positives": 78,
+              "total_positives": 78,
+              "random_budget_expected_true_positives": 7.834125156725796,
+              "issues_with_score_ties": 33,
+              "issues_with_boundary_ties": 7,
+              "boundary_tie_candidates": 48,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10046594753303122,
+              "precision": 0.02477763659466328,
+              "recall": 1.0,
+              "lift_over_random_budget": 9.9564403733115
+            }
+          },
+          "6": {
+            "rows": 28096,
+            "positives": 87,
+            "positive_fraction": 0.003096526195899772,
+            "missing_score_candidates": 0,
+            "average_precision": 0.38699383844914853,
+            "roc_auc": 0.9884415231064891,
+            "brier": 0.0037775565452129816,
+            "logloss": 0.02403539682558392,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 31,
+              "eligible_candidates": 28096,
+              "examined_candidates": 2824,
+              "true_positives": 84,
+              "total_positives": 87,
+              "random_budget_expected_true_positives": 8.744616097045348,
+              "issues_with_score_ties": 31,
+              "issues_with_boundary_ties": 7,
+              "boundary_tie_candidates": 33,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.1005125284738041,
+              "precision": 0.029745042492917848,
+              "recall": 0.9655172413793104,
+              "lift_over_random_budget": 9.605910547448975
+            }
+          }
+        }
+      }
+    },
+    "2022-02-16": {
+      "status": "completed",
+      "held_out_events": [
+        "yeongdeok_2022"
+      ],
+      "training_events": [
+        "andong_2020",
+        "andong_2021",
+        "hapcheon_2022",
+        "uljin_2022",
+        "ulju_2020",
+        "goseong_2020",
+        "yeongwol_2022",
+        "gangneung_donghae_2022",
+        "bonghwa_2022",
+        "yanggu_2022",
+        "gunwi_2022",
+        "uljin_may_2022",
+        "miryang_2022"
+      ],
+      "resolved_positive_weight": 3.0,
+      "training_positive_rows": 1513,
+      "training_negative_rows": 278488,
+      "training_event_shares": {
+        "andong_2020": {
+          "rows": 11540,
+          "row_share": 0.041214138520933856,
+          "weight_sum": 11540.0,
+          "weight_share": 0.041214138520933856,
+          "positive_rows": 103,
+          "class_adjusted_weight_sum": 11746.0,
+          "class_adjusted_weight_share": 0.04150134086147258
+        },
+        "andong_2021": {
+          "rows": 91892,
+          "row_share": 0.3281845421980636,
+          "weight_sum": 91892.0,
+          "weight_share": 0.3281845421980636,
+          "positive_rows": 217,
+          "class_adjusted_weight_sum": 92326.0,
+          "class_adjusted_weight_share": 0.3262091602567953
+        },
+        "hapcheon_2022": {
+          "rows": 6657,
+          "row_share": 0.023774915089588965,
+          "weight_sum": 6657.0,
+          "weight_share": 0.023774915089588965,
+          "positive_rows": 26,
+          "class_adjusted_weight_sum": 6709.0,
+          "class_adjusted_weight_share": 0.023704452225406056
+        },
+        "uljin_2022": {
+          "rows": 25406,
+          "row_share": 0.09073539023074918,
+          "weight_sum": 25406.0,
+          "weight_share": 0.09073539023074918,
+          "positive_rows": 655,
+          "class_adjusted_weight_sum": 26716.0,
+          "class_adjusted_weight_share": 0.09439382108420752
+        },
+        "ulju_2020": {
+          "rows": 25594,
+          "row_share": 0.09140681640422713,
+          "weight_sum": 25594.0,
+          "weight_share": 0.09140681640422713,
+          "positive_rows": 77,
+          "class_adjusted_weight_sum": 25748.0,
+          "class_adjusted_weight_share": 0.09097365269037937
+        },
+        "goseong_2020": {
+          "rows": 4311,
+          "row_share": 0.015396373584380056,
+          "weight_sum": 4311.0,
+          "weight_share": 0.015396373584380056,
+          "positive_rows": 24,
+          "class_adjusted_weight_sum": 4359.0,
+          "class_adjusted_weight_share": 0.015401357467662096
+        },
+        "yeongwol_2022": {
+          "rows": 13205,
+          "row_share": 0.04716054585519337,
+          "weight_sum": 13205.0,
+          "weight_share": 0.04716054585519337,
+          "positive_rows": 27,
+          "class_adjusted_weight_sum": 13259.0,
+          "class_adjusted_weight_share": 0.04684712059273497
+        },
+        "gangneung_donghae_2022": {
+          "rows": 24417,
+          "row_share": 0.08720325998835718,
+          "weight_sum": 24417.0,
+          "weight_share": 0.08720325998835718,
+          "positive_rows": 39,
+          "class_adjusted_weight_sum": 24495.0,
+          "class_adjusted_weight_share": 0.08654651323018651
+        },
+        "bonghwa_2022": {
+          "rows": 255,
+          "row_share": 0.0009107110331748815,
+          "weight_sum": 255.0,
+          "weight_share": 0.0009107110331748815,
+          "positive_rows": 16,
+          "class_adjusted_weight_sum": 287.0,
+          "class_adjusted_weight_share": 0.001014037529988305
+        },
+        "yanggu_2022": {
+          "rows": 34026,
+          "row_share": 0.12152099456787654,
+          "weight_sum": 34026.0,
+          "weight_share": 0.12152099456787654,
+          "positive_rows": 274,
+          "class_adjusted_weight_sum": 34574.0,
+          "class_adjusted_weight_share": 0.1221579566613786
+        },
+        "gunwi_2022": {
+          "rows": 105,
+          "row_share": 0.00037499866071906884,
+          "weight_sum": 105.0,
+          "weight_share": 0.00037499866071906884,
+          "positive_rows": 19,
+          "class_adjusted_weight_sum": 143.0,
+          "class_adjusted_weight_share": 0.0005052521490882495
+        },
+        "uljin_may_2022": {
+          "rows": 2700,
+          "row_share": 0.009642822704204627,
+          "weight_sum": 2700.0,
+          "weight_share": 0.009642822704204627,
+          "positive_rows": 0,
+          "class_adjusted_weight_sum": 2700.0,
+          "class_adjusted_weight_share": 0.00953972589187604
+        },
+        "miryang_2022": {
+          "rows": 39893,
+          "row_share": 0.14247449116253155,
+          "weight_sum": 39893.0,
+          "weight_share": 0.14247449116253155,
+          "positive_rows": 36,
+          "class_adjusted_weight_sum": 39965.0,
+          "class_adjusted_weight_share": 0.14120560935882442
+        }
+      },
+      "held_out": {
+        "yeongdeok_2022": {
+          "1": {
+            "rows": 12144,
+            "positives": 26,
+            "positive_fraction": 0.0021409749670619235,
+            "missing_score_candidates": 0,
+            "average_precision": 0.06440527976979488,
+            "roc_auc": 0.8895365444919827,
+            "brier": 0.002640741928289235,
+            "logloss": 0.017267058318222867,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 36,
+              "eligible_candidates": 12144,
+              "examined_candidates": 1231,
+              "true_positives": 8,
+              "total_positives": 26,
+              "random_budget_expected_true_positives": 2.6327389994103965,
+              "issues_with_score_ties": 36,
+              "issues_with_boundary_ties": 3,
+              "boundary_tie_candidates": 6,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.101366930171278,
+              "precision": 0.006498781478472786,
+              "recall": 0.3076923076923077,
+              "lift_over_random_budget": 3.038660498359923
+            }
+          },
+          "3": {
+            "rows": 11795,
+            "positives": 78,
+            "positive_fraction": 0.006612971598134803,
+            "missing_score_candidates": 0,
+            "average_precision": 0.05459944603515929,
+            "roc_auc": 0.8744094160796388,
+            "brier": 0.008414746272883454,
+            "logloss": 0.039753818831247394,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 36,
+              "eligible_candidates": 11795,
+              "examined_candidates": 1194,
+              "true_positives": 33,
+              "total_positives": 78,
+              "random_budget_expected_true_positives": 7.887806704515165,
+              "issues_with_score_ties": 36,
+              "issues_with_boundary_ties": 4,
+              "boundary_tie_candidates": 8,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10122933446375583,
+              "precision": 0.02763819095477387,
+              "recall": 0.4230769230769231,
+              "lift_over_random_budget": 4.183672500634432
+            }
+          },
+          "6": {
+            "rows": 11550,
+            "positives": 150,
+            "positive_fraction": 0.012987012987012988,
+            "missing_score_candidates": 0,
+            "average_precision": 0.0791918397346479,
+            "roc_auc": 0.7879745614035087,
+            "brier": 0.015831423073829336,
+            "logloss": 0.06909574403478458,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 36,
+              "eligible_candidates": 11550,
+              "examined_candidates": 1172,
+              "true_positives": 63,
+              "total_positives": 150,
+              "random_budget_expected_true_positives": 15.21238916432781,
+              "issues_with_score_ties": 36,
+              "issues_with_boundary_ties": 2,
+              "boundary_tie_candidates": 4,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10147186147186148,
+              "precision": 0.0537542662116041,
+              "recall": 0.42,
+              "lift_over_random_budget": 4.141361315402805
+            }
+          }
+        }
+      }
+    },
+    "2022-02-28": {
+      "status": "completed",
+      "held_out_events": [
+        "hapcheon_2022"
+      ],
+      "training_events": [
+        "andong_2020",
+        "andong_2021",
+        "uljin_2022",
+        "ulju_2020",
+        "goseong_2020",
+        "yeongdeok_2022",
+        "yeongwol_2022",
+        "gangneung_donghae_2022",
+        "bonghwa_2022",
+        "yanggu_2022",
+        "gunwi_2022",
+        "uljin_may_2022",
+        "miryang_2022"
+      ],
+      "resolved_positive_weight": 3.0,
+      "training_positive_rows": 1741,
+      "training_negative_rows": 307092,
+      "training_event_shares": {
+        "andong_2020": {
+          "rows": 11540,
+          "row_share": 0.03736647314244268,
+          "weight_sum": 11540.0,
+          "weight_share": 0.03736647314244268,
+          "positive_rows": 103,
+          "class_adjusted_weight_sum": 11746.0,
+          "class_adjusted_weight_share": 0.037609464803163475
+        },
+        "andong_2021": {
+          "rows": 91892,
+          "row_share": 0.2975459228774127,
+          "weight_sum": 91892.0,
+          "weight_share": 0.2975459228774127,
+          "positive_rows": 217,
+          "class_adjusted_weight_sum": 92326.0,
+          "class_adjusted_weight_share": 0.2956182059779389
+        },
+        "uljin_2022": {
+          "rows": 25406,
+          "row_share": 0.08226452484028585,
+          "weight_sum": 25406.0,
+          "weight_share": 0.08226452484028585,
+          "positive_rows": 655,
+          "class_adjusted_weight_sum": 26716.0,
+          "class_adjusted_weight_share": 0.08554184076973569
+        },
+        "ulju_2020": {
+          "rows": 25594,
+          "row_share": 0.08287326807692183,
+          "weight_sum": 25594.0,
+          "weight_share": 0.08287326807692183,
+          "positive_rows": 77,
+          "class_adjusted_weight_sum": 25748.0,
+          "class_adjusted_weight_share": 0.08244240590429534
+        },
+        "goseong_2020": {
+          "rows": 4311,
+          "row_share": 0.013959000495413378,
+          "weight_sum": 4311.0,
+          "weight_share": 0.013959000495413378,
+          "positive_rows": 24,
+          "class_adjusted_weight_sum": 4359.0,
+          "class_adjusted_weight_share": 0.01395706258104798
+        },
+        "yeongdeok_2022": {
+          "rows": 35489,
+          "row_share": 0.11491323789879967,
+          "weight_sum": 35489.0,
+          "weight_share": 0.11491323789879967,
+          "positive_rows": 254,
+          "class_adjusted_weight_sum": 35997.0,
+          "class_adjusted_weight_share": 0.11525863311080159
+        },
+        "yeongwol_2022": {
+          "rows": 13205,
+          "row_share": 0.042757736381798576,
+          "weight_sum": 13205.0,
+          "weight_share": 0.042757736381798576,
+          "positive_rows": 27,
+          "class_adjusted_weight_sum": 13259.0,
+          "class_adjusted_weight_share": 0.04245393272817508
+        },
+        "gangneung_donghae_2022": {
+          "rows": 24417,
+          "row_share": 0.07906214685606784,
+          "weight_sum": 24417.0,
+          "weight_share": 0.07906214685606784,
+          "positive_rows": 39,
+          "class_adjusted_weight_sum": 24495.0,
+          "class_adjusted_weight_share": 0.0784304308150425
+        },
+        "bonghwa_2022": {
+          "rows": 255,
+          "row_share": 0.0008256889645860384,
+          "weight_sum": 255.0,
+          "weight_share": 0.0008256889645860384,
+          "positive_rows": 16,
+          "class_adjusted_weight_sum": 287.0,
+          "class_adjusted_weight_share": 0.0009189440148567953
+        },
+        "yanggu_2022": {
+          "rows": 34026,
+          "row_share": 0.1101760498392335,
+          "weight_sum": 34026.0,
+          "weight_share": 0.1101760498392335,
+          "positive_rows": 274,
+          "class_adjusted_weight_sum": 34574.0,
+          "class_adjusted_weight_share": 0.1107023357827834
+        },
+        "gunwi_2022": {
+          "rows": 105,
+          "row_share": 0.00033998957365307465,
+          "weight_sum": 105.0,
+          "weight_share": 0.00033998957365307465,
+          "positive_rows": 19,
+          "class_adjusted_weight_sum": 143.0,
+          "class_adjusted_weight_share": 0.00045787105966732305
+        },
+        "uljin_may_2022": {
+          "rows": 2700,
+          "row_share": 0.008742589036793348,
+          "weight_sum": 2700.0,
+          "weight_share": 0.008742589036793348,
+          "positive_rows": 0,
+          "class_adjusted_weight_sum": 2700.0,
+          "class_adjusted_weight_share": 0.008645117909802604
+        },
+        "miryang_2022": {
+          "rows": 39893,
+          "row_share": 0.1291733720165915,
+          "weight_sum": 39893.0,
+          "weight_share": 0.1291733720165915,
+          "positive_rows": 36,
+          "class_adjusted_weight_sum": 39965.0,
+          "class_adjusted_weight_share": 0.12796375454268927
+        }
+      },
+      "held_out": {
+        "hapcheon_2022": {
+          "1": {
+            "rows": 5167,
+            "positives": 4,
+            "positive_fraction": 0.000774143603638475,
+            "missing_score_candidates": 0,
+            "average_precision": 0.6810897435897436,
+            "roc_auc": 0.9994673639356962,
+            "brier": 0.000638134257105362,
+            "logloss": 0.00668527082541736,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 15,
+              "eligible_candidates": 5167,
+              "examined_candidates": 525,
+              "true_positives": 4,
+              "total_positives": 4,
+              "random_budget_expected_true_positives": 0.45502079619726676,
+              "issues_with_score_ties": 14,
+              "issues_with_boundary_ties": 6,
+              "boundary_tie_candidates": 41,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10160634797754983,
+              "precision": 0.007619047619047619,
+              "recall": 1.0,
+              "lift_over_random_budget": 8.790806999216507
+            }
+          },
+          "3": {
+            "rows": 1451,
+            "positives": 11,
+            "positive_fraction": 0.007580978635423846,
+            "missing_score_candidates": 0,
+            "average_precision": 0.9355866355866356,
+            "roc_auc": 0.9994318181818181,
+            "brier": 0.0023868019943405097,
+            "logloss": 0.013586036429955496,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 14,
+              "eligible_candidates": 1451,
+              "examined_candidates": 150,
+              "true_positives": 7,
+              "total_positives": 11,
+              "random_budget_expected_true_positives": 2.6076437226089197,
+              "issues_with_score_ties": 11,
+              "issues_with_boundary_ties": 3,
+              "boundary_tie_candidates": 9,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10337698139214335,
+              "precision": 0.04666666666666667,
+              "recall": 0.6363636363636364,
+              "lift_over_random_budget": 2.6844157962639827
+            }
+          },
+          "6": {
+            "rows": 39,
+            "positives": 11,
+            "positive_fraction": 0.28205128205128205,
+            "missing_score_candidates": 0,
+            "average_precision": 1.0,
+            "roc_auc": 1.0,
+            "brier": 0.028228646410577884,
+            "logloss": 0.10308446976380609,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 13,
+              "eligible_candidates": 39,
+              "examined_candidates": 13,
+              "true_positives": 7,
+              "total_positives": 11,
+              "random_budget_expected_true_positives": 5.4,
+              "issues_with_score_ties": 0,
+              "issues_with_boundary_ties": 0,
+              "boundary_tie_candidates": 0,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.3333333333333333,
+              "precision": 0.5384615384615384,
+              "recall": 0.6363636363636364,
+              "lift_over_random_budget": 1.2962962962962963
+            }
+          }
+        }
+      }
+    },
+    "2022-03-04_05": {
+      "status": "completed",
+      "held_out_events": [
+        "uljin_2022",
+        "yeongwol_2022",
+        "gangneung_donghae_2022"
+      ],
+      "training_events": [
+        "andong_2020",
+        "andong_2021",
+        "hapcheon_2022",
+        "ulju_2020",
+        "goseong_2020",
+        "yeongdeok_2022",
+        "bonghwa_2022",
+        "yanggu_2022",
+        "gunwi_2022",
+        "uljin_may_2022",
+        "miryang_2022"
+      ],
+      "resolved_positive_weight": 3.0,
+      "training_positive_rows": 1046,
+      "training_negative_rows": 251416,
+      "training_event_shares": {
+        "andong_2020": {
+          "rows": 11540,
+          "row_share": 0.045709849403078484,
+          "weight_sum": 11540.0,
+          "weight_share": 0.045709849403078484,
+          "positive_rows": 103,
+          "class_adjusted_weight_sum": 11746.0,
+          "class_adjusted_weight_share": 0.04614345089843412
+        },
+        "andong_2021": {
+          "rows": 91892,
+          "row_share": 0.3639834905847217,
+          "weight_sum": 91892.0,
+          "weight_share": 0.3639834905847217,
+          "positive_rows": 217,
+          "class_adjusted_weight_sum": 92326.0,
+          "class_adjusted_weight_share": 0.3626971094541826
+        },
+        "hapcheon_2022": {
+          "rows": 6657,
+          "row_share": 0.02636832473798037,
+          "weight_sum": 6657.0,
+          "weight_share": 0.02636832473798037,
+          "positive_rows": 26,
+          "class_adjusted_weight_sum": 6709.0,
+          "class_adjusted_weight_share": 0.02635590090904091
+        },
+        "ulju_2020": {
+          "rows": 25594,
+          "row_share": 0.10137763306953125,
+          "weight_sum": 25594.0,
+          "weight_share": 0.10137763306953125,
+          "positive_rows": 77,
+          "class_adjusted_weight_sum": 25748.0,
+          "class_adjusted_weight_share": 0.10114946141093835
+        },
+        "goseong_2020": {
+          "rows": 4311,
+          "row_share": 0.01707583715569076,
+          "weight_sum": 4311.0,
+          "weight_share": 0.01707583715569076,
+          "positive_rows": 24,
+          "class_adjusted_weight_sum": 4359.0,
+          "class_adjusted_weight_share": 0.017124067977717893
+        },
+        "yeongdeok_2022": {
+          "rows": 35489,
+          "row_share": 0.14057165038698893,
+          "weight_sum": 35489.0,
+          "weight_share": 0.14057165038698893,
+          "positive_rows": 254,
+          "class_adjusted_weight_sum": 35997.0,
+          "class_adjusted_weight_share": 0.14141203831014246
+        },
+        "bonghwa_2022": {
+          "rows": 255,
+          "row_share": 0.0010100529980749577,
+          "weight_sum": 255.0,
+          "weight_share": 0.0010100529980749577,
+          "positive_rows": 16,
+          "class_adjusted_weight_sum": 287.0,
+          "class_adjusted_weight_share": 0.0011274621494849815
+        },
+        "yanggu_2022": {
+          "rows": 34026,
+          "row_share": 0.1347767188725432,
+          "weight_sum": 34026.0,
+          "weight_share": 0.1347767188725432,
+          "positive_rows": 274,
+          "class_adjusted_weight_sum": 34574.0,
+          "class_adjusted_weight_share": 0.13582186883726047
+        },
+        "gunwi_2022": {
+          "rows": 105,
+          "row_share": 0.0004159041756779238,
+          "weight_sum": 105.0,
+          "weight_share": 0.0004159041756779238,
+          "positive_rows": 19,
+          "class_adjusted_weight_sum": 143.0,
+          "class_adjusted_weight_share": 0.0005617668549698689
+        },
+        "uljin_may_2022": {
+          "rows": 2700,
+          "row_share": 0.010694678803146613,
+          "weight_sum": 2700.0,
+          "weight_share": 0.010694678803146613,
+          "positive_rows": 0,
+          "class_adjusted_weight_sum": 2700.0,
+          "class_adjusted_weight_share": 0.010606786772158363
+        },
+        "miryang_2022": {
+          "rows": 39893,
+          "row_share": 0.15801585981256586,
+          "weight_sum": 39893.0,
+          "weight_share": 0.15801585981256586,
+          "positive_rows": 36,
+          "class_adjusted_weight_sum": 39965.0,
+          "class_adjusted_weight_share": 0.15700008642566998
+        }
+      },
+      "held_out": {
+        "uljin_2022": {
+          "1": {
+            "rows": 11352,
+            "positives": 63,
+            "positive_fraction": 0.005549682875264271,
+            "missing_score_candidates": 0,
+            "average_precision": 0.17648954477656462,
+            "roc_auc": 0.8404578413879502,
+            "brier": 0.005008283580693081,
+            "logloss": 0.02761977672917711,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 31,
+              "eligible_candidates": 11352,
+              "examined_candidates": 1148,
+              "true_positives": 32,
+              "total_positives": 63,
+              "random_budget_expected_true_positives": 6.3769467610443025,
+              "issues_with_score_ties": 31,
+              "issues_with_boundary_ties": 8,
+              "boundary_tie_candidates": 37,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.1011275546159267,
+              "precision": 0.027874564459930314,
+              "recall": 0.5079365079365079,
+              "lift_over_random_budget": 5.018075451951807
+            }
+          },
+          "3": {
+            "rows": 8029,
+            "positives": 215,
+            "positive_fraction": 0.026777930003736454,
+            "missing_score_candidates": 0,
+            "average_precision": 0.24662156766918764,
+            "roc_auc": 0.8446452699686311,
+            "brier": 0.023782958853059262,
+            "logloss": 0.11556582737300126,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 31,
+              "eligible_candidates": 8029,
+              "examined_candidates": 818,
+              "true_positives": 82,
+              "total_positives": 215,
+              "random_budget_expected_true_positives": 21.903312385161712,
+              "issues_with_score_ties": 31,
+              "issues_with_boundary_ties": 5,
+              "boundary_tie_candidates": 19,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10188068252584381,
+              "precision": 0.10024449877750612,
+              "recall": 0.3813953488372093,
+              "lift_over_random_budget": 3.7437259971487458
+            }
+          },
+          "6": {
+            "rows": 6025,
+            "positives": 377,
+            "positive_fraction": 0.06257261410788381,
+            "missing_score_candidates": 0,
+            "average_precision": 0.324033401872693,
+            "roc_auc": 0.8254749457097558,
+            "brier": 0.05571865009668016,
+            "logloss": 0.2622584802936782,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 31,
+              "eligible_candidates": 6025,
+              "examined_candidates": 619,
+              "true_positives": 131,
+              "total_positives": 377,
+              "random_budget_expected_true_positives": 38.97289497656661,
+              "issues_with_score_ties": 31,
+              "issues_with_boundary_ties": 5,
+              "boundary_tie_candidates": 15,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10273858921161826,
+              "precision": 0.21163166397415187,
+              "recall": 0.34748010610079577,
+              "lift_over_random_budget": 3.3613104717719047
+            }
+          }
+        },
+        "yeongwol_2022": {
+          "1": {
+            "rows": 4485,
+            "positives": 5,
+            "positive_fraction": 0.0011148272017837235,
+            "missing_score_candidates": 0,
+            "average_precision": 0.221656746031746,
+            "roc_auc": 0.9953794642857143,
+            "brier": 0.0010681382508820557,
+            "logloss": 0.0055960960670599375,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 14,
+              "eligible_candidates": 4485,
+              "examined_candidates": 456,
+              "true_positives": 5,
+              "total_positives": 5,
+              "random_budget_expected_true_positives": 0.5035229332694873,
+              "issues_with_score_ties": 14,
+              "issues_with_boundary_ties": 5,
+              "boundary_tie_candidates": 17,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10167224080267559,
+              "precision": 0.010964912280701754,
+              "recall": 1.0,
+              "lift_over_random_budget": 9.93003430356961
+            }
+          },
+          "3": {
+            "rows": 4387,
+            "positives": 11,
+            "positive_fraction": 0.00250740825165261,
+            "missing_score_candidates": 0,
+            "average_precision": 0.46695481238791703,
+            "roc_auc": 0.997881003822503,
+            "brier": 0.0016023446198875965,
+            "logloss": 0.007188871534812191,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 13,
+              "eligible_candidates": 4387,
+              "examined_candidates": 444,
+              "true_positives": 11,
+              "total_positives": 11,
+              "random_budget_expected_true_positives": 1.1096033092966209,
+              "issues_with_score_ties": 13,
+              "issues_with_boundary_ties": 4,
+              "boundary_tie_candidates": 9,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10120811488488717,
+              "precision": 0.024774774774774775,
+              "recall": 1.0,
+              "lift_over_random_budget": 9.913452769866842
+            }
+          },
+          "6": {
+            "rows": 4333,
+            "positives": 11,
+            "positive_fraction": 0.002538656819755366,
+            "missing_score_candidates": 0,
+            "average_precision": 0.8930557351609985,
+            "roc_auc": 0.9992638088427075,
+            "brier": 0.0009159360071847243,
+            "logloss": 0.005952700459112863,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 13,
+              "eligible_candidates": 4333,
+              "examined_candidates": 441,
+              "true_positives": 11,
+              "total_positives": 11,
+              "random_budget_expected_true_positives": 1.1224647808990955,
+              "issues_with_score_ties": 13,
+              "issues_with_boundary_ties": 4,
+              "boundary_tie_candidates": 13,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10177705977382875,
+              "precision": 0.024943310657596373,
+              "recall": 1.0,
+              "lift_over_random_budget": 9.79986204216491
+            }
+          }
+        },
+        "gangneung_donghae_2022": {
+          "1": {
+            "rows": 8312,
+            "positives": 7,
+            "positive_fraction": 0.0008421559191530317,
+            "missing_score_candidates": 0,
+            "average_precision": 0.5711928806095675,
+            "roc_auc": 0.9851724434505891,
+            "brier": 0.0007561486283857532,
+            "logloss": 0.005053147312873202,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 24,
+              "eligible_candidates": 8312,
+              "examined_candidates": 846,
+              "true_positives": 7,
+              "total_positives": 7,
+              "random_budget_expected_true_positives": 0.7091503267973855,
+              "issues_with_score_ties": 24,
+              "issues_with_boundary_ties": 11,
+              "boundary_tie_candidates": 66,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10178055822906641,
+              "precision": 0.008274231678486997,
+              "recall": 1.0,
+              "lift_over_random_budget": 9.870967741935486
+            }
+          },
+          "3": {
+            "rows": 8096,
+            "positives": 14,
+            "positive_fraction": 0.0017292490118577075,
+            "missing_score_candidates": 0,
+            "average_precision": 0.5242298063055401,
+            "roc_auc": 0.967122706543642,
+            "brier": 0.001443078331987416,
+            "logloss": 0.009037147291612415,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 26,
+              "eligible_candidates": 8096,
+              "examined_candidates": 822,
+              "true_positives": 9,
+              "total_positives": 14,
+              "random_budget_expected_true_positives": 2.8208822276441654,
+              "issues_with_score_ties": 24,
+              "issues_with_boundary_ties": 14,
+              "boundary_tie_candidates": 77,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10153162055335968,
+              "precision": 0.010948905109489052,
+              "recall": 0.6428571428571429,
+              "lift_over_random_budget": 3.19049122710673
+            }
+          },
+          "6": {
+            "rows": 8009,
+            "positives": 18,
+            "positive_fraction": 0.002247471594456237,
+            "missing_score_candidates": 0,
+            "average_precision": 0.5289350893177029,
+            "roc_auc": 0.9606084622978628,
+            "brier": 0.001854006687008721,
+            "logloss": 0.011363977196647885,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 26,
+              "eligible_candidates": 8009,
+              "examined_candidates": 813,
+              "true_positives": 11,
+              "total_positives": 18,
+              "random_budget_expected_true_positives": 3.000303951367781,
+              "issues_with_score_ties": 24,
+              "issues_with_boundary_ties": 15,
+              "boundary_tie_candidates": 107,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10151080034960669,
+              "precision": 0.013530135301353014,
+              "recall": 0.6111111111111112,
+              "lift_over_random_budget": 3.666295208185594
+            }
+          }
+        }
+      }
+    },
+    "2022-04-05": {
+      "status": "completed",
+      "held_out_events": [
+        "bonghwa_2022"
+      ],
+      "training_events": [
+        "andong_2020",
+        "andong_2021",
+        "hapcheon_2022",
+        "uljin_2022",
+        "ulju_2020",
+        "goseong_2020",
+        "yeongdeok_2022",
+        "yeongwol_2022",
+        "gangneung_donghae_2022",
+        "yanggu_2022",
+        "gunwi_2022",
+        "uljin_may_2022",
+        "miryang_2022"
+      ],
+      "resolved_positive_weight": 3.0,
+      "training_positive_rows": 1751,
+      "training_negative_rows": 313484,
+      "training_event_shares": {
+        "andong_2020": {
+          "rows": 11540,
+          "row_share": 0.03660761019556839,
+          "weight_sum": 11540.0,
+          "weight_share": 0.03660761019556839,
+          "positive_rows": 103,
+          "class_adjusted_weight_sum": 11746.0,
+          "class_adjusted_weight_share": 0.036851699049686736
+        },
+        "andong_2021": {
+          "rows": 91892,
+          "row_share": 0.29150316430599393,
+          "weight_sum": 91892.0,
+          "weight_share": 0.29150316430599393,
+          "positive_rows": 217,
+          "class_adjusted_weight_sum": 92326.0,
+          "class_adjusted_weight_share": 0.2896620097447112
+        },
+        "hapcheon_2022": {
+          "rows": 6657,
+          "row_share": 0.02111757894903802,
+          "weight_sum": 6657.0,
+          "weight_share": 0.02111757894903802,
+          "positive_rows": 26,
+          "class_adjusted_weight_sum": 6709.0,
+          "class_adjusted_weight_share": 0.02104870159410423
+        },
+        "uljin_2022": {
+          "rows": 25406,
+          "row_share": 0.08059384268878773,
+          "weight_sum": 25406.0,
+          "weight_share": 0.08059384268878773,
+          "positive_rows": 655,
+          "class_adjusted_weight_sum": 26716.0,
+          "class_adjusted_weight_share": 0.08381832043346081
+        },
+        "ulju_2020": {
+          "rows": 25594,
+          "row_share": 0.08119022316684378,
+          "weight_sum": 25594.0,
+          "weight_share": 0.08119022316684378,
+          "positive_rows": 77,
+          "class_adjusted_weight_sum": 25748.0,
+          "class_adjusted_weight_share": 0.08078133382694824
+        },
+        "goseong_2020": {
+          "rows": 4311,
+          "row_share": 0.01367551191967897,
+          "weight_sum": 4311.0,
+          "weight_share": 0.01367551191967897,
+          "positive_rows": 24,
+          "class_adjusted_weight_sum": 4359.0,
+          "class_adjusted_weight_share": 0.013675851877880509
+        },
+        "yeongdeok_2022": {
+          "rows": 35489,
+          "row_share": 0.1125795041794217,
+          "weight_sum": 35489.0,
+          "weight_share": 0.1125795041794217,
+          "positive_rows": 254,
+          "class_adjusted_weight_sum": 35997.0,
+          "class_adjusted_weight_share": 0.11293637073825756
+        },
+        "yeongwol_2022": {
+          "rows": 13205,
+          "row_share": 0.04188938411026694,
+          "weight_sum": 13205.0,
+          "weight_share": 0.04188938411026694,
+          "positive_rows": 27,
+          "class_adjusted_weight_sum": 13259.0,
+          "class_adjusted_weight_share": 0.04159855931379162
+        },
+        "gangneung_donghae_2022": {
+          "rows": 24417,
+          "row_share": 0.07745650070582263,
+          "weight_sum": 24417.0,
+          "weight_share": 0.07745650070582263,
+          "positive_rows": 39,
+          "class_adjusted_weight_sum": 24495.0,
+          "class_adjusted_weight_share": 0.07685019310591491
+        },
+        "yanggu_2022": {
+          "rows": 34026,
+          "row_share": 0.10793852205497487,
+          "weight_sum": 34026.0,
+          "weight_share": 0.10793852205497487,
+          "positive_rows": 274,
+          "class_adjusted_weight_sum": 34574.0,
+          "class_adjusted_weight_share": 0.10847187493136976
+        },
+        "gunwi_2022": {
+          "rows": 105,
+          "row_share": 0.00033308484146747663,
+          "weight_sum": 105.0,
+          "weight_share": 0.00033308484146747663,
+          "positive_rows": 19,
+          "class_adjusted_weight_sum": 143.0,
+          "class_adjusted_weight_share": 0.0004486457486893583
+        },
+        "uljin_may_2022": {
+          "rows": 2700,
+          "row_share": 0.008565038780592256,
+          "weight_sum": 2700.0,
+          "weight_share": 0.008565038780592256,
+          "positive_rows": 0,
+          "class_adjusted_weight_sum": 2700.0,
+          "class_adjusted_weight_share": 0.00847093371651236
+        },
+        "miryang_2022": {
+          "rows": 39893,
+          "row_share": 0.12655003410154328,
+          "weight_sum": 39893.0,
+          "weight_share": 0.12655003410154328,
+          "positive_rows": 36,
+          "class_adjusted_weight_sum": 39965.0,
+          "class_adjusted_weight_share": 0.12538550591867276
+        }
+      },
+      "held_out": {
+        "bonghwa_2022": {
+          "1": {
+            "rows": 243,
+            "positives": 4,
+            "positive_fraction": 0.01646090534979424,
+            "missing_score_candidates": 0,
+            "average_precision": 0.6791666666666667,
+            "roc_auc": 0.9958158995815899,
+            "brier": 0.00973399885131093,
+            "logloss": 0.03913086217546028,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 3,
+              "eligible_candidates": 243,
+              "examined_candidates": 25,
+              "true_positives": 4,
+              "total_positives": 4,
+              "random_budget_expected_true_positives": 0.41731141199226307,
+              "issues_with_score_ties": 2,
+              "issues_with_boundary_ties": 0,
+              "boundary_tie_candidates": 0,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.102880658436214,
+              "precision": 0.16,
+              "recall": 1.0,
+              "lift_over_random_budget": 9.585168018539976
+            }
+          },
+          "3": {
+            "rows": 6,
+            "positives": 6,
+            "positive_fraction": 1.0,
+            "missing_score_candidates": 0,
+            "average_precision": null,
+            "roc_auc": null,
+            "brier": 0.2762892998570921,
+            "logloss": 0.7512351971841073,
+            "eligible_for_ap_comparison": false,
+            "exclusion_reason": "both_classes_required",
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 2,
+              "eligible_candidates": 6,
+              "examined_candidates": 2,
+              "true_positives": 2,
+              "total_positives": 6,
+              "random_budget_expected_true_positives": 2.0,
+              "issues_with_score_ties": 0,
+              "issues_with_boundary_ties": 0,
+              "boundary_tie_candidates": 0,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.3333333333333333,
+              "precision": 1.0,
+              "recall": 0.3333333333333333,
+              "lift_over_random_budget": 1.0
+            }
+          },
+          "6": {
+            "rows": 6,
+            "positives": 6,
+            "positive_fraction": 1.0,
+            "missing_score_candidates": 0,
+            "average_precision": null,
+            "roc_auc": null,
+            "brier": 0.1437360657356391,
+            "logloss": 0.46594091665851817,
+            "eligible_for_ap_comparison": false,
+            "exclusion_reason": "both_classes_required",
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 2,
+              "eligible_candidates": 6,
+              "examined_candidates": 2,
+              "true_positives": 2,
+              "total_positives": 6,
+              "random_budget_expected_true_positives": 2.0,
+              "issues_with_score_ties": 0,
+              "issues_with_boundary_ties": 0,
+              "boundary_tie_candidates": 0,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.3333333333333333,
+              "precision": 1.0,
+              "recall": 0.3333333333333333,
+              "lift_over_random_budget": 1.0
+            }
+          }
+        }
+      }
+    },
+    "2022-04-10": {
+      "status": "completed",
+      "held_out_events": [
+        "yanggu_2022",
+        "gunwi_2022"
+      ],
+      "training_events": [
+        "andong_2020",
+        "andong_2021",
+        "hapcheon_2022",
+        "uljin_2022",
+        "ulju_2020",
+        "goseong_2020",
+        "yeongdeok_2022",
+        "yeongwol_2022",
+        "gangneung_donghae_2022",
+        "bonghwa_2022",
+        "uljin_may_2022",
+        "miryang_2022"
+      ],
+      "resolved_positive_weight": 3.0,
+      "training_positive_rows": 1474,
+      "training_negative_rows": 279885,
+      "training_event_shares": {
+        "andong_2020": {
+          "rows": 11540,
+          "row_share": 0.04101521543650639,
+          "weight_sum": 11540.0,
+          "weight_share": 0.04101521543650639,
+          "positive_rows": 103,
+          "class_adjusted_weight_sum": 11746.0,
+          "class_adjusted_weight_share": 0.04131449454287091
+        },
+        "andong_2021": {
+          "rows": 91892,
+          "row_share": 0.326600535259224,
+          "weight_sum": 91892.0,
+          "weight_share": 0.326600535259224,
+          "positive_rows": 217,
+          "class_adjusted_weight_sum": 92326.0,
+          "class_adjusted_weight_share": 0.324740509378946
+        },
+        "hapcheon_2022": {
+          "rows": 6657,
+          "row_share": 0.023660163705443934,
+          "weight_sum": 6657.0,
+          "weight_share": 0.023660163705443934,
+          "positive_rows": 26,
+          "class_adjusted_weight_sum": 6709.0,
+          "class_adjusted_weight_share": 0.023597730622179545
+        },
+        "uljin_2022": {
+          "rows": 25406,
+          "row_share": 0.09029744916636752,
+          "weight_sum": 25406.0,
+          "weight_share": 0.09029744916636752,
+          "positive_rows": 655,
+          "class_adjusted_weight_sum": 26716.0,
+          "class_adjusted_weight_share": 0.09396884353885061
+        },
+        "ulju_2020": {
+          "rows": 25594,
+          "row_share": 0.09096563465181494,
+          "weight_sum": 25594.0,
+          "weight_share": 0.09096563465181494,
+          "positive_rows": 77,
+          "class_adjusted_weight_sum": 25748.0,
+          "class_adjusted_weight_share": 0.09056407334325219
+        },
+        "goseong_2020": {
+          "rows": 4311,
+          "row_share": 0.015322061849807542,
+          "weight_sum": 4311.0,
+          "weight_share": 0.015322061849807542,
+          "positive_rows": 24,
+          "class_adjusted_weight_sum": 4359.0,
+          "class_adjusted_weight_share": 0.015332017853939579
+        },
+        "yeongdeok_2022": {
+          "rows": 35489,
+          "row_share": 0.12613422709065641,
+          "weight_sum": 35489.0,
+          "weight_share": 0.12613422709065641,
+          "positive_rows": 254,
+          "class_adjusted_weight_sum": 35997.0,
+          "class_adjusted_weight_share": 0.12661313298652513
+        },
+        "yeongwol_2022": {
+          "rows": 13205,
+          "row_share": 0.04693292199645293,
+          "weight_sum": 13205.0,
+          "weight_share": 0.04693292199645293,
+          "positive_rows": 27,
+          "class_adjusted_weight_sum": 13259.0,
+          "class_adjusted_weight_share": 0.046636206635784556
+        },
+        "gangneung_donghae_2022": {
+          "rows": 24417,
+          "row_share": 0.08678236701154042,
+          "weight_sum": 24417.0,
+          "weight_share": 0.08678236701154042,
+          "positive_rows": 39,
+          "class_adjusted_weight_sum": 24495.0,
+          "class_adjusted_weight_share": 0.08615686564171829
+        },
+        "bonghwa_2022": {
+          "rows": 255,
+          "row_share": 0.0009063154190909123,
+          "weight_sum": 255.0,
+          "weight_share": 0.0009063154190909123,
+          "positive_rows": 16,
+          "class_adjusted_weight_sum": 287.0,
+          "class_adjusted_weight_share": 0.0010094721550999448
+        },
+        "uljin_may_2022": {
+          "rows": 2700,
+          "row_share": 0.009596280908021424,
+          "weight_sum": 2700.0,
+          "weight_share": 0.009596280908021424,
+          "positive_rows": 0,
+          "class_adjusted_weight_sum": 2700.0,
+          "class_adjusted_weight_share": 0.009496776372020387
+        },
+        "miryang_2022": {
+          "rows": 39893,
+          "row_share": 0.1417868275050736,
+          "weight_sum": 39893.0,
+          "weight_share": 0.1417868275050736,
+          "positive_rows": 36,
+          "class_adjusted_weight_sum": 39965.0,
+          "class_adjusted_weight_share": 0.14056987692881287
+        }
+      },
+      "held_out": {
+        "yanggu_2022": {
+          "1": {
+            "rows": 16483,
+            "positives": 40,
+            "positive_fraction": 0.0024267427046047443,
+            "missing_score_candidates": 0,
+            "average_precision": 0.11197923596568936,
+            "roc_auc": 0.6518662956881348,
+            "brier": 0.0023161730668417205,
+            "logloss": 0.014394800505047442,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 28,
+              "eligible_candidates": 16483,
+              "examined_candidates": 1661,
+              "true_positives": 24,
+              "total_positives": 40,
+              "random_budget_expected_true_positives": 4.033442620866658,
+              "issues_with_score_ties": 28,
+              "issues_with_boundary_ties": 6,
+              "boundary_tie_candidates": 25,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.100770490808712,
+              "precision": 0.014449127031908489,
+              "recall": 0.6,
+              "lift_over_random_budget": 5.950251994620706
+            }
+          },
+          "3": {
+            "rows": 12176,
+            "positives": 97,
+            "positive_fraction": 0.007966491458607096,
+            "missing_score_candidates": 0,
+            "average_precision": 0.1502836082534792,
+            "roc_auc": 0.6516165484443905,
+            "brier": 0.007319508452556815,
+            "logloss": 0.04225039455130586,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 28,
+              "eligible_candidates": 12176,
+              "examined_candidates": 1233,
+              "true_positives": 36,
+              "total_positives": 97,
+              "random_budget_expected_true_positives": 14.867995745131847,
+              "issues_with_score_ties": 22,
+              "issues_with_boundary_ties": 2,
+              "boundary_tie_candidates": 8,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10126478318002628,
+              "precision": 0.029197080291970802,
+              "recall": 0.3711340206185567,
+              "lift_over_random_budget": 2.421308198974115
+            }
+          },
+          "6": {
+            "rows": 5367,
+            "positives": 137,
+            "positive_fraction": 0.02552636482206074,
+            "missing_score_candidates": 0,
+            "average_precision": 0.1688655878554874,
+            "roc_auc": 0.6135706410238517,
+            "brier": 0.022990720741007522,
+            "logloss": 0.11840993508175292,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 27,
+              "eligible_candidates": 5367,
+              "examined_candidates": 552,
+              "true_positives": 33,
+              "total_positives": 137,
+              "random_budget_expected_true_positives": 22.60834636199345,
+              "issues_with_score_ties": 21,
+              "issues_with_boundary_ties": 5,
+              "boundary_tie_candidates": 19,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10285075461151481,
+              "precision": 0.059782608695652176,
+              "recall": 0.24087591240875914,
+              "lift_over_random_budget": 1.459637935106824
+            }
+          }
+        },
+        "gunwi_2022": {
+          "1": {
+            "rows": 90,
+            "positives": 4,
+            "positive_fraction": 0.044444444444444446,
+            "missing_score_candidates": 0,
+            "average_precision": 1.0,
+            "roc_auc": 1.0,
+            "brier": 0.035419119206783645,
+            "logloss": 0.10323472062609665,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 2,
+              "eligible_candidates": 90,
+              "examined_candidates": 10,
+              "true_positives": 4,
+              "total_positives": 4,
+              "random_budget_expected_true_positives": 0.45161290322580644,
+              "issues_with_score_ties": 2,
+              "issues_with_boundary_ties": 0,
+              "boundary_tie_candidates": 0,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.1111111111111111,
+              "precision": 0.4,
+              "recall": 1.0,
+              "lift_over_random_budget": 8.857142857142858
+            }
+          },
+          "3": {
+            "rows": 4,
+            "positives": 4,
+            "positive_fraction": 1.0,
+            "missing_score_candidates": 0,
+            "average_precision": null,
+            "roc_auc": null,
+            "brier": 0.648464323050688,
+            "logloss": 1.666201054816129,
+            "eligible_for_ap_comparison": false,
+            "exclusion_reason": "both_classes_required",
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 1,
+              "eligible_candidates": 4,
+              "examined_candidates": 1,
+              "true_positives": 1,
+              "total_positives": 4,
+              "random_budget_expected_true_positives": 1.0,
+              "issues_with_score_ties": 0,
+              "issues_with_boundary_ties": 0,
+              "boundary_tie_candidates": 0,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.25,
+              "precision": 1.0,
+              "recall": 0.25,
+              "lift_over_random_budget": 1.0
+            }
+          },
+          "6": {
+            "rows": 11,
+            "positives": 11,
+            "positive_fraction": 1.0,
+            "missing_score_candidates": 0,
+            "average_precision": null,
+            "roc_auc": null,
+            "brier": 0.6495857642850319,
+            "logloss": 1.8074258264256562,
+            "eligible_for_ap_comparison": false,
+            "exclusion_reason": "both_classes_required",
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 3,
+              "eligible_candidates": 11,
+              "examined_candidates": 3,
+              "true_positives": 3,
+              "total_positives": 11,
+              "random_budget_expected_true_positives": 3.0,
+              "issues_with_score_ties": 0,
+              "issues_with_boundary_ties": 0,
+              "boundary_tie_candidates": 0,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.2727272727272727,
+              "precision": 1.0,
+              "recall": 0.2727272727272727,
+              "lift_over_random_budget": 1.0
+            }
+          }
+        }
+      }
+    },
+    "2022-05-28": {
+      "status": "completed",
+      "held_out_events": [
+        "uljin_may_2022"
+      ],
+      "training_events": [
+        "andong_2020",
+        "andong_2021",
+        "hapcheon_2022",
+        "uljin_2022",
+        "ulju_2020",
+        "goseong_2020",
+        "yeongdeok_2022",
+        "yeongwol_2022",
+        "gangneung_donghae_2022",
+        "bonghwa_2022",
+        "yanggu_2022",
+        "gunwi_2022",
+        "miryang_2022"
+      ],
+      "resolved_positive_weight": 3.0,
+      "training_positive_rows": 1767,
+      "training_negative_rows": 311023,
+      "training_event_shares": {
+        "andong_2020": {
+          "rows": 11540,
+          "row_share": 0.036893762588318044,
+          "weight_sum": 11540.0,
+          "weight_share": 0.036893762588318044,
+          "positive_rows": 103,
+          "class_adjusted_weight_sum": 11746.0,
+          "class_adjusted_weight_share": 0.03713281319153779
+        },
+        "andong_2021": {
+          "rows": 91892,
+          "row_share": 0.29378177051696025,
+          "weight_sum": 91892.0,
+          "weight_share": 0.29378177051696025,
+          "positive_rows": 217,
+          "class_adjusted_weight_sum": 92326.0,
+          "class_adjusted_weight_share": 0.291871625295583
+        },
+        "hapcheon_2022": {
+          "rows": 6657,
+          "row_share": 0.0212826497010774,
+          "weight_sum": 6657.0,
+          "weight_share": 0.0212826497010774,
+          "positive_rows": 26,
+          "class_adjusted_weight_sum": 6709.0,
+          "class_adjusted_weight_share": 0.021209266448325135
+        },
+        "uljin_2022": {
+          "rows": 25406,
+          "row_share": 0.0812238242910579,
+          "weight_sum": 25406.0,
+          "weight_share": 0.0812238242910579,
+          "positive_rows": 655,
+          "class_adjusted_weight_sum": 26716.0,
+          "class_adjusted_weight_share": 0.08445770791972787
+        },
+        "ulju_2020": {
+          "rows": 25594,
+          "row_share": 0.08182486652386585,
+          "weight_sum": 25594.0,
+          "weight_share": 0.08182486652386585,
+          "positive_rows": 77,
+          "class_adjusted_weight_sum": 25748.0,
+          "class_adjusted_weight_share": 0.0813975544062417
+        },
+        "goseong_2020": {
+          "rows": 4311,
+          "row_share": 0.013782409923590908,
+          "weight_sum": 4311.0,
+          "weight_share": 0.013782409923590908,
+          "positive_rows": 24,
+          "class_adjusted_weight_sum": 4359.0,
+          "class_adjusted_weight_share": 0.013780174757527092
+        },
+        "yeongdeok_2022": {
+          "rows": 35489,
+          "row_share": 0.11345950957511429,
+          "weight_sum": 35489.0,
+          "weight_share": 0.11345950957511429,
+          "positive_rows": 254,
+          "class_adjusted_weight_sum": 35997.0,
+          "class_adjusted_weight_share": 0.11379787812496048
+        },
+        "yeongwol_2022": {
+          "rows": 13205,
+          "row_share": 0.04221682278845232,
+          "weight_sum": 13205.0,
+          "weight_share": 0.04221682278845232,
+          "positive_rows": 27,
+          "class_adjusted_weight_sum": 13259.0,
+          "class_adjusted_weight_share": 0.04191588371416649
+        },
+        "gangneung_donghae_2022": {
+          "rows": 24417,
+          "row_share": 0.07806195850250967,
+          "weight_sum": 24417.0,
+          "weight_share": 0.07806195850250967,
+          "positive_rows": 39,
+          "class_adjusted_weight_sum": 24495.0,
+          "class_adjusted_weight_share": 0.07743642594302044
+        },
+        "bonghwa_2022": {
+          "rows": 255,
+          "row_share": 0.0008152434540746187,
+          "weight_sum": 255.0,
+          "weight_share": 0.0008152434540746187,
+          "positive_rows": 16,
+          "class_adjusted_weight_sum": 287.0,
+          "class_adjusted_weight_share": 0.0009072975809612929
+        },
+        "yanggu_2022": {
+          "rows": 34026,
+          "row_share": 0.10878225007193325,
+          "weight_sum": 34026.0,
+          "weight_share": 0.10878225007193325,
+          "positive_rows": 274,
+          "class_adjusted_weight_sum": 34574.0,
+          "class_adjusted_weight_share": 0.10929932600751129
+        },
+        "gunwi_2022": {
+          "rows": 105,
+          "row_share": 0.0003356884810895489,
+          "weight_sum": 105.0,
+          "weight_share": 0.0003356884810895489,
+          "positive_rows": 19,
+          "class_adjusted_weight_sum": 143.0,
+          "class_adjusted_weight_share": 0.00045206813267409363
+        },
+        "miryang_2022": {
+          "rows": 39893,
+          "row_share": 0.12753924358195595,
+          "weight_sum": 39893.0,
+          "weight_share": 0.12753924358195595,
+          "positive_rows": 36,
+          "class_adjusted_weight_sum": 39965.0,
+          "class_adjusted_weight_share": 0.1263419784777633
+        }
+      },
+      "held_out": {
+        "uljin_may_2022": {
+          "1": {
+            "rows": 900,
+            "positives": 0,
+            "positive_fraction": 0.0,
+            "missing_score_candidates": 0,
+            "average_precision": null,
+            "roc_auc": null,
+            "brier": 0.0041243659475346936,
+            "logloss": 0.017211224866381734,
+            "eligible_for_ap_comparison": false,
+            "exclusion_reason": "both_classes_required",
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 3,
+              "eligible_candidates": 900,
+              "examined_candidates": 91,
+              "true_positives": 0,
+              "total_positives": 0,
+              "random_budget_expected_true_positives": 0.0,
+              "issues_with_score_ties": 3,
+              "issues_with_boundary_ties": 0,
+              "boundary_tie_candidates": 0,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10111111111111111,
+              "precision": 0.0,
+              "recall": null,
+              "lift_over_random_budget": null
+            }
+          },
+          "3": {
+            "rows": 900,
+            "positives": 0,
+            "positive_fraction": 0.0,
+            "missing_score_candidates": 0,
+            "average_precision": null,
+            "roc_auc": null,
+            "brier": 0.007699127885294806,
+            "logloss": 0.02909418920355562,
+            "eligible_for_ap_comparison": false,
+            "exclusion_reason": "both_classes_required",
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 3,
+              "eligible_candidates": 900,
+              "examined_candidates": 91,
+              "true_positives": 0,
+              "total_positives": 0,
+              "random_budget_expected_true_positives": 0.0,
+              "issues_with_score_ties": 3,
+              "issues_with_boundary_ties": 0,
+              "boundary_tie_candidates": 0,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10111111111111111,
+              "precision": 0.0,
+              "recall": null,
+              "lift_over_random_budget": null
+            }
+          },
+          "6": {
+            "rows": 900,
+            "positives": 0,
+            "positive_fraction": 0.0,
+            "missing_score_candidates": 0,
+            "average_precision": null,
+            "roc_auc": null,
+            "brier": 0.011011202701799658,
+            "logloss": 0.042618507575015965,
+            "eligible_for_ap_comparison": false,
+            "exclusion_reason": "both_classes_required",
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 3,
+              "eligible_candidates": 900,
+              "examined_candidates": 91,
+              "true_positives": 0,
+              "total_positives": 0,
+              "random_budget_expected_true_positives": 0.0,
+              "issues_with_score_ties": 3,
+              "issues_with_boundary_ties": 0,
+              "boundary_tie_candidates": 0,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10111111111111111,
+              "precision": 0.0,
+              "recall": null,
+              "lift_over_random_budget": null
+            }
+          }
+        }
+      }
+    },
+    "2022-05-31": {
+      "status": "completed",
+      "held_out_events": [
+        "miryang_2022"
+      ],
+      "training_events": [
+        "andong_2020",
+        "andong_2021",
+        "hapcheon_2022",
+        "uljin_2022",
+        "ulju_2020",
+        "goseong_2020",
+        "yeongdeok_2022",
+        "yeongwol_2022",
+        "gangneung_donghae_2022",
+        "bonghwa_2022",
+        "yanggu_2022",
+        "gunwi_2022",
+        "uljin_may_2022"
+      ],
+      "resolved_positive_weight": 3.0,
+      "training_positive_rows": 1731,
+      "training_negative_rows": 273866,
+      "training_event_shares": {
+        "andong_2020": {
+          "rows": 11540,
+          "row_share": 0.041872734463727836,
+          "weight_sum": 11540.0,
+          "weight_share": 0.041872734463727836,
+          "positive_rows": 103,
+          "class_adjusted_weight_sum": 11746.0,
+          "class_adjusted_weight_share": 0.04209145736206322
+        },
+        "andong_2021": {
+          "rows": 91892,
+          "row_share": 0.3334288834784123,
+          "weight_sum": 91892.0,
+          "weight_share": 0.3334288834784123,
+          "positive_rows": 217,
+          "class_adjusted_weight_sum": 92326.0,
+          "class_adjusted_weight_share": 0.3308475985365102
+        },
+        "hapcheon_2022": {
+          "rows": 6657,
+          "row_share": 0.02415483477686622,
+          "weight_sum": 6657.0,
+          "weight_share": 0.02415483477686622,
+          "positive_rows": 26,
+          "class_adjusted_weight_sum": 6709.0,
+          "class_adjusted_weight_share": 0.024041510934963574
+        },
+        "uljin_2022": {
+          "rows": 25406,
+          "row_share": 0.092185328577597,
+          "weight_sum": 25406.0,
+          "weight_share": 0.092185328577597,
+          "positive_rows": 655,
+          "class_adjusted_weight_sum": 26716.0,
+          "class_adjusted_weight_share": 0.09573602714838081
+        },
+        "ulju_2020": {
+          "rows": 25594,
+          "row_share": 0.09286748404373052,
+          "weight_sum": 25594.0,
+          "weight_share": 0.09286748404373052,
+          "positive_rows": 77,
+          "class_adjusted_weight_sum": 25748.0,
+          "class_adjusted_weight_share": 0.09226722664382801
+        },
+        "goseong_2020": {
+          "rows": 4311,
+          "row_share": 0.015642405396285156,
+          "weight_sum": 4311.0,
+          "weight_share": 0.015642405396285156,
+          "positive_rows": 24,
+          "class_adjusted_weight_sum": 4359.0,
+          "class_adjusted_weight_share": 0.01562035268527444
+        },
+        "yeongdeok_2022": {
+          "rows": 35489,
+          "row_share": 0.12877135817879004,
+          "weight_sum": 35489.0,
+          "weight_share": 0.12877135817879004,
+          "positive_rows": 254,
+          "class_adjusted_weight_sum": 35997.0,
+          "class_adjusted_weight_share": 0.12899422702725946
+        },
+        "yeongwol_2022": {
+          "rows": 13205,
+          "row_share": 0.04791416452283588,
+          "weight_sum": 13205.0,
+          "weight_share": 0.04791416452283588,
+          "positive_rows": 27,
+          "class_adjusted_weight_sum": 13259.0,
+          "class_adjusted_weight_share": 0.047513249886224775
+        },
+        "gangneung_donghae_2022": {
+          "rows": 24417,
+          "row_share": 0.08859675540735204,
+          "weight_sum": 24417.0,
+          "weight_share": 0.08859675540735204,
+          "positive_rows": 39,
+          "class_adjusted_weight_sum": 24495.0,
+          "class_adjusted_weight_share": 0.08777713673452567
+        },
+        "bonghwa_2022": {
+          "rows": 255,
+          "row_share": 0.0009252640631066376,
+          "weight_sum": 255.0,
+          "weight_share": 0.0009252640631066376,
+          "positive_rows": 16,
+          "class_adjusted_weight_sum": 287.0,
+          "class_adjusted_weight_share": 0.001028456347940758
+        },
+        "yanggu_2022": {
+          "rows": 34026,
+          "row_share": 0.12346288239712333,
+          "weight_sum": 34026.0,
+          "weight_share": 0.12346288239712333,
+          "positive_rows": 274,
+          "class_adjusted_weight_sum": 34574.0,
+          "class_adjusted_weight_share": 0.12389494694670303
+        },
+        "gunwi_2022": {
+          "rows": 105,
+          "row_share": 0.0003809910848086155,
+          "weight_sum": 105.0,
+          "weight_share": 0.0003809910848086155,
+          "positive_rows": 19,
+          "class_adjusted_weight_sum": 143.0,
+          "class_adjusted_weight_share": 0.0005124364381725728
+        },
+        "uljin_may_2022": {
+          "rows": 2700,
+          "row_share": 0.009796913609364398,
+          "weight_sum": 2700.0,
+          "weight_share": 0.009796913609364398,
+          "positive_rows": 0,
+          "class_adjusted_weight_sum": 2700.0,
+          "class_adjusted_weight_share": 0.009675373308153472
+        }
+      },
+      "held_out": {
+        "miryang_2022": {
+          "1": {
+            "rows": 17957,
+            "positives": 5,
+            "positive_fraction": 0.0002784429470401515,
+            "missing_score_candidates": 0,
+            "average_precision": 0.13351228105534488,
+            "roc_auc": 0.5530971479500891,
+            "brier": 0.0017064665902064725,
+            "logloss": 0.017212105088498107,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 32,
+              "eligible_candidates": 17957,
+              "examined_candidates": 1812,
+              "true_positives": 2,
+              "total_positives": 5,
+              "random_budget_expected_true_positives": 0.552477774506194,
+              "issues_with_score_ties": 31,
+              "issues_with_boundary_ties": 2,
+              "boundary_tie_candidates": 6,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10090772400735089,
+              "precision": 0.0011037527593818985,
+              "recall": 0.4,
+              "lift_over_random_budget": 3.6200551267199934
+            }
+          },
+          "3": {
+            "rows": 13800,
+            "positives": 11,
+            "positive_fraction": 0.0007971014492753623,
+            "missing_score_candidates": 0,
+            "average_precision": 0.05151784220192905,
+            "roc_auc": 0.5693306258611937,
+            "brier": 0.008491341064122757,
+            "logloss": 0.055439779693507406,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 27,
+              "eligible_candidates": 13800,
+              "examined_candidates": 1392,
+              "true_positives": 1,
+              "total_positives": 11,
+              "random_budget_expected_true_positives": 1.9037306458190346,
+              "issues_with_score_ties": 25,
+              "issues_with_boundary_ties": 1,
+              "boundary_tie_candidates": 2,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10086956521739131,
+              "precision": 0.0007183908045977011,
+              "recall": 0.09090909090909091,
+              "lift_over_random_budget": 0.525284394720543
+            }
+          },
+          "6": {
+            "rows": 8136,
+            "positives": 20,
+            "positive_fraction": 0.0024582104228121925,
+            "missing_score_candidates": 0,
+            "average_precision": 0.04013136331643903,
+            "roc_auc": 0.5779879250862494,
+            "brier": 0.03212025640467572,
+            "logloss": 0.15617520145292743,
+            "eligible_for_ap_comparison": true,
+            "exclusion_reason": null,
+            "top_10_percent_per_issue": {
+              "requested_percent_per_issue": 10,
+              "issues": 23,
+              "eligible_candidates": 8136,
+              "examined_candidates": 825,
+              "true_positives": 6,
+              "total_positives": 20,
+              "random_budget_expected_true_positives": 7.5459703111967675,
+              "issues_with_score_ties": 15,
+              "issues_with_boundary_ties": 0,
+              "boundary_tie_candidates": 0,
+              "missing_score_candidates": 0,
+              "examined_missing_score_candidates": 0,
+              "actual_examined_fraction": 0.10140117994100295,
+              "precision": 0.007272727272727273,
+              "recall": 0.3,
+              "lift_over_random_budget": 0.7951263724291566
+            }
+          }
+        }
+      }
+    }
+  },
+  "mean_event_horizon_ap": 0.38814535672466355
+}

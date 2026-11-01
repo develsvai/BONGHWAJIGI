@@ -1,0 +1,33 @@
+{
+  "before": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "aac9017bbe3c475ab564805ac4b07be5a630f172",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/events.jsonl",
+      ".loom/job-runs/job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02/job-run.json",
+      ".loom/jobs/job-20261031-002017-v2-fe3bfad0/job.json"
+    ],
+    "untracked_files": [
+      ".loom/task-definitions/task-def-20261031-085956-gpu-qwen-xgboost-184ad0ab/",
+      ".loom/task-runs/task-run-20261031-090010-task-def-20261031-085956-gpu-qwen-xgboost-184ad0-3691e4b2/",
+      ".loom/tasks/task-20261031-085956-gpu-qwen-xgboost-9eea12a5/"
+    ],
+    "captured_at": "2026-10-31T09:00:10+00:00"
+  },
+  "after": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "5e1979a8ae9096b88b29c586e8f134b330b353e0",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/job-runs/job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02/job-run.json",
+      ".loom/task-definitions/task-def-20261031-085956-gpu-qwen-xgboost-184ad0ab/task-definition.json"
+    ],
+    "untracked_files": [],
+    "captured_at": "2026-10-31T09:15:45+00:00"
+  }
+}

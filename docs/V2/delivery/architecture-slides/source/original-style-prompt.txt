@@ -1,0 +1,51 @@
+Use case: precise-object-edit / infographic-diagram.
+Edit the provided Korean architecture diagram. The user explicitly wants ONE updated diagram with the SAME original visual style and substantially SAME node positions and vertical layout, not a redesigned slide.
+
+Preserve: portrait aspect ratio about 944:1514, white background with very faint pale-blue dots and plus signs, pale-yellow large rectangular grouping regions with thin lavender outlines, lavender small rectangular boxes with subtle drop shadows, thin gray orthogonal arrow connectors with small dark arrowheads, lavender database cylinder, red outlined urgent-path boxes, mint-green GPU model boxes. Keep the source at top-right, small input group below, large general-server group in middle, mobile client bottom-left and GPU group bottom-right. No large title, no modern cards/icons, no additional decorative infographic style. Increase raster resolution and Korean text clarity. All text must be legible Korean. Retain original reference image design and composition.
+
+Update ONLY the technical content and necessary connection paths as follows. Text inside quotes is exact desired text, with line breaks to fit. Slightly widen boxes only where needed.
+
+TOP:
+Top source box: "공식 경보·기상\n관측·뉴스".
+Small yellow group title: "시연 자료 입력 · K8s 수집 보류".
+Its left lavender box: "공식 경보 자료\n과거 재생·합성".
+Its right lavender box: "관측·기상·뉴스\n확보 자료".
+Box below right: "시나리오 이벤트 생성".
+Both branches enter the event reception API, preserving original routes. This is NOT live K8s collection.
+
+MIDDLE LARGE YELLOW GROUP:
+Group title: "일반 서버 · 서비스와 대응 판단".
+Reception box: "이벤트 수신 API".
+Left user box: "사용자 API\n위치·프로필·현재 상태".
+Database cylinder: "DB · 사건·프로필\n기본 지침·공간·벡터".
+Small label near database: "PostgreSQL + pgvector".
+Reception splits into two paths with original labels "공식 긴급 경보" and "상세 분석 자료".
+Red urgent queue box: "긴급 전용 큐·워커".
+Right lavender analysis box: "분석 큐·워커\n저장·웹 자료 검색".
+Red lower-left box: "발령 대상 확인\n공식 원문 보존".
+Central lavender integration box: "사건 자료 정리\n위치 관련성·입력 검사".
+Preserve user API to database and user location/state change to central evaluation, label "위치·상태 변경".
+Keep the urgent path going directly to the red lower-left official-original box then to notification box, independent of central analysis/AI/personal-policy waiting. Label this route "AI 대기 없이 우선 전달".
+
+IMPORTANT FORECAST CORRECTION:
+The old XGBoost CPU box becomes a muted lavender box with a DASHED border:
+"XGBoost 예측\n연구 중 · 서비스 미연결".
+Remove active solid arrows into and out of XGBoost. If showing its future connection use only a short dashed arrow to personal policy with label "검증 후 연결 예정".
+A CLEAR SOLID bypass goes from central integration directly to personal policy, with label "현재: 공식 근거·고정 규칙".
+Personal policy box (slightly wider): "개인별 대응 정책\n1 경고 · 2 대피 · 3 위급\nDB 지침 + 고정 규칙".
+Add one small lavender box in unused space to its right: "입력 변경·만료 확인\n주기적 재평가", connected to personal policy. Do not make this box part of the urgent path.
+Red notification box near bottom-left inside general server: "알림·변경 전달\nFCM 모의 전송".
+Both official-original path and personal policy connect to notification delivery.
+This must NOT imply a real prediction or actual FCM device push already works.
+
+BOTTOM:
+Client lavender box: "모바일·웹 클라이언트\n화면 갱신·기기 TTS".
+Client arrows have labels "현재 위치·상태" upstream and "변경 조회·화면 갱신" downstream. Small nearby note "단말 연동 검증 중".
+GPU yellow group title: "GPU 서버 · AI 자료 분석".
+Left mint box: "자료 정리 API\nQwen3-4B\n요약·출처 정리".
+Right mint box: "임베딩 API\nQwen3-Embedding-0.6B\n벡터 생성".
+Analysis worker calls BOTH models; label corresponding connectors "자료 정리" and "벡터 생성".
+Qwen output goes to the central incident-data node, NOT directly to the policy/response level. Label "사건 참고 설명".
+The embedding box feeds the analysis retrieval process, with database doing the search.
+No server speech model, no real XGBoost CPU inference depicted as active, no automatic emergency calling.
+Use organized elbow connections with small bridges at crossings as in the original. Preserve the original full overview, not a simplified 4-step summary. Do not add extra explanatory paragraphs outside the diagram.

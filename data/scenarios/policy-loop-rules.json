@@ -1,0 +1,14 @@
+{
+  "review_state": "simulation_only",
+  "note": "개인화 갱신을 확인하는 합성 규칙이다. 운영 승인·대응 단계·확률 임계값을 확정한 정책이 아니다.",
+  "guidance": [
+    {"guidance_id": "official-information", "text": "[시연] 공식 발령 원문과 기본 산불 행동요령을 확인합니다."},
+    {"guidance_id": "support-contact", "text": "[시연] 이동 지원을 요청할 연락 수단과 동행 가능 여부를 확인합니다."},
+    {"guidance_id": "accompanying-person", "text": "[시연] 함께 있는 동반자와 연락 방법을 확인합니다."}
+  ],
+  "rules": [
+    {"action_id": "check-official-information", "when": "related", "guidance_id": "official-information", "priority": 1},
+    {"action_id": "check-support-contact", "when": "mobility_assistance", "guidance_id": "support-contact", "priority": 2},
+    {"action_id": "check-accompanying-person", "when": "children_accompanying", "guidance_id": "accompanying-person", "priority": 3}
+  ]
+}

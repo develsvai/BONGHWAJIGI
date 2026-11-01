@@ -1,0 +1,11 @@
+{
+  "checked_labeled_rows": 2186,
+  "scored_asof_cells": 739,
+  "all_selected_features_exactly_match_pre_refactor_parquet": true,
+  "future_parquet_used_only_in_this_separate_verification": true,
+  "exporter_does_not_read_parquet": true,
+  "evidence_sha256": "5668189c44a61adfb477af91a0f8a1ee2033ecbc395cc0f7a42b9109bab45cc8",
+  "summary_sha256": "2c8908f57ebe430990a433af1eaec982967450e4a7863c8acc05829edd0215d4",
+  "server_output": "data/artifacts/xgboost/evidence-hongseong-v3-20230402T0615Z-v2",
+  "operational_use": false
+}

@@ -1,0 +1,14 @@
+{
+  "검증일": "2026-11-01 KST",
+  "pytest": {
+    "명령": ".venv/bin/pytest -q",
+    "통과": 91,
+    "실패": 0,
+    "경고": 1,
+    "DB": "실제 로컬 PostgreSQL"
+  },
+  "migration": "upgrade head 및 check 일치",
+  "정적검사": "변경파일 Ruff 통과",
+  "문서": "실행 OpenAPI 생성 및 git diff --check 통과",
+  "판정": "서버 구현·로컬 검증 완료, 실제 배포/앱 단말은 후속 진행"
+}
