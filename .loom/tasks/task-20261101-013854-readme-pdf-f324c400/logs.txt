@@ -4,3 +4,4 @@
 [2026-11-01T01:43:31+00:00] agent=foreground task=task-20261101-013854-readme-pdf-f324c400 README 필수 다섯 항목·화면 3개·환경설정·라이선스·팀 역할을 보완하고 멘토링 절을 삭제했다. PDF·링크·앵커·환경변수·shell·공백 검증 후 ff1c7c3로 로컬 커밋했다.
 [2026-11-01T01:43:56+00:00] agent=foreground task=task-20261101-013854-readme-pdf-f324c400 Foreground task session started.
 검증 결과: git diff --check 및 git diff --cached --check 통과, loom validate --strict: 6jobs·63tasks 정상. 링크·앵커0오류, shell16블록·환경변수22개 대조 통과. 첫finish의 검증근거 표식 불일치를 표준 검증 절과 명령 기록으로 보완했다.
+[2026-11-01T01:44:24+00:00] agent=foreground task=task-20261101-013854-readme-pdf-f324c400 README 다섯 항목과 스크린샷·환경설정·라이선스·팀 역할 보완 및 멘토링 절 삭제 완료. ff1c7c3와 5f45dc5에 변경과 명시적 검증 근거 저장. 링크·이미지·환경변수·shell·공백·Loom 검사 통과.
