@@ -4,7 +4,7 @@
   "goal": "산불 한 종류의 오늘 MVP 범위와 실행 기반을 고정하고 공식 경보 우선 전달·사용자별 텍스트 안내·변경 및 해제를 시간순 재생으로 통합 검증한다. 3D와 서버 음성을 제외하고 실제 성능과 모의 시연을 구분한다. 이 갱신은 사용자 지시에 따른 계약 재고정이며 구현 실행·Queue 등록은 포함하지 않는다. 기존 완료 이력과 Task ID를 보존한다.",
   "status": "PENDING",
   "created_at": "2026-10-31T00:20:17+00:00",
-  "updated_at": "2026-11-01T00:56:59+00:00",
+  "updated_at": "2026-11-01T01:50:18+00:00",
   "context_refs": [],
   "task_ids": [
     "task-20261031-002027-k8s-v2-a251b54e",
@@ -37,7 +37,9 @@
     "task-20261031-193008-task-ba4da975",
     "task-20261031-201107-v1-e3b372aa",
     "task-20261101-003717-readme-fc490280",
-    "task-20261101-005127-readme-develop-471a46dd"
+    "task-20261101-005127-readme-develop-471a46dd",
+    "task-20261101-013854-readme-pdf-f324c400",
+    "task-20261101-014851-readme-develop-332c4250"
   ],
   "branch_name": "HeoNey",
   "checkpoint_ids": [
@@ -66,6 +68,8 @@
     "checkpoint-20261031-192552-task-completed-apk-3f832fe1",
     "checkpoint-20261031-202307-task-completed-v1-7de45ef4",
     "checkpoint-20261101-005029-task-completed-readme-53143a2c",
-    "checkpoint-20261101-005659-task-completed-readme-develop-24240fda"
+    "checkpoint-20261101-005659-task-completed-readme-develop-24240fda",
+    "checkpoint-20261101-014424-task-completed-readme-pdf-d4306dcb",
+    "checkpoint-20261101-015018-task-completed-readme-develop-b58d9524"
   ]
 }

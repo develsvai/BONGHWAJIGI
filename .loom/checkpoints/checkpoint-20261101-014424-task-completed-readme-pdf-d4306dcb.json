@@ -1,0 +1,19 @@
+{
+  "id": "checkpoint-20261101-014424-task-completed-readme-pdf-d4306dcb",
+  "created_at": "2026-11-01T01:44:24+00:00",
+  "reason": "Task completed: README 필수 다섯 항목과 발표 PDF의 화면·팀 역할 반영",
+  "summary": "README 필수 다섯 항목과 발표 PDF의 화면·팀 역할 반영 -> DONE @ develop/5f45dc5c3e34",
+  "job_id": "job-20261031-002017-v2-fe3bfad0",
+  "task_id": "task-20261101-013854-readme-pdf-f324c400",
+  "commit_sha": "5f45dc5c3e34d561ad0863b5c0bfc77fe19ee571",
+  "branch_name": "develop",
+  "dirty": true,
+  "staged_files": [],
+  "modified_files": [
+    ".loom/job-runs/job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02/job-run.json",
+    ".loom/task-definitions/task-def-20261101-013854-readme-pdf-9fe1d8c7/task-definition.json"
+  ],
+  "untracked_files": [],
+  "snapshot_captured_at": "2026-11-01T01:44:24+00:00",
+  "rollback_strategy": "revert-or-branch"
+}
