@@ -1,0 +1,34 @@
+{
+  "id": "task-def-20261031-085956-gpu-qwen-xgboost-184ad0ab",
+  "job_definition_id": "job-20261031-002017-v2-fe3bfad0",
+  "title": "GPU 서버에 두 Qwen 모델과 XGBoost를 설치하고 실제 사용 준비 검증",
+  "description": "사용자가 스캐폴딩 완료 직후 직접 지시한 후속 작업이다. 기존 GPU 서버의 자원·설치 상태를 확인하고 격리된 사용자 환경에 Qwen3-4B-Instruct-2507, Qwen3-Embedding-0.6B와 XGBoost 실행 환경을 준비한다. 두 Qwen의 실제 생성·임베딩과 XGBoost의 작은 합성 CUDA 학습·추론을 검증하고 재접속 후 사용할 실행 방법을 제공한다. 산불 실모델이나 정책 준비 완료를 가장하지 않는다.",
+  "created_at": "2026-10-31T08:59:56+00:00",
+  "updated_at": "2026-10-31T09:15:45+00:00",
+  "order_index": 10,
+  "legacy_task_id": "task-20261031-085956-gpu-qwen-xgboost-9eea12a5",
+  "depends_on": [
+    "task-def-20261031-084830-python-409169c7"
+  ],
+  "expected_output": "격리된 GPU·ML 환경, 리비전이 확인된 두 모델 가중치, 인증과 단일 GPU 실행을 갖춘 사용 진입점, 실제 검증 결과 및 운영 기록",
+  "done_condition": "실제 GPU에서 Qwen 생성과 1024차원 임베딩, 합성 XGBoost CUDA 학습·저장·CPU 재추론이 검증되고 재접속 후에도 사용할 경로와 실행 방법이 기록된다. 비밀정보를 제외한 코드·문서·Loom 기록을 커밋한다.",
+  "in_scope": "GPU 서버 사용자 영역 설치, 모델 다운로드·리비전 기록, 기존 스캐폴딩 GPU 및 ML 실행 코드, 서비스 토큰 주입·localhost API, 단일 GPU 요청 제한, 실제 샘플 검증",
+  "out_of_scope": "실제 산불 정답·예측 목표 확정, 산불 실학습·성능 보장, 개인 대응 레벨 확정, K8s 적용, 공개 포트·Tailscale 정책 변경, 다른 서비스 변경",
+  "validation_hint": "기존 GPU 자원·드라이버 확인, 고정 의존성 설치, 모델 실로딩·한국어 생성·정규화 임베딩·입력 및 인증 오류, GPU 메모리와 지연, 합성 XGBoost GPU 학습·저장·CPU 재로딩, 재접속 실행 및 관련 로컬 검사",
+  "required_docs": [
+    "docs/V2/delivery/implementation-stack.md",
+    "docs/V2/delivery/project-scaffold.md",
+    "docs/V2/delivery/ssh-access.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/gpu-model-readiness.md"
+  ],
+  "document_output_exceptions": [],
+  "default_agent": "foreground",
+  "context_policy_id": "",
+  "executor_policy_id": "",
+  "review_policy": "",
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

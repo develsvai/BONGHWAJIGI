@@ -1,0 +1,115 @@
+{
+  "verified_at_kst": "2026-11-01T02:00:14+09:00",
+  "initial_deployed_commit": "d8dc54a",
+  "migration": "f735a2ec901b",
+  "local_tests_passed": 93,
+  "local_alembic_check": "No new upgrade operations detected.",
+  "existing_non_mobile_accounts_before_after": [
+    9,
+    9
+  ],
+  "existing_non_mobile_policy_inputs_before_after": [
+    87,
+    87
+  ],
+  "private_env_mode": "0600",
+  "database_backup_mode": "0600",
+  "general_service": "active",
+  "gpu_tunnel_service": "active",
+  "gpu_or_training_changed": false,
+  "api": {
+    "readiness": 200,
+    "schema_version": "0.2.0-mvp",
+    "registration_enabled": true,
+    "unauthenticated_profile": 401,
+    "allowed_cors": "http://localhost:8081",
+    "unlisted_cors_status": 400
+  },
+  "synthetic": {
+    "scenario_id": "mobile-demo",
+    "incident_id": "mobile-fire",
+    "position": {
+      "latitude": 36.4,
+      "longitude": 129.35,
+      "accuracy_m": 10
+    },
+    "expires_at": "2026-11-01T16:46:29.962990+00:00",
+    "urgent_queue_complete": true,
+    "checks": [
+      "registration",
+      "device_registration",
+      "profile_other_dependent",
+      "location",
+      "official_original_text",
+      "policy_warning_evacuation_emergency",
+      "reviewed_policy_text",
+      "cursor_updates",
+      "cross_user_404",
+      "refresh_rotation",
+      "logout_access_refresh_401"
+    ],
+    "labels": [
+      "경고",
+      "대피",
+      "위급"
+    ],
+    "actual_prediction_connected": false,
+    "real_push": false
+  },
+  "network": {
+    "usb_forward": "http://127.0.0.1:18080",
+    "private_https": "https://inno-server-011.tail2dac17.ts.net",
+    "tailscale_serve": "configured_after_explicit_user_approval",
+    "server_self_https_tls_validated": 200,
+    "developer_machine_https": 200,
+    "effective_destination_ports": [
+      22,
+      443
+    ],
+    "https_acl_grant_present": true,
+    "funnel_enabled": false,
+    "acl_modified": true,
+    "acl_scope": "승인된 개발 Mac 및 휴대폰 두 출발지에서 일반 서버 TCP443만 허용"
+  },
+  "limitations": [
+    "실제단말검증은앱Task에서이어감",
+    "FCM/지도자격미준비",
+    "실제예측미연결"
+  ],
+  "checks_alert_push_ids": {
+    "capture_sender_count": 2,
+    "same_user_api_status": 200,
+    "other_user_api_status": 404,
+    "user_specific_ids_distinct": true,
+    "raw_internal_id_preserved": true
+  },
+  "deployed_commit": "dcbc62e",
+  "deployed_image": "bonghwajigi-mvp:dcbc62e",
+  "image_digest": "sha256:bbb28a254d66242dcab6f4389aa4b711e5e3a9a23411ef5a93e5fdbc87722238",
+  "openapi_sha256": "323536c7322fcfea70d0853633731de09b19a37479370769a41e7a9e42b72062",
+  "final_https_check": {
+    "base_url": "https://inno-server-011.tail2dac17.ts.net",
+    "tls_verification": true,
+    "mode": "simulation",
+    "synthetic_position_only": true,
+    "labels": [
+      "경고",
+      "대피",
+      "위급"
+    ],
+    "checks": [
+      "registration",
+      "device",
+      "profile",
+      "location",
+      "official_alert",
+      "policy_three_levels",
+      "cursor",
+      "refresh"
+    ],
+    "checked_at": "2026-10-31T17:00:13.967870+00:00",
+    "logout_completed": true,
+    "openapi_semantic_match": true,
+    "unauthenticated_profile": 401
+  }
+}

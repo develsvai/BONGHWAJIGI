@@ -1,0 +1,97 @@
+{
+  "검증일": "2026-10-31 KST",
+  "GPU_API": {
+    "checked_at_utc": "2026-10-31T09:11:00.722612+00:00",
+    "ready": {
+      "service": "gpu_api",
+      "status": "ready",
+      "stage": "model_runtime",
+      "models": {
+        "generation": "cdbee75f17c01a7cc42f958dc650907174af0554",
+        "embedding": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3"
+      }
+    },
+    "generation": {
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "text": "모델 준비 완료되었습니다.",
+      "input_tokens": 29,
+      "output_tokens": 9,
+      "elapsed_ms": 845.26
+    },
+    "embedding": {
+      "dimensions": 1024,
+      "rows": 2,
+      "norms": [
+        1.0000000382919587,
+        1.0000000100857231
+      ],
+      "elapsed_ms": 124.12
+    },
+    "query_embedding_elapsed_ms": 31.78,
+    "unauthenticated_status": 401,
+    "over_token_budget_status": 422,
+    "training_while_serving": "rejected",
+    "gpu_memory": "9134 MiB, 23034 MiB"
+  },
+  "XGBoost_합성검사": {
+    "mode": "simulation",
+    "purpose": "cuda_runtime_check_only",
+    "xgboost": "3.4.1",
+    "training_device": "cuda:0",
+    "rows": 5000,
+    "features": 16,
+    "rounds": 20,
+    "cpu_reload_max_abs_difference": 1.1920928955078125e-07,
+    "elapsed_seconds": 0.319,
+    "model": "/home1/ncloud/bonghwajigi/data/artifacts/cuda-check-20261031T090759Z/simulation-booster.ubj",
+    "build_info": {
+      "BUILTIN_PREFETCH_PRESENT": true,
+      "CUDA_VERSION": [
+        13,
+        3
+      ],
+      "DEBUG": false,
+      "GCC_VERSION": [
+        10,
+        3,
+        1
+      ],
+      "GLIBC_VERSION": [
+        2,
+        28
+      ],
+      "MM_PREFETCH_PRESENT": true,
+      "NCCL_VERSION": [
+        2,
+        30,
+        7
+      ],
+      "THRUST_VERSION": [
+        3,
+        3,
+        3
+      ],
+      "USE_CUDA": true,
+      "USE_DLOPEN_NCCL": true,
+      "USE_FEDERATED": false,
+      "USE_NCCL": true,
+      "USE_NVCOMP": false,
+      "USE_OPENMP": true,
+      "USE_RMM": false,
+      "libxgboost": "/home1/ncloud/bonghwajigi/.venv-ml/lib/python3.12/site-packages/xgboost/lib/libxgboost.so"
+    }
+  },
+  "운영상태": {
+    "호스트": "inno-gpu-011",
+    "설치경로": "/home1/ncloud/bonghwajigi",
+    "서비스": "bonghwajigi-gpu.service",
+    "active": true,
+    "enabled": true,
+    "linger": true,
+    "바인딩": "127.0.0.1:8001",
+    "자격파일권한": "600",
+    "잔여디스크_GiB": 61.23
+  },
+  "한계": "합성 CUDA 실행 검사와 소규모 모델 호출이며 산불 실학습·정책·처리량 검증이 아니다. 실제 재부팅은 하지 않았다."
+}

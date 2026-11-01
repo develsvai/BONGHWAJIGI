@@ -1,0 +1,34 @@
+{
+  "dataset": "fantineh/next-day-wildfire-spread",
+  "version": 2,
+  "license": "Attribution 4.0 International (CC BY 4.0)",
+  "publisher_url": "https://www.kaggle.com/datasets/fantineh/next-day-wildfire-spread",
+  "downloaded_at_utc": "2026-10-31T10:05:16.227602+00:00",
+  "available_files": 19,
+  "full_dataset_bytes": 3955889585,
+  "selection": "first_1_shards_per_official_split",
+  "complete_dataset": false,
+  "files": [
+    {
+      "filename": "next_day_wildfire_spread_train_00.tfrecord",
+      "official_split": "train",
+      "source_url": "https://www.kaggle.com/api/v1/datasets/download/fantineh/next-day-wildfire-spread/next_day_wildfire_spread_train_00.tfrecord?datasetVersionNumber=2",
+      "bytes": 213313000,
+      "sha256": "c67274eb55c44511188eceddf4915c579985025db3fb4e9558459167c11ebaa8"
+    },
+    {
+      "filename": "next_day_wildfire_spread_eval_00.tfrecord",
+      "official_split": "eval",
+      "source_url": "https://www.kaggle.com/api/v1/datasets/download/fantineh/next-day-wildfire-spread/next_day_wildfire_spread_eval_00.tfrecord?datasetVersionNumber=2",
+      "bytes": 213313000,
+      "sha256": "85522369187adc7e0f76f7cb9e45ad55c47cc8351304ce726bee27de20c32d7b"
+    },
+    {
+      "filename": "next_day_wildfire_spread_test_00.tfrecord",
+      "official_split": "test",
+      "source_url": "https://www.kaggle.com/api/v1/datasets/download/fantineh/next-day-wildfire-spread/next_day_wildfire_spread_test_00.tfrecord?datasetVersionNumber=2",
+      "bytes": 213313000,
+      "sha256": "d2e156708b478206f55816447825c076479dc7ee1a7b940991ac2577f10f2bf0"
+    }
+  ]
+}

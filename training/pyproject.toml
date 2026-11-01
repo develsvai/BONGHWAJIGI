@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bonghwa-training"
+version = "0.1.0"
+description = "산불 XGBoost 데이터 확보·변환·검증 전용 도구"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "numpy>=2,<3",
+  "scipy>=1.15,<2",
+  "pyarrow>=19,<30",
+  "protobuf>=6,<8",
+  "google-crc32c>=1.6,<2",
+]
+
+[project.optional-dependencies]
+train = ["xgboost>=3,<4", "scikit-learn>=1.6,<2"]
+geo = [
+    "rasterio>=1.4,<2",
+    "pyproj>=3.7,<4",
+    "shapely>=2,<3",
+    "planetary-computer>=1,<2",
+    "h5py>=3.12,<4",
+    "netcdf4>=1.7,<2",
+]
+
+[project.scripts]
+bonghwa-dataset = "bonghwa_training.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "ruff>=0.12,<1"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/bonghwa_training"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

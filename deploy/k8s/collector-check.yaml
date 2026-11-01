@@ -1,0 +1,35 @@
+# scaffold 설치 검사 Job. 실제 기관 수집 Deployment가 아니다.
+# A3/B3에서 전용 egress·인증·이미지 digest·수집 명령을 연결한다.
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: collector-scaffold-check
+  namespace: bonghwajigi
+spec:
+  suspend: true
+  backoffLimit: 0
+  template:
+    spec:
+      automountServiceAccountToken: false
+      restartPolicy: Never
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: collector-check
+          image: example.invalid/bonghwajigi-collector:scaffold
+          command: ["python", "-m", "bonghwajigi.ingestion", "--check"]
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: ["ALL"]

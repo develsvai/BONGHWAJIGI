@@ -1,0 +1,42 @@
+{
+  "id": "task-run-20261031-084835-task-def-20261031-084830-python-409169c7-d6f17438",
+  "job_run_id": "job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02",
+  "task_definition_id": "task-def-20261031-084830-python-409169c7",
+  "status": "DONE",
+  "created_at": "2026-10-31T08:48:35+00:00",
+  "updated_at": "2026-10-31T08:59:32+00:00",
+  "legacy_task_id": "task-20261031-084830-python-03ca0991",
+  "attempt": 1,
+  "assigned_agent": "foreground",
+  "worker_id": "",
+  "heartbeat_at": "",
+  "lease_expires_at": "",
+  "queued_at": "",
+  "started_at": "2026-10-31T08:48:35+00:00",
+  "completed_at": "2026-10-31T08:59:32+00:00",
+  "last_error": "",
+  "commit_refs": [
+    "8d1861d1afc9db47ab34537a09a16afa34b6313a",
+    "cadabfe4fd5d05a24e88cb271b1999a4b9223df9"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-10-31T08:59:32+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-084830-python-03ca0991/agent-events.jsonl",
+    ".loom/tasks/task-20261031-084830-python-03ca0991/artifacts.json",
+    ".loom/tasks/task-20261031-084830-python-03ca0991/context.md",
+    ".loom/tasks/task-20261031-084830-python-03ca0991/decision.md",
+    ".loom/tasks/task-20261031-084830-python-03ca0991/git-snapshot.json",
+    ".loom/tasks/task-20261031-084830-python-03ca0991/logs.txt",
+    ".loom/tasks/task-20261031-084830-python-03ca0991/previous-results.md",
+    ".loom/tasks/task-20261031-084830-python-03ca0991/prompt.md",
+    ".loom/tasks/task-20261031-084830-python-03ca0991/result.md",
+    ".loom/tasks/task-20261031-084830-python-03ca0991/troubleshooting.md",
+    "docs/V2/delivery/project-scaffold.md"
+  ],
+  "checkpoint_ids": [
+    "checkpoint-20261031-085932-task-completed-python-94151795"
+  ],
+  "review_required_reason": ""
+}

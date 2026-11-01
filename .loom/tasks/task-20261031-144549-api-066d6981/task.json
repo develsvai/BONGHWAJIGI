@@ -1,0 +1,47 @@
+{
+  "id": "task-20261031-144549-api-066d6981",
+  "job_id": "job-20261031-002017-v2-fe3bfad0",
+  "title": "발표용 외부 API·모델·데이터·오픈소스와 라이선스 전수 정리",
+  "description": "사용자가 발표 지침의 구분·명칭·용도·라이선스 형식으로 사용 자원 누락 없는 Markdown 문서를 요청했다. 서버·GPU·학습·배포·개발 도구와 잠금 파일의 직접/전이 의존성을 대조하고 실제 사용·준비·미사용, 라이선스와 데이터 이용조건을 공식 근거로 확인한다.",
+  "status": "DONE",
+  "created_at": "2026-10-31T14:45:49+00:00",
+  "updated_at": "2026-10-31T14:58:40+00:00",
+  "order_index": 15,
+  "assigned_agent": "foreground",
+  "depends_on": [],
+  "expected_output": "발표용 4열 자원 표와 상세 API·모델·데이터·버전·이용조건·직접개발/사전코드 구분, 전체 잠금 의존성 부록을 포함한 Markdown 및 확인 근거",
+  "done_condition": "서버/학습 잠금 파일 전체 패키지와 외부 URL/인프라/모델/데이터의 출처를 대조해 누락 검사하고, 공식 근거 링크와 미확인 항목을 명시한 문서를 생성한다. 앱·학습 실행·배포는 변경하지 않는다.",
+  "in_scope": "BONGHWAJIGI 서버·학습·모델·배포·개발 도구의 읽기 전용 자원 조사; 공식 라이선스/이용약관 확인; 발표용 Markdown과 검증 근거; Loom 기록",
+  "out_of_scope": "BONGHAWJIGI_APP 조회/수정; 학습/서비스 실행 변경; 자격정보 공개; 라이선스 미확인을 허가로 간주; 사용자 답변 없이 사전보유 코드 없음 단정",
+  "validation_hint": "잠금 파일 모든 외부 패키지명/버전 행 포함 비교; URL/출처 목록과 직접 의존성 교차검사; Markdown 링크와 표 구조; 공식 라이선스 출처; Loom strict",
+  "required_docs": [],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/external-resources-and-licenses.md"
+  ],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [
+    "718e5d5051b1d9d5e26acf8eabbae666a50efca7",
+    "fd5fc48afc0c6912e4fafe6e7bf752b1ba88ee4e"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-10-31T14:58:40+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-144549-api-066d6981/agent-events.jsonl",
+    ".loom/tasks/task-20261031-144549-api-066d6981/artifacts.json",
+    ".loom/tasks/task-20261031-144549-api-066d6981/context.md",
+    ".loom/tasks/task-20261031-144549-api-066d6981/decision.md",
+    ".loom/tasks/task-20261031-144549-api-066d6981/git-snapshot.json",
+    ".loom/tasks/task-20261031-144549-api-066d6981/logs.txt",
+    ".loom/tasks/task-20261031-144549-api-066d6981/previous-results.md",
+    ".loom/tasks/task-20261031-144549-api-066d6981/prompt.md",
+    ".loom/tasks/task-20261031-144549-api-066d6981/result.md",
+    ".loom/tasks/task-20261031-144549-api-066d6981/troubleshooting.md",
+    "docs/V2/delivery/external-resources-and-licenses.md"
+  ],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

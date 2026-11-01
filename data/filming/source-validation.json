@@ -1,0 +1,17 @@
+{
+  "validated_at": "2026-11-01",
+  "artifact": "data/filming/yeongdeok-20250325.json",
+  "artifact_sha256": "1c28a759f7f2f7b68463d9d0e0de1804e64f4206509f0221b61275446498e703",
+  "source_count": 6,
+  "official_warning_count": 1,
+  "official_evacuation_count": 0,
+  "checks": {
+    "source_contracts": true,
+    "references_resolve": true,
+    "no_unverified_official_evacuations": true,
+    "fog_unknown": true,
+    "synthetic_coordinates_within_staging_box": true,
+    "published_at_precision_preserved": true
+  },
+  "note": "공식 웹 원문 열람 후 자체 사실요약 JSON 및 Source/Box 계약을 검증했다. 원기관 전체 파일 해시나 실제 도로 안전 검증이 아니다."
+}

@@ -1,0 +1,681 @@
+{
+  "profile": "us_goes_clear_land_approach_1_3_6h_research_v1",
+  "trained_at_utc": "2026-10-31T12:53:42.990505+00:00",
+  "plan_sha256": "05d0a688a8c0df5f2c00bc567b81917ce560dd696b64f660f72599045004c6ea",
+  "selected": "history_depth5",
+  "experiments": {
+    "spatial_depth3": {
+      "validation": {
+        "1": {
+          "rows": 56787,
+          "positives": 188,
+          "average_precision": 0.16245902455145725,
+          "roc_auc": 0.9698773435212185,
+          "brier": 0.003023254219442606,
+          "logloss": 0.01504348125308752,
+          "precision_at_0_5": 0.0,
+          "recall_at_0_5": 0.0
+        },
+        "3": {
+          "rows": 49973,
+          "positives": 407,
+          "average_precision": 0.31009004351967323,
+          "roc_auc": 0.9716418363979192,
+          "brier": 0.006609147414565086,
+          "logloss": 0.028900954872369766,
+          "precision_at_0_5": 0.4,
+          "recall_at_0_5": 0.009828009828009828
+        },
+        "6": {
+          "rows": 40607,
+          "positives": 626,
+          "average_precision": 0.40855957059550496,
+          "roc_auc": 0.9700705878423241,
+          "brier": 0.011774175800383091,
+          "logloss": 0.049301184713840485,
+          "precision_at_0_5": 0.6216216216216216,
+          "recall_at_0_5": 0.14696485623003194
+        }
+      },
+      "selection_score": 0.29370287955554514,
+      "validation_operating_points": {
+        "1": [
+          {
+            "maximum_fpr_requested": 0.01,
+            "threshold": 0.07568913698196411,
+            "tp": 82,
+            "fp": 565,
+            "fn": 106,
+            "tn": 56034,
+            "precision": 0.1267387944358578,
+            "recall": 0.43617021276595747,
+            "false_positive_rate": 0.009982508524885598
+          },
+          {
+            "maximum_fpr_requested": 0.05,
+            "threshold": 0.02640235610306263,
+            "tp": 151,
+            "fp": 2406,
+            "fn": 37,
+            "tn": 54193,
+            "precision": 0.059053578412201796,
+            "recall": 0.8031914893617021,
+            "false_positive_rate": 0.042509584974999556
+          }
+        ],
+        "3": [
+          {
+            "maximum_fpr_requested": 0.01,
+            "threshold": 0.18369647860527039,
+            "tp": 211,
+            "fp": 489,
+            "fn": 196,
+            "tn": 49077,
+            "precision": 0.30142857142857143,
+            "recall": 0.5184275184275184,
+            "false_positive_rate": 0.009865633700520519
+          },
+          {
+            "maximum_fpr_requested": 0.05,
+            "threshold": 0.06848324835300446,
+            "tp": 325,
+            "fp": 2198,
+            "fn": 82,
+            "tn": 47368,
+            "precision": 0.1288149028933809,
+            "recall": 0.7985257985257985,
+            "false_positive_rate": 0.04434491385223742
+          }
+        ],
+        "6": [
+          {
+            "maximum_fpr_requested": 0.01,
+            "threshold": 0.31108519434928894,
+            "tp": 310,
+            "fp": 396,
+            "fn": 316,
+            "tn": 39585,
+            "precision": 0.43909348441926344,
+            "recall": 0.4952076677316294,
+            "false_positive_rate": 0.009904704734749005
+          },
+          {
+            "maximum_fpr_requested": 0.05,
+            "threshold": 0.13774900138378143,
+            "tp": 490,
+            "fp": 1983,
+            "fn": 136,
+            "tn": 37998,
+            "precision": 0.19813991103922363,
+            "recall": 0.7827476038338658,
+            "false_positive_rate": 0.049598559315674945
+          }
+        ]
+      },
+      "model_sha256": "a7158768e0e824f7f8702a5f62573d5b5522921e9ee0349ddbacaae6e287d4d3",
+      "features": [
+        "distance_fire_km",
+        "nearest_fire_dx_km",
+        "nearest_fire_dy_km",
+        "neighbors_3",
+        "neighbors_7",
+        "nearby_frp_mw",
+        "nearby_temperature_k",
+        "utc_hour_sin",
+        "utc_hour_cos",
+        "horizon_hours"
+      ],
+      "device": "cuda:0",
+      "best_trees": 105,
+      "executed_rounds": 145,
+      "cpu_reload_max_abs_difference": 7.152557373046875e-07,
+      "feature_gain": {
+        "distance_fire_km": 477.8440246582031,
+        "nearest_fire_dx_km": 33.78348159790039,
+        "nearest_fire_dy_km": 51.8071174621582,
+        "neighbors_3": 100.99698638916016,
+        "neighbors_7": 178.1876678466797,
+        "nearby_frp_mw": 89.85609436035156,
+        "nearby_temperature_k": 62.642765045166016,
+        "utc_hour_sin": 143.2818603515625,
+        "utc_hour_cos": 35.661216735839844,
+        "horizon_hours": 199.61622619628906
+      }
+    },
+    "history_depth3": {
+      "validation": {
+        "1": {
+          "rows": 56787,
+          "positives": 188,
+          "average_precision": 0.33956161401501644,
+          "roc_auc": 0.9858066904422416,
+          "brier": 0.0029959154780954123,
+          "logloss": 0.01745583675801754,
+          "precision_at_0_5": 0.0,
+          "recall_at_0_5": 0.0
+        },
+        "3": {
+          "rows": 49973,
+          "positives": 407,
+          "average_precision": 0.41423282683630563,
+          "roc_auc": 0.9814928964245028,
+          "brier": 0.006387786474078894,
+          "logloss": 0.02915569208562374,
+          "precision_at_0_5": 0.0,
+          "recall_at_0_5": 0.0
+        },
+        "6": {
+          "rows": 40607,
+          "positives": 626,
+          "average_precision": 0.5110958679648596,
+          "roc_auc": 0.9793821194460339,
+          "brier": 0.010977564379572868,
+          "logloss": 0.04406573250889778,
+          "precision_at_0_5": 1.0,
+          "recall_at_0_5": 0.03354632587859425
+        }
+      },
+      "selection_score": 0.42163010293872727,
+      "validation_operating_points": {
+        "1": [
+          {
+            "maximum_fpr_requested": 0.01,
+            "threshold": 0.06475711613893509,
+            "tp": 120,
+            "fp": 510,
+            "fn": 68,
+            "tn": 56089,
+            "precision": 0.19047619047619047,
+            "recall": 0.6382978723404256,
+            "false_positive_rate": 0.009010759907418859
+          },
+          {
+            "maximum_fpr_requested": 0.05,
+            "threshold": 0.02395104058086872,
+            "tp": 172,
+            "fp": 2569,
+            "fn": 16,
+            "tn": 54030,
+            "precision": 0.06275082086829624,
+            "recall": 0.9148936170212766,
+            "false_positive_rate": 0.04538949451403735
+          }
+        ],
+        "3": [
+          {
+            "maximum_fpr_requested": 0.01,
+            "threshold": 0.1318860948085785,
+            "tp": 254,
+            "fp": 470,
+            "fn": 153,
+            "tn": 49096,
+            "precision": 0.35082872928176795,
+            "recall": 0.6240786240786241,
+            "false_positive_rate": 0.009482306419723197
+          },
+          {
+            "maximum_fpr_requested": 0.05,
+            "threshold": 0.045727454125881195,
+            "tp": 357,
+            "fp": 2446,
+            "fn": 50,
+            "tn": 47120,
+            "precision": 0.1273635390652872,
+            "recall": 0.8771498771498771,
+            "false_positive_rate": 0.04934834362264456
+          }
+        ],
+        "6": [
+          {
+            "maximum_fpr_requested": 0.01,
+            "threshold": 0.1938948780298233,
+            "tp": 346,
+            "fp": 398,
+            "fn": 280,
+            "tn": 39583,
+            "precision": 0.4650537634408602,
+            "recall": 0.5527156549520766,
+            "false_positive_rate": 0.009954728496035617
+          },
+          {
+            "maximum_fpr_requested": 0.05,
+            "threshold": 0.07206147909164429,
+            "tp": 542,
+            "fp": 1995,
+            "fn": 84,
+            "tn": 37986,
+            "precision": 0.21363815530153724,
+            "recall": 0.865814696485623,
+            "false_positive_rate": 0.04989870188339461
+          }
+        ]
+      },
+      "model_sha256": "b68141baa2eb05181434eca862f0de1c97bc3ef9c3baff1a2e8d59117f6073db",
+      "features": [
+        "distance_fire_km",
+        "nearest_fire_dx_km",
+        "nearest_fire_dy_km",
+        "neighbors_3",
+        "neighbors_7",
+        "nearby_frp_mw",
+        "nearby_temperature_k",
+        "distance_fire_30m_km",
+        "distance_fire_60m_km",
+        "closing_speed_30m_kmh",
+        "closing_speed_60m_kmh",
+        "fire_frames_last_hour",
+        "clear_frames_last_hour",
+        "utc_hour_sin",
+        "utc_hour_cos",
+        "horizon_hours"
+      ],
+      "device": "cuda:0",
+      "best_trees": 31,
+      "executed_rounds": 71,
+      "cpu_reload_max_abs_difference": 2.980232238769531e-07,
+      "feature_gain": {
+        "distance_fire_km": 1486.1717529296875,
+        "nearest_fire_dx_km": 16.717697143554688,
+        "nearest_fire_dy_km": 162.81591796875,
+        "neighbors_3": 155.21315002441406,
+        "neighbors_7": 720.4700927734375,
+        "nearby_frp_mw": 296.09588623046875,
+        "nearby_temperature_k": 164.46463012695312,
+        "distance_fire_30m_km": 345.8626403808594,
+        "distance_fire_60m_km": 184.92758178710938,
+        "closing_speed_30m_kmh": 68.42133331298828,
+        "closing_speed_60m_kmh": 95.92697143554688,
+        "fire_frames_last_hour": 513.5778198242188,
+        "clear_frames_last_hour": 345.2859191894531,
+        "utc_hour_sin": 360.88623046875,
+        "utc_hour_cos": 19.602306365966797,
+        "horizon_hours": 431.38238525390625
+      }
+    },
+    "history_depth5": {
+      "validation": {
+        "1": {
+          "rows": 56787,
+          "positives": 188,
+          "average_precision": 0.33742054586384557,
+          "roc_auc": 0.9826753385989453,
+          "brier": 0.0028085587546229362,
+          "logloss": 0.01421878207474947,
+          "precision_at_0_5": 0.0,
+          "recall_at_0_5": 0.0
+        },
+        "3": {
+          "rows": 49973,
+          "positives": 407,
+          "average_precision": 0.45165073286972096,
+          "roc_auc": 0.9781558720851784,
+          "brier": 0.006119763478636742,
+          "logloss": 0.026881679892539978,
+          "precision_at_0_5": 0.7692307692307693,
+          "recall_at_0_5": 0.04914004914004914
+        },
+        "6": {
+          "rows": 40607,
+          "positives": 626,
+          "average_precision": 0.5079474470266456,
+          "roc_auc": 0.975685075810371,
+          "brier": 0.01066825445741415,
+          "logloss": 0.043021392077207565,
+          "precision_at_0_5": 0.831858407079646,
+          "recall_at_0_5": 0.1501597444089457
+        }
+      },
+      "selection_score": 0.43233957525340405,
+      "validation_operating_points": {
+        "1": [
+          {
+            "maximum_fpr_requested": 0.01,
+            "threshold": 0.06310246884822845,
+            "tp": 129,
+            "fp": 562,
+            "fn": 59,
+            "tn": 56037,
+            "precision": 0.18668596237337193,
+            "recall": 0.6861702127659575,
+            "false_positive_rate": 0.009929504054841958
+          },
+          {
+            "maximum_fpr_requested": 0.05,
+            "threshold": 0.022289548069238663,
+            "tp": 165,
+            "fp": 2483,
+            "fn": 23,
+            "tn": 54116,
+            "precision": 0.06231117824773414,
+            "recall": 0.8776595744680851,
+            "false_positive_rate": 0.04387003303945299
+          }
+        ],
+        "3": [
+          {
+            "maximum_fpr_requested": 0.01,
+            "threshold": 0.1505104899406433,
+            "tp": 256,
+            "fp": 492,
+            "fn": 151,
+            "tn": 49074,
+            "precision": 0.3422459893048128,
+            "recall": 0.628992628992629,
+            "false_positive_rate": 0.00992615906064641
+          },
+          {
+            "maximum_fpr_requested": 0.05,
+            "threshold": 0.06271135807037354,
+            "tp": 343,
+            "fp": 2375,
+            "fn": 64,
+            "tn": 47191,
+            "precision": 0.12619573215599705,
+            "recall": 0.8427518427518428,
+            "false_positive_rate": 0.047915910099665095
+          }
+        ],
+        "6": [
+          {
+            "maximum_fpr_requested": 0.01,
+            "threshold": 0.25599372386932373,
+            "tp": 349,
+            "fp": 398,
+            "fn": 277,
+            "tn": 39583,
+            "precision": 0.46720214190093706,
+            "recall": 0.5575079872204473,
+            "false_positive_rate": 0.009954728496035617
+          },
+          {
+            "maximum_fpr_requested": 0.05,
+            "threshold": 0.10695227980613708,
+            "tp": 525,
+            "fp": 1965,
+            "fn": 101,
+            "tn": 38016,
+            "precision": 0.21084337349397592,
+            "recall": 0.8386581469648562,
+            "false_positive_rate": 0.049148345464095446
+          }
+        ]
+      },
+      "model_sha256": "d21c26f5ddbaaffcb9581016e2481b421f650a4f3380caecd8687adbc323cd72",
+      "features": [
+        "distance_fire_km",
+        "nearest_fire_dx_km",
+        "nearest_fire_dy_km",
+        "neighbors_3",
+        "neighbors_7",
+        "nearby_frp_mw",
+        "nearby_temperature_k",
+        "distance_fire_30m_km",
+        "distance_fire_60m_km",
+        "closing_speed_30m_kmh",
+        "closing_speed_60m_kmh",
+        "fire_frames_last_hour",
+        "clear_frames_last_hour",
+        "utc_hour_sin",
+        "utc_hour_cos",
+        "horizon_hours"
+      ],
+      "device": "cuda:0",
+      "best_trees": 49,
+      "executed_rounds": 89,
+      "cpu_reload_max_abs_difference": 4.76837158203125e-07,
+      "feature_gain": {
+        "distance_fire_km": 496.1116027832031,
+        "nearest_fire_dx_km": 25.23015785217285,
+        "nearest_fire_dy_km": 50.883750915527344,
+        "neighbors_3": 63.49996566772461,
+        "neighbors_7": 200.92381286621094,
+        "nearby_frp_mw": 50.00900650024414,
+        "nearby_temperature_k": 49.55964660644531,
+        "distance_fire_30m_km": 88.14727020263672,
+        "distance_fire_60m_km": 99.2934341430664,
+        "closing_speed_30m_kmh": 43.34113311767578,
+        "closing_speed_60m_kmh": 34.53715133666992,
+        "fire_frames_last_hour": 208.14913940429688,
+        "clear_frames_last_hour": 98.50945281982422,
+        "utc_hour_sin": 98.36238098144531,
+        "utc_hour_cos": 40.144283294677734,
+        "horizon_hours": 162.85333251953125
+      }
+    },
+    "history_weighted": {
+      "validation": {
+        "1": {
+          "rows": 56787,
+          "positives": 188,
+          "average_precision": 0.27640153877793555,
+          "roc_auc": 0.9821062923824306,
+          "brier": 0.006832725368440151,
+          "logloss": 0.04806823655962944,
+          "precision_at_0_5": 0.33695652173913043,
+          "recall_at_0_5": 0.32978723404255317
+        },
+        "3": {
+          "rows": 49973,
+          "positives": 407,
+          "average_precision": 0.4203206419467682,
+          "roc_auc": 0.9809879731499389,
+          "brier": 0.01744210347533226,
+          "logloss": 0.08040565252304077,
+          "precision_at_0_5": 0.29907621247113164,
+          "recall_at_0_5": 0.6363636363636364
+        },
+        "6": {
+          "rows": 40607,
+          "positives": 626,
+          "average_precision": 0.5103303393496352,
+          "roc_auc": 0.9764279806070821,
+          "brier": 0.029745258390903473,
+          "logloss": 0.1173284649848938,
+          "precision_at_0_5": 0.23317757009345794,
+          "recall_at_0_5": 0.7971246006389776
+        }
+      },
+      "selection_score": 0.40235084002477967,
+      "validation_operating_points": {
+        "1": [
+          {
+            "maximum_fpr_requested": 0.01,
+            "threshold": 0.3865746855735779,
+            "tp": 114,
+            "fp": 527,
+            "fn": 74,
+            "tn": 56072,
+            "precision": 0.17784711388455537,
+            "recall": 0.6063829787234043,
+            "false_positive_rate": 0.009311118570999487
+          },
+          {
+            "maximum_fpr_requested": 0.05,
+            "threshold": 0.1732601672410965,
+            "tp": 168,
+            "fp": 2254,
+            "fn": 20,
+            "tn": 54345,
+            "precision": 0.06936416184971098,
+            "recall": 0.8936170212765957,
+            "false_positive_rate": 0.039824025159455115
+          }
+        ],
+        "3": [
+          {
+            "maximum_fpr_requested": 0.01,
+            "threshold": 0.5318132042884827,
+            "tp": 242,
+            "fp": 492,
+            "fn": 165,
+            "tn": 49074,
+            "precision": 0.329700272479564,
+            "recall": 0.5945945945945946,
+            "false_positive_rate": 0.00992615906064641
+          },
+          {
+            "maximum_fpr_requested": 0.05,
+            "threshold": 0.3433689475059509,
+            "tp": 353,
+            "fp": 2161,
+            "fn": 54,
+            "tn": 47405,
+            "precision": 0.14041368337311058,
+            "recall": 0.8673218673218673,
+            "false_positive_rate": 0.04359843441068474
+          }
+        ],
+        "6": [
+          {
+            "maximum_fpr_requested": 0.01,
+            "threshold": 0.6415970921516418,
+            "tp": 342,
+            "fp": 396,
+            "fn": 284,
+            "tn": 39585,
+            "precision": 0.4634146341463415,
+            "recall": 0.5463258785942492,
+            "false_positive_rate": 0.009904704734749005
+          },
+          {
+            "maximum_fpr_requested": 0.05,
+            "threshold": 0.4757064878940582,
+            "tp": 513,
+            "fp": 1978,
+            "fn": 113,
+            "tn": 38003,
+            "precision": 0.20594138900040143,
+            "recall": 0.8194888178913738,
+            "false_positive_rate": 0.04947349991245842
+          }
+        ]
+      },
+      "model_sha256": "37b4cc82899b1f26393ea1864e616c9113982bc64bceaf041cdfc692a34292fd",
+      "features": [
+        "distance_fire_km",
+        "nearest_fire_dx_km",
+        "nearest_fire_dy_km",
+        "neighbors_3",
+        "neighbors_7",
+        "nearby_frp_mw",
+        "nearby_temperature_k",
+        "distance_fire_30m_km",
+        "distance_fire_60m_km",
+        "closing_speed_30m_kmh",
+        "closing_speed_60m_kmh",
+        "fire_frames_last_hour",
+        "clear_frames_last_hour",
+        "utc_hour_sin",
+        "utc_hour_cos",
+        "horizon_hours"
+      ],
+      "device": "cuda:0",
+      "best_trees": 53,
+      "executed_rounds": 93,
+      "cpu_reload_max_abs_difference": 2.980232238769531e-07,
+      "feature_gain": {
+        "distance_fire_km": 3477.977783203125,
+        "nearest_fire_dx_km": 150.6495819091797,
+        "nearest_fire_dy_km": 249.1033477783203,
+        "neighbors_3": 440.22216796875,
+        "neighbors_7": 3162.8115234375,
+        "nearby_frp_mw": 477.4461669921875,
+        "nearby_temperature_k": 308.153076171875,
+        "distance_fire_30m_km": 988.37744140625,
+        "distance_fire_60m_km": 973.3081665039062,
+        "closing_speed_30m_kmh": 237.21217346191406,
+        "closing_speed_60m_kmh": 388.7308044433594,
+        "fire_frames_last_hour": 791.2368774414062,
+        "clear_frames_last_hour": 466.7867126464844,
+        "utc_hour_sin": 722.4216918945312,
+        "utc_hour_cos": 324.1848449707031,
+        "horizon_hours": 861.7439575195312
+      }
+    }
+  },
+  "calibration": {
+    "status": "연구용 sigmoid 보정 적합",
+    "coefficient": 1.9157207012176514,
+    "intercept": 0.445442259311676,
+    "fit_rows": 119578,
+    "fit_positives": 500,
+    "limitation": "보정 사건 1개. 실제 보정 성능은 미사용 사건에서 평가해야 함"
+  },
+  "validation_distance_baseline": {
+    "1": {
+      "rows": 56787,
+      "positives": 188,
+      "average_precision": 0.17006337493733706,
+      "roc_auc": 0.9822485304416702,
+      "brier": 0.0030084748286753893,
+      "logloss": 0.013171893544495106,
+      "precision_at_0_5": 0.0,
+      "recall_at_0_5": 0.0
+    },
+    "3": {
+      "rows": 49973,
+      "positives": 407,
+      "average_precision": 0.3414886485930781,
+      "roc_auc": 0.9784429585906405,
+      "brier": 0.007677516434341669,
+      "logloss": 0.03245864436030388,
+      "precision_at_0_5": 0.0,
+      "recall_at_0_5": 0.0
+    },
+    "6": {
+      "rows": 40607,
+      "positives": 626,
+      "average_precision": 0.44122230640339416,
+      "roc_auc": 0.9760615725376902,
+      "brier": 0.02148127555847168,
+      "logloss": 0.09729944169521332,
+      "precision_at_0_5": 0.4218009478672986,
+      "recall_at_0_5": 0.5686900958466453
+    }
+  },
+  "validation_train_prior": {
+    "1": {
+      "rows": 56787,
+      "positives": 188,
+      "average_precision": 0.003310616866536355,
+      "roc_auc": 0.5,
+      "brier": 0.0034497771803449315,
+      "logloss": 0.029415064821543234,
+      "precision_at_0_5": 0.0,
+      "recall_at_0_5": 0.0
+    },
+    "3": {
+      "rows": 49973,
+      "positives": 407,
+      "average_precision": 0.00814439797490645,
+      "roc_auc": 0.5,
+      "brier": 0.008133102173614083,
+      "logloss": 0.04946159931232656,
+      "precision_at_0_5": 0.0,
+      "recall_at_0_5": 0.0
+    },
+    "6": {
+      "rows": 40607,
+      "positives": 626,
+      "average_precision": 0.015416061270224346,
+      "roc_auc": 0.5,
+      "brier": 0.015178427911395252,
+      "logloss": 0.07961845701582032,
+      "precision_at_0_5": 0.0,
+      "recall_at_0_5": 0.0
+    }
+  },
+  "monotonicity_verified": true,
+  "test_evaluated": false,
+  "operational_use": false,
+  "target": "현재 관측 가능한 비화재 육지 격자에서, 향후 1·3·6시간 안에 GOES 고신뢰 화재가 한 번 이상 관측되는지. 물리적 피해/사람의 피해/정확한 화선 도달 시각이 아님",
+  "elapsed_seconds": 4.49,
+  "limitations": [
+    "국외 자동 위성 관측의 연구 결과이며 국내 검증 전",
+    "학습3/튜닝1/보정1 사건. 격자·시점 수를 독립 사건 수로 해석할 수 없음",
+    "기상·연료·지형·진화 활동 및 사용자 취약성 입력 없음",
+    "고신뢰 열 이상 관측은 실제 화선 도달·사람 피해의 정답이 아님",
+    "미래 관측 불가 정답 제외로 선택 편향이 있음",
+    "임계값은 연구용 누락/오경보 진단이며 대응 레벨 결정이 아님"
+  ]
+}

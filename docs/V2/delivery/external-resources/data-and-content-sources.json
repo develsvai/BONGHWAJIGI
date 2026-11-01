@@ -1,0 +1,394 @@
+{
+  "checked_on": "2026-10-31",
+  "source_references": [
+    {
+      "event": "dixie_2021",
+      "source": "https://www.fire.ca.gov/incidents/2021/7/13/dixie-fire",
+      "evidence_path": "training/configs/goes-hourly-v1.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "bootleg_2021",
+      "source": "https://fire.ak.blm.gov/content/aicc/team_left/03.%20Alaska%20CIMT%20Incident%20Archive/Alaska%20IMT%20Incident%20Summaries/2021%20Summaries/2021%2007-23%20to%2008-06%20Bootleg.pdf",
+      "evidence_path": "training/configs/goes-hourly-v1.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "caldor_2021",
+      "source": "https://www.fire.ca.gov/incidents/2021/8/14/caldor-fire",
+      "evidence_path": "training/configs/goes-hourly-v1.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "mosquito_2022",
+      "source": "https://www.fire.ca.gov/incidents/2022/9/6/mosquito-fire",
+      "evidence_path": "training/configs/goes-hourly-v1.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "oak_2022",
+      "source": "https://www.fire.ca.gov/incidents/2022/7/22/oak-fire",
+      "evidence_path": "training/configs/goes-hourly-v1.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "smith_river_2023",
+      "source": "https://www.fire.ca.gov/incidents/2023/8/15/smith-river-complex",
+      "evidence_path": "training/configs/goes-hourly-v1.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "andong_2020",
+      "source": "https://www.korea.kr/briefing/policyBriefingView.do?newsId=156393191",
+      "evidence_path": "training/configs/korea-gk2a-hourly-v4.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "andong_2021",
+      "source": "https://forest.go.kr/kfs/images/data/down/sb_3_09.pdf",
+      "evidence_path": "training/configs/korea-gk2a-hourly-v4.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "hapcheon_2022",
+      "source": "https://www.hccl.go.kr/CLRecords/Files/FileAppendix/a9/A006406.pdf",
+      "evidence_path": "training/configs/korea-gk2a-hourly-v4.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "uljin_2022",
+      "source": "https://forest.go.kr/kfs/images/data/down/sb_3_09.pdf",
+      "evidence_path": "training/configs/korea-gk2a-hourly-v4.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "ulju_2020",
+      "source": "https://www.korea.kr/briefing/policyBriefingView.do?newsId=156393191",
+      "evidence_path": "training/configs/korea-gk2a-hourly-v4.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "goseong_2020",
+      "source": "https://www.korea.kr/briefing/policyBriefingView.do?newsId=156393191",
+      "evidence_path": "training/configs/korea-gk2a-hourly-v4.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "yeongdeok_2022",
+      "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003737",
+      "evidence_path": "training/configs/korea-gk2a-hourly-v4.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "yeongwol_2022",
+      "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003737",
+      "evidence_path": "training/configs/korea-gk2a-hourly-v4.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "gangneung_donghae_2022",
+      "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003737",
+      "evidence_path": "training/configs/korea-gk2a-hourly-v4.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "bonghwa_2022",
+      "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003737",
+      "evidence_path": "training/configs/korea-gk2a-hourly-v4.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "yanggu_2022",
+      "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003737",
+      "evidence_path": "training/configs/korea-gk2a-hourly-v4.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "gunwi_2022",
+      "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003737",
+      "evidence_path": "training/configs/korea-gk2a-hourly-v4.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "uljin_may_2022",
+      "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91004062",
+      "evidence_path": "training/configs/korea-gk2a-hourly-v4.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "miryang_2022",
+      "source": "https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0003&twbbsNo=91003815",
+      "evidence_path": "training/configs/korea-gk2a-hourly-v4.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "hongseong_2023",
+      "source": "https://www.opm.go.kr/opm/news/press-release.do?articleNo=153083&mode=view",
+      "evidence_path": "training/configs/korea-gk2a-hourly-v4.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "hapcheon_2023",
+      "source": "https://www.forest.go.kr/kfsweb/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_1009&nttId=3180876",
+      "evidence_path": "training/configs/korea-gk2a-hourly-v4.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "daejeon_geumsan_2023",
+      "source": "https://forest.go.kr/kfs/images/data/down/sb_3_09.pdf",
+      "evidence_path": "training/configs/korea-gk2a-hourly-v4.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "hampyeong_2023",
+      "source": "https://www.forest.go.kr/kfsweb/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_1036&nttId=3181783&mn=NKFS_04_02_01",
+      "evidence_path": "training/configs/korea-gk2a-hourly-v4.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "suncheon_2023",
+      "source": "https://www.forest.go.kr/kfsweb/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_1036&nttId=3181783&mn=NKFS_04_02_01",
+      "evidence_path": "training/configs/korea-gk2a-hourly-v4.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "yeongju_2023",
+      "source": "https://www.forest.go.kr/kfsweb/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_1036&nttId=3181783&mn=NKFS_04_02_01",
+      "evidence_path": "training/configs/korea-gk2a-hourly-v4.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "gangneung_2023",
+      "source": "https://www.mois.go.kr/frt/bbs/type010/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000008&nttId=99891",
+      "evidence_path": "training/configs/korea-gk2a-hourly-v4.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "event": "sancheong_2025",
+      "source": null,
+      "evidence_path": "training/configs/korea-gk2a-hourly-v4.json",
+      "purpose": "incident metadata only"
+    },
+    {
+      "publisher": "대한민국 정책브리핑",
+      "publisher_url": "https://www.korea.kr/",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148940993",
+      "evidence_path": "docs/V2/delivery/qwen-integration/retrieval-handoff.json",
+      "purpose": "retrieved source reference"
+    },
+    {
+      "publisher": "중앙일보",
+      "publisher_url": "https://www.joongang.co.kr/",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBFa2p1clJ1b3RsOFNWRF9QSEVoY003OEppNjJmMXJOSmh1alhJWFJCemt5THFVdnpHeG4xa1VYN1FSaGN2OWhlNTNjaHMxYVh1d1YxRWh3?oc=5",
+      "evidence_path": "docs/V2/delivery/qwen-integration/retrieval-handoff.json",
+      "purpose": "retrieved source reference"
+    },
+    {
+      "publisher": "연합뉴스TV",
+      "publisher_url": "https://www.yonhapnewstv.co.kr/",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5QeWY1WDM4OHVBaVkxM3ljNUVOdU5JcWNhQXVSTlFWV05Oby1sdnFtSHRCd1hrcEg2cUszYkYzX0VGdVhuV2lDMW9BbDdCOUFmNzduV0R3ckJ5MnFxaUkzNDk3UFFuY2M?oc=5",
+      "evidence_path": "docs/V2/delivery/qwen-integration/retrieval-handoff.json",
+      "purpose": "retrieved source reference"
+    },
+    {
+      "publisher": "연합뉴스",
+      "publisher_url": "https://www.yna.co.kr/",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5HWm9MU0FEQ180WFZvcUMzX3ZpSHoyTy1tWDZtQ2JyVlpqSFgweHlFb0lPajA1Q3hmb21BQUJ6aFpjMVVETWw0SHAxX0dYWGMtNzBqSVNndll1WDjSAWBBVV95cUxOTFp4M3RxSGZidFczX092cHo2X3ltRW8xYW1PZ3dQbVE3NDJCSnU2dlA4NTQtTlQ0dmNxWkFxUldVQnV6azUxY3VBZFFSMFQ0V3hSc0k3R3NiTG9tVklFYlE?oc=5",
+      "evidence_path": "docs/V2/delivery/qwen-integration/retrieval-handoff.json",
+      "purpose": "retrieved source reference"
+    },
+    {
+      "publisher": "행정안전부 안전한TV",
+      "publisher_url": "https://www.safetv.go.kr/",
+      "url": "https://www.safetv.go.kr/base/video/view?idx=2759&menuLevel=&menuNo=&playlistManagementIdx=8",
+      "evidence_path": "docs/V2/delivery/qwen-integration/retrieval-handoff.json",
+      "purpose": "retrieved source reference"
+    },
+    {
+      "publisher": "대한민국 정책브리핑",
+      "publisher_url": "https://www.korea.kr/",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148940993",
+      "evidence_path": "docs/V2/delivery/personal-policy-loop-evidence.json",
+      "purpose": "retrieved source reference"
+    },
+    {
+      "publisher": "행정안전부 안전한TV",
+      "publisher_url": "https://www.safetv.go.kr/",
+      "url": "https://www.safetv.go.kr/base/video/view?idx=2759&menuLevel=&menuNo=&playlistManagementIdx=8",
+      "evidence_path": "docs/V2/delivery/personal-policy-loop-evidence.json",
+      "purpose": "retrieved source reference"
+    },
+    {
+      "publisher": "중앙일보",
+      "publisher_url": "https://www.joongang.co.kr/",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBFa2p1clJ1b3RsOFNWRF9QSEVoY003OEppNjJmMXJOSmh1alhJWFJCemt5THFVdnpHeG4xa1VYN1FSaGN2OWhlNTNjaHMxYVh1d1YxRWh3?oc=5",
+      "evidence_path": "docs/V2/delivery/personal-policy-loop-evidence.json",
+      "purpose": "retrieved source reference"
+    },
+    {
+      "publisher": "연합뉴스TV",
+      "publisher_url": "https://www.yonhapnewstv.co.kr/",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5QeWY1WDM4OHVBaVkxM3ljNUVOdU5JcWNhQXVSTlFWV05Oby1sdnFtSHRCd1hrcEg2cUszYkYzX0VGdVhuV2lDMW9BbDdCOUFmNzduV0R3ckJ5MnFxaUkzNDk3UFFuY2M?oc=5",
+      "evidence_path": "docs/V2/delivery/personal-policy-loop-evidence.json",
+      "purpose": "retrieved source reference"
+    },
+    {
+      "publisher": "연합뉴스",
+      "publisher_url": "https://www.yna.co.kr/",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5HWm9MU0FEQ180WFZvcUMzX3ZpSHoyTy1tWDZtQ2JyVlpqSFgweHlFb0lPajA1Q3hmb21BQUJ6aFpjMVVETWw0SHAxX0dYWGMtNzBqSVNndll1WDjSAWBBVV95cUxOTFp4M3RxSGZidFczX092cHo2X3ltRW8xYW1PZ3dQbVE3NDJCSnU2dlA4NTQtTlQ0dmNxWkFxUldVQnV6azUxY3VBZFFSMFQ0V3hSc0k3R3NiTG9tVklFYlE?oc=5",
+      "evidence_path": "docs/V2/delivery/personal-policy-loop-evidence.json",
+      "purpose": "retrieved source reference"
+    },
+    {
+      "publisher": "경향신문",
+      "publisher_url": "https://www.khan.co.kr/",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5YUWdwYmV5ZGRIRzNQbFlfcXpqRGdkdVBSUDgyaHFtbmc5Vk5zanZUX0FoZmFocTBXVXl6Mk51NlQtcDR0RWxsNGpRVWFXQkdnSVR1VTdTUTZIUdIBX0FVX3lxTE1lNkxFanpqM3pmdnFfZk8wcG11V1YzMUdRWWl4ejVHRnRLNlhOX1RDbzBhMXIwWUU4QVd0THRza0x0NnpJS1lOeXZsR2N0bzJ4TldxNFRCOG00MkxjWHNn?oc=5",
+      "evidence_path": "docs/V2/delivery/personal-policy-loop-evidence.json",
+      "purpose": "retrieved source reference"
+    },
+    {
+      "publisher": "MBC 뉴스",
+      "publisher_url": "https://imnews.imbc.com/",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9Id3BSZi1ST3I4SGFFZXNRSUpGREhHLWRfZnlUb2FwamtObEtKNWpEaENtMzBvZm5NNmtjMVFRRjh5c1ZUR3dhRjhpNUJmTHpyRkx2M2U3RDVPUGl1VEJScWN2dlBXaEx0ZmRYalhMR0VVZ0g2VzdZd9IBeEFVX3lxTE5OdnVtOEpiY3JqMEl1RGlueFNZUTVrcXA2WkxRWWVodVNNLXpYWDVtWjJHSDhVTElibDd2YWxORFpsdEVhQm9EaDlqZzhjdXd4c2tqalZ1QmhfRnpxcHNzWGtDTjlrVlFLcUgyWVB6MmlaTXlrTS0waQ?oc=5",
+      "evidence_path": "docs/V2/delivery/personal-policy-loop-evidence.json",
+      "purpose": "retrieved source reference"
+    }
+  ],
+  "provider_license_metadata": [
+    {
+      "url": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/modis-14A1-061",
+      "id": "modis-14A1-061",
+      "license": "other",
+      "providers": [
+        {
+          "url": "https://lpdaac.usgs.gov/",
+          "name": "NASA LP DAAC at the USGS EROS Center",
+          "roles": [
+            "producer",
+            "licensor",
+            "processor"
+          ]
+        },
+        {
+          "url": "https://planetarycomputer.microsoft.com",
+          "name": "Microsoft",
+          "roles": [
+            "host",
+            "processor"
+          ]
+        }
+      ],
+      "links": []
+    },
+    {
+      "url": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/esa-cci-lc",
+      "id": "esa-cci-lc",
+      "license": "other",
+      "providers": [
+        {
+          "url": "https://vito.be",
+          "name": "VITO",
+          "roles": [
+            "licensor"
+          ],
+          "description": "Provides the PROBA-V source data (for v2.0)."
+        },
+        {
+          "url": "https://uclouvain.be",
+          "name": "UCLouvain",
+          "roles": [
+            "producer"
+          ],
+          "description": "UCLouvain produces the dataset (v2.1) for the ESA Climate Change Initiative."
+        },
+        {
+          "url": "https://brockmann-consult.de",
+          "name": "Brockmann Consult",
+          "roles": [
+            "processor"
+          ],
+          "description": "Brockmann Consult is responsible for the required pre-processing and the distribution of the dataset (v2.1)."
+        },
+        {
+          "url": "http://esa-landcover-cci.org",
+          "name": "ESA Climate Change Initiative",
+          "roles": [
+            "licensor"
+          ],
+          "description": "The ESA Climate Change Initiative (CCI) is leading the product creation."
+        },
+        {
+          "url": "https://copernicus.eu",
+          "name": "Copernicus",
+          "roles": [
+            "licensor"
+          ],
+          "description": "Hosts the data on the Copernicus Climate Data Store (CDS)."
+        },
+        {
+          "url": "https://planetarycomputer.microsoft.com",
+          "name": "Microsoft",
+          "roles": [
+            "processor",
+            "host"
+          ]
+        }
+      ],
+      "links": []
+    },
+    {
+      "url": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/cop-dem-glo-90",
+      "id": "cop-dem-glo-90",
+      "license": "other",
+      "providers": [
+        {
+          "url": "https://spacedata.copernicus.eu/documents/20126/0/CSCDA_ESA_Mission-specific+Annex.pdf",
+          "name": "European Space Agency",
+          "roles": [
+            "licensor"
+          ]
+        },
+        {
+          "url": "https://registry.opendata.aws/copernicus-dem/",
+          "name": "Sinergise",
+          "roles": [
+            "producer",
+            "processor"
+          ]
+        },
+        {
+          "url": "https://doi.org/10.5069/G9028PQB",
+          "name": "OpenTopography",
+          "roles": [
+            "host"
+          ]
+        },
+        {
+          "url": "https://planetarycomputer.microsoft.com",
+          "name": "Microsoft",
+          "roles": [
+            "host"
+          ]
+        }
+      ],
+      "links": []
+    },
+    {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/KOR/ADM0/",
+      "boundarySource": "Natural Earth, geoBoundaries",
+      "boundaryLicense": "Public Domain",
+      "licenseDetail": "nan",
+      "licenseSource": "www.naturalearthdata.com/about/terms-of-use/",
+      "boundarySourceURL": "www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-details/",
+      "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023"
+    },
+    {
+      "url": "https://www.kaggle.com/api/v1/datasets/view/fantineh/next-day-wildfire-spread",
+      "title": "Next Day Wildfire Spread",
+      "licenseName": "Attribution 4.0 International (CC BY 4.0)",
+      "currentVersionNumber": 2,
+      "ownerName": "Fantine Huot"
+    }
+  ],
+  "note": "URL-only source inventory; no credentials or signed asset URLs. Source links do not imply a redistribution license."
+}

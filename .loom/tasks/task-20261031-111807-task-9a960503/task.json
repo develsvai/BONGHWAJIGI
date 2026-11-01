@@ -1,0 +1,39 @@
+{
+  "id": "task-20261031-111807-task-9a960503",
+  "job_id": "job-20261031-002626-job-c9f9ff0d",
+  "title": "국내 산불 적용을 위한 원인 분석과 공개 정답·입력 확보 및 개선 실험",
+  "description": "사용자가 쓸만한 수준까지 계속 개선하라고 직접 지시했고 최종 목표를 국내 사용자 대응 판단에 연결할 수준으로 명시했다. 기존 모델의 임계값·희소 양성·표본·시공간·확률 보정 문제를 측정하고, 국내 시각/좌표가 있는 공개 관측 정답과 일치하는 기상/지형 입력을 실제 확보한다. 사용 가능성이 검증되지 않은 미국 점수 개선을 국내 적용 성공으로 보고하지 않는다.",
+  "status": "RUNNING",
+  "created_at": "2026-10-31T11:18:07+00:00",
+  "updated_at": "2026-10-31T15:08:38+00:00",
+  "order_index": 9,
+  "assigned_agent": "foreground",
+  "depends_on": [
+    "task-20261031-105243-cuda-b5a38b8b"
+  ],
+  "expected_output": "원인 진단과 precision/recall/오경보 곡선, 국내 실제 원본·provenance·입력/정답 계약 및 사건 분할, 재현 가능한 수집/구축/학습/평가 실험과 한계·진행 기록",
+  "done_condition": "원인과 개선 효과를 수치로 확인하고 확보 가능한 국내 자료의 실제 다운로드·품질·시점·좌표·정답 적합성을 검증한다. 독립 평가 구획을 사전에 고정해 가능한 학습 개선을 실행하고, 국내 연결 가능 여부와 미확보 조건을 정직하게 기록한다. 운영 정책/레벨을 임의 결정하거나 누출로 점수를 높이지 않는다.",
+  "in_scope": "training/과 자료 전용 경로, 국내 공식/공개 데이터 확보와 정답·입력 시점 검증, 연구용 목표/지표 사전 명세, 반복 개선·확률/임계값 진단, 독립 검증과 Loom 기록, 필요시 GPU 학습과 기존 서비스 복구",
+  "out_of_scope": "앱·다른 작업자의 RAG 파일·운영 배포·사용자 알림·대응 레벨 결정·유료 서비스·자격정보 커밋·test에 맞춘 튜닝과 국내 검증 없는 운영 성능 주장·원격 push",
+  "validation_hint": "원본 SHA·공식 출처/이용조건·지역/시각/좌표·관측불가/QC·미래 정보 누출·사건/시기 분리·미사용 최종 평가·오경보/누락과 calibration·CPU reload·서빙 복구·Loom strict",
+  "required_docs": [
+    "docs/V2/delivery/xgboost-training-verification.md",
+    "docs/V2/delivery/xgboost-training-data.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/korea-wildfire-improvement.md"
+  ],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [
+    "b35e0538bdd8d738566f7938c87315f62c86b7ab"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-10-31T11:18:20+00:00",
+  "artifacts": [],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

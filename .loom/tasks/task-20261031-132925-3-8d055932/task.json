@@ -1,0 +1,47 @@
+{
+  "id": "task-20261031-132925-3-8d055932",
+  "job_id": "job-20261031-002626-job-97436430",
+  "title": "확정한 산불 3단계 정책과 공식 경보·알림 전달 경로 구현",
+  "description": "사용자가 확정한 준비·대피이동·긴급지원요청 정책을 기존 개인 계획 루프에 적용하고 공식 경보 우선 처리·발령 대상 확인·정정/해제 및 내구성 있는 알림 전송을 구현한다. 실제 예측 모델 연결은 제외하고 GPU 학습은 보존한다.",
+  "status": "DONE",
+  "created_at": "2026-10-31T13:29:25+00:00",
+  "updated_at": "2026-10-31T13:43:51+00:00",
+  "order_index": 9,
+  "assigned_agent": "foreground",
+  "depends_on": [],
+  "expected_output": "정책·상태 계약, 검토된 국내 기본 지침, 정책 실행기, 긴급 수신/워커, 알림 큐·모의/FCM 어댑터, DB migration, 검증 및 response-policy.md",
+  "done_condition": "세 사용자·경로/조력자/자료 부족·상향/하향에서 3단계가 재현되고 공식 원문 처리가 GPU와 독립적이며 알림 중복/재시도·수신 상태가 구분된다. 실제 푸시 자격이 없으면 미설정과 모의 전송을 실제 전송 성공으로 표시하지 않는다.",
+  "in_scope": "확정 정책 및 국내 지침; 사용자 상태·검토된 환경 입력; 공식 경보 독립 경로; 알림 저장·전달·장애 복구; 공용 갱신 이력; 문서와 검증",
+  "out_of_scope": "실제 예측 모델 학습/추론 연결; 진행 중인 training 작업 수정·중단; BONGHAWJIGI_APP; 3D; 실제 K8s 수집; 서버 음성; 실제 119 연락; 자격정보 커밋; 사용자 동의 없는 외부 연락",
+  "validation_hint": "실제 PostgreSQL/Redis 검증, 정책 경계·인증·격리·재시도·만료 시험, API 명세/예제·Ruff·migration·Loom strict; 서버 배포 Task는 실제 사설망 요청과 재시작 검사",
+  "required_docs": [],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/response-policy.md"
+  ],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [
+    "4a7b25355c7befd23448fcad7fdae4d227c39cd8",
+    "c1890378c7b48dfeb50d21b83cdd36b750bb1c35"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-10-31T13:43:51+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-132925-3-8d055932/agent-events.jsonl",
+    ".loom/tasks/task-20261031-132925-3-8d055932/artifacts.json",
+    ".loom/tasks/task-20261031-132925-3-8d055932/context.md",
+    ".loom/tasks/task-20261031-132925-3-8d055932/decision.md",
+    ".loom/tasks/task-20261031-132925-3-8d055932/git-snapshot.json",
+    ".loom/tasks/task-20261031-132925-3-8d055932/logs.txt",
+    ".loom/tasks/task-20261031-132925-3-8d055932/previous-results.md",
+    ".loom/tasks/task-20261031-132925-3-8d055932/prompt.md",
+    ".loom/tasks/task-20261031-132925-3-8d055932/result.md",
+    ".loom/tasks/task-20261031-132925-3-8d055932/troubleshooting.md",
+    "docs/V2/delivery/response-policy.md"
+  ],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

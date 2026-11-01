@@ -1,0 +1,72 @@
+{
+  "검증시각": "2026-10-31T10:13:25.075513+00:00",
+  "검증구성": [
+    "로컬 PostgreSQL 16/pgvector",
+    "로컬 Redis 7.4/Celery 분석 워커",
+    "SSH 터널을 통한 기존 L4 임베딩 서비스",
+    "인터넷 Google News RSS"
+  ],
+  "mode": "simulation",
+  "scenario_id": "demo-f2f069124db249d6b87c1287a6a46671",
+  "job_id": "08ee2f96-d6bf-457a-a7ca-fc099ea5e14e",
+  "status": "ready_for_qwen",
+  "attempts": 1,
+  "embedding": {
+    "model": "Qwen/Qwen3-Embedding-0.6B",
+    "revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+    "dimensions": 1024
+  },
+  "web_search": {
+    "provider": "google_news_rss",
+    "query": "산불 현황 after:2026-10-24 before:2026-11-01",
+    "searched_at": "2026-10-31T10:13:25.075513+00:00",
+    "status": "ok",
+    "result_count": 5
+  },
+  "evidence_count": 5,
+  "sources": [
+    {
+      "document_id": "stored-demo",
+      "kind": "stored_document",
+      "url": "https://example.invalid/scenario",
+      "publisher": null,
+      "verified": false,
+      "score_kind": "cosine_similarity"
+    },
+    {
+      "document_id": "web-c8298bc14392a3832e9450ded52b608d97b992f5",
+      "kind": "news_search",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1pSE1iSXJ3Q0tOYnJ2VERoQnhiUVdnUkdabWFIOHkxLXhxMUdrM0tMaThTbHJjS3l4U2wtdnNqQ0E3VGxQWXU5Sk03WTlSZkJQSVVzdDhjTmZ1S2FhanMyVzBfbnpxUQ?oc=5",
+      "publisher": "IQAir",
+      "verified": false,
+      "score_kind": "cosine_similarity"
+    },
+    {
+      "document_id": "web-f452ad8ba56d9fb24d1e2567cae60f9f33bb3315",
+      "kind": "news_search",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9UZmdYSDJTcmhCMzVrVUpQQmVWdjQtWDZGaGdNUnVqaXM0cVIya0VKSVFtdVpUZmF2Y0ljdGREZGh4cWRxTEFTdGx6bERHT3YxVzJqVEdnUFA3QmNWT0s2R1BBdXljQQ?oc=5",
+      "publisher": "IQAir",
+      "verified": false,
+      "score_kind": "cosine_similarity"
+    },
+    {
+      "document_id": "web-3e6b688ad71e4fdec192fec8a4cdecc1d4e21e19",
+      "kind": "news_search",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE14bFg0NFZrY21PNkdMekJUUk5XRlFiV0VUd3lORmZuQmh4Zl9waFQzNGhxXzJzQUp6eWZSTWxrcHBSeF9uMGlLczJsUWVDeDlDTUlfZzREYzRza2NKNFRMN2Z3?oc=5",
+      "publisher": "IQAir",
+      "verified": false,
+      "score_kind": "cosine_similarity"
+    },
+    {
+      "document_id": "web-e40971da06bea9ca54e5437d208671949191749d",
+      "kind": "news_search",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5vWjItN1dteGJvYTRKTTBjOVctTTNRakduMW1FN2xNR0J2UnRRLThQTzNFbHB2Q1JjOUpHZy1WXzFucTNkNUxPQjNFQ3lPYUltejZKNXRHNkgxeTRaMTZvSExVbC0?oc=5",
+      "publisher": "IQAir",
+      "verified": false,
+      "score_kind": "cosine_similarity"
+    }
+  ],
+  "duplicate_submission": "동일 job_id로 반환·추가 outbox 없음",
+  "qwen_invoked": false,
+  "한계": "합성 시나리오 입력의 연결 검증이다. 뉴스 제목·짧은 설명 검색이며 본문 수집·사건 통합·정책·실제 산불 예측 검증은 아니다."
+}

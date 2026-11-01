@@ -1,0 +1,20 @@
+.git
+.loom
+.venv*
+.env
+.env.*
+!.env.example
+__pycache__
+.pytest_cache
+.ruff_cache
+models
+checkpoints
+data
+secrets
+credentials
+*.pem
+*.key
+dist
+build
+# Android/web artifacts are built independently from the server image.
+apps/mobile

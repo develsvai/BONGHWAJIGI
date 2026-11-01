@@ -1,0 +1,49 @@
+{
+  "id": "task-20261031-180818-ppt-d540dfd8",
+  "job_id": "job-20261031-002017-v2-fe3bfad0",
+  "title": "기술 스택 페이지를 기존 발표 스타일의 편집용 PPT로 제작",
+  "description": "첨부 ppt_8.webp의 기술 스택·직접 개발 범위·검증 내용을 앞서 만든 3장 아키텍처 PPT와 동일한 시각 스타일로 재구성한다.",
+  "status": "DONE",
+  "created_at": "2026-10-31T18:08:18+00:00",
+  "updated_at": "2026-10-31T18:11:53+00:00",
+  "order_index": 24,
+  "assigned_agent": "foreground",
+  "depends_on": [],
+  "expected_output": "편집 가능한 1장 PPTX와 PNG 미리보기",
+  "done_condition": "5개 기술 구성과 직접 개발·검증 내용을 포함하고 기존 PPT 스타일·한글·배치를 확인하며 파일 검증을 통과한다.",
+  "in_scope": "첨부 이미지 내용 재구성, 기존 PPT 스타일 재사용, PPTX·PNG 생성과 검증, Loom 기록",
+  "out_of_scope": "기존 3장 수정, 앱·서버·학습 구현과 배포, 검증 수치의 새 측정",
+  "validation_hint": "1장·16:9·텍스트/도형 편집 가능성, 원본 내용과 스타일 비교, PPTX 패키지·레이아웃 검사",
+  "required_docs": [
+    "docs/V2/delivery/presentation-architecture.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/tech-stack-slide.md"
+  ],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [
+    "a17d03378778f49d3e49c723c81b0dd5551dbc56",
+    "7018c0d7579caefeb2199ed8aca63d450b354522"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-10-31T18:11:53+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-180818-ppt-d540dfd8/agent-events.jsonl",
+    ".loom/tasks/task-20261031-180818-ppt-d540dfd8/artifacts.json",
+    ".loom/tasks/task-20261031-180818-ppt-d540dfd8/context.md",
+    ".loom/tasks/task-20261031-180818-ppt-d540dfd8/decision.md",
+    ".loom/tasks/task-20261031-180818-ppt-d540dfd8/git-snapshot.json",
+    ".loom/tasks/task-20261031-180818-ppt-d540dfd8/logs.txt",
+    ".loom/tasks/task-20261031-180818-ppt-d540dfd8/previous-results.md",
+    ".loom/tasks/task-20261031-180818-ppt-d540dfd8/prompt.md",
+    ".loom/tasks/task-20261031-180818-ppt-d540dfd8/result.md",
+    ".loom/tasks/task-20261031-180818-ppt-d540dfd8/troubleshooting.md",
+    "docs/V2/delivery/tech-stack-slide.md"
+  ],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

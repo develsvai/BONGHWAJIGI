@@ -1,0 +1,42 @@
+{
+  "rows": 147367,
+  "positives": 1221,
+  "anchors": 93,
+  "censored_rows": 37457,
+  "horizons": {
+    "1": {
+      "rows": 56787,
+      "positives": 188
+    },
+    "3": {
+      "rows": 49973,
+      "positives": 407
+    },
+    "6": {
+      "rows": 40607,
+      "positives": 626
+    }
+  },
+  "sha256": "62f16c8fa53947d459202d746dfe6cd237deed21b836b9d0b4977a312d7c1332",
+  "event": {
+    "id": "mosquito_2022",
+    "split": "validation",
+    "bucket": "noaa-goes17",
+    "start_utc": "2022-09-08T00:00:00Z",
+    "hours": 24,
+    "bbox": [
+      -122,
+      38,
+      -119,
+      40
+    ],
+    "source": "https://www.fire.ca.gov/incidents/2022/9/6/mosquito-fire"
+  },
+  "native_grid_crs": "PROJCRS[\"undefined\",BASEGEOGCRS[\"undefined\",DATUM[\"undefined\",ELLIPSOID[\"undefined\",6378137,298.257222096042,LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Geostationary Satellite (Sweep X)\"],PARAMETER[\"Satellite height\",35786023,LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],PARAMETER[\"Latitude of natural origin\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8801]],PARAMETER[\"Longitude of natural origin\",-137,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8802]],PARAMETER[\"False easting\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8806]],PARAMETER[\"False northing\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8807]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+  "native_grid_shape": [
+    78,
+    138
+  ],
+  "source_frames": 384,
+  "source_manifest_sha256": "e635e8a62d5689b38dd1d771115c2cd806823825a2d739aded91b25fa879f1a8"
+}

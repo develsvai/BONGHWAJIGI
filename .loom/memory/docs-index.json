@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-31T04:10:31+00:00",
+  "generated_at": "2026-10-31T20:21:08+00:00",
   "docs_paths": [
     "docs"
   ],
@@ -218,8 +218,8 @@
       "path": "docs/README.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T13:09:19+09:00",
-      "size_bytes": 3927
+      "updated_at": "2026-10-31T23:56:21+09:00",
+      "size_bytes": 4564
     },
     {
       "id": "docs/V1/ai-and-infrastructure.md",
@@ -312,13 +312,31 @@
       "size_bytes": 9590
     },
     {
+      "id": "docs/V2/delivery/analysis-retrieval-evidence.json",
+      "title": "{",
+      "path": "docs/V2/delivery/analysis-retrieval-evidence.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:14:46+09:00",
+      "size_bytes": 2964
+    },
+    {
+      "id": "docs/V2/delivery/analysis-retrieval-flow.md",
+      "title": "시나리오 입력부터 분석·검색과 Qwen 전달 직전까지",
+      "path": "docs/V2/delivery/analysis-retrieval-flow.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:17:26+09:00",
+      "size_bytes": 10495
+    },
+    {
       "id": "docs/V2/delivery/api-handoff.md",
       "title": "앱팀 전달서 — 화면별 API 연동",
       "path": "docs/V2/delivery/api-handoff.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T13:08:08+09:00",
-      "size_bytes": 15673
+      "updated_at": "2026-10-31T22:56:42+09:00",
+      "size_bytes": 16977
     },
     {
       "id": "docs/V2/delivery/api-job-review.md",
@@ -346,6 +364,15 @@
       "document_type": "docs",
       "updated_at": "2026-10-31T13:08:09+09:00",
       "size_bytes": 106645
+    },
+    {
+      "id": "docs/V2/delivery/api/mvp-openapi.json",
+      "title": "{",
+      "path": "docs/V2/delivery/api/mvp-openapi.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T01:39:02+09:00",
+      "size_bytes": 138778
     },
     {
       "id": "docs/V2/delivery/api/openapi.yaml",
@@ -380,7 +407,7 @@
       "path": "docs/V2/delivery/api/validation-report.json",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T13:10:30+09:00",
+      "updated_at": "2026-10-31T13:13:51+09:00",
       "size_bytes": 637
     },
     {
@@ -391,6 +418,15 @@
       "document_type": "docs",
       "updated_at": "2026-10-31T13:08:08+09:00",
       "size_bytes": 17634
+    },
+    {
+      "id": "docs/V2/delivery/app-integration-api.md",
+      "title": "앱 통합 API 보완",
+      "path": "docs/V2/delivery/app-integration-api.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T00:58:29+09:00",
+      "size_bytes": 6067
     },
     {
       "id": "docs/V2/delivery/environment-readiness-evidence.json",
@@ -411,6 +447,276 @@
       "size_bytes": 15193
     },
     {
+      "id": "docs/V2/delivery/external-resources-and-licenses.md",
+      "title": "봉화지기 외부 자원 활용 내역과 라이선스",
+      "path": "docs/V2/delivery/external-resources-and-licenses.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T04:16:31+09:00",
+      "size_bytes": 126230
+    },
+    {
+      "id": "docs/V2/delivery/external-resources/data-and-content-sources.json",
+      "title": "{",
+      "path": "docs/V2/delivery/external-resources/data-and-content-sources.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T23:55:04+09:00",
+      "size_bytes": 16560
+    },
+    {
+      "id": "docs/V2/delivery/external-resources/document-validation.json",
+      "title": "{",
+      "path": "docs/V2/delivery/external-resources/document-validation.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T00:19:55+09:00",
+      "size_bytes": 1691
+    },
+    {
+      "id": "docs/V2/delivery/external-resources/python-coverage.json",
+      "title": "{",
+      "path": "docs/V2/delivery/external-resources/python-coverage.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T23:55:04+09:00",
+      "size_bytes": 6486
+    },
+    {
+      "id": "docs/V2/delivery/external-resources/python-inventory.json",
+      "title": "{",
+      "path": "docs/V2/delivery/external-resources/python-inventory.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T23:55:04+09:00",
+      "size_bytes": 689836
+    },
+    {
+      "id": "docs/V2/delivery/external-resources/supplemental-verification-20261101.json",
+      "title": "{",
+      "path": "docs/V2/delivery/external-resources/supplemental-verification-20261101.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T00:19:55+09:00",
+      "size_bytes": 266117
+    },
+    {
+      "id": "docs/V2/delivery/gpu-model-evidence.json",
+      "title": "{",
+      "path": "docs/V2/delivery/gpu-model-evidence.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T18:12:09+09:00",
+      "size_bytes": 2642
+    },
+    {
+      "id": "docs/V2/delivery/gpu-model-readiness.md",
+      "title": "GPU 서버의 세 모델 실행 준비 결과",
+      "path": "docs/V2/delivery/gpu-model-readiness.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T18:13:14+09:00",
+      "size_bytes": 6812
+    },
+    {
+      "id": "docs/V2/delivery/implementation-stack.md",
+      "title": "산불 MVP 구현 기술 스택 결정",
+      "path": "docs/V2/delivery/implementation-stack.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:17:26+09:00",
+      "size_bytes": 20034
+    },
+    {
+      "id": "docs/V2/delivery/korea-wildfire-improvement.md",
+      "title": "국내 산불 1·3·6시간 모델 개선 기록",
+      "path": "docs/V2/delivery/korea-wildfire-improvement.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T23:38:06+09:00",
+      "size_bytes": 31804
+    },
+    {
+      "id": "docs/V2/delivery/mobile-dialogue-and-route.md",
+      "title": "앱 텍스트 대화와 합성 시연 경로",
+      "path": "docs/V2/delivery/mobile-dialogue-and-route.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T03:55:17+09:00",
+      "size_bytes": 9038
+    },
+    {
+      "id": "docs/V2/delivery/mobile-server-deployment.md",
+      "title": "앱 실연동 서버 배포",
+      "path": "docs/V2/delivery/mobile-server-deployment.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T03:55:03+09:00",
+      "size_bytes": 6188
+    },
+    {
+      "id": "docs/V2/delivery/mobile-submodule-deployment.md",
+      "title": "앱 서브모듈과 배포 소스 확인",
+      "path": "docs/V2/delivery/mobile-submodule-deployment.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T04:25:42+09:00",
+      "size_bytes": 12097
+    },
+    {
+      "id": "docs/V2/delivery/mvp-app-api.md",
+      "title": "산불 MVP 앱 API 실행 계약",
+      "path": "docs/V2/delivery/mvp-app-api.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T23:17:04+09:00",
+      "size_bytes": 7772
+    },
+    {
+      "id": "docs/V2/delivery/mvp-server-evidence.json",
+      "title": "{",
+      "path": "docs/V2/delivery/mvp-server-evidence.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T23:25:24+09:00",
+      "size_bytes": 23134
+    },
+    {
+      "id": "docs/V2/delivery/mvp-server-runbook.md",
+      "title": "산불 MVP 일반 서버 운영과 접속",
+      "path": "docs/V2/delivery/mvp-server-runbook.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T23:23:53+09:00",
+      "size_bytes": 9654
+    },
+    {
+      "id": "docs/V2/delivery/personal-policy-loop-evidence.json",
+      "title": "{",
+      "path": "docs/V2/delivery/personal-policy-loop-evidence.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T20:42:17+09:00",
+      "size_bytes": 26013
+    },
+    {
+      "id": "docs/V2/delivery/personal-policy-loop.md",
+      "title": "개인별 대응 계획의 자동 갱신 루프",
+      "path": "docs/V2/delivery/personal-policy-loop.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T22:41:13+09:00",
+      "size_bytes": 13749
+    },
+    {
+      "id": "docs/V2/delivery/presentation-v1-design.md",
+      "title": "발표 v1 디자인 통일",
+      "path": "docs/V2/delivery/presentation-v1-design.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-01T05:21:08+09:00",
+      "size_bytes": 3331
+    },
+    {
+      "id": "docs/V2/delivery/project-scaffold.md",
+      "title": "서버 프로젝트 스캐폴딩",
+      "path": "docs/V2/delivery/project-scaffold.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:17:26+09:00",
+      "size_bytes": 11198
+    },
+    {
+      "id": "docs/V2/delivery/qwen-integration-result.md",
+      "title": "경보 포함 Qwen3 통합 결과 — 추론 입력 직전",
+      "path": "docs/V2/delivery/qwen-integration-result.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:43:52+09:00",
+      "size_bytes": 10806
+    },
+    {
+      "id": "docs/V2/delivery/qwen-integration/generation-request.json",
+      "title": "{",
+      "path": "docs/V2/delivery/qwen-integration/generation-request.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:40:33+09:00",
+      "size_bytes": 3141
+    },
+    {
+      "id": "docs/V2/delivery/qwen-integration/generation-response.json",
+      "title": "{",
+      "path": "docs/V2/delivery/qwen-integration/generation-response.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:40:47+09:00",
+      "size_bytes": 1146
+    },
+    {
+      "id": "docs/V2/delivery/qwen-integration/pre-inference.json",
+      "title": "{",
+      "path": "docs/V2/delivery/qwen-integration/pre-inference.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:40:47+09:00",
+      "size_bytes": 10621
+    },
+    {
+      "id": "docs/V2/delivery/qwen-integration/retrieval-handoff.json",
+      "title": "{",
+      "path": "docs/V2/delivery/qwen-integration/retrieval-handoff.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:40:33+09:00",
+      "size_bytes": 8119
+    },
+    {
+      "id": "docs/V2/delivery/qwen-integration/run-metadata.json",
+      "title": "{",
+      "path": "docs/V2/delivery/qwen-integration/run-metadata.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:40:47+09:00",
+      "size_bytes": 575
+    },
+    {
+      "id": "docs/V2/delivery/qwen-integration/scenario-input.json",
+      "title": "{",
+      "path": "docs/V2/delivery/qwen-integration/scenario-input.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:40:27+09:00",
+      "size_bytes": 5895
+    },
+    {
+      "id": "docs/V2/delivery/qwen-integration/source-checks.json",
+      "title": "[",
+      "path": "docs/V2/delivery/qwen-integration/source-checks.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:40:28+09:00",
+      "size_bytes": 1080
+    },
+    {
+      "id": "docs/V2/delivery/response-policy.md",
+      "title": "산불 MVP의 확정 3단계 정책",
+      "path": "docs/V2/delivery/response-policy.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T22:41:13+09:00",
+      "size_bytes": 6340
+    },
+    {
+      "id": "docs/V2/delivery/ssh-access.md",
+      "title": "두 서버 SSH 접속 운영 기록",
+      "path": "docs/V2/delivery/ssh-access.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T17:44:39+09:00",
+      "size_bytes": 4323
+    },
+    {
       "id": "docs/V2/delivery/tailnet-connectivity-evidence.json",
       "title": "{",
       "path": "docs/V2/delivery/tailnet-connectivity-evidence.json",
@@ -427,6 +733,42 @@
       "document_type": "docs",
       "updated_at": "2026-10-31T11:37:55+09:00",
       "size_bytes": 7797
+    },
+    {
+      "id": "docs/V2/delivery/xgboost-training-data.md",
+      "title": "XGBoost 학습 데이터 확보와 첫 데이터셋",
+      "path": "docs/V2/delivery/xgboost-training-data.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T19:19:10+09:00",
+      "size_bytes": 12896
+    },
+    {
+      "id": "docs/V2/delivery/xgboost-training-run.md",
+      "title": "XGBoost 학습 시작 방법",
+      "path": "docs/V2/delivery/xgboost-training-run.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T20:00:14+09:00",
+      "size_bytes": 6371
+    },
+    {
+      "id": "docs/V2/delivery/xgboost-training-verification.md",
+      "title": "첫 CUDA 학습 완료와 저장 모델 검증",
+      "path": "docs/V2/delivery/xgboost-training-verification.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T20:00:14+09:00",
+      "size_bytes": 6591
+    },
+    {
+      "id": "docs/V3/01-planning-baseline.md",
+      "title": "봉화지기 기획 기준",
+      "path": "docs/V3/01-planning-baseline.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-10-31T22:41:13+09:00",
+      "size_bytes": 29868
     }
   ],
   "path": "/Users/hongyongjae/Desktop/helloworld/BONGHWAJIGI/.loom/memory/docs-index.json"

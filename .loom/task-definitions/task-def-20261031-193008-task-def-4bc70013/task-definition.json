@@ -1,0 +1,32 @@
+{
+  "id": "task-def-20261031-193008-task-def-4bc70013",
+  "job_definition_id": "job-20261031-002017-v2-fe3bfad0",
+  "title": "촬영 시나리오 자료 수집과 지역 행동요령·개인 준비 실파이프라인 검증",
+  "description": "사용자가 제공한 118초 A·B 산불 영상 계획을 바탕으로 출처 있는 재난·기상·지리 자료를 수집하고 실제 이벤트·큐·검색·통합·정책·알림 흐름을 검증하라고 직접 지시했다. 홈 오늘의 행동요령은 위치 지역 환경, 사전 준비는 공통 1칸과 프로필 맞춤 1칸을 제공한다. 시연 문구는 앱에서 정리하되 데이터 출처·원시 관측시각·재생 여부와 경로 검증 범위는 보존한다.",
+  "created_at": "2026-10-31T19:30:08+00:00",
+  "updated_at": "2026-10-31T20:12:09+00:00",
+  "order_index": 28,
+  "legacy_task_id": "task-20261031-193008-task-ba4da975",
+  "depends_on": [],
+  "expected_output": "출처와 재생 명세가 있는 A·B 데이터, 지역 홈 카드 API와 상태 질문/정책 연결, 반복 실행 도구, 일반 서버 배포와 실제 큐·모델·알림 검증 증거 및 앱 계약",
+  "done_condition": "검증 가능한 자료로 같은 산불의 서로 다른 사용자 안내를 재현하고 프로필만으로 현재 동반·이동불가를 추정하지 않는다. 위치/기상 및 공통/개인 준비 카드가 근거와 만료에 맞춰 갱신되고 실제 파이프라인 결과·미제공 범위를 기록한다.",
+  "in_scope": "공식 산불·기상·지리 근거 수집; A/B 재생 데이터; 지역 행동요령·준비 API; 사건/상태 질문·정책; 일반 서버 배포와 큐/모델/알림 검사; 앱 계약·자료 출처 기록",
+  "out_of_scope": "실제 예측 모델 연결·학습 변경; Firebase 실제 푸시; 3D; 실제 GPS 공유; 실제119연락; 미검증 안전 경로 보장; 다른 채팅 연구 변경",
+  "validation_hint": "출처·원시시간·재생 변환 검토, 실제 PostgreSQL 회귀 및 API 명세, 임베딩/Qwen 통합·공식 긴급큐/분석큐·개인 정책/앱알림 실서버 검증, Loom strict",
+  "required_docs": [
+    "docs/V2/delivery/mvp-app-api.md",
+    "docs/V2/delivery/mvp-server-runbook.md",
+    "docs/V2/delivery/mobile-dialogue-and-route.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/filming-scenario-pipeline.md"
+  ],
+  "document_output_exceptions": [],
+  "default_agent": "foreground",
+  "context_policy_id": "",
+  "executor_policy_id": "",
+  "review_policy": "",
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

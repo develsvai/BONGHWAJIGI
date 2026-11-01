@@ -1,0 +1,56 @@
+{
+  "before": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "f9a93c2bfd832c63bee6f0838977caf9b219e909",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/events.jsonl",
+      ".loom/job-runs/job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02/job-run.json",
+      ".loom/job-runs/job-run-20261031-100136-job-20261031-002626-job-c9f9ff0d-1370d387/job-run.json",
+      ".loom/jobs/job-20261031-002017-v2-fe3bfad0/job.json",
+      ".loom/jobs/job-20261031-002626-job-c9f9ff0d/job.json",
+      "training/pyproject.toml",
+      "training/uv.lock"
+    ],
+    "untracked_files": [
+      ".loom/task-definitions/task-def-20261031-111807-task-def-2cdadd42/",
+      ".loom/task-definitions/task-def-20261031-130338-develop-25562009/",
+      ".loom/task-runs/task-run-20261031-111820-task-def-20261031-111807-task-def-2cdadd42-fa01fa3a/",
+      ".loom/task-runs/task-run-20261031-130341-task-def-20261031-130338-develop-25562009-c05aa9f9/",
+      ".loom/tasks/task-20261031-111807-task-9a960503/",
+      ".loom/tasks/task-20261031-130338-develop-52f61c3c/",
+      "training/configs/",
+      "training/reports/improvement-audit-20261031/",
+      "training/reports/threshold-diagnosis.json",
+      "training/src/bonghwa_training/goes_build.py",
+      "training/src/bonghwa_training/goes_download.py",
+      "training/src/bonghwa_training/goes_evaluate.py",
+      "training/src/bonghwa_training/goes_release.py",
+      "training/src/bonghwa_training/goes_train.py",
+      "training/src/bonghwa_training/kma_download.py",
+      "training/src/bonghwa_training/korea_build.py",
+      "training/src/bonghwa_training/korea_download.py",
+      "training/src/bonghwa_training/risk_metrics.py",
+      "training/tests/test_hourly.py",
+      "training/tests/test_kma.py",
+      "training/tests/test_korea.py",
+      "training/tools/train_hourly_gpu.sh"
+    ],
+    "captured_at": "2026-10-31T13:03:41+00:00"
+  },
+  "after": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "681510683b23251f14503befed3dc6b97d1765d6",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/job-runs/job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02/job-run.json",
+      ".loom/task-definitions/task-def-20261031-130338-develop-25562009/task-definition.json"
+    ],
+    "untracked_files": [],
+    "captured_at": "2026-10-31T13:08:08+00:00"
+  }
+}

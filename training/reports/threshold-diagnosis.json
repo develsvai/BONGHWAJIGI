@@ -1,0 +1,87 @@
+{
+  "profile": "ndws_us_validation_threshold_diagnosis",
+  "model_sha256": "14a988b3b8e2755c54bc89f82a00d4babee2c3c24970df57df10973112809cb5",
+  "scope": "validation diagnostic; no test tuning; not Korean policy threshold",
+  "rows": [
+    {
+      "threshold": 0.005,
+      "precision": 0.04077582076487276,
+      "recall": 0.7416622316835196,
+      "false_positive_rate": 0.20002827057071723,
+      "tp": 33446,
+      "fp": 786795,
+      "fn": 11650,
+      "tn": 3146624
+    },
+    {
+      "threshold": 0.01,
+      "precision": 0.07164831411807711,
+      "recall": 0.5954630122405535,
+      "false_positive_rate": 0.08845637853480649,
+      "tp": 26853,
+      "fp": 347936,
+      "fn": 18243,
+      "tn": 3585483
+    },
+    {
+      "threshold": 0.02,
+      "precision": 0.10738624563504905,
+      "recall": 0.49303707645910944,
+      "false_positive_rate": 0.04698533260758643,
+      "tp": 22234,
+      "fp": 184813,
+      "fn": 22862,
+      "tn": 3748606
+    },
+    {
+      "threshold": 0.03,
+      "precision": 0.131219384797661,
+      "recall": 0.45680326414759626,
+      "false_positive_rate": 0.034674414294536125,
+      "tp": 20600,
+      "fp": 136389,
+      "fn": 24496,
+      "tn": 3797030
+    },
+    {
+      "threshold": 0.05,
+      "precision": 0.16432518039379676,
+      "recall": 0.40954851871562886,
+      "false_positive_rate": 0.023878462986018017,
+      "tp": 18469,
+      "fp": 93924,
+      "fn": 26627,
+      "tn": 3839495
+    },
+    {
+      "threshold": 0.1,
+      "precision": 0.20561805804371194,
+      "recall": 0.318143516054639,
+      "false_positive_rate": 0.014091557497434166,
+      "tp": 14347,
+      "fp": 55428,
+      "fn": 30749,
+      "tn": 3877991
+    },
+    {
+      "threshold": 0.2,
+      "precision": 0.2774976922530711,
+      "recall": 0.17331914138726273,
+      "false_positive_rate": 0.0051736161339536926,
+      "tp": 7816,
+      "fp": 20350,
+      "fn": 37280,
+      "tn": 3913069
+    },
+    {
+      "threshold": 0.5,
+      "precision": 0.39065420560747666,
+      "recall": 0.004634557388681923,
+      "false_positive_rate": 8.287955084368077e-05,
+      "tp": 209,
+      "fp": 326,
+      "fn": 44887,
+      "tn": 3933093
+    }
+  ]
+}

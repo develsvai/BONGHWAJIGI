@@ -1,0 +1,66 @@
+{
+  "checked_at": "2026-10-31T19:20:35.093486+00:00",
+  "read_only": true,
+  "known_synthetic_phone_only": true,
+  "latest_turn": {
+    "status": "complete",
+    "created_at": "2026-10-31T19:19:20.704949+00:00",
+    "base_context_revision": 5,
+    "base_response_revision": 15,
+    "source": "qwen_grounded",
+    "proposed_stairs": null
+  },
+  "current_context": {
+    "revision": 6,
+    "observed_at": "2026-10-31T19:19:43.234000Z",
+    "expires_at": "2026-10-31T19:24:43.234000Z",
+    "mobility_override": "needs_time",
+    "matches_next_revision_after_turn": true
+  },
+  "current_policy": {
+    "revision": 16,
+    "requested": 24,
+    "applied": 24,
+    "error_code": null,
+    "label": "대피"
+  },
+  "recent_policy_history": [
+    {
+      "revision": 14,
+      "evaluated_at": "2026-10-31T19:18:15.830357+00:00",
+      "label": "경고"
+    },
+    {
+      "revision": 15,
+      "evaluated_at": "2026-10-31T19:18:49.283876+00:00",
+      "label": "대피"
+    },
+    {
+      "revision": 16,
+      "evaluated_at": "2026-10-31T19:19:45.149263+00:00",
+      "label": "대피"
+    }
+  ],
+  "recent_turns": [
+    {
+      "status": "complete",
+      "created_at": "2026-10-31T19:18:31.506243+00:00",
+      "base_context_revision": 4,
+      "source": "qwen_grounded",
+      "proposed_fields": [
+        "overrides.stairs"
+      ],
+      "proposed_stairs": "difficult"
+    },
+    {
+      "status": "complete",
+      "created_at": "2026-10-31T19:19:20.704949+00:00",
+      "base_context_revision": 5,
+      "source": "qwen_grounded",
+      "proposed_fields": [
+        "state.observed_hazard"
+      ],
+      "proposed_stairs": null
+    }
+  ]
+}

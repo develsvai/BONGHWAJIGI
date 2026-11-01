@@ -1,0 +1,29 @@
+{
+  "id": "checkpoint-20261031-160128-task-completed-api-2a742e6b",
+  "created_at": "2026-10-31T16:01:28+00:00",
+  "reason": "Task completed: 앱 설치 계정·세션과 목업 프로필·사전준비 API 구현",
+  "summary": "앱 설치 계정·세션과 목업 프로필·사전준비 API 구현 -> DONE @ develop/97f7b6abbd02",
+  "job_id": "job-20261031-002626-api-18805e8a",
+  "task_id": "task-20261031-153420-api-1f993c9e",
+  "commit_sha": "97f7b6abbd0256862c8707010997dbf354e17b4c",
+  "branch_name": "develop",
+  "dirty": true,
+  "staged_files": [],
+  "modified_files": [
+    ".loom/events.jsonl",
+    ".loom/job-runs/job-run-20261031-035204-job-20261031-002626-api-18805e8a-5ed2228f/job-run.json",
+    ".loom/jobs/job-20261031-002626-job-c9f9ff0d/notes.md",
+    ".loom/memory/docs-index.json",
+    ".loom/task-definitions/task-def-20261031-153420-api-422b5de4/task-definition.json",
+    ".loom/tasks/task-20261031-111807-task-9a960503/decision.md",
+    ".loom/tasks/task-20261031-111807-task-9a960503/logs.txt",
+    ".loom/tasks/task-20261031-111807-task-9a960503/result.md",
+    ".loom/tasks/task-20261031-111807-task-9a960503/troubleshooting.md",
+    "docs/V2/delivery/korea-wildfire-improvement.md"
+  ],
+  "untracked_files": [
+    "training/reports/kma-expanded-audit-20261101/kma-v4-distance-prior-20261031-final-v1/"
+  ],
+  "snapshot_captured_at": "2026-10-31T16:01:28+00:00",
+  "rollback_strategy": "revert-or-branch"
+}

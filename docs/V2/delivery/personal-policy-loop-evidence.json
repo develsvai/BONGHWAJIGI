@@ -1,0 +1,620 @@
+{
+  "mode": "simulation",
+  "operational_use": false,
+  "finished_at": "2026-10-31T11:41:31.451963+00:00",
+  "scenario_id": "policy-demo-c493f2bfdbaf4aa19bff4f57a3292cb9",
+  "notes": [
+    "모든 사용자·위치·사각 구역과 예측값은 합성 시연이다.",
+    "사건 자료·경보는 과거 기록이며 현재 경보나 실제 산불 경계가 아니다.",
+    "예측값은 학습 모델의 실제 출력이 아닌 입력 갱신용 합성값이다."
+  ],
+  "steps": [
+    {
+      "step": "처음 통합·세 사용자 개인화",
+      "users": [
+        {
+          "user_id": "independent",
+          "revision": 3,
+          "state": "simulation_preview",
+          "actions": [
+            "check-official-information"
+          ],
+          "level": "unknown",
+          "prediction": "unavailable",
+          "context": "complete"
+        },
+        {
+          "user_id": "assistance",
+          "revision": 3,
+          "state": "simulation_preview",
+          "actions": [
+            "check-official-information",
+            "check-support-contact"
+          ],
+          "level": "unknown",
+          "prediction": "unavailable",
+          "context": "complete"
+        },
+        {
+          "user_id": "with-child",
+          "revision": 3,
+          "state": "simulation_preview",
+          "actions": [
+            "check-official-information",
+            "check-accompanying-person"
+          ],
+          "level": "unknown",
+          "prediction": "unavailable",
+          "context": "complete"
+        }
+      ]
+    },
+    {
+      "step": "모의 예측 입력 갱신",
+      "users": [
+        {
+          "user_id": "independent",
+          "revision": 4,
+          "state": "simulation_preview",
+          "actions": [
+            "check-official-information"
+          ],
+          "level": "unknown",
+          "prediction": "simulation",
+          "context": "complete"
+        },
+        {
+          "user_id": "assistance",
+          "revision": 4,
+          "state": "simulation_preview",
+          "actions": [
+            "check-official-information",
+            "check-support-contact"
+          ],
+          "level": "unknown",
+          "prediction": "simulation",
+          "context": "complete"
+        },
+        {
+          "user_id": "with-child",
+          "revision": 4,
+          "state": "simulation_preview",
+          "actions": [
+            "check-official-information",
+            "check-accompanying-person"
+          ],
+          "level": "unknown",
+          "prediction": "simulation",
+          "context": "complete"
+        }
+      ]
+    },
+    {
+      "step": "한 사용자 이동 지원 프로필 변경",
+      "users": [
+        {
+          "user_id": "independent",
+          "revision": 5,
+          "state": "simulation_preview",
+          "actions": [
+            "check-official-information",
+            "check-support-contact"
+          ],
+          "level": "unknown",
+          "prediction": "simulation",
+          "context": "complete"
+        },
+        {
+          "user_id": "assistance",
+          "revision": 4,
+          "state": "simulation_preview",
+          "actions": [
+            "check-official-information",
+            "check-support-contact"
+          ],
+          "level": "unknown",
+          "prediction": "simulation",
+          "context": "complete"
+        },
+        {
+          "user_id": "with-child",
+          "revision": 4,
+          "state": "simulation_preview",
+          "actions": [
+            "check-official-information",
+            "check-accompanying-person"
+          ],
+          "level": "unknown",
+          "prediction": "simulation",
+          "context": "complete"
+        }
+      ]
+    },
+    {
+      "step": "한 사용자 구역 밖 이동",
+      "users": [
+        {
+          "user_id": "independent",
+          "revision": 5,
+          "state": "simulation_preview",
+          "actions": [
+            "check-official-information",
+            "check-support-contact"
+          ],
+          "level": "unknown",
+          "prediction": "simulation",
+          "context": "complete"
+        },
+        {
+          "user_id": "assistance",
+          "revision": 5,
+          "state": "outside_scope",
+          "actions": [],
+          "level": "unknown",
+          "prediction": "unavailable",
+          "context": "complete"
+        },
+        {
+          "user_id": "with-child",
+          "revision": 4,
+          "state": "simulation_preview",
+          "actions": [
+            "check-official-information",
+            "check-accompanying-person"
+          ],
+          "level": "unknown",
+          "prediction": "simulation",
+          "context": "complete"
+        }
+      ]
+    },
+    {
+      "step": "두 번째 관측→검색→Qwen→정책 자동 갱신",
+      "users": [
+        {
+          "user_id": "independent",
+          "revision": 8,
+          "state": "simulation_preview",
+          "actions": [
+            "check-official-information",
+            "check-support-contact"
+          ],
+          "level": "unknown",
+          "prediction": "simulation",
+          "context": "complete"
+        },
+        {
+          "user_id": "assistance",
+          "revision": 8,
+          "state": "outside_scope",
+          "actions": [],
+          "level": "unknown",
+          "prediction": "unavailable",
+          "context": "complete"
+        },
+        {
+          "user_id": "with-child",
+          "revision": 7,
+          "state": "simulation_preview",
+          "actions": [
+            "check-official-information",
+            "check-accompanying-person"
+          ],
+          "level": "unknown",
+          "prediction": "simulation",
+          "context": "complete"
+        }
+      ]
+    },
+    {
+      "step": "정책 규칙 버전 변경",
+      "users": [
+        {
+          "user_id": "independent",
+          "revision": 9,
+          "state": "simulation_preview",
+          "actions": [
+            "check-official-information",
+            "check-support-contact"
+          ],
+          "level": "unknown",
+          "prediction": "simulation",
+          "context": "complete"
+        },
+        {
+          "user_id": "assistance",
+          "revision": 9,
+          "state": "outside_scope",
+          "actions": [],
+          "level": "unknown",
+          "prediction": "unavailable",
+          "context": "complete"
+        },
+        {
+          "user_id": "with-child",
+          "revision": 8,
+          "state": "simulation_preview",
+          "actions": [
+            "check-official-information",
+            "check-accompanying-person"
+          ],
+          "level": "unknown",
+          "prediction": "simulation",
+          "context": "complete"
+        }
+      ]
+    },
+    {
+      "step": "예측 불가 갱신·경보 기록 보존",
+      "users": [
+        {
+          "user_id": "independent",
+          "revision": 10,
+          "state": "simulation_preview",
+          "actions": [
+            "check-official-information",
+            "check-support-contact"
+          ],
+          "level": "unknown",
+          "prediction": "unavailable",
+          "context": "complete"
+        },
+        {
+          "user_id": "assistance",
+          "revision": 10,
+          "state": "outside_scope",
+          "actions": [],
+          "level": "unknown",
+          "prediction": "unavailable",
+          "context": "complete"
+        },
+        {
+          "user_id": "with-child",
+          "revision": 9,
+          "state": "simulation_preview",
+          "actions": [
+            "check-official-information",
+            "check-accompanying-person"
+          ],
+          "level": "unknown",
+          "prediction": "unavailable",
+          "context": "complete"
+        }
+      ]
+    },
+    {
+      "step": "재생 시각 전진·위치 만료",
+      "users": [
+        {
+          "user_id": "independent",
+          "revision": 11,
+          "state": "needs_refresh",
+          "actions": [],
+          "level": "unknown",
+          "prediction": "unavailable",
+          "context": "complete"
+        },
+        {
+          "user_id": "assistance",
+          "revision": 11,
+          "state": "needs_refresh",
+          "actions": [],
+          "level": "unknown",
+          "prediction": "unavailable",
+          "context": "complete"
+        },
+        {
+          "user_id": "with-child",
+          "revision": 10,
+          "state": "needs_refresh",
+          "actions": [],
+          "level": "unknown",
+          "prediction": "unavailable",
+          "context": "complete"
+        }
+      ]
+    }
+  ],
+  "generations": [
+    {
+      "job_id": "3d88a497-750b-4b80-a72a-b592341f891b",
+      "status": "complete",
+      "generation": {
+        "model": "Qwen/Qwen3-4B-Instruct-2507",
+        "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+        "text": "{\"summary\":\"당시 산림청은 전국 산불경보를 심각 단계로 확대하고, 의성산불이 안동·청송·영양·영덕으로 확산되며 주민 대피 안내가 보도됐다. 전 지역에 산불 확산이 발생한 것으로 확인됐다.\",\"facts\":[{\"evidence_id\":\"observation-source\",\"quote\":\"[공식 게시물 요약] 산림청의 전국 산불 위기경보 심각 확대 기록과 경북 산불 확산 상황이다. 의성 산불이 안동·청송·영양·영덕으로 번졌으며 주민 대피와 전기·통신·도로 장애가 보고됐다. [공식 게시물 원문 발췌] 정부는 25일 오후 4시부로 산불경보 '심각' 단계를 전국으로 확대하고 국가소방동원령을 추가 발동했다.\"},{\"evidence_id\":\"web-a5462476e9cbe05117537a8e904682a43c9efdaf\",\"quote\":\"[속보] 의성산불 확산에 영양·영덕군도 주민 대피 재난문자 - 중앙일보\"},{\"evidence_id\":\"web-bfdc6172bf3384a722f3fe8417ac6da84ae2fe07\",\"quote\":\"영덕군 \\\"전 지역에 산불 확산…산에서 떨어진 곳으로 대피해야\\\" - 연합뉴스TV\"}]}",
+        "input_tokens": 1068,
+        "output_tokens": 378,
+        "elapsed_ms": 15135.8
+      }
+    },
+    {
+      "job_id": "29fd936c-e938-420e-939f-d84171cd17cd",
+      "status": "complete",
+      "generation": {
+        "model": "Qwen/Qwen3-4B-Instruct-2507",
+        "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+        "text": "{\"summary\":\"당시 산림청은 전국 산불경보를 심각 단계로 확대하고, 의성산불이 안동·청송·영양·영덕으로 확산되며 주민 대피 안내가 보도됐다. 전 지역에 산불 확산이 발생한 것으로 확인됐다.\",\"facts\":[{\"evidence_id\":\"observation-source\",\"quote\":\"[공식 게시물 요약] 산림청의 전국 산불 위기경보 심각 확대 기록과 경북 산불 확산 상황이다. 의성 산불이 안동·청송·영양·영덕으로 번졌으며 주민 대피와 전기·통신·도로 장애가 보고됐다. [공식 게시물 원문 발췌] 정부는 25일 오후 4시부로 산불경보 '심각' 단계를 전국으로 확대하고 국가소방동원령을 추가 발동했다.\"},{\"evidence_id\":\"web-a5462476e9cbe05117537a8e904682a43c9efdaf\",\"quote\":\"[속보] 의성산불 확산에 영양·영덕군도 주민 대피 재난문자 - 중앙일보\"},{\"evidence_id\":\"web-bfdc6172bf3384a722f3fe8417ac6da84ae2fe07\",\"quote\":\"영덕군 \\\"전 지역에 산불 확산…산에서 떨어진 곳으로 대피해야\\\" - 연합뉴스TV\"}]}",
+        "input_tokens": 1068,
+        "output_tokens": 378,
+        "elapsed_ms": 15137.29
+      }
+    }
+  ],
+  "representative_plan": {
+    "scenario_id": "policy-demo-c493f2bfdbaf4aa19bff4f57a3292cb9",
+    "revision": 3,
+    "evaluated_at": "2025-03-26T15:00:00+00:00",
+    "pending_update": false,
+    "error_code": null,
+    "content": {
+      "mode": "simulation",
+      "operational_use": false,
+      "disaster_type": "wildfire",
+      "user_id": "assistance",
+      "incident_id": "fire",
+      "incident": {
+        "title": "산불경보 '심각' 단계 전국 확대…국가적으로 엄중한 상황",
+        "origin": "historical_replay",
+        "observed_at": "2025-03-27T00:00:00+09:00",
+        "expires_at": "2025-03-27T01:00:00+09:00",
+        "area": {
+          "west": 129.0,
+          "south": 36.0,
+          "east": 129.8,
+          "north": 37.0
+        },
+        "sources": [
+          {
+            "title": "산불경보 '심각' 단계 전국 확대…국가적으로 엄중한 상황",
+            "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148940993",
+            "published_at": "2025-03-26T23:59:59+09:00",
+            "collected_at": "2026-10-31T11:40:28.578296Z",
+            "verified": true,
+            "publisher": "대한민국 정책브리핑",
+            "publisher_url": "https://www.korea.kr/"
+          }
+        ]
+      },
+      "state": "simulation_preview",
+      "relevance": {
+        "status": "inside",
+        "reason_code": "LOCATION_INSIDE_AREA"
+      },
+      "personal_response": {
+        "level": "unknown",
+        "label": "대응 단계 결정 대기",
+        "policy_version": 1,
+        "reason_codes": [
+          "LOCATION_INSIDE_AREA",
+          "PREDICTION_UNAVAILABLE_FOR_USER",
+          "RESPONSE_LEVEL_CONFIGURATION_PENDING"
+        ]
+      },
+      "actions": [
+        {
+          "action_id": "check-official-information",
+          "text": "[시연] 공식 발령 원문과 기본 산불 행동요령을 확인합니다.",
+          "priority": 1,
+          "reason_code": "related",
+          "guidance_id": "official-information",
+          "guidance_revision": 1,
+          "source": {
+            "title": "[사회재난] 산불 발생 시 행동 요령",
+            "url": "https://www.safetv.go.kr/base/video/view?idx=2759&menuLevel=&menuNo=&playlistManagementIdx=8",
+            "published_at": "2025-03-05T17:55:36+09:00",
+            "collected_at": "2026-10-31T11:40:28.578296Z",
+            "verified": true,
+            "publisher": "행정안전부 안전한TV",
+            "publisher_url": "https://www.safetv.go.kr/"
+          },
+          "approved_policy": false
+        },
+        {
+          "action_id": "check-support-contact",
+          "text": "[시연] 이동 지원을 요청할 연락 수단과 동행 가능 여부를 확인합니다.",
+          "priority": 2,
+          "reason_code": "mobility_assistance",
+          "guidance_id": "support-contact",
+          "guidance_revision": 1,
+          "source": {
+            "title": "[사회재난] 산불 발생 시 행동 요령",
+            "url": "https://www.safetv.go.kr/base/video/view?idx=2759&menuLevel=&menuNo=&playlistManagementIdx=8",
+            "published_at": "2025-03-05T17:55:36+09:00",
+            "collected_at": "2026-10-31T11:40:28.578296Z",
+            "verified": true,
+            "publisher": "행정안전부 안전한TV",
+            "publisher_url": "https://www.safetv.go.kr/"
+          },
+          "approved_policy": false
+        }
+      ],
+      "official_alerts": [
+        {
+          "alert_id": "historical-notice",
+          "mode": "simulation",
+          "revision": 1,
+          "state": "issued",
+          "authority": "산림청",
+          "severity": "심각",
+          "issued_at": "2025-03-25T16:00:00+09:00",
+          "expires_at": "2025-03-27T01:00:00+09:00",
+          "area": null,
+          "raw_text": "정부는 25일 오후 4시부로 산불경보 '심각' 단계를 전국으로 확대하고 국가소방동원령을 추가 발동했다.",
+          "source": {
+            "title": "산불경보 '심각' 단계 전국 확대…국가적으로 엄중한 상황",
+            "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148940993",
+            "published_at": "2025-03-26T23:59:59+09:00",
+            "collected_at": "2026-10-31T11:40:28.578296Z",
+            "verified": true,
+            "publisher": "대한민국 정책브리핑",
+            "publisher_url": "https://www.korea.kr/"
+          },
+          "validity_confirmed": false,
+          "record_status": "unconfirmed_or_expired",
+          "user_relevance": "unknown",
+          "requires_qwen": false
+        }
+      ],
+      "prediction": {
+        "status": "unavailable",
+        "probability": null,
+        "target": null,
+        "model_id": null,
+        "model_revision": null,
+        "operational_use": false,
+        "used_for_response_level": false
+      },
+      "context": {
+        "status": "complete",
+        "summary": "당시 산림청은 전국 산불경보를 심각 단계로 확대하고, 의성산불이 안동·청송·영양·영덕으로 확산되며 주민 대피 안내가 보도됐다. 전 지역에 산불 확산이 발생한 것으로 확인됐다.",
+        "facts": [
+          {
+            "evidence_id": "observation-source",
+            "quote": "[공식 게시물 요약] 산림청의 전국 산불 위기경보 심각 확대 기록과 경북 산불 확산 상황이다. 의성 산불이 안동·청송·영양·영덕으로 번졌으며 주민 대피와 전기·통신·도로 장애가 보고됐다. [공식 게시물 원문 발췌] 정부는 25일 오후 4시부로 산불경보 '심각' 단계를 전국으로 확대하고 국가소방동원령을 추가 발동했다."
+          },
+          {
+            "evidence_id": "web-a5462476e9cbe05117537a8e904682a43c9efdaf",
+            "quote": "[속보] 의성산불 확산에 영양·영덕군도 주민 대피 재난문자 - 중앙일보"
+          },
+          {
+            "evidence_id": "web-bfdc6172bf3384a722f3fe8417ac6da84ae2fe07",
+            "quote": "영덕군 \"전 지역에 산불 확산…산에서 떨어진 곳으로 대피해야\" - 연합뉴스TV"
+          }
+        ],
+        "sources": [
+          {
+            "evidence_id": "observation-source",
+            "text": "[공식 게시물 요약] 산림청의 전국 산불 위기경보 심각 확대 기록과 경북 산불 확산 상황이다. 의성 산불이 안동·청송·영양·영덕으로 번졌으며 주민 대피와 전기·통신·도로 장애가 보고됐다. [공식 게시물 원문 발췌] 정부는 25일 오후 4시부로 산불경보 '심각' 단계를 전국으로 확대하고 국가소방동원령을 추가 발동했다.",
+            "source": {
+              "title": "산불경보 '심각' 단계 전국 확대…국가적으로 엄중한 상황",
+              "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148940993",
+              "published_at": "2025-03-26T23:59:59+09:00",
+              "collected_at": "2026-10-31T11:40:28.578296Z",
+              "verified": true,
+              "publisher": "대한민국 정책브리핑",
+              "publisher_url": "https://www.korea.kr/"
+            },
+            "origin": "historical_replay",
+            "source_kind": "observation",
+            "selection_method": "pinned_official_source",
+            "approved_policy": false
+          },
+          {
+            "evidence_id": "web-a5462476e9cbe05117537a8e904682a43c9efdaf",
+            "text": "[속보] 의성산불 확산에 영양·영덕군도 주민 대피 재난문자 - 중앙일보\n[속보] 의성산불 확산에 영양·영덕군도 주민 대피 재난문자 중앙일보",
+            "source": {
+              "title": "[속보] 의성산불 확산에 영양·영덕군도 주민 대피 재난문자 - 중앙일보",
+              "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBFa2p1clJ1b3RsOFNWRF9QSEVoY003OEppNjJmMXJOSmh1alhJWFJCemt5THFVdnpHeG4xa1VYN1FSaGN2OWhlNTNjaHMxYVh1d1YxRWh3?oc=5",
+              "published_at": "2025-03-25T07:00:00Z",
+              "collected_at": "2026-10-31T11:40:29.511504Z",
+              "verified": false,
+              "publisher": "중앙일보",
+              "publisher_url": "https://www.joongang.co.kr/"
+            },
+            "origin": "collected_sample",
+            "source_kind": "news_search",
+            "selection_method": "embedding_retrieval",
+            "approved_policy": false
+          },
+          {
+            "evidence_id": "web-bfdc6172bf3384a722f3fe8417ac6da84ae2fe07",
+            "text": "영덕군 \"전 지역에 산불 확산…산에서 떨어진 곳으로 대피해야\" - 연합뉴스TV\n영덕군 \"전 지역에 산불 확산…산에서 떨어진 곳으로 대피해야\" 연합뉴스TV",
+            "source": {
+              "title": "영덕군 \"전 지역에 산불 확산…산에서 떨어진 곳으로 대피해야\" - 연합뉴스TV",
+              "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5QeWY1WDM4OHVBaVkxM3ljNUVOdU5JcWNhQXVSTlFWV05Oby1sdnFtSHRCd1hrcEg2cUszYkYzX0VGdVhuV2lDMW9BbDdCOUFmNzduV0R3ckJ5MnFxaUkzNDk3UFFuY2M?oc=5",
+              "published_at": "2025-03-26T07:00:00Z",
+              "collected_at": "2026-10-31T11:40:29.511504Z",
+              "verified": false,
+              "publisher": "연합뉴스TV",
+              "publisher_url": "https://www.yonhapnewstv.co.kr/"
+            },
+            "origin": "collected_sample",
+            "source_kind": "news_search",
+            "selection_method": "embedding_retrieval",
+            "approved_policy": false
+          },
+          {
+            "evidence_id": "web-10ad3118163431c1e2f1d6a369e0b42d322ed198",
+            "text": "영덕군 \"전 지역에 산불 확산…산에서 떨어진 곳으로 대피해야\" - 연합뉴스\n영덕군 \"전 지역에 산불 확산…산에서 떨어진 곳으로 대피해야\" 연합뉴스",
+            "source": {
+              "title": "영덕군 \"전 지역에 산불 확산…산에서 떨어진 곳으로 대피해야\" - 연합뉴스",
+              "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5HWm9MU0FEQ180WFZvcUMzX3ZpSHoyTy1tWDZtQ2JyVlpqSFgweHlFb0lPajA1Q3hmb21BQUJ6aFpjMVVETWw0SHAxX0dYWGMtNzBqSVNndll1WDjSAWBBVV95cUxOTFp4M3RxSGZidFczX092cHo2X3ltRW8xYW1PZ3dQbVE3NDJCSnU2dlA4NTQtTlQ0dmNxWkFxUldVQnV6azUxY3VBZFFSMFQ0V3hSc0k3R3NiTG9tVklFYlE?oc=5",
+              "published_at": "2025-03-25T07:00:00Z",
+              "collected_at": "2026-10-31T11:40:29.511504Z",
+              "verified": false,
+              "publisher": "연합뉴스",
+              "publisher_url": "https://www.yna.co.kr/"
+            },
+            "origin": "collected_sample",
+            "source_kind": "news_search",
+            "selection_method": "embedding_retrieval",
+            "approved_policy": false
+          },
+          {
+            "evidence_id": "web-299eb21d16363f6c2454c1e6c6f730f9406fbd58",
+            "text": "“재난문자가 알려준 대피장소에 산불 들이닥쳐”…지자체 주먹구구식 대응 논란 - 경향신문\n“재난문자가 알려준 대피장소에 산불 들이닥쳐”…지자체 주먹구구식 대응 논란 경향신문",
+            "source": {
+              "title": "“재난문자가 알려준 대피장소에 산불 들이닥쳐”…지자체 주먹구구식 대응 논란 - 경향신문",
+              "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5YUWdwYmV5ZGRIRzNQbFlfcXpqRGdkdVBSUDgyaHFtbmc5Vk5zanZUX0FoZmFocTBXVXl6Mk51NlQtcDR0RWxsNGpRVWFXQkdnSVR1VTdTUTZIUdIBX0FVX3lxTE1lNkxFanpqM3pmdnFfZk8wcG11V1YzMUdRWWl4ejVHRnRLNlhOX1RDbzBhMXIwWUU4QVd0THRza0x0NnpJS1lOeXZsR2N0bzJ4TldxNFRCOG00MkxjWHNn?oc=5",
+              "published_at": "2025-03-26T07:00:00Z",
+              "collected_at": "2026-10-31T11:40:29.511504Z",
+              "verified": false,
+              "publisher": "경향신문",
+              "publisher_url": "https://www.khan.co.kr/"
+            },
+            "origin": "collected_sample",
+            "source_kind": "news_search",
+            "selection_method": "embedding_retrieval",
+            "approved_policy": false
+          },
+          {
+            "evidence_id": "web-50983ac126b541a0973fea54803a13e38b7b493f",
+            "text": "동해안 대게마을 삼킨 영덕 산불‥주민들 '망연자실' - MBC 뉴스\n동해안 대게마을 삼킨 영덕 산불‥주민들 '망연자실' MBC 뉴스",
+            "source": {
+              "title": "동해안 대게마을 삼킨 영덕 산불‥주민들 '망연자실' - MBC 뉴스",
+              "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9Id3BSZi1ST3I4SGFFZXNRSUpGREhHLWRfZnlUb2FwamtObEtKNWpEaENtMzBvZm5NNmtjMVFRRjh5c1ZUR3dhRjhpNUJmTHpyRkx2M2U3RDVPUGl1VEJScWN2dlBXaEx0ZmRYalhMR0VVZ0g2VzdZd9IBeEFVX3lxTE5OdnVtOEpiY3JqMEl1RGlueFNZUTVrcXA2WkxRWWVodVNNLXpYWDVtWjJHSDhVTElibDd2YWxORFpsdEVhQm9EaDlqZzhjdXd4c2tqalZ1QmhfRnpxcHNzWGtDTjlrVlFLcUgyWVB6MmlaTXlrTS0waQ?oc=5",
+              "published_at": "2025-03-26T07:00:00Z",
+              "collected_at": "2026-10-31T11:40:29.511504Z",
+              "verified": false,
+              "publisher": "MBC 뉴스",
+              "publisher_url": "https://imnews.imbc.com/"
+            },
+            "origin": "collected_sample",
+            "source_kind": "news_search",
+            "selection_method": "embedding_retrieval",
+            "approved_policy": false
+          }
+        ],
+        "summary_review_status": "not_reviewed",
+        "error_code": null,
+        "template_fallback": false
+      },
+      "input_versions": {
+        "profile:assistance": 1,
+        "location:assistance": 1,
+        "incident:fire": 1,
+        "rules:active": 1,
+        "alert:fire/historical-notice": 1,
+        "guidance:official-information": 1,
+        "guidance:support-contact": 1,
+        "guidance:accompanying-person": 1
+      },
+      "valid_until": "2025-03-27T00:10:00+09:00",
+      "notification": {
+        "status": "configuration_pending",
+        "dispatched": false
+      }
+    }
+  },
+  "periodic_without_new_input": {
+    "before_revision": 1,
+    "after_revision": 2,
+    "before_state": "simulation_preview",
+    "after_state": "needs_refresh",
+    "before_evaluated_at": "2026-10-31T11:41:22.695076+00:00",
+    "after_evaluated_at": "2026-10-31T11:41:31.060621+00:00"
+  },
+  "response_levels": "회의 결정 대기",
+  "notification_dispatched": false
+}

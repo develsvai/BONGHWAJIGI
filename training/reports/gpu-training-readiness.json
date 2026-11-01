@@ -1,0 +1,36 @@
+{
+  "checked_on": "2026-10-31",
+  "server": "inno-gpu-011",
+  "project": "/home1/ncloud/bonghwajigi",
+  "environment": "training/.venv",
+  "xgboost": "3.4.1",
+  "dataset": "data/processed/ndws-v2-bootstrap",
+  "source_3_sha256_match_local": true,
+  "parquet_sha256_match_local": {
+    "train": true,
+    "validation": false,
+    "test": true
+  },
+  "validation_column_sha256_match_local_except": [
+    "wind_direction_cos"
+  ],
+  "validation_target_column_sha256_match_local": true,
+  "validation_cos_rounded_6_decimal_sha256_match_local": true,
+  "validation_cos_rounded_6_decimal_sha256": "e5b46789fefd4a22c1fabf5815df3d5e0ddf0634274f0dcde451790ceb594efd",
+  "server_cpu_preflight": {
+    "train_rows": 131072,
+    "validation_rows": 131072,
+    "saved_trees": 12,
+    "cpu_reload_max_abs_difference": 0.0,
+    "test_evaluated": false,
+    "operational_use": false
+  },
+  "user_systemd_true_command_succeeded": true,
+  "qwen_service_state_after_preparation": "active",
+  "user_linger": true,
+  "existing_serving_lock_blocks_training": true,
+  "gpu_training_started": false,
+  "local_tests_passed": 15,
+  "local_ruff_passed": true,
+  "bash_syntax_passed": true
+}

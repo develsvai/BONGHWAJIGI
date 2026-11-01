@@ -1,0 +1,59 @@
+{
+  "events": {
+    "andong_2020": {
+      "files": 119,
+      "bytes": 13435538,
+      "missing": [
+        "2020-04-25T15:20:00+00:00"
+      ],
+      "source_manifest_sha256": "0fdd62c1233e72bf178a6cb51dbe70c615d56221e95dec2bbfd0d3422ed08c1e"
+    },
+    "uljin_2022": {
+      "files": 119,
+      "bytes": 195163309,
+      "missing": [
+        "2022-03-04T00:40:00+00:00"
+      ],
+      "source_manifest_sha256": "9997ad3b2f9fbbf8574e8e129dad97012efc7b416ab9fe05559431595543e3d8"
+    },
+    "hongseong_2023": {
+      "files": 120,
+      "bytes": 10693033,
+      "missing": [],
+      "source_manifest_sha256": "84234a7918bc0945a6d86ba58022ad43bc892c8509995dc489c25d783048cc4e"
+    },
+    "hapcheon_2022": {
+      "files": 119,
+      "bytes": 195163308,
+      "missing": [
+        "2022-03-01T00:40:00+00:00"
+      ],
+      "source_manifest_sha256": "b15a4d0bb365bb6b0342da91578a05b63c20af4bef924db65f1fa15e03294dc1"
+    },
+    "andong_2021": {
+      "files": 119,
+      "bytes": 11566361,
+      "missing": [
+        "2021-02-22T00:40:00+00:00"
+      ],
+      "source_manifest_sha256": "3f72693f1afe343338d90c7f271c1ef7df87679379027731407cef3482aa3b95"
+    },
+    "gangneung_2023": {
+      "files": 119,
+      "bytes": 11447492,
+      "missing": [
+        "2023-04-11T00:40:00+00:00"
+      ],
+      "source_manifest_sha256": "6a962a234b93cefe92296479734002925b8fbfbbb33e16c99b9e72f1e99f1540"
+    }
+  },
+  "archives": {
+    "/home1/ncloud/bonghwa-kma-rate-v2.tgz": "b39363a9f7338926721daeb33b9457a5e231cbf23e8ff33d0c1171d382f433bb",
+    "/home1/ncloud/bonghwa-kma-pipeline-v3.tgz": "fbdd2e52bb5fe85b0c506e975ae38a192bd0deb8384ffff2a8c43eb20a510bbf",
+    "/home1/ncloud/bonghwa-kma-context-v1.tgz": "42f0c4245430f8bb20d6f21df957aa4852a2dda3d91ddc1c21f5ac5a6da7b84a",
+    "/home1/ncloud/bonghwa-kma-train-v4.tgz": "6a93dd8920087ab414066d1ce18c4232b311f0e798581a96dbf6617cb11cf363",
+    "/home1/ncloud/bonghwa-kma-profile-v1.tgz": "7293aa14d6092897162134ed878d7234baad5d4a24b038f25bc5d870180a8426",
+    "/home1/ncloud/bonghwa-kma-adapter-v1.tgz": "9fd42653a0f4827a817c6bb70da8f7974519773f959204edf86c9bbd2e16cdb0",
+    "/home1/ncloud/bonghwa-kma-build-v1.tgz": "9770d3546dcabc0af07e5c40012a52df1c131f3aa37e8d88ffe5f0c96cdf678d"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "frozen_at_utc": "2026-10-31T13:47:27.387883+00:00",
+  "config_sha256": "8e98da102b799979d2a5097d75771979055b5fab86c46af7750c110aa454c06c",
+  "model_path": "/home1/ncloud/bonghwajigi/data/artifacts/xgboost/hourly-20261031T134134Z-547531/context_depth5.ubj",
+  "run_path": "/home1/ncloud/bonghwajigi/data/artifacts/xgboost/hourly-20261031T134134Z-547531",
+  "frozen_files": {
+    "/home1/ncloud/bonghwajigi/data/artifacts/xgboost/hourly-20261031T134134Z-547531/context_depth5.ubj": "ad0e5cb84d11bb44d2ddc50ebd4d073acfa68b77dca9037378397bf9fbe5f77a",
+    "/home1/ncloud/bonghwajigi/data/artifacts/xgboost/hourly-20261031T134134Z-547531/report.json": "fa6cbce770d452709add0164d967d3bf581f9b75279e93d82a1cabacf5727f70",
+    "/home1/ncloud/bonghwajigi/data/artifacts/xgboost/hourly-20261031T134134Z-547531/plan.json": "c26991c28b2b9d0a9e3f28204ac8c2505a5b1f57898c5e6e0bc6ffd2cf4efd90"
+  },
+  "purpose": "미사용 국외 사건 1회 평가. 국내 운영 승인과는 별개"
+}

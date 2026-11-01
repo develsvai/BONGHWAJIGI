@@ -1,0 +1,34 @@
+{
+  "id": "task-def-20261031-095141-qwen-8061412e",
+  "job_definition_id": "job-20261031-002017-v2-fe3bfad0",
+  "title": "시나리오 수신에서 분석 큐·임베딩 검색·Qwen 전달 직전까지 연결",
+  "description": "사용자의 직접 구현 요청이다. MVP는 실제 K8s 수집 없이 확보 자료의 시나리오 입력을 받는다. 이벤트와 outbox를 DB에 함께 저장하고 분석 전용 큐에서 임베딩 모델로 질의·문서를 벡터화해 추가 근거를 검색한다. 출처·시각·시나리오·모델 버전이 포함된 Qwen 전달 자료를 저장하고 조회할 수 있게 하며 생성 모델 호출 직전에서 멈춘다.",
+  "created_at": "2026-10-31T09:51:41+00:00",
+  "updated_at": "2026-10-31T10:25:44+00:00",
+  "order_index": 11,
+  "legacy_task_id": "task-20261031-095141-qwen-9e2979ea",
+  "depends_on": [
+    "task-def-20261031-085956-gpu-qwen-xgboost-184ad0ab"
+  ],
+  "expected_output": "입력·자료 계약과 DB 마이그레이션, 멱등 수신·outbox·분석 워커, 임베딩 클라이언트·추가 자료 검색, Qwen 전달 자료 조회, 재생 예제 및 실제 연결 검증 문서",
+  "done_condition": "시나리오 이벤트가 실제 DB·분석 큐를 거쳐 임베딩 검색 결과와 출처가 포함된 전달 자료로 저장된다. 중복·오류·재시도·자료 없음과 시나리오 격리를 검증하고 Qwen 생성 호출이 없음을 확인한다. 코드·검증·Loom 기록을 커밋한다.",
+  "in_scope": "시나리오 수신과 재생, 자료 적재·벡터화, PostgreSQL/pgvector·Redis/Celery 연결, 내구성 있는 outbox와 멱등 처리, 검색·전달 자료 생성, 테스트·로컬 실행 및 기존 GPU 임베딩 연결 검증",
+  "out_of_scope": "실제 K8s 수집, Qwen 생성·사건 통합, XGBoost 추론, 개인 정책·대응 레벨·알림, 앱 저장소, 공개 포트 및 운영 네트워크 정책 변경",
+  "validation_hint": "실제 PostgreSQL/Redis 워커와 기존 GPU 임베딩을 연결한 시나리오 재생, outbox 미전달 복구와 중복 수신/전달, 동일 ID 다른 본문 거부, 시나리오·유효기간·출처 필터, 임베딩 장애/차원·버전 오류, 생성 모델 미호출, 기존 검사 및 Loom strict",
+  "required_docs": [
+    "docs/V2/delivery/implementation-stack.md",
+    "docs/V2/delivery/project-scaffold.md",
+    "docs/V2/delivery/gpu-model-readiness.md"
+  ],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/V2/delivery/analysis-retrieval-flow.md"
+  ],
+  "document_output_exceptions": [],
+  "default_agent": "foreground",
+  "context_policy_id": "",
+  "executor_policy_id": "",
+  "review_policy": "",
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

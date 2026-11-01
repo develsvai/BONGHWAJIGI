@@ -1,0 +1,2 @@
+{"id": "event-2be912f2525b", "type": "foreground_session_started", "message": "Foreground task session started.", "created_at": "2026-10-31T18:56:40+00:00", "agent": "foreground", "task_id": "task-20261031-185631-apk-a4dea90a"}
+{"id": "event-e673f70447d1", "type": "foreground_session_done", "message": "앱 0.3.1 최종 f54cae1 pin, 단말 음성·상태·경로 QA와 익명화 서버 증거, 라이선스 증분 고지, 실제 GitHub 재귀 clone의 소스/API/lock 일치 및 정상 push 완료. 실행 소스 c0b87ea/APK c3082636 확인; 다른 학습 변경 보존.", "created_at": "2026-10-31T19:25:52+00:00", "agent": "foreground", "task_id": "task-20261031-185631-apk-a4dea90a"}

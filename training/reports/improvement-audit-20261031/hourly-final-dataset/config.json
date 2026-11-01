@@ -1,0 +1,26 @@
+{
+  "profile": "us_goes_clear_land_approach_1_3_6h_research_v1",
+  "frozen_before_model_fit": true,
+  "korea_2025_test_labels_unseen": true,
+  "horizons_hours": [1, 3, 6],
+  "input_interval_minutes": 15,
+  "source_cadence_minutes": 5,
+  "history_minutes": 60,
+  "candidate_distance_km": 30,
+  "positive_mask_classes": [10, 11, 30, 31],
+  "negative_mask_classes": [100],
+  "target": "현재 관측 가능한 비화재 육지 격자에서, 향후 1·3·6시간 안에 GOES 고신뢰 화재가 한 번 이상 관측되는지. 물리적 피해/사람의 피해/정확한 화선 도달 시각이 아님",
+  "negative_definition": "미래 구간의 5분 관측이 빠짐없이 있고 모든 시점에서 DQF=1, Mask=100인 경우만 0. 구름/누락/저신뢰가 있으면 검열(-1). 미래 구간 중 DQF=0의 고신뢰 화재가 있으면 1",
+  "input_availability": "입력은 현재 발행 proxy=max(date_created, S3 LastModified) 이전에 공개된 원본만. 실제 수신 시각과 같은 증거는 아니므로 국내 실시간 연결 검증은 별도",
+  "split": "동일 산불 사건의 모든 시점/격자/예측 기간은 같은 분할에만 배치. 지표는 사건 수와 함께 보고. 국내 2025년은 사용하지 않음",
+  "model_selection": "Mosquito validation의 1·3·6시간 AP 평균. Oak는 확률 보정만. Smith River는 모델/보정/연구 임계값 고정 후 1회 평가",
+  "operational_use": false,
+  "events": [
+    {"id": "dixie_2021", "split": "train", "bucket": "noaa-goes17", "start_utc": "2021-08-06T00:00:00Z", "hours": 24, "bbox": [-122, 39, -120, 41], "source": "https://www.fire.ca.gov/incidents/2021/7/13/dixie-fire"},
+    {"id": "bootleg_2021", "split": "train", "bucket": "noaa-goes17", "start_utc": "2021-07-11T00:00:00Z", "hours": 24, "bbox": [-122.3, 41.8, -120.3, 43.5], "source": "https://fire.ak.blm.gov/content/aicc/team_left/03.%20Alaska%20CIMT%20Incident%20Archive/Alaska%20IMT%20Incident%20Summaries/2021%20Summaries/2021%2007-23%20to%2008-06%20Bootleg.pdf"},
+    {"id": "caldor_2021", "split": "train", "bucket": "noaa-goes17", "start_utc": "2021-08-18T00:00:00Z", "hours": 24, "bbox": [-121, 38, -119, 39.5], "source": "https://www.fire.ca.gov/incidents/2021/8/14/caldor-fire"},
+    {"id": "mosquito_2022", "split": "validation", "bucket": "noaa-goes17", "start_utc": "2022-09-08T00:00:00Z", "hours": 24, "bbox": [-122, 38, -119, 40], "source": "https://www.fire.ca.gov/incidents/2022/9/6/mosquito-fire"},
+    {"id": "oak_2022", "split": "calibration", "bucket": "noaa-goes17", "start_utc": "2022-07-23T00:00:00Z", "hours": 24, "bbox": [-120.5, 37.1, -119.3, 38.1], "source": "https://www.fire.ca.gov/incidents/2022/7/22/oak-fire"},
+    {"id": "smith_river_2023", "split": "test", "bucket": "noaa-goes18", "start_utc": "2023-08-19T00:00:00Z", "hours": 24, "bbox": [-125, 41, -123, 43], "source": "https://www.fire.ca.gov/incidents/2023/8/15/smith-river-complex"}
+  ]
+}

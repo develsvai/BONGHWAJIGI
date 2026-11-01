@@ -1,0 +1,42 @@
+{
+  "rows": 11540,
+  "positives": 103,
+  "anchors": 21,
+  "censored_rows": 20002,
+  "horizons": {
+    "1": {
+      "rows": 6699,
+      "positives": 11
+    },
+    "3": {
+      "rows": 4027,
+      "positives": 43
+    },
+    "6": {
+      "rows": 814,
+      "positives": 49
+    }
+  },
+  "sha256": "6f3fad4a9569185464d109ad6120998646d9be7fe70f7d80e80631523ee55e46",
+  "event": {
+    "id": "andong_2020",
+    "split": "train",
+    "start_utc": "2020-04-25T00:00:00Z",
+    "hours": 12,
+    "bbox": [
+      128.4,
+      36.25,
+      129.1,
+      36.8
+    ],
+    "source": "https://www.korea.kr/briefing/policyBriefingView.do?newsId=156393191"
+  },
+  "native_grid_crs": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"Unknown based on WGS 84 ellipsoid\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",7030]]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Lambert Conic Conformal (2SP)\",ID[\"EPSG\",9802]],PARAMETER[\"Latitude of false origin\",38,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8821]],PARAMETER[\"Longitude of false origin\",126,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8822]],PARAMETER[\"Latitude of 1st standard parallel\",30,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8823]],PARAMETER[\"Latitude of 2nd standard parallel\",60,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8824]],PARAMETER[\"Easting at false origin\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8826]],PARAMETER[\"Northing at false origin\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8827]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+  "native_grid_shape": [
+    31,
+    31
+  ],
+  "source_frames": 119,
+  "source_manifest_sha256": "0fdd62c1233e72bf178a6cb51dbe70c615d56221e95dec2bbfd0d3422ed08c1e",
+  "input_availability_note": "\uacfc\uac70 \uc7ac\ucc98\ub9ac FF\ub97c \uc4f0\ub294 hindcast. \uad00\uce21 \uc2dc\uac01+15\ubd84\uc740 \uc2e4\ud5d8 \uac00\uc815\uc774\uba70 \ub2f9\uc2dc \uacf5\uac1c/\uc218\uc2e0 \uc2dc\uac01\uc774 \uc544\ub2d8. \uc6d0\ubcf8 \uc81c\uc791 \uc2dc\uac01\uc740 \ubcc4\ub3c4\ub85c \uae30\ub85d\ud558\uba70 \uc2e4\uc2dc\uac04 \uc131\ub2a5\uc744 \uc8fc\uc7a5\ud558\uc9c0 \uc54a\uc74c"
+}

@@ -1,0 +1,77 @@
+{
+  "before": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "a954d985d4c770f681137b302b0ebf20e17e9634",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/events.jsonl",
+      ".loom/job-runs/job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02/job-run.json",
+      ".loom/job-runs/job-run-20261031-035204-job-20261031-002626-api-18805e8a-5ed2228f/job-run.json",
+      ".loom/job-runs/job-run-20261031-100136-job-20261031-002626-job-c9f9ff0d-1370d387/job-run.json",
+      ".loom/jobs/job-20261031-002017-v2-fe3bfad0/job.json",
+      ".loom/jobs/job-20261031-002017-v2-fe3bfad0/notes.md",
+      ".loom/jobs/job-20261031-002626-api-18805e8a/job.json",
+      ".loom/jobs/job-20261031-002626-job-c9f9ff0d/notes.md",
+      ".loom/memory/docs-index.json",
+      ".loom/task-definitions/task-def-20261031-111807-task-def-2cdadd42/task-definition.json",
+      ".loom/tasks/task-20261031-111807-task-9a960503/agent-events.jsonl",
+      ".loom/tasks/task-20261031-111807-task-9a960503/artifacts.json",
+      ".loom/tasks/task-20261031-111807-task-9a960503/context.md",
+      ".loom/tasks/task-20261031-111807-task-9a960503/git-snapshot.json",
+      ".loom/tasks/task-20261031-111807-task-9a960503/logs.txt",
+      ".loom/tasks/task-20261031-111807-task-9a960503/prompt.md",
+      ".loom/tasks/task-20261031-111807-task-9a960503/task.json",
+      "docs/V2/delivery/korea-wildfire-improvement.md",
+      "src/bonghwajigi/api/user_auth.py",
+      "src/bonghwajigi/common/config.py",
+      "src/bonghwajigi/contracts/app.py",
+      "src/bonghwajigi/db/app_models.py",
+      "training/src/bonghwa_training/kma_profile.py",
+      "training/tools/run_kma_research.sh"
+    ],
+    "untracked_files": [
+      ".loom/task-definitions/task-def-20261031-152411-task-def-e2e26cad/",
+      ".loom/task-definitions/task-def-20261031-153420-api-422b5de4/",
+      ".loom/task-definitions/task-def-20261031-153648-task-def-1ca2885c/",
+      ".loom/task-runs/task-run-20261031-152415-task-def-20261031-152411-task-def-e2e26cad-06848513/",
+      ".loom/task-runs/task-run-20261031-153426-task-def-20261031-153420-api-422b5de4-1acab0e0/",
+      ".loom/task-runs/task-run-20261031-153652-task-def-20261031-153648-task-def-1ca2885c-1c3c3be7/",
+      ".loom/tasks/task-20261031-152411-task-f8241639/",
+      ".loom/tasks/task-20261031-153420-api-1f993c9e/",
+      ".loom/tasks/task-20261031-153648-task-46bd9b43/",
+      "migrations/versions/f735a2ec901b_mobile_refresh_sessions.py",
+      "src/bonghwajigi/api/app_sessions.py",
+      "training/configs/korea-gk2a-context-v4.json",
+      "training/reports/kma-expanded-audit-20261101/",
+      "training/src/bonghwa_training/expanded_generalization_experiment.py",
+      "training/src/bonghwa_training/expanded_oof_calibration.py",
+      "training/tests/test_compare_kma_generations.py",
+      "training/tests/test_expanded_generalization_experiment.py",
+      "training/tests/test_expanded_oof_calibration.py",
+      "training/tests/test_kma_profile.py",
+      "training/tools/compare_kma_generations.py",
+      "training/tools/run_kma_groupcv.sh"
+    ],
+    "captured_at": "2026-10-31T15:36:52+00:00"
+  },
+  "after": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "562b2bc79cd71688b272879c8510ed20fb1aa307",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/job-runs/job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02/job-run.json",
+      ".loom/task-definitions/task-def-20261031-153648-task-def-1ca2885c/task-definition.json",
+      ".loom/tasks/task-20261031-153648-task-46bd9b43/logs.txt",
+      ".loom/tasks/task-20261031-153648-task-46bd9b43/result.md",
+      ".loom/tasks/task-20261031-153648-task-46bd9b43/verification.json"
+    ],
+    "untracked_files": [
+      "training/src/bonghwa_training/distance_prior_experiment.py"
+    ],
+    "captured_at": "2026-10-31T15:41:26+00:00"
+  }
+}

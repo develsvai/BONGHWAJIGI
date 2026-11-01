@@ -1,0 +1,96 @@
+{
+  "source_report_sha256": "e9029d1f0fc8b964f1cb5d7b3af29edd992f01218c575503e0009af47e5d97dd",
+  "source_dataset_report_sha256": "a8626cd525e91668d6e229ead36dbafd88cf3f1ddcb26272c937a922acb23790",
+  "selected": "history_weighted",
+  "learning_gap": {
+    "spatial_depth3": {
+      "best_trees": 9,
+      "train_ap_at_saved_iteration": 0.360125,
+      "validation_ap_at_saved_iteration": 0.018202,
+      "train_ap_last_iteration": 0.472787,
+      "validation_ap_last_iteration": 0.015221
+    },
+    "history_depth3": {
+      "best_trees": 7,
+      "train_ap_at_saved_iteration": 0.37369,
+      "validation_ap_at_saved_iteration": 0.02612,
+      "train_ap_last_iteration": 0.521732,
+      "validation_ap_last_iteration": 0.023826
+    },
+    "history_depth5": {
+      "best_trees": 15,
+      "train_ap_at_saved_iteration": 0.52006,
+      "validation_ap_at_saved_iteration": 0.029189,
+      "train_ap_last_iteration": 0.649091,
+      "validation_ap_last_iteration": 0.021601
+    },
+    "history_weighted": {
+      "best_trees": 24,
+      "train_ap_at_saved_iteration": 0.596642,
+      "validation_ap_at_saved_iteration": 0.038626,
+      "train_ap_last_iteration": 0.699136,
+      "validation_ap_last_iteration": 0.03464
+    },
+    "context_depth5": {
+      "best_trees": 110,
+      "train_ap_at_saved_iteration": 0.850247,
+      "validation_ap_at_saved_iteration": 0.033382,
+      "train_ap_last_iteration": 0.900516,
+      "validation_ap_last_iteration": 0.033266
+    },
+    "history_without_recent_depth5": {
+      "best_trees": 38,
+      "train_ap_at_saved_iteration": 0.589092,
+      "validation_ap_at_saved_iteration": 0.019531,
+      "train_ap_last_iteration": 0.672151,
+      "validation_ap_last_iteration": 0.016962
+    },
+    "context_without_recent_depth5": {
+      "best_trees": 28,
+      "train_ap_at_saved_iteration": 0.652724,
+      "validation_ap_at_saved_iteration": 0.0361,
+      "train_ap_last_iteration": 0.769442,
+      "validation_ap_last_iteration": 0.031066
+    }
+  },
+  "train_rows": 135495,
+  "train_positives": 1001,
+  "train_positive_fraction": 0.007387726484372117,
+  "event_concentration": [
+    {
+      "event": "andong_2020",
+      "rows": 11540,
+      "rows_fraction": 0.08516919443521902,
+      "positives": 103,
+      "positive_share": 0.1028971028971029,
+      "rain_missing_fraction": 1.0
+    },
+    {
+      "event": "andong_2021",
+      "rows": 91892,
+      "rows_fraction": 0.678194767334588,
+      "positives": 217,
+      "positive_share": 0.21678321678321677,
+      "rain_missing_fraction": 1.0
+    },
+    {
+      "event": "hapcheon_2022",
+      "rows": 6657,
+      "rows_fraction": 0.04913096424222296,
+      "positives": 26,
+      "positive_share": 0.025974025974025976,
+      "rain_missing_fraction": 1.0
+    },
+    {
+      "event": "uljin_2022",
+      "rows": 25406,
+      "rows_fraction": 0.18750507398797003,
+      "positives": 655,
+      "positive_share": 0.6543456543456544,
+      "rain_missing_fraction": 1.0
+    }
+  ],
+  "selected_scale_pos_weight": 11.591360591390485,
+  "interpretation": "Train/validation gap indicates overfit and/or event distribution shift. Contributions cannot be isolated from these data. AP is not classification accuracy.",
+  "operational_use": false
+}

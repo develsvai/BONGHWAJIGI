@@ -1,0 +1,2 @@
+{"id": "event-56fc46e615b7", "type": "foreground_session_started", "message": "Foreground task session started.", "created_at": "2026-10-31T17:01:12+00:00", "agent": "foreground", "task_id": "task-20261031-165952-task-b00c739e"}
+{"id": "event-231bde91cbc9", "type": "foreground_session_done", "message": "원본 스타일 세로 이미지와 변경 내용·편집 프롬프트 작성, PNG 및 상대 링크·Loom 검증 완료. 구현 커밋 29b1e1e.", "created_at": "2026-10-31T17:15:20+00:00", "agent": "foreground", "task_id": "task-20261031-165952-task-b00c739e"}

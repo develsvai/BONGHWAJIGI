@@ -1,0 +1,30 @@
+{
+  "source_sha256": "ed94a62a14a6103597cbbd9ee8f0ad815963a66c2ee102ac5de310417f6c8e29",
+  "diagnostic": "synthetic input timing arithmetic; not a fire or accuracy result",
+  "assumed_delay_minutes": 15,
+  "current_observation": "12:00",
+  "issue": "12:15",
+  "current_distance_km": 2,
+  "rows": [
+    {
+      "nominal_minutes": 30,
+      "actual_elapsed_minutes": 20.0,
+      "distance_change_km": 2.0,
+      "stored_feature": 4.0,
+      "per_observed_hour": 6.0
+    },
+    {
+      "nominal_minutes": 60,
+      "actual_elapsed_minutes": 50.0,
+      "distance_change_km": 4.0,
+      "stored_feature": 4.0,
+      "per_observed_hour": 4.8
+    }
+  ],
+  "action": "Keep v4 input contract unchanged for matched comparison; separate future profile must carry actual intervals and frame availability.",
+  "limitations": [
+    "Distance changes are not physical fire spread speed.",
+    "Constant feature rescaling alone need not improve a tree model."
+  ],
+  "operational_use": false
+}

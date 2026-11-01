@@ -1,0 +1,22 @@
+[
+  {
+    "document_id": "official-wildfire-warning-20250326",
+    "requested_url": "https://www.korea.kr/news/policyNewsView.do?newsId=148940993",
+    "fetched_url": "https://www.korea.kr/news/policyNewsView.do?newsId=148940993",
+    "http_status": 200,
+    "html_sha256": "495521bf39f219d13b4228e3f38cb6006479408a6d9a6be76bfbdf859fa753b2",
+    "checked_at": "2026-10-31T10:40:28.600271+00:00",
+    "check": "known_official_publication_contains_expected_text",
+    "semantic_or_policy_approval": false
+  },
+  {
+    "document_id": "official-wildfire-guidance-20250305",
+    "requested_url": "https://www.safetv.go.kr/base/video/view?idx=2759&menuLevel=&menuNo=&playlistManagementIdx=8",
+    "fetched_url": "https://www.safetv.go.kr/base/video/view?idx=2759&menuLevel=&menuNo=&playlistManagementIdx=8",
+    "http_status": 200,
+    "html_sha256": "25aa3ee2c61923438456f1fe87762426be4988767ed75ef08f28b4da7afe7fcc",
+    "checked_at": "2026-10-31T10:40:28.848658+00:00",
+    "check": "known_official_publication_contains_expected_text",
+    "semantic_or_policy_approval": false
+  }
+]

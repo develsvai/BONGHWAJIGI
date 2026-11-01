@@ -1,0 +1,3 @@
+[2026-10-31T13:44:02+00:00] agent=foreground task=task-20261031-132925-api-181c0498 Foreground task session started.
+[검증] 앱 JWT·자기 자료 API·멱등성·상태 만료·cursor·기기/로그아웃 구현. 실제 DB 포함 81개 테스트·Alembic check·Ruff·실행 OpenAPI/기존 명세 검사 통과.
+[2026-10-31T14:01:33+00:00] agent=foreground task=task-20261031-132925-api-181c0498 사용자 JWT·소유권·프로필/위치/현재 상태·기기·공식 원문·개인 안내·cursor 갱신·영수증·로그아웃을 구현했다. 실제 DB 포함 81개 시험과 실행 OpenAPI·Alembic·정적 검사를 통과했다. 실제 예측·음성·미확인 경로는 비활성으로 제공하며 사설망 배포와 서버 시연으로 이어간다.

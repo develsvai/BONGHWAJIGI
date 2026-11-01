@@ -1,0 +1,42 @@
+{
+  "id": "task-run-20261031-102708-task-def-20261031-102643-xgboost-gpu-9e696fb4-d78a2501",
+  "job_run_id": "job-run-20261031-100136-job-20261031-002626-job-c9f9ff0d-1370d387",
+  "task_definition_id": "task-def-20261031-102643-xgboost-gpu-9e696fb4",
+  "status": "DONE",
+  "created_at": "2026-10-31T10:27:08+00:00",
+  "updated_at": "2026-10-31T10:44:05+00:00",
+  "legacy_task_id": "task-20261031-102643-xgboost-gpu-63a490e2",
+  "attempt": 1,
+  "assigned_agent": "foreground",
+  "worker_id": "",
+  "heartbeat_at": "",
+  "lease_expires_at": "",
+  "queued_at": "",
+  "started_at": "2026-10-31T10:27:08+00:00",
+  "completed_at": "2026-10-31T10:44:05+00:00",
+  "last_error": "",
+  "commit_refs": [
+    "407ae94a71bba048ddb6a804e976df9f8e662937",
+    "e9c35869e4c0a104e22ead907d6735a801c4236c"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-10-31T10:44:05+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-102643-xgboost-gpu-63a490e2/agent-events.jsonl",
+    ".loom/tasks/task-20261031-102643-xgboost-gpu-63a490e2/artifacts.json",
+    ".loom/tasks/task-20261031-102643-xgboost-gpu-63a490e2/context.md",
+    ".loom/tasks/task-20261031-102643-xgboost-gpu-63a490e2/decision.md",
+    ".loom/tasks/task-20261031-102643-xgboost-gpu-63a490e2/git-snapshot.json",
+    ".loom/tasks/task-20261031-102643-xgboost-gpu-63a490e2/logs.txt",
+    ".loom/tasks/task-20261031-102643-xgboost-gpu-63a490e2/previous-results.md",
+    ".loom/tasks/task-20261031-102643-xgboost-gpu-63a490e2/prompt.md",
+    ".loom/tasks/task-20261031-102643-xgboost-gpu-63a490e2/result.md",
+    ".loom/tasks/task-20261031-102643-xgboost-gpu-63a490e2/troubleshooting.md",
+    "docs/V2/delivery/xgboost-training-run.md"
+  ],
+  "checkpoint_ids": [
+    "checkpoint-20261031-104405-task-completed-xgboost-gpu-b1819e65"
+  ],
+  "review_required_reason": ""
+}
