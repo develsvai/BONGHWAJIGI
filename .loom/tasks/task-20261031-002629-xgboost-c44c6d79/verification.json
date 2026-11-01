@@ -1,0 +1,10 @@
+{
+  "기준": "2026-11-01 현행MVP상태정리",
+  "사유": "실제CUDA학습·기준선·저장/CPU재로딩·독립재추론이 완료된 후속실행을 대조했다. 모델운영채택과는 별도다.",
+  "확인_파일_SHA256": {
+    "docs/V2/delivery/training-run.md": "bbf83e139c156db999aa900e7edba9348f3c5e568fadd2a5df9104cd6571a43d",
+    "docs/V2/delivery/xgboost-training-verification.md": "37ca214cf34319c520dcb550ff1747c1ef510a975f0d16374218102c93629236",
+    "training/reports/korea-gfs-2022-20261101/verification.json": "bd85fbefc079114ac0c5163ec7634ce377c78b636a4e8214f4695805b0879d4c"
+  },
+  "새로운_기능실행": "없음"
+}

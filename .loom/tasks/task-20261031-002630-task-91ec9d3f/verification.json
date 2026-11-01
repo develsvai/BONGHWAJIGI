@@ -1,0 +1,10 @@
+{
+  "기준": "2026-11-01 현행MVP상태정리",
+  "사유": "긴급전용큐의 대상검사·공식원문·정정/해제·전달기록은 모델독립으로 구현·검증됐다. 실제제공자없을때 모의경계를 명시한다는 계약을 충족하며 실제FCM은 새대기다.",
+  "확인_파일_SHA256": {
+    "docs/V2/delivery/alert-delivery.md": "7c98f5ca5de1950b9c05f5ea7d5df14ab5cebfd437bed967e255cc1ce94a6572",
+    "src/bonghwajigi/events/urgent.py": "eca0cc2aa128cd70e2f9483273fb590b608673f673235fb14fa6907cd40b0533",
+    "docs/V2/delivery/filming-pipeline-verification.json": "f1a986d5be34d64d8d51826a5f49a0431a3714921c6a4c295f49c964b0bb8132"
+  },
+  "새로운_기능실행": "없음"
+}

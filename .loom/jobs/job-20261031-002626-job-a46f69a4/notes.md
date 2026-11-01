@@ -30,3 +30,7 @@
 
 2026-10-31 구현 기술 스택 결정: docs/V2/delivery/implementation-stack.md; Task task-20261031-082929-mvp-3188b68a. Python 3.12 + FastAPI/Pydantic 2 + SQLAlchemy 2.x/psycopg 3/Alembic + PostgreSQL 16/PostGIS/pgvector + Celery/Redis + Transformers/Sentence Transformers + XGBoost. 일반 서버 API/정책/CPU 추론, GPU 서버 모델/별도 학습, K8s 수집으로 배치한다. 기관 수집은 HTTPX와 공통 Pydantic 계약으로 구현하며 공간 처리는 PostGIS를 사용한다. 실제/재생/합성 provenance와 시각·원본 참조를 보존한다. 이번 실행은 스택 문서와 계약 연결만 수행하며 다른 구현 Task·Queue·서버 설치는 시작하지 않는다.
 - Tags: `기술스택`, `산불`, `MVP`
+## 2026-11-01T05:34:43+00:00
+
+2026-11-01 상태대조: 자료확보/누락판정과현행MVP공통계약은완료. 실제상시수집구계약은MVP수동재생과맞지않아제거했다. 남은대기는 task-20261031-002628-task-52ce54a6의 실제다출처사건식별·상충/정정이력과 task-20261031-002628-task-79e4938c의 실제발령구역·화선/풍향/지형관련성이다. 현재명시적사건ID/revision·사각구역·위치만료가 구현됐다는것과 고도화검증을 구분한다.
+- Tags: `현행설계`, `상태정리`, `2026-11-01`

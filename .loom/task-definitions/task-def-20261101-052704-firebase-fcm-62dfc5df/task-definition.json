@@ -1,0 +1,28 @@
+{
+  "id": "task-def-20261101-052704-firebase-fcm-62dfc5df",
+  "job_definition_id": "job-20261031-002626-job-97436430",
+  "title": "Firebase 준비 후 실제 단말 FCM 수신과 백그라운드 알림 검증",
+  "description": "현재 서버 전달 어댑터·simulation·전경 변경조회·로컬 알림은 구현돼 있다. Firebase 프로젝트·서비스 자격·시험기기 토큰이 준비되면 별도 승인된 실행으로 실제 FCM 전달과 단말 수신을 검증한다. 이번 전체 정리에서는 PENDING으로만 남긴다.",
+  "created_at": "2026-11-01T05:27:04+00:00",
+  "updated_at": "2026-11-01T05:28:05+00:00",
+  "order_index": 9,
+  "legacy_task_id": "task-20261101-052704-firebase-fcm-e1dd92a3",
+  "depends_on": [
+    "task-def-20261031-132925-3-969c24bd"
+  ],
+  "expected_output": "비공개 자격 주입 절차와 단말 수신 검증; 서버 발신·제공자 접수·수신·표시 단계별 기록",
+  "done_condition": "실제 시험기기의 전경·백그라운드에서 발령/정정/해제·revision·만료·중복·토큰해제 동작을 검증하고 서버 전달 기록과 단말 표시를 구분한다. 실제119발신을 하지 않는다.",
+  "in_scope": "기존FCM어댑터·기기등록 경로의 실제 프로젝트 연결, 권한·토큰·네트워크·재시도·수신 검증; 실제값은 비공개설정만 사용",
+  "out_of_scope": "준비되지 않은 Firebase계정생성·결제·임의단말발송; 서버음성·3D; 모의전송을 실제수신으로 완료처리; 지금실행",
+  "validation_hint": "실제 제공자·단말 근거, 인증·토큰소유권·만료·중복·정정/해제·백그라운드수신과 실패복구",
+  "required_docs": [],
+  "memory_refs": [],
+  "document_outputs": [],
+  "document_output_exceptions": [],
+  "default_agent": "unassigned",
+  "context_policy_id": "",
+  "executor_policy_id": "",
+  "review_policy": "",
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

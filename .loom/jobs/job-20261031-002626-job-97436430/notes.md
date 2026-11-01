@@ -44,3 +44,7 @@ GPU 상태 조회에서 NVIDIA L4 1대와 CUDA driver API 초기화 성공을 �
 
 2026-10-31 구현 기술 스택 결정: docs/V2/delivery/implementation-stack.md; Task task-20261031-082929-mvp-3188b68a. Python 3.12 + FastAPI/Pydantic 2 + SQLAlchemy 2.x/psycopg 3/Alembic + PostgreSQL 16/PostGIS/pgvector + Celery/Redis + Transformers/Sentence Transformers + XGBoost. 일반 서버 API/정책/CPU 추론, GPU 서버 모델/별도 학습, K8s 수집으로 배치한다. 사용자는 대응 레벨과 레벨별 알림 방식을 회의 중이며 정해지는 대로 제공한다고 밝혔다. D1은 PENDING이고 임계값·단계·알림 정책을 임의 확정하지 않는다. 모델 로딩 준비와 최종 정책 설명 검증을 구분한다. Qwen은 선택된 행동 설명, 정책 선택은 검토된 Python 규칙으로 한다. 이번 실행은 스택 문서와 계약 연결만 수행하며 다른 구현 Task·Queue·서버 설치는 시작하지 않는다.
 - Tags: `기술스택`, `산불`, `MVP`
+## 2026-11-01T05:34:43+00:00
+
+2026-11-01 상태대조: D1~D6의 현재3단계규칙·확인상태·Qwen/Embedding·긴급원문우선·revision갱신과기능경계는 후속구현/검증이 있어 완료한다. 미채택서버음성/실제경로 포괄작업은제거했다. 실제FCM은 Firebase/시험단말 준비후 task-20261101-052704-firebase-fcm-e1dd92a3에서대기한다. 현재모의전송/전경로컬알림을 원격수신완료로 표시하지 않는다.
+- Tags: `현행설계`, `상태정리`, `2026-11-01`

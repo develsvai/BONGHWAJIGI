@@ -1,0 +1,32 @@
+{
+  "id": "task-20261101-052704-task-529e034e",
+  "job_id": "job-20261031-002626-job-c9f9ff0d",
+  "title": "국내 실제 화선·당시 예보·연료와 독립 접근 정답 확보 후 모델 채택 재평가",
+  "description": "완료 처리하는 국내 개선 연구의 남은 운영목표를 분리한다. 기존57+45회 비교와 실제자료 확보는 종료했으나 국내개인대응용 확률의 타당성은 입증되지 않았다. 실제초기·시간별화선, 과거가용기상·연료 및 독립접근정답을 확보하고 사전고정한 평가로 채택/보류를 판정한다. 이번에는 대기계약만 만든다.",
+  "status": "PENDING",
+  "created_at": "2026-11-01T05:27:04+00:00",
+  "updated_at": "2026-11-01T05:28:05+00:00",
+  "order_index": 10,
+  "assigned_agent": "unassigned",
+  "depends_on": [
+    "task-20261031-111807-task-9a960503"
+  ],
+  "expected_output": "권리·시간·좌표·단위·미관측·정답적합성을 검증한 국내자료와 독립평가·보정 보고서; 모델 채택 또는 계속 보류 판단",
+  "done_condition": "사건과기간을 분리한 독립평가에서 거리·바람 기준 대비 누락·오경보·보정과 범위 밖 입력을 검증한다. 미달이면 unavailable/probability=null·operational_use=false를 유지한다. 2025holdout은 별도평가계획이 고정될 때까지 열지 않는다.",
+  "in_scope": "기존 연구보고서에 명시된 자료공백·센서한계·실제관측간격·음성/미상표본 진단; 확보가능자료와 권리검증; 사전계획에 따른 연구학습·독립평가",
+  "out_of_scope": "확산시나리오빈도를 검증된 개인피해확률로 표시; 검증세트반복튜닝; 승인없는 유료자료·외부연락·운영정책연결; 지금실행",
+  "validation_hint": "실제 화선 provenance·as-of·좌표·단위·사건누출차단·고정분할·기준선비교·독립재계산·저장재로딩·채택판정",
+  "required_docs": [],
+  "memory_refs": [],
+  "document_outputs": [],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [],
+  "branch_name": "",
+  "git_dirty": false,
+  "git_snapshot_captured_at": "",
+  "artifacts": [],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

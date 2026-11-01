@@ -1,0 +1,9 @@
+{
+  "기준": "2026-11-01 현행MVP상태정리",
+  "사유": "현재 범위·자료/합성 구분·세 사용자와 후속A/B 재생·unavailable 수용 경계를 현재 문서와 실제검증으로 확인했다.",
+  "확인_파일_SHA256": {
+    "docs/V2/delivery/mvp-scope.md": "312e888adb6e01e9be2c16b3ff5505fef0f8ef189e2cdae256a8e9c08ba553c7",
+    "docs/V2/delivery/filming-pipeline-verification.json": "f1a986d5be34d64d8d51826a5f49a0431a3714921c6a4c295f49c964b0bb8132"
+  },
+  "새로운_기능실행": "없음"
+}

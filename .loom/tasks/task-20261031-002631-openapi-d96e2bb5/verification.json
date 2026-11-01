@@ -1,0 +1,10 @@
+{
+  "기준": "2026-11-01 현행MVP상태정리",
+  "사유": "현재실행0.2계약·enum·인증·provenance·예측불가·서버음성제외를 고정한 후속OpenAPI가 있다.0.1문서는 역사적초안임을 보존한다.",
+  "확인_파일_SHA256": {
+    "docs/V2/delivery/app-api-contract.md": "48dfa731d67169f95f4c102ab0398a445c866799fff0ba40f49c5e558a42bdf7",
+    "docs/V2/delivery/mvp-app-api.md": "932b4effe58db3c18d7c2e3ac249122714c8d8b8f856ef201e66a7297bd00d6e",
+    "docs/V2/delivery/api/mvp-openapi.json": "bdf3d785f969c60ae8a0271284d07eeda7516537db604eb9e4b591186032a534"
+  },
+  "새로운_기능실행": "없음"
+}

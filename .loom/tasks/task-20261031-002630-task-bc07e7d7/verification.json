@@ -1,0 +1,10 @@
+{
+  "기준": "2026-11-01 현행MVP상태정리",
+  "사유": "입력/지침/상태변경과 만료·같은단계행동변경·cursor/longpoll·늦은Qwen결과억제가 구현돼 검증됐다. 실제백그라운드FCM은 별도대기다.",
+  "확인_파일_SHA256": {
+    "docs/V2/delivery/decision-orchestration.md": "48c78b79493c2f47e3cbace87c886e7f5568eb0fa5379e89323bf31720797347",
+    "tests/test_policy_loop.py": "76d70f7677b6f2dc0d6ffb9d48cd76ab3087fa7ff56034dd3733f164ecebcd99",
+    "tests/test_mobile_api.py": "190fab1295a8d9484148ca33cb200199d16714875e6b6d83057b41fc326cc210"
+  },
+  "새로운_기능실행": "없음"
+}

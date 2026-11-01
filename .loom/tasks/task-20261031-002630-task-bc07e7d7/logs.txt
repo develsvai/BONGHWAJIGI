@@ -1,0 +1,2 @@
+[2026-11-01T05:33:41+00:00] agent=foreground task=task-20261031-002630-task-bc07e7d7 Foreground task session started.
+검증 결과: 사용자지시에 따른 상태정리용 loom task run/validate 및 근거파일 SHA 확인. 입력/지침/상태변경과 만료·같은단계행동변경·cursor/longpoll·늦은Qwen결과억제가 구현돼 검증됐다. 실제백그라운드FCM은 별도대기다. 실제 실행은 링크된 후속 검증 기록이며 이번새실행이 아님.

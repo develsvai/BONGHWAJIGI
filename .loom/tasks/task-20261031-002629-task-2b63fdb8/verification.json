@@ -1,0 +1,10 @@
+{
+  "기준": "2026-11-01 현행MVP상태정리",
+  "사유": "독립평가·보정·기준선실패를 보존한 국내실제예측보류 판정으로 완료한다. 운영확률채택이 아니다.",
+  "확인_파일_SHA256": {
+    "docs/V2/delivery/model-evaluation.md": "fa31120a1656bb6b3e140909d28ed677ff637a5d1fea0a97d1e35b5d219d8492",
+    "training/reports/korea-gfs-2022-20261101/README.md": "91a13897cd6175fc7d423314673b459947ce79ce336d80cd70b7333dc833517c",
+    "training/reports/model-strengthening-20261101/verification.json": "94d0e6bb1f6e5f8d5ac1c79454a21737ee401f1335ebd3de4bb21bfdc83340b5"
+  },
+  "새로운_기능실행": "없음"
+}

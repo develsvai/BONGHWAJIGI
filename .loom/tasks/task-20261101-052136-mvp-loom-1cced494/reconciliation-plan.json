@@ -1,0 +1,915 @@
+{
+  "done_specs": [
+    {
+      "id": "task-20261031-002627-mvp-e821b0f7",
+      "reason": "현재 범위·자료/합성 구분·세 사용자와 후속A/B 재생·unavailable 수용 경계를 현재 문서와 실제검증으로 확인했다.",
+      "evidence": [
+        "docs/V2/delivery/mvp-scope.md",
+        "docs/V2/delivery/filming-pipeline-verification.json"
+      ]
+    },
+    {
+      "id": "task-20261031-002627-task-35e0acc7",
+      "reason": "카탈로그·공식6개자료·확보/누락·실제학습정답의 가능성과 지연미검증을 구분했다.",
+      "evidence": [
+        "docs/V2/delivery/source-catalog.md",
+        "docs/data-collection/README.md",
+        "docs/V2/delivery/korea-wildfire-improvement.md"
+      ]
+    },
+    {
+      "id": "task-20261031-002627-task-93368ddf",
+      "reason": "현재simulation수신·원문시각·provenance·revision·앱/정책 분리 계약을 코드·실행OpenAPI와 대조했다. live상시수집은 별도다.",
+      "evidence": [
+        "docs/V2/delivery/data-contract.md",
+        "src/bonghwajigi/contracts/analysis.py",
+        "docs/V2/delivery/api/mvp-openapi.json"
+      ]
+    },
+    {
+      "id": "task-20261031-002627-task-cc78619e",
+      "reason": "연구별 관측/접근 목표와 미관측·검열 및 개인영향미입증을 구분하고 실제예측보류 경계를 고정했다.",
+      "evidence": [
+        "docs/V2/delivery/prediction-target.md",
+        "training/README.md",
+        "training/reports/approach-pilot-20261101/gofer/plan.json"
+      ]
+    },
+    {
+      "id": "task-20261031-002628-task-71b2ed3b",
+      "reason": "실제자료와simulation·분할·provenance·미관측·확보부족을 별도보존한 실제구축/평가 보고서가 있다.",
+      "evidence": [
+        "docs/V2/delivery/training-dataset.md",
+        "docs/V2/delivery/xgboost-training-data.md",
+        "training/reports/korea-gfs-2022-20261101/verification.json"
+      ]
+    },
+    {
+      "id": "task-20261031-002629-xgboost-c44c6d79",
+      "reason": "실제CUDA학습·기준선·저장/CPU재로딩·독립재추론이 완료된 후속실행을 대조했다. 모델운영채택과는 별도다.",
+      "evidence": [
+        "docs/V2/delivery/training-run.md",
+        "docs/V2/delivery/xgboost-training-verification.md",
+        "training/reports/korea-gfs-2022-20261101/verification.json"
+      ]
+    },
+    {
+      "id": "task-20261031-002629-task-2b63fdb8",
+      "reason": "독립평가·보정·기준선실패를 보존한 국내실제예측보류 판정으로 완료한다. 운영확률채택이 아니다.",
+      "evidence": [
+        "docs/V2/delivery/model-evaluation.md",
+        "training/reports/korea-gfs-2022-20261101/README.md",
+        "training/reports/model-strengthening-20261101/verification.json"
+      ]
+    },
+    {
+      "id": "task-20261031-002627-task-a70543d3",
+      "reason": "사용자가 확정한1경고/2대피/3위급과 출처·승하향·해제·확인상태·규칙분리를 구현·검증했다.",
+      "evidence": [
+        "docs/V2/delivery/response-policy.md",
+        "src/bonghwajigi/policy/three_stage.py",
+        "tests/test_three_stage.py"
+      ]
+    },
+    {
+      "id": "task-20261031-002629-task-80e56e11",
+      "reason": "프로필/현재상태분리·확인후반영·버전/결과해시·재평가·만료가 구현돼 후속시험/촬영에서 검증됐다.",
+      "evidence": [
+        "docs/V2/delivery/policy-engine.md",
+        "tests/test_policy_loop.py",
+        "docs/V2/delivery/filming-pipeline-verification.json"
+      ]
+    },
+    {
+      "id": "task-20261031-002629-qwen-617b8d58",
+      "reason": "고정 두모델 로딩·실제생성/1024벡터·검색·근거대화·템플릿대체의 후속검증을 확인했다. 단계/행동의 임의생성은 현재역할이 아니다.",
+      "evidence": [
+        "docs/V2/delivery/language-models.md",
+        "docs/V2/delivery/gpu-model-evidence.json",
+        "docs/V2/delivery/filming-model-metadata.json"
+      ]
+    },
+    {
+      "id": "task-20261031-002630-task-91ec9d3f",
+      "reason": "긴급전용큐의 대상검사·공식원문·정정/해제·전달기록은 모델독립으로 구현·검증됐다. 실제제공자없을때 모의경계를 명시한다는 계약을 충족하며 실제FCM은 새대기다.",
+      "evidence": [
+        "docs/V2/delivery/alert-delivery.md",
+        "src/bonghwajigi/events/urgent.py",
+        "docs/V2/delivery/filming-pipeline-verification.json"
+      ]
+    },
+    {
+      "id": "task-20261031-002630-task-bc07e7d7",
+      "reason": "입력/지침/상태변경과 만료·같은단계행동변경·cursor/longpoll·늦은Qwen결과억제가 구현돼 검증됐다. 실제백그라운드FCM은 별도대기다.",
+      "evidence": [
+        "docs/V2/delivery/decision-orchestration.md",
+        "tests/test_policy_loop.py",
+        "tests/test_mobile_api.py"
+      ]
+    },
+    {
+      "id": "task-20261031-002630-3d-tts-8f1e43b5",
+      "reason": "3D·서버STT/TTS제외, 후속채택된 단말음성 및2D배경지도/합성경로·미검증실제경로 경계가 현재계약에 명시돼 있다.",
+      "evidence": [
+        "docs/V2/delivery/optional-features.md",
+        "docs/V2/delivery/mobile-dialogue-and-route.md",
+        "docs/V2/delivery/mvp-app-api.md"
+      ]
+    },
+    {
+      "id": "task-20261031-002631-openapi-d96e2bb5",
+      "reason": "현재실행0.2계약·enum·인증·provenance·예측불가·서버음성제외를 고정한 후속OpenAPI가 있다.0.1문서는 역사적초안임을 보존한다.",
+      "evidence": [
+        "docs/V2/delivery/app-api-contract.md",
+        "docs/V2/delivery/mvp-app-api.md",
+        "docs/V2/delivery/api/mvp-openapi.json"
+      ]
+    },
+    {
+      "id": "task-20261031-002631-api-0f38b4c1",
+      "reason": "실제서버/DB시험과 촬영검증에서 사용자격리·세션·공식경보·개인정책·확인상태·변경API를 대조했고 단말/모의/실제FCM 경계를 기록했다.",
+      "evidence": [
+        "docs/V2/delivery/api-handoff.md",
+        "docs/V2/delivery/mobile-server-deployment.md",
+        "docs/V2/delivery/filming-scenario-pipeline.md"
+      ]
+    }
+  ],
+  "running_closures": [
+    {
+      "id": "task-20261030-121042-chatgpt-docs-heoney-d2ca5d76",
+      "reason": "공유대화56개와 진행안내15개·주제별문서·원문manifest가 존재하고 메시지56개 SHA/길이를 재확인했다. 미확보첨부3개와 외부사실미재검증 한계를 보존하며 사용자요청대로 완료한다.",
+      "evidence": [
+        "docs/HeoNey/source-and-coverage.md",
+        "docs/HeoNey/archive/manifest.json"
+      ]
+    },
+    {
+      "id": "task-20261031-111807-task-9a960503",
+      "reason": "실제국내자료확보·GOFER/ELMFIRE·57+45회 추가학습·542시험과 독립대조는 종료한 연구기록이다. 사용자지시에 따라 이 실행을 완료하고 미달성운영목표는 새대기계약으로 분리한다.",
+      "evidence": [
+        "docs/V2/delivery/korea-wildfire-improvement.md",
+        "training/reports/korea-gfs-2022-20261101/verification.json",
+        "training/reports/model-strengthening-20261101/verification.json"
+      ]
+    }
+  ],
+  "removed": {
+    "task-20261031-002627-k8s-4bf877bd": "실제K8s수집파드→일반서버를 MVP완료필수로 요구하는 구계약. 현재는 확보자료 수신API재생이며 기반구성은 후속완료작업으로 대체됐다.",
+    "task-20261031-002628-task-4b3ae684": "공식경보상시수집기·K8s완료를 요구하는 구계약. 현재수동자료/재생/중복복구는 이미구현됐으며 자동상시수집은현재MVP범위밖이다.",
+    "task-20261031-002630-tts-bb28f882": "채택되지않은 서버음성·실제경로를 포괄한 조건부 구계약. 현재는서버텍스트·단말음성·합성표시경로로 확정됐다.",
+    "task-20261031-002631-task-df03e0e8": "당시공개자료만의반나절재생을현재시연완료조건으로 둔구계약. 실제승인시연은사후기후분석/현재지침/합성조건을명시한후속촬영검증으로 대체됐다.",
+    "task-20261031-152411-task-f8241639": "사용자가이미취소한외부자원문서중복통합. 현재README자원표와기존조사근거로대체돼추가실행대상이아니다."
+  },
+  "remaining": {
+    "task-20261031-002628-task-52ce54a6": "현재사건ID/revision·Qwen근거연결은구현됐다. 실제서로다른기관자료에서 사건식별·재인용/상충·늦은정정의 전구간이력검증은남아 대기한다.",
+    "task-20261031-002628-task-79e4938c": "현재사각대상구역·위치정확도/만료는구현됐다. 실제발령구역/화선·풍향/지형을결합한관련성·실제경계 검증이남아대기한다.",
+    "task-20261031-002629-cpu-0d28f70c": "unavailable/null대체는구현됐다. 채택된실제모델의일반서버CPU연결·모델교체/복구와성능검증은미연결이므로대기한다."
+  },
+  "all_original_tasks": [
+    {
+      "task_id": "task-20261030-113814-ui-ux-fb31d765",
+      "job_id": "job-20261030-113757-bonghwajigi-4841f0bc",
+      "title": "초기 설계와 회의 대조 및 UI UX 인계 문서 작성",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261030-113814-ui-ux-fb31d765/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261030-121042-chatgpt-docs-heoney-d2ca5d76",
+      "job_id": "job-20261030-113757-bonghwajigi-4841f0bc",
+      "title": "공유 ChatGPT 대화 전체를 docs/HeoNey에 문서화",
+      "before": "RUNNING",
+      "after": "DONE",
+      "reason": "공유대화56개와 진행안내15개·주제별문서·원문manifest가 존재하고 메시지56개 SHA/길이를 재확인했다. 미확보첨부3개와 외부사실미재검증 한계를 보존하며 사용자요청대로 완료한다.",
+      "evidence": [
+        "docs/HeoNey/source-and-coverage.md",
+        "docs/HeoNey/archive/manifest.json"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002027-k8s-v2-a251b54e",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "두 서버와 K8s 상태 점검 및 V2 실행 작업 등록",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-002027-k8s-v2-a251b54e/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002627-k8s-4bf877bd",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "산불 MVP의 수집·DB·긴급 및 분석 큐·모델 API 실행 기반 구성",
+      "before": "PENDING",
+      "after": "REMOVED",
+      "reason": "실제K8s수집파드→일반서버를 MVP완료필수로 요구하는 구계약. 현재는 확보자료 수신API재생이며 기반구성은 후속완료작업으로 대체됐다.",
+      "evidence": [
+        "README.md",
+        "docs/V2/delivery/filming-sources.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002627-mvp-e821b0f7",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "산불 MVP의 지역·재생 사례·실제 및 모의 범위와 수용 기준 고정",
+      "before": "PENDING",
+      "after": "DONE",
+      "reason": "현재 범위·자료/합성 구분·세 사용자와 후속A/B 재생·unavailable 수용 경계를 현재 문서와 실제검증으로 확인했다.",
+      "evidence": [
+        "docs/V2/delivery/mvp-scope.md",
+        "docs/V2/delivery/filming-pipeline-verification.json"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002627-task-35e0acc7",
+      "job_id": "job-20261031-002626-job-a46f69a4",
+      "title": "산불 수집 경로와 시연 재생 자료·학습 정답 확보 가능성 확인",
+      "before": "PENDING",
+      "after": "DONE",
+      "reason": "카탈로그·공식6개자료·확보/누락·실제학습정답의 가능성과 지연미검증을 구분했다.",
+      "evidence": [
+        "docs/V2/delivery/source-catalog.md",
+        "docs/data-collection/README.md",
+        "docs/V2/delivery/korea-wildfire-improvement.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002627-task-5ce3742e",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "서버 간 통신과 클러스터 자원 및 운영 조건 검증",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-002627-task-5ce3742e/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002627-task-93368ddf",
+      "job_id": "job-20261031-002626-job-a46f69a4",
+      "title": "산불 사건·관측·위치·모델 입력과 실제 및 모의 데이터 공통 계약 고정",
+      "before": "PENDING",
+      "after": "DONE",
+      "reason": "현재simulation수신·원문시각·provenance·revision·앱/정책 분리 계약을 코드·실행OpenAPI와 대조했다. live상시수집은 별도다.",
+      "evidence": [
+        "docs/V2/delivery/data-contract.md",
+        "src/bonghwajigi/contracts/analysis.py",
+        "docs/V2/delivery/api/mvp-openapi.json"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002627-task-a70543d3",
+      "job_id": "job-20261031-002626-job-97436430",
+      "title": "산불 공식 지침과 개인별 대응 단계·행동·승급 및 해제 정책표 고정",
+      "before": "PENDING",
+      "after": "DONE",
+      "reason": "사용자가 확정한1경고/2대피/3위급과 출처·승하향·해제·확인상태·규칙분리를 구현·검증했다.",
+      "evidence": [
+        "docs/V2/delivery/response-policy.md",
+        "src/bonghwajigi/policy/three_stage.py",
+        "tests/test_three_stage.py"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002627-task-cc78619e",
+      "job_id": "job-20261031-002626-job-c9f9ff0d",
+      "title": "산불 영향 확률의 입력·목표 격자·예측 기간·관측 정답 및 시연 경계 고정",
+      "before": "PENDING",
+      "after": "DONE",
+      "reason": "연구별 관측/접근 목표와 미관측·검열 및 개인영향미입증을 구분하고 실제예측보류 경계를 고정했다.",
+      "evidence": [
+        "docs/V2/delivery/prediction-target.md",
+        "training/README.md",
+        "training/reports/approach-pilot-20261101/gofer/plan.json"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002628-task-4b3ae684",
+      "job_id": "job-20261031-002626-job-a46f69a4",
+      "title": "산불 공식 경보 및 일반 자료 수집기와 시간순 재생·재시도 구현",
+      "before": "PENDING",
+      "after": "REMOVED",
+      "reason": "공식경보상시수집기·K8s완료를 요구하는 구계약. 현재수동자료/재생/중복복구는 이미구현됐으며 자동상시수집은현재MVP범위밖이다.",
+      "evidence": [
+        "README.md",
+        "docs/V2/delivery/filming-sources.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002628-task-52ce54a6",
+      "job_id": "job-20261031-002626-job-a46f69a4",
+      "title": "산불 사건의 근거 연결과 수정·해제·상충 정보 이력 구현",
+      "before": "PENDING",
+      "after": "PENDING",
+      "reason": "현재사건ID/revision·Qwen근거연결은구현됐다. 실제서로다른기관자료에서 사건식별·재인용/상충·늦은정정의 전구간이력검증은남아 대기한다.",
+      "evidence": [
+        "README.md",
+        ".loom/tasks/task-20261031-002628-task-52ce54a6/task.json"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002628-task-71b2ed3b",
+      "job_id": "job-20261031-002626-job-c9f9ff0d",
+      "title": "산불 학습·평가 데이터와 명시적인 합성 연결검증 데이터 준비",
+      "before": "PENDING",
+      "after": "DONE",
+      "reason": "실제자료와simulation·분할·provenance·미관측·확보부족을 별도보존한 실제구축/평가 보고서가 있다.",
+      "evidence": [
+        "docs/V2/delivery/training-dataset.md",
+        "docs/V2/delivery/xgboost-training-data.md",
+        "training/reports/korea-gfs-2022-20261101/verification.json"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002628-task-79e4938c",
+      "job_id": "job-20261031-002626-job-a46f69a4",
+      "title": "산불 발령 구역과 사용자 위치·풍향·주변 영향 관련성 구현",
+      "before": "PENDING",
+      "after": "PENDING",
+      "reason": "현재사각대상구역·위치정확도/만료는구현됐다. 실제발령구역/화선·풍향/지형을결합한관련성·실제경계 검증이남아대기한다.",
+      "evidence": [
+        "README.md",
+        ".loom/tasks/task-20261031-002628-task-79e4938c/task.json"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002629-cpu-0d28f70c",
+      "job_id": "job-20261031-002626-job-c9f9ff0d",
+      "title": "일반 서버의 XGBoost CPU 추론과 예측 불가·모의 모드 및 모델 복구 구현",
+      "before": "PENDING",
+      "after": "PENDING",
+      "reason": "unavailable/null대체는구현됐다. 채택된실제모델의일반서버CPU연결·모델교체/복구와성능검증은미연결이므로대기한다.",
+      "evidence": [
+        "README.md",
+        ".loom/tasks/task-20261031-002629-cpu-0d28f70c/task.json"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002629-qwen-617b8d58",
+      "job_id": "job-20261031-002626-job-97436430",
+      "title": "GPU의 Qwen3·Embedding 모델 준비와 산불 문서 추출·검색·텍스트 설명 검증",
+      "before": "PENDING",
+      "after": "DONE",
+      "reason": "고정 두모델 로딩·실제생성/1024벡터·검색·근거대화·템플릿대체의 후속검증을 확인했다. 단계/행동의 임의생성은 현재역할이 아니다.",
+      "evidence": [
+        "docs/V2/delivery/language-models.md",
+        "docs/V2/delivery/gpu-model-evidence.json",
+        "docs/V2/delivery/filming-model-metadata.json"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002629-task-2b63fdb8",
+      "job_id": "job-20261031-002626-job-c9f9ff0d",
+      "title": "산불 모델의 독립 평가·확률 보정 또는 실제 예측 보류 판정",
+      "before": "PENDING",
+      "after": "DONE",
+      "reason": "독립평가·보정·기준선실패를 보존한 국내실제예측보류 판정으로 완료한다. 운영확률채택이 아니다.",
+      "evidence": [
+        "docs/V2/delivery/model-evaluation.md",
+        "training/reports/korea-gfs-2022-20261101/README.md",
+        "training/reports/model-strengthening-20261101/verification.json"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002629-task-80e56e11",
+      "job_id": "job-20261031-002626-job-97436430",
+      "title": "사용자 프로필·현재 상태 저장과 버전 기반 산불 대응 정책 엔진 구현",
+      "before": "PENDING",
+      "after": "DONE",
+      "reason": "프로필/현재상태분리·확인후반영·버전/결과해시·재평가·만료가 구현돼 후속시험/촬영에서 검증됐다.",
+      "evidence": [
+        "docs/V2/delivery/policy-engine.md",
+        "tests/test_policy_loop.py",
+        "docs/V2/delivery/filming-pipeline-verification.json"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002629-xgboost-c44c6d79",
+      "job_id": "job-20261031-002626-job-c9f9ff0d",
+      "title": "GPU 서버에 XGBoost 설치 후 기준선·학습·추론 연결 검증",
+      "before": "PENDING",
+      "after": "DONE",
+      "reason": "실제CUDA학습·기준선·저장/CPU재로딩·독립재추론이 완료된 후속실행을 대조했다. 모델운영채택과는 별도다.",
+      "evidence": [
+        "docs/V2/delivery/training-run.md",
+        "docs/V2/delivery/xgboost-training-verification.md",
+        "training/reports/korea-gfs-2022-20261101/verification.json"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002630-3d-tts-8f1e43b5",
+      "job_id": "job-20261031-002626-job-97436430",
+      "title": "오늘 산불 MVP의 3D·서버 음성 제외와 2D·경로 경계 문서화",
+      "before": "PENDING",
+      "after": "DONE",
+      "reason": "3D·서버STT/TTS제외, 후속채택된 단말음성 및2D배경지도/합성경로·미검증실제경로 경계가 현재계약에 명시돼 있다.",
+      "evidence": [
+        "docs/V2/delivery/optional-features.md",
+        "docs/V2/delivery/mobile-dialogue-and-route.md",
+        "docs/V2/delivery/mvp-app-api.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002630-task-91ec9d3f",
+      "job_id": "job-20261031-002626-job-97436430",
+      "title": "개인별 정책·GPU와 독립된 산불 공식 원문 우선 알림 구현",
+      "before": "PENDING",
+      "after": "DONE",
+      "reason": "긴급전용큐의 대상검사·공식원문·정정/해제·전달기록은 모델독립으로 구현·검증됐다. 실제제공자없을때 모의경계를 명시한다는 계약을 충족하며 실제FCM은 새대기다.",
+      "evidence": [
+        "docs/V2/delivery/alert-delivery.md",
+        "src/bonghwajigi/events/urgent.py",
+        "docs/V2/delivery/filming-pipeline-verification.json"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002630-task-bc07e7d7",
+      "job_id": "job-20261031-002626-job-97436430",
+      "title": "산불 사건·위치·사용자 상태·정책 버전 변경에 따른 안내와 화면 갱신 연결",
+      "before": "PENDING",
+      "after": "DONE",
+      "reason": "입력/지침/상태변경과 만료·같은단계행동변경·cursor/longpoll·늦은Qwen결과억제가 구현돼 검증됐다. 실제백그라운드FCM은 별도대기다.",
+      "evidence": [
+        "docs/V2/delivery/decision-orchestration.md",
+        "tests/test_policy_loop.py",
+        "tests/test_mobile_api.py"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002630-tts-bb28f882",
+      "job_id": "job-20261031-002626-job-97436430",
+      "title": "후속 보류: 별도 채택한 경로·서버 음성 기능 구현",
+      "before": "PENDING",
+      "after": "REMOVED",
+      "reason": "채택되지않은 서버음성·실제경로를 포괄한 조건부 구계약. 현재는서버텍스트·단말음성·합성표시경로로 확정됐다.",
+      "evidence": [
+        "README.md",
+        "docs/V2/delivery/filming-sources.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002631-api-0f38b4c1",
+      "job_id": "job-20261031-002626-api-18805e8a",
+      "title": "산불 MVP 실제 서버의 텍스트·경보·갱신 API와 모의 모드 계약 검증",
+      "before": "PENDING",
+      "after": "DONE",
+      "reason": "실제서버/DB시험과 촬영검증에서 사용자격리·세션·공식경보·개인정책·확인상태·변경API를 대조했고 단말/모의/실제FCM 경계를 기록했다.",
+      "evidence": [
+        "docs/V2/delivery/api-handoff.md",
+        "docs/V2/delivery/mobile-server-deployment.md",
+        "docs/V2/delivery/filming-scenario-pipeline.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002631-openapi-d96e2bb5",
+      "job_id": "job-20261031-002626-api-18805e8a",
+      "title": "산불 MVP 텍스트 API와 공식 경보·개인 대응·실제 및 모의 계약 고정",
+      "before": "PENDING",
+      "after": "DONE",
+      "reason": "현재실행0.2계약·enum·인증·provenance·예측불가·서버음성제외를 고정한 후속OpenAPI가 있다.0.1문서는 역사적초안임을 보존한다.",
+      "evidence": [
+        "docs/V2/delivery/app-api-contract.md",
+        "docs/V2/delivery/mvp-app-api.md",
+        "docs/V2/delivery/api/mvp-openapi.json"
+      ]
+    },
+    {
+      "task_id": "task-20261031-002631-task-df03e0e8",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "산불 사례 재생으로 공식 경보 우선·개인별 안내·갱신 및 장애 통합 시연 검증",
+      "before": "PENDING",
+      "after": "REMOVED",
+      "reason": "당시공개자료만의반나절재생을현재시연완료조건으로 둔구계약. 실제승인시연은사후기후분석/현재지침/합성조건을명시한후속촬영검증으로 대체됐다.",
+      "evidence": [
+        "README.md",
+        "docs/V2/delivery/filming-sources.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-022438-tailscale-6dc57118",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "두 제공 서버를 기존 Tailscale 망에 연결하고 클러스터 통신 검증",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-022438-tailscale-6dc57118/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-025219-heoney-heoney-develop-76fc6e2b",
+      "job_id": "job-20261030-113757-bonghwajigi-4841f0bc",
+      "title": "HeoNey 브랜치의 HeoNey 폴더를 develop으로 가져오기",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-025219-heoney-heoney-develop-76fc6e2b/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-035154-v2-5-api-39004d37",
+      "job_id": "job-20261031-002626-api-18805e8a",
+      "title": "V2와 최신 5개 화면을 대조해 앱 API 초안과 화면별 인계 패키지 작성",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-035154-v2-5-api-39004d37/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-082929-mvp-3188b68a",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "산불 MVP 구현 기술 스택과 서버별 배치 계약 고정",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-082929-mvp-3188b68a/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-084138-ssh-b8d79a00",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "두 서버 SSH 별칭 설정과 실제 관리 접속 확인",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-084138-ssh-b8d79a00/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-084830-python-03ca0991",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "설계에 맞춘 Python 서버·수집기·모델 프로젝트 스캐폴딩 구성",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-084830-python-03ca0991/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-085956-gpu-qwen-xgboost-9eea12a5",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "GPU 서버에 두 Qwen 모델과 XGBoost를 설치하고 실제 사용 준비 검증",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-085956-gpu-qwen-xgboost-9eea12a5/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-095141-qwen-9e2979ea",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "시나리오 수신에서 분석 큐·임베딩 검색·Qwen 전달 직전까지 연결",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-095141-qwen-9e2979ea/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-100122-xgboost-1f6a6032",
+      "job_id": "job-20261031-002626-job-c9f9ff0d",
+      "title": "산불 XGBoost 학습용 공개 원본 확보와 재현 가능한 데이터셋 구축",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-100122-xgboost-1f6a6032/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-102643-xgboost-gpu-63a490e2",
+      "job_id": "job-20261031-002626-job-c9f9ff0d",
+      "title": "실데이터 XGBoost 학습 실행기와 GPU 수동 시작 절차 준비",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-102643-xgboost-gpu-63a490e2/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-103324-qwen3-b1f9a853",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "재난 경보를 포함한 Qwen3 사건 통합 실행과 추론 직전 결과 문서화",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-103324-qwen3-b1f9a853/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-105243-cuda-b5a38b8b",
+      "job_id": "job-20261031-002626-job-c9f9ff0d",
+      "title": "사용자가 실행한 CUDA 학습 산출물과 독립 재추론 검증",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-105243-cuda-b5a38b8b/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-111807-task-9a960503",
+      "job_id": "job-20261031-002626-job-c9f9ff0d",
+      "title": "국내 산불 적용을 위한 원인 분석과 공개 정답·입력 확보 및 개선 실험",
+      "before": "RUNNING",
+      "after": "DONE",
+      "reason": "실제국내자료확보·GOFER/ELMFIRE·57+45회 추가학습·542시험과 독립대조는 종료한 연구기록이다. 사용자지시에 따라 이 실행을 완료하고 미달성운영목표는 새대기계약으로 분리한다.",
+      "evidence": [
+        "docs/V2/delivery/korea-wildfire-improvement.md",
+        "training/reports/korea-gfs-2022-20261101/verification.json",
+        "training/reports/model-strengthening-20261101/verification.json"
+      ]
+    },
+    {
+      "task_id": "task-20261031-112704-task-7e315021",
+      "job_id": "job-20261031-002626-job-97436430",
+      "title": "새 관측·사용자 변경과 주기 점검을 개인별 대응 계획 갱신 루프로 연결",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-112704-task-7e315021/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-130338-develop-52f61c3c",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "현재 저장소 변경을 점검·체크포인트 커밋하고 develop 원격과 동기화",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-130338-develop-52f61c3c/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-132925-3-8d055932",
+      "job_id": "job-20261031-002626-job-97436430",
+      "title": "확정한 산불 3단계 정책과 공식 경보·알림 전달 경로 구현",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-132925-3-8d055932/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-132925-api-181c0498",
+      "job_id": "job-20261031-002626-api-18805e8a",
+      "title": "사용자 인증과 프로필·위치·개인 안내·변경 조회의 앱용 서버 API 구현",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-132925-api-181c0498/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-132925-mvp-1d561841",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "일반 서버에 산불 MVP를 상시 배포하고 예측 제외 통합 시연 검증",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-132925-mvp-1d561841/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-144549-api-066d6981",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "발표용 외부 API·모델·데이터·오픈소스와 라이선스 전수 정리",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-144549-api-066d6981/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-151017-api-ae9488f7",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "외부 자원 문서에 고정 배포물 라이선스와 전체 API·출처 부록 병합",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-151017-api-ae9488f7/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-152411-task-f8241639",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "외부 자원 명세 중복을 제거하고 단일 정본으로 통합",
+      "before": "CANCELLED",
+      "after": "REMOVED",
+      "reason": "사용자가이미취소한외부자원문서중복통합. 현재README자원표와기존조사근거로대체돼추가실행대상이아니다.",
+      "evidence": [
+        "README.md",
+        "docs/V2/delivery/filming-sources.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-153420-api-1f993c9e",
+      "job_id": "job-20261031-002626-api-18805e8a",
+      "title": "앱 설치 계정·세션과 목업 프로필·사전준비 API 구현",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-153420-api-1f993c9e/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-153648-task-46bd9b43",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "봉화지기 현재 변경 전체를 검증하고 커밋·원격 동기화",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-153648-task-46bd9b43/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-163810-api-36540350",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "앱 설치 API를 일반 서버에 배포하고 단말 사설 연결과 합성 시연 검증",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-163810-api-36540350/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-163931-mvp-3-edd85111",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "현행 산불 MVP 아키텍처를 발표용 3장 이미지로 정리",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-163931-mvp-3-edd85111/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-165952-task-b00c739e",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "원본 세로 아키텍처 스타일에 현행 변경만 반영한 이미지 작성",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-165952-task-b00c739e/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-170820-task-6b114a89",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "검증된 앱 커밋을 서브모듈로 고정하고 배포 소스 확인 절차 동기화",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-170820-task-6b114a89/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-173529-task-0623c231",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "실기기 시계 오차로 거절되는 위치 입력을 보정하고 일반 서버 검증",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-173529-task-0623c231/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-180818-ppt-d540dfd8",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "기술 스택 페이지를 기존 발표 스타일의 편집용 PPT로 제작",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-180818-ppt-d540dfd8/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-181512-task-edacb988",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "네이버 실지도 검증 앱 버전을 서브모듈에 고정하고 외부 자원 문서 갱신",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-181512-task-edacb988/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-183001-api-e700828b",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "정책 근거 대화·사용자 확인 상태 제안과 합성 시연 경로 API 구현 및 배포",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-183001-api-e700828b/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-185631-apk-a4dea90a",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "음성대화·시연경로 APK 앱 서브모듈 고정과 신규 자원 문서 동기화",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-185631-apk-a4dea90a/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-193008-task-ba4da975",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "촬영 시나리오 자료 수집과 지역 행동요령·개인 준비 실파이프라인 검증",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-193008-task-ba4da975/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261031-201107-v1-e3b372aa",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "발표 v1 디자인 통일과 외부 자원·기대 효과 페이지 수정",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261031-201107-v1-e3b372aa/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261101-003717-readme-fc490280",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "멘토링 피드백과 실제 구현을 반영해 상세 README 작성",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261101-003717-readme-fc490280/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261101-005127-readme-develop-471a46dd",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "README와 전체 후속 변경을 커밋하고 원격 develop 통합·푸시",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261101-005127-readme-develop-471a46dd/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261101-013854-readme-pdf-f324c400",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "README 필수 다섯 항목과 발표 PDF의 화면·팀 역할 반영",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261101-013854-readme-pdf-f324c400/result.md"
+      ]
+    },
+    {
+      "task_id": "task-20261101-014851-readme-develop-332c4250",
+      "job_id": "job-20261031-002017-v2-fe3bfad0",
+      "title": "README 후속 커밋을 원격 develop과 병합해 푸시",
+      "before": "DONE",
+      "after": "DONE",
+      "reason": "이전실행의결과·커밋기록을보존한다. 완료된기반점검/이전문서는현재운영작업으로재실행하지않는다.",
+      "evidence": [
+        ".loom/tasks/task-20261101-014851-readme-develop-332c4250/result.md"
+      ]
+    }
+  ]
+}

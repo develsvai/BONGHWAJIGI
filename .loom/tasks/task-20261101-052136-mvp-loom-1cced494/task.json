@@ -1,0 +1,32 @@
+{
+  "id": "task-20261101-052136-mvp-loom-1cced494",
+  "job_id": "job-20261031-002017-v2-fe3bfad0",
+  "title": "현재 산불 MVP 설계와 구현 근거로 Loom 전체 잡·태스크 정리",
+  "description": "사용자가 전체 Loom 잡을 점검해 구현된 것은 완료·남은 것은 대기, 시작 시 실행 중 태스크는 모두 완료 처리하고 현행 설계와 충돌하는 태스크를 제거하라고 직접 지시했다. 현재 README·확정 정책·API·배포·연구 검증 기록을 기준으로 각 계약을 대조해 CLI로 정리하며 미구현 기능은 완료로 꾸미지 않는다.",
+  "status": "RUNNING",
+  "created_at": "2026-11-01T05:21:36+00:00",
+  "updated_at": "2026-11-01T05:28:05+00:00",
+  "order_index": 31,
+  "assigned_agent": "foreground",
+  "depends_on": [],
+  "expected_output": "전체 잡·태스크의 전후 대조와 근거; 구현 완료 상태·필요한 후속 대기·실행 상태 정리; 폐기된 설계 태스크 제거; 검증·커밋된 작업기록",
+  "done_condition": "시작 시 실행 중이던 두 태스크를 사용자 지시에 따라 완료 기록하고 최종 RUNNING이 없다. 남은 현재 설계 작업은 PENDING, 실제 구현된 계약은 DONE, 현행 설계와 충돌하는 작업은 삭제되어 참조가 일관된다. 전체 변경 이유와 미검증 범위를 기록한다.",
+  "in_scope": "Loom 전체 계약/산출물/현재 서버코드 읽기 검토; CLI 상태·의존성·잡 정리; 구식 태스크 삭제와 감사기록; 필요한 후속 대기계약 작성; 작업기록·검증·커밋",
+  "out_of_scope": "실제 기능 구현·서버배포·원격프로세스 중단·신규 모델훈련; 앱 저장소 열람·수정; 인증정보 기록; 다른 레포 변경",
+  "validation_hint": "전체 전후 task/job 매핑, 완료근거와 남은범위 대조, RUNNING0·의존성·삭제참조·산출물·Loom strict·git diff --check 검사",
+  "required_docs": [],
+  "memory_refs": [],
+  "document_outputs": [],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [
+    "c68f678fbffeb6b4aad10d1269e625df7ebe789d"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-11-01T05:21:43+00:00",
+  "artifacts": [],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

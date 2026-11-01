@@ -1,0 +1,15 @@
+{
+  "공유대화_메시지": 56,
+  "원문_SHA256_글자수_일치": 56,
+  "기존_DONE39_결과_커밋기록": "전체존재",
+  "연구_최종기록": "542tests·45fits종료·실제예측미연결",
+  "현행_근거": [
+    "README.md",
+    "docs/V2/delivery/response-policy.md",
+    "docs/V2/delivery/mvp-app-api.md",
+    "docs/V2/delivery/filming-pipeline-verification.json",
+    "docs/V2/delivery/filming-sources.md",
+    "training/reports/korea-gfs-2022-20261101/verification.json"
+  ],
+  "기획초안_주의": "V3의후보·당시자료only제안은현재시연완료사실과구분;현재촬영은사후기후분석포함"
+}

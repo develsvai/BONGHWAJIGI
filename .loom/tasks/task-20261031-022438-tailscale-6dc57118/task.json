@@ -5,8 +5,8 @@
   "description": "사용자가 제공한 인증키로 두 서버에 Tailscale을 설정하고 기존 클러스터 tailnet과 연결하도록 직접 지시했다. develop에서 설치 등록과 실제 통신을 확인하고 접속 주소와 운영 방법을 기록한다.",
   "status": "DONE",
   "created_at": "2026-10-31T02:24:38+00:00",
-  "updated_at": "2026-10-31T02:39:37+00:00",
-  "order_index": 6,
+  "updated_at": "2026-11-01T05:28:05+00:00",
+  "order_index": 4,
   "assigned_agent": "foreground",
   "depends_on": [
     "task-20261031-002627-task-5ce3742e"
