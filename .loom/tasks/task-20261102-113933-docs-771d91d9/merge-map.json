@@ -1,0 +1,42 @@
+{
+  "docs/V2/delivery/source-catalog.md": [
+    "docs/data-collection/README.md",
+    "산불 MVP 자료와 누락 판정"
+  ],
+  "docs/V2/delivery/optional-features.md": [
+    "docs/V2/delivery/mvp-scope.md",
+    "선택·제외 기능"
+  ],
+  "docs/V2/delivery/data-contract.md": [
+    "docs/V2/delivery/mvp-app-api.md",
+    "수신·정책·앱 데이터 규약"
+  ],
+  "docs/V2/delivery/language-models.md": [
+    "docs/V2/delivery/gpu-model-readiness.md",
+    "현재 모델 역할과 후속 연결"
+  ],
+  "docs/V2/delivery/policy-engine.md": [
+    "docs/V2/delivery/response-policy.md",
+    "사용자 상태와 정책 엔진"
+  ],
+  "docs/V2/delivery/alert-delivery.md": [
+    "docs/V2/delivery/response-policy.md",
+    "공식 원문 우선 전달"
+  ],
+  "docs/V2/delivery/decision-orchestration.md": [
+    "docs/V2/delivery/response-policy.md",
+    "입력 변경과 안내 갱신 연결"
+  ],
+  "docs/V2/delivery/training-dataset.md": [
+    "docs/V2/delivery/prediction-target.md",
+    "학습 자료의 실제·합성·미관측 구분"
+  ],
+  "docs/V2/delivery/training-run.md": [
+    "docs/V2/delivery/prediction-target.md",
+    "학습 실행과 저장 검증 근거"
+  ],
+  "docs/V2/delivery/model-evaluation.md": [
+    "docs/V2/delivery/prediction-target.md",
+    "평가 결과와 실제 연결 보류"
+  ]
+}

@@ -1,0 +1,10 @@
+# Keep downloaded snapshot bodies and generated runs local.
+자료/raw/
+실행결과/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.*
+!.env.example

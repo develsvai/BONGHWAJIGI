@@ -12,16 +12,17 @@ from jsonschema import Draft202012Validator, FormatChecker, ValidationError
 from openapi_spec_validator import validate_spec
 
 ROOT = Path(__file__).resolve().parents[1]
-API = ROOT / "docs/V2/delivery/api"
+DRAFT_DOCS = ROOT / "docs/90_설계와회의이력/03_API_초안_0.1"
+API = DRAFT_DOCS / "명세와예제"
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--report", type=Path, help="검증 보고서를 기록할 경로")
     args = parser.parse_args()
-    spec = yaml.safe_load((API / "openapi.yaml").read_text())
-    fixtures = json.loads((API / "examples.json").read_text())
-    mapping = json.loads((API / "screen-map.json").read_text())
+    spec = yaml.safe_load((API / "API_초안_OpenAPI.yaml").read_text())
+    fixtures = json.loads((API / "API_초안_고정_요청과_응답.json").read_text())
+    mapping = json.loads((API / "API_초안_화면_매핑.json").read_text())
     validate_spec(spec)
     schemas = spec["components"]["schemas"]
 
@@ -143,10 +144,17 @@ def main() -> None:
     assert not may_apply(3, 4, "2026-10-31T02:59:00Z")
     assert may_apply(3, 4, "2026-10-31T03:05:00Z")
 
-    docs = [ROOT / "docs/V2/delivery" / name for name in
-            ("app-api-contract.md", "api-handoff.md", "api-job-review.md", "api-reference.md")]
+    docs = [DRAFT_DOCS / name for name in (
+        "앱_API_전체_계약_초안.md",
+        "화면별_API_연동_인계서.md",
+        "API_인계_작업_검토.md",
+        "API별_요청과_응답_예제.md",
+    )]
     reference = docs[-1].read_text()
-    docs += [ROOT / 'docs/README.md', ROOT / 'docs/V2/04-execution-backlog.md']
+    docs += [
+        ROOT / 'docs/문서안내.md',
+        ROOT / 'docs/90_설계와회의이력/02_구현초기설계/MVP_실행_백로그_최초_계약.md',
+    ]
     for oid, (_, _, operation) in operations.items():
         assert f"id=\"{oid}\"" in reference, f"사용법 문서 누락: {oid}"
         section = reference.split(f'<a id="{oid}"></a>', 1)[1].split('<a id="', 1)[0]

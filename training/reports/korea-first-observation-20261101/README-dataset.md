@@ -123,4 +123,4 @@ training/.venv/bin/python -m bonghwa_training.korea_first_observation \
 | 기존 정적 격자 | `e31c0ed8bc1df421f6201b0aca0af0ea1f9e52b1a878d3fa93cfeb0086f9c60a` |
 | 기존 기상 관측소 목록 | `df0645691d7c1ff7d7457b46b16636f37cce73b98f3a908c20428b230d1f8927` |
 
-이번 작업에서 외부 API를 호출하거나 추가 원본을 수집하지 않았다. 기존 KMA GK2A FF, ISD 기상, 정적 격자의 이용 조건은 [기존 외부 자원 문서](../../../docs/V2/delivery/external-resources-and-licenses.md)를 따른다. 데이터셋 정합성 향상만으로 국내 사용자 위험 확률의 유효성이 입증되지는 않는다.
+이번 작업에서 외부 API를 호출하거나 추가 원본을 수집하지 않았다. 기존 KMA GK2A FF, ISD 기상, 정적 격자의 이용 조건은 [기존 외부 자원 문서](../../../docs/08_외부자원과라이선스/외부_자원과_라이선스_확인_안내.md)를 따른다. 데이터셋 정합성 향상만으로 국내 사용자 위험 확률의 유효성이 입증되지는 않는다.

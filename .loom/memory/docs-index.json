@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-31T20:21:08+00:00",
+  "generated_at": "2026-11-02T12:02:42+00:00",
   "docs_paths": [
     "docs"
   ],
@@ -33,877 +33,1039 @@
       "size_bytes": 82
     },
     {
-      "id": "docs/HeoNey/01-idea-history.md",
-      "title": "01. 아이디어 탐색 전체 이력",
-      "path": "docs/HeoNey/01-idea-history.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:22:32+09:00",
-      "size_bytes": 14051
-    },
-    {
-      "id": "docs/HeoNey/02-service-and-recommendation.md",
-      "title": "02. 서비스와 개인 맞춤형 대피 추천",
-      "path": "docs/HeoNey/02-service-and-recommendation.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:22:32+09:00",
-      "size_bytes": 6142
-    },
-    {
-      "id": "docs/HeoNey/03-data-and-ai.md",
-      "title": "03. 데이터·AI·경로 구성",
-      "path": "docs/HeoNey/03-data-and-ai.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:22:32+09:00",
-      "size_bytes": 6842
-    },
-    {
-      "id": "docs/HeoNey/04-screens-and-flows.md",
-      "title": "04. 모바일 화면 구성과 전환",
-      "path": "docs/HeoNey/04-screens-and-flows.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:22:32+09:00",
-      "size_bytes": 6394
-    },
-    {
-      "id": "docs/HeoNey/05-voice-ux.md",
-      "title": "05. 공유 대화의 음성 대피 화면",
-      "path": "docs/HeoNey/05-voice-ux.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T11:52:37+09:00",
-      "size_bytes": 3610
-    },
-    {
-      "id": "docs/HeoNey/06-visuals-and-demo.md",
-      "title": "06. 발표 색상과 MVP 시연",
-      "path": "docs/HeoNey/06-visuals-and-demo.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T11:52:37+09:00",
-      "size_bytes": 3563
-    },
-    {
-      "id": "docs/HeoNey/07-decisions-and-open-questions.md",
-      "title": "07. 요구사항, 이전 안, 미결정",
-      "path": "docs/HeoNey/07-decisions-and-open-questions.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T11:52:37+09:00",
-      "size_bytes": 4603
-    },
-    {
-      "id": "docs/HeoNey/README.md",
-      "title": "HeoNey — 해커톤 아이디어 대화 정리",
-      "path": "docs/HeoNey/README.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:22:32+09:00",
-      "size_bytes": 4824
-    },
-    {
-      "id": "docs/HeoNey/archive/conversation-01.md",
-      "title": "대화 원문 01 — 관광·지하철·해커톤 관점",
-      "path": "docs/HeoNey/archive/conversation-01.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:22:32+09:00",
-      "size_bytes": 30518
-    },
-    {
-      "id": "docs/HeoNey/archive/conversation-02.md",
-      "title": "대화 원문 02 — 청년 경험·아동 서비스",
-      "path": "docs/HeoNey/archive/conversation-02.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:22:32+09:00",
-      "size_bytes": 35563
-    },
-    {
-      "id": "docs/HeoNey/archive/conversation-03.md",
-      "title": "대화 원문 03 — 아동 보호 고도화·QR 환승",
-      "path": "docs/HeoNey/archive/conversation-03.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:22:32+09:00",
-      "size_bytes": 44703
-    },
-    {
-      "id": "docs/HeoNey/archive/conversation-04.md",
-      "title": "대화 원문 04 — 고령 운전·폭염·재난 비서",
-      "path": "docs/HeoNey/archive/conversation-04.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:22:32+09:00",
-      "size_bytes": 42184
-    },
-    {
-      "id": "docs/HeoNey/archive/conversation-05.md",
-      "title": "대화 원문 05 — 고립 문제·일상 아이디어·추천 주제",
-      "path": "docs/HeoNey/archive/conversation-05.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:22:32+09:00",
-      "size_bytes": 39523
-    },
-    {
-      "id": "docs/HeoNey/archive/conversation-06.md",
-      "title": "대화 원문 06 — 발표 색상·데이터·개인화",
-      "path": "docs/HeoNey/archive/conversation-06.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:22:32+09:00",
-      "size_bytes": 38454
-    },
-    {
-      "id": "docs/HeoNey/archive/conversation-07.md",
-      "title": "대화 원문 07 — 모바일 화면·최종 음성 UX",
-      "path": "docs/HeoNey/archive/conversation-07.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:22:32+09:00",
-      "size_bytes": 64902
-    },
-    {
-      "id": "docs/HeoNey/archive/manifest.json",
-      "title": "{",
-      "path": "docs/HeoNey/archive/manifest.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:22:32+09:00",
-      "size_bytes": 18571
-    },
-    {
-      "id": "docs/HeoNey/archive/progress-messages.md",
-      "title": "대화 중 진행 안내 원문",
-      "path": "docs/HeoNey/archive/progress-messages.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:22:32+09:00",
-      "size_bytes": 6650
-    },
-    {
-      "id": "docs/HeoNey/references.md",
-      "title": "원문 외부 출처 목록",
-      "path": "docs/HeoNey/references.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:22:32+09:00",
-      "size_bytes": 19954
-    },
-    {
-      "id": "docs/HeoNey/source-and-coverage.md",
-      "title": "공유 대화 출처와 보존 범위",
-      "path": "docs/HeoNey/source-and-coverage.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T11:52:37+09:00",
-      "size_bytes": 5651
-    },
-    {
-      "id": "docs/HeoNey/봉화지기_모바일_화면_기획서.md",
-      "title": "봉화 지기 모바일 화면 기획서",
-      "path": "docs/HeoNey/봉화지기_모바일_화면_기획서.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T11:52:37+09:00",
-      "size_bytes": 19391
-    },
-    {
-      "id": "docs/README.md",
-      "title": "봉화지기 설계 문서 안내",
-      "path": "docs/README.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T23:56:21+09:00",
-      "size_bytes": 4564
-    },
-    {
-      "id": "docs/V1/ai-and-infrastructure.md",
-      "title": "AI 역할과 서버 구성",
-      "path": "docs/V1/ai-and-infrastructure.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:22:32+09:00",
-      "size_bytes": 8939
-    },
-    {
-      "id": "docs/V1/architecture-and-data-flow.md",
-      "title": "데이터 수집과 대응 흐름",
-      "path": "docs/V1/architecture-and-data-flow.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:22:32+09:00",
-      "size_bytes": 9460
-    },
-    {
-      "id": "docs/V1/decisions-and-meeting-review.md",
-      "title": "결정 사항과 회의 대조",
-      "path": "docs/V1/decisions-and-meeting-review.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:22:32+09:00",
-      "size_bytes": 6461
-    },
-    {
-      "id": "docs/V1/product-and-scenarios.md",
-      "title": "서비스 목표와 사용자 시나리오",
-      "path": "docs/V1/product-and-scenarios.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:22:32+09:00",
-      "size_bytes": 6493
-    },
-    {
-      "id": "docs/V1/ui-ux-handoff.md",
-      "title": "UI UX 인계와 확인 항목",
-      "path": "docs/V1/ui-ux-handoff.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:22:32+09:00",
-      "size_bytes": 6575
-    },
-    {
-      "id": "docs/V2/01_서비스_핵심_정리.md",
-      "title": "재난 대응 비서 - 서비스 핵심 정리",
-      "path": "docs/V2/01_서비스_핵심_정리.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:22:32+09:00",
-      "size_bytes": 14864
-    },
-    {
-      "id": "docs/V2/02_실시간_서버_배치도.md",
-      "title": "재난 대응 비서 - 실시간 서버 배치도",
-      "path": "docs/V2/02_실시간_서버_배치도.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:22:32+09:00",
-      "size_bytes": 4418
-    },
-    {
-      "id": "docs/V2/03_학습_검증_흐름도.md",
-      "title": "재난 대응 비서 - 학습·검증 흐름도",
-      "path": "docs/V2/03_학습_검증_흐름도.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:22:32+09:00",
-      "size_bytes": 3446
-    },
-    {
-      "id": "docs/V2/04-execution-backlog.md",
-      "title": "V2 실행 계획과 작업 계약",
-      "path": "docs/V2/04-execution-backlog.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T13:09:18+09:00",
-      "size_bytes": 25334
-    },
-    {
-      "id": "docs/V2/05-infrastructure-status.md",
-      "title": "V2 인프라 상태 점검",
-      "path": "docs/V2/05-infrastructure-status.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:36:09+09:00",
-      "size_bytes": 9590
-    },
-    {
-      "id": "docs/V2/delivery/analysis-retrieval-evidence.json",
-      "title": "{",
-      "path": "docs/V2/delivery/analysis-retrieval-evidence.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T19:14:46+09:00",
-      "size_bytes": 2964
-    },
-    {
-      "id": "docs/V2/delivery/analysis-retrieval-flow.md",
-      "title": "시나리오 입력부터 분석·검색과 Qwen 전달 직전까지",
-      "path": "docs/V2/delivery/analysis-retrieval-flow.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T19:17:26+09:00",
-      "size_bytes": 10495
-    },
-    {
-      "id": "docs/V2/delivery/api-handoff.md",
-      "title": "앱팀 전달서 — 화면별 API 연동",
-      "path": "docs/V2/delivery/api-handoff.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T22:56:42+09:00",
-      "size_bytes": 16977
-    },
-    {
-      "id": "docs/V2/delivery/api-job-review.md",
-      "title": "앱 연동 API 계약과 인계 Job 재검토",
-      "path": "docs/V2/delivery/api-job-review.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T13:04:03+09:00",
-      "size_bytes": 6214
-    },
-    {
-      "id": "docs/V2/delivery/api-reference.md",
-      "title": "API별 경로와 사용법 — 0.1.0 초안",
-      "path": "docs/V2/delivery/api-reference.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T13:10:24+09:00",
-      "size_bytes": 63946
-    },
-    {
-      "id": "docs/V2/delivery/api/examples.json",
-      "title": "{",
-      "path": "docs/V2/delivery/api/examples.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T13:08:09+09:00",
-      "size_bytes": 106645
-    },
-    {
-      "id": "docs/V2/delivery/api/mobile-interaction-live-evidence.json",
-      "title": "{",
-      "path": "docs/V2/delivery/api/mobile-interaction-live-evidence.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-11-01T03:55:03+09:00",
-      "size_bytes": 1910
-    },
-    {
-      "id": "docs/V2/delivery/api/mvp-interaction-fixtures.json",
-      "title": "{",
-      "path": "docs/V2/delivery/api/mvp-interaction-fixtures.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-11-01T03:40:27+09:00",
-      "size_bytes": 4407
-    },
-    {
-      "id": "docs/V2/delivery/api/mvp-openapi.json",
-      "title": "{",
-      "path": "docs/V2/delivery/api/mvp-openapi.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-11-01T04:57:00+09:00",
-      "size_bytes": 165754
-    },
-    {
-      "id": "docs/V2/delivery/api/openapi.yaml",
-      "title": "openapi: 3.1.0",
-      "path": "docs/V2/delivery/api/openapi.yaml",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T13:08:09+09:00",
-      "size_bytes": 215282
-    },
-    {
-      "id": "docs/V2/delivery/api/requirements-validation.txt",
-      "title": "openapi-spec-validator==0.7.2",
-      "path": "docs/V2/delivery/api/requirements-validation.txt",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T13:08:09+09:00",
-      "size_bytes": 63
-    },
-    {
-      "id": "docs/V2/delivery/api/screen-map.json",
-      "title": "{",
-      "path": "docs/V2/delivery/api/screen-map.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T13:08:09+09:00",
-      "size_bytes": 5191
-    },
-    {
-      "id": "docs/V2/delivery/api/validation-report.json",
-      "title": "{",
-      "path": "docs/V2/delivery/api/validation-report.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T13:13:51+09:00",
-      "size_bytes": 637
-    },
-    {
-      "id": "docs/V2/delivery/app-api-contract.md",
-      "title": "봉화지기 앱 API 계약 — 0.1.0 초안",
-      "path": "docs/V2/delivery/app-api-contract.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T13:08:08+09:00",
-      "size_bytes": 17634
-    },
-    {
-      "id": "docs/V2/delivery/app-integration-api.md",
-      "title": "앱 통합 API 보완",
-      "path": "docs/V2/delivery/app-integration-api.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-11-01T00:58:29+09:00",
-      "size_bytes": 6067
-    },
-    {
-      "id": "docs/V2/delivery/architecture-slides/source/original-style-prompt.txt",
-      "title": "Use case: precise-object-edit / infographic-diagram.",
-      "path": "docs/V2/delivery/architecture-slides/source/original-style-prompt.txt",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-11-01T02:04:51+09:00",
-      "size_bytes": 4811
-    },
-    {
-      "id": "docs/V2/delivery/architecture-slides/source/original-style-refinement-prompt.txt",
-      "title": "연결선 수정 1",
-      "path": "docs/V2/delivery/architecture-slides/source/original-style-refinement-prompt.txt",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-11-01T02:15:05+09:00",
-      "size_bytes": 6050
-    },
-    {
-      "id": "docs/V2/delivery/architecture-slides/source/provenance.json",
-      "title": "{",
-      "path": "docs/V2/delivery/architecture-slides/source/provenance.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-11-01T01:49:40+09:00",
-      "size_bytes": 2918
-    },
-    {
-      "id": "docs/V2/delivery/environment-readiness-evidence.json",
-      "title": "{",
-      "path": "docs/V2/delivery/environment-readiness-evidence.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T10:36:09+09:00",
-      "size_bytes": 6615
-    },
-    {
-      "id": "docs/V2/delivery/environment-readiness.md",
-      "title": "실행 환경 검증 결과",
-      "path": "docs/V2/delivery/environment-readiness.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T11:37:55+09:00",
-      "size_bytes": 15193
-    },
-    {
-      "id": "docs/V2/delivery/external-resources/android-voice-resources-20261101.json",
-      "title": "{",
-      "path": "docs/V2/delivery/external-resources/android-voice-resources-20261101.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-11-01T04:22:44+09:00",
-      "size_bytes": 3063
-    },
-    {
-      "id": "docs/V2/delivery/external-resources/data-and-content-sources.json",
-      "title": "{",
-      "path": "docs/V2/delivery/external-resources/data-and-content-sources.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T23:55:04+09:00",
-      "size_bytes": 16560
-    },
-    {
-      "id": "docs/V2/delivery/external-resources/document-validation.json",
-      "title": "{",
-      "path": "docs/V2/delivery/external-resources/document-validation.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-11-01T00:19:55+09:00",
-      "size_bytes": 1691
-    },
-    {
-      "id": "docs/V2/delivery/external-resources/python-coverage.json",
-      "title": "{",
-      "path": "docs/V2/delivery/external-resources/python-coverage.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T23:55:04+09:00",
-      "size_bytes": 6486
-    },
-    {
-      "id": "docs/V2/delivery/external-resources/python-inventory.json",
-      "title": "{",
-      "path": "docs/V2/delivery/external-resources/python-inventory.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T23:55:04+09:00",
-      "size_bytes": 689836
-    },
-    {
-      "id": "docs/V2/delivery/external-resources/supplemental-verification-20261101.json",
-      "title": "{",
-      "path": "docs/V2/delivery/external-resources/supplemental-verification-20261101.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-11-01T00:19:55+09:00",
-      "size_bytes": 266117
-    },
-    {
-      "id": "docs/V2/delivery/filming-model-metadata.json",
-      "title": "{",
-      "path": "docs/V2/delivery/filming-model-metadata.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-11-01T05:11:27+09:00",
-      "size_bytes": 1341
-    },
-    {
-      "id": "docs/V2/delivery/filming-pipeline-verification.json",
-      "title": "{",
-      "path": "docs/V2/delivery/filming-pipeline-verification.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-11-01T05:09:32+09:00",
-      "size_bytes": 14290
-    },
-    {
-      "id": "docs/V2/delivery/filming-scenario-pipeline.md",
-      "title": "A·B 촬영 시나리오와 지역 안내 파이프라인",
-      "path": "docs/V2/delivery/filming-scenario-pipeline.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-11-01T05:12:08+09:00",
-      "size_bytes": 9073
-    },
-    {
-      "id": "docs/V2/delivery/filming-sources.md",
-      "title": "촬영용 영덕 산불 자료와 출처",
-      "path": "docs/V2/delivery/filming-sources.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-11-01T04:38:04+09:00",
-      "size_bytes": 8059
-    },
-    {
-      "id": "docs/V2/delivery/gpu-model-evidence.json",
-      "title": "{",
-      "path": "docs/V2/delivery/gpu-model-evidence.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T18:12:09+09:00",
-      "size_bytes": 2642
-    },
-    {
-      "id": "docs/V2/delivery/gpu-model-readiness.md",
-      "title": "GPU 서버의 세 모델 실행 준비 결과",
-      "path": "docs/V2/delivery/gpu-model-readiness.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T18:13:14+09:00",
-      "size_bytes": 6812
-    },
-    {
-      "id": "docs/V2/delivery/implementation-stack.md",
+      "id": "docs/01_서비스와설계/기술_스택과_서버별_역할.md",
       "title": "산불 MVP 구현 기술 스택 결정",
-      "path": "docs/V2/delivery/implementation-stack.md",
+      "path": "docs/01_서비스와설계/기술_스택과_서버별_역할.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T19:17:26+09:00",
-      "size_bytes": 20034
+      "updated_at": "2026-11-02T20:56:21+09:00",
+      "size_bytes": 20818
     },
     {
-      "id": "docs/V2/delivery/korea-wildfire-improvement.md",
-      "title": "국내 산불 1·3·6시간 모델 개선 기록",
-      "path": "docs/V2/delivery/korea-wildfire-improvement.md",
+      "id": "docs/01_서비스와설계/대응_3단계와_개인별_정책.md",
+      "title": "산불 MVP의 확정 3단계 정책",
+      "path": "docs/01_서비스와설계/대응_3단계와_개인별_정책.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-11-01T03:59:37+09:00",
-      "size_bytes": 102880
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 10419
     },
     {
-      "id": "docs/V2/delivery/mobile-dialogue-and-route.md",
-      "title": "앱 텍스트 대화와 합성 시연 경로",
-      "path": "docs/V2/delivery/mobile-dialogue-and-route.md",
+      "id": "docs/01_서비스와설계/산불_MVP_범위와_기능.md",
+      "title": "산불 MVP 범위와 기능",
+      "path": "docs/01_서비스와설계/산불_MVP_범위와_기능.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-11-01T03:55:17+09:00",
-      "size_bytes": 9038
+      "updated_at": "2026-11-02T20:56:21+09:00",
+      "size_bytes": 2603
     },
     {
-      "id": "docs/V2/delivery/mobile-location-clock-skew.md",
+      "id": "docs/01_서비스와설계/이벤트_수신부터_자료_검색까지.md",
+      "title": "시나리오 입력부터 분석·검색과 Qwen 전달 직전까지",
+      "path": "docs/01_서비스와설계/이벤트_수신부터_자료_검색까지.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 10524
+    },
+    {
+      "id": "docs/02_설치와운영/Tailnet_서버_통신과_접근_설정.md",
+      "title": "두 서버 Tailscale 연결 및 검증",
+      "path": "docs/02_설치와운영/Tailnet_서버_통신과_접근_설정.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 7851
+    },
+    {
+      "id": "docs/02_설치와운영/모바일_서브모듈_빌드와_단말_검증.md",
+      "title": "앱 서브모듈과 배포 소스 확인",
+      "path": "docs/02_설치와운영/모바일_서브모듈_빌드와_단말_검증.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 12295
+    },
+    {
+      "id": "docs/02_설치와운영/서버_SSH_접속_방법.md",
+      "title": "두 서버 SSH 접속 운영 기록",
+      "path": "docs/02_설치와운영/서버_SSH_접속_방법.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 4430
+    },
+    {
+      "id": "docs/02_설치와운영/서버와_K8s_환경_점검_기록.md",
+      "title": "실행 환경 검증 결과",
+      "path": "docs/02_설치와운영/서버와_K8s_환경_점검_기록.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 15418
+    },
+    {
+      "id": "docs/02_설치와운영/앱_연결용_서버_배포와_HTTPS.md",
+      "title": "앱 실연동 서버 배포",
+      "path": "docs/02_설치와운영/앱_연결용_서버_배포와_HTTPS.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 6297
+    },
+    {
+      "id": "docs/02_설치와운영/일반_서버_실행과_복구.md",
+      "title": "산불 MVP 일반 서버 운영과 접속",
+      "path": "docs/02_설치와운영/일반_서버_실행과_복구.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 9778
+    },
+    {
+      "id": "docs/03_API와앱연동/단말_시계_오차와_위치_갱신.md",
       "title": "실기기 위치·현재 상태의 시계 오차 보정",
-      "path": "docs/V2/delivery/mobile-location-clock-skew.md",
+      "path": "docs/03_API와앱연동/단말_시계_오차와_위치_갱신.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-11-01T02:42:16+09:00",
+      "updated_at": "2026-11-02T20:49:26+09:00",
       "size_bytes": 2459
     },
     {
-      "id": "docs/V2/delivery/mobile-server-deployment.md",
-      "title": "앱 실연동 서버 배포",
-      "path": "docs/V2/delivery/mobile-server-deployment.md",
+      "id": "docs/03_API와앱연동/대화_상태_확인과_합성_경로_API.md",
+      "title": "앱 텍스트 대화와 합성 시연 경로",
+      "path": "docs/03_API와앱연동/대화_상태_확인과_합성_경로_API.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-11-01T03:55:03+09:00",
-      "size_bytes": 6188
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 9109
     },
     {
-      "id": "docs/V2/delivery/mobile-server-evidence.json",
+      "id": "docs/03_API와앱연동/명세와예제/현재_대화와_경로_모의_응답.json",
       "title": "{",
-      "path": "docs/V2/delivery/mobile-server-evidence.json",
+      "path": "docs/03_API와앱연동/명세와예제/현재_대화와_경로_모의_응답.json",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-11-01T02:01:45+09:00",
-      "size_bytes": 3229
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 4407
     },
     {
-      "id": "docs/V2/delivery/mobile-submodule-deployment.md",
-      "title": "앱 서브모듈과 배포 소스 확인",
-      "path": "docs/V2/delivery/mobile-submodule-deployment.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-11-01T04:25:42+09:00",
-      "size_bytes": 12097
-    },
-    {
-      "id": "docs/V2/delivery/mobile-voice-device-evidence.json",
+      "id": "docs/03_API와앱연동/명세와예제/현재_실행_OpenAPI.json",
       "title": "{",
-      "path": "docs/V2/delivery/mobile-voice-device-evidence.json",
+      "path": "docs/03_API와앱연동/명세와예제/현재_실행_OpenAPI.json",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-11-01T04:21:33+09:00",
-      "size_bytes": 1640
+      "updated_at": "2026-11-02T20:55:12+09:00",
+      "size_bytes": 165754
     },
     {
-      "id": "docs/V2/delivery/mvp-app-api.md",
+      "id": "docs/03_API와앱연동/설치_계정과_프로필_API.md",
+      "title": "앱 통합 API 보완",
+      "path": "docs/03_API와앱연동/설치_계정과_프로필_API.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 6089
+    },
+    {
+      "id": "docs/03_API와앱연동/현재_앱_API_실행_계약.md",
       "title": "산불 MVP 앱 API 실행 계약",
-      "path": "docs/V2/delivery/mvp-app-api.md",
+      "path": "docs/03_API와앱연동/현재_앱_API_실행_계약.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T23:17:04+09:00",
-      "size_bytes": 7772
+      "updated_at": "2026-11-02T20:53:35+09:00",
+      "size_bytes": 9705
     },
     {
-      "id": "docs/V2/delivery/mvp-server-evidence.json",
-      "title": "{",
-      "path": "docs/V2/delivery/mvp-server-evidence.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T23:25:24+09:00",
-      "size_bytes": 23134
-    },
-    {
-      "id": "docs/V2/delivery/mvp-server-runbook.md",
-      "title": "산불 MVP 일반 서버 운영과 접속",
-      "path": "docs/V2/delivery/mvp-server-runbook.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T23:23:53+09:00",
-      "size_bytes": 9654
-    },
-    {
-      "id": "docs/V2/delivery/original-style-architecture.md",
-      "title": "원본 스타일의 현행 아키텍처",
-      "path": "docs/V2/delivery/original-style-architecture.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-11-01T02:13:06+09:00",
-      "size_bytes": 2576
-    },
-    {
-      "id": "docs/V2/delivery/personal-policy-loop-evidence.json",
-      "title": "{",
-      "path": "docs/V2/delivery/personal-policy-loop-evidence.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T20:42:17+09:00",
-      "size_bytes": 26013
-    },
-    {
-      "id": "docs/V2/delivery/personal-policy-loop.md",
-      "title": "개인별 대응 계획의 자동 갱신 루프",
-      "path": "docs/V2/delivery/personal-policy-loop.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T22:41:13+09:00",
-      "size_bytes": 13749
-    },
-    {
-      "id": "docs/V2/delivery/presentation-architecture.md",
-      "title": "봉화지기 발표용 아키텍처",
-      "path": "docs/V2/delivery/presentation-architecture.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-11-01T01:48:00+09:00",
-      "size_bytes": 9518
-    },
-    {
-      "id": "docs/V2/delivery/presentation-v1-design.md",
-      "title": "발표 v1 디자인 통일",
-      "path": "docs/V2/delivery/presentation-v1-design.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-11-01T05:21:08+09:00",
-      "size_bytes": 3331
-    },
-    {
-      "id": "docs/V2/delivery/project-scaffold.md",
-      "title": "서버 프로젝트 스캐폴딩",
-      "path": "docs/V2/delivery/project-scaffold.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T19:17:26+09:00",
-      "size_bytes": 11198
-    },
-    {
-      "id": "docs/V2/delivery/qwen-integration-result.md",
-      "title": "경보 포함 Qwen3 통합 결과 — 추론 입력 직전",
-      "path": "docs/V2/delivery/qwen-integration-result.md",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T19:43:52+09:00",
-      "size_bytes": 10806
-    },
-    {
-      "id": "docs/V2/delivery/qwen-integration/generation-request.json",
-      "title": "{",
-      "path": "docs/V2/delivery/qwen-integration/generation-request.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T19:40:33+09:00",
-      "size_bytes": 3141
-    },
-    {
-      "id": "docs/V2/delivery/qwen-integration/generation-response.json",
-      "title": "{",
-      "path": "docs/V2/delivery/qwen-integration/generation-response.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T19:40:47+09:00",
-      "size_bytes": 1146
-    },
-    {
-      "id": "docs/V2/delivery/qwen-integration/pre-inference.json",
-      "title": "{",
-      "path": "docs/V2/delivery/qwen-integration/pre-inference.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T19:40:47+09:00",
-      "size_bytes": 10621
-    },
-    {
-      "id": "docs/V2/delivery/qwen-integration/retrieval-handoff.json",
-      "title": "{",
-      "path": "docs/V2/delivery/qwen-integration/retrieval-handoff.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T19:40:33+09:00",
-      "size_bytes": 8119
-    },
-    {
-      "id": "docs/V2/delivery/qwen-integration/run-metadata.json",
-      "title": "{",
-      "path": "docs/V2/delivery/qwen-integration/run-metadata.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T19:40:47+09:00",
-      "size_bytes": 575
-    },
-    {
-      "id": "docs/V2/delivery/qwen-integration/scenario-input.json",
-      "title": "{",
-      "path": "docs/V2/delivery/qwen-integration/scenario-input.json",
-      "source": "repository_docs",
-      "document_type": "docs",
-      "updated_at": "2026-10-31T19:40:27+09:00",
-      "size_bytes": 5895
-    },
-    {
-      "id": "docs/V2/delivery/qwen-integration/source-checks.json",
+      "id": "docs/04_데이터수집/갱신검수_20261031/공식문서_재조회기록.json",
       "title": "[",
-      "path": "docs/V2/delivery/qwen-integration/source-checks.json",
+      "path": "docs/04_데이터수집/갱신검수_20261031/공식문서_재조회기록.json",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T19:40:28+09:00",
-      "size_bytes": 1080
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 6585
     },
     {
-      "id": "docs/V2/delivery/response-policy.md",
-      "title": "산불 MVP의 확정 3단계 정책",
-      "path": "docs/V2/delivery/response-policy.md",
+      "id": "docs/04_데이터수집/갱신검수_20261031/산불MVP_10분갱신_검수가이드.md",
+      "title": "산불 MVP 데이터 재검수 — 10분 갱신 기준",
+      "path": "docs/04_데이터수집/갱신검수_20261031/산불MVP_10분갱신_검수가이드.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T22:41:13+09:00",
-      "size_bytes": 6340
+      "updated_at": "2026-11-02T20:53:35+09:00",
+      "size_bytes": 15609
     },
     {
-      "id": "docs/V2/delivery/ssh-access.md",
-      "title": "두 서버 SSH 접속 운영 기록",
-      "path": "docs/V2/delivery/ssh-access.md",
+      "id": "docs/04_데이터수집/데이터_수집과_구현_인계_가이드.md",
+      "title": "재난 데이터 수집과 구현 인계 가이드 Mac",
+      "path": "docs/04_데이터수집/데이터_수집과_구현_인계_가이드.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T17:44:39+09:00",
-      "size_bytes": 4323
+      "updated_at": "2026-11-02T20:53:35+09:00",
+      "size_bytes": 17678
     },
     {
-      "id": "docs/V2/delivery/tailnet-connectivity-evidence.json",
+      "id": "docs/04_데이터수집/자료/수집_스크립트_최초_검증_기록.json",
       "title": "{",
-      "path": "docs/V2/delivery/tailnet-connectivity-evidence.json",
+      "path": "docs/04_데이터수집/자료/수집_스크립트_최초_검증_기록.json",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T11:35:53+09:00",
-      "size_bytes": 7524
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 1255
     },
     {
-      "id": "docs/V2/delivery/tailnet-connectivity.md",
-      "title": "두 서버 Tailscale 연결 및 검증",
-      "path": "docs/V2/delivery/tailnet-connectivity.md",
+      "id": "docs/04_데이터수집/자료/수집_필드_규약_제안.json",
+      "title": "{",
+      "path": "docs/04_데이터수집/자료/수집_필드_규약_제안.json",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T11:37:55+09:00",
-      "size_bytes": 7797
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 936
     },
     {
-      "id": "docs/V2/delivery/tech-stack-slide.md",
-      "title": "기술 스택 발표 페이지",
-      "path": "docs/V2/delivery/tech-stack-slide.md",
+      "id": "docs/04_데이터수집/자료/원본_보관본_해시_목록.json",
+      "title": "[",
+      "path": "docs/04_데이터수집/자료/원본_보관본_해시_목록.json",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-11-01T03:10:42+09:00",
-      "size_bytes": 1302
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 7593
     },
     {
-      "id": "docs/V2/delivery/xgboost-training-data.md",
+      "id": "docs/04_데이터수집/자료/카탈로그/기존자료_설명.md",
+      "title": "재난 데이터 수집 카탈로그와 구룡마을 사례",
+      "path": "docs/04_데이터수집/자료/카탈로그/기존자료_설명.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 10023
+    },
+    {
+      "id": "docs/04_데이터수집/확보_자료와_수집_안내.md",
+      "title": "재난 데이터 수집 자료",
+      "path": "docs/04_데이터수집/확보_자료와_수집_안내.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:56:21+09:00",
+      "size_bytes": 10540
+    },
+    {
+      "id": "docs/05_AI모델과연구/Qwen과_XGBoost_설치와_사용법.md",
+      "title": "GPU 서버의 세 모델 실행 준비 결과",
+      "path": "docs/05_AI모델과연구/Qwen과_XGBoost_설치와_사용법.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 8166
+    },
+    {
+      "id": "docs/05_AI모델과연구/XGBoost_학습_데이터_확보와_구성.md",
       "title": "XGBoost 학습 데이터 확보와 첫 데이터셋",
-      "path": "docs/V2/delivery/xgboost-training-data.md",
+      "path": "docs/05_AI모델과연구/XGBoost_학습_데이터_확보와_구성.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T19:19:10+09:00",
-      "size_bytes": 12896
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 12920
     },
     {
-      "id": "docs/V2/delivery/xgboost-training-run.md",
+      "id": "docs/05_AI모델과연구/XGBoost_학습_실행_방법.md",
       "title": "XGBoost 학습 시작 방법",
-      "path": "docs/V2/delivery/xgboost-training-run.md",
+      "path": "docs/05_AI모델과연구/XGBoost_학습_실행_방법.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T20:00:14+09:00",
-      "size_bytes": 6371
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 6404
     },
     {
-      "id": "docs/V2/delivery/xgboost-training-verification.md",
-      "title": "첫 CUDA 학습 완료와 저장 모델 검증",
-      "path": "docs/V2/delivery/xgboost-training-verification.md",
+      "id": "docs/05_AI모델과연구/국내_산불_예측_모델_개선_실험_기록.md",
+      "title": "국내 산불 1·3·6시간 모델 개선 기록",
+      "path": "docs/05_AI모델과연구/국내_산불_예측_모델_개선_실험_기록.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T20:00:14+09:00",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 102682
+    },
+    {
+      "id": "docs/05_AI모델과연구/예측_목표와_학습_평가_채택_기준.md",
+      "title": "예측 목표와 학습·평가·채택 기준",
+      "path": "docs/05_AI모델과연구/예측_목표와_학습_평가_채택_기준.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:56:21+09:00",
+      "size_bytes": 5358
+    },
+    {
+      "id": "docs/05_AI모델과연구/최초_CUDA_학습과_저장_모델_검증.md",
+      "title": "첫 CUDA 학습 완료와 저장 모델 검증",
+      "path": "docs/05_AI모델과연구/최초_CUDA_학습과_저장_모델_검증.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
       "size_bytes": 6591
     },
     {
-      "id": "docs/V3/01-planning-baseline.md",
-      "title": "봉화지기 기획 기준",
-      "path": "docs/V3/01-planning-baseline.md",
+      "id": "docs/06_시연과검증/Qwen_사건_통합_결과와_추론_전_입력.md",
+      "title": "경보 포함 Qwen3 통합 결과 — 추론 입력 직전",
+      "path": "docs/06_시연과검증/Qwen_사건_통합_결과와_추론_전_입력.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-10-31T22:41:13+09:00",
-      "size_bytes": 29868
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 10936
+    },
+    {
+      "id": "docs/06_시연과검증/Qwen통합결과/Qwen_생성_요청.json",
+      "title": "{",
+      "path": "docs/06_시연과검증/Qwen통합결과/Qwen_생성_요청.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 3141
+    },
+    {
+      "id": "docs/06_시연과검증/Qwen통합결과/Qwen_생성_응답.json",
+      "title": "{",
+      "path": "docs/06_시연과검증/Qwen통합결과/Qwen_생성_응답.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 1146
+    },
+    {
+      "id": "docs/06_시연과검증/Qwen통합결과/검색_자료_전달_입력.json",
+      "title": "{",
+      "path": "docs/06_시연과검증/Qwen통합결과/검색_자료_전달_입력.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 8119
+    },
+    {
+      "id": "docs/06_시연과검증/Qwen통합결과/재생_시나리오_입력.json",
+      "title": "{",
+      "path": "docs/06_시연과검증/Qwen통합결과/재생_시나리오_입력.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 5895
+    },
+    {
+      "id": "docs/06_시연과검증/Qwen통합결과/추론_직전_통합_입력.json",
+      "title": "{",
+      "path": "docs/06_시연과검증/Qwen통합결과/추론_직전_통합_입력.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 10621
+    },
+    {
+      "id": "docs/06_시연과검증/Qwen통합결과/통합_실행_메타데이터.json",
+      "title": "{",
+      "path": "docs/06_시연과검증/Qwen통합결과/통합_실행_메타데이터.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 575
+    },
+    {
+      "id": "docs/06_시연과검증/Qwen통합결과/통합_자료_출처_확인.json",
+      "title": "[",
+      "path": "docs/06_시연과검증/Qwen통합결과/통합_자료_출처_확인.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 1080
+    },
+    {
+      "id": "docs/06_시연과검증/두_사용자_촬영_시나리오와_재생_방법.md",
+      "title": "A·B 촬영 시나리오와 지역 안내 파이프라인",
+      "path": "docs/06_시연과검증/두_사용자_촬영_시나리오와_재생_방법.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 9149
+    },
+    {
+      "id": "docs/06_시연과검증/실행근거/GPU_모델_호출_근거.json",
+      "title": "{",
+      "path": "docs/06_시연과검증/실행근거/GPU_모델_호출_근거.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 2642
+    },
+    {
+      "id": "docs/06_시연과검증/실행근거/MVP_일반_서버_검증_근거.json",
+      "title": "{",
+      "path": "docs/06_시연과검증/실행근거/MVP_일반_서버_검증_근거.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 23134
+    },
+    {
+      "id": "docs/06_시연과검증/실행근거/Tailnet_서버_통신_검증_근거.json",
+      "title": "{",
+      "path": "docs/06_시연과검증/실행근거/Tailnet_서버_통신_검증_근거.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 7524
+    },
+    {
+      "id": "docs/06_시연과검증/실행근거/개인별_정책_루프_최초_검증_근거.json",
+      "title": "{",
+      "path": "docs/06_시연과검증/실행근거/개인별_정책_루프_최초_검증_근거.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 26013
+    },
+    {
+      "id": "docs/06_시연과검증/실행근거/단말_음성_대화_검증_근거.json",
+      "title": "{",
+      "path": "docs/06_시연과검증/실행근거/단말_음성_대화_검증_근거.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 1640
+    },
+    {
+      "id": "docs/06_시연과검증/실행근거/분석_검색_실행_근거.json",
+      "title": "{",
+      "path": "docs/06_시연과검증/실행근거/분석_검색_실행_근거.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 2964
+    },
+    {
+      "id": "docs/06_시연과검증/실행근거/서버_환경_점검_근거.json",
+      "title": "{",
+      "path": "docs/06_시연과검증/실행근거/서버_환경_점검_근거.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 6615
+    },
+    {
+      "id": "docs/06_시연과검증/실행근거/앱_대화_API_실행_근거.json",
+      "title": "{",
+      "path": "docs/06_시연과검증/실행근거/앱_대화_API_실행_근거.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 1910
+    },
+    {
+      "id": "docs/06_시연과검증/실행근거/앱_연결_서버_배포_근거.json",
+      "title": "{",
+      "path": "docs/06_시연과검증/실행근거/앱_연결_서버_배포_근거.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 3229
+    },
+    {
+      "id": "docs/06_시연과검증/실행근거/촬영_모델_호출_메타데이터.json",
+      "title": "{",
+      "path": "docs/06_시연과검증/실행근거/촬영_모델_호출_메타데이터.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 1341
+    },
+    {
+      "id": "docs/06_시연과검증/실행근거/촬영_파이프라인_검증_결과.json",
+      "title": "{",
+      "path": "docs/06_시연과검증/실행근거/촬영_파이프라인_검증_결과.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 14290
+    },
+    {
+      "id": "docs/06_시연과검증/영덕_산불_촬영_자료의_출처와_한계.md",
+      "title": "촬영용 영덕 산불 자료와 출처",
+      "path": "docs/06_시연과검증/영덕_산불_촬영_자료의_출처와_한계.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 8053
+    },
+    {
+      "id": "docs/07_발표자료/2분_시연_영상_촬영_계획.md",
+      "title": "봉화지기 2분 시연 영상 계획",
+      "path": "docs/07_발표자료/2분_시연_영상_촬영_계획.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 7263
+    },
+    {
+      "id": "docs/07_발표자료/기술_스택_슬라이드_제작_기록.md",
+      "title": "기술 스택 발표 페이지",
+      "path": "docs/07_발표자료/기술_스택_슬라이드_제작_기록.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:53:35+09:00",
+      "size_bytes": 1418
+    },
+    {
+      "id": "docs/07_발표자료/발표_v1_디자인_통일_기록.md",
+      "title": "발표 v1 디자인 통일",
+      "path": "docs/07_발표자료/발표_v1_디자인_통일_기록.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 3348
+    },
+    {
+      "id": "docs/07_발표자료/아키텍처_그림_제작_기록.md",
+      "title": "원본 스타일의 현행 아키텍처",
+      "path": "docs/07_발표자료/아키텍처_그림_제작_기록.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 2608
+    },
+    {
+      "id": "docs/07_발표자료/아키텍처_발표_설명과_재생성.md",
+      "title": "봉화지기 발표용 아키텍처",
+      "path": "docs/07_발표자료/아키텍처_발표_설명과_재생성.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:53:35+09:00",
+      "size_bytes": 9969
+    },
+    {
+      "id": "docs/07_발표자료/제작도구/아키텍처_그림_수정_프롬프트.txt",
+      "title": "연결선 수정 1",
+      "path": "docs/07_발표자료/제작도구/아키텍처_그림_수정_프롬프트.txt",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 6050
+    },
+    {
+      "id": "docs/07_발표자료/제작도구/아키텍처_그림_최초_프롬프트.txt",
+      "title": "Use case: precise-object-edit / infographic-diagram.",
+      "path": "docs/07_발표자료/제작도구/아키텍처_그림_최초_프롬프트.txt",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 4811
+    },
+    {
+      "id": "docs/07_발표자료/제작도구/아키텍처_제작_출처와_산출물_해시.json",
+      "title": "{",
+      "path": "docs/07_발표자료/제작도구/아키텍처_제작_출처와_산출물_해시.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 2918
+    },
+    {
+      "id": "docs/07_발표자료/초기_발표_파일_보존_목록.json",
+      "title": "{",
+      "path": "docs/07_발표자료/초기_발표_파일_보존_목록.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 2490
+    },
+    {
+      "id": "docs/07_발표자료/초기_발표_페이지와_템플릿_안내.md",
+      "title": "봉화지기 발표자료",
+      "path": "docs/07_발표자료/초기_발표_페이지와_템플릿_안내.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 4133
+    },
+    {
+      "id": "docs/08_외부자원과라이선스/외부_자원과_라이선스_확인_안내.md",
+      "title": "외부 자원과 라이선스 확인 안내",
+      "path": "docs/08_외부자원과라이선스/외부_자원과_라이선스_확인_안내.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:51:22+09:00",
+      "size_bytes": 2094
+    },
+    {
+      "id": "docs/08_외부자원과라이선스/조사기록/Android_음성_자원_라이선스_확인_20261101.json",
+      "title": "{",
+      "path": "docs/08_외부자원과라이선스/조사기록/Android_음성_자원_라이선스_확인_20261101.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 3063
+    },
+    {
+      "id": "docs/08_외부자원과라이선스/조사기록/Python_패키지_버전과_라이선스_목록.json",
+      "title": "{",
+      "path": "docs/08_외부자원과라이선스/조사기록/Python_패키지_버전과_라이선스_목록.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 689836
+    },
+    {
+      "id": "docs/08_외부자원과라이선스/조사기록/Python_패키지_조사_범위.json",
+      "title": "{",
+      "path": "docs/08_외부자원과라이선스/조사기록/Python_패키지_조사_범위.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 6486
+    },
+    {
+      "id": "docs/08_외부자원과라이선스/조사기록/데이터와_콘텐츠_출처_조사.json",
+      "title": "{",
+      "path": "docs/08_외부자원과라이선스/조사기록/데이터와_콘텐츠_출처_조사.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 16560
+    },
+    {
+      "id": "docs/08_외부자원과라이선스/조사기록/라이선스_추가_확인_20261101.json",
+      "title": "{",
+      "path": "docs/08_외부자원과라이선스/조사기록/라이선스_추가_확인_20261101.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 266117
+    },
+    {
+      "id": "docs/08_외부자원과라이선스/조사기록/외부_자원_문서_검증_기록.json",
+      "title": "{",
+      "path": "docs/08_외부자원과라이선스/조사기록/외부_자원_문서_검증_기록.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 1691
+    },
+    {
+      "id": "docs/90_설계와회의이력/01_초기기획/서비스_목표와_사용자_시나리오.md",
+      "title": "서비스 목표와 사용자 시나리오",
+      "path": "docs/90_설계와회의이력/01_초기기획/서비스_목표와_사용자_시나리오.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 6747
+    },
+    {
+      "id": "docs/90_설계와회의이력/01_초기기획/초기_AI_역할과_서버_구성.md",
+      "title": "AI 역할과 서버 구성",
+      "path": "docs/90_설계와회의이력/01_초기기획/초기_AI_역할과_서버_구성.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 9193
+    },
+    {
+      "id": "docs/90_설계와회의이력/01_초기기획/초기_UI_UX_인계_항목.md",
+      "title": "UI UX 인계와 확인 항목",
+      "path": "docs/90_설계와회의이력/01_초기기획/초기_UI_UX_인계_항목.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 6829
+    },
+    {
+      "id": "docs/90_설계와회의이력/01_초기기획/초기_결정_사항과_회의_대조.md",
+      "title": "결정 사항과 회의 대조",
+      "path": "docs/90_설계와회의이력/01_초기기획/초기_결정_사항과_회의_대조.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 6728
+    },
+    {
+      "id": "docs/90_설계와회의이력/01_초기기획/초기_데이터_수집과_대응_흐름.md",
+      "title": "데이터 수집과 대응 흐름",
+      "path": "docs/90_설계와회의이력/01_초기기획/초기_데이터_수집과_대응_흐름.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 9714
+    },
+    {
+      "id": "docs/90_설계와회의이력/02_구현초기설계/MVP_실행_백로그_최초_계약.md",
+      "title": "V2 실행 계획과 작업 계약",
+      "path": "docs/90_설계와회의이력/02_구현초기설계/MVP_실행_백로그_최초_계약.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 26463
+    },
+    {
+      "id": "docs/90_설계와회의이력/02_구현초기설계/개인별_정책_갱신_루프_최초_구현.md",
+      "title": "개인별 대응 계획의 자동 갱신 루프",
+      "path": "docs/90_설계와회의이력/02_구현초기설계/개인별_정책_갱신_루프_최초_구현.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 14150
+    },
+    {
+      "id": "docs/90_설계와회의이력/02_구현초기설계/서버_스캐폴딩_구축_기록.md",
+      "title": "서버 프로젝트 스캐폴딩",
+      "path": "docs/90_설계와회의이력/02_구현초기설계/서버_스캐폴딩_구축_기록.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 11628
+    },
+    {
+      "id": "docs/90_설계와회의이력/02_구현초기설계/서비스_핵심과_개인화_설계.md",
+      "title": "재난 대응 비서 - 서비스 핵심 정리",
+      "path": "docs/90_설계와회의이력/02_구현초기설계/서비스_핵심과_개인화_설계.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 15129
+    },
+    {
+      "id": "docs/90_설계와회의이력/02_구현초기설계/실시간_서버_배치_초기안.md",
+      "title": "재난 대응 비서 - 실시간 서버 배치도",
+      "path": "docs/90_설계와회의이력/02_구현초기설계/실시간_서버_배치_초기안.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 4689
+    },
+    {
+      "id": "docs/90_설계와회의이력/02_구현초기설계/최초_서버와_K8s_상태_점검.md",
+      "title": "V2 인프라 상태 점검",
+      "path": "docs/90_설계와회의이력/02_구현초기설계/최초_서버와_K8s_상태_점검.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 9887
+    },
+    {
+      "id": "docs/90_설계와회의이력/02_구현초기설계/학습과_검증_흐름_초기안.md",
+      "title": "재난 대응 비서 - 학습·검증 흐름도",
+      "path": "docs/90_설계와회의이력/02_구현초기설계/학습과_검증_흐름_초기안.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 3714
+    },
+    {
+      "id": "docs/90_설계와회의이력/03_API_초안_0.1/API_인계_작업_검토.md",
+      "title": "앱 연동 API 계약과 인계 Job 재검토",
+      "path": "docs/90_설계와회의이력/03_API_초안_0.1/API_인계_작업_검토.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 6504
+    },
+    {
+      "id": "docs/90_설계와회의이력/03_API_초안_0.1/API별_요청과_응답_예제.md",
+      "title": "API별 경로와 사용법 — 0.1.0 초안",
+      "path": "docs/90_설계와회의이력/03_API_초안_0.1/API별_요청과_응답_예제.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 65665
+    },
+    {
+      "id": "docs/90_설계와회의이력/03_API_초안_0.1/명세와예제/API_초안_OpenAPI.yaml",
+      "title": "openapi: 3.1.0",
+      "path": "docs/90_설계와회의이력/03_API_초안_0.1/명세와예제/API_초안_OpenAPI.yaml",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 215282
+    },
+    {
+      "id": "docs/90_설계와회의이력/03_API_초안_0.1/명세와예제/API_초안_검증_결과.json",
+      "title": "{",
+      "path": "docs/90_설계와회의이력/03_API_초안_0.1/명세와예제/API_초안_검증_결과.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 637
+    },
+    {
+      "id": "docs/90_설계와회의이력/03_API_초안_0.1/명세와예제/API_초안_검증_의존성.txt",
+      "title": "openapi-spec-validator==0.7.2",
+      "path": "docs/90_설계와회의이력/03_API_초안_0.1/명세와예제/API_초안_검증_의존성.txt",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 63
+    },
+    {
+      "id": "docs/90_설계와회의이력/03_API_초안_0.1/명세와예제/API_초안_고정_요청과_응답.json",
+      "title": "{",
+      "path": "docs/90_설계와회의이력/03_API_초안_0.1/명세와예제/API_초안_고정_요청과_응답.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 106645
+    },
+    {
+      "id": "docs/90_설계와회의이력/03_API_초안_0.1/명세와예제/API_초안_화면_매핑.json",
+      "title": "{",
+      "path": "docs/90_설계와회의이력/03_API_초안_0.1/명세와예제/API_초안_화면_매핑.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 5191
+    },
+    {
+      "id": "docs/90_설계와회의이력/03_API_초안_0.1/앱_API_전체_계약_초안.md",
+      "title": "봉화지기 앱 API 계약 — 0.1.0 초안",
+      "path": "docs/90_설계와회의이력/03_API_초안_0.1/앱_API_전체_계약_초안.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 18102
+    },
+    {
+      "id": "docs/90_설계와회의이력/03_API_초안_0.1/화면별_API_연동_인계서.md",
+      "title": "앱팀 전달서 — 화면별 API 연동",
+      "path": "docs/90_설계와회의이력/03_API_초안_0.1/화면별_API_연동_인계서.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 17402
+    },
+    {
+      "id": "docs/90_설계와회의이력/04_후속기획안/서비스와_화면_기획_확정사항과_제안.md",
+      "title": "봉화지기 기획 기준",
+      "path": "docs/90_설계와회의이력/04_후속기획안/서비스와_화면_기획_확정사항과_제안.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 30336
+    },
+    {
+      "id": "docs/90_설계와회의이력/05_공유대화와화면기획/01_서비스_아이디어_탐색_이력.md",
+      "title": "01. 아이디어 탐색 전체 이력",
+      "path": "docs/90_설계와회의이력/05_공유대화와화면기획/01_서비스_아이디어_탐색_이력.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 14477
+    },
+    {
+      "id": "docs/90_설계와회의이력/05_공유대화와화면기획/02_개인_맞춤_대피_추천_구상.md",
+      "title": "02. 서비스와 개인 맞춤형 대피 추천",
+      "path": "docs/90_설계와회의이력/05_공유대화와화면기획/02_개인_맞춤_대피_추천_구상.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 6456
+    },
+    {
+      "id": "docs/90_설계와회의이력/05_공유대화와화면기획/03_데이터와_AI_구성_검토.md",
+      "title": "03. 데이터·AI·경로 구성",
+      "path": "docs/90_설계와회의이력/05_공유대화와화면기획/03_데이터와_AI_구성_검토.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 7196
+    },
+    {
+      "id": "docs/90_설계와회의이력/05_공유대화와화면기획/04_모바일_화면과_전환_구상.md",
+      "title": "04. 모바일 화면 구성과 전환",
+      "path": "docs/90_설계와회의이력/05_공유대화와화면기획/04_모바일_화면과_전환_구상.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 6701
+    },
+    {
+      "id": "docs/90_설계와회의이력/05_공유대화와화면기획/05_음성_대피_화면_구상.md",
+      "title": "05. 공유 대화의 음성 대피 화면",
+      "path": "docs/90_설계와회의이력/05_공유대화와화면기획/05_음성_대피_화면_구상.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 3916
+    },
+    {
+      "id": "docs/90_설계와회의이력/05_공유대화와화면기획/06_발표_색상과_시연_구상.md",
+      "title": "06. 발표 색상과 MVP 시연",
+      "path": "docs/90_설계와회의이력/05_공유대화와화면기획/06_발표_색상과_시연_구상.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 3871
+    },
+    {
+      "id": "docs/90_설계와회의이력/05_공유대화와화면기획/07_요구사항_변경과_미결정_항목.md",
+      "title": "07. 요구사항, 이전 안, 미결정",
+      "path": "docs/90_설계와회의이력/05_공유대화와화면기획/07_요구사항_변경과_미결정_항목.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 4906
+    },
+    {
+      "id": "docs/90_설계와회의이력/05_공유대화와화면기획/공유_대화_정리_안내.md",
+      "title": "HeoNey — 해커톤 아이디어 대화 정리",
+      "path": "docs/90_설계와회의이력/05_공유대화와화면기획/공유_대화_정리_안내.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 5396
+    },
+    {
+      "id": "docs/90_설계와회의이력/05_공유대화와화면기획/공유_대화_출처와_원문_보존_범위.md",
+      "title": "공유 대화 출처와 보존 범위",
+      "path": "docs/90_설계와회의이력/05_공유대화와화면기획/공유_대화_출처와_원문_보존_범위.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 6381
+    },
+    {
+      "id": "docs/90_설계와회의이력/05_공유대화와화면기획/공유_대화의_외부_출처_목록.md",
+      "title": "원문 외부 출처 목록",
+      "path": "docs/90_설계와회의이력/05_공유대화와화면기획/공유_대화의_외부_출처_목록.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 21567
+    },
+    {
+      "id": "docs/90_설계와회의이력/05_공유대화와화면기획/대화원문/공유_대화_원문_01.md",
+      "title": "대화 원문 01 — 관광·지하철·해커톤 관점",
+      "path": "docs/90_설계와회의이력/05_공유대화와화면기획/대화원문/공유_대화_원문_01.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 30564
+    },
+    {
+      "id": "docs/90_설계와회의이력/05_공유대화와화면기획/대화원문/공유_대화_원문_02.md",
+      "title": "대화 원문 02 — 청년 경험·아동 서비스",
+      "path": "docs/90_설계와회의이력/05_공유대화와화면기획/대화원문/공유_대화_원문_02.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 35609
+    },
+    {
+      "id": "docs/90_설계와회의이력/05_공유대화와화면기획/대화원문/공유_대화_원문_03.md",
+      "title": "대화 원문 03 — 아동 보호 고도화·QR 환승",
+      "path": "docs/90_설계와회의이력/05_공유대화와화면기획/대화원문/공유_대화_원문_03.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 44749
+    },
+    {
+      "id": "docs/90_설계와회의이력/05_공유대화와화면기획/대화원문/공유_대화_원문_04.md",
+      "title": "대화 원문 04 — 고령 운전·폭염·재난 비서",
+      "path": "docs/90_설계와회의이력/05_공유대화와화면기획/대화원문/공유_대화_원문_04.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 42230
+    },
+    {
+      "id": "docs/90_설계와회의이력/05_공유대화와화면기획/대화원문/공유_대화_원문_05.md",
+      "title": "대화 원문 05 — 고립 문제·일상 아이디어·추천 주제",
+      "path": "docs/90_설계와회의이력/05_공유대화와화면기획/대화원문/공유_대화_원문_05.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 39569
+    },
+    {
+      "id": "docs/90_설계와회의이력/05_공유대화와화면기획/대화원문/공유_대화_원문_06.md",
+      "title": "대화 원문 06 — 발표 색상·데이터·개인화",
+      "path": "docs/90_설계와회의이력/05_공유대화와화면기획/대화원문/공유_대화_원문_06.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 38500
+    },
+    {
+      "id": "docs/90_설계와회의이력/05_공유대화와화면기획/대화원문/공유_대화_원문_07.md",
+      "title": "대화 원문 07 — 모바일 화면·최종 음성 UX",
+      "path": "docs/90_설계와회의이력/05_공유대화와화면기획/대화원문/공유_대화_원문_07.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 64948
+    },
+    {
+      "id": "docs/90_설계와회의이력/05_공유대화와화면기획/대화원문/메시지_보존_목록.json",
+      "title": "{",
+      "path": "docs/90_설계와회의이력/05_공유대화와화면기획/대화원문/메시지_보존_목록.json",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:47:22+09:00",
+      "size_bytes": 19299
+    },
+    {
+      "id": "docs/90_설계와회의이력/05_공유대화와화면기획/대화원문/진행_메시지_원문.md",
+      "title": "대화 중 진행 안내 원문",
+      "path": "docs/90_설계와회의이력/05_공유대화와화면기획/대화원문/진행_메시지_원문.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 6650
+    },
+    {
+      "id": "docs/90_설계와회의이력/05_공유대화와화면기획/모바일_다섯_화면_기획서.md",
+      "title": "봉화 지기 모바일 화면 기획서",
+      "path": "docs/90_설계와회의이력/05_공유대화와화면기획/모바일_다섯_화면_기획서.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:49:26+09:00",
+      "size_bytes": 19693
+    },
+    {
+      "id": "docs/V2/01_서비스_핵심_정리.md",
+      "title": "문서 이동 안내 — 서비스 핵심과 개인화 설계",
+      "path": "docs/V2/01_서비스_핵심_정리.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:53:35+09:00",
+      "size_bytes": 457
+    },
+    {
+      "id": "docs/V2/02_실시간_서버_배치도.md",
+      "title": "문서 이동 안내 — 실시간 서버 배치 초기안",
+      "path": "docs/V2/02_실시간_서버_배치도.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:53:35+09:00",
+      "size_bytes": 448
+    },
+    {
+      "id": "docs/V2/03_학습_검증_흐름도.md",
+      "title": "문서 이동 안내 — 학습과 검증 흐름 초기안",
+      "path": "docs/V2/03_학습_검증_흐름도.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:53:35+09:00",
+      "size_bytes": 448
+    },
+    {
+      "id": "docs/V2/delivery/app-api-contract.md",
+      "title": "문서 이동 안내 — 앱 API 전체 계약 초안",
+      "path": "docs/V2/delivery/app-api-contract.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T20:53:35+09:00",
+      "size_bytes": 435
+    },
+    {
+      "id": "docs/문서안내.md",
+      "title": "봉화지기 문서 안내",
+      "path": "docs/문서안내.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-11-02T21:00:47+09:00",
+      "size_bytes": 18376
     }
   ],
   "path": "/Users/hongyongjae/Desktop/helloworld/BONGHWAJIGI/.loom/memory/docs-index.json"

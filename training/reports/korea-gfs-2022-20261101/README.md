@@ -83,4 +83,4 @@ training/.venv/bin/python -m bonghwa_training.korea_gfs_experiment \
   --output "$GFS_MODEL_OUTPUT" --run-frozen
 ```
 
-외부 자원·API·조건·가공 고지는 [전체 라이선스 목록20절](../../../docs/V2/delivery/external-resources-and-licenses.md#20-국내2022-비교용-gfs-과거-예보-실제-취득변환--2026-11-01)에 추가했다. NOAA 자료는 제공기관의 산불 예측·개인 대응 판단 보증을 뜻하지 않는다.
+외부 자원·API·조건·가공 고지는 [전체 라이선스 목록20절](../../../docs/08_외부자원과라이선스/외부_자원과_라이선스_확인_안내.md)에 추가했다. NOAA 자료는 제공기관의 산불 예측·개인 대응 판단 보증을 뜻하지 않는다.
