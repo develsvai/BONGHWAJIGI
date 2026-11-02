@@ -1,0 +1,33 @@
+{
+  "before": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "c002350615696d6dc6490f9099af3fbf23d4e56a",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/events.jsonl",
+      ".loom/jobs/job-20261031-002017-v2-fe3bfad0/job.json"
+    ],
+    "untracked_files": [
+      ".loom/job-runs/job-run-20261102-113941-job-20261031-002017-v2-fe3bfad0-31d36285/",
+      ".loom/task-definitions/task-def-20261102-113933-docs-07eab357/",
+      ".loom/task-runs/task-run-20261102-113941-task-def-20261102-113933-docs-07eab357-44c6f55d/",
+      ".loom/tasks/task-20261102-113933-docs-771d91d9/"
+    ],
+    "captured_at": "2026-11-02T11:39:41+00:00"
+  },
+  "after": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "ab02b08a57b2a7ad7ae949b004d548401ea9ce9d",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/job-runs/job-run-20261102-113941-job-20261031-002017-v2-fe3bfad0-31d36285/job-run.json",
+      ".loom/task-definitions/task-def-20261102-113933-docs-07eab357/task-definition.json"
+    ],
+    "untracked_files": [],
+    "captured_at": "2026-11-02T12:04:22+00:00"
+  }
+}

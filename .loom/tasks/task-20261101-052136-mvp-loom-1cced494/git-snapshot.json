@@ -1,0 +1,33 @@
+{
+  "before": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "c68f678fbffeb6b4aad10d1269e625df7ebe789d",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/events.jsonl",
+      ".loom/job-runs/job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02/job-run.json",
+      ".loom/jobs/job-20261031-002017-v2-fe3bfad0/job.json"
+    ],
+    "untracked_files": [
+      ".loom/task-definitions/task-def-20261101-052136-mvp-loom-6711235b/",
+      ".loom/task-runs/task-run-20261101-052143-task-def-20261101-052136-mvp-loom-6711235b-1c6f1a4a/",
+      ".loom/tasks/task-20261101-052136-mvp-loom-1cced494/"
+    ],
+    "captured_at": "2026-11-01T05:21:43+00:00"
+  },
+  "after": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "19f5868680e82c409ff0c66e346fba07683abd0f",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/job-runs/job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02/job-run.json",
+      ".loom/task-definitions/task-def-20261101-052136-mvp-loom-6711235b/task-definition.json"
+    ],
+    "untracked_files": [],
+    "captured_at": "2026-11-01T05:40:00+00:00"
+  }
+}

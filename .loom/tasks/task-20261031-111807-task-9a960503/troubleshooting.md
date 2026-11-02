@@ -61,3 +61,7 @@ Walker3조건 원본은 Current Timestep21595, 최종stats6.00h, filename25195�
 - 서버 ELMFIRE 환경에는 rasterio가 있으나 GRIB driver가 없어 읽기 probe가 실패했다. 패키지/서비스를 바꾸지 않고 기존 로컬 Rasterio1.5.2/GDAL3.12.2로71개 원격자 NPZ를 만들고 서버에 전달했다. 실패·성공probe를 모두 보존했다.
 - acquisition의 source_cohort_plan_sha256는 수집요청 inventory, context의 동명필드는 원자료 plan을 가리킨다. 단계별 source report/plan 해시와 실제 cohort 파일SHA를 별도로 따라가 일치 확인했다. converter의 index자동재검사 누락은355개원본의최종독립SHA대조로확인했으며 동결코드는 결과후변경하지않았다.
 - GFS는20~28km급 공간 정보를 반복 표본화한다. 결측0/격자거리감소가 실제국지기상정확도를보장하지않는다. 최초게시시각·구면datum변환·실측화선정답은여전히미검증이다.
+
+## 2026-11-01 확인 및 남은 범위
+
+실제국내자료확보·GOFER/ELMFIRE·57+45회 추가학습·542시험과 독립대조는 종료한 연구기록이다. 사용자지시에 따라 이 실행을 완료하고 미달성운영목표는 새대기계약으로 분리한다. 사용자 지시에 따라 기존 실행을 종료 기록하며 실제 프로세스 중단·운영 변경은 하지 않는다.

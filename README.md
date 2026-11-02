@@ -10,7 +10,7 @@
 
 | 내정보 설정 | 일상 홈 | 재난 대응 |
 | --- | --- | --- |
-| <img src="docs/assets/readme/mobile-profile.jpg" width="280" alt="이동 능력·계단 이용·선호 안내·시청각 지원을 설정하는 내정보 화면"> | <img src="docs/assets/readme/mobile-home.jpg" width="280" alt="오늘의 행동요령과 사용자별 사전 준비를 보여 주는 홈 화면"> | <img src="docs/assets/readme/mobile-response.jpg" width="280" alt="상황 질문·확인된 현재 상태·개인별 행동요령을 보여 주는 재난 대응 화면"> |
+| <img src="docs/01_서비스와설계/화면예시/앱_프로필_화면.jpg" width="280" alt="이동 능력·계단 이용·선호 안내·시청각 지원을 설정하는 내정보 화면"> | <img src="docs/01_서비스와설계/화면예시/앱_홈_화면.jpg" width="280" alt="오늘의 행동요령과 사용자별 사전 준비를 보여 주는 홈 화면"> | <img src="docs/01_서비스와설계/화면예시/앱_개인별_대응_화면.jpg" width="280" alt="상황 질문·확인된 현재 상태·개인별 행동요령을 보여 주는 재난 대응 화면"> |
 
 발표자료에 수록한 모바일 화면 예시입니다. 화면 속 날씨·상태·경로 문구는 예시이며, 실제 연결·검증 범위는 아래 구현 표를 기준으로 합니다.
 
@@ -56,7 +56,7 @@
 사용자가 제공한 아키텍처 이미지입니다. 원본을 수정하지 않고 저장소에 포함했습니다.
 
 <p align="center">
-  <img src="docs/V2/delivery/architecture-slides/output/original-style-current.png" width="720" alt="공식 경보와 분석 큐를 분리하고 일반 서버의 정책·DB 및 GPU 서버의 Qwen·임베딩을 연결하는 봉화지기 아키텍처">
+  <img src="docs/07_발표자료/아키텍처/현재_MVP_아키텍처.png" width="720" alt="공식 경보와 분석 큐를 분리하고 일반 서버의 정책·DB 및 GPU 서버의 Qwen·임베딩을 연결하는 봉화지기 아키텍처">
 </p>
 
 그림의 **‘3 위험’은 현재 확정 명칭인 ‘3 위급’**에 해당합니다. XGBoost 점선은 연구 후 연결 예정 경로이며 현재 서비스 호출 경로가 아닙니다. 그림의 ‘알림’도 현재는 FCM 모의 전달과 앱의 변경 조회·로컬 알림을 포함합니다.
@@ -130,7 +130,7 @@
 | 사용자 입력 | 앱 API의 동의·프로필·기기·위치·현재 상태 / 확인된 대화 답변 | 위치·현재 상태를 최신 자료로 갱신. 사전 프로필과 현재 동행·이동 여부를 구분 |
 | A/B 촬영 조건 | `data/filming/yeongdeok-20250325.json` | 위치·국소 위험·경로 상태는 명시적인 합성 입력. 실제 GPS·기관 관측·모델 예측으로 표시하지 않음 |
 
-[촬영 자료 출처와 사용 범위](docs/V2/delivery/filming-sources.md)에 원문 URL·시각 정밀도·미확보 자료·이용조건을 정리했습니다. 공식 자료 6개와 합성 조건을 분리하며, 사후 분석도 포함하므로 당시 정보만으로 수행한 예측 백테스트라고 주장하지 않습니다.
+[촬영 자료 출처와 사용 범위](docs/06_시연과검증/영덕_산불_촬영_자료의_출처와_한계.md)에 원문 URL·시각 정밀도·미확보 자료·이용조건을 정리했습니다. 공식 자료 6개와 합성 조건을 분리하며, 사후 분석도 포함하므로 당시 정보만으로 수행한 예측 백테스트라고 주장하지 않습니다.
 
 RSS 검색은 기본 최대 5건, 기준 시각 이전 7일 범위를 사용합니다. 미래 게시물·기간 밖 자료·같은 URL은 걸러냅니다. 결과가 없으면 `no_results`, 실패하면 `unavailable`로 남기고 저장 자료로 계속 진행합니다. 과거 촬영 질의에서는 **웹 결과 0건·저장 근거 5건**을 사용한 검증도 있습니다. 인터넷을 호출한 것과 새 근거를 확보한 것을 구분합니다.
 
@@ -144,7 +144,7 @@ RSS 검색은 기본 최대 5건, 기준 시각 이전 7일 범위를 사용합�
 
 ### 학습·확산 연구용 데이터
 
-아래는 **별도 연구 환경의 확보 경로**입니다. 현재 서비스가 이 자료를 실시간 개인 예측으로 제공한다는 뜻은 아닙니다. 최신 확보·비교 상태와 재현 방법은 [학습 README](training/README.md)와 [모델 개선 기록](docs/V2/delivery/korea-wildfire-improvement.md)을 따릅니다.
+아래는 **별도 연구 환경의 확보 경로**입니다. 현재 서비스가 이 자료를 실시간 개인 예측으로 제공한다는 뜻은 아닙니다. 최신 확보·비교 상태와 재현 방법은 [학습 README](training/README.md)와 [모델 개선 기록](docs/05_AI모델과연구/국내_산불_예측_모델_개선_실험_기록.md)을 따릅니다.
 
 | 분류 | 출처·경로 | 사용 범위 |
 | --- | --- | --- |
@@ -188,7 +188,7 @@ MVP Compose의 outbox 정상 재전달 간격은 60초이며 브로커 전송 �
 | 2 | 대피 | 대피 필요성과 이동 가능 조건을 확인하고 개인별 이동·조력 준비 안내 |
 | 3 | 위급 | 즉시 위험·탈출 곤란 등 확인된 조건에 맞춰 안전 확보·긴급 도움 요청 안내 |
 
-상세 조건과 하향·해제 처리의 정본은 [3단계 대응 정책](docs/V2/delivery/response-policy.md)과 [실행 규칙](src/bonghwajigi/policy/three_stage.py)입니다. 점수가 낮다는 이유로 자동으로 ‘안전’이나 하향을 선언하지 않습니다. 3단계라고 해서 서버가 자동으로 119에 전화하는 것도 아닙니다.
+상세 조건과 하향·해제 처리의 정본은 [3단계 대응 정책](docs/01_서비스와설계/대응_3단계와_개인별_정책.md)과 [실행 규칙](src/bonghwajigi/policy/three_stage.py)입니다. 점수가 낮다는 이유로 자동으로 ‘안전’이나 하향을 선언하지 않습니다. 3단계라고 해서 서버가 자동으로 119에 전화하는 것도 아닙니다.
 
 프로필의 ‘보호할 어린이 있음’은 지금 아이와 함께 있다는 뜻이 아닙니다. 보조기구 사용도 현재 이동 불가와 다릅니다. 대화에서 추출한 상태는 사용자가 확인해야 저장하며, **확인 전에는 정책 입력을 바꾸지 않습니다.**
 
@@ -218,7 +218,7 @@ curl -i https://inno-server-011.tail2dac17.ts.net/health/ready
 
 ### SSH 터널을 사용하는 대안
 
-이미 관리자에게 SSH 권한을 받은 개발 컴퓨터에서 실행합니다. 별칭은 [SSH 접속 문서](docs/V2/delivery/ssh-access.md)의 기존 설정을 사용합니다.
+이미 관리자에게 SSH 권한을 받은 개발 컴퓨터에서 실행합니다. 별칭은 [SSH 접속 문서](docs/02_설치와운영/서버_SSH_접속_방법.md)의 기존 설정을 사용합니다.
 
 ```sh
 ssh -N -o ExitOnForwardFailure=yes \
@@ -240,7 +240,7 @@ uv sync --frozen --extra server --extra collector --group api-contract
 test -e .env || cp .env.example .env
 ```
 
-루트의 CPU 개발 설치는 GPU 모델 가중치를 내려받지 않습니다. 앱 소스가 필요한 경우에만 `git submodule update --init --recursive apps/mobile`을 실행합니다. 앱 빌드·키 설정은 [서브모듈·빌드 안내](docs/V2/delivery/mobile-submodule-deployment.md)를 따릅니다.
+루트의 CPU 개발 설치는 GPU 모델 가중치를 내려받지 않습니다. 앱 소스가 필요한 경우에만 `git submodule update --init --recursive apps/mobile`을 실행합니다. 앱 빌드·키 설정은 [서브모듈·빌드 안내](docs/02_설치와운영/모바일_서브모듈_빌드와_단말_검증.md)를 따릅니다.
 
 ### 2. 환경설정 (.env)
 
@@ -332,7 +332,7 @@ curl -i http://127.0.0.1:8000/health/ready
 
 GPU 토큰·모델이 준비되지 않으면 API·규칙 기반 경로와 AI 분석의 상태가 다를 수 있습니다. **일반 서버 readiness 200은 GPU 성공을 보장하지 않습니다.** 실제 분석 완료는 작업 조회 결과, Qwen 상태, GPU readiness를 각각 확인합니다. 기본 설치 계정 등록은 꺼져 있으며 관리자 계정 발급 도구 또는 사설망 simulation 등록 설정이 필요합니다.
 
-이미 배포된 일반 서버에서는 새 설정을 생성하지 않고 `/home1/ncloud/.config/bonghwajigi/general.env`와 기존 볼륨을 사용합니다. 새 로컬 설정으로 운영 DB 비밀번호를 교체하거나 `down -v`로 자료를 지우지 않습니다. 상시 실행·복구 설정은 [일반 서버 운영 기록](docs/V2/delivery/mvp-server-runbook.md), 현재 Tailnet HTTPS·앱 등록은 [후속 배포 기록](docs/V2/delivery/mobile-server-deployment.md)을 함께 확인합니다.
+이미 배포된 일반 서버에서는 새 설정을 생성하지 않고 `/home1/ncloud/.config/bonghwajigi/general.env`와 기존 볼륨을 사용합니다. 새 로컬 설정으로 운영 DB 비밀번호를 교체하거나 `down -v`로 자료를 지우지 않습니다. 상시 실행·복구 설정은 [일반 서버 운영 기록](docs/02_설치와운영/일반_서버_실행과_복구.md), 현재 Tailnet HTTPS·앱 등록은 [후속 배포 기록](docs/02_설치와운영/앱_연결용_서버_배포와_HTTPS.md)을 함께 확인합니다.
 
 ## 시나리오 재생과 모델 사용
 
@@ -370,7 +370,7 @@ python tools/filming_scenario.py all \
   --bundle /accounts/filming/yeongdeok-20250325.json
 ```
 
-이 명령은 `prepare → trigger → verify`를 실행합니다. **동일 `--state` 파일은 후속 단계의 계정 정보를 보관하므로 유지하고, 독립 실행은 새 파일명을 사용합니다.** A/B 프로필과 위치·경로 조건은 합성이며, 기존 휴대폰 계정에 적용하는 `--phone-user` 옵션은 대상 사용자를 확인한 운영자만 사용합니다. [촬영 파이프라인](docs/V2/delivery/filming-scenario-pipeline.md)에 단계별 명령과 실제 모델·단말 검증 범위를 남겼습니다.
+이 명령은 `prepare → trigger → verify`를 실행합니다. **동일 `--state` 파일은 후속 단계의 계정 정보를 보관하므로 유지하고, 독립 실행은 새 파일명을 사용합니다.** A/B 프로필과 위치·경로 조건은 합성이며, 기존 휴대폰 계정에 적용하는 `--phone-user` 옵션은 대상 사용자를 확인한 운영자만 사용합니다. [촬영 파이프라인](docs/06_시연과검증/두_사용자_촬영_시나리오와_재생_방법.md)에 단계별 명령과 실제 모델·단말 검증 범위를 남겼습니다.
 
 ### GPU 모델 직접 호출
 
@@ -384,7 +384,7 @@ cd /home1/ncloud/bonghwajigi
 .venv-gpu/bin/python tools/gpu_client.py generate --text "제공된 근거를 짧게 정리하세요."
 ```
 
-모델·고정 revision·토큰 예산·GPU 잠금·학습과의 자원 분리는 [GPU 준비 문서](docs/V2/delivery/gpu-model-readiness.md)를 따릅니다. README 확인을 위해 학습이나 모델 서비스를 중단할 필요는 없습니다.
+모델·고정 revision·토큰 예산·GPU 잠금·학습과의 자원 분리는 [GPU 준비 문서](docs/05_AI모델과연구/Qwen과_XGBoost_설치와_사용법.md)를 따릅니다. README 확인을 위해 학습이나 모델 서비스를 중단할 필요는 없습니다.
 
 ## 검증과 장애 확인
 
@@ -401,9 +401,9 @@ uv sync --project training --frozen
 uv run --project training --no-sync pytest training/tests
 ```
 
-DB 통합시험은 별도 테스트 DB를 준비하고 `BONGHWA_TEST_DATABASE_URL`을 설정해야 합니다. 설정이 없으면 해당 시험은 skip되며, 일반 pytest 통과를 실제 PostgreSQL 통합 검증 완료로 해석하지 않습니다. 운영 DB를 테스트 대상으로 사용하지 않습니다. `validate_app_api.py`는 이전 `0.1.0-draft` 계약 검사이며, 현재 실행 계약은 [`mvp-openapi.json`](docs/V2/delivery/api/mvp-openapi.json)입니다.
+DB 통합시험은 별도 테스트 DB를 준비하고 `BONGHWA_TEST_DATABASE_URL`을 설정해야 합니다. 설정이 없으면 해당 시험은 skip되며, 일반 pytest 통과를 실제 PostgreSQL 통합 검증 완료로 해석하지 않습니다. 운영 DB를 테스트 대상으로 사용하지 않습니다. `validate_app_api.py`는 이전 `0.1.0-draft` 계약 검사이며, 현재 실행 계약은 [`mvp-openapi.json`](docs/03_API와앱연동/명세와예제/현재_실행_OpenAPI.json)입니다.
 
-최근 촬영 흐름은 실제 PostgreSQL 회귀 **141개**, 실제 임베딩·검색·Qwen 사건 통합·대화 확인·정책 갱신을 검증했습니다. 긴급 큐 입력 후 경보 API 노출은 A 1.553초/B 1.564초였고 Qwen 통합 전에 확인했습니다. **합성 시나리오의 서버 API 측정값이며 휴대폰 알림의 종단 지연·운영 SLA가 아닙니다.** [실행 근거](docs/V2/delivery/filming-pipeline-verification.json)와 [모델 메타데이터](docs/V2/delivery/filming-model-metadata.json)를 확인할 수 있습니다.
+최근 촬영 흐름은 실제 PostgreSQL 회귀 **141개**, 실제 임베딩·검색·Qwen 사건 통합·대화 확인·정책 갱신을 검증했습니다. 긴급 큐 입력 후 경보 API 노출은 A 1.553초/B 1.564초였고 Qwen 통합 전에 확인했습니다. **합성 시나리오의 서버 API 측정값이며 휴대폰 알림의 종단 지연·운영 SLA가 아닙니다.** [실행 근거](docs/06_시연과검증/실행근거/촬영_파이프라인_검증_결과.json)와 [모델 메타데이터](docs/06_시연과검증/실행근거/촬영_모델_호출_메타데이터.json)를 확인할 수 있습니다.
 
 ### 증상별 확인
 
@@ -425,9 +425,11 @@ sudo docker compose --env-file /home1/ncloud/.config/bonghwajigi/general.env \
   -f deploy/compose/mvp.yaml logs --tail 50 outbox urgent analysis policy integration delivery
 ```
 
+<a id="external-resources"></a>
+
 ## 사용한 모델·데이터·외부 자원과 라이선스
 
-서비스에 연결된 자원과 별도 학습·확산 연구 자원을 함께 표기합니다. 모델의 입출력은 [AI 역할](#처리-흐름과-ai-역할), 데이터 확보 경로와 실제·합성 구분은 [데이터 출처](#현재-데이터를-가져오는-곳)를 참고하세요. Python 패키지의 정확한 판본과 설치·라이선스 증거는 [패키지 조사 기록](docs/V2/delivery/external-resources/python-inventory.json), [배포 메타데이터 보완](docs/V2/delivery/external-resources/supplemental-verification-20261101.json)에 있습니다. 이 기록은 조사 시점의 자료이며 현재 모든 전이 의존성의 완전한 SBOM을 뜻하지 않습니다.
+서비스에 연결된 자원과 별도 학습·확산 연구 자원을 함께 표기합니다. 모델의 입출력은 [AI 역할](#처리-흐름과-ai-역할), 데이터 확보 경로와 실제·합성 구분은 [데이터 출처](#현재-데이터를-가져오는-곳)를 참고하세요. Python 패키지의 정확한 판본과 설치·라이선스 증거는 [패키지 조사 기록](docs/08_외부자원과라이선스/조사기록/Python_패키지_버전과_라이선스_목록.json), [배포 메타데이터 보완](docs/08_외부자원과라이선스/조사기록/라이선스_추가_확인_20261101.json)에 있습니다. 이 기록은 조사 시점의 자료이며 현재 모든 전이 의존성의 완전한 SBOM을 뜻하지 않습니다.
 
 | 구분 | 명칭 | 용도 | 라이선스·이용 조건 |
 | --- | --- | --- | --- |
@@ -450,14 +452,14 @@ sudo docker compose --env-file /home1/ncloud/.config/bonghwajigi/general.env \
 | 데이터·호스팅 | Microsoft Planetary Computer의 MODIS · ESA CCI · Copernicus DEM | 보조 화재 관측·토지피복·고도·경사 | 호스팅 서비스 약관과 원제품 조건 별도. STAC의 `other`를 단일 오픈 라이선스로 해석하지 않음 |
 | 데이터 | NASA FIRMS · geoBoundaries/Natural Earth · LANDFIRE | 보조 화재·국가 경계·연료/수관 연구 입력 | FIRMS 인용·사용조건, 경계의 제품별 조건 적용. 확보한 Natural Earth 경계·LANDFIRE 공개 래스터는 Public Domain 근거 보존 |
 | 연구 소프트웨어 | ELMFIRE 1.1 | 바람·지형 기반 확산 시뮬레이션 연구. 서비스 미연결 | 확보 판본은 [AGPL-3.0 + Commons Clause](training/reports/gofer-hindcast-20261101/endpoint-diagnostic/source/LICENSE.md), [상업 이용 별도 계약](training/reports/gofer-hindcast-20261101/endpoint-diagnostic/source/COMMERCIAL_LICENSE.md) |
-| 공식 자료 | 정책브리핑 · 기상청 PDF · 국민안전24 · 지자체 행동요령 | 과거 경보·기상 맥락·기본/개인 준비 지침 | 정책브리핑 해당 텍스트: 공공누리 1유형. 나머지는 [자료별 출처·조건](docs/V2/delivery/filming-sources.md) 적용. 재이용 유형 미확인 자료는 짧은 자체 요약 |
+| 공식 자료 | 정책브리핑 · 기상청 PDF · 국민안전24 · 지자체 행동요령 | 과거 경보·기상 맥락·기본/개인 준비 지침 | 정책브리핑 해당 텍스트: 공공누리 1유형. 나머지는 [자료별 출처·조건](docs/06_시연과검증/영덕_산불_촬영_자료의_출처와_한계.md) 적용. 재이용 유형 미확인 자료는 짧은 자체 요약 |
 | 공식 자료 | 안전한TV 산불 행동요령 | 이전 검색·정책 근거 자료 | 해당 자료의 공공누리 4유형(출처표시·상업적 이용금지·변경금지). 별도 저작물 조건 확인 |
 | 앱 외부 자원 | NAVER Maps Android SDK · React Native 연결 라이브러리 | 앱 배경 지도 표시 | NAVER Maps 약관·SDK 고지 / `@mj-studio/react-native-naver-map`: MIT |
-| 앱 외부 자원 | expo-speech-recognition · expo-font · Android SpeechRecognizer | 단말 음성 인식·서체 로딩. 서버에는 텍스트 전달 | 연결 라이브러리: MIT / 단말 음성 서비스 제공자 조건 별도. [확인 기록](docs/V2/delivery/external-resources/android-voice-resources-20261101.json) |
+| 앱 외부 자원 | expo-speech-recognition · expo-font · Android SpeechRecognizer | 단말 음성 인식·서체 로딩. 서버에는 텍스트 전달 | 연결 라이브러리: MIT / 단말 음성 서비스 제공자 조건 별도. [확인 기록](docs/08_외부자원과라이선스/조사기록/Android_음성_자원_라이선스_확인_20261101.json) |
 | 서체 | 대한민국정부상징체 R | 앱 로고 서체 | [문화체육관광부](https://www.mcst.go.kr/site/s_about/intro/symbol.jsp) 공공누리 4유형. 영리 목적 이용은 별도 협의 |
 | 사전 보유 코드 | 해당 없음 | 행사 개회식 전 보유 코드 반입 없음 | 사용자 확인. 외부 모델·데이터·라이브러리 이용과 별도 항목 |
 
-각 자원의 저작권·라이선스·출처 고지를 보존합니다. 데이터 다운로드나 API 호출이 가능하다는 사실만으로 재배포·상업 이용이 허용되는 것은 아닙니다. 출처 URL과 제공자 메타데이터는 [데이터·콘텐츠 조사 기록](docs/V2/delivery/external-resources/data-and-content-sources.json), 연구의 추가 자료·가공 범위는 [학습 README](training/README.md)와 개별 보고서에 남깁니다. 앱 관련 항목은 발표자료와 저장된 확인 기록을 기준으로 기재했습니다.
+각 자원의 저작권·라이선스·출처 고지를 보존합니다. 데이터 다운로드나 API 호출이 가능하다는 사실만으로 재배포·상업 이용이 허용되는 것은 아닙니다. 출처 URL과 제공자 메타데이터는 [데이터·콘텐츠 조사 기록](docs/08_외부자원과라이선스/조사기록/데이터와_콘텐츠_출처_조사.json), 연구의 추가 자료·가공 범위는 [학습 README](training/README.md)와 개별 보고서에 남깁니다. 앱 관련 항목은 발표자료와 저장된 확인 기록을 기준으로 기재했습니다.
 
 ## 팀원과 역할
 
@@ -498,16 +500,17 @@ apps/mobile               별도 앱 저장소의 고정 서브모듈
 
 | 문서 | 확인할 내용 |
 | --- | --- |
-| [현재 앱 API](docs/V2/delivery/mvp-app-api.md) · [실행 OpenAPI](docs/V2/delivery/api/mvp-openapi.json) | 인증·경보·개인 안내·변경·오류와 현재 실행 계약 |
-| [앱 대화·상태 확인·경로](docs/V2/delivery/mobile-dialogue-and-route.md) | 사용자 확인 전후 상태, 합성 경로의 조건과 한계 |
-| [현재 Tailnet·앱 서버 배포](docs/V2/delivery/mobile-server-deployment.md) | HTTPS·단말 접속·설치 계정·후속 배포 기록 |
-| [일반 서버 초기 운영 기록](docs/V2/delivery/mvp-server-runbook.md) | Compose·지속 실행·영속성·복구. 초기 SSH 전용 범위와 현재 후속 배포를 구분 |
-| [촬영 파이프라인](docs/V2/delivery/filming-scenario-pipeline.md) · [자료 출처](docs/V2/delivery/filming-sources.md) | 실제 공식 자료와 합성 조건, 큐·모델·단말 검증 |
-| [대응 정책](docs/V2/delivery/response-policy.md) · [개인 정책 루프](docs/V2/delivery/personal-policy-loop.md) | 확정 단계·기본 지침·입력 변경·만료·이력 |
-| [GPU 모델 준비](docs/V2/delivery/gpu-model-readiness.md) | 모델 설치·고정 revision·호출·자원 사용 |
-| [학습 README](training/README.md) · [모델 개선 기록](docs/V2/delivery/korea-wildfire-improvement.md) | 데이터 확보·평가·확산 연구·현재 미연결 경계 |
-| [모바일 소스·검증](docs/V2/delivery/mobile-submodule-deployment.md) | 서브모듈 초기화·검증 버전·빌드 재현 |
-| [문서 안내](docs/README.md) · [구현 스택](docs/V2/delivery/implementation-stack.md) | 상세 설계와 이전 결정의 배경 |
+| [문서 전체 안내](docs/문서안내.md) | 역할별 문서·한글 파일명·이전 경로 이동표 |
+| [현재 앱 API](docs/03_API와앱연동/현재_앱_API_실행_계약.md) · [실행 OpenAPI](docs/03_API와앱연동/명세와예제/현재_실행_OpenAPI.json) | 인증·경보·개인 안내·변경·오류와 현재 실행 계약 |
+| [앱 대화·상태 확인·경로](docs/03_API와앱연동/대화_상태_확인과_합성_경로_API.md) | 사용자 확인 전후 상태, 합성 경로의 조건과 한계 |
+| [현재 Tailnet·앱 서버 배포](docs/02_설치와운영/앱_연결용_서버_배포와_HTTPS.md) | HTTPS·단말 접속·설치 계정·후속 배포 기록 |
+| [일반 서버 초기 운영 기록](docs/02_설치와운영/일반_서버_실행과_복구.md) | Compose·지속 실행·영속성·복구. 초기 SSH 전용 범위와 현재 후속 배포를 구분 |
+| [촬영 파이프라인](docs/06_시연과검증/두_사용자_촬영_시나리오와_재생_방법.md) · [자료 출처](docs/06_시연과검증/영덕_산불_촬영_자료의_출처와_한계.md) | 실제 공식 자료와 합성 조건, 큐·모델·단말 검증 |
+| [대응 정책](docs/01_서비스와설계/대응_3단계와_개인별_정책.md) · [개인 정책 루프](docs/90_설계와회의이력/02_구현초기설계/개인별_정책_갱신_루프_최초_구현.md) | 확정 단계·기본 지침·입력 변경·만료·이력 |
+| [GPU 모델 준비](docs/05_AI모델과연구/Qwen과_XGBoost_설치와_사용법.md) | 모델 설치·고정 revision·호출·자원 사용 |
+| [학습 README](training/README.md) · [모델 개선 기록](docs/05_AI모델과연구/국내_산불_예측_모델_개선_실험_기록.md) | 데이터 확보·평가·확산 연구·현재 미연결 경계 |
+| [모바일 소스·검증](docs/02_설치와운영/모바일_서브모듈_빌드와_단말_검증.md) | 서브모듈 초기화·검증 버전·빌드 재현 |
+| [기술 스택 선정 기록](docs/01_서비스와설계/기술_스택과_서버별_역할.md) | 스택 선정 당시의 결정과 후속 구현 안내 |
 
 ### 비공개 설정과 작업 기록
 

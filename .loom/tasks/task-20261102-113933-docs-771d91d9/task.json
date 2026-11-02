@@ -1,0 +1,47 @@
+{
+  "id": "task-20261102-113933-docs-771d91d9",
+  "job_id": "job-20261031-002017-v2-fe3bfad0",
+  "title": "docs 전체를 역할별 한글 경로로 재배치하고 중복·참조 통합",
+  "description": "사용자가 docs 전체 문서를 검토해 역할별 폴더로 재배치하고 내용을 알 수 있는 한글 이름으로 바꾸며 중복을 합치거나 제거하라고 직접 지시했다. 현재 실행 정본·초기 설계/회의 이력·데이터/검증 증거·발표 원본을 구분해 실제 파일을 이동하고 문서 링크 및 코드/도구의 문서 경로 참조를 보존한다.",
+  "status": "DONE",
+  "created_at": "2026-11-02T11:39:33+00:00",
+  "updated_at": "2026-11-02T12:04:22+00:00",
+  "order_index": 32,
+  "assigned_agent": "foreground",
+  "depends_on": [],
+  "expected_output": "역할별 한글 docs 구조와 통합 문서 안내; 전177개 파일의 이동·병합·유지 대조; 깨진 링크/실행 도구 경로 복구 및 검증; Loom 기록과 로컬 커밋",
+  "done_condition": "docs의 모든 파일이 역할과 한글 이름으로 식별되고 중복 안내/동일파일이 통합된다. 현재와 역사적 근거를 혼동하지 않으며 고유 정보·원본/검증값을 잃지 않는다. 코드·문서 경로와 데이터 수집/API 검사 도구·Loom 현재참조가 유효하다.",
+  "in_scope": "docs 전체 내용/형식 조사; 이동·한글명 변경·중복 병합/삭제; 안내문·이동표; 외부의 문서경로 참조 수정; 해당 도구 검증; Loom 문서목록 갱신과 기록·커밋",
+  "out_of_scope": "앱 저장소 열람/수정; 서버배포·자료수집·모델학습·운영기능변경; 연구 수치/라이선스/원문 내용 재작성; 관계없는 사용자 변경; 원격푸시",
+  "validation_hint": "177개 전수 매핑·원본 SHA/바이너리/원문 보존·병합 누락 검사, 로컬 링크/앵커/경로 검사, API/수집 도구 검증·필요한 검사, Loom strict와 현재참조·공백 검사",
+  "required_docs": [],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/문서안내.md"
+  ],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [
+    "c002350615696d6dc6490f9099af3fbf23d4e56a",
+    "ab02b08a57b2a7ad7ae949b004d548401ea9ce9d"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-11-02T12:04:22+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261102-113933-docs-771d91d9/agent-events.jsonl",
+    ".loom/tasks/task-20261102-113933-docs-771d91d9/artifacts.json",
+    ".loom/tasks/task-20261102-113933-docs-771d91d9/context.md",
+    ".loom/tasks/task-20261102-113933-docs-771d91d9/decision.md",
+    ".loom/tasks/task-20261102-113933-docs-771d91d9/git-snapshot.json",
+    ".loom/tasks/task-20261102-113933-docs-771d91d9/logs.txt",
+    ".loom/tasks/task-20261102-113933-docs-771d91d9/previous-results.md",
+    ".loom/tasks/task-20261102-113933-docs-771d91d9/prompt.md",
+    ".loom/tasks/task-20261102-113933-docs-771d91d9/result.md",
+    ".loom/tasks/task-20261102-113933-docs-771d91d9/troubleshooting.md",
+    "docs/문서안내.md"
+  ],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

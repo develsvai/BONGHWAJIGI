@@ -30,7 +30,7 @@ def main():
             "--",
             ".gitmodules",
             "apps/mobile",
-            "docs/V2/delivery/api/mvp-openapi.json",
+            "docs/03_API와앱연동/명세와예제/현재_실행_OpenAPI.json",
         ],
         cwd=ROOT,
     )
@@ -44,7 +44,7 @@ def main():
         raise SystemExit("앱 checkout이 메인 gitlink와 다릅니다. 고정 커밋을 초기화하세요.")
     if git("status", "--porcelain", "--untracked-files=normal", cwd=MOBILE):
         raise SystemExit("앱 소스에 미커밋 변경이 있습니다. 검증된 커밋을 사용하세요.")
-    server_schema = ROOT / "docs/V2/delivery/api/mvp-openapi.json"
+    server_schema = ROOT / "docs/03_API와앱연동/명세와예제/현재_실행_OpenAPI.json"
     app_schema = MOBILE / "docs/api/mvp-openapi.json"
     if json.loads(server_schema.read_text()) != json.loads(app_schema.read_text()):
         raise SystemExit("앱 생성 타입 원본과 서버 OpenAPI가 다릅니다.")

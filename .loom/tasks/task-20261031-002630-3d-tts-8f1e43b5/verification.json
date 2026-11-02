@@ -1,0 +1,10 @@
+{
+  "기준": "2026-11-01 현행MVP상태정리",
+  "사유": "3D·서버STT/TTS제외, 후속채택된 단말음성 및2D배경지도/합성경로·미검증실제경로 경계가 현재계약에 명시돼 있다.",
+  "확인_파일_SHA256": {
+    "docs/V2/delivery/optional-features.md": "985b2e817e0a9c5fd3cb4b803beadf844677d1237a409f5ced98b4f3bf8b786b",
+    "docs/V2/delivery/mobile-dialogue-and-route.md": "7e4030aa1fa48f2a9d9c161fb19e4121488df6c03b12bf8f6c81d3c232eef01b",
+    "docs/V2/delivery/mvp-app-api.md": "932b4effe58db3c18d7c2e3ac249122714c8d8b8f856ef201e66a7297bd00d6e"
+  },
+  "새로운_기능실행": "없음"
+}

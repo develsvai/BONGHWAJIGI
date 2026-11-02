@@ -1,0 +1,10 @@
+{
+  "기준": "2026-11-01 현행MVP상태정리",
+  "사유": "연구별 관측/접근 목표와 미관측·검열 및 개인영향미입증을 구분하고 실제예측보류 경계를 고정했다.",
+  "확인_파일_SHA256": {
+    "docs/V2/delivery/prediction-target.md": "035737c5bbf7b63093569d06e68244db4440bce3b856639dd9c33ca36ee67358",
+    "training/README.md": "a6120f6d098aab62262990e394c0e9e5778156a86b3b90f63ff8698b8ce13e7e",
+    "training/reports/approach-pilot-20261101/gofer/plan.json": "d68da698451897e121c1c9bd547a3b1c5f45ba844b56e472342c89c1ea40648a"
+  },
+  "새로운_기능실행": "없음"
+}

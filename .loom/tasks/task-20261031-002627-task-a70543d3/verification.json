@@ -1,0 +1,10 @@
+{
+  "기준": "2026-11-01 현행MVP상태정리",
+  "사유": "사용자가 확정한1경고/2대피/3위급과 출처·승하향·해제·확인상태·규칙분리를 구현·검증했다.",
+  "확인_파일_SHA256": {
+    "docs/V2/delivery/response-policy.md": "2d1554d28a877a9382841749326bd2c1d42d7b00f8be15f738de5d5d4abe0c3f",
+    "src/bonghwajigi/policy/three_stage.py": "9fb31c27306404f984732d3fbb87d615dc9648ffa92639c96f674e0c6c5303c9",
+    "tests/test_three_stage.py": "3247a36373a125c987554640b86d8a8eba5f5109ccaef68189c81f642dd1be95"
+  },
+  "새로운_기능실행": "없음"
+}

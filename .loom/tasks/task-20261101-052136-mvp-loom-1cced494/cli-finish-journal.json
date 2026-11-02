@@ -1,0 +1,121 @@
+[
+  {
+    "task_id": "task-20261031-002627-mvp-e821b0f7",
+    "exit_code": 0,
+    "status": "DONE",
+    "output": "Foreground task finished: task-20261031-002627-mvp-e821b0f7 [DONE]\nUser status: 완료\nMessage: 완료 조건과 검증을 통과했습니다.\nNext action: 결과와 결정을 확인하거나 다음 작업으로 이동하세요.",
+    "error": ""
+  },
+  {
+    "task_id": "task-20261031-002627-task-35e0acc7",
+    "exit_code": 0,
+    "status": "DONE",
+    "output": "Foreground task finished: task-20261031-002627-task-35e0acc7 [DONE]\nUser status: 완료\nMessage: 완료 조건과 검증을 통과했습니다.\nNext action: 결과와 결정을 확인하거나 다음 작업으로 이동하세요.",
+    "error": ""
+  },
+  {
+    "task_id": "task-20261031-002627-task-93368ddf",
+    "exit_code": 0,
+    "status": "DONE",
+    "output": "Foreground task finished: task-20261031-002627-task-93368ddf [DONE]\nUser status: 완료\nMessage: 완료 조건과 검증을 통과했습니다.\nNext action: 결과와 결정을 확인하거나 다음 작업으로 이동하세요.",
+    "error": ""
+  },
+  {
+    "task_id": "task-20261031-002627-task-cc78619e",
+    "exit_code": 0,
+    "status": "DONE",
+    "output": "Foreground task finished: task-20261031-002627-task-cc78619e [DONE]\nUser status: 완료\nMessage: 완료 조건과 검증을 통과했습니다.\nNext action: 결과와 결정을 확인하거나 다음 작업으로 이동하세요.",
+    "error": ""
+  },
+  {
+    "task_id": "task-20261031-002628-task-71b2ed3b",
+    "exit_code": 0,
+    "status": "DONE",
+    "output": "Foreground task finished: task-20261031-002628-task-71b2ed3b [DONE]\nUser status: 완료\nMessage: 완료 조건과 검증을 통과했습니다.\nNext action: 결과와 결정을 확인하거나 다음 작업으로 이동하세요.",
+    "error": ""
+  },
+  {
+    "task_id": "task-20261031-002629-xgboost-c44c6d79",
+    "exit_code": 0,
+    "status": "DONE",
+    "output": "Foreground task finished: task-20261031-002629-xgboost-c44c6d79 [DONE]\nUser status: 완료\nMessage: 완료 조건과 검증을 통과했습니다.\nNext action: 결과와 결정을 확인하거나 다음 작업으로 이동하세요.",
+    "error": ""
+  },
+  {
+    "task_id": "task-20261031-002629-task-2b63fdb8",
+    "exit_code": 0,
+    "status": "DONE",
+    "output": "Foreground task finished: task-20261031-002629-task-2b63fdb8 [DONE]\nUser status: 완료\nMessage: 완료 조건과 검증을 통과했습니다.\nNext action: 결과와 결정을 확인하거나 다음 작업으로 이동하세요.",
+    "error": ""
+  },
+  {
+    "task_id": "task-20261031-002627-task-a70543d3",
+    "exit_code": 0,
+    "status": "DONE",
+    "output": "Foreground task finished: task-20261031-002627-task-a70543d3 [DONE]\nUser status: 완료\nMessage: 완료 조건과 검증을 통과했습니다.\nNext action: 결과와 결정을 확인하거나 다음 작업으로 이동하세요.",
+    "error": ""
+  },
+  {
+    "task_id": "task-20261031-002629-task-80e56e11",
+    "exit_code": 0,
+    "status": "DONE",
+    "output": "Foreground task finished: task-20261031-002629-task-80e56e11 [DONE]\nUser status: 완료\nMessage: 완료 조건과 검증을 통과했습니다.\nNext action: 결과와 결정을 확인하거나 다음 작업으로 이동하세요.",
+    "error": ""
+  },
+  {
+    "task_id": "task-20261031-002629-qwen-617b8d58",
+    "exit_code": 0,
+    "status": "DONE",
+    "output": "Foreground task finished: task-20261031-002629-qwen-617b8d58 [DONE]\nUser status: 완료\nMessage: 완료 조건과 검증을 통과했습니다.\nNext action: 결과와 결정을 확인하거나 다음 작업으로 이동하세요.",
+    "error": ""
+  },
+  {
+    "task_id": "task-20261031-002630-task-91ec9d3f",
+    "exit_code": 0,
+    "status": "DONE",
+    "output": "Foreground task finished: task-20261031-002630-task-91ec9d3f [DONE]\nUser status: 완료\nMessage: 완료 조건과 검증을 통과했습니다.\nNext action: 결과와 결정을 확인하거나 다음 작업으로 이동하세요.",
+    "error": ""
+  },
+  {
+    "task_id": "task-20261031-002630-task-bc07e7d7",
+    "exit_code": 0,
+    "status": "DONE",
+    "output": "Foreground task finished: task-20261031-002630-task-bc07e7d7 [DONE]\nUser status: 완료\nMessage: 완료 조건과 검증을 통과했습니다.\nNext action: 결과와 결정을 확인하거나 다음 작업으로 이동하세요.",
+    "error": ""
+  },
+  {
+    "task_id": "task-20261031-002630-3d-tts-8f1e43b5",
+    "exit_code": 0,
+    "status": "DONE",
+    "output": "Foreground task finished: task-20261031-002630-3d-tts-8f1e43b5 [DONE]\nUser status: 완료\nMessage: 완료 조건과 검증을 통과했습니다.\nNext action: 결과와 결정을 확인하거나 다음 작업으로 이동하세요.",
+    "error": ""
+  },
+  {
+    "task_id": "task-20261031-002631-openapi-d96e2bb5",
+    "exit_code": 0,
+    "status": "DONE",
+    "output": "Foreground task finished: task-20261031-002631-openapi-d96e2bb5 [DONE]\nUser status: 완료\nMessage: 완료 조건과 검증을 통과했습니다.\nNext action: 결과와 결정을 확인하거나 다음 작업으로 이동하세요.",
+    "error": ""
+  },
+  {
+    "task_id": "task-20261031-002631-api-0f38b4c1",
+    "exit_code": 0,
+    "status": "DONE",
+    "output": "Foreground task finished: task-20261031-002631-api-0f38b4c1 [DONE]\nUser status: 완료\nMessage: 완료 조건과 검증을 통과했습니다.\nNext action: 결과와 결정을 확인하거나 다음 작업으로 이동하세요.",
+    "error": ""
+  },
+  {
+    "task_id": "task-20261030-121042-chatgpt-docs-heoney-d2ca5d76",
+    "exit_code": 0,
+    "status": "DONE",
+    "output": "Foreground task finished: task-20261030-121042-chatgpt-docs-heoney-d2ca5d76 [DONE]\nUser status: 완료\nMessage: 완료 조건과 검증을 통과했습니다.\nNext action: 결과와 결정을 확인하거나 다음 작업으로 이동하세요.",
+    "error": ""
+  },
+  {
+    "task_id": "task-20261031-111807-task-9a960503",
+    "exit_code": 0,
+    "status": "DONE",
+    "output": "Foreground task finished: task-20261031-111807-task-9a960503 [DONE]\nUser status: 완료\nMessage: 완료 조건과 검증을 통과했습니다.\nNext action: 결과와 결정을 확인하거나 다음 작업으로 이동하세요.",
+    "error": ""
+  }
+]

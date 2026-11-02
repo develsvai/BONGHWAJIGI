@@ -5,8 +5,8 @@
   "description": "사용자가 요청한 앱 저장소 서브모듈 배포에 따라 완료된 앱 원격 커밋을 apps/mobile에 고정한다. 앱 담당 작업의 최종 commit/push를 기다려 해당 SHA가 원격에 존재함을 검증한 후 gitlink와 운영 문서를 커밋하고 정상 원격 동기화를 수행한다.",
   "status": "DONE",
   "created_at": "2026-10-31T17:08:20+00:00",
-  "updated_at": "2026-10-31T17:54:53+00:00",
-  "order_index": 22,
+  "updated_at": "2026-11-01T05:28:05+00:00",
+  "order_index": 19,
   "assigned_agent": "foreground",
   "depends_on": [
     "task-20261031-163810-api-36540350"

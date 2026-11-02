@@ -21,7 +21,7 @@ def main():
     )
     with patch("bonghwajigi.api.app.Settings", return_value=settings):
         app = create_app()
-    output = Path("docs/V2/delivery/api/mvp-openapi.json")
+    output = Path("docs/03_API와앱연동/명세와예제/현재_실행_OpenAPI.json")
     output.write_text(json.dumps(app.openapi(), indent=2, ensure_ascii=False) + "\n")
     app.state.sessions.kw["bind"].dispose()
     print("실행 API 명세 생성:", output)

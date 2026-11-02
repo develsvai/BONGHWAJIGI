@@ -1,0 +1,15 @@
+[2026-11-02T11:39:41+00:00] agent=foreground task=task-20261102-113933-docs-771d91d9 Foreground task session started.
+
+2026-11-02 docs reorganization offline verification:
+- tracked docs inventory178; 10 wrappers merged; 4 Loom compatibility redirects; 174 current files.
+- verify_docs.py: passed, 959 local links/anchors, 36JSON, 87 byte-identical evidence/assets, 56 message hashes, 15 progress messages.
+- validate_app_api.py: passed25API/67schema/48HTTPexamples; historical0.1 contract only.
+- mvp_contract.py: regenerated current schema, byte-identical.
+- node --check: all6 relocated presentation scripts passed.
+- Python AST and Ruff baseline comparison: no new warnings; pre-existing E50117 retained.
+- verify_collection_paths.py: temporary synthetic15files; replay4case/8control, corruption/missing rejected; zero network calls.
+- actual snapshot verifier:15missing, expected because separately supplied raw archive is absent; real replay not run.
+- all5pending Loom contracts validate; loom validate --strict:6jobs/63tasks passed.
+- git diff --check:passed before staging; final staged check follows.
+Staged diff check initially flagged CRLF on newly generated movement CSV only; converted new CSV to LF, kept UTF-8 BOM. Original CSV evidence remains byte-identical.
+[2026-11-02T12:04:22+00:00] agent=foreground task=task-20261102-113933-docs-771d91d9 docs178개 전수 분류·역할별 한글 재배치와 중복10개 통합 완료. 이동표·959개 로컬 링크·87개 증거/자산·원문 해시·API/수집 도구·대기 계약5개 검증 통과. ab02b08 로컬 커밋. 원격 push와 앱/서버/학습 실행 없음.

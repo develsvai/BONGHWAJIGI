@@ -2,9 +2,9 @@
   "id": "task-run-20261031-111820-task-def-20261031-111807-task-def-2cdadd42-fa01fa3a",
   "job_run_id": "job-run-20261031-100136-job-20261031-002626-job-c9f9ff0d-1370d387",
   "task_definition_id": "task-def-20261031-111807-task-def-2cdadd42",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-10-31T11:18:20+00:00",
-  "updated_at": "2026-10-31T11:18:20+00:00",
+  "updated_at": "2026-11-01T05:37:17+00:00",
   "legacy_task_id": "task-20261031-111807-task-9a960503",
   "attempt": 1,
   "assigned_agent": "foreground",
@@ -13,13 +13,30 @@
   "lease_expires_at": "",
   "queued_at": "",
   "started_at": "2026-10-31T11:18:20+00:00",
-  "completed_at": "",
+  "completed_at": "2026-11-01T05:37:17+00:00",
   "last_error": "",
-  "commit_refs": [],
-  "branch_name": "",
-  "git_dirty": false,
-  "git_snapshot_captured_at": "",
-  "artifacts": [],
-  "checkpoint_ids": [],
+  "commit_refs": [
+    "b35e0538bdd8d738566f7938c87315f62c86b7ab",
+    "fa6a7402e4b7a1fa2edac30ddda36e502cd7c34e"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-11-01T05:37:17+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261031-111807-task-9a960503/agent-events.jsonl",
+    ".loom/tasks/task-20261031-111807-task-9a960503/artifacts.json",
+    ".loom/tasks/task-20261031-111807-task-9a960503/context.md",
+    ".loom/tasks/task-20261031-111807-task-9a960503/decision.md",
+    ".loom/tasks/task-20261031-111807-task-9a960503/git-snapshot.json",
+    ".loom/tasks/task-20261031-111807-task-9a960503/logs.txt",
+    ".loom/tasks/task-20261031-111807-task-9a960503/previous-results.md",
+    ".loom/tasks/task-20261031-111807-task-9a960503/prompt.md",
+    ".loom/tasks/task-20261031-111807-task-9a960503/result.md",
+    ".loom/tasks/task-20261031-111807-task-9a960503/troubleshooting.md",
+    "docs/V2/delivery/korea-wildfire-improvement.md"
+  ],
+  "checkpoint_ids": [
+    "checkpoint-20261101-053717-task-completed-2d1824bd"
+  ],
   "review_required_reason": ""
 }

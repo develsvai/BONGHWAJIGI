@@ -1,0 +1,10 @@
+{
+  "기준": "2026-11-01 현행MVP상태정리",
+  "사유": "고정 두모델 로딩·실제생성/1024벡터·검색·근거대화·템플릿대체의 후속검증을 확인했다. 단계/행동의 임의생성은 현재역할이 아니다.",
+  "확인_파일_SHA256": {
+    "docs/V2/delivery/language-models.md": "25c729f83a2c9bca1f9f540acd75d864a52d05c9ae1cd148750b24a3a9e46571",
+    "docs/V2/delivery/gpu-model-evidence.json": "5e9acb0af1334ff4827f8b7cb47e58fa046cf93469a9784cae219b781b1a880d",
+    "docs/V2/delivery/filming-model-metadata.json": "9f9e49c9c31e24efce9c2e06698012a164cafb124f2cfbf5a3d9b76c5bfb9fb1"
+  },
+  "새로운_기능실행": "없음"
+}

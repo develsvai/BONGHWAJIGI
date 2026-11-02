@@ -1,0 +1,10 @@
+{
+  "기준": "2026-11-01 현행MVP상태정리",
+  "사유": "실제서버/DB시험과 촬영검증에서 사용자격리·세션·공식경보·개인정책·확인상태·변경API를 대조했고 단말/모의/실제FCM 경계를 기록했다.",
+  "확인_파일_SHA256": {
+    "docs/V2/delivery/api-handoff.md": "0768c4440ebaaab7c37fc96c7ccc9f3f40772905159cc547d26b68ac61cbb517",
+    "docs/V2/delivery/mobile-server-deployment.md": "02101287e01ab69adccbde681696f44eec4ac936de4d0bf6679e354a60320aaf",
+    "docs/V2/delivery/filming-scenario-pipeline.md": "12f934f4dcdd300d99e2fce6f5e8cd4d9f1f681f85d3ee78bf75c46d10d60891"
+  },
+  "새로운_기능실행": "없음"
+}

@@ -1,0 +1,17 @@
+{
+  "result": "passed",
+  "baseline_commit": "c002350615696d6dc6490f9099af3fbf23d4e56a",
+  "original_files": 178,
+  "relocated_targets": 168,
+  "merged_removed_documents": 10,
+  "loom_compatibility_redirects": 4,
+  "current_docs_files": 174,
+  "byte_identical_evidence_and_assets": 87,
+  "visible_messages_with_original_hashes": 56,
+  "progress_messages_preserved": 15,
+  "presentation_manifest_files_verified": 7,
+  "markdown_files_checked": 94,
+  "local_links_and_anchors_checked": 959,
+  "json_files_parsed": 36,
+  "scope": "Offline documentation audit; no app source inspection, deployment, data collection or training."
+}

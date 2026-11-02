@@ -1,0 +1,19 @@
+{
+  "id": "checkpoint-20261101-054000-task-completed-mvp-loom-7fc08a00",
+  "created_at": "2026-11-01T05:40:00+00:00",
+  "reason": "Task completed: 현재 산불 MVP 설계와 구현 근거로 Loom 전체 잡·태스크 정리",
+  "summary": "현재 산불 MVP 설계와 구현 근거로 Loom 전체 잡·태스크 정리 -> DONE @ develop/19f5868680e8",
+  "job_id": "job-20261031-002017-v2-fe3bfad0",
+  "task_id": "task-20261101-052136-mvp-loom-1cced494",
+  "commit_sha": "19f5868680e82c409ff0c66e346fba07683abd0f",
+  "branch_name": "develop",
+  "dirty": true,
+  "staged_files": [],
+  "modified_files": [
+    ".loom/job-runs/job-run-20261031-002031-job-20261031-002017-v2-fe3bfad0-e8e5eb02/job-run.json",
+    ".loom/task-definitions/task-def-20261101-052136-mvp-loom-6711235b/task-definition.json"
+  ],
+  "untracked_files": [],
+  "snapshot_captured_at": "2026-11-01T05:40:00+00:00",
+  "rollback_strategy": "revert-or-branch"
+}

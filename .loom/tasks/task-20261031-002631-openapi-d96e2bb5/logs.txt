@@ -1,0 +1,3 @@
+[2026-11-01T05:33:42+00:00] agent=foreground task=task-20261031-002631-openapi-d96e2bb5 Foreground task session started.
+검증 결과: 사용자지시에 따른 상태정리용 loom task run/validate 및 근거파일 SHA 확인. 현재실행0.2계약·enum·인증·provenance·예측불가·서버음성제외를 고정한 후속OpenAPI가 있다.0.1문서는 역사적초안임을 보존한다. 실제 실행은 링크된 후속 검증 기록이며 이번새실행이 아님.
+[2026-11-01T05:37:16+00:00] agent=foreground task=task-20261031-002631-openapi-d96e2bb5 사용자의 전체 Loom 정리 지시에 따라 현행 구현·후속 실행 근거를 대조해 완료한다. 현재실행0.2계약·enum·인증·provenance·예측불가·서버음성제외를 고정한 후속OpenAPI가 있다.0.1문서는 역사적초안임을 보존한다. 검증·근거 문서는 fa6a740에 보존했다.
