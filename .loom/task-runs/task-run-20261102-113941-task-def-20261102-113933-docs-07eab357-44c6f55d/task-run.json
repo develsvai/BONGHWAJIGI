@@ -2,9 +2,9 @@
   "id": "task-run-20261102-113941-task-def-20261102-113933-docs-07eab357-44c6f55d",
   "job_run_id": "job-run-20261102-113941-job-20261031-002017-v2-fe3bfad0-31d36285",
   "task_definition_id": "task-def-20261102-113933-docs-07eab357",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-11-02T11:39:41+00:00",
-  "updated_at": "2026-11-02T11:39:41+00:00",
+  "updated_at": "2026-11-02T12:04:22+00:00",
   "legacy_task_id": "task-20261102-113933-docs-771d91d9",
   "attempt": 1,
   "assigned_agent": "foreground",
@@ -13,13 +13,30 @@
   "lease_expires_at": "",
   "queued_at": "",
   "started_at": "2026-11-02T11:39:41+00:00",
-  "completed_at": "",
+  "completed_at": "2026-11-02T12:04:22+00:00",
   "last_error": "",
-  "commit_refs": [],
-  "branch_name": "",
-  "git_dirty": false,
-  "git_snapshot_captured_at": "",
-  "artifacts": [],
-  "checkpoint_ids": [],
+  "commit_refs": [
+    "ab02b08a57b2a7ad7ae949b004d548401ea9ce9d",
+    "c002350615696d6dc6490f9099af3fbf23d4e56a"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-11-02T12:04:22+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261102-113933-docs-771d91d9/agent-events.jsonl",
+    ".loom/tasks/task-20261102-113933-docs-771d91d9/artifacts.json",
+    ".loom/tasks/task-20261102-113933-docs-771d91d9/context.md",
+    ".loom/tasks/task-20261102-113933-docs-771d91d9/decision.md",
+    ".loom/tasks/task-20261102-113933-docs-771d91d9/git-snapshot.json",
+    ".loom/tasks/task-20261102-113933-docs-771d91d9/logs.txt",
+    ".loom/tasks/task-20261102-113933-docs-771d91d9/previous-results.md",
+    ".loom/tasks/task-20261102-113933-docs-771d91d9/prompt.md",
+    ".loom/tasks/task-20261102-113933-docs-771d91d9/result.md",
+    ".loom/tasks/task-20261102-113933-docs-771d91d9/troubleshooting.md",
+    "docs/문서안내.md"
+  ],
+  "checkpoint_ids": [
+    "checkpoint-20261102-120422-task-completed-docs-ec0ae2b4"
+  ],
   "review_required_reason": ""
 }

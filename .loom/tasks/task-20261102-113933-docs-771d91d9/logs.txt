@@ -12,3 +12,4 @@
 - all5pending Loom contracts validate; loom validate --strict:6jobs/63tasks passed.
 - git diff --check:passed before staging; final staged check follows.
 Staged diff check initially flagged CRLF on newly generated movement CSV only; converted new CSV to LF, kept UTF-8 BOM. Original CSV evidence remains byte-identical.
+[2026-11-02T12:04:22+00:00] agent=foreground task=task-20261102-113933-docs-771d91d9 docs178개 전수 분류·역할별 한글 재배치와 중복10개 통합 완료. 이동표·959개 로컬 링크·87개 증거/자산·원문 해시·API/수집 도구·대기 계약5개 검증 통과. ab02b08 로컬 커밋. 원격 push와 앱/서버/학습 실행 없음.
